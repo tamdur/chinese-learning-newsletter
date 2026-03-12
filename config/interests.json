@@ -1,9 +1,9 @@
 {
   "topics": [
     {
-      "id": "tech",
-      "label": "Tech / AI / AGI",
-      "source_hints": ["Hacker News", "Ars Technica"]
+      "id": "gen_ai",
+      "label": "Generative AI & AGI Progress",
+      "source_hints": ["Hacker News", "Ars Technica", "major AI lab announcements"]
     },
     {
       "id": "econ_finance",
@@ -12,18 +12,19 @@
     },
     {
       "id": "climate",
-      "label": "Climate Science",
-      "source_hints": ["Carbon Brief", "Nature Climate Change"]
+      "label": "Hurricane / Catastrophe Modeling & Climate Risk",
+      "source_hints": ["reinsurance and catastrophe modeling industry news", "NOAA/NHC advisories", "major weather agencies"],
+      "selection_note": "Lowest priority topic. Only include when directly relevant to the user's work as a hurricane catastrophe modeler: large loss events (hurricanes, typhoons, major natural disasters), changes in climate data sources or agencies (e.g. NOAA restructuring, ERA5 updates), and significant shifts in the climate research establishment. Skip generic climate science, energy transition, or climate policy stories."
     },
     {
       "id": "michigan_sports",
       "label": "Michigan Football & Basketball",
-      "source_hints": ["MGoBlog", "The Athletic"]
+      "source_hints": ["MGoBlog", "The Athletic", "UMhoops.com"]
     },
     {
       "id": "cubs",
       "label": "Cubs Baseball",
-      "source_hints": ["ESPN", "The Athletic"]
+      "source_hints": ["ESPN", "The Athletic", "r/CHICubs subreddit"]
     }
   ],
   "selection_note": "Pick 5 stories total. Aim for variety across topics but don't force every category into every issue. Lead with whatever is genuinely most interesting today. Include 1-2 stories outside these core topics that would appeal to a curious, well-read generalist — science, culture, history, unusual economics, etc. Think: the experience of flipping through a physical newspaper, not a hyper-targeted feed."

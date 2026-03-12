@@ -6,7 +6,7 @@ A daily Chinese reading newsletter for a single user. A Claude Code pipeline sea
 ## User Background
 - Heritage Mandarin speaker (rusty), actively re-learning
 - Lives in Taipei
-- PhD climate scientist — technically proficient but no web development experience
+- PhD climate scientist — builds hurricane catastrophe models for industry. Technically proficient but no web development experience
 - Reads: HN, FT-style econ/finance, Marginal Revolution, AI/AGI, climate science, Michigan football/basketball, Cubs baseball
 
 ## Technical Constraints
@@ -48,6 +48,11 @@ Write like a **knowledgeable friend explaining the news over coffee**. Casual bu
 
 ## Editor's Desk
 Each newsletter includes 3 headlines that made the cut and 3 that didn't. User picks their top 3 from all 6. This data (what was offered + what was chosen) is stored in preference_history.json and included in future generation prompts to refine story selection. Claude pattern-matches on this history — no scoring algorithm needed.
+
+## Story Selection Rules
+- Strong preference for stories from the past 36 hours. Older stories are acceptable only if they are unusually significant or interesting.
+- Stories must NOT repeat from past newsletters unless there has been a substantive update or development in the story. Check `docs/archive/` for recent issues before selecting stories.
+- 1-2 stories per issue should be serendipitous — outside the user's core topics, things they'd enjoy but wouldn't seek out. Think: the experience of flipping through a physical newspaper.
 
 ## Current Scope (Sprint 1)
 - Repo structure, config files, CLAUDE.md
