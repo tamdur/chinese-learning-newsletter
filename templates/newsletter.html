@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今日讀報 — 2026-03-12</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Noto Serif TC", "Source Han Serif TC", "PMingLiU", serif;
+            font-size: 20px;
+            line-height: 1.9;
+            color: #2c2c2c;
+            background-color: #fafaf7;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #d4c5a9;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.3rem;
+        }
+
+        header .date {
+            font-size: 0.95rem;
+            color: #777;
+        }
+
+        /* Toolbar */
+        .toolbar {
+            position: sticky;
+            top: 0;
+            background: #fafaf7;
+            border-bottom: 1px solid #e0d8c8;
+            padding: 0.5rem 0;
+            margin-bottom: 2rem;
+            z-index: 100;
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .toolbar button {
+            font-size: 0.85rem;
+            padding: 0.35rem 0.75rem;
+            border: 1px solid #c0b89e;
+            border-radius: 4px;
+            background: #fff;
+            color: #444;
+            cursor: pointer;
+        }
+
+        .toolbar button:hover {
+            background: #f0ece0;
+        }
+
+        .toolbar button.active {
+            background: #e8dcc8;
+            border-color: #a09070;
+            font-weight: 600;
+        }
+
+        /* Articles */
+        article {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e8e0d0;
+        }
+
+        article:last-of-type {
+            border-bottom: none;
+        }
+
+        article h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        article .source {
+            font-size: 0.8rem;
+            color: #999;
+            margin-bottom: 1rem;
+        }
+
+        article p {
+            margin-bottom: 1rem;
+        }
+
+        /* Translation toggle */
+        .translation-toggle {
+            font-size: 0.85rem;
+            padding: 0.3rem 0.6rem;
+            border: 1px solid #c0b89e;
+            border-radius: 4px;
+            background: #fff;
+            color: #666;
+            cursor: pointer;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+        }
+
+        .translation-toggle:hover {
+            background: #f0ece0;
+        }
+
+        .translation {
+            display: none;
+            background: #f5f0e6;
+            padding: 1rem 1.25rem;
+            border-radius: 6px;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .translation.visible {
+            display: block;
+        }
+
+        /* Character flagging */
+        .char-flaggable {
+            cursor: default;
+        }
+
+        body.flagging-mode .char-flaggable {
+            cursor: pointer;
+        }
+
+        body.flagging-mode .char-flaggable:hover {
+            background: #e0d8c0;
+            border-radius: 2px;
+        }
+
+        .char-struggling {
+            border-bottom: 2px solid #d4883a;
+        }
+
+        .char-learned {
+            border-bottom: 2px solid #5a9e6f;
+        }
+
+        /* Editor's Desk */
+        .editors-desk {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #d4c5a9;
+        }
+
+        .editors-desk h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .editors-desk p.instructions {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+
+        .desk-item {
+            padding: 0.6rem 0.8rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .desk-item:hover {
+            background: #f5f0e6;
+        }
+
+        .desk-item.selected {
+            background: #e8dcc8;
+            border-color: #a09070;
+        }
+
+        .desk-item .badge {
+            font-size: 0.7rem;
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            background: #e0d8c8;
+            color: #777;
+            white-space: nowrap;
+        }
+
+        .desk-item .badge.included {
+            background: #d4e8d9;
+            color: #3a7a4a;
+        }
+
+        .desk-item .headline {
+            font-size: 0.95rem;
+        }
+
+        .desk-item .pick-number {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #a09070;
+            margin-left: auto;
+            min-width: 1.5rem;
+            text-align: center;
+        }
+
+        /* Export section */
+        .export-section {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e8e0d0;
+            text-align: center;
+        }
+
+        .export-section button {
+            font-size: 1rem;
+            padding: 0.6rem 1.5rem;
+            border: 2px solid #a09070;
+            border-radius: 6px;
+            background: #fff;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .export-section button:hover {
+            background: #f0ece0;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>今日讀報</h1>
+    <p class="date">2026年3月12日（星期四）</p>
+</header>
+
+<div class="toolbar">
+    <button id="flagging-toggle">字 標記模式</button>
+    <span id="flagging-status" style="font-size: 0.8rem; color: #999; align-self: center;"></span>
+</div>
+
+<!-- === ARTICLE 1 === -->
+<article data-index="0">
+    <h2>台積電宣布在日本興建第三座晶圓廠</h2>
+    <p class="source">來源：Hacker News / 科技</p>
+    <p>台積電今天宣布，計畫在日本熊本縣興建第三座晶圓廠。這座新工廠預計在二〇二八年開始生產，主要製造先進的二奈米晶片。</p>
+    <p>日本政府表示，會提供大約五千億日圓的補助。熊本縣知事說，這是「讓日本重新成為半導體大國的重要一步」。</p>
+    <p>分析師認為，台積電選擇日本，不只是因為補助，也是為了讓供應鏈更多元（duōyuán，多樣化的意思），不要太集中在一個地方。</p>
+    <button class="translation-toggle" onclick="toggleTranslation(this)">顯示英文翻譯</button>
+    <div class="translation">
+        <p>TSMC announced today plans to build a third wafer fabrication plant in Kumamoto Prefecture, Japan. The new factory is expected to begin production in 2028, primarily manufacturing advanced 2-nanometer chips.</p>
+        <p>The Japanese government indicated it would provide approximately 500 billion yen in subsidies. The Kumamoto prefectural governor called it "an important step toward making Japan a semiconductor powerhouse again."</p>
+        <p>Analysts believe TSMC chose Japan not only because of subsidies but also to diversify its supply chain and avoid over-concentration in one location.</p>
+    </div>
+</article>
+
+<!-- === ARTICLE 2 === -->
+<article data-index="1">
+    <h2>聯準會維持利率不變，暗示年底前可能降息</h2>
+    <p class="source">來源：Financial Times / 經濟</p>
+    <p>美國聯準會今天開會後決定維持目前的利率不變。但是主席鮑威爾在記者會上說，如果通貨膨脹繼續下降，今年底以前「很有可能」會降息。</p>
+    <p>市場聽到這個消息後反應很正面，美國股市馬上漲了不少。經濟學家說，聯準會這次比大家預期的更「鴿派」（gēpài，意思是比較傾向寬鬆政策）。</p>
+    <button class="translation-toggle" onclick="toggleTranslation(this)">顯示英文翻譯</button>
+    <div class="translation">
+        <p>The U.S. Federal Reserve decided to hold interest rates steady after its meeting today. However, Chair Jerome Powell said at the press conference that rate cuts are "very possible" before year-end if inflation continues to decline.</p>
+        <p>Markets reacted positively to the news, with U.S. stocks rising significantly. Economists said the Fed struck a more "dovish" tone — meaning more inclined toward loose monetary policy — than most had expected.</p>
+    </div>
+</article>
+
+<!-- === ARTICLE 3 (placeholder structure for remaining articles) === -->
+<article data-index="2">
+    <h2>北極海冰面積創四十年來新低紀錄</h2>
+    <p class="source">來源：Carbon Brief / 氣候</p>
+    <p>最新的衛星資料顯示，今年冬天北極海冰的面積是一九七九年有紀錄以來最小的。科學家說，這跟全球暖化有直接的關係。</p>
+    <p>海冰減少會影響很多事情。首先，住在北極的動物，像是北極熊，會失去牠們生活的地方。其次，海冰能反射陽光，海冰少了，海水吸收更多熱量，讓暖化更快——科學家叫這個「正回饋」（zhèng huíkuì）。</p>
+    <button class="translation-toggle" onclick="toggleTranslation(this)">顯示英文翻譯</button>
+    <div class="translation">
+        <p>The latest satellite data shows that Arctic sea ice extent this winter reached its lowest level since records began in 1979. Scientists say this is directly linked to global warming.</p>
+        <p>The decline in sea ice has far-reaching consequences. Arctic animals like polar bears lose critical habitat. Additionally, since sea ice reflects sunlight, less ice means the ocean absorbs more heat, accelerating warming — a process scientists call "positive feedback."</p>
+    </div>
+</article>
+
+<article data-index="3">
+    <h2>新研究：每天走路三十分鐘可以大幅降低心臟病風險</h2>
+    <p class="source">來源：Nature / 健康</p>
+    <p>一項新的大型研究發現，每天走路三十分鐘的人，得心臟病的機率比完全不運動的人低了將近百分之四十。</p>
+    <p>研究團隊追蹤了超過十萬人，時間長達十年。有趣的是，走路的速度快慢影響不大，重要的是有沒有養成每天走路的習慣。</p>
+    <button class="translation-toggle" onclick="toggleTranslation(this)">顯示英文翻譯</button>
+    <div class="translation">
+        <p>A major new study found that people who walk for 30 minutes daily have nearly 40% lower risk of heart disease compared to those who are completely sedentary.</p>
+        <p>The research team tracked over 100,000 people for ten years. Interestingly, walking speed made little difference — what mattered was developing the daily walking habit.</p>
+    </div>
+</article>
+
+<article data-index="4">
+    <h2>密西根大學籃球隊驚險擊敗乙級強隊，晉級八強</h2>
+    <p class="source">來源：The Athletic / 運動</p>
+    <p>密西根大學男子籃球隊昨天晚上以七十八比七十五險勝對手，成功晉級全國八強賽。比賽最後十秒非常刺激，密西根靠一個三分球逆轉了比賽。</p>
+    <p>教練賽後說：「我們的球員在壓力最大的時候表現最好，這就是密西根的精神。」</p>
+    <button class="translation-toggle" onclick="toggleTranslation(this)">顯示英文翻譯</button>
+    <div class="translation">
+        <p>The University of Michigan men's basketball team narrowly defeated their opponent 78-75 last night, advancing to the Elite Eight. The final 10 seconds were electrifying — Michigan hit a three-pointer to take the lead.</p>
+        <p>"Our players perform best under the most pressure — that's the Michigan spirit," the coach said after the game.</p>
+    </div>
+</article>
+
+<!-- === EDITOR'S DESK === -->
+<section class="editors-desk">
+    <h2>編輯台 Editor's Desk</h2>
+    <p class="instructions">以下是今天的六則候選新聞——三則已收錄，三則未收錄。請選出你最想看的三則。</p>
+
+    <div class="desk-item" data-desk-index="0" onclick="toggleDeskPick(this)">
+        <span class="badge included">已收錄</span>
+        <span class="headline">台積電宣布在日本興建第三座晶圓廠</span>
+        <span class="pick-number"></span>
+    </div>
+    <div class="desk-item" data-desk-index="1" onclick="toggleDeskPick(this)">
+        <span class="badge included">已收錄</span>
+        <span class="headline">聯準會維持利率不變，暗示年底前可能降息</span>
+        <span class="pick-number"></span>
+    </div>
+    <div class="desk-item" data-desk-index="2" onclick="toggleDeskPick(this)">
+        <span class="badge included">已收錄</span>
+        <span class="headline">北極海冰面積創四十年來新低紀錄</span>
+        <span class="pick-number"></span>
+    </div>
+    <div class="desk-item" data-desk-index="3" onclick="toggleDeskPick(this)">
+        <span class="badge">未收錄</span>
+        <span class="headline">歐盟通過新的人工智慧監管法案</span>
+        <span class="pick-number"></span>
+    </div>
+    <div class="desk-item" data-desk-index="4" onclick="toggleDeskPick(this)">
+        <span class="badge">未收錄</span>
+        <span class="headline">SpaceX 星艦第五次試飛成功回收</span>
+        <span class="pick-number"></span>
+    </div>
+    <div class="desk-item" data-desk-index="5" onclick="toggleDeskPick(this)">
+        <span class="badge">未收錄</span>
+        <span class="headline">日本京都百年老店的經營哲學</span>
+        <span class="pick-number"></span>
+    </div>
+</section>
+
+<!-- === EXPORT === -->
+<section class="export-section">
+    <button onclick="exportFeedback()">匯出回饋 Export Feedback</button>
+</section>
+
+<footer>
+    <p>今日讀報 — 以 Claude Code 製作</p>
+</footer>
+
+<script>
+(function() {
+    // =====================
+    // Character Flagging
+    // =====================
+    const STORAGE_KEY = 'newsletter-feedback';
+    let flaggingMode = false;
+
+    // Load saved state from localStorage
+    function loadState() {
+        try {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            return saved ? JSON.parse(saved) : { characters: {}, deskPicks: [] };
+        } catch (e) {
+            return { characters: {}, deskPicks: [] };
+        }
+    }
+
+    function saveState(state) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    let state = loadState();
+
+    // Wrap each Chinese character in articles with a span
+    function wrapCharacters() {
+        const articles = document.querySelectorAll('article p:not(.source)');
+        articles.forEach(function(p) {
+            // Skip if already wrapped
+            if (p.dataset.wrapped) return;
+            p.dataset.wrapped = 'true';
+
+            const walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT, null, false);
+            const textNodes = [];
+            while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+            textNodes.forEach(function(textNode) {
+                const text = textNode.textContent;
+                // Only process if there are CJK characters
+                if (!/[\u4e00-\u9fff\u3400-\u4dbf]/.test(text)) return;
+
+                const frag = document.createDocumentFragment();
+                for (let i = 0; i < text.length; i++) {
+                    const ch = text[i];
+                    if (/[\u4e00-\u9fff\u3400-\u4dbf]/.test(ch)) {
+                        const span = document.createElement('span');
+                        span.className = 'char-flaggable';
+                        span.textContent = ch;
+                        // Apply saved state
+                        if (state.characters[ch] === 'struggling') {
+                            span.classList.add('char-struggling');
+                        } else if (state.characters[ch] === 'learned') {
+                            span.classList.add('char-learned');
+                        }
+                        span.addEventListener('click', function() {
+                            if (!flaggingMode) return;
+                            cycleCharState(ch, span);
+                        });
+                        frag.appendChild(span);
+                    } else {
+                        frag.appendChild(document.createTextNode(ch));
+                    }
+                }
+                textNode.parentNode.replaceChild(frag, textNode);
+            });
+        });
+    }
+
+    function cycleCharState(ch, span) {
+        const current = state.characters[ch] || 'unmarked';
+        let next;
+        if (current === 'unmarked') next = 'struggling';
+        else if (current === 'struggling') next = 'learned';
+        else next = 'unmarked';
+
+        if (next === 'unmarked') {
+            delete state.characters[ch];
+        } else {
+            state.characters[ch] = next;
+        }
+        saveState(state);
+
+        // Update all instances of this character on the page
+        document.querySelectorAll('.char-flaggable').forEach(function(el) {
+            if (el.textContent === ch) {
+                el.classList.remove('char-struggling', 'char-learned');
+                if (next === 'struggling') el.classList.add('char-struggling');
+                else if (next === 'learned') el.classList.add('char-learned');
+            }
+        });
+
+        updateFlaggingStatus();
+    }
+
+    function updateFlaggingStatus() {
+        const statusEl = document.getElementById('flagging-status');
+        const struggling = Object.values(state.characters).filter(function(s) { return s === 'struggling'; }).length;
+        const learned = Object.values(state.characters).filter(function(s) { return s === 'learned'; }).length;
+        if (struggling || learned) {
+            statusEl.textContent = '標記：' + struggling + ' 困難 / ' + learned + ' 已學';
+        } else {
+            statusEl.textContent = '';
+        }
+    }
+
+    // Toggle flagging mode
+    document.getElementById('flagging-toggle').addEventListener('click', function() {
+        flaggingMode = !flaggingMode;
+        document.body.classList.toggle('flagging-mode', flaggingMode);
+        this.classList.toggle('active', flaggingMode);
+        this.textContent = flaggingMode ? '字 標記模式 (開)' : '字 標記模式';
+    });
+
+    // =====================
+    // Translation Toggle
+    // =====================
+    window.toggleTranslation = function(btn) {
+        const translation = btn.nextElementSibling;
+        const isVisible = translation.classList.toggle('visible');
+        btn.textContent = isVisible ? '隱藏英文翻譯' : '顯示英文翻譯';
+    };
+
+    // =====================
+    // Editor's Desk
+    // =====================
+    window.toggleDeskPick = function(el) {
+        const index = parseInt(el.dataset.deskIndex);
+        const pickIdx = state.deskPicks.indexOf(index);
+
+        if (pickIdx !== -1) {
+            // Remove pick
+            state.deskPicks.splice(pickIdx, 1);
+            el.classList.remove('selected');
+        } else if (state.deskPicks.length < 3) {
+            // Add pick
+            state.deskPicks.push(index);
+            el.classList.add('selected');
+        }
+        saveState(state);
+        updateDeskNumbers();
+    };
+
+    function updateDeskNumbers() {
+        document.querySelectorAll('.desk-item').forEach(function(el) {
+            const index = parseInt(el.dataset.deskIndex);
+            const pickEl = el.querySelector('.pick-number');
+            const pos = state.deskPicks.indexOf(index);
+            pickEl.textContent = pos !== -1 ? '#' + (pos + 1) : '';
+        });
+    }
+
+    // =====================
+    // Export Feedback
+    // =====================
+    window.exportFeedback = function() {
+        // Build the offered headlines from the desk items
+        const offered = [];
+        document.querySelectorAll('.desk-item').forEach(function(el) {
+            offered.push({
+                headline: el.querySelector('.headline').textContent,
+                included_in_issue: el.querySelector('.badge').classList.contains('included')
+            });
+        });
+
+        const today = document.querySelector('header .date').textContent;
+
+        const exportData = {
+            date: new Date().toISOString().split('T')[0],
+            characters: {},
+            editors_desk: {
+                offered: offered,
+                user_top_3: state.deskPicks.slice()
+            }
+        };
+
+        // Build character export with timestamps
+        const now = new Date().toISOString().split('T')[0];
+        Object.keys(state.characters).forEach(function(ch) {
+            exportData.characters[ch] = {
+                state: state.characters[ch],
+                date: now
+            };
+        });
+
+        const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'feedback_export_' + exportData.date + '.json';
+        a.click();
+        URL.revokeObjectURL(url);
+    };
+
+    // =====================
+    // Initialize
+    // =====================
+    wrapCharacters();
+    updateFlaggingStatus();
+
+    // Restore desk picks from saved state
+    if (state.deskPicks.length > 0) {
+        state.deskPicks.forEach(function(idx) {
+            const el = document.querySelector('.desk-item[data-desk-index="' + idx + '"]');
+            if (el) el.classList.add('selected');
+        });
+        updateDeskNumbers();
+    }
+})();
+</script>
+
+</body>
+</html>

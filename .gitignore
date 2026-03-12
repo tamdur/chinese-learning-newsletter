@@ -1,0 +1,11 @@
+# Feedback exports (processed and discarded)
+feedback_export*.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~

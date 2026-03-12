@@ -1,0 +1,12 @@
+{
+  "reading_level": {
+    "grade": 5,
+    "description": "Equivalent to a Taiwanese elementary school 5th-grader. Use common characters and straightforward grammar. Avoid literary idioms, classical constructions, and low-frequency characters unless they are essential to the topic. When a harder character is unavoidable, embed a brief natural-language gloss in parentheses on first use."
+  },
+  "article_count": 5,
+  "language": "Traditional Chinese",
+  "timezone": "Asia/Taipei",
+  "newsletter_title": "今日讀報",
+  "date_format": "YYYY-MM-DD",
+  "github_pages_url": "https://tamdur.github.io/chinese-learning-newsletter/"
+}

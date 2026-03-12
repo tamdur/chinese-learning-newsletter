@@ -1,0 +1,30 @@
+{
+  "topics": [
+    {
+      "id": "tech",
+      "label": "Tech / AI / AGI",
+      "source_hints": ["Hacker News", "Ars Technica"]
+    },
+    {
+      "id": "econ_finance",
+      "label": "Economics & Finance",
+      "source_hints": ["Financial Times style coverage", "Marginal Revolution"]
+    },
+    {
+      "id": "climate",
+      "label": "Climate Science",
+      "source_hints": ["Carbon Brief", "Nature Climate Change"]
+    },
+    {
+      "id": "michigan_sports",
+      "label": "Michigan Football & Basketball",
+      "source_hints": ["MGoBlog", "The Athletic"]
+    },
+    {
+      "id": "cubs",
+      "label": "Cubs Baseball",
+      "source_hints": ["ESPN", "The Athletic"]
+    }
+  ],
+  "selection_note": "Pick 5 stories total. Aim for variety across topics but don't force every category into every issue. Lead with whatever is genuinely most interesting today. Include 1-2 stories outside these core topics that would appeal to a curious, well-read generalist — science, culture, history, unusual economics, etc. Think: the experience of flipping through a physical newspaper, not a hyper-targeted feed."
+}
