@@ -116,6 +116,70 @@
 
     footer { margin-top: 2rem; text-align: center; font-size: 13px; color: #aaa; }
     .storage-warning { font-size: 13px; color: #999; text-align: center; margin-top: 0.5rem; }
+
+    @media (pointer: coarse) {
+      .c {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+      }
+      .c.touch-active {
+        background: rgba(59, 130, 246, 0.15);
+        border-radius: 2px;
+        transition: background 0.1s ease;
+      }
+      .c.touch-selected {
+        background: rgba(59, 130, 246, 0.25);
+        border-radius: 2px;
+      }
+      .lookup-toggle { display: inline-block; }
+    }
+
+    .lookup-toggle { display: none; }
+
+    .char-popup {
+      display: none;
+      position: fixed;
+      width: 280px;
+      background: #fff;
+      border: 1px solid #e0ddd8;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 14px 16px;
+      z-index: 1000;
+      text-align: center;
+      font-family: "Noto Serif TC", "PMingLiU", serif;
+    }
+    .char-popup.visible { display: block; }
+    .char-popup-close {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: #999;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .char-popup-char {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .char-popup-zhuyin {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 6px;
+      font-family: "Apple LiGothic", "Microsoft JhengHei", sans-serif;
+    }
+    .char-popup-def {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.4;
+      font-family: Georgia, "Times New Roman", serif;
+    }
   </style>
 </head>
 <body>
@@ -129,17 +193,18 @@
 
 <!-- === ARTICLE 1 === -->
 <article class="article" data-article-id="1">
-  <h2 class="article-headline"><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">隊</span><span class="c">史</span><span class="c">上</span><span class="c">最</span><span class="c">強</span><span class="c">戰</span><span class="c">績</span><span class="c">，</span><span class="c">大</span><span class="c">十</span><span class="c">聯</span><span class="c">盟</span><span class="c">錦</span><span class="c">標</span><span class="c">賽</span><span class="c">第</span><span class="c">一</span><span class="c">種</span><span class="c">子</span></h2>
-  <p class="article-source">來源：Michigan Sports</p>
+  <h2 class="article-headline"><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">狼</span><span class="c">獾</span><span class="c">隊</span><span class="c">以</span><span class="c">第</span><span class="c">一</span><span class="c">種</span><span class="c">子</span><span class="c">出</span><span class="c">戰</span><span class="c">大</span><span class="c">十</span><span class="c">聯</span><span class="c">盟</span><span class="c">錦</span><span class="c">標</span><span class="c">賽</span></h2>
+  <p class="article-source">來源：ESPN</p>
 
   <div class="article-body-zh">
-    <p><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">大</span><span class="c">學</span><span class="c">男</span><span class="c">籃</span><span class="c">今</span><span class="c">年</span><span class="c">打</span><span class="c">出</span> 29 <span class="c">勝</span> 2 <span class="c">敗</span><span class="c">的</span><span class="c">超</span><span class="c">強</span><span class="c">戰</span><span class="c">績</span><span class="c">，</span><span class="c">拿</span><span class="c">下</span><span class="c">大</span><span class="c">十</span><span class="c">聯</span><span class="c">盟</span><span class="c">錦</span><span class="c">標</span><span class="c">賽</span><span class="c">的</span><span class="c">第</span><span class="c">一</span><span class="c">種</span><span class="c">子</span><span class="c">。</span><span class="c">這</span><span class="c">是</span><span class="c">球</span><span class="c">隊</span><span class="c">歷</span><span class="c">史</span><span class="c">上</span><span class="c">最</span><span class="c">好</span><span class="c">的</span><span class="c">例</span><span class="c">行</span><span class="c">賽</span><span class="c">成</span><span class="c">績</span><span class="c">之</span><span class="c">一</span><span class="c">。</span><span class="c">主</span><span class="c">教</span><span class="c">練</span> Dusty May <span class="c">帶</span><span class="c">領</span><span class="c">球</span><span class="c">隊</span><span class="c">一</span><span class="c">路</span><span class="c">過</span><span class="c">關</span><span class="c">，</span><span class="c">現</span><span class="c">在</span><span class="c">全</span><span class="c">美</span><span class="c">都</span><span class="c">在</span><span class="c">討</span><span class="c">論</span><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">能</span><span class="c">不</span><span class="c">能</span><span class="c">拿</span><span class="c">下</span><span class="c">全</span><span class="c">國</span><span class="c">冠</span><span class="c">軍</span><span class="c">。</span><span class="c">三</span><span class="c">月</span><span class="c">瘋</span><span class="c">（</span>March Madness<span class="c">）</span><span class="c">就</span><span class="c">要</span><span class="c">開</span><span class="c">始</span><span class="c">了</span><span class="c">，</span><span class="c">今</span><span class="c">年</span><span class="c">的</span><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">真</span><span class="c">的</span><span class="c">很</span><span class="c">有</span><span class="c">希</span><span class="c">望</span><span class="c">。</span></p>
+    <p><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">狼</span><span class="c">獾</span>（wolverines）<span class="c">隊</span><span class="c">今</span><span class="c">天</span><span class="c">以</span><span class="c">第</span><span class="c">一</span><span class="c">種</span><span class="c">子</span><span class="c">的</span><span class="c">身</span><span class="c">分</span>，<span class="c">在</span> Big Ten <span class="c">錦</span><span class="c">標</span><span class="c">賽</span><span class="c">打</span><span class="c">第</span><span class="c">一</span><span class="c">場</span><span class="c">比</span><span class="c">賽</span>。<span class="c">他</span><span class="c">們</span><span class="c">這</span><span class="c">季</span><span class="c">打</span><span class="c">出</span> 29 <span class="c">勝</span> 2 <span class="c">敗</span><span class="c">的</span><span class="c">成</span><span class="c">績</span>，<span class="c">是</span><span class="c">球</span><span class="c">隊</span><span class="c">歷</span><span class="c">史</span><span class="c">上</span><span class="c">最</span><span class="c">好</span><span class="c">的</span><span class="c">紀</span><span class="c">錄</span>。</p><p><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">被</span><span class="c">大</span><span class="c">家</span><span class="c">看</span><span class="c">好</span><span class="c">會</span><span class="c">拿</span><span class="c">下</span><span class="c">聯</span><span class="c">盟</span><span class="c">冠</span><span class="c">軍</span>。<span class="c">今</span><span class="c">年</span><span class="c">真</span><span class="c">的</span><span class="c">是</span><span class="c">歷</span><span class="c">史</span><span class="c">性</span><span class="c">的</span><span class="c">一</span><span class="c">季</span>，<span class="c">希</span><span class="c">望</span><span class="c">他</span><span class="c">們</span><span class="c">能</span><span class="c">一</span><span class="c">路</span><span class="c">打</span><span class="c">到</span><span class="c">最</span><span class="c">後</span>！</p>
   </div>
 
   <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
 
   <div class="article-body-en" hidden>
-    <p>Michigan men's basketball has posted an outstanding 29-2 record this season and earned the No. 1 seed in the Big Ten Tournament. This ranks among the best regular season records in program history. Head coach Dusty May has led the team through every challenge, and the entire nation is now discussing whether Michigan can capture the national championship. March Madness is about to begin, and this year's Michigan team truly has great promise.</p>
+    <p>The Michigan Wolverines took the court today as the No. 1 seed in the Big Ten Tournament for their first game. With a 29-2 record this season, they're on pace for the best season in program history.</p>
+    <p>Michigan is widely expected to win the conference championship. This really has been a historic season, and everyone's hoping they can go all the way!</p>
   </div>
 </article>
 
@@ -147,17 +212,18 @@
 
 <!-- === ARTICLE 2 === -->
 <article class="article" data-article-id="2">
-  <h2 class="article-headline"><span class="c">美</span><span class="c">國</span><span class="c">二</span><span class="c">月</span><span class="c">少</span><span class="c">了</span><span class="c">九</span><span class="c">萬</span><span class="c">多</span><span class="c">個</span><span class="c">工</span><span class="c">作</span><span class="c">，</span><span class="c">大</span><span class="c">家</span><span class="c">開</span><span class="c">始</span><span class="c">擔</span><span class="c">心</span><span class="c">經</span><span class="c">濟</span><span class="c">衰</span><span class="c">退</span></h2>
-  <p class="article-source">來源：Economics/Finance</p>
+  <h2 class="article-headline"><span class="c">中</span><span class="c">東</span><span class="c">戰</span><span class="c">爭</span><span class="c">造</span><span class="c">成</span><span class="c">史</span><span class="c">上</span><span class="c">最</span><span class="c">大</span><span class="c">石</span><span class="c">油</span><span class="c">供</span><span class="c">應</span><span class="c">中</span><span class="c">斷</span></h2>
+  <p class="article-source">來源：Reuters</p>
 
   <div class="article-body-zh">
-    <p><span class="c">美</span><span class="c">國</span><span class="c">二</span><span class="c">月</span><span class="c">的</span><span class="c">就</span><span class="c">業</span><span class="c">報</span><span class="c">告</span><span class="c">出</span><span class="c">來</span><span class="c">了</span><span class="c">，</span><span class="c">結</span><span class="c">果</span><span class="c">不</span><span class="c">太</span><span class="c">好</span><span class="c">——</span><span class="c">整</span><span class="c">個</span><span class="c">月</span><span class="c">少</span><span class="c">了</span><span class="c">九</span><span class="c">萬</span><span class="c">兩</span><span class="c">千</span><span class="c">個</span><span class="c">工</span><span class="c">作</span><span class="c">，</span><span class="c">比</span><span class="c">大</span><span class="c">家</span><span class="c">預</span><span class="c">期</span><span class="c">的</span><span class="c">差</span><span class="c">很</span><span class="c">多</span><span class="c">。</span><span class="c">投</span><span class="c">資</span><span class="c">人</span><span class="c">很</span><span class="c">緊</span><span class="c">張</span><span class="c">，</span><span class="c">黃</span><span class="c">金</span><span class="c">價</span><span class="c">格</span><span class="c">衝</span><span class="c">到</span><span class="c">每</span><span class="c">盎</span><span class="c">司</span><span class="c">（</span>ounce<span class="c">）</span>5,185 <span class="c">美</span><span class="c">元</span><span class="c">，</span><span class="c">因</span><span class="c">為</span><span class="c">大</span><span class="c">家</span><span class="c">把</span><span class="c">錢</span><span class="c">放</span><span class="c">到</span><span class="c">比</span><span class="c">較</span><span class="c">安</span><span class="c">全</span><span class="c">的</span><span class="c">地</span><span class="c">方</span><span class="c">。</span><span class="c">油</span><span class="c">價</span><span class="c">也</span><span class="c">上</span><span class="c">上</span><span class="c">下</span><span class="c">下</span><span class="c">不</span><span class="c">穩</span><span class="c">定</span><span class="c">。</span><span class="c">現</span><span class="c">在</span><span class="c">很</span><span class="c">多</span><span class="c">人</span><span class="c">在</span><span class="c">問</span><span class="c">：</span><span class="c">美</span><span class="c">國</span><span class="c">會</span><span class="c">不</span><span class="c">會</span><span class="c">進</span><span class="c">入</span><span class="c">經</span><span class="c">濟</span><span class="c">衰</span><span class="c">退</span><span class="c">？</span><span class="c">聯</span><span class="c">準</span><span class="c">會</span><span class="c">（</span>Fed<span class="c">）</span><span class="c">面</span><span class="c">對</span><span class="c">的</span><span class="c">壓</span><span class="c">力</span><span class="c">越</span><span class="c">來</span><span class="c">越</span><span class="c">大</span><span class="c">了</span><span class="c">。</span></p>
+    <p><span class="c">因</span><span class="c">為</span><span class="c">中</span><span class="c">東</span><span class="c">的</span><span class="c">戰</span><span class="c">爭</span>，<span class="c">伊</span><span class="c">拉</span><span class="c">克</span><span class="c">的</span><span class="c">石</span><span class="c">油</span><span class="c">產</span><span class="c">量</span><span class="c">每</span><span class="c">天</span><span class="c">少</span><span class="c">了</span> 300 <span class="c">萬</span><span class="c">桶</span>，<span class="c">這</span><span class="c">是</span><span class="c">歷</span><span class="c">史</span><span class="c">上</span><span class="c">最</span><span class="c">嚴</span><span class="c">重</span><span class="c">的</span><span class="c">石</span><span class="c">油</span><span class="c">供</span><span class="c">應</span><span class="c">中</span><span class="c">斷</span>。<span class="c">比</span> 1990 <span class="c">年</span><span class="c">波</span><span class="c">斯</span><span class="c">灣</span><span class="c">戰</span><span class="c">爭</span><span class="c">那</span><span class="c">時</span><span class="c">候</span><span class="c">還</span><span class="c">要</span><span class="c">嚴</span><span class="c">重</span>。</p><p><span class="c">全</span><span class="c">球</span><span class="c">能</span><span class="c">源</span><span class="c">市</span><span class="c">場</span><span class="c">受</span><span class="c">到</span><span class="c">很</span><span class="c">大</span><span class="c">的</span><span class="c">影</span><span class="c">響</span>，<span class="c">油</span><span class="c">價</span><span class="c">上</span><span class="c">漲</span><span class="c">也</span><span class="c">可</span><span class="c">能</span><span class="c">帶</span><span class="c">動</span><span class="c">通</span><span class="c">貨</span><span class="c">膨</span><span class="c">脹</span>（<span class="c">就</span><span class="c">是</span><span class="c">東</span><span class="c">西</span><span class="c">都</span><span class="c">變</span><span class="c">貴</span>），<span class="c">對</span><span class="c">全</span><span class="c">球</span><span class="c">經</span><span class="c">濟</span><span class="c">是</span><span class="c">一</span><span class="c">大</span><span class="c">挑</span><span class="c">戰</span>。</p>
   </div>
 
   <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
 
   <div class="article-body-en" hidden>
-    <p>The U.S. jobs report for February came in, and the news wasn't great — the country lost 92,000 jobs for the month, much worse than what people were expecting. Investors got nervous, and gold prices shot up to $5,185 per ounce because people were moving their money to safer places. Oil prices bounced around unpredictably too. Now a lot of people are asking: will the U.S. slip into a recession? The Federal Reserve is facing mounting pressure.</p>
+    <p>Due to the war in the Middle East, Iraq's daily oil production has dropped by 3 million barrels, marking the most severe oil supply disruption in history. This is even worse than what happened during the 1990 Persian Gulf War.</p>
+    <p>The global energy market has been significantly affected. Rising oil prices could also drive inflation (meaning everything becomes more expensive), presenting a major challenge to the global economy.</p>
   </div>
 </article>
 
@@ -165,17 +231,18 @@
 
 <!-- === ARTICLE 3 === -->
 <article class="article" data-article-id="3">
-  <h2 class="article-headline">Anthropic<span class="c">成</span><span class="c">立</span><span class="c">新</span><span class="c">研</span><span class="c">究</span><span class="c">所</span><span class="c">，</span><span class="c">專</span><span class="c">門</span><span class="c">研</span><span class="c">究</span>AI<span class="c">法</span><span class="c">律</span><span class="c">與</span><span class="c">政</span><span class="c">策</span></h2>
-  <p class="article-source">來源：Gen AI/AGI</p>
+  <h2 class="article-headline"><span class="c">卡</span><span class="c">達</span><span class="c">氦</span><span class="c">氣</span><span class="c">停</span><span class="c">產</span>，<span class="c">晶</span><span class="c">片</span><span class="c">供</span><span class="c">應</span><span class="c">鏈</span><span class="c">只</span><span class="c">剩</span><span class="c">兩</span><span class="c">週</span><span class="c">存</span><span class="c">量</span></h2>
+  <p class="article-source">來源：Tom's Hardware</p>
 
   <div class="article-body-zh">
-    <p>AI <span class="c">公</span><span class="c">司</span> Anthropic <span class="c">宣</span><span class="c">布</span><span class="c">成</span><span class="c">立</span><span class="c">一</span><span class="c">個</span><span class="c">新</span><span class="c">的</span><span class="c">研</span><span class="c">究</span><span class="c">所</span><span class="c">，</span><span class="c">叫</span><span class="c">做</span> Anthropic Institute<span class="c">。</span><span class="c">這</span><span class="c">個</span><span class="c">研</span><span class="c">究</span><span class="c">所</span><span class="c">會</span><span class="c">研</span><span class="c">究</span> AI <span class="c">相</span><span class="c">關</span><span class="c">的</span><span class="c">法</span><span class="c">律</span><span class="c">、</span><span class="c">對</span><span class="c">經</span><span class="c">濟</span><span class="c">的</span><span class="c">影</span><span class="c">響</span><span class="c">，</span><span class="c">還</span><span class="c">有</span><span class="c">政</span><span class="c">府</span><span class="c">該</span><span class="c">怎</span><span class="c">麼</span><span class="c">管</span><span class="c">理</span> AI<span class="c">。</span><span class="c">同</span><span class="c">一</span><span class="c">時</span><span class="c">間</span><span class="c">，</span>Anthropic <span class="c">也</span><span class="c">因</span><span class="c">為</span><span class="c">跟</span><span class="c">美</span><span class="c">國</span><span class="c">國</span><span class="c">防</span><span class="c">部</span><span class="c">有</span><span class="c">關</span><span class="c">的</span><span class="c">事</span><span class="c">情</span><span class="c">被</span><span class="c">告</span><span class="c">上</span><span class="c">法</span><span class="c">院</span><span class="c">。</span><span class="c">從</span><span class="c">這</span><span class="c">些</span><span class="c">動</span><span class="c">作</span><span class="c">可</span><span class="c">以</span><span class="c">看</span><span class="c">出</span><span class="c">來</span><span class="c">，</span>Anthropic <span class="c">越</span><span class="c">來</span><span class="c">越</span><span class="c">積</span><span class="c">極</span><span class="c">地</span><span class="c">跟</span><span class="c">政</span><span class="c">府</span><span class="c">合</span><span class="c">作</span><span class="c">，</span><span class="c">想</span><span class="c">要</span><span class="c">影</span><span class="c">響</span> AI <span class="c">的</span><span class="c">規</span><span class="c">則</span><span class="c">怎</span><span class="c">麼</span><span class="c">訂</span><span class="c">。</span></p>
+    <p><span class="c">卡</span><span class="c">達</span><span class="c">停</span><span class="c">止</span><span class="c">生</span><span class="c">產</span><span class="c">氦</span>（helium）<span class="c">氣</span>，<span class="c">很</span><span class="c">可</span><span class="c">能</span><span class="c">跟</span><span class="c">中</span><span class="c">東</span><span class="c">戰</span><span class="c">爭</span><span class="c">有</span><span class="c">關</span>。<span class="c">做</span><span class="c">晶</span><span class="c">片</span><span class="c">需</span><span class="c">要</span><span class="c">用</span><span class="c">到</span><span class="c">非</span><span class="c">常</span><span class="c">純</span><span class="c">的</span><span class="c">氦</span><span class="c">氣</span>，<span class="c">所</span><span class="c">以</span><span class="c">這</span><span class="c">對</span><span class="c">全</span><span class="c">球</span><span class="c">半</span><span class="c">導</span><span class="c">體</span>（semiconductor）<span class="c">產</span><span class="c">業</span><span class="c">是</span><span class="c">很</span><span class="c">大</span><span class="c">的</span><span class="c">問</span><span class="c">題</span>。</p><p><span class="c">目</span><span class="c">前</span><span class="c">業</span><span class="c">界</span><span class="c">的</span><span class="c">氦</span><span class="c">氣</span><span class="c">庫</span><span class="c">存</span><span class="c">大</span><span class="c">約</span><span class="c">只</span><span class="c">夠</span><span class="c">用</span><span class="c">兩</span><span class="c">週</span>。<span class="c">如</span><span class="c">果</span><span class="c">不</span><span class="c">快</span><span class="c">解</span><span class="c">決</span>，<span class="c">晶</span><span class="c">片</span><span class="c">生</span><span class="c">產</span><span class="c">線</span><span class="c">可</span><span class="c">能</span><span class="c">要</span><span class="c">停</span><span class="c">下</span><span class="c">來</span>。</p>
   </div>
 
   <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
 
   <div class="article-body-en" hidden>
-    <p>The AI company Anthropic announced the establishment of a new research institute called the Anthropic Institute. This institute will research laws related to AI, its impact on the economy, and how governments should regulate AI. At the same time, Anthropic is being sued over matters related to the U.S. Department of Defense. These actions show that Anthropic is becoming increasingly active in collaborating with government and wants to influence how AI regulations are set.</p>
+    <p>Qatar has stopped producing helium gas, likely related to the Middle East conflict. Chipmaking requires extremely pure helium gas, so this is a major problem for the global semiconductor industry.</p>
+    <p>Currently, industry helium reserves are roughly sufficient for only two weeks of supply. If not resolved quickly, chip production lines may have to shut down.</p>
   </div>
 </article>
 
@@ -183,17 +250,18 @@
 
 <!-- === ARTICLE 4 === -->
 <article class="article" data-article-id="4">
-  <h2 class="article-headline">AI<span class="c">人</span><span class="c">臉</span><span class="c">辨</span><span class="c">識</span><span class="c">認</span><span class="c">錯</span><span class="c">人</span><span class="c">，</span><span class="c">無</span><span class="c">辜</span><span class="c">女</span><span class="c">子</span><span class="c">被</span><span class="c">關</span><span class="c">進</span><span class="c">監</span><span class="c">獄</span></h2>
-  <p class="article-source">來源：Gen AI/AGI</p>
+  <h2 class="article-headline">ATM<span class="c">沒</span><span class="c">有</span><span class="c">消</span><span class="c">滅</span><span class="c">銀</span><span class="c">行</span><span class="c">櫃</span><span class="c">員</span>，<span class="c">但</span><span class="c">智</span><span class="c">慧</span><span class="c">型</span><span class="c">手</span><span class="c">機</span><span class="c">做</span><span class="c">到</span><span class="c">了</span></h2>
+  <p class="article-source">來源：Hacker News</p>
 
   <div class="article-body-zh">
-    <p><span class="c">一</span><span class="c">名</span><span class="c">女</span><span class="c">子</span><span class="c">被</span><span class="c">警</span><span class="c">察</span><span class="c">抓</span><span class="c">去</span><span class="c">關</span><span class="c">，</span><span class="c">但</span><span class="c">她</span><span class="c">什</span><span class="c">麼</span><span class="c">壞</span><span class="c">事</span><span class="c">都</span><span class="c">沒</span><span class="c">做</span><span class="c">。</span><span class="c">原</span><span class="c">因</span><span class="c">是</span> AI <span class="c">人</span><span class="c">臉</span><span class="c">辨</span><span class="c">識</span><span class="c">系</span><span class="c">統</span><span class="c">把</span><span class="c">她</span><span class="c">認</span><span class="c">成</span><span class="c">了</span><span class="c">另</span><span class="c">一</span><span class="c">個</span><span class="c">人</span><span class="c">。</span><span class="c">這</span><span class="c">件</span><span class="c">事</span><span class="c">讓</span><span class="c">很</span><span class="c">多</span><span class="c">人</span><span class="c">再</span><span class="c">次</span><span class="c">討</span><span class="c">論</span><span class="c">：</span><span class="c">用</span> AI <span class="c">來</span><span class="c">抓</span><span class="c">人</span><span class="c">到</span><span class="c">底</span><span class="c">安</span><span class="c">不</span><span class="c">安</span><span class="c">全</span><span class="c">？</span><span class="c">人</span><span class="c">臉</span><span class="c">辨</span><span class="c">識</span><span class="c">技</span><span class="c">術</span><span class="c">已</span><span class="c">經</span><span class="c">知</span><span class="c">道</span><span class="c">有</span><span class="c">偏</span><span class="c">差</span><span class="c">（</span>bias<span class="c">）</span><span class="c">的</span><span class="c">問</span><span class="c">題</span><span class="c">，</span><span class="c">有</span><span class="c">時</span><span class="c">候</span><span class="c">會</span><span class="c">認</span><span class="c">錯</span><span class="c">人</span><span class="c">，</span><span class="c">特</span><span class="c">別</span><span class="c">是</span><span class="c">對</span><span class="c">某</span><span class="c">些</span><span class="c">族</span><span class="c">群</span><span class="c">。</span><span class="c">這</span><span class="c">個</span><span class="c">案</span><span class="c">子</span><span class="c">提</span><span class="c">醒</span><span class="c">我</span><span class="c">們</span><span class="c">，</span>AI <span class="c">雖</span><span class="c">然</span><span class="c">方</span><span class="c">便</span><span class="c">，</span><span class="c">但</span><span class="c">用</span><span class="c">在</span><span class="c">執</span><span class="c">法</span><span class="c">上</span><span class="c">要</span><span class="c">非</span><span class="c">常</span><span class="c">小</span><span class="c">心</span><span class="c">。</span></p>
+    <p><span class="c">你</span><span class="c">可</span><span class="c">能</span><span class="c">以</span><span class="c">為</span> ATM <span class="c">出</span><span class="c">現</span><span class="c">以</span><span class="c">後</span>，<span class="c">銀</span><span class="c">行</span><span class="c">櫃</span><span class="c">員</span><span class="c">就</span><span class="c">變</span><span class="c">少</span><span class="c">了</span>，<span class="c">但</span><span class="c">其</span><span class="c">實</span><span class="c">相</span><span class="c">反</span>。ATM <span class="c">讓</span><span class="c">開</span><span class="c">分</span><span class="c">行</span><span class="c">的</span><span class="c">成</span><span class="c">本</span><span class="c">降</span><span class="c">低</span>，<span class="c">銀</span><span class="c">行</span><span class="c">反</span><span class="c">而</span><span class="c">開</span><span class="c">了</span><span class="c">更</span><span class="c">多</span><span class="c">分</span><span class="c">行</span>，<span class="c">所</span><span class="c">以</span><span class="c">櫃</span><span class="c">員</span><span class="c">人</span><span class="c">數</span><span class="c">還</span><span class="c">增</span><span class="c">加</span><span class="c">了</span>。</p><p><span class="c">真</span><span class="c">正</span><span class="c">讓</span><span class="c">櫃</span><span class="c">員</span><span class="c">工</span><span class="c">作</span><span class="c">大</span><span class="c">量</span><span class="c">減</span><span class="c">少</span><span class="c">的</span>，<span class="c">是</span><span class="c">智</span><span class="c">慧</span><span class="c">型</span><span class="c">手</span><span class="c">機</span>。<span class="c">這</span><span class="c">個</span><span class="c">故</span><span class="c">事</span><span class="c">告</span><span class="c">訴</span><span class="c">我</span><span class="c">們</span>：AI <span class="c">對</span><span class="c">工</span><span class="c">作</span><span class="c">的</span><span class="c">影</span><span class="c">響</span>，<span class="c">可</span><span class="c">能</span><span class="c">跟</span><span class="c">我</span><span class="c">們</span><span class="c">想</span><span class="c">的</span><span class="c">很</span><span class="c">不</span><span class="c">一</span><span class="c">樣</span>。</p>
   </div>
 
   <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
 
   <div class="article-body-en" hidden>
-    <p>A woman was arrested by police, but she had done nothing wrong. The reason: an AI facial recognition system mistook her for someone else. This incident has sparked another round of discussion: is it actually safe to use AI to arrest people? Facial recognition technology is already known to have bias problems, and it sometimes gets people wrong, especially with certain groups. This case reminds us that even though AI is convenient, we have to be extremely careful when using it in law enforcement.</p>
+    <p>You might have thought that once ATMs appeared, the number of bank tellers would have decreased. But the opposite happened. ATMs lowered the cost of opening branches, so banks actually opened more branches, and the number of tellers increased.</p>
+    <p>What really caused a sharp drop in teller jobs was the smartphone. This story teaches us something important: AI's impact on work might be very different from what we expect.</p>
   </div>
 </article>
 
@@ -201,17 +269,18 @@
 
 <!-- === ARTICLE 5 === -->
 <article class="article" data-article-id="5">
-  <h2 class="article-headline"><span class="c">腸</span><span class="c">子</span><span class="c">跟</span><span class="c">大</span><span class="c">腦</span><span class="c">說</span><span class="c">話</span><span class="c">？</span><span class="c">科</span><span class="c">學</span><span class="c">家</span><span class="c">找</span><span class="c">到</span><span class="c">恢</span><span class="c">復</span><span class="c">記</span><span class="c">憶</span><span class="c">的</span><span class="c">新</span><span class="c">方</span><span class="c">法</span></h2>
-  <p class="article-source">來源：Science</p>
+  <h2 class="article-headline"><span class="c">大</span><span class="c">都</span><span class="c">會</span><span class="c">博</span><span class="c">物</span><span class="c">館</span><span class="c">公</span><span class="c">開</span>140<span class="c">件</span><span class="c">藝</span><span class="c">術</span><span class="c">品</span><span class="c">的</span>3D<span class="c">掃</span><span class="c">描</span></h2>
+  <p class="article-source">來源：The Verge</p>
 
   <div class="article-body-zh">
-    <p><span class="c">史</span><span class="c">丹</span><span class="c">佛</span><span class="c">大</span><span class="c">學</span><span class="c">的</span><span class="c">研</span><span class="c">究</span><span class="c">人</span><span class="c">員</span><span class="c">發</span><span class="c">現</span><span class="c">，</span><span class="c">我</span><span class="c">們</span><span class="c">的</span><span class="c">腸</span><span class="c">子</span><span class="c">會</span><span class="c">送</span><span class="c">訊</span><span class="c">號</span><span class="c">給</span><span class="c">大</span><span class="c">腦</span><span class="c">，</span><span class="c">而</span><span class="c">且</span><span class="c">這</span><span class="c">些</span><span class="c">訊</span><span class="c">號</span><span class="c">可</span><span class="c">能</span><span class="c">可</span><span class="c">以</span><span class="c">幫</span><span class="c">助</span><span class="c">恢</span><span class="c">復</span><span class="c">記</span><span class="c">憶</span><span class="c">力</span><span class="c">。</span><span class="c">他</span><span class="c">們</span><span class="c">用</span><span class="c">老</span><span class="c">鼠</span><span class="c">做</span><span class="c">實</span><span class="c">驗</span><span class="c">，</span><span class="c">發</span><span class="c">現</span><span class="c">腸</span><span class="c">道</span><span class="c">裡</span><span class="c">的</span><span class="c">微</span><span class="c">生</span><span class="c">物</span><span class="c">（</span>microbiome<span class="c">）</span><span class="c">會</span><span class="c">產</span><span class="c">生</span><span class="c">特</span><span class="c">別</span><span class="c">的</span><span class="c">分</span><span class="c">子</span><span class="c">，</span><span class="c">這</span><span class="c">些</span><span class="c">分</span><span class="c">子</span><span class="c">能</span><span class="c">讓</span><span class="c">大</span><span class="c">腦</span><span class="c">裡</span><span class="c">負</span><span class="c">責</span><span class="c">記</span><span class="c">憶</span><span class="c">的</span><span class="c">海</span><span class="c">馬</span><span class="c">迴</span><span class="c">（</span>hippocampus<span class="c">）</span><span class="c">重</span><span class="c">新</span><span class="c">正</span><span class="c">常</span><span class="c">運</span><span class="c">作</span><span class="c">。</span><span class="c">雖</span><span class="c">然</span><span class="c">目</span><span class="c">前</span><span class="c">只</span><span class="c">在</span><span class="c">老</span><span class="c">鼠</span><span class="c">身</span><span class="c">上</span><span class="c">成</span><span class="c">功</span><span class="c">，</span><span class="c">但</span><span class="c">這</span><span class="c">給</span><span class="c">治</span><span class="c">療</span><span class="c">老</span><span class="c">年</span><span class="c">人</span><span class="c">記</span><span class="c">憶</span><span class="c">力</span><span class="c">下</span><span class="c">降</span><span class="c">帶</span><span class="c">來</span><span class="c">了</span><span class="c">新</span><span class="c">的</span><span class="c">希</span><span class="c">望</span><span class="c">。</span></p>
+    <p><span class="c">紐</span><span class="c">約</span><span class="c">的</span><span class="c">大</span><span class="c">都</span><span class="c">會</span><span class="c">博</span><span class="c">物</span><span class="c">館</span>（The Met）<span class="c">把</span> 140 <span class="c">件</span><span class="c">有</span><span class="c">名</span><span class="c">的</span><span class="c">藝</span><span class="c">術</span><span class="c">品</span><span class="c">做</span><span class="c">成</span><span class="c">高</span><span class="c">畫</span><span class="c">質</span><span class="c">的</span> 3D <span class="c">掃</span><span class="c">描</span>，<span class="c">免</span><span class="c">費</span><span class="c">給</span><span class="c">大</span><span class="c">家</span><span class="c">看</span>。</p><p><span class="c">裡</span><span class="c">面</span><span class="c">有</span><span class="c">古</span><span class="c">代</span><span class="c">的</span><span class="c">雕</span><span class="c">塑</span>、<span class="c">盔</span><span class="c">甲</span>（armor）、<span class="c">樂</span><span class="c">器</span><span class="c">等</span><span class="c">等</span>，<span class="c">你</span><span class="c">可</span><span class="c">以</span><span class="c">從</span><span class="c">任</span><span class="c">何</span><span class="c">角</span><span class="c">度</span><span class="c">仔</span><span class="c">細</span><span class="c">看</span><span class="c">每</span><span class="c">個</span><span class="c">細</span><span class="c">節</span>。<span class="c">不</span><span class="c">用</span><span class="c">飛</span><span class="c">到</span><span class="c">紐</span><span class="c">約</span>，<span class="c">在</span><span class="c">家</span><span class="c">就</span><span class="c">能</span><span class="c">逛</span><span class="c">博</span><span class="c">物</span><span class="c">館</span>，<span class="c">還</span><span class="c">滿</span><span class="c">酷</span><span class="c">的</span>。</p>
   </div>
 
   <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
 
   <div class="article-body-en" hidden>
-    <p>Researchers at Stanford University have discovered that our intestines send signals to the brain, and these signals may help restore memory. They conducted experiments on mice and found that microbes in the gut (microbiome) produce special molecules that allow the hippocampus—the brain region responsible for memory—to function normally again. While the findings are so far limited to mice, this offers new hope for treating memory decline in older adults.</p>
+    <p>The Metropolitan Museum of Art in New York has released high-quality 3D scans of 140 famous artworks, available for free to everyone.</p>
+    <p>The collection includes ancient sculptures, armor, musical instruments, and more. You can examine every detail from any angle. You don't need to fly to New York — you can explore the museum from home. Pretty cool, right?</p>
   </div>
 </article>
 
@@ -225,35 +294,35 @@
   <div class="desk-items">
     <div class="desk-item included" data-desk-index="0">
       <span class="desk-badge">收錄</span>
-      <span class="desk-headline">密西根隊史上最強戰績，大十聯盟錦標賽第一種子</span>
+      <span class="desk-headline">密西根狼獾隊以第一種子出戰大十聯盟錦標賽</span>
     </div>
     <div class="desk-item included" data-desk-index="1">
       <span class="desk-badge">收錄</span>
-      <span class="desk-headline">美國二月少了九萬多個工作，大家開始擔心經濟衰退</span>
+      <span class="desk-headline">中東戰爭造成史上最大石油供應中斷</span>
     </div>
     <div class="desk-item included" data-desk-index="2">
       <span class="desk-badge">收錄</span>
-      <span class="desk-headline">Anthropic成立新研究所，專門研究AI法律與政策</span>
+      <span class="desk-headline">卡達氦氣停產，晶片供應鏈只剩兩週存量</span>
     </div>
     <div class="desk-item included" data-desk-index="3">
       <span class="desk-badge">收錄</span>
-      <span class="desk-headline">AI人臉辨識認錯人，無辜女子被關進監獄</span>
+      <span class="desk-headline">ATM沒有消滅銀行櫃員，但智慧型手機做到了</span>
     </div>
     <div class="desk-item included" data-desk-index="4">
       <span class="desk-badge">收錄</span>
-      <span class="desk-headline">腸子跟大腦說話？科學家找到恢復記憶的新方法</span>
+      <span class="desk-headline">大都會博物館公開140件藝術品的3D掃描</span>
     </div>
     <div class="desk-item excluded" data-desk-index="5">
       <span class="desk-badge">未收錄</span>
-      <span class="desk-headline">美國私募信貸違約率創新高達9.2%</span>
+      <span class="desk-headline">川普禁止Anthropic與政府合作，OpenAI拿下五角大廈合約</span>
     </div>
     <div class="desk-item excluded" data-desk-index="6">
       <span class="desk-badge">未收錄</span>
-      <span class="desk-headline">LeCun創辦AMI Labs募得十億美元打造世界模型</span>
+      <span class="desk-headline">美國威脅對歐盟和中國加徵新關稅，啟動貿易調查</span>
     </div>
     <div class="desk-item excluded" data-desk-index="7">
       <span class="desk-badge">未收錄</span>
-      <span class="desk-headline">NASA飛船成功改變小行星繞日軌道</span>
+      <span class="desk-headline">科學家成功在模擬月球土壤中種出鷹嘴豆</span>
     </div>
   </div>
 
@@ -263,6 +332,7 @@
 <!-- === TOOLBAR === -->
 <div class="toolbar" id="toolbar">
   <button id="flag-toggle" type="button">標記模式 OFF</button>
+  <button id="lookup-toggle" class="lookup-toggle" type="button">查詢模式 OFF</button>
   <button id="export-btn" type="button">匯出回饋 Export Feedback</button>
   <span id="export-confirm" class="confirm-msg" hidden>已匯出 ✓</span>
 </div>
@@ -270,6 +340,17 @@
 <footer>
   <p>今日讀報 — 以 Claude Code 製作</p>
 </footer>
+
+<div class="char-popup" id="char-popup" role="tooltip">
+  <button class="char-popup-close" id="popup-close" aria-label="Close">&times;</button>
+  <div class="char-popup-char" id="popup-char"></div>
+  <div class="char-popup-zhuyin" id="popup-zhuyin"></div>
+  <div class="char-popup-def" id="popup-def"></div>
+</div>
+
+<script>
+const GLOSSARY = {};
+</script>
 
 <script>
 (function () {
@@ -279,6 +360,7 @@
   const charStates = {};
   let deskPicks = [];
   let flaggingMode = false;
+  let lookupMode = false;
 
   // === localStorage helpers ===
 
@@ -357,6 +439,11 @@
     this.textContent = flaggingMode ? '標記模式 ON' : '標記模式 OFF';
     this.classList.toggle('active', flaggingMode);
     document.body.classList.toggle('flagging-on', flaggingMode);
+    if (flaggingMode && lookupMode) {
+      lookupMode = false;
+      document.getElementById('lookup-toggle').textContent = '查詢模式 OFF';
+      document.getElementById('lookup-toggle').classList.remove('active');
+    }
   });
 
   // === Click-to-cycle character states ===
@@ -468,6 +555,207 @@
   };
 
   document.getElementById('export-btn').addEventListener('click', exportFeedback);
+
+  // === Mobile character lookup ===
+
+  const isMobile = window.matchMedia('(pointer: coarse)').matches;
+
+  if (isMobile) {
+    let longPressTimer = null;
+    let feedbackTimer = null;
+    let startX = 0;
+    let startY = 0;
+    let activeSpan = null;
+    const LONG_PRESS_MS = 400;
+    const MOVE_THRESHOLD = 10;
+
+    const popup = document.getElementById('char-popup');
+    const popupChar = document.getElementById('popup-char');
+    const popupZhuyin = document.getElementById('popup-zhuyin');
+    const popupDef = document.getElementById('popup-def');
+    const lookupToggleBtn = document.getElementById('lookup-toggle');
+
+    function positionPopup(targetSpan) {
+      var rect = targetSpan.getBoundingClientRect();
+      var popupWidth = 280;
+      var margin = 8;
+      var gap = 6;
+      var vw = window.innerWidth;
+
+      popup.classList.add('visible');
+      var popupHeight = popup.offsetHeight;
+
+      var left = rect.left + rect.width / 2 - popupWidth / 2;
+      left = Math.max(margin, Math.min(left, vw - popupWidth - margin));
+
+      var top = rect.top - popupHeight - gap;
+      if (top < margin) {
+        top = rect.bottom + gap;
+      }
+
+      popup.style.left = left + 'px';
+      popup.style.top = top + 'px';
+    }
+
+    function findLongestMatch(targetSpan) {
+      if (typeof GLOSSARY === 'undefined') return null;
+
+      var parent = targetSpan.closest('p, h2, li') || targetSpan.parentElement;
+      var spans = [].slice.call(parent.querySelectorAll('.c'));
+      var targetIdx = spans.indexOf(targetSpan);
+      if (targetIdx === -1) return null;
+
+      var chars = spans.map(function (s) { return s.textContent; });
+      var MAX_WORD_LEN = 6;
+      var bestMatch = null;
+      var bestSpans = null;
+
+      for (var len = Math.min(MAX_WORD_LEN, chars.length); len >= 1; len--) {
+        var startMin = Math.max(0, targetIdx - len + 1);
+        var startMax = Math.min(targetIdx, chars.length - len);
+
+        for (var start = startMin; start <= startMax; start++) {
+          var candidate = chars.slice(start, start + len).join('');
+          if (GLOSSARY[candidate]) {
+            if (!bestMatch || candidate.length > bestMatch.length) {
+              bestMatch = candidate;
+              bestSpans = spans.slice(start, start + len);
+            }
+          }
+        }
+
+        if (bestMatch && bestMatch.length === len) break;
+      }
+
+      return bestMatch
+        ? { text: bestMatch, entry: GLOSSARY[bestMatch], spans: bestSpans }
+        : null;
+    }
+
+    function showPopup(char, targetSpan) {
+      var match = findLongestMatch(targetSpan);
+
+      if (match) {
+        popupChar.textContent = match.text;
+        popupZhuyin.textContent = match.entry.zhuyin;
+        popupDef.textContent = match.entry.english;
+      } else {
+        popupChar.textContent = char;
+        popupZhuyin.textContent = '';
+        popupDef.textContent = '(not in glossary)';
+      }
+
+      document.querySelectorAll('.c.touch-selected').forEach(function (el) {
+        el.classList.remove('touch-selected');
+      });
+
+      var highlightSpans = match ? match.spans : [targetSpan];
+      highlightSpans.forEach(function (s) { s.classList.add('touch-selected'); });
+      activeSpan = targetSpan;
+
+      positionPopup(targetSpan);
+    }
+
+    function hidePopup() {
+      popup.classList.remove('visible');
+      document.querySelectorAll('.c.touch-selected').forEach(function (el) {
+        el.classList.remove('touch-selected');
+      });
+      activeSpan = null;
+    }
+
+    document.getElementById('popup-close').addEventListener('click', hidePopup);
+
+    document.addEventListener('click', function (e) {
+      if (!popup.classList.contains('visible')) return;
+      if (popup.contains(e.target)) return;
+      if (!e.target.closest('.c')) {
+        hidePopup();
+      }
+    });
+
+    var scrollDismissAttached = false;
+    function attachScrollDismiss() {
+      if (scrollDismissAttached) return;
+      scrollDismissAttached = true;
+      window.addEventListener('scroll', function onScroll() {
+        hidePopup();
+        window.removeEventListener('scroll', onScroll);
+        scrollDismissAttached = false;
+      }, { once: true });
+    }
+
+    document.addEventListener('touchstart', function (e) {
+      var span = e.target.closest('.c');
+      if (!span) return;
+
+      var touch = e.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+
+      feedbackTimer = setTimeout(function () {
+        span.classList.add('touch-active');
+      }, 100);
+
+      longPressTimer = setTimeout(function () {
+        span.classList.remove('touch-active');
+        showPopup(span.textContent, span);
+        attachScrollDismiss();
+      }, LONG_PRESS_MS);
+    }, { passive: true });
+
+    document.addEventListener('touchmove', function (e) {
+      if (!longPressTimer) return;
+      var touch = e.touches[0];
+      if (Math.abs(touch.clientX - startX) > MOVE_THRESHOLD ||
+          Math.abs(touch.clientY - startY) > MOVE_THRESHOLD) {
+        clearTimeout(longPressTimer);
+        clearTimeout(feedbackTimer);
+        longPressTimer = null;
+        document.querySelectorAll('.touch-active').forEach(function (el) {
+          el.classList.remove('touch-active');
+        });
+      }
+    }, { passive: true });
+
+    document.addEventListener('touchend', function (e) {
+      clearTimeout(longPressTimer);
+      clearTimeout(feedbackTimer);
+      longPressTimer = null;
+      var span = e.target.closest('.c');
+      if (span) span.classList.remove('touch-active');
+    }, { passive: true });
+
+    document.addEventListener('touchcancel', function () {
+      clearTimeout(longPressTimer);
+      clearTimeout(feedbackTimer);
+      longPressTimer = null;
+      document.querySelectorAll('.touch-active').forEach(function (el) {
+        el.classList.remove('touch-active');
+      });
+    }, { passive: true });
+
+    lookupToggleBtn.addEventListener('click', function () {
+      lookupMode = !lookupMode;
+      this.textContent = lookupMode ? '查詢模式 ON' : '查詢模式 OFF';
+      this.classList.toggle('active', lookupMode);
+      if (lookupMode && flaggingMode) {
+        flaggingMode = false;
+        document.getElementById('flag-toggle').textContent = '標記模式 OFF';
+        document.getElementById('flag-toggle').classList.remove('active');
+        document.body.classList.remove('flagging-on');
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!lookupMode) return;
+      var span = e.target.closest('.c');
+      if (!span) return;
+      e.stopPropagation();
+      showPopup(span.textContent, span);
+      attachScrollDismiss();
+    });
+  }
 
   // === Initialize ===
 
