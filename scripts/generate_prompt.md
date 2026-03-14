@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes the steps to generate a daily newsletter issue. Run these in a Claude Code session.
+This document describes the steps to generate a daily newsletter issue. The user types `/go` in a CC session to trigger the full pipeline (cleanup + generation). The generation phase is documented here.
 
 ## Steps
 
@@ -18,9 +18,13 @@ Read these files to understand current settings and user state:
 
 ### 2. Search for today's news
 
-Use web search to find current English-language news stories. Search across the topics defined in `interests.json`, using source hints as guidance. Also search for 1-2 serendipitous stories outside core topics.
+Dispatch 4 scout agents in parallel:
+- **news-scout-hn** — Hacker News front page via Algolia API
+- **news-scout-rss** — Marginal Revolution, Carbon Brief, MLB Cubs RSS feeds
+- **news-scout-web** — targeted web searches for AI/AGI, econ/finance, Michigan sports, Cubs, serendipity picks (niche-interesting)
+- **news-scout-national** — US national/political news, Chicago local news, water cooler stories (mainstream-big)
 
-Aim for 8+ candidate stories to select from.
+Aim for 15+ candidate stories across all scouts.
 
 ### 3. Select stories
 
@@ -33,57 +37,62 @@ Selection criteria:
 - Consider `preference_history.json` — what kinds of stories has the user favored?
 - Include 1-2 stories that a curious generalist would enjoy
 
+### 3.5. Research selected stories
+
+Dispatch 5 story-researcher agents in parallel (one per selected story). Each researcher:
+- Fetches the full article via WebFetch
+- Falls back to WebSearch if the primary URL is inaccessible (paywall, 403, timeout)
+- Falls back to the original selector summary if both fail
+- Produces a 200-400 word English briefing with key facts, quotes, context, and interesting details
+
 ### 4. Write the articles in Traditional Chinese
 
-For each of the 5 selected stories:
+For each of the 5 selected stories, using the **detailed research briefings** (not the selector's thin summaries):
 - Rewrite in Traditional Chinese (繁體中文) — never simplified characters
 - Follow the reading level description in `settings.json` (currently grade 5)
 - Use the conversational tone: knowledgeable friend over coffee, not textbook or news anchor
+- Include concrete numbers, names, and details from the briefings rather than vague summaries
 - Naturally increase frequency of characters listed as "struggling" in `flagged_characters.json` — weave them into the text in varied contexts
 - Gloss difficult characters in parentheses on first use when needed
-- Each article: 2-4 paragraphs, ~150-300 characters
+- Each article: 2-4 paragraphs, ~100-200 characters
 
 ### 5. Write English translations
 
-For each article, write a natural English translation for the toggle feature. These should be clear and readable, not literal word-for-word translations.
+Dispatch 5 translator agents in parallel. Each produces a natural English translation for the toggle feature — clear and readable, not literal word-for-word.
+
+### 5.5. Glossary building (handled by main session)
+
+The main session (Opus) builds the glossary directly — NOT delegated to the assembler. Two specialized agents handle different tasks:
+
+**Single-character lookup** (`glossary-chars.md`):
+1. Deduplicate all unique Chinese characters across all 5 articles (~200-250 chars)
+2. Chunk into batches of 25-30 characters
+3. Dispatch 8-10 `glossary-chars` agents in parallel, each returning TSV (char\tzhuyin\tenglish)
+4. Convert TSV to JSON programmatically via python (not LLM-mediated)
+
+**Multi-character words** (`glossary-words.md`):
+1. Dispatch 5 `glossary-words` agents in parallel (one per article)
+2. Each returns JSON with multi-character entries only
+
+**Merge and validate:**
+1. Combine single-char and multi-char results
+2. Validate zhuyin format (must be 注音符號, discard any pinyin)
+3. Validate completeness (every unique character has a single-char entry)
+4. Remediate gaps: re-dispatch missing characters in batches of 25, up to 3 passes
+
+Both agents have `tools: []` — their responses ARE the output.
 
 ### 6. Generate the complete HTML file
 
-Using `templates/newsletter.html` as the reference spec:
-- Generate a complete, standalone HTML file
-- Include all 5 articles with Chinese text and English translations
-- Include the Editor's Desk section with 6 headlines (3 included, 3 not included)
-- Include all CSS and JavaScript inline
-- All Chinese text in standard DOM elements (Zhongwen extension compatibility)
-- Update the date in the header and title
+Pass all content to the assembler agent:
+- 5 articles, 5 translations, 8 Editor's Desk headlines, validated glossary, today's date
+- The assembler reads `templates/newsletter.html` as the spec and produces a complete standalone HTML file
+- The assembler embeds the pre-built glossary (it does NOT build the glossary itself)
 
 ### 7. Archive and deploy
 
-```
-# If docs/index.html exists, archive it
-# Get the date from the existing file's content or use yesterday's date
-mv docs/index.html docs/archive/YYYY-MM-DD.html  # (use actual date)
-
-# Write new newsletter
-# (write the generated HTML to docs/index.html)
-
-# Commit and push
-git add .
-git commit -m "Newsletter YYYY-MM-DD"
-git push
-```
-
-## CC Prompt (copy-paste to start a generation run)
-
-```
-Read config/settings.json, config/interests.json, data/flagged_characters.json, data/preference_history.json, and templates/newsletter.html. Then:
-
-1. Search for today's top news stories across these topics: tech/AI, economics/finance, climate science, Michigan sports, Cubs baseball, and 1-2 serendipitous picks for a curious generalist.
-2. Select 5 stories for the newsletter and 3 runner-up headlines for the Editor's Desk.
-3. Rewrite each story in Traditional Chinese following the reading level and tone in settings.json. Naturally work in any "struggling" characters from flagged_characters.json.
-4. Write English translations for each article.
-5. Generate a complete HTML newsletter file using templates/newsletter.html as the reference layout. Include all interaction features (character flagging, translation toggle, editor's desk, feedback export).
-6. If docs/index.html exists, move it to docs/archive/ with its date as filename.
-7. Write the new newsletter to docs/index.html.
-8. git add, commit ("Newsletter YYYY-MM-DD"), and push.
-```
+The assembler handles:
+1. Archive existing `docs/index.html` to `docs/archive/YYYY-MM-DD.html`
+2. Patch navigation links in archived files
+3. Write new newsletter to `docs/index.html`
+4. `git add`, commit, push

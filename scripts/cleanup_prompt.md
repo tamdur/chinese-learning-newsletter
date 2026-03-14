@@ -2,79 +2,90 @@
 
 ## Overview
 
-After reading a newsletter and exporting feedback from the browser, run cleanup to merge feedback into the project data files.
+The cleanup phase processes exported feedback JSON files from the newsletter reader. It merges character flags and Editor's Desk picks into the project data files, then commits and pushes.
 
-## Steps
+Cleanup runs automatically as Phase 1 of the `/go` command. It is not run independently.
 
-### 1. Read the exported feedback JSON
+## Feedback File Location
 
-The user will provide the path to the exported JSON file (e.g., `~/Downloads/feedback_export_2026-03-12.json`). The file has this structure:
+Feedback files are exported from the newsletter's "Export Feedback" button in Chrome. They download to `~/Downloads/` with the naming pattern `feedback_YYYY-MM-DD.json`.
+
+The cleanup phase scans `~/Downloads/` for all files matching `feedback_*.json`. If none are found, cleanup is silently skipped.
+
+## Feedback File Schema
 
 ```json
 {
   "date": "2026-03-12",
   "characters": {
-    "碳": { "state": "struggling", "date": "2026-03-12" },
-    "氣": { "state": "learned", "date": "2026-03-12" }
+    "積": { "state": "struggling", "date": "2026-03-12" },
+    "膨": { "state": "struggling", "date": "2026-03-12" },
+    "鏈": { "state": "learned", "date": "2026-03-12" }
   },
   "editors_desk": {
     "offered": [
       { "headline": "...", "included_in_issue": true },
       { "headline": "...", "included_in_issue": false }
     ],
-    "user_top_3": [0, 5, 2]
+    "user_top_3": [0, 3, 5]
   }
 }
 ```
 
-### 2. Merge character flags into `data/flagged_characters.json`
+## Multi-File Processing
 
-For each character in the export:
-- If the character is **new** (not in flagged_characters.json): add it with `first_flagged` and `last_updated` set to the export date
-- If the character **already exists** and the state changed: update `state` and `last_updated`
-- If the character **already exists** and the state is the same: update `last_updated` only
-- If the exported state is "unmarked" (character was unflagged): remove it from the file
+When multiple feedback files exist (e.g., the user skipped `/go` for a day or two):
 
-### 3. Merge Editor's Desk picks into `data/preference_history.json`
+1. Sort by filename date ascending (oldest first)
+2. Process each file sequentially
+3. Later files override earlier ones for the same character
+4. Delete each file after successful processing
+5. Single commit after all files are merged
 
-Append a new session entry:
+## Character State Merge Rules
+
+Target file: `data/flagged_characters.json`
+
+| Feedback state | Character exists? | Action |
+|----------------|-------------------|--------|
+| `struggling` | No | Add: `state: "struggling"`, `first_flagged: <date>`, `last_updated: <date>` |
+| `struggling` | Yes | Update: `state: "struggling"`, `last_updated: <date>` (keep `first_flagged`) |
+| `learned` | No | Add: `state: "learned"`, `first_flagged: <date>`, `last_updated: <date>` |
+| `learned` | Yes | Update: `state: "learned"`, `last_updated: <date>` (keep `first_flagged`) |
+| `unmarked` | Yes | Remove the character entry entirely |
+| `unmarked` | No | No-op |
+| *(absent)* | — | No change. Absence ≠ removal. |
+
+### Effect on generation
+
+- **struggling**: Pipeline naturally increases frequency of this character in future articles
+- **learned**: Pipeline stops boosting; character appears at natural frequency
+- **unmarked (removed)**: Same as never flagged — natural frequency
+
+## Preference History Merge
+
+Target file: `data/preference_history.json`
+
+Append a new entry to the `sessions` array:
 
 ```json
 {
   "date": "2026-03-12",
   "offered": [
-    { "headline": "...", "topic_id": "tech", "included_in_issue": true },
+    { "headline": "...", "included_in_issue": true },
     ...
   ],
-  "user_top_3": [0, 5, 2]
+  "user_top_3": [0, 3, 5]
 }
 ```
 
-Note: `topic_id` may need to be inferred from the headline content or the newsletter HTML if not present in the export. If unsure, use `"unknown"`.
+- Append-only — never modify or delete existing sessions
+- Skip duplicate dates (same date already in sessions array)
+- Trimming/summarization is deferred scope
 
-### 4. Commit and push
+## Post-Merge
 
-```
-git add data/flagged_characters.json data/preference_history.json
-git commit -m "Feedback: YYYY-MM-DD"
-git push
-```
-
-### 5. Print summary
-
-Show the user:
-- New struggling characters added
-- Characters that changed state (struggling → learned, learned → unmarked, etc.)
-- Editor's Desk picks (which headlines were selected)
-
-## CC Prompt (copy-paste to start a cleanup run)
-
-```
-Read the feedback export at [PATH]. Then:
-
-1. Read data/flagged_characters.json and merge the character flags from the export — add new characters, update changed states, remove unflagged characters. Update first_flagged and last_updated dates appropriately.
-2. Read data/preference_history.json and append a new session entry with the Editor's Desk data from the export.
-3. Write both updated files.
-4. git add the data files, commit ("Feedback: YYYY-MM-DD"), and push.
-5. Print a summary of changes.
-```
+1. Delete the processed feedback file from `~/Downloads/`
+2. `git add data/flagged_characters.json data/preference_history.json`
+3. `git commit -m "Cleanup: merge feedback"`
+4. `git push`

@@ -38,13 +38,23 @@ Write like a **knowledgeable friend explaining the news over coffee**. Casual bu
 2. User clicks characters to flag as struggling or mark as learned
 3. User selects top 3 headlines in the Editor's Desk section
 4. All feedback stored in localStorage during the reading session
-5. User clicks "Export Feedback" — triggers a JSON file download
-6. User runs cleanup in a CC session — CC reads the exported JSON and merges into data/ files, then commits and pushes
+5. User clicks "Export Feedback" — triggers a JSON file download to `~/Downloads/`
+6. Next morning, user types `/go` in a fresh CC session — cleanup processes feedback, then generation produces the new issue
+
+The user's daily workflow is just two actions: (1) click "Export Feedback" after reading, (2) type `/go` the next morning. The `/go` command handles everything else.
+
+### Feedback File Location
+Cleanup scans `~/Downloads/` for files matching `feedback_*.json`. Files are deleted after successful processing. If no files are found, cleanup is silently skipped — this is normal (the user may not have read yesterday's issue).
 
 ## Character States
 - **struggling** — user flagged as difficult. Pipeline increases natural frequency in future articles.
 - **learned** — user marked as mastered. Pipeline stops boosting; appears at natural frequency.
 - **unmarked** (default) — never flagged. Natural frequency.
+
+### Merge Rules
+- Later feedback files override earlier ones for the same character (e.g., if 03-11 says "struggling" and 03-12 says "learned", final state is "learned")
+- A character explicitly set to "unmarked" is removed from `flagged_characters.json` entirely — no longer tracked
+- A character absent from a feedback file is unchanged — absence means "no update", not "remove"
 
 ## Editor's Desk
 Each newsletter includes 3 headlines that made the cut and 3 that didn't. User picks their top 3 from all 6. This data (what was offered + what was chosen) is stored in preference_history.json and included in future generation prompts to refine story selection. Claude pattern-matches on this history — no scoring algorithm needed.
@@ -60,6 +70,7 @@ Each newsletter includes 3 headlines that made the cut and 3 that didn't. User p
 - Generation pipeline (web search → select → rewrite → HTML → commit/push)
 - Cleanup pipeline (merge feedback → commit/push)
 - End-to-end test: generate one newsletter, read it, give feedback, run cleanup
+- `/go` command (cleanup + generation in one step)
 
 ## Deferred
 - Mobile-optimized layout

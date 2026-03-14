@@ -25,6 +25,24 @@
       "id": "cubs",
       "label": "Cubs Baseball",
       "source_hints": ["ESPN", "The Athletic", "r/CHICubs subreddit"]
+    },
+    {
+      "id": "national_politics",
+      "label": "US National & Political News",
+      "source_hints": ["AP", "Reuters", "Politico"],
+      "selection_note": "Consequential policy changes, executive actions, legislative votes, court rulings, major agency decisions. Include Illinois state politics when significant. Skip polls, campaign strategy, pundit takes, and horse-race coverage."
+    },
+    {
+      "id": "chicago_local",
+      "label": "Chicago Local News",
+      "source_hints": ["Chicago Tribune", "Block Club Chicago", "Chicago Sun-Times"],
+      "selection_note": "User is a registered Illinois voter with Chicago ties. City council votes, transit/infrastructure developments, public safety data, and major local events. Skip routine mayoral press conferences and minor announcements."
+    },
+    {
+      "id": "water_cooler",
+      "label": "Water Cooler Stories",
+      "source_hints": ["AP", "Reuters", "BBC"],
+      "selection_note": "The big stories everyone is talking about that don't fit neatly into other categories. Major cultural moments, viral news, significant events that a well-informed person should know about. These are distinct from serendipity picks — water cooler stories are mainstream-big, serendipity picks are niche-interesting."
     }
   ],
   "selection_note": "Pick 5 stories total. Aim for variety across topics but don't force every category into every issue. Lead with whatever is genuinely most interesting today. Include 1-2 stories outside these core topics that would appeal to a curious, well-read generalist — science, culture, history, unusual economics, etc. Think: the experience of flipping through a physical newspaper, not a hyper-targeted feed."
