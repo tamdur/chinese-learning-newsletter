@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今日讀報 — 2026-03-14</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Noto Serif TC", "PMingLiU", "Apple LiSung", serif;
+      font-size: 19px;
+      line-height: 1.9;
+      color: #2c2c2c;
+      background: #faf9f6;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .newsletter-header { text-align: center; margin-bottom: 2.5rem; }
+    .newsletter-header h1 { font-size: 32px; font-weight: 700; }
+    .newsletter-header .date { color: #888; }
+
+    .article { margin-bottom: 0; }
+    .article-headline { font-size: 24px; font-weight: 700; margin-bottom: 0.5rem; }
+    .article-source { font-size: 14px; color: #999; margin-bottom: 1rem; }
+    .article-body-zh p { margin-bottom: 1rem; }
+
+    hr { border: none; border-top: 1px solid #e0ddd8; margin: 2.5rem 0; }
+
+    .translation-toggle {
+      font-size: 14px;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      color: #666;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .translation-toggle:hover { background: #f5f2ed; }
+
+    .article-body-en {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #666;
+      font-size: 16px;
+      line-height: 1.6;
+      border-left: 3px solid #e0ddd8;
+      padding-left: 1rem;
+      margin-top: 1rem;
+    }
+    .article-body-en p { margin-bottom: 0.75rem; }
+
+    .c { cursor: default; }
+    .flagging-on .c { cursor: pointer; }
+    .flagging-on .c:hover { background: rgba(0, 0, 0, 0.04); border-radius: 2px; }
+    .c.struggling { border-bottom: 2px solid #d4a574; }
+    .c.learned { border-bottom: 2px dotted #7aab7a; }
+
+    .editors-desk {
+      background: #f0ede8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .editors-desk h2 { font-size: 22px; margin-bottom: 0.5rem; }
+    .desk-instructions { font-size: 14px; color: #888; margin-bottom: 1rem; }
+
+    .desk-item {
+      padding: 12px 14px;
+      border: 1px solid #e0ddd8;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: border-color 0.15s;
+      background: #fff;
+    }
+    .desk-item:hover { border-color: #b8b3aa; }
+    .desk-item.selected { border-color: #d4a574; background: rgba(212, 165, 116, 0.08); }
+
+    .desk-badge {
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-right: 8px;
+      display: inline-block;
+    }
+    .included .desk-badge { background: #e8f0e8; color: #5a7a5a; }
+    .excluded .desk-badge { background: #eee; color: #999; }
+    .desk-headline { font-size: 16px; }
+    .desk-count { font-size: 14px; color: #888; margin-top: 0.5rem; }
+
+    .toolbar {
+      margin-top: 2rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #e0ddd8;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .toolbar button {
+      font-size: 14px;
+      padding: 6px 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      color: #444;
+      cursor: pointer;
+      user-select: none;
+    }
+    .toolbar button:hover { background: #f5f2ed; }
+    .toolbar button.active { border-color: #d4a574; }
+    .confirm-msg { font-size: 13px; color: #5a7a5a; }
+
+    footer { margin-top: 2rem; text-align: center; font-size: 13px; color: #aaa; }
+    .storage-warning { font-size: 13px; color: #999; text-align: center; margin-top: 0.5rem; }
+
+    @media (pointer: coarse) {
+      .c {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+      }
+      .c.touch-active {
+        background: rgba(59, 130, 246, 0.15);
+        border-radius: 2px;
+        transition: background 0.1s ease;
+      }
+      .c.touch-selected {
+        background: rgba(59, 130, 246, 0.25);
+        border-radius: 2px;
+      }
+      .lookup-toggle { display: inline-block; }
+    }
+
+    .lookup-toggle { display: none; }
+
+    .char-popup {
+      display: none;
+      position: fixed;
+      width: 280px;
+      background: #fff;
+      border: 1px solid #e0ddd8;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 14px 16px;
+      z-index: 1000;
+      text-align: center;
+      font-family: "Noto Serif TC", "PMingLiU", serif;
+    }
+    .char-popup.visible { display: block; }
+    .char-popup-close {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: #999;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .char-popup-char {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .char-popup-zhuyin {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 6px;
+      font-family: "Apple LiGothic", "Microsoft JhengHei", sans-serif;
+    }
+    .char-popup-def {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.4;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+  </style>
+</head>
+<body>
+
+<header class="newsletter-header">
+  <h1>今日讀報</h1>
+  <p class="date">2026-03-14</p>
+</header>
+
+<main>
+
+<!-- === ARTICLE 1 === -->
+<article class="article" data-article-id="1">
+  <h2 class="article-headline"><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">險</span><span class="c">勝</span><span class="c">俄</span><span class="c">亥</span><span class="c">俄</span>，<span class="c">晉</span><span class="c">級</span><span class="c">大</span><span class="c">十</span><span class="c">聯</span><span class="c">盟</span><span class="c">四</span><span class="c">強</span></h2>
+  <p class="article-source">來源：ESPN</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">大</span><span class="c">十</span><span class="c">聯</span><span class="c">盟</span><span class="c">錦</span><span class="c">標</span><span class="c">賽</span><span class="c">八</span><span class="c">強</span><span class="c">戰</span>，<span class="c">頭</span><span class="c">號</span><span class="c">種</span><span class="c">子</span><span class="c">密</span><span class="c">西</span><span class="c">根</span>（30<span class="c">勝</span>2<span class="c">敗</span>）<span class="c">以</span>71<span class="c">比</span>67<span class="c">險</span><span class="c">勝</span><span class="c">俄</span><span class="c">亥</span><span class="c">俄</span><span class="c">州</span><span class="c">大</span>。<span class="c">這</span><span class="c">場</span><span class="c">比</span><span class="c">賽</span><span class="c">打</span><span class="c">得</span><span class="c">很</span><span class="c">緊</span><span class="c">張</span>，<span class="c">最</span><span class="c">後</span><span class="c">靠</span>Aday Mara<span class="c">拿</span><span class="c">下</span><span class="c">全</span><span class="c">隊</span><span class="c">最</span><span class="c">高</span><span class="c">的</span>17<span class="c">分</span><span class="c">才</span><span class="c">驚</span><span class="c">險</span><span class="c">過</span><span class="c">關</span>。</p>
+    <p><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">週</span><span class="c">六</span><span class="c">將</span><span class="c">在</span><span class="c">準</span><span class="c">決</span><span class="c">賽</span><span class="c">對</span><span class="c">上</span><span class="c">伊</span><span class="c">利</span><span class="c">諾</span><span class="c">或</span><span class="c">威</span><span class="c">斯</span><span class="c">康</span><span class="c">辛</span>。<span class="c">今</span><span class="c">年</span><span class="c">的</span><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">真</span><span class="c">的</span><span class="c">很</span><span class="c">強</span>，<span class="c">但</span><span class="c">錦</span><span class="c">標</span><span class="c">賽</span><span class="c">什</span><span class="c">麼</span><span class="c">事</span><span class="c">都</span><span class="c">可</span><span class="c">能</span><span class="c">發</span><span class="c">生</span>。</p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>In the Big Ten Tournament quarterfinals, top seed Michigan (30-2) narrowly defeated Ohio State 71-67. The game was tightly contested throughout, with Michigan securing the narrow victory behind Aday Mara's team-leading 17 points.</p>
+    <p>Michigan will face either Illinois or Wisconsin in Saturday's semifinal. Michigan has been incredibly strong this season, but anything can happen in tournament play.</p>
+  </div>
+</article>
+
+<hr>
+
+<!-- === ARTICLE 2 === -->
+<article class="article" data-article-id="2">
+  <h2 class="article-headline">Anthropic<span class="c">控</span><span class="c">告</span><span class="c">美</span><span class="c">國</span><span class="c">國</span><span class="c">防</span><span class="c">部</span>，<span class="c">抗</span><span class="c">議</span><span class="c">遭</span><span class="c">禁</span><span class="c">止</span><span class="c">政</span><span class="c">府</span><span class="c">合</span><span class="c">約</span></h2>
+  <p class="article-source">來源：Fortune</p>
+
+  <div class="article-body-zh">
+    <p>AI<span class="c">公</span><span class="c">司</span>Anthropic<span class="c">被</span>Trump<span class="c">政</span><span class="c">府</span><span class="c">禁</span><span class="c">止</span><span class="c">參</span><span class="c">與</span><span class="c">所</span><span class="c">有</span><span class="c">美</span><span class="c">國</span><span class="c">政</span><span class="c">府</span><span class="c">合</span><span class="c">約</span>，<span class="c">公</span><span class="c">司</span><span class="c">在</span>3<span class="c">月</span>12<span class="c">日</span><span class="c">正</span><span class="c">式</span><span class="c">提</span><span class="c">告</span>。<span class="c">國</span><span class="c">防</span><span class="c">部</span><span class="c">官</span><span class="c">員</span><span class="c">私</span><span class="c">下</span><span class="c">承</span><span class="c">認</span>，<span class="c">這</span><span class="c">個</span><span class="c">決</span><span class="c">定</span><span class="c">是</span>「<span class="c">意</span><span class="c">識</span><span class="c">形</span><span class="c">態</span>」<span class="c">的</span>，<span class="c">沒</span><span class="c">有</span><span class="c">證</span><span class="c">據</span><span class="c">顯</span><span class="c">示</span>Anthropic<span class="c">做</span><span class="c">錯</span><span class="c">什</span><span class="c">麼</span>。</p>
+    <p><span class="c">問</span><span class="c">題</span><span class="c">的</span><span class="c">核</span><span class="c">心</span><span class="c">是</span>：Anthropic<span class="c">拒</span><span class="c">絕</span><span class="c">讓</span><span class="c">自</span><span class="c">家</span>AI<span class="c">用</span><span class="c">於</span><span class="c">自</span><span class="c">主</span><span class="c">武</span><span class="c">器</span><span class="c">和</span><span class="c">大</span><span class="c">規</span><span class="c">模</span><span class="c">監</span><span class="c">控</span>（<span class="c">就</span><span class="c">是</span><span class="c">用</span><span class="c">科</span><span class="c">技</span><span class="c">監</span><span class="c">視</span><span class="c">很</span><span class="c">多</span><span class="c">人</span>）。<span class="c">這</span><span class="c">件</span><span class="c">事</span><span class="c">反</span><span class="c">映</span><span class="c">出</span>AI<span class="c">公</span><span class="c">司</span><span class="c">跟</span><span class="c">政</span><span class="c">府</span><span class="c">之</span><span class="c">間</span><span class="c">越</span><span class="c">來</span><span class="c">越</span><span class="c">大</span><span class="c">的</span><span class="c">緊</span><span class="c">張</span><span class="c">關</span><span class="c">係</span>。</p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>AI company Anthropic has been banned by the Trump administration from participating in all U.S. government contracts. The company filed a formal lawsuit on March 12th. Department of Defense officials privately admitted that this decision was "ideological" and that there is no evidence that Anthropic did anything wrong.</p>
+    <p>The core issue is this: Anthropic refuses to allow its AI to be used for autonomous weapons and mass surveillance (using technology to monitor many people). This reflects growing tension between AI companies and the government.</p>
+  </div>
+</article>
+
+<hr>
+
+<!-- === ARTICLE 3 === -->
+<article class="article" data-article-id="3">
+  <h2 class="article-headline"><span class="c">油</span><span class="c">價</span><span class="c">突</span><span class="c">破</span>100<span class="c">美</span><span class="c">元</span>，<span class="c">伊</span><span class="c">朗</span><span class="c">戰</span><span class="c">爭</span><span class="c">衝</span><span class="c">擊</span><span class="c">全</span><span class="c">球</span><span class="c">石</span><span class="c">油</span><span class="c">供</span><span class="c">應</span></h2>
+  <p class="article-source">來源：CNBC</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">布</span><span class="c">蘭</span><span class="c">特</span><span class="c">原</span><span class="c">油</span><span class="c">連</span><span class="c">續</span><span class="c">第</span><span class="c">二</span><span class="c">天</span><span class="c">收</span><span class="c">在</span>103<span class="c">美</span><span class="c">元</span>，<span class="c">因</span><span class="c">為</span><span class="c">伊</span><span class="c">朗</span><span class="c">的</span><span class="c">戰</span><span class="c">爭</span><span class="c">讓</span><span class="c">荷</span><span class="c">莫</span><span class="c">茲</span><span class="c">海</span><span class="c">峽</span>（<span class="c">全</span><span class="c">球</span><span class="c">最</span><span class="c">重</span><span class="c">要</span><span class="c">的</span><span class="c">石</span><span class="c">油</span><span class="c">運</span><span class="c">輸</span><span class="c">通</span><span class="c">道</span>）<span class="c">的</span><span class="c">船</span><span class="c">運</span><span class="c">受</span><span class="c">阻</span>。</p>
+    <p><span class="c">國</span><span class="c">際</span><span class="c">能</span><span class="c">源</span><span class="c">署</span><span class="c">說</span><span class="c">這</span><span class="c">是</span><span class="c">史</span><span class="c">上</span><span class="c">最</span><span class="c">大</span><span class="c">的</span><span class="c">供</span><span class="c">應</span><span class="c">中</span><span class="c">斷</span>，<span class="c">影</span><span class="c">響</span><span class="c">全</span><span class="c">球</span><span class="c">大</span><span class="c">約</span>20%<span class="c">的</span><span class="c">石</span><span class="c">油</span><span class="c">供</span><span class="c">應</span>。<span class="c">美</span><span class="c">股</span><span class="c">道</span><span class="c">瓊</span><span class="c">指</span><span class="c">數</span><span class="c">也</span><span class="c">大</span><span class="c">跌</span>740<span class="c">點</span>。<span class="c">能</span><span class="c">源</span><span class="c">價</span><span class="c">格</span><span class="c">上</span><span class="c">漲</span><span class="c">對</span><span class="c">全</span><span class="c">世</span><span class="c">界</span><span class="c">的</span><span class="c">經</span><span class="c">濟</span><span class="c">都</span><span class="c">不</span><span class="c">是</span><span class="c">好</span><span class="c">消</span><span class="c">息</span>。</p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>Brent crude oil closed above $103 for the second consecutive day as Iran's military conflict disrupts shipping through the Strait of Hormuz, the world's most critical petroleum transport corridor.</p>
+    <p>The International Energy Agency says this represents the largest supply disruption on record, affecting roughly 20% of the world's oil supply. The Dow Jones index also fell sharply by 740 points. Rising energy prices spell trouble for economies worldwide.</p>
+  </div>
+</article>
+
+<hr>
+
+<!-- === ARTICLE 4 === -->
+<article class="article" data-article-id="4">
+  <h2 class="article-headline"><span class="c">研</span><span class="c">究</span>：<span class="c">人</span><span class="c">們</span><span class="c">反</span><span class="c">對</span>AI<span class="c">已</span><span class="c">變</span><span class="c">成</span><span class="c">道</span><span class="c">德</span><span class="c">問</span><span class="c">題</span>，<span class="c">不</span><span class="c">是</span><span class="c">技</span><span class="c">術</span><span class="c">問</span><span class="c">題</span></h2>
+  <p class="article-source">來源：Marginal Revolution</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">一</span><span class="c">項</span><span class="c">新</span><span class="c">研</span><span class="c">究</span><span class="c">發</span><span class="c">現</span>，<span class="c">社</span><span class="c">會</span><span class="c">對</span>AI<span class="c">的</span><span class="c">看</span><span class="c">法</span><span class="c">已</span><span class="c">經</span>「<span class="c">道</span><span class="c">德</span><span class="c">化</span>」<span class="c">了</span>，<span class="c">程</span><span class="c">度</span><span class="c">跟</span><span class="c">基</span><span class="c">改</span><span class="c">食</span><span class="c">品</span><span class="c">和</span><span class="c">疫</span><span class="c">苗</span><span class="c">差</span><span class="c">不</span><span class="c">多</span>。<span class="c">什</span><span class="c">麼</span><span class="c">意</span><span class="c">思</span><span class="c">呢</span>？<span class="c">就</span><span class="c">是</span><span class="c">很</span><span class="c">多</span><span class="c">人</span><span class="c">反</span><span class="c">對</span>AI<span class="c">不</span><span class="c">是</span><span class="c">因</span><span class="c">為</span><span class="c">技</span><span class="c">術</span><span class="c">原</span><span class="c">因</span>，<span class="c">而</span><span class="c">是</span><span class="c">覺</span><span class="c">得</span>AI<span class="c">本</span><span class="c">身</span><span class="c">就</span><span class="c">是</span>「<span class="c">不</span><span class="c">對</span><span class="c">的</span>」。</p>
+    <p><span class="c">大</span><span class="c">多</span><span class="c">數</span><span class="c">反</span><span class="c">對</span><span class="c">者</span><span class="c">說</span>，<span class="c">就</span><span class="c">算</span><span class="c">證</span><span class="c">明</span>AI<span class="c">是</span><span class="c">安</span><span class="c">全</span><span class="c">又</span><span class="c">有</span><span class="c">用</span><span class="c">的</span>，<span class="c">他</span><span class="c">們</span><span class="c">也</span><span class="c">不</span><span class="c">會</span><span class="c">改</span><span class="c">變</span><span class="c">想</span><span class="c">法</span>。<span class="c">這</span><span class="c">很</span><span class="c">有</span><span class="c">趣</span>——<span class="c">當</span><span class="c">一</span><span class="c">個</span><span class="c">議</span><span class="c">題</span><span class="c">變</span><span class="c">成</span><span class="c">道</span><span class="c">德</span><span class="c">問</span><span class="c">題</span>，<span class="c">事</span><span class="c">實</span><span class="c">和</span><span class="c">數</span><span class="c">據</span><span class="c">就</span><span class="c">很</span><span class="c">難</span><span class="c">改</span><span class="c">變</span><span class="c">人</span><span class="c">的</span><span class="c">立</span><span class="c">場</span>。</p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>A new study finds that society's view of AI has become "moralized" — comparable to how people view genetically modified foods and vaccines. What does that mean? Many people oppose AI not because of technical reasons, but because they believe AI itself is inherently "wrong."</p>
+    <p>Most opponents say that even if you proved AI was safe and useful, they wouldn't change their minds. That's interesting — when an issue becomes a moral one, facts and data struggle to shift people's positions.</p>
+  </div>
+</article>
+
+<hr>
+
+<!-- === ARTICLE 5 === -->
+<article class="article" data-article-id="5">
+  <h2 class="article-headline"><span class="c">科</span><span class="c">學</span><span class="c">家</span><span class="c">用</span><span class="c">月</span><span class="c">球</span><span class="c">土</span><span class="c">壤</span><span class="c">成</span><span class="c">功</span><span class="c">種</span><span class="c">出</span><span class="c">鷹</span><span class="c">嘴</span><span class="c">豆</span></h2>
+  <p class="article-source">來源：ScienceDaily</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">科</span><span class="c">學</span><span class="c">家</span><span class="c">在</span><span class="c">模</span><span class="c">擬</span>（<span class="c">模</span><span class="c">仿</span>）<span class="c">月</span><span class="c">球</span><span class="c">土</span><span class="c">壤</span><span class="c">裡</span><span class="c">成</span><span class="c">功</span><span class="c">種</span><span class="c">出</span><span class="c">了</span><span class="c">鷹</span><span class="c">嘴</span><span class="c">豆</span>！<span class="c">他</span><span class="c">們</span><span class="c">在</span><span class="c">土</span><span class="c">裡</span><span class="c">加</span><span class="c">了</span><span class="c">蚯</span><span class="c">蚓</span><span class="c">堆</span><span class="c">肥</span><span class="c">和</span><span class="c">一</span><span class="c">種</span><span class="c">特</span><span class="c">別</span><span class="c">的</span><span class="c">真</span><span class="c">菌</span>（<span class="c">幫</span><span class="c">助</span><span class="c">植</span><span class="c">物</span><span class="c">吸</span><span class="c">收</span><span class="c">養</span><span class="c">分</span><span class="c">的</span><span class="c">菌</span>），<span class="c">讓</span><span class="c">鷹</span><span class="c">嘴</span><span class="c">豆</span><span class="c">順</span><span class="c">利</span><span class="c">長</span><span class="c">大</span>。</p>
+    <p><span class="c">為</span><span class="c">什</span><span class="c">麼</span><span class="c">選</span><span class="c">鷹</span><span class="c">嘴</span><span class="c">豆</span>？<span class="c">因</span><span class="c">為</span><span class="c">它</span><span class="c">可</span><span class="c">以</span><span class="c">把</span><span class="c">空</span><span class="c">氣</span><span class="c">中</span><span class="c">的</span><span class="c">氮</span>（<span class="c">植</span><span class="c">物</span><span class="c">需</span><span class="c">要</span><span class="c">的</span><span class="c">養</span><span class="c">分</span>）<span class="c">固</span><span class="c">定</span><span class="c">在</span><span class="c">土</span><span class="c">裡</span>，<span class="c">等</span><span class="c">於</span><span class="c">自</span><span class="c">己</span><span class="c">幫</span><span class="c">自</span><span class="c">己</span><span class="c">施</span><span class="c">肥</span>。<span class="c">未</span><span class="c">來</span><span class="c">如</span><span class="c">果</span><span class="c">人</span><span class="c">類</span><span class="c">住</span><span class="c">在</span><span class="c">月</span><span class="c">球</span>，<span class="c">也</span><span class="c">許</span><span class="c">真</span><span class="c">的</span><span class="c">能</span><span class="c">自</span><span class="c">己</span><span class="c">種</span><span class="c">菜</span><span class="c">吃</span>。</p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>Scientists successfully grew chickpeas in simulated lunar soil! They added earthworm compost and a special fungus to the soil—the kind that helps plants absorb nutrients—and the chickpeas grew well.</p>
+    <p>Why chickpeas? Because they can fix nitrogen from the air directly into the soil, which means they essentially fertilize themselves. In the future, if humans live on the Moon, maybe they'll actually be able to grow their own vegetables.</p>
+  </div>
+</article>
+
+</main>
+
+<!-- === EDITOR'S DESK === -->
+<section class="editors-desk">
+  <h2>編輯台 Editor's Desk</h2>
+  <p class="desk-instructions">選擇你最感興趣的 3 則標題 Pick your top 3 headlines</p>
+
+  <div class="desk-items">
+    <div class="desk-item included" data-desk-index="0">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">密西根險勝俄亥俄，晉級大十聯盟四強</span>
+    </div>
+    <div class="desk-item included" data-desk-index="1">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">Anthropic控告美國國防部，抗議遭禁止政府合約</span>
+    </div>
+    <div class="desk-item included" data-desk-index="2">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">油價突破100美元，伊朗戰爭衝擊全球石油供應</span>
+    </div>
+    <div class="desk-item included" data-desk-index="3">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">研究：人們反對AI已變成道德問題，不是技術問題</span>
+    </div>
+    <div class="desk-item included" data-desk-index="4">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">科學家用月球土壤成功種出鷹嘴豆</span>
+    </div>
+    <div class="desk-item excluded" data-desk-index="5">
+      <span class="desk-badge">未收錄</span>
+      <span class="desk-headline">懷登議員再度示警：美國國安局的702條款監控爭議</span>
+    </div>
+    <div class="desk-item excluded" data-desk-index="6">
+      <span class="desk-badge">未收錄</span>
+      <span class="desk-headline">布雷格曼春訓打擊率四成五五，小熊開季倒數</span>
+    </div>
+    <div class="desk-item excluded" data-desk-index="7">
+      <span class="desk-badge">未收錄</span>
+      <span class="desk-headline">前OpenAI技術長穆拉蒂的新公司拿下一吉瓦算力</span>
+    </div>
+  </div>
+
+  <p class="desk-count">已選：<span id="desk-count-num">0</span> / 3</p>
+</section>
+
+<!-- === TOOLBAR === -->
+<div class="toolbar" id="toolbar">
+  <button id="flag-toggle" type="button">標記模式 OFF</button>
+  <button id="lookup-toggle" class="lookup-toggle" type="button">查詢模式 OFF</button>
+  <button id="export-btn" type="button">匯出回饋 Export Feedback</button>
+  <span id="export-confirm" class="confirm-msg" hidden>已匯出 ✓</span>
+</div>
+
+<footer>
+  <p>今日讀報 — 以 Claude Code 製作</p>
+</footer>
+
+<div class="char-popup" id="char-popup" role="tooltip">
+  <button class="char-popup-close" id="popup-close" aria-label="Close">&times;</button>
+  <div class="char-popup-char" id="popup-char"></div>
+  <div class="char-popup-zhuyin" id="popup-zhuyin"></div>
+  <div class="char-popup-def" id="popup-def"></div>
+</div>
+
+<script>
+const GLOSSARY = {"晉級":{"pinyin":"jìnjí","en":"advance to; qualify for"},"大十聯盟":{"pinyin":"dàshí liánméng","en":"Big Ten Conference (NCAA athletic league)"},"錦標賽":{"pinyin":"jǐnbiāo sài","en":"championship tournament"},"種子":{"pinyin":"zhǒngzi","en":"seed (ranking in tournament)"},"險勝":{"pinyin":"xiǎnshèng","en":"win by a narrow margin"},"驚險":{"pinyin":"jīngxiǎn","en":"thrilling; by a hair's breadth"},"準決賽":{"pinyin":"zhǔnjuésài","en":"semifinal"},"意識形態":{"pinyin":"yìshí xíngtài","en":"ideology"},"自主武器":{"pinyin":"zìzhǔ wǔqì","en":"autonomous weapons"},"大規模監控":{"pinyin":"dà guīmó jiānkòng","en":"mass surveillance"},"緊張關係":{"pinyin":"jǐnzhāng guānxi","en":"tension; tense relationship"},"布蘭特原油":{"pinyin":"bùlándé yuányóu","en":"Brent crude oil"},"荷莫茲海峽":{"pinyin":"hémotz hǎixiá","en":"Strait of Hormuz"},"運輸通道":{"pinyin":"yùnshū tōngdào","en":"transportation corridor"},"供應中斷":{"pinyin":"gōngyìng zhōngduàn","en":"supply disruption"},"道瓊指數":{"pinyin":"dàoqióng zhǐshù","en":"Dow Jones Index"},"能源價格":{"pinyin":"nényuán jiàgé","en":"energy prices"},"道德化":{"pinyin":"dàodé huà","en":"moralization; become a moral issue"},"基改食品":{"pinyin":"jīgǎi shípǐn","en":"genetically modified food"},"疫苗":{"pinyin":"yìmiáo","en":"vaccine"},"議題":{"pinyin":"yìtí","en":"issue; topic"},"立場":{"pinyin":"lìchǎng","en":"stance; position"},"月球土壤":{"pinyin":"yuèqiú tǔrǎng","en":"lunar soil"},"鷹嘴豆":{"pinyin":"yīngzuǐ dòu","en":"chickpea"},"模擬":{"pinyin":"móyǐ","en":"simulate; imitate"},"蚯蚓堆肥":{"pinyin":"qiūyǐn duīféi","en":"worm compost; vermicompost"},"真菌":{"pinyin":"zhēnjūn","en":"fungus"},"養分":{"pinyin":"yǎngfèn","en":"nutrients"},"氮":{"pinyin":"dàn","en":"nitrogen"},"固定":{"pinyin":"gùdìng","en":"fix; stabilize"},"施肥":{"pinyin":"shīféi","en":"fertilize"}};
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  const STORAGE_KEY = 'newsletter-feedback';
+  const charStates = {};
+  let deskPicks = [];
+  let flaggingMode = false;
+  let lookupMode = false;
+
+  // === localStorage helpers ===
+
+  const isLocalStorageAvailable = () => {
+    try {
+      const key = '__test__';
+      localStorage.setItem(key, '1');
+      localStorage.removeItem(key);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  };
+
+  const loadState = () => {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+      localStorage.removeItem(STORAGE_KEY);
+      return null;
+    }
+  };
+
+  const saveState = () => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        characters: charStates,
+        deskPicks: deskPicks
+      }));
+    } catch (e) {
+      if (e.name === 'QuotaExceededError') {
+        console.warn('localStorage full');
+      }
+    }
+  };
+
+  // === Character state ===
+
+  const getCharState = (char) => charStates[char] || 'unmarked';
+
+  const setCharState = (char, state) => {
+    if (state === 'unmarked') {
+      delete charStates[char];
+    } else {
+      charStates[char] = state;
+    }
+    saveState();
+  };
+
+  const updateCharVisuals = (char, state) => {
+    document.querySelectorAll('.c').forEach(span => {
+      if (span.textContent === char) {
+        span.classList.remove('struggling', 'learned');
+        if (state === 'struggling') span.classList.add('struggling');
+        else if (state === 'learned') span.classList.add('learned');
+      }
+    });
+  };
+
+  // === Graceful degradation ===
+
+  const disableFeedbackFeatures = () => {
+    document.getElementById('flag-toggle').disabled = true;
+    document.getElementById('export-btn').disabled = true;
+    const note = document.createElement('p');
+    note.className = 'storage-warning';
+    note.textContent = '回饋功能需要啟用瀏覽器儲存 Feedback features require browser storage';
+    document.getElementById('toolbar').after(note);
+  };
+
+  // === Flagging mode toggle ===
+
+  document.getElementById('flag-toggle').addEventListener('click', function () {
+    flaggingMode = !flaggingMode;
+    this.textContent = flaggingMode ? '標記模式 ON' : '標記模式 OFF';
+    this.classList.toggle('active', flaggingMode);
+    document.body.classList.toggle('flagging-on', flaggingMode);
+    if (flaggingMode && lookupMode) {
+      lookupMode = false;
+      document.getElementById('lookup-toggle').textContent = '查詢模式 OFF';
+      document.getElementById('lookup-toggle').classList.remove('active');
+    }
+  });
+
+  // === Click-to-cycle character states ===
+
+  document.addEventListener('click', function (e) {
+    if (!flaggingMode) return;
+    const span = e.target.closest('.c');
+    if (!span) return;
+
+    const char = span.textContent;
+    const state = getCharState(char);
+
+    let newState;
+    if (state === 'unmarked') newState = 'struggling';
+    else if (state === 'struggling') newState = 'learned';
+    else newState = 'unmarked';
+
+    setCharState(char, newState);
+    updateCharVisuals(char, newState);
+  });
+
+  // === Translation toggles ===
+
+  document.querySelectorAll('.translation-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const article = btn.closest('.article');
+      const enDiv = article.querySelector('.article-body-en');
+      const isHidden = enDiv.hidden;
+      enDiv.hidden = !isHidden;
+      btn.textContent = isHidden
+        ? '隱藏翻譯 Hide Translation'
+        : '顯示翻譯 Show Translation';
+    });
+  });
+
+  // === Editor's Desk ===
+
+  document.querySelectorAll('.desk-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const index = parseInt(item.dataset.deskIndex);
+      const existingPos = deskPicks.indexOf(index);
+
+      if (existingPos !== -1) {
+        deskPicks.splice(existingPos, 1);
+        item.classList.remove('selected');
+      } else {
+        if (deskPicks.length >= 3) {
+          const oldest = deskPicks.shift();
+          document.querySelector(`[data-desk-index="${oldest}"]`).classList.remove('selected');
+        }
+        deskPicks.push(index);
+        item.classList.add('selected');
+      }
+
+      document.getElementById('desk-count-num').textContent = deskPicks.length;
+      saveState();
+    });
+  });
+
+  // === Feedback export ===
+
+  const downloadJSON = (data, filename) => {
+    const json = JSON.stringify(data, null, 2);
+    try {
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      navigator.clipboard.writeText(json).then(() => {
+        alert('下載失敗，已複製到剪貼簿。請貼到一個 .json 檔案。\nDownload failed. Copied to clipboard. Paste into a .json file.');
+      });
+    }
+  };
+
+  const showExportConfirmation = () => {
+    const msg = document.getElementById('export-confirm');
+    msg.hidden = false;
+    setTimeout(() => { msg.hidden = true; }, 3000);
+  };
+
+  const exportFeedback = () => {
+    const offered = [...document.querySelectorAll('.desk-item')].map(item => ({
+      headline: item.querySelector('.desk-headline').textContent,
+      included_in_issue: item.classList.contains('included')
+    }));
+
+    const today = document.querySelector('.date').textContent;
+
+    const charExport = {};
+    for (const [char, charState] of Object.entries(charStates)) {
+      charExport[char] = { state: charState, date: today };
+    }
+
+    const exportData = {
+      date: today,
+      characters: charExport,
+      editors_desk: {
+        offered,
+        user_top_3: deskPicks.slice()
+      }
+    };
+
+    downloadJSON(exportData, `feedback_${today}.json`);
+    showExportConfirmation();
+  };
+
+  document.getElementById('export-btn').addEventListener('click', exportFeedback);
+
+  // === Mobile character lookup ===
+
+  const isMobile = window.matchMedia('(pointer: coarse)').matches;
+
+  if (isMobile) {
+    let longPressTimer = null;
+    let feedbackTimer = null;
+    let startX = 0;
+    let startY = 0;
+    let activeSpan = null;
+    const LONG_PRESS_MS = 400;
+    const MOVE_THRESHOLD = 10;
+
+    const popup = document.getElementById('char-popup');
+    const popupChar = document.getElementById('popup-char');
+    const popupZhuyin = document.getElementById('popup-zhuyin');
+    const popupDef = document.getElementById('popup-def');
+    const lookupToggleBtn = document.getElementById('lookup-toggle');
+
+    function positionPopup(targetSpan) {
+      var rect = targetSpan.getBoundingClientRect();
+      var popupWidth = 280;
+      var margin = 8;
+      var gap = 6;
+      var vw = window.innerWidth;
+
+      popup.classList.add('visible');
+      var popupHeight = popup.offsetHeight;
+
+      var left = rect.left + rect.width / 2 - popupWidth / 2;
+      left = Math.max(margin, Math.min(left, vw - popupWidth - margin));
+
+      var top = rect.top - popupHeight - gap;
+      if (top < margin) {
+        top = rect.bottom + gap;
+      }
+
+      popup.style.left = left + 'px';
+      popup.style.top = top + 'px';
+    }
+
+    function findLongestMatch(targetSpan) {
+      if (typeof GLOSSARY === 'undefined') return null;
+
+      var parent = targetSpan.closest('p, h2, li') || targetSpan.parentElement;
+      var spans = [].slice.call(parent.querySelectorAll('.c'));
+      var targetIdx = spans.indexOf(targetSpan);
+      if (targetIdx === -1) return null;
+
+      var chars = spans.map(function (s) { return s.textContent; });
+      var MAX_WORD_LEN = 6;
+      var bestMatch = null;
+      var bestSpans = null;
+
+      for (var len = Math.min(MAX_WORD_LEN, chars.length); len >= 1; len--) {
+        var startMin = Math.max(0, targetIdx - len + 1);
+        var startMax = Math.min(targetIdx, chars.length - len);
+
+        for (var start = startMin; start <= startMax; start++) {
+          var candidate = chars.slice(start, start + len).join('');
+          if (GLOSSARY[candidate]) {
+            if (!bestMatch || candidate.length > bestMatch.length) {
+              bestMatch = candidate;
+              bestSpans = spans.slice(start, start + len);
+            }
+          }
+        }
+
+        if (bestMatch && bestMatch.length === len) break;
+      }
+
+      return bestMatch
+        ? { text: bestMatch, entry: GLOSSARY[bestMatch], spans: bestSpans }
+        : null;
+    }
+
+    function showPopup(char, targetSpan) {
+      var match = findLongestMatch(targetSpan);
+
+      if (match) {
+        popupChar.textContent = match.text;
+        popupZhuyin.textContent = match.entry.pinyin;
+        popupDef.textContent = match.entry.en;
+      } else {
+        popupChar.textContent = char;
+        popupZhuyin.textContent = '';
+        popupDef.textContent = '(not in glossary)';
+      }
+
+      document.querySelectorAll('.c.touch-selected').forEach(function (el) {
+        el.classList.remove('touch-selected');
+      });
+
+      var highlightSpans = match ? match.spans : [targetSpan];
+      highlightSpans.forEach(function (s) { s.classList.add('touch-selected'); });
+      activeSpan = targetSpan;
+
+      positionPopup(targetSpan);
+    }
+
+    function hidePopup() {
+      popup.classList.remove('visible');
+      document.querySelectorAll('.c.touch-selected').forEach(function (el) {
+        el.classList.remove('touch-selected');
+      });
+      activeSpan = null;
+    }
+
+    document.getElementById('popup-close').addEventListener('click', hidePopup);
+
+    document.addEventListener('click', function (e) {
+      if (!popup.classList.contains('visible')) return;
+      if (popup.contains(e.target)) return;
+      if (!e.target.closest('.c')) {
+        hidePopup();
+      }
+    });
+
+    var scrollDismissAttached = false;
+    function attachScrollDismiss() {
+      if (scrollDismissAttached) return;
+      scrollDismissAttached = true;
+      window.addEventListener('scroll', function onScroll() {
+        hidePopup();
+        window.removeEventListener('scroll', onScroll);
+        scrollDismissAttached = false;
+      }, { once: true });
+    }
+
+    document.addEventListener('touchstart', function (e) {
+      var span = e.target.closest('.c');
+      if (!span) return;
+
+      var touch = e.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+
+      feedbackTimer = setTimeout(function () {
+        span.classList.add('touch-active');
+      }, 100);
+
+      longPressTimer = setTimeout(function () {
+        span.classList.remove('touch-active');
+        showPopup(span.textContent, span);
+        attachScrollDismiss();
+      }, LONG_PRESS_MS);
+    }, { passive: true });
+
+    document.addEventListener('touchmove', function (e) {
+      if (!longPressTimer) return;
+      var touch = e.touches[0];
+      if (Math.abs(touch.clientX - startX) > MOVE_THRESHOLD ||
+          Math.abs(touch.clientY - startY) > MOVE_THRESHOLD) {
+        clearTimeout(longPressTimer);
+        clearTimeout(feedbackTimer);
+        longPressTimer = null;
+        document.querySelectorAll('.touch-active').forEach(function (el) {
+          el.classList.remove('touch-active');
+        });
+      }
+    }, { passive: true });
+
+    document.addEventListener('touchend', function (e) {
+      clearTimeout(longPressTimer);
+      clearTimeout(feedbackTimer);
+      longPressTimer = null;
+      var span = e.target.closest('.c');
+      if (span) span.classList.remove('touch-active');
+    }, { passive: true });
+
+    document.addEventListener('touchcancel', function () {
+      clearTimeout(longPressTimer);
+      clearTimeout(feedbackTimer);
+      longPressTimer = null;
+      document.querySelectorAll('.touch-active').forEach(function (el) {
+        el.classList.remove('touch-active');
+      });
+    }, { passive: true });
+
+    lookupToggleBtn.addEventListener('click', function () {
+      lookupMode = !lookupMode;
+      this.textContent = lookupMode ? '查詢模式 ON' : '查詢模式 OFF';
+      this.classList.toggle('active', lookupMode);
+      if (lookupMode && flaggingMode) {
+        flaggingMode = false;
+        document.getElementById('flag-toggle').textContent = '標記模式 OFF';
+        document.getElementById('flag-toggle').classList.remove('active');
+        document.body.classList.remove('flagging-on');
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!lookupMode) return;
+      var span = e.target.closest('.c');
+      if (!span) return;
+      e.stopPropagation();
+      showPopup(span.textContent, span);
+      attachScrollDismiss();
+    });
+  }
+
+  // === Initialize ===
+
+  if (!isLocalStorageAvailable()) {
+    disableFeedbackFeatures();
+    return;
+  }
+
+  const saved = loadState();
+
+  if (saved) {
+    // Restore character states
+    for (const [char, charState] of Object.entries(saved.characters || {})) {
+      charStates[char] = charState;
+      updateCharVisuals(char, charState);
+    }
+    // Restore desk picks
+    for (const index of (saved.deskPicks || [])) {
+      const item = document.querySelector(`[data-desk-index="${index}"]`);
+      if (item) {
+        item.classList.add('selected');
+        deskPicks.push(index);
+      }
+    }
+  }
+
+  document.getElementById('desk-count-num').textContent = deskPicks.length;
+})();
+</script>
+
+</body>
+</html>
