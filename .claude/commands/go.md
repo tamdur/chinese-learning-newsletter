@@ -156,7 +156,7 @@ Bad lines are logged and their characters added to the missing list.
 **5.5c. Dispatch multi-character word agents (one per article)**
 
 5 parallel `glossary-words` agent calls, one per article's full plain text.
-- Agent prompt: "TEXT:\n{article_plain_text}"
+- Agent prompt: "Be aggressive about coverage — include ALL proper nouns (especially transliterated names), ALL compound words, ALL technical terms. More entries is always better than fewer. When in doubt, include it.\n\nTEXT:\n{article_plain_text}"
 
 Parse each JSON response. Merge all 5 (later overwrites earlier for duplicates).
 
