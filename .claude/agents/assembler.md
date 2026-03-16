@@ -56,38 +56,48 @@ Fill in:
 
 ### 4. Archive the old issue and patch navigation
 
+**CRITICAL: This entire step MUST complete before step 5. You MUST read the OLD docs/index.html, archive it, and patch navigation links BEFORE writing the new newsletter to docs/index.html. If you write the new issue first, the old issue is lost.**
+
 If `docs/index.html` doesn't exist, skip this entire step.
 
-**4a. Archive the old issue**
+**4a. Read and archive the old issue**
 
-If `docs/index.html` exists:
-1. Read it and extract the date from the `<p class="date">` element
-2. Write it to `docs/archive/{extracted-date}.html`
+1. Read `docs/index.html` and save its FULL content in memory
+2. Extract the date from the `<p class="date">` element — call this `{old_date}`
+3. **Fix relative paths for archive location:** The nav links in `index.html` use paths relative to `docs/` (e.g., `archive/2026-03-14.html`). Since the file is moving INTO `docs/archive/`, rewrite the prev link paths:
+   - Replace `data-prev="archive/` → `data-prev="`
+   - Replace `href="archive/` in the `.nav-prev` link → `href="`
+   This changes `archive/2026-03-14.html` to `2026-03-14.html` (correct for a file already in the archive directory).
+4. Write the modified content to `docs/archive/{old_date}.html`
+5. **Verify:** The date in the archived file should be DIFFERENT from today's date. If it matches today's date, something is wrong — you may have already overwritten index.html. Stop and report the error.
 
-**4b. Patch the newly archived file**
+**4b. Patch the newly archived file (MANDATORY — do not skip)**
 
-The newly archived file (formerly index.html) has `data-next=""` and the next link is hidden. Patch it so its "next" points to the new current issue:
-1. Read `docs/archive/{extracted-date}.html`
-2. Apply these string replacements:
+The newly archived file has `data-next=""` and the next link is hidden. You MUST patch it to point forward to the new current issue:
+
+1. Read `docs/archive/{old_date}.html`
+2. If it contains `<nav class="issue-nav"`, apply BOTH of these string replacements:
    - `data-next=""` → `data-next="../index.html"`
    - `href="" class="nav-link nav-next" hidden` → `href="../index.html" class="nav-link nav-next"`
-3. Write the patched file back
-4. If the archived file has no `<nav class="issue-nav"` (pre-navigation issue), skip patching
+3. Write the patched file back to `docs/archive/{old_date}.html`
+4. **Verify:** After writing, grep the file for `data-next="../index.html"` to confirm the patch took effect. If it didn't, report a warning.
+5. If the archived file has no `<nav class="issue-nav"` (pre-navigation issue), skip patching.
 
-**4c. Patch the previous archive file (strict sequential)**
+**4c. Patch the previous archive file (strict sequential chain)**
 
-The previously most-recent archive file currently has `data-next="../index.html"` (set during the last run). Update it to point to the newly archived file instead:
-1. Scan `docs/archive/` for files matching `/^\d{4}-\d{2}-\d{2}\.html$/`, excluding the file just archived in 4a
+The previously most-recent archive file (the one before {old_date}) currently has `data-next="../index.html"` (set during the last run). Update it to point to the newly archived file instead:
+
+1. Scan `docs/archive/` for files matching `/^\d{4}-\d{2}-\d{2}\.html$/`, excluding `{old_date}.html`
 2. Sort by date descending — the first match is the previous archive
 3. If found, and it contains `<nav class="issue-nav"`:
-   - Replace `data-next="../index.html"` → `data-next="{newly-archived-filename}.html"` (just the filename, since both files are in the same `archive/` directory)
-   - Replace `href="../index.html" class="nav-link nav-next"` → `href="{newly-archived-filename}.html" class="nav-link nav-next"`
+   - Replace `data-next="../index.html"` → `data-next="{old_date}.html"` (just the filename, since both files are in the same `archive/` directory)
+   - Replace `href="../index.html" class="nav-link nav-next"` → `href="{old_date}.html" class="nav-link nav-next"`
 4. Write the patched file back
 5. If no previous archive exists or it has no `<nav class="issue-nav"` (pre-navigation issue), skip this step
 
 ### 5. Write the new issue
 
-Write the assembled HTML to `docs/index.html`.
+**Only after step 4 is fully complete**, write the assembled HTML to `docs/index.html`.
 
 ### 6. Commit and push
 
