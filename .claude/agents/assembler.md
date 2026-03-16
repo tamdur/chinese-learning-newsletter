@@ -1,5 +1,5 @@
 ---
-model: sonnet
+model: opus
 tools: Read, Write, Bash, Glob, Grep
 ---
 

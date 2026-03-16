@@ -187,7 +187,7 @@ Print: total entries, single-char entries, multi-char entries, missing character
 
 ### Step 6: Dispatch assembler
 
-Pass all content to the **assembler** agent (Sonnet):
+Pass all content to the **assembler** agent (Opus):
 - 5 articles (headline HTML, body HTML, source labels)
 - 5 English translations
 - 8 Editor's Desk headlines (5 selected with Chinese headlines from article-writer + 3 runners-up with Chinese headlines from story-selector)

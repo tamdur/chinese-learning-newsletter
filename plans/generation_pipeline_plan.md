@@ -345,13 +345,13 @@ The tradeoff is speed (sequential is slower than parallel). But at ~150 characte
 
 ---
 
-### 7. assembler (Sonnet) — Single invocation
+### 7. assembler (Opus) — Single invocation
 
 **Purpose:** Assemble all outputs into a complete HTML file matching the template spec.
 
 **File:** `.claude/agents/assembler.md`
 
-**Model:** Sonnet (string assembly with attention to spec compliance, not creative work)
+**Model:** Opus (assembly requires strict step ordering, multi-file navigation patching, and reliable execution of all substeps)
 
 **Tools:** Read (for template), Write (for output), Bash (for git operations and file moves), Glob, Grep
 
@@ -373,9 +373,9 @@ Assembly steps:
 2. Fill in: today's date, all 5 articles, all 8 Editor's Desk headlines, embedded glossary
 3. Ensure the JavaScript initialization block does NOT contain test seed data
 
-After assembling:
-1. If `docs/index.html` exists, extract the date, archive it, patch navigation
-2. Write the new HTML to `docs/index.html`
+After assembling (strict order — archive BEFORE writing new issue):
+1. If `docs/index.html` exists: read it, extract date, rewrite nav prev paths for archive location (`archive/X.html` → `X.html`), write to `docs/archive/{date}.html`, patch forward link (`data-next=""` → `data-next="../index.html"`), patch previous archive's next link to point to newly archived file
+2. Write the new HTML to `docs/index.html` (only after step 1 is fully complete)
 3. Run: `git add docs/index.html docs/archive/` then `git commit -m "Newsletter YYYY-MM-DD"` then `git push`
 
 **Input:** All content pieces (articles, translations, headlines, glossary, date) passed as prompt context.
