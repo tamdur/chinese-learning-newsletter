@@ -1,4 +1,65 @@
 {
   "version": 1,
-  "characters": {}
+  "characters": {
+    "積": {
+      "state": "learned",
+      "first_flagged": "2026-03-12",
+      "last_updated": "2026-03-17"
+    },
+    "廠": {
+      "state": "learned",
+      "first_flagged": "2026-03-12",
+      "last_updated": "2026-03-17"
+    },
+    "目": {
+      "state": "learned",
+      "first_flagged": "2026-03-12",
+      "last_updated": "2026-03-12"
+    },
+    "二": {
+      "state": "learned",
+      "first_flagged": "2026-03-12",
+      "last_updated": "2026-03-17"
+    },
+    "也": {
+      "state": "struggling",
+      "first_flagged": "2026-03-12",
+      "last_updated": "2026-03-12"
+    },
+    "是": {
+      "state": "learned",
+      "first_flagged": "2026-03-12",
+      "last_updated": "2026-03-12"
+    },
+    "軍": {
+      "state": "struggling",
+      "first_flagged": "2026-03-17",
+      "last_updated": "2026-03-17"
+    },
+    "隊": {
+      "state": "struggling",
+      "first_flagged": "2026-03-17",
+      "last_updated": "2026-03-17"
+    },
+    "結": {
+      "state": "struggling",
+      "first_flagged": "2026-03-17",
+      "last_updated": "2026-03-17"
+    },
+    "果": {
+      "state": "struggling",
+      "first_flagged": "2026-03-17",
+      "last_updated": "2026-03-17"
+    },
+    "網": {
+      "state": "struggling",
+      "first_flagged": "2026-03-17",
+      "last_updated": "2026-03-17"
+    },
+    "站": {
+      "state": "struggling",
+      "first_flagged": "2026-03-17",
+      "last_updated": "2026-03-17"
+    }
+  }
 }
