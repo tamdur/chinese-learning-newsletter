@@ -99,20 +99,20 @@ The previously most-recent archive file (the one before {old_date}) currently ha
 
 **Only after step 4 is fully complete**, write the assembled HTML to `docs/index.html`.
 
-### 6. Commit and push
+### 6. Validate
+
+Before committing, scan the HTML for:
+- Any simplified characters (common ones: 体/國→国, 學→学, 發→发, 時→时, etc.)
+- Any Chinese characters NOT wrapped in `<span class="c">` inside article body/headline elements
+- Report warnings if found
+
+### 7. Commit and push
 
 ```bash
 git add docs/index.html docs/archive/
 git commit -m "Newsletter {{date}}"
 git push
 ```
-
-### 7. Validate
-
-Before committing, scan the HTML for:
-- Any simplified characters (common ones: 体/國→国, 學→学, 發→发, 時→时, etc.)
-- Any Chinese characters NOT wrapped in `<span class="c">` inside article body/headline elements
-- Report warnings if found
 
 ## Content
 

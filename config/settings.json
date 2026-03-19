@@ -1,7 +1,7 @@
 {
   "reading_level": {
-    "grade": 5,
-    "description": "Equivalent to a Taiwanese elementary school 5th-grader. Use common characters and straightforward grammar. Avoid literary idioms, classical constructions, and low-frequency characters unless they are essential to the topic. When a harder character is unavoidable, embed a brief natural-language gloss in parentheses on first use."
+    "grade": 4,
+    "description": "Equivalent to a Taiwanese elementary school 4th-grader. Use common characters and straightforward grammar. Avoid literary idioms, classical constructions, and low-frequency characters unless they are essential to the topic. When a harder character is unavoidable, embed a brief natural-language gloss in parentheses on first use."
   },
   "article_count": 5,
   "article_length": {
