@@ -4,12 +4,12 @@
     "積": {
       "state": "learned",
       "first_flagged": "2026-03-12",
-      "last_updated": "2026-03-17"
+      "last_updated": "2026-03-19"
     },
     "廠": {
-      "state": "learned",
+      "state": "struggling",
       "first_flagged": "2026-03-12",
-      "last_updated": "2026-03-17"
+      "last_updated": "2026-03-19"
     },
     "目": {
       "state": "learned",
@@ -34,32 +34,37 @@
     "軍": {
       "state": "struggling",
       "first_flagged": "2026-03-17",
-      "last_updated": "2026-03-17"
+      "last_updated": "2026-03-19"
     },
     "隊": {
       "state": "struggling",
       "first_flagged": "2026-03-17",
-      "last_updated": "2026-03-17"
+      "last_updated": "2026-03-19"
     },
     "結": {
       "state": "struggling",
       "first_flagged": "2026-03-17",
-      "last_updated": "2026-03-17"
+      "last_updated": "2026-03-19"
     },
     "果": {
       "state": "struggling",
       "first_flagged": "2026-03-17",
-      "last_updated": "2026-03-17"
+      "last_updated": "2026-03-19"
     },
     "網": {
       "state": "struggling",
       "first_flagged": "2026-03-17",
-      "last_updated": "2026-03-17"
+      "last_updated": "2026-03-19"
     },
     "站": {
       "state": "struggling",
       "first_flagged": "2026-03-17",
-      "last_updated": "2026-03-17"
+      "last_updated": "2026-03-19"
+    },
+    "員": {
+      "state": "struggling",
+      "first_flagged": "2026-03-19",
+      "last_updated": "2026-03-19"
     }
   }
 }
