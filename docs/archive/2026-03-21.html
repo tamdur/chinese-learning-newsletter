@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今日讀報 — 2026-03-21</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Noto Serif TC", "PMingLiU", "Apple LiSung", serif;
+      font-size: 19px;
+      line-height: 1.9;
+      color: #e0dcd4;
+      background: #1a1a2e;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .newsletter-header { text-align: center; margin-bottom: 2.5rem; }
+    .newsletter-header h1 { font-size: 32px; font-weight: 700; }
+    .newsletter-header .date { color: #8a8580; }
+
+    .article { margin-bottom: 0; }
+    .article-headline { font-size: 24px; font-weight: 700; margin-bottom: 0.5rem; }
+    .article-source { font-size: 14px; color: #7a7570; margin-bottom: 1rem; }
+    .article-body-zh p { margin-bottom: 1rem; }
+
+    hr { border: none; border-top: 1px solid #333340; margin: 2.5rem 0; }
+
+    .translation-toggle {
+      font-size: 14px;
+      padding: 6px 12px;
+      border: 1px solid #444458;
+      border-radius: 4px;
+      background: #252538;
+      color: #9a9590;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .translation-toggle:hover { background: #2e2e45; }
+
+    .article-body-en {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #9a9590;
+      font-size: 16px;
+      line-height: 1.6;
+      border-left: 3px solid #444458;
+      padding-left: 1rem;
+      margin-top: 1rem;
+    }
+    .article-body-en p { margin-bottom: 0.75rem; }
+
+    .c { cursor: default; }
+    .flagging-on .c { cursor: pointer; }
+    .flagging-on .c:hover { background: rgba(255, 255, 255, 0.06); border-radius: 2px; }
+    .c.struggling { border-bottom: 2px solid #d4a574; }
+    .c.learned { border-bottom: 2px dotted #7aab7a; }
+
+    .editors-desk {
+      background: #22223a;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .editors-desk h2 { font-size: 22px; margin-bottom: 0.5rem; }
+    .desk-instructions { font-size: 14px; color: #8a8580; margin-bottom: 1rem; }
+
+    .desk-item {
+      padding: 12px 14px;
+      border: 1px solid #333340;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: border-color 0.15s;
+      background: #252538;
+    }
+    .desk-item:hover { border-color: #555568; }
+    .desk-item.selected { border-color: #d4a574; background: rgba(212, 165, 116, 0.12); }
+
+    .desk-badge {
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-right: 8px;
+      display: inline-block;
+    }
+    .included .desk-badge { background: #2a3a2a; color: #7aab7a; }
+    .excluded .desk-badge { background: #2a2a3a; color: #7a7570; }
+    .desk-headline { font-size: 16px; }
+    .desk-count { font-size: 14px; color: #8a8580; margin-top: 0.5rem; }
+
+    .toolbar {
+      margin-top: 2rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #333340;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .toolbar button {
+      font-size: 14px;
+      padding: 6px 14px;
+      border: 1px solid #444458;
+      border-radius: 4px;
+      background: #252538;
+      color: #b0aaa4;
+      cursor: pointer;
+      user-select: none;
+    }
+    .toolbar button:hover { background: #2e2e45; }
+    .toolbar button.active { border-color: #d4a574; }
+    .confirm-msg { font-size: 13px; color: #7aab7a; }
+
+    .issue-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      font-size: 14px;
+    }
+    .nav-link {
+      color: #8a8580;
+      text-decoration: none;
+    }
+    .nav-link:hover {
+      color: #b0aaa4;
+    }
+
+    footer { margin-top: 2rem; text-align: center; font-size: 13px; color: #5a5550; }
+    .storage-warning { font-size: 13px; color: #7a7570; text-align: center; margin-top: 0.5rem; }
+
+    @media (pointer: coarse) {
+      .c {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+      }
+      .c.touch-active {
+        background: rgba(100, 160, 255, 0.2);
+        border-radius: 2px;
+        transition: background 0.1s ease;
+      }
+      .c.touch-selected {
+        background: rgba(100, 160, 255, 0.3);
+        border-radius: 2px;
+      }
+      .lookup-toggle { display: inline-block; }
+    }
+
+    .lookup-toggle { display: none; }
+
+    .char-popup {
+      display: none;
+      position: fixed;
+      width: 280px;
+      background: #252538;
+      border: 1px solid #444458;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      padding: 14px 16px;
+      z-index: 1000;
+      text-align: center;
+      font-family: "Noto Serif TC", "PMingLiU", serif;
+    }
+    .char-popup.visible { display: block; }
+    .char-popup-close {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: #7a7570;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .char-popup-char {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .char-popup-zhuyin {
+      font-size: 20px;
+      color: #9a9590;
+      margin-bottom: 6px;
+      font-family: "Apple LiGothic", "Microsoft JhengHei", sans-serif;
+    }
+    .char-popup-def {
+      font-size: 15px;
+      color: #b0aaa4;
+      line-height: 1.4;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+  </style>
+</head>
+<body>
+
+<header class="newsletter-header">
+  <h1>今日讀報</h1>
+  <p class="date">2026-03-21</p>
+</header>
+
+<nav class="issue-nav" data-prev="2026-03-19.html" data-next="../index.html">
+  <a href="2026-03-19.html" class="nav-link nav-prev">&larr; 上一期</a>
+  <span class="nav-spacer"></span>
+  <a href="../index.html" class="nav-link nav-next">下一期 &rarr;</a>
+</nav>
+
+<main>
+
+<!-- === ARTICLE 1 === -->
+<article class="article" data-article-id="1">
+  <h2 class="article-headline"><span class="c">美</span><span class="c">國</span><span class="c">和</span><span class="c">以</span><span class="c">色</span><span class="c">列</span><span class="c">打</span><span class="c">伊</span><span class="c">朗</span><span class="c">第</span><span class="c">二</span><span class="c">十</span><span class="c">一</span><span class="c">天</span>：<span class="c">油</span><span class="c">價</span><span class="c">大</span><span class="c">漲</span>，<span class="c">海</span><span class="c">上</span><span class="c">運</span><span class="c">油</span><span class="c">幾</span><span class="c">乎</span><span class="c">停</span><span class="c">了</span></h2>
+  <p class="article-source">來源：Al Jazeera / CNN</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">美</span><span class="c">國</span><span class="c">和</span><span class="c">以</span><span class="c">色</span><span class="c">列</span><span class="c">的</span><span class="c">軍</span><span class="c">隊</span><span class="c">從</span><span class="c">二</span><span class="c">月</span><span class="c">底</span><span class="c">開</span><span class="c">始</span><span class="c">打</span><span class="c">伊</span><span class="c">朗</span>，<span class="c">到</span><span class="c">現</span><span class="c">在</span><span class="c">已</span><span class="c">經</span><span class="c">三</span><span class="c">個</span><span class="c">星</span><span class="c">期</span><span class="c">了</span>。<span class="c">以</span><span class="c">色</span><span class="c">列</span><span class="c">軍</span><span class="c">隊</span><span class="c">打</span><span class="c">了</span><span class="c">伊</span><span class="c">朗</span><span class="c">最</span><span class="c">大</span><span class="c">的</span><span class="c">天</span><span class="c">然</span><span class="c">氣</span><span class="c">田</span>，<span class="c">伊</span><span class="c">朗</span><span class="c">也</span><span class="c">打</span><span class="c">了</span><span class="c">卡</span><span class="c">達</span><span class="c">的</span><span class="c">天</span><span class="c">然</span><span class="c">氣</span><span class="c">工</span><span class="c">廠</span>。<span class="c">結</span><span class="c">果</span><span class="c">很</span><span class="c">嚴</span><span class="c">重</span>：<span class="c">荷</span><span class="c">莫</span><span class="c">茲</span><span class="c">海</span><span class="c">峽</span>（<span class="c">全</span><span class="c">世</span><span class="c">界</span><span class="c">兩</span><span class="c">成</span><span class="c">的</span><span class="c">油</span><span class="c">從</span><span class="c">這</span><span class="c">裡</span><span class="c">走</span>）<span class="c">現</span><span class="c">在</span><span class="c">幾</span><span class="c">乎</span><span class="c">沒</span><span class="c">有</span><span class="c">船</span><span class="c">在</span><span class="c">走</span>。<span class="c">油</span><span class="c">價</span><span class="c">漲</span><span class="c">到</span><span class="c">一</span><span class="c">桶</span> 115 <span class="c">美</span><span class="c">元</span>，<span class="c">比</span><span class="c">開</span><span class="c">戰</span><span class="c">前</span><span class="c">高</span><span class="c">了</span><span class="c">八</span><span class="c">成</span>。<span class="c">到</span><span class="c">現</span><span class="c">在</span><span class="c">還</span><span class="c">沒</span><span class="c">有</span><span class="c">人</span><span class="c">在</span><span class="c">談</span><span class="c">停</span><span class="c">火</span>。</p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>The militaries of the United States and Israel have been fighting Iran for three weeks now, having started at the end of February. The Israeli military struck Iran's largest natural gas field, and Iran struck a natural gas facility in Qatar in return. The consequences are severe: the Strait of Hormuz, through which twenty percent of the world's oil passes, now has almost no ships transiting it. Oil prices have surged to $115 per barrel, up eighty percent from before the war began. So far, no one is talking about a ceasefire.</p>
+  </div>
+</article>
+
+<hr>
+
+<!-- === ARTICLE 2 === -->
+<article class="article" data-article-id="2">
+  <h2 class="article-headline"><span class="c">美</span><span class="c">國</span><span class="c">聯</span><span class="c">準</span><span class="c">會</span><span class="c">不</span><span class="c">降</span><span class="c">息</span>，<span class="c">鮑</span><span class="c">爾</span>：<span class="c">通</span><span class="c">膨</span><span class="c">沒</span><span class="c">有</span><span class="c">像</span><span class="c">我</span><span class="c">們</span><span class="c">想</span><span class="c">的</span><span class="c">那</span><span class="c">樣</span><span class="c">下</span><span class="c">來</span></h2>
+  <p class="article-source">來源：CNBC</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">美</span><span class="c">國</span><span class="c">聯</span><span class="c">準</span><span class="c">會</span>（<span class="c">就</span><span class="c">是</span><span class="c">管</span><span class="c">錢</span><span class="c">的</span><span class="c">地</span><span class="c">方</span>）<span class="c">決</span><span class="c">定</span><span class="c">不</span><span class="c">降</span><span class="c">利</span><span class="c">率</span>，<span class="c">留</span><span class="c">在</span> 3.5% <span class="c">到</span> 3.75%。<span class="c">主</span><span class="c">要</span><span class="c">原</span><span class="c">因</span><span class="c">是</span><span class="c">東</span><span class="c">西</span><span class="c">還</span><span class="c">是</span><span class="c">太</span><span class="c">貴</span>，<span class="c">物</span><span class="c">價</span><span class="c">沒</span><span class="c">降</span><span class="c">下</span><span class="c">來</span>。<span class="c">伊</span><span class="c">朗</span><span class="c">戰</span><span class="c">爭</span><span class="c">讓</span><span class="c">油</span><span class="c">價</span><span class="c">漲</span><span class="c">很</span><span class="c">多</span>，<span class="c">結</span><span class="c">果</span><span class="c">也</span><span class="c">讓</span><span class="c">所</span><span class="c">有</span><span class="c">東</span><span class="c">西</span><span class="c">更</span><span class="c">貴</span>。<span class="c">二</span><span class="c">月</span><span class="c">美</span><span class="c">國</span><span class="c">少</span><span class="c">了</span><span class="c">九</span><span class="c">萬</span><span class="c">多</span><span class="c">個</span><span class="c">工</span><span class="c">作</span>。<span class="c">官</span><span class="c">員</span><span class="c">說</span><span class="c">今</span><span class="c">年</span><span class="c">可</span><span class="c">能</span><span class="c">只</span><span class="c">降</span><span class="c">一</span><span class="c">次</span>，<span class="c">但</span><span class="c">也</span><span class="c">有</span><span class="c">七</span><span class="c">個</span><span class="c">人</span><span class="c">說</span><span class="c">一</span><span class="c">次</span><span class="c">也</span><span class="c">不</span><span class="c">會</span><span class="c">降</span>。<span class="c">消</span><span class="c">息</span><span class="c">出</span><span class="c">來</span><span class="c">以</span><span class="c">後</span>，<span class="c">美</span><span class="c">國</span><span class="c">股</span><span class="c">票</span><span class="c">跌</span><span class="c">了</span><span class="c">差</span><span class="c">不</span><span class="c">多</span> 1.4%。</p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>The U.S. Federal Reserve decided not to cut interest rates, keeping them at 3.5% to 3.75%. The main reason is that things are still too expensive and prices haven't come down. The Iran war caused oil prices to spike a lot, which made everything more expensive. In February, the United States lost over 90,000 jobs. Officials said there might be only one rate cut this year, but seven people said there wouldn't be even one cut. After the news came out, U.S. stocks fell about 1.4%.</p>
+  </div>
+</article>
+
+<hr>
+
+<!-- === ARTICLE 3 === -->
+<article class="article" data-article-id="3">
+  <h2 class="article-headline"><span class="c">丹</span><span class="c">麥</span><span class="c">的</span><span class="c">方</span><span class="c">法</span><span class="c">能</span><span class="c">解</span><span class="c">決</span><span class="c">美</span><span class="c">國</span><span class="c">房</span><span class="c">貸</span><span class="c">問</span><span class="c">題</span><span class="c">嗎</span>？</h2>
+  <p class="article-source">來源：Marginal Revolution</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">美</span><span class="c">國</span><span class="c">很</span><span class="c">多</span><span class="c">人</span><span class="c">有</span><span class="c">一</span><span class="c">個</span><span class="c">問</span><span class="c">題</span>：<span class="c">他</span><span class="c">們</span><span class="c">幾</span><span class="c">年</span><span class="c">前</span><span class="c">用</span><span class="c">很</span><span class="c">低</span><span class="c">的</span><span class="c">利</span><span class="c">率</span><span class="c">買</span><span class="c">了</span><span class="c">房</span><span class="c">子</span>，<span class="c">現</span><span class="c">在</span><span class="c">利</span><span class="c">率</span><span class="c">變</span><span class="c">高</span><span class="c">了</span>，<span class="c">如</span><span class="c">果</span><span class="c">賣</span><span class="c">房</span><span class="c">子</span><span class="c">再</span><span class="c">買</span><span class="c">新</span><span class="c">的</span>，<span class="c">要</span><span class="c">用</span><span class="c">高</span><span class="c">利</span><span class="c">率</span>。<span class="c">結</span><span class="c">果</span><span class="c">大</span><span class="c">家</span><span class="c">都</span><span class="c">不</span><span class="c">想</span><span class="c">搬</span><span class="c">家</span>，<span class="c">房</span><span class="c">子</span><span class="c">賣</span><span class="c">的</span><span class="c">數</span><span class="c">量</span><span class="c">少</span><span class="c">了</span><span class="c">快</span><span class="c">六</span><span class="c">成</span>。<span class="c">丹</span><span class="c">麥</span><span class="c">有</span><span class="c">一</span><span class="c">個</span><span class="c">方</span><span class="c">法</span>：<span class="c">你</span><span class="c">的</span><span class="c">房</span><span class="c">貸</span><span class="c">和</span><span class="c">一</span><span class="c">個</span><span class="c">債</span><span class="c">券</span>（<span class="c">一</span><span class="c">種</span><span class="c">可</span><span class="c">以</span><span class="c">買</span><span class="c">賣</span><span class="c">的</span><span class="c">錢</span><span class="c">的</span><span class="c">票</span>）<span class="c">連</span><span class="c">在</span><span class="c">一</span><span class="c">起</span>。<span class="c">利</span><span class="c">率</span><span class="c">漲</span><span class="c">的</span><span class="c">時</span><span class="c">候</span>，<span class="c">債</span><span class="c">券</span><span class="c">變</span><span class="c">便</span><span class="c">宜</span>，<span class="c">你</span><span class="c">可</span><span class="c">以</span><span class="c">用</span><span class="c">少</span><span class="c">一</span><span class="c">點</span><span class="c">的</span><span class="c">錢</span><span class="c">把</span><span class="c">房</span><span class="c">貸</span><span class="c">還</span><span class="c">完</span>，<span class="c">這</span><span class="c">樣</span><span class="c">搬</span><span class="c">家</span><span class="c">就</span><span class="c">不</span><span class="c">會</span><span class="c">虧</span><span class="c">了</span>。</p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>Many Americans face a problem: they bought their homes years ago at very low interest rates, but now rates have climbed. If they sell and buy a new house, they'd have to pay those higher rates. As a result, nobody wants to move, and home sales have dropped by nearly 60%. Denmark has a solution: your mortgage is linked to a bond — a type of tradable financial instrument. When interest rates go up, the bond becomes cheaper, so you can pay off your mortgage with less money, meaning you won't lose money if you move.</p>
+  </div>
+</article>
+
+<hr>
+
+<!-- === ARTICLE 4 === -->
+<article class="article" data-article-id="4">
+  <h2 class="article-headline"><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">大</span><span class="c">學</span><span class="c">今</span><span class="c">天</span><span class="c">打</span><span class="c">聖</span><span class="c">路</span><span class="c">易</span><span class="c">大</span><span class="c">學</span>！<span class="c">全</span><span class="c">國</span><span class="c">第</span><span class="c">一</span><span class="c">的</span><span class="c">球</span><span class="c">隊</span><span class="c">能</span><span class="c">繼</span><span class="c">續</span><span class="c">贏</span><span class="c">嗎</span>？</h2>
+  <p class="article-source">來源：Detroit News</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">全</span><span class="c">國</span><span class="c">排</span><span class="c">名</span><span class="c">第</span><span class="c">一</span><span class="c">的</span><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">大</span><span class="c">學</span><span class="c">籃</span><span class="c">球</span><span class="c">隊</span><span class="c">今</span><span class="c">天</span><span class="c">要</span><span class="c">打</span><span class="c">聖</span><span class="c">路</span><span class="c">易</span><span class="c">大</span><span class="c">學</span>。<span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">今</span><span class="c">年</span> 32 <span class="c">勝</span> 3 <span class="c">敗</span>，<span class="c">在</span><span class="c">客</span><span class="c">場</span><span class="c">十</span><span class="c">場</span><span class="c">全</span><span class="c">贏</span>，<span class="c">是</span> 1976 <span class="c">年</span><span class="c">以</span><span class="c">來</span><span class="c">第</span><span class="c">一</span><span class="c">個</span><span class="c">做</span><span class="c">到</span><span class="c">的</span><span class="c">球</span><span class="c">隊</span>。<span class="c">第</span><span class="c">一</span><span class="c">場</span><span class="c">他</span><span class="c">們</span> 101 <span class="c">比</span> 80 <span class="c">大</span><span class="c">贏</span>，<span class="c">隊</span><span class="c">員</span><span class="c">投</span><span class="c">籃</span><span class="c">命</span><span class="c">中</span><span class="c">率</span><span class="c">高</span><span class="c">到</span> 67%。<span class="c">但</span><span class="c">聖</span><span class="c">路</span><span class="c">易</span><span class="c">也</span><span class="c">不</span><span class="c">好</span><span class="c">打</span>，<span class="c">他</span><span class="c">們</span><span class="c">的</span><span class="c">三</span><span class="c">分</span><span class="c">球</span><span class="c">全</span><span class="c">國</span><span class="c">第</span><span class="c">二</span>，<span class="c">中</span><span class="c">鋒</span> Avila <span class="c">也</span><span class="c">會</span><span class="c">投</span><span class="c">三</span><span class="c">分</span>，<span class="c">可</span><span class="c">能</span><span class="c">把</span><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">的</span><span class="c">大</span><span class="c">個</span><span class="c">子</span> Mara <span class="c">拉</span><span class="c">到</span><span class="c">外</span><span class="c">面</span>。</p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>The #1-ranked University of Michigan men's basketball team faces Saint Louis University today. Michigan is 32-3 this season and has won all ten games on the road — the first team to accomplish that since 1976. In their first matchup, they beat Howard 101-80 behind a dominant 67% shooting performance. But Saint Louis is no pushover: they have the nation's second-best three-point shooting, and center Avila can also shoot threes, which could pull Michigan's big man Mara out on the perimeter.</p>
+  </div>
+</article>
+
+<hr>
+
+<!-- === ARTICLE 5 === -->
+<article class="article" data-article-id="5">
+  <h2 class="article-headline"><span class="c">南</span><span class="c">極</span><span class="c">冰</span><span class="c">河</span><span class="c">下</span><span class="c">面</span><span class="c">發</span><span class="c">現</span><span class="c">一</span><span class="c">大</span><span class="c">塊</span><span class="c">花</span><span class="c">崗</span><span class="c">岩</span></h2>
+  <p class="article-source">來源：ScienceDaily / British Antarctic Survey</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">英</span><span class="c">國</span><span class="c">的</span><span class="c">科</span><span class="c">學</span><span class="c">家</span><span class="c">在</span><span class="c">南</span><span class="c">極</span><span class="c">一</span><span class="c">條</span><span class="c">很</span><span class="c">大</span><span class="c">的</span><span class="c">冰</span><span class="c">河</span><span class="c">下</span><span class="c">面</span><span class="c">發</span><span class="c">現</span><span class="c">了</span><span class="c">一</span><span class="c">塊</span><span class="c">花</span><span class="c">崗</span><span class="c">岩</span>（<span class="c">一</span><span class="c">種</span><span class="c">很</span><span class="c">硬</span><span class="c">的</span><span class="c">石</span><span class="c">頭</span>），<span class="c">大</span><span class="c">約</span><span class="c">一</span><span class="c">百</span><span class="c">公</span><span class="c">里</span><span class="c">寬</span>。<span class="c">這</span><span class="c">條</span><span class="c">冰</span><span class="c">河</span><span class="c">叫</span> Pine Island Glacier，<span class="c">是</span><span class="c">南</span><span class="c">極</span><span class="c">退</span><span class="c">得</span><span class="c">最</span><span class="c">快</span><span class="c">的</span><span class="c">冰</span><span class="c">河</span><span class="c">之</span><span class="c">一</span>。<span class="c">研</span><span class="c">究</span><span class="c">人</span><span class="c">員</span><span class="c">先</span><span class="c">在</span><span class="c">山</span><span class="c">上</span><span class="c">看</span><span class="c">到</span><span class="c">粉</span><span class="c">紅</span><span class="c">色</span><span class="c">的</span><span class="c">石</span><span class="c">頭</span>，<span class="c">不</span><span class="c">是</span><span class="c">這</span><span class="c">裡</span><span class="c">的</span>，<span class="c">後</span><span class="c">來</span><span class="c">用</span><span class="c">飛</span><span class="c">機</span><span class="c">量</span><span class="c">地</span><span class="c">下</span><span class="c">的</span><span class="c">重</span><span class="c">力</span>，<span class="c">果</span><span class="c">然</span><span class="c">在</span><span class="c">下</span><span class="c">面</span><span class="c">找</span><span class="c">到</span><span class="c">了</span>。<span class="c">花</span><span class="c">崗</span><span class="c">岩</span><span class="c">和</span><span class="c">別</span><span class="c">的</span><span class="c">石</span><span class="c">頭</span><span class="c">不</span><span class="c">一</span><span class="c">樣</span>，<span class="c">會</span><span class="c">影</span><span class="c">響</span><span class="c">冰</span><span class="c">河</span><span class="c">滑</span><span class="c">動</span><span class="c">的</span><span class="c">方</span><span class="c">式</span>，<span class="c">這</span><span class="c">對</span><span class="c">了</span><span class="c">解</span><span class="c">海</span><span class="c">平</span><span class="c">面</span><span class="c">上</span><span class="c">升</span><span class="c">很</span><span class="c">重</span><span class="c">要</span>。</p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>Scientists from the United Kingdom discovered a massive granite rock beneath a large glacier in Antarctica, approximately 100 kilometers wide. The glacier, called Pine Island Glacier, is one of the fastest retreating glaciers in Antarctica. Researchers first spotted pink-colored rocks on a mountain that didn't belong there, and later used an aircraft to measure underground gravity, which confirmed they found the granite below. Granite differs from other rock types and affects how glaciers slide, which is important for understanding sea level rise.</p>
+  </div>
+</article>
+
+</main>
+
+<!-- === EDITOR'S DESK === -->
+<section class="editors-desk">
+  <h2>編輯台 Editor's Desk</h2>
+  <p class="desk-instructions">選擇你最感興趣的 3 則標題 Pick your top 3 headlines</p>
+
+  <div class="desk-items">
+    <div class="desk-item included" data-desk-index="0">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">美國和以色列打伊朗第二十一天：油價大漲，海上運油幾乎停了</span>
+    </div>
+    <div class="desk-item included" data-desk-index="1">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">美國聯準會不降息，鮑爾：通膨沒有像我們想的那樣下來</span>
+    </div>
+    <div class="desk-item included" data-desk-index="2">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">丹麥的方法能解決美國房貸問題嗎？</span>
+    </div>
+    <div class="desk-item included" data-desk-index="3">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">密西根大學今天打聖路易大學！全國第一的球隊能繼續贏嗎？</span>
+    </div>
+    <div class="desk-item included" data-desk-index="4">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">南極冰河下面發現一大塊花崗岩</span>
+    </div>
+    <div class="desk-item excluded" data-desk-index="5">
+      <span class="desk-badge">未收錄</span>
+      <span class="desk-headline">NASA登月火箭準備好了，五十年來首次載人飛月球</span>
+    </div>
+    <div class="desk-item excluded" data-desk-index="6">
+      <span class="desk-badge">未收錄</span>
+      <span class="desk-headline">ArXiv宣布脫離康乃爾大學獨立運作</span>
+    </div>
+    <div class="desk-item excluded" data-desk-index="7">
+      <span class="desk-badge">未收錄</span>
+      <span class="desk-headline">伊利諾州通過十五億美元交通方案，救回七十四條CTA公車路線</span>
+    </div>
+  </div>
+
+  <p class="desk-count">已選：<span id="desk-count-num">0</span> / 3</p>
+</section>
+
+<!-- === TOOLBAR === -->
+<div class="toolbar" id="toolbar">
+  <button id="flag-toggle" type="button">標記模式 OFF</button>
+  <button id="lookup-toggle" class="lookup-toggle" type="button">查詢模式 OFF</button>
+  <button id="export-btn" type="button">匯出回饋 Export Feedback</button>
+  <span id="export-confirm" class="confirm-msg" hidden>已匯出 ✓</span>
+</div>
+
+<footer>
+  <p>今日讀報 — 以 Claude Code 製作</p>
+</footer>
+
+<div class="char-popup" id="char-popup" role="tooltip">
+  <button class="char-popup-close" id="popup-close" aria-label="Close">&times;</button>
+  <div class="char-popup-char" id="popup-char"></div>
+  <div class="char-popup-zhuyin" id="popup-zhuyin"></div>
+  <div class="char-popup-def" id="popup-def"></div>
+</div>
+
+<script>
+const GLOSSARY = {"一":{"zhuyin":"ㄧˊ","english":"one"},"七":{"zhuyin":"ㄑㄧˊ","english":"seven"},"三":{"zhuyin":"ㄙㄢ","english":"three"},"上":{"zhuyin":"ㄕㄤˋ","english":"above; up"},"下":{"zhuyin":"ㄒㄧㄚˋ","english":"below; down"},"不":{"zhuyin":"ㄅㄨˋ","english":"not; no"},"世":{"zhuyin":"ㄕˋ","english":"world; generation"},"中":{"zhuyin":"ㄓㄨㄥ","english":"middle; China"},"丹":{"zhuyin":"ㄉㄢ","english":"red; cinnabar"},"主":{"zhuyin":"ㄓㄨˇ","english":"main; chief"},"之":{"zhuyin":"ㄓ","english":"of; (classical particle)"},"乎":{"zhuyin":"ㄏㄨ","english":"(classical particle); or"},"九":{"zhuyin":"ㄐㄧㄡˇ","english":"nine"},"也":{"zhuyin":"ㄧㄝˇ","english":"also; too"},"了":{"zhuyin":"˙ㄌㄜ","english":"(aspect particle); finished"},"二":{"zhuyin":"ㄦˋ","english":"two"},"人":{"zhuyin":"ㄖㄣˊ","english":"person; people"},"今":{"zhuyin":"ㄐㄧㄣ","english":"today; now"},"他":{"zhuyin":"ㄊㄚ","english":"he; other"},"以":{"zhuyin":"ㄧˇ","english":"with; by"},"伊":{"zhuyin":"ㄧ","english":"he; she; it"},"但":{"zhuyin":"ㄉㄢˋ","english":"but; however"},"低":{"zhuyin":"ㄉㄧ","english":"low"},"作":{"zhuyin":"ㄗㄨㄛˋ","english":"make; do"},"你":{"zhuyin":"ㄋㄧˇ","english":"you"},"來":{"zhuyin":"ㄌㄞˊ","english":"come; from"},"便":{"zhuyin":"ㄅㄧㄢˋ","english":"convenient"},"個":{"zhuyin":"ㄍㄜˋ","english":"(measure word)"},"們":{"zhuyin":"ㄇㄣˊ","english":"(plural suffix)"},"候":{"zhuyin":"ㄏㄡˋ","english":"time/season"},"做":{"zhuyin":"ㄗㄨㄛˋ","english":"to do/make"},"停":{"zhuyin":"ㄊㄧㄥˊ","english":"to stop"},"債":{"zhuyin":"ㄓㄞˋ","english":"debt/bond"},"像":{"zhuyin":"ㄒㄧㄤˋ","english":"to resemble/like"},"價":{"zhuyin":"ㄐㄧㄚˋ","english":"price"},"元":{"zhuyin":"ㄩㄢˊ","english":"dollar/yuan"},"先":{"zhuyin":"ㄒㄧㄢ","english":"first/before"},"全":{"zhuyin":"ㄑㄩㄢˊ","english":"complete/entire"},"兩":{"zhuyin":"ㄌㄧㄤˇ","english":"two"},"八":{"zhuyin":"ㄅㄚ","english":"eight"},"公":{"zhuyin":"ㄍㄨㄥ","english":"public/male"},"六":{"zhuyin":"ㄌㄧㄡˋ","english":"six"},"再":{"zhuyin":"ㄗㄞˋ","english":"again/then"},"冰":{"zhuyin":"ㄅㄧㄥ","english":"ice"},"出":{"zhuyin":"ㄔㄨ","english":"to exit/come out"},"分":{"zhuyin":"ㄈㄣ","english":"to divide/part"},"列":{"zhuyin":"ㄌㄧㄝˋ","english":"to arrange/line"},"別":{"zhuyin":"ㄅㄧㄝˊ","english":"other/don't"},"利":{"zhuyin":"ㄌㄧˋ","english":"benefit/interest"},"到":{"zhuyin":"ㄉㄠˋ","english":"to arrive/to"},"券":{"zhuyin":"ㄑㄩㄢˋ","english":"ticket/voucher"},"前":{"zhuyin":"ㄑㄧㄢˊ","english":"front/before"},"平":{"zhuyin":"ㄆㄧㄥˊ","english":"flat; level; peace"},"年":{"zhuyin":"ㄋㄧㄢˊ","english":"year"},"幾":{"zhuyin":"ㄐㄧˇ","english":"how many; several"},"底":{"zhuyin":"ㄉㄧˇ","english":"bottom; underneath"},"廠":{"zhuyin":"ㄔㄤˇ","english":"factory"},"式":{"zhuyin":"ㄕˋ","english":"type; style; formula"},"影":{"zhuyin":"ㄧㄥˇ","english":"shadow; image"},"很":{"zhuyin":"ㄏㄣˇ","english":"very; quite"},"後":{"zhuyin":"ㄏㄡˋ","english":"after; rear"},"得":{"zhuyin":"ㄉㄜˊ","english":"obtain; get; can"},"從":{"zhuyin":"ㄘㄨㄥˊ","english":"from; since; follow"},"快":{"zhuyin":"ㄎㄨㄞˋ","english":"fast; quick; soon"},"息":{"zhuyin":"ㄒㄧˊ","english":"rest; cease; interest"},"想":{"zhuyin":"ㄒㄧㄤˇ","english":"think; want; miss"},"成":{"zhuyin":"ㄔㄥˊ","english":"become; accomplish; percentage"},"我":{"zhuyin":"ㄨㄛˇ","english":"I; me"},"戰":{"zhuyin":"ㄓㄢˋ","english":"war; battle; fight"},"房":{"zhuyin":"ㄈㄤˊ","english":"room; house"},"所":{"zhuyin":"ㄙㄨㄛˇ","english":"place; that which"},"打":{"zhuyin":"ㄉㄚˇ","english":"hit; strike; fight"},"找":{"zhuyin":"ㄓㄠˇ","english":"find; look for"},"把":{"zhuyin":"ㄅㄚˇ","english":"hold; grasp; (measure word)"},"投":{"zhuyin":"ㄊㄡˊ","english":"throw; cast; vote"},"拉":{"zhuyin":"ㄌㄚ","english":"pull; drag; stretch"},"排":{"zhuyin":"ㄆㄞˊ","english":"row; line; discharge"},"搬":{"zhuyin":"ㄅㄢ","english":"move; carry; shift"},"力":{"zhuyin":"ㄌㄧˋ","english":"strength, power, force"},"動":{"zhuyin":"ㄉㄨㄥˋ","english":"move, motion, dynamic"},"勝":{"zhuyin":"ㄕㄥˋ","english":"victory, win, triumph"},"十":{"zhuyin":"ㄕˊ","english":"ten"},"升":{"zhuyin":"ㄕㄥ","english":"rise, ascend, promote"},"南":{"zhuyin":"ㄋㄢˊ","english":"south"},"卡":{"zhuyin":"ㄎㄚˇ","english":"card, to block, to jam"},"原":{"zhuyin":"ㄩㄢˊ","english":"original, source, plain"},"只":{"zhuyin":"ㄓˇ","english":"only, merely, just"},"叫":{"zhuyin":"ㄐㄧㄠˋ","english":"call, shout, cry"},"可":{"zhuyin":"ㄎㄜˇ","english":"can, may, able"},"名":{"zhuyin":"ㄇㄧㄥˊ","english":"name, fame, title"},"命":{"zhuyin":"ㄇㄧㄥˋ","english":"life, fate, destiny"},"和":{"zhuyin":"ㄏㄜˊ","english":"and, with, harmony"},"員":{"zhuyin":"ㄩㄢˊ","english":"member, staff, person"},"問":{"zhuyin":"ㄨㄣˋ","english":"ask, question, inquire"},"嗎":{"zhuyin":"ㄇㄚ˙","english":"(question particle)"},"嚴":{"zhuyin":"ㄧㄢˊ","english":"strict, severe, stern"},"因":{"zhuyin":"ㄧㄣ","english":"because, reason, cause"},"國":{"zhuyin":"ㄍㄨㄛˊ","english":"country, nation, state"},"在":{"zhuyin":"ㄗㄞˋ","english":"at, in, exist, present"},"地":{"zhuyin":"ㄉㄧˋ","english":"earth, ground, place"},"場":{"zhuyin":"ㄔㄤˇ","english":"field, place, venue"},"塊":{"zhuyin":"ㄎㄨㄞˋ","english":"piece, block, lump"},"外":{"zhuyin":"ㄨㄞˋ","english":"outside, external, foreign"},"多":{"zhuyin":"ㄉㄨㄛ","english":"many, much, multiple"},"大":{"zhuyin":"ㄉㄚˋ","english":"big, large, great"},"天":{"zhuyin":"ㄊㄧㄢ","english":"sky, heaven, day"},"太":{"zhuyin":"ㄊㄞˋ","english":"too, very, extremely"},"好":{"zhuyin":"ㄏㄠˇ","english":"good, well, fine"},"如":{"zhuyin":"ㄖㄨˊ","english":"like, as, if"},"始":{"zhuyin":"ㄕˇ","english":"begin, start, initial"},"子":{"zhuyin":"ㄗˇ","english":"son, child, offspring"},"學":{"zhuyin":"ㄒㄩㄝˊ","english":"study, learn, school"},"完":{"zhuyin":"ㄨㄢˊ","english":"finish, complete, end"},"官":{"zhuyin":"ㄍㄨㄢ","english":"official, government, officer"},"定":{"zhuyin":"ㄉㄧㄥˋ","english":"fixed, certain, definite"},"宜":{"zhuyin":"ㄧˊ","english":"suitable, fit, appropriate"},"客":{"zhuyin":"ㄎㄜˋ","english":"guest, customer, visitor"},"家":{"zhuyin":"ㄐㄧㄚ","english":"home, family, house"},"密":{"zhuyin":"ㄇㄧˋ","english":"secret, dense, close"},"寬":{"zhuyin":"ㄎㄨㄢ","english":"wide, broad, generous"},"對":{"zhuyin":"ㄉㄨㄟˋ","english":"correct, right, toward"},"少":{"zhuyin":"ㄕㄠˇ","english":"few, little, scarce"},"就":{"zhuyin":"ㄐㄧㄡˋ","english":"then, so, approach"},"山":{"zhuyin":"ㄕㄢ","english":"mountain, hill, peak"},"岩":{"zhuyin":"ㄧㄢˊ","english":"rock, stone, cliff"},"峽":{"zhuyin":"ㄒㄧㄚˊ","english":"gorge, canyon, strait"},"崗":{"zhuyin":"ㄍㄤˇ","english":"ridge, watchtower, station"},"工":{"zhuyin":"ㄍㄨㄥ","english":"work, labor, craft"},"差":{"zhuyin":"ㄔㄚˋ","english":"difference, poor, inadequate"},"已":{"zhuyin":"ㄧˇ","english":"already, finished, past"},"敗":{"zhuyin":"ㄅㄞˋ","english":"defeat, fail, loss"},"數":{"zhuyin":"ㄕㄨˋ","english":"number, count, enumerate"},"新":{"zhuyin":"ㄒㄧㄣ","english":"new, fresh, recent"},"方":{"zhuyin":"ㄈㄤ","english":"square, way, direction"},"易":{"zhuyin":"ㄧˋ","english":"easy, change, exchange"},"星":{"zhuyin":"ㄒㄧㄥ","english":"star, celestial body, Mars"},"是":{"zhuyin":"ㄕˋ","english":"is, be, correct"},"時":{"zhuyin":"ㄕˊ","english":"time, hour, season"},"更":{"zhuyin":"ㄍㄥˋ","english":"more; further; yet"},"最":{"zhuyin":"ㄗㄨㄟˋ","english":"most; -est"},"會":{"zhuyin":"ㄏㄨㄟˋ","english":"can; will; meet"},"月":{"zhuyin":"ㄩㄝˋ","english":"moon; month"},"有":{"zhuyin":"ㄧㄡˇ","english":"have; exist"},"朗":{"zhuyin":"ㄌㄤˇ","english":"bright; clear"},"期":{"zhuyin":"ㄑㄧ","english":"period; expect"},"東":{"zhuyin":"ㄉㄨㄥ","english":"east"},"果":{"zhuyin":"ㄍㄨㄛˇ","english":"fruit; result"},"根":{"zhuyin":"ㄍㄣ","english":"root; base"},"桶":{"zhuyin":"ㄊㄨㄥˇ","english":"barrel; bucket"},"條":{"zhuyin":"ㄊㄧㄠˊ","english":"strip; item"},"極":{"zhuyin":"ㄐㄧˊ","english":"extreme; pole"},"樣":{"zhuyin":"ㄧㄤˋ","english":"appearance; kind"},"機":{"zhuyin":"ㄐㄧ","english":"machine; opportunity"},"次":{"zhuyin":"ㄘˋ","english":"order; time"},"比":{"zhuyin":"ㄅㄧˇ","english":"compare; ratio"},"氣":{"zhuyin":"ㄑㄧˋ","english":"air; gas; spirit"},"決":{"zhuyin":"ㄐㄩㄝˊ","english":"decide; determine"},"沒":{"zhuyin":"ㄇㄟˊ","english":"have not; sink"},"河":{"zhuyin":"ㄏㄜˊ","english":"river"},"油":{"zhuyin":"ㄧㄡˊ","english":"oil"},"法":{"zhuyin":"ㄈㄚˇ","english":"law; method"},"海":{"zhuyin":"ㄏㄞˇ","english":"sea; ocean"},"消":{"zhuyin":"ㄒㄧㄠ","english":"disappear; consume"},"準":{"zhuyin":"ㄓㄨㄣˇ","english":"standard; accurate"},"滑":{"zhuyin":"ㄏㄨㄚˊ","english":"slippery; slide"},"漲":{"zhuyin":"ㄓㄤˇ","english":"rise; swell"},"火":{"zhuyin":"ㄏㄨㄛˇ","english":"fire"},"然":{"zhuyin":"ㄖㄢˊ","english":"so; thus; -like"},"爭":{"zhuyin":"ㄓㄥ","english":"compete; strive"},"爾":{"zhuyin":"ㄦˇ","english":"you; that"},"物":{"zhuyin":"ㄨˋ","english":"thing; object"},"率":{"zhuyin":"ㄌㄜˋ","english":"rate; ratio"},"現":{"zhuyin":"ㄒㄧㄢˋ","english":"appear; present"},"球":{"zhuyin":"ㄑㄧㄡˊ","english":"ball; sphere"},"用":{"zhuyin":"ㄩㄥˋ","english":"use"},"田":{"zhuyin":"ㄊㄧㄢˊ","english":"field"},"界":{"zhuyin":"ㄐㄧㄝˋ","english":"boundary; world"},"留":{"zhuyin":"ㄌㄧㄡˊ","english":"stay; keep"},"發":{"zhuyin":"ㄈㄚ","english":"emit; develop; hair"},"百":{"zhuyin":"ㄅㄞˇ","english":"hundred"},"的":{"zhuyin":"˙ㄉㄜ","english":"(possessive particle)"},"看":{"zhuyin":"ㄎㄢˋ","english":"look; see"},"石":{"zhuyin":"ㄕˊ","english":"stone; rock"},"研":{"zhuyin":"ㄧㄢˊ","english":"grind; research"},"硬":{"zhuyin":"ㄧㄥˋ","english":"hard; stiff"},"票":{"zhuyin":"ㄆㄧㄠˋ","english":"ticket; vote"},"科":{"zhuyin":"ㄎㄜ","english":"subject; category"},"種":{"zhuyin":"ㄓㄨㄥˇ","english":"kind; type; plant"},"究":{"zhuyin":"ㄐㄧㄡˋ","english":"investigate; research"},"第":{"zhuyin":"ㄉㄧˋ","english":"ordinal prefix"},"管":{"zhuyin":"ㄍㄨㄢˇ","english":"pipe; manage"},"籃":{"zhuyin":"ㄌㄢˊ","english":"basket"},"粉":{"zhuyin":"ㄈㄣˇ","english":"powder; dust"},"約":{"zhuyin":"ㄩㄝ","english":"approximately; agreement"},"紅":{"zhuyin":"ㄏㄨㄥˊ","english":"red"},"結":{"zhuyin":"ㄐㄧㄝˊ","english":"tie; conclude"},"經":{"zhuyin":"ㄐㄧㄥ","english":"pass through; classics"},"繼":{"zhuyin":"ㄐㄧˋ","english":"continue"},"續":{"zhuyin":"ㄒㄩˋ","english":"continue"},"美":{"zhuyin":"ㄇㄟˇ","english":"beautiful"},"聖":{"zhuyin":"ㄕㄥˋ","english":"holy"},"聯":{"zhuyin":"ㄌㄧㄢˊ","english":"unite"},"股":{"zhuyin":"ㄍㄨˇ","english":"share"},"能":{"zhuyin":"ㄋㄥˊ","english":"can"},"膨":{"zhuyin":"ㄆㄥˊ","english":"expand"},"船":{"zhuyin":"ㄔㄨㄢˊ","english":"ship"},"色":{"zhuyin":"ㄙㄜˋ","english":"color"},"花":{"zhuyin":"ㄏㄨㄚ","english":"flower"},"英":{"zhuyin":"ㄧㄥ","english":"English"},"茲":{"zhuyin":"ㄗ","english":"this"},"荷":{"zhuyin":"ㄏㄜˊ","english":"carry"},"莫":{"zhuyin":"ㄇㄛˋ","english":"not"},"萬":{"zhuyin":"ㄨㄢˋ","english":"ten-thousand"},"虧":{"zhuyin":"ㄎㄨㄟ","english":"lose"},"裡":{"zhuyin":"ㄌㄧˇ","english":"inside"},"西":{"zhuyin":"ㄒㄧ","english":"west"},"要":{"zhuyin":"ㄧㄠˋ","english":"want"},"解":{"zhuyin":"ㄐㄧㄝˇ","english":"solve"},"說":{"zhuyin":"ㄕㄨㄛ","english":"speak"},"談":{"zhuyin":"ㄊㄢˊ","english":"talk"},"變":{"zhuyin":"ㄅㄧㄢˋ","english":"change"},"讓":{"zhuyin":"ㄖㄤˋ","english":"let"},"貴":{"zhuyin":"ㄍㄨㄟˋ","english":"expensive"},"買":{"zhuyin":"ㄇㄞˇ","english":"buy"},"貸":{"zhuyin":"ㄉㄞˋ","english":"loan"},"賣":{"zhuyin":"ㄇㄞˋ","english":"sell"},"贏":{"zhuyin":"ㄧㄥˊ","english":"win"},"走":{"zhuyin":"ㄗㄡˇ","english":"walk"},"起":{"zhuyin":"ㄑㄧˇ","english":"rise"},"跌":{"zhuyin":"ㄉㄧㄝ","english":"fall"},"路":{"zhuyin":"ㄌㄨˋ","english":"road"},"軍":{"zhuyin":"ㄐㄩㄣ","english":"army"},"退":{"zhuyin":"ㄊㄨㄟˋ","english":"retreat"},"這":{"zhuyin":"ㄓㄜˋ","english":"this"},"通":{"zhuyin":"ㄊㄨㄥ","english":"connect"},"連":{"zhuyin":"ㄌㄧㄢˊ","english":"connect"},"運":{"zhuyin":"ㄩㄣˋ","english":"transport"},"達":{"zhuyin":"ㄉㄚˊ","english":"reach"},"還":{"zhuyin":"ㄏㄞˊ","english":"still"},"那":{"zhuyin":"ㄋㄚˋ","english":"that"},"都":{"zhuyin":"ㄉㄡ","english":"all"},"里":{"zhuyin":"ㄌㄧˇ","english":"village"},"重":{"zhuyin":"ㄓㄨㄥˋ","english":"heavy"},"量":{"zhuyin":"ㄌㄧㄤˋ","english":"quantity"},"鋒":{"zhuyin":"ㄈㄥ","english":"point"},"錢":{"zhuyin":"ㄑㄧㄢˊ","english":"money"},"開":{"zhuyin":"ㄎㄞ","english":"open"},"降":{"zhuyin":"ㄐㄧㄤˋ","english":"descend"},"隊":{"zhuyin":"ㄉㄨㄟˋ","english":"team"},"面":{"zhuyin":"ㄇㄧㄢˋ","english":"face"},"響":{"zhuyin":"ㄒㄧㄤˇ","english":"sound"},"頭":{"zhuyin":"ㄊㄡˊ","english":"head"},"題":{"zhuyin":"ㄊㄧˊ","english":"topic"},"飛":{"zhuyin":"ㄈㄟ","english":"fly"},"高":{"zhuyin":"ㄍㄠ","english":"high"},"鮑":{"zhuyin":"ㄅㄠˋ","english":"abalone"},"麥":{"zhuyin":"ㄇㄞˋ","english":"wheat"},"點":{"zhuyin":"ㄉㄧㄢˇ","english":"point"},"美國":{"zhuyin":"ㄇㄟˇ ㄍㄨㄛˊ","english":"United States"},"以色列":{"zhuyin":"ㄧˇ ㄙㄜˋ ㄌㄧㄝˋ","english":"Israel"},"伊朗":{"zhuyin":"ㄧ ㄌㄤˊ","english":"Iran"},"油價":{"zhuyin":"ㄧㄡˊ ㄐㄧㄚˋ","english":"oil price"},"大漲":{"zhuyin":"ㄉㄚˋ ㄓㄤˇ","english":"surge"},"海上":{"zhuyin":"ㄏㄞˇ ㄕㄤˋ","english":"maritime"},"運油":{"zhuyin":"ㄩㄣˋ ㄧㄡˊ","english":"oil transport"},"幾乎":{"zhuyin":"ㄐㄧ ㄏㄨ","english":"almost"},"軍隊":{"zhuyin":"ㄐㄩㄣ ㄉㄨㄟˋ","english":"military"},"二月底":{"zhuyin":"ㄦˋ ㄩㄝˋ ㄉㄧˇ","english":"end of February"},"開始":{"zhuyin":"ㄎㄞ ㄕˇ","english":"begin"},"已經":{"zhuyin":"ㄧˇ ㄐㄧㄥ","english":"already"},"最大":{"zhuyin":"ㄗㄨㄟˋ ㄉㄚˋ","english":"largest"},"天然氣":{"zhuyin":"ㄊㄧㄢ ㄖㄢˊ ㄑㄧˋ","english":"natural gas"},"天然氣田":{"zhuyin":"ㄊㄧㄢ ㄖㄢˊ ㄑㄧˋ ㄊㄧㄢˊ","english":"natural gas field"},"卡達":{"zhuyin":"ㄎㄚˇ ㄉㄚˊ","english":"Qatar"},"天然氣工廠":{"zhuyin":"ㄊㄧㄢ ㄖㄢˊ ㄑㄧˋ ㄍㄨㄥ ㄔㄤˇ","english":"natural gas plant"},"結果":{"zhuyin":"ㄐㄧㄝˊ ㄍㄨㄛˇ","english":"result"},"荷莫茲海峽":{"zhuyin":"ㄏㄜˊ ㄇㄛˋ ㄗ ㄏㄞˇ ㄒㄧㄚˊ","english":"Strait of Hormuz"},"全世界":{"zhuyin":"ㄑㄩㄢˊ ㄕˋ ㄐㄧㄝˋ","english":"whole world"},"兩成":{"zhuyin":"ㄌㄧㄤˇ ㄔㄥˊ","english":"twenty percent"},"沒有":{"zhuyin":"ㄇㄟˊ ㄧㄡˇ","english":"none"},"美元":{"zhuyin":"ㄇㄟˇ ㄩㄢˊ","english":"US dollar"},"開戰":{"zhuyin":"ㄎㄞ ㄓㄢˋ","english":"start of war"},"八成":{"zhuyin":"ㄅㄚ ㄔㄥˊ","english":"eighty percent"},"停火":{"zhuyin":"ㄊㄧㄥˊ ㄏㄨㄛˇ","english":"ceasefire"},"美國聯準會":{"zhuyin":"ㄇㄟˇ ㄍㄨㄛˊ ㄌㄧㄢˊ ㄓㄨㄣˇ ㄏㄨㄟˋ","english":"US Federal Reserve"},"降息":{"zhuyin":"ㄐㄧㄤˋ ㄒㄧˊ","english":"rate cut"},"鮑爾":{"zhuyin":"ㄅㄠˇ ㄦˇ","english":"Powell"},"通膨":{"zhuyin":"ㄊㄨㄥ ㄆㄥˊ","english":"inflation"},"利率":{"zhuyin":"ㄌㄧˋ ㄌㄜˋ","english":"interest rate"},"物價":{"zhuyin":"ㄨˋ ㄐㄧㄚˋ","english":"prices"},"工作":{"zhuyin":"ㄍㄨㄥ ㄗㄨㄛˋ","english":"work"},"官員":{"zhuyin":"ㄍㄨㄢ ㄩㄢˊ","english":"official"},"股票":{"zhuyin":"ㄍㄨˇ ㄆㄧㄠˋ","english":"stock"},"主要原因":{"zhuyin":"ㄓㄨˇ ㄧㄠˋ ㄩㄢˊ ㄧㄣ","english":"main reason"},"下來":{"zhuyin":"ㄒㄧㄚˋ ㄌㄞˊ","english":"come down"},"地方":{"zhuyin":"ㄉㄧˋ ㄈㄤ","english":"place"},"東西":{"zhuyin":"ㄉㄨㄥ ㄒㄧ","english":"things"},"戰爭":{"zhuyin":"ㄓㄢˋ ㄓㄥ","english":"war"},"二月":{"zhuyin":"ㄦˋ ㄩㄝˋ","english":"February"},"消息":{"zhuyin":"ㄒㄧㄠ ㄒㄧ","english":"news"},"丹麥":{"zhuyin":"ㄉㄢ ㄇㄞˋ","english":"Denmark"},"方法":{"zhuyin":"ㄈㄤ ㄈㄚˇ","english":"method"},"解決":{"zhuyin":"ㄐㄧㄝˇ ㄐㄩㄝˊ","english":"solve"},"房貸":{"zhuyin":"ㄈㄤˊ ㄉㄞˋ","english":"mortgage"},"問題":{"zhuyin":"ㄨㄣˋ ㄊㄧˊ","english":"problem"},"房子":{"zhuyin":"ㄈㄤˊ ㄗˇ","english":"house"},"如果":{"zhuyin":"ㄖㄨˊ ㄍㄨㄛˇ","english":"if"},"搬家":{"zhuyin":"ㄅㄢ ㄐㄧㄚ","english":"move house"},"數量":{"zhuyin":"ㄕㄨˋ ㄌㄧㄤˋ","english":"quantity"},"債券":{"zhuyin":"ㄓㄞˋ ㄑㄩㄢˋ","english":"bond"},"買賣":{"zhuyin":"ㄇㄞˇ ㄇㄞˋ","english":"trade"},"便宜":{"zhuyin":"ㄆㄧㄢˊ ㄧˊ","english":"cheap"},"還完":{"zhuyin":"ㄏㄨㄢˊ ㄨㄢˊ","english":"pay off"},"現在":{"zhuyin":"ㄒㄧㄢˋ ㄗㄞˋ","english":"now"},"變高":{"zhuyin":"ㄅㄧㄢˋ ㄍㄠ","english":"become higher"},"密西根":{"zhuyin":"ㄇㄧˋ ㄒㄧ ㄍㄣ","english":"Michigan"},"大學":{"zhuyin":"ㄉㄚˋ ㄒㄩㄝˊ","english":"university"},"聖路易":{"zhuyin":"ㄕㄥˋ ㄌㄨˋ ㄧˋ","english":"Saint Louis"},"全國":{"zhuyin":"ㄑㄩㄢˊ ㄍㄨㄛˊ","english":"nationwide"},"球隊":{"zhuyin":"ㄑㄧㄡˊ ㄉㄨㄟˋ","english":"team"},"繼續":{"zhuyin":"ㄐㄧˋ ㄒㄩˋ","english":"continue"},"排名":{"zhuyin":"ㄆㄞˊ ㄇㄧㄥˊ","english":"ranking"},"籃球隊":{"zhuyin":"ㄌㄢˊ ㄑㄧㄡˊ ㄉㄨㄟˋ","english":"basketball team"},"客場":{"zhuyin":"ㄎㄜˋ ㄔㄤˇ","english":"away game"},"隊員":{"zhuyin":"ㄉㄨㄟˋ ㄩㄢˊ","english":"team member"},"投籃":{"zhuyin":"ㄊㄡˊ ㄌㄢˊ","english":"shoot (basketball)"},"命中率":{"zhuyin":"ㄇㄧㄥˋ ㄓㄨㄥˋ ㄌㄜˋ","english":"shooting percentage"},"三分球":{"zhuyin":"ㄙㄢ ㄈㄣ ㄑㄧㄡˊ","english":"three-pointer"},"中鋒":{"zhuyin":"ㄓㄨㄥ ㄈㄥ","english":"center (basketball)"},"大個子":{"zhuyin":"ㄉㄚˋ ㄍㄜˋ ㄗˇ","english":"tall guy"},"投籃命中率":{"zhuyin":"ㄊㄡˊ ㄌㄢˊ ㄇㄧㄥˋ ㄓㄨㄥˋ ㄌㄜˋ","english":"field goal percentage"},"密西根大學":{"zhuyin":"ㄇㄧˋ ㄒㄧ ㄍㄣ ㄉㄚˋ ㄒㄩㄝˊ","english":"University of Michigan"},"聖路易大學":{"zhuyin":"ㄕㄥˋ ㄌㄨˋ ㄧˋ ㄉㄚˋ ㄒㄩㄝˊ","english":"Saint Louis University"},"籃球":{"zhuyin":"ㄌㄢˊ ㄑㄧㄡˊ","english":"basketball"},"南極冰河":{"zhuyin":"ㄋㄢˊ ㄐㄧˊ ㄅㄧㄥ ㄏㄜˊ","english":"Antarctic glacier"},"花崗岩":{"zhuyin":"ㄏㄨㄚ ㄍㄤ ㄧㄢˊ","english":"granite"},"英國":{"zhuyin":"ㄧㄥ ㄍㄨㄛˊ","english":"United Kingdom"},"科學家":{"zhuyin":"ㄎㄜ ㄒㄩㄝˊ ㄐㄧㄚ","english":"scientist"},"石頭":{"zhuyin":"ㄕˊ ㄊㄡˊ","english":"stone"},"公里":{"zhuyin":"ㄍㄨㄥ ㄌㄧˇ","english":"kilometer"},"冰河":{"zhuyin":"ㄅㄧㄥ ㄏㄜˊ","english":"glacier"},"研究人員":{"zhuyin":"ㄧㄢˊ ㄐㄧㄡˋ ㄖㄣˊ ㄩㄢˊ","english":"researcher"},"粉紅色":{"zhuyin":"ㄈㄣˇ ㄏㄨㄥˊ ㄙㄜˋ","english":"pink"},"飛機":{"zhuyin":"ㄈㄟ ㄐㄧ","english":"airplane"},"重力":{"zhuyin":"ㄓㄨㄥˋ ㄌㄧˋ","english":"gravity"},"滑動":{"zhuyin":"ㄏㄨㄚˊ ㄉㄨㄥˋ","english":"sliding"},"海平面":{"zhuyin":"ㄏㄞˇ ㄆㄧㄥˊ ㄇㄧㄢˋ","english":"sea level"},"上升":{"zhuyin":"ㄕㄤˋ ㄕㄥ","english":"rise"},"下面":{"zhuyin":"ㄒㄧㄚˋ ㄇㄧㄢˋ","english":"below"},"發現":{"zhuyin":"ㄈㄚ ㄒㄧㄢˋ","english":"discover"},"一種":{"zhuyin":"ㄧ ㄓㄨㄥˇ","english":"a type of"},"大約":{"zhuyin":"ㄉㄚˋ ㄩㄝ","english":"approximately"},"之一":{"zhuyin":"ㄓ ㄧ","english":"one of"},"看到":{"zhuyin":"ㄎㄢˋ ㄉㄠˋ","english":"see"},"這裡":{"zhuyin":"ㄓㄜˋ ㄌㄧˇ","english":"here"},"後來":{"zhuyin":"ㄏㄡˋ ㄌㄞˊ","english":"later"},"地下":{"zhuyin":"ㄉㄧˋ ㄒㄧㄚˋ","english":"underground"},"果然":{"zhuyin":"ㄍㄨㄛˇ ㄖㄢˊ","english":"sure enough"},"找到":{"zhuyin":"ㄓㄠˇ ㄉㄠˋ","english":"find"},"影響":{"zhuyin":"ㄧㄥˇ ㄒㄧㄤˇ","english":"influence"},"方式":{"zhuyin":"ㄈㄤ ㄕˋ","english":"manner"},"了解":{"zhuyin":"ㄌㄧㄠˇ ㄐㄧㄝˇ","english":"understand"}};
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  const STORAGE_KEY = 'newsletter-feedback';
+  const charStates = {};
+  let deskPicks = [];
+  let flaggingMode = false;
+  let lookupMode = false;
+
+  // === localStorage helpers ===
+
+  const isLocalStorageAvailable = () => {
+    try {
+      const key = '__test__';
+      localStorage.setItem(key, '1');
+      localStorage.removeItem(key);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  };
+
+  const loadState = () => {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+      localStorage.removeItem(STORAGE_KEY);
+      return null;
+    }
+  };
+
+  const saveState = () => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        characters: charStates,
+        deskPicks: deskPicks
+      }));
+    } catch (e) {
+      if (e.name === 'QuotaExceededError') {
+        console.warn('localStorage full');
+      }
+    }
+  };
+
+  // === Character state ===
+
+  const getCharState = (char) => charStates[char] || 'unmarked';
+
+  const setCharState = (char, state) => {
+    if (state === 'unmarked') {
+      delete charStates[char];
+    } else {
+      charStates[char] = state;
+    }
+    saveState();
+  };
+
+  const updateCharVisuals = (char, state) => {
+    document.querySelectorAll('.c').forEach(span => {
+      if (span.textContent === char) {
+        span.classList.remove('struggling', 'learned');
+        if (state === 'struggling') span.classList.add('struggling');
+        else if (state === 'learned') span.classList.add('learned');
+      }
+    });
+  };
+
+  // === Graceful degradation ===
+
+  const disableFeedbackFeatures = () => {
+    document.getElementById('flag-toggle').disabled = true;
+    document.getElementById('export-btn').disabled = true;
+    const note = document.createElement('p');
+    note.className = 'storage-warning';
+    note.textContent = '回饋功能需要啟用瀏覽器儲存 Feedback features require browser storage';
+    document.getElementById('toolbar').after(note);
+  };
+
+  // === Flagging mode toggle ===
+
+  document.getElementById('flag-toggle').addEventListener('click', function () {
+    flaggingMode = !flaggingMode;
+    this.textContent = flaggingMode ? '標記模式 ON' : '標記模式 OFF';
+    this.classList.toggle('active', flaggingMode);
+    document.body.classList.toggle('flagging-on', flaggingMode);
+    if (flaggingMode && lookupMode) {
+      lookupMode = false;
+      document.getElementById('lookup-toggle').textContent = '查詢模式 OFF';
+      document.getElementById('lookup-toggle').classList.remove('active');
+    }
+  });
+
+  // === Click-to-cycle character states ===
+
+  document.addEventListener('click', function (e) {
+    if (!flaggingMode) return;
+    const span = e.target.closest('.c');
+    if (!span) return;
+
+    const char = span.textContent;
+    const state = getCharState(char);
+
+    let newState;
+    if (state === 'unmarked') newState = 'struggling';
+    else if (state === 'struggling') newState = 'learned';
+    else newState = 'unmarked';
+
+    setCharState(char, newState);
+    updateCharVisuals(char, newState);
+  });
+
+  // === Translation toggles ===
+
+  document.querySelectorAll('.translation-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const article = btn.closest('.article');
+      const enDiv = article.querySelector('.article-body-en');
+      const isHidden = enDiv.hidden;
+      enDiv.hidden = !isHidden;
+      btn.textContent = isHidden
+        ? '隱藏翻譯 Hide Translation'
+        : '顯示翻譯 Show Translation';
+    });
+  });
+
+  // === Editor's Desk ===
+
+  document.querySelectorAll('.desk-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const index = parseInt(item.dataset.deskIndex);
+      const existingPos = deskPicks.indexOf(index);
+
+      if (existingPos !== -1) {
+        deskPicks.splice(existingPos, 1);
+        item.classList.remove('selected');
+      } else {
+        if (deskPicks.length >= 3) {
+          const oldest = deskPicks.shift();
+          document.querySelector(`[data-desk-index="${oldest}"]`).classList.remove('selected');
+        }
+        deskPicks.push(index);
+        item.classList.add('selected');
+      }
+
+      document.getElementById('desk-count-num').textContent = deskPicks.length;
+      saveState();
+    });
+  });
+
+  // === Feedback export ===
+
+  const downloadJSON = (data, filename) => {
+    const json = JSON.stringify(data, null, 2);
+    try {
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      navigator.clipboard.writeText(json).then(() => {
+        alert('下載失敗，已複製到剪貼簿。請貼到一個 .json 檔案。\nDownload failed. Copied to clipboard. Paste into a .json file.');
+      });
+    }
+  };
+
+  const showExportConfirmation = () => {
+    const msg = document.getElementById('export-confirm');
+    msg.hidden = false;
+    setTimeout(() => { msg.hidden = true; }, 3000);
+  };
+
+  const exportFeedback = () => {
+    const offered = [...document.querySelectorAll('.desk-item')].map(item => ({
+      headline: item.querySelector('.desk-headline').textContent,
+      included_in_issue: item.classList.contains('included')
+    }));
+
+    const today = document.querySelector('.date').textContent;
+
+    const charExport = {};
+    for (const [char, charState] of Object.entries(charStates)) {
+      charExport[char] = { state: charState, date: today };
+    }
+
+    const exportData = {
+      date: today,
+      characters: charExport,
+      editors_desk: {
+        offered,
+        user_top_3: deskPicks.slice()
+      }
+    };
+
+    downloadJSON(exportData, `feedback_${today}.json`);
+    showExportConfirmation();
+  };
+
+  document.getElementById('export-btn').addEventListener('click', exportFeedback);
+
+  // === Mobile character lookup ===
+
+  const isMobile = window.matchMedia('(pointer: coarse)').matches;
+
+  if (isMobile) {
+    let longPressTimer = null;
+    let feedbackTimer = null;
+    let startX = 0;
+    let startY = 0;
+    let activeSpan = null;
+    const LONG_PRESS_MS = 400;
+    const MOVE_THRESHOLD = 10;
+
+    const popup = document.getElementById('char-popup');
+    const popupChar = document.getElementById('popup-char');
+    const popupZhuyin = document.getElementById('popup-zhuyin');
+    const popupDef = document.getElementById('popup-def');
+    const lookupToggleBtn = document.getElementById('lookup-toggle');
+
+    function positionPopup(targetSpan) {
+      var rect = targetSpan.getBoundingClientRect();
+      var popupWidth = 280;
+      var margin = 8;
+      var gap = 6;
+      var vw = window.innerWidth;
+
+      popup.classList.add('visible');
+      var popupHeight = popup.offsetHeight;
+
+      var left = rect.left + rect.width / 2 - popupWidth / 2;
+      left = Math.max(margin, Math.min(left, vw - popupWidth - margin));
+
+      var top = rect.top - popupHeight - gap;
+      if (top < margin) {
+        top = rect.bottom + gap;
+      }
+
+      popup.style.left = left + 'px';
+      popup.style.top = top + 'px';
+    }
+
+    function findLongestMatch(targetSpan) {
+      if (typeof GLOSSARY === 'undefined') return null;
+
+      var parent = targetSpan.closest('p, h2, li') || targetSpan.parentElement;
+      var spans = [].slice.call(parent.querySelectorAll('.c'));
+      var targetIdx = spans.indexOf(targetSpan);
+      if (targetIdx === -1) return null;
+
+      var chars = spans.map(function (s) { return s.textContent; });
+      var MAX_WORD_LEN = 6;
+      var bestMatch = null;
+      var bestSpans = null;
+
+      for (var len = Math.min(MAX_WORD_LEN, chars.length); len >= 1; len--) {
+        var startMin = Math.max(0, targetIdx - len + 1);
+        var startMax = Math.min(targetIdx, chars.length - len);
+
+        for (var start = startMin; start <= startMax; start++) {
+          var candidate = chars.slice(start, start + len).join('');
+          if (GLOSSARY[candidate]) {
+            if (!bestMatch || candidate.length > bestMatch.length) {
+              bestMatch = candidate;
+              bestSpans = spans.slice(start, start + len);
+            }
+          }
+        }
+
+        if (bestMatch && bestMatch.length === len) break;
+      }
+
+      return bestMatch
+        ? { text: bestMatch, entry: GLOSSARY[bestMatch], spans: bestSpans }
+        : null;
+    }
+
+    function showPopup(char, targetSpan) {
+      var match = findLongestMatch(targetSpan);
+
+      if (match) {
+        popupChar.textContent = match.text;
+        popupZhuyin.textContent = match.entry.zhuyin;
+        popupDef.textContent = match.entry.english;
+      } else {
+        popupChar.textContent = char;
+        popupZhuyin.textContent = '';
+        popupDef.textContent = '(not in glossary)';
+      }
+
+      document.querySelectorAll('.c.touch-selected').forEach(function (el) {
+        el.classList.remove('touch-selected');
+      });
+
+      var highlightSpans = match ? match.spans : [targetSpan];
+      highlightSpans.forEach(function (s) { s.classList.add('touch-selected'); });
+      activeSpan = targetSpan;
+
+      positionPopup(targetSpan);
+    }
+
+    function hidePopup() {
+      popup.classList.remove('visible');
+      document.querySelectorAll('.c.touch-selected').forEach(function (el) {
+        el.classList.remove('touch-selected');
+      });
+      activeSpan = null;
+    }
+
+    document.getElementById('popup-close').addEventListener('click', hidePopup);
+
+    document.addEventListener('click', function (e) {
+      if (!popup.classList.contains('visible')) return;
+      if (popup.contains(e.target)) return;
+      if (!e.target.closest('.c')) {
+        hidePopup();
+      }
+    });
+
+    var scrollDismissAttached = false;
+    function attachScrollDismiss() {
+      if (scrollDismissAttached) return;
+      scrollDismissAttached = true;
+      window.addEventListener('scroll', function onScroll() {
+        hidePopup();
+        window.removeEventListener('scroll', onScroll);
+        scrollDismissAttached = false;
+      }, { once: true });
+    }
+
+    document.addEventListener('touchstart', function (e) {
+      var span = e.target.closest('.c');
+      if (!span) return;
+
+      var touch = e.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+
+      feedbackTimer = setTimeout(function () {
+        span.classList.add('touch-active');
+      }, 100);
+
+      longPressTimer = setTimeout(function () {
+        span.classList.remove('touch-active');
+        showPopup(span.textContent, span);
+        attachScrollDismiss();
+      }, LONG_PRESS_MS);
+    }, { passive: true });
+
+    document.addEventListener('touchmove', function (e) {
+      if (!longPressTimer) return;
+      var touch = e.touches[0];
+      if (Math.abs(touch.clientX - startX) > MOVE_THRESHOLD ||
+          Math.abs(touch.clientY - startY) > MOVE_THRESHOLD) {
+        clearTimeout(longPressTimer);
+        clearTimeout(feedbackTimer);
+        longPressTimer = null;
+        document.querySelectorAll('.touch-active').forEach(function (el) {
+          el.classList.remove('touch-active');
+        });
+      }
+    }, { passive: true });
+
+    document.addEventListener('touchend', function (e) {
+      clearTimeout(longPressTimer);
+      clearTimeout(feedbackTimer);
+      longPressTimer = null;
+      var span = e.target.closest('.c');
+      if (span) span.classList.remove('touch-active');
+    }, { passive: true });
+
+    document.addEventListener('touchcancel', function () {
+      clearTimeout(longPressTimer);
+      clearTimeout(feedbackTimer);
+      longPressTimer = null;
+      document.querySelectorAll('.touch-active').forEach(function (el) {
+        el.classList.remove('touch-active');
+      });
+    }, { passive: true });
+
+    lookupToggleBtn.addEventListener('click', function () {
+      lookupMode = !lookupMode;
+      this.textContent = lookupMode ? '查詢模式 ON' : '查詢模式 OFF';
+      this.classList.toggle('active', lookupMode);
+      if (lookupMode && flaggingMode) {
+        flaggingMode = false;
+        document.getElementById('flag-toggle').textContent = '標記模式 OFF';
+        document.getElementById('flag-toggle').classList.remove('active');
+        document.body.classList.remove('flagging-on');
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!lookupMode) return;
+      var span = e.target.closest('.c');
+      if (!span) return;
+      e.stopPropagation();
+      showPopup(span.textContent, span);
+      attachScrollDismiss();
+    });
+  }
+
+  // === Initialize ===
+
+  if (!isLocalStorageAvailable()) {
+    disableFeedbackFeatures();
+    return;
+  }
+
+  const saved = loadState();
+
+  if (saved) {
+    // Restore character states
+    for (const [char, charState] of Object.entries(saved.characters || {})) {
+      charStates[char] = charState;
+      updateCharVisuals(char, charState);
+    }
+    // Restore desk picks
+    for (const index of (saved.deskPicks || [])) {
+      const item = document.querySelector(`[data-desk-index="${index}"]`);
+      if (item) {
+        item.classList.add('selected');
+        deskPicks.push(index);
+      }
+    }
+  }
+
+  document.getElementById('desk-count-num').textContent = deskPicks.length;
+})();
+</script>
+
+</body>
+</html>
