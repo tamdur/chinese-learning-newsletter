@@ -509,7 +509,7 @@ const GLOSSARY = {"一": {"zhuyin": "ㄧ", "english": "one"}, "七": {"zhuyin": 
       } else {
         if (deskPicks.length >= 3) {
           const oldest = deskPicks.shift();
-          document.querySelector().classList.remove('selected');
+          document.querySelector('[data-desk-index="' + oldest + '"]').classList.remove('selected');
         }
         deskPicks.push(index);
         item.classList.add('selected');
@@ -534,8 +534,7 @@ const GLOSSARY = {"一": {"zhuyin": "ㄧ", "english": "one"}, "七": {"zhuyin": 
       URL.revokeObjectURL(url);
     } catch (e) {
       navigator.clipboard.writeText(json).then(() => {
-        alert('下載失敗，已複製到剪貼簿。請貼到一個 .json 檔案。
-Download failed. Copied to clipboard. Paste into a .json file.');
+        alert('下載失敗，已複製到剪貼簿。請貼到一個 .json 檔案。' + '\n' + 'Download failed. Copied to clipboard. Paste into a .json file.');
       });
     }
   };
@@ -568,7 +567,7 @@ Download failed. Copied to clipboard. Paste into a .json file.');
       }
     };
 
-    downloadJSON(exportData, );
+    downloadJSON(exportData, 'feedback_' + today + '.json');
     showExportConfirmation();
   };
 
@@ -792,7 +791,7 @@ Download failed. Copied to clipboard. Paste into a .json file.');
     }
     // Restore desk picks
     for (const index of (saved.deskPicks || [])) {
-      const item = document.querySelector(`[data-desk-index="${index}"]`);
+      const item = document.querySelector('[data-desk-index="' + index + '"]');
       if (item) {
         item.classList.add('selected');
         deskPicks.push(index);
