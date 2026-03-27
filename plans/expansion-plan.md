@@ -461,6 +461,9 @@ Create `scripts/build_wisdom_sources.py`:
 - CC presents candidates to the user (title, source, sample text, length estimate)
 - User approves/rejects
 - For approved text(s), CC fetches, parses, segments into ~150-char passages
+
+CC: Curation completed 2026-03-27. Candidates evaluated: 六祖壇經, 無門關, 碧巖錄, 金剛經, 信心銘, 景德傳燈錄.
+USER: No koans — prefers to engage with those under a master's guidance. Selected three texts ordered shortest→longest: 信心銘 (~12 passages) → 金剛經 (~34 passages) → 六祖壇經 (~140 passages). Total ~186 passages / ~6 months of daily Zen content.
 - Write to `data/sources/zen_passages.json` (same structure as Mengzi)
 
 Run `build_wisdom_sources.py` once. Commit the output JSON files to the repo. The daily pipeline reads from these cached files, never fetches live.
@@ -627,21 +630,41 @@ Replace the Phase 4 placeholder with the actual wisdom pipeline instructions (re
 
 ### Phase 4 Outcome
 
-**Completed:** 2026-03-27 (infrastructure only — source fetching partially done)
+**Infrastructure completed:** 2026-03-27
+**Source data completed:** 2026-03-27
 
-**Created:**
+**Created (infrastructure — first session):**
 - `config/wisdom.json` — source configs for Heart Sutra, Mengzi, Zen
 - `data/wisdom_progress.json` — initial progress tracking (both at index 0)
-- `data/sources/heart_sutra.json` — 7 segments with canonical English translations (hardcoded from standard Buddhist canon text, not fetched live)
+- `data/sources/heart_sutra.json` — 7 segments with canonical English translations (hardcoded from standard Buddhist canon text)
 - `templates/wisdom.html` — reference template with 3 wisdom sections
-- `.claude/agents/translator-classical.md` — classical Chinese translator agent
+- `.claude/agents/translator-classical.md` — classical Chinese translator agent (Opus, not Haiku — translations cached permanently)
 - `.claude/commands/wisdom.md` — full wisdom pipeline with idempotency check
 - `scripts/build_wisdom_sources.py` — fetches Heart Sutra (hardcoded) and Mengzi (ctext.org API)
 
-**OPEN ITEMS requiring follow-up session:**
-1. **Mengzi source fetch:** `python3 scripts/build_wisdom_sources.py --mengzi` needs to be run to fetch from ctext.org API. This requires network access and may need debugging if ctext.org rate-limits or has API changes. The script is written but untested against the live API.
-2. **Zen passages:** Requires interactive curation session — CC searches for candidate Zen texts, user approves, then CC fetches/parses/segments. No `data/sources/zen_passages.json` exists yet.
-3. **Wisdom assembler:** `assemble.py` currently uses the generic `build_newsletter_content()` for wisdom pages. A wisdom-specific `build_wisdom_content()` that generates `<section class="wisdom-section" data-section="...">` structure instead of `<article>` elements should be added when the wisdom pipeline is first tested end-to-end.
+**Source data work (second session):**
+
+*Mengzi:*
+- Fixed `build_wisdom_sources.py`: wrong API URL (`ctext.org/api.pl` → `api.ctext.org/gettext`), wrong response format (expected dicts, got string array), wrong Gaozi URNs (`gao-zi-i` → `gaozi-i`). Added verbose logging.
+- Successfully fetched all 14/14 chapters, 269 passages from ctext.org API.
+- ctext.org API does not serve English translations — only Chinese text available via API.
+- Dispatched 14 parallel Opus translator agents (one per chapter) to translate all 269 passages. All translations cached in `data/sources/mengzi_passages.json`.
+
+*Zen — user curation decisions:*
+- CC researched 6 candidate texts: 六祖壇經, 無門關, 碧巖錄, 金剛經, 信心銘, 景德傳燈錄.
+- USER: Declined koan collections (無門關, 碧巖錄) — prefers to encounter koans under close tutorship from a master, not in a daily reading app.
+- USER: Selected three texts, ordered shortest to longest for sequential presentation:
+  1. **信心銘** (Faith in Mind, ~1,800 chars, ~12 passages) — concise verse on non-duality
+  2. **金剛經** (Diamond Sutra, ~5,200 chars, ~34 passages) — dialogue on emptiness
+  3. **六祖壇經** (Platform Sutra, ~21,000 chars, ~140 passages) — Huineng's autobiography and teachings
+- Total Zen runway: ~186 passages (~6 months of daily content)
+- `config/wisdom.json` updated with `texts_in_order` array documenting the three-text sequence.
+- All three texts being fetched from Wikisource and translated with Opus agents.
+
+**OPEN ITEMS:**
+1. **Zen source processing:** Raw texts fetched → need segmentation into ~150-char passages → cache to `data/sources/zen_passages.json` with translations. IN PROGRESS.
+2. **Wisdom assembler:** `assemble.py` needs `build_wisdom_content()` producing `<section class="wisdom-section">` structure instead of `<article>` elements.
+3. **Zen progression logic:** `wisdom_progress.json` needs to track which of the three Zen texts is currently active and auto-advance to the next text when one completes.
 4. **E2E test:** `/wisdom` has not been run end-to-end yet.
 
 ---
@@ -898,22 +921,33 @@ Brief update for the public repo.
 
 ## Follow-up Items (consolidated)
 
-These items need attention in the next session before the expansion is fully operational:
+These items need attention before the expansion is fully operational:
+
+### Done (this session):
+- ~~Fetch Mengzi passages~~ — 269 passages fetched from ctext.org API (14/14 chapters)
+- ~~Translate Mengzi~~ — 269/269 passages translated by 14 parallel Opus agents, cached in source file
+- ~~Curate Zen source text~~ — User selected: 信心銘 → 金剛經 → 六祖壇經 (shortest to longest)
+- ~~Upgrade translator-classical to Opus~~ — permanent translations deserve Opus quality
+- ~~Update config/wisdom.json~~ — Zen section now documents three-text sequence
+
+### In progress:
+1. **Fetch + segment + translate Zen texts** — 信心銘, 金剛經, 六祖壇經 being fetched from Wikisource now. Need segmentation into ~150-char passages and Opus translation.
 
 ### Must-do before first `/go` with all pages:
-1. **Fetch Mengzi passages:** Run `python3 scripts/build_wisdom_sources.py --mengzi` — needs network, may need API debugging
-2. **Curate Zen source text:** Interactive session to select, fetch, parse, and cache Zen passages to `data/sources/zen_passages.json`
-3. **Add wisdom-specific assembler:** `assemble.py` needs `build_wisdom_content()` that produces `<section class="wisdom-section">` structure instead of `<article>` elements
-4. **Add obsessions-specific assembler:** Same — needs `build_obsessions_content()` with `<section class="obsession-section">` structure
-5. **E2E test `/newsletter`** — verify Phase 1+2 refactoring didn't break anything
-6. **E2E test `/wisdom`** — with real source data
-7. **E2E test `/obsessions`** — with at least one active obsession
-8. **E2E test `/se`** — after a newsletter is generated
-9. **E2E test `/go`** — full orchestration
+2. **Build `data/sources/zen_passages.json`** — combine all three Zen texts into one sequential passage file with translations
+3. **Add wisdom-specific assembler:** `assemble.py` needs `build_wisdom_content()` that produces `<section class="wisdom-section" data-section="...">` structure
+4. **Add obsessions-specific assembler:** Same — needs `build_obsessions_content()` with `<section class="obsession-section" data-obsession-id="...">` structure
+5. **Zen progression logic:** `wisdom_progress.json` / `wisdom.md` pipeline needs to track which of the three Zen texts is active and auto-advance when one completes
+6. **E2E test `/newsletter`** — verify Phase 1+2 refactoring didn't break anything
+7. **E2E test `/wisdom`** — with real source data
+8. **E2E test `/obsessions`** — with at least one active obsession
+9. **E2E test `/se`** — after a newsletter is generated
+10. **E2E test `/go`** — full orchestration
 
 ### Nice-to-have:
-10. **README.md update** (Step 7.5)
-11. **Wisdom idempotency edge case:** If Mengzi last_served_date is today but Zen is null (first run scenario), the idempotency check should handle this gracefully
+11. **README.md update** (Step 7.5)
+12. **Wisdom idempotency edge case:** If Mengzi last_served_date is today but Zen is null (first run scenario), the idempotency check should handle this gracefully
+13. **Future Zen texts:** After Platform Sutra completes (~6 months), consider adding 碧巖錄 (Blue Cliff Record, ~1,000+ passages / 3+ years) as a long-term source. User may reconsider koans by then.
 
 ---
 

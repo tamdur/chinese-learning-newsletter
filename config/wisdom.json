@@ -15,6 +15,27 @@
     "enabled": true,
     "source_file": "data/sources/zen_passages.json",
     "section_title": "禪宗經典",
-    "section_title_en": "Zen Buddhism"
+    "section_title_en": "Zen Buddhism",
+    "note": "Three texts served sequentially, shortest to longest: 信心銘 (Faith in Mind), 金剛經 (Diamond Sutra), 六祖壇經 (Platform Sutra). When one text completes, the next begins automatically.",
+    "texts_in_order": [
+      {
+        "id": "xinxinming",
+        "title": "信心銘",
+        "title_en": "Faith in Mind",
+        "author": "僧璨 (Sengcan, Third Chan Patriarch)"
+      },
+      {
+        "id": "diamond_sutra",
+        "title": "金剛般若波羅蜜經",
+        "title_en": "Diamond Sutra",
+        "author": "鳩摩羅什譯 (Kumarajiva translation)"
+      },
+      {
+        "id": "platform_sutra",
+        "title": "六祖大師法寶壇經",
+        "title_en": "Platform Sutra of the Sixth Patriarch",
+        "author": "慧能 (Huineng, Sixth Chan Patriarch)"
+      }
+    ]
   }
 }
