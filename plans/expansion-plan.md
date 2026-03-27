@@ -169,7 +169,22 @@ Run `/go` (the existing command, now updated) end-to-end. Verify:
 - Git commit and push succeed
 
 ### Phase 1 Outcome
-*(CC fills this in after completing Phase 1)*
+
+**Completed:** 2026-03-27
+
+**Changes made (Steps 1.1-1.7):**
+
+- `templates/newsletter.html` — Removed Editor's Desk HTML, feedback/flagging CSS (`.editors-desk`, `.desk-item`, `.c.struggling`, `.c.learned`, `.flagging-on`, `.confirm-msg`, `.storage-warning`), stripped toolbar to just `#lookup-toggle`, removed all localStorage/feedback/flagging/export JS. Translation toggle and mobile glossary popup preserved.
+- `scripts/assemble.py` — Removed `desk` checkpoint, `build_desk_item()`, `desk_headlines` param from `build_newsletter()`, Editor's Desk HTML output, feedback toolbar. Simplified `extract_main_js()`. Article count validation now warns instead of assuming 5.
+- `scripts/validate.py` — Removed `check_editors_desk()` and its call. `check_article_count()` now flexible (error at 0, warn at <5).
+- `.claude/commands/go.md` — Removed Phase 1 (Cleanup) entirely. Removed feedback/desk data file reads and desk checkpoint.
+- `.claude/agents/story-selector.md` — Now selects 5 stories only (no runner-ups). Removed `preference_history.json` and `runners_up` output.
+- `.claude/agents/article-writer.md` — Removed struggling characters step and `flagged_characters.json` read.
+- Deleted `data/flagged_characters.json` and `data/preference_history.json`.
+- `CLAUDE.md` — Removed Feedback System, Character States, Editor's Desk sections. Updated File Structure and scope.
+
+**Surprises:** None. Clean removal with no unexpected dependencies.
+**Step 1.8 (e2e test):** Deferred to user's next `/go` run.
 
 ---
 

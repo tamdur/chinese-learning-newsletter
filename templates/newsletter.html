@@ -53,43 +53,6 @@
     .article-body-en p { margin-bottom: 0.75rem; }
 
     .c { cursor: default; }
-    .flagging-on .c { cursor: pointer; }
-    .flagging-on .c:hover { background: rgba(255, 255, 255, 0.06); border-radius: 2px; }
-    .c.struggling { border-bottom: 2px solid #d4a574; }
-    .c.learned { border-bottom: 2px dotted #7aab7a; }
-
-    .editors-desk {
-      background: #22223a;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-top: 2.5rem;
-    }
-    .editors-desk h2 { font-size: 22px; margin-bottom: 0.5rem; }
-    .desk-instructions { font-size: 14px; color: #8a8580; margin-bottom: 1rem; }
-
-    .desk-item {
-      padding: 12px 14px;
-      border: 1px solid #333340;
-      border-radius: 6px;
-      margin-bottom: 8px;
-      cursor: pointer;
-      transition: border-color 0.15s;
-      background: #252538;
-    }
-    .desk-item:hover { border-color: #555568; }
-    .desk-item.selected { border-color: #d4a574; background: rgba(212, 165, 116, 0.12); }
-
-    .desk-badge {
-      font-size: 12px;
-      padding: 2px 6px;
-      border-radius: 3px;
-      margin-right: 8px;
-      display: inline-block;
-    }
-    .included .desk-badge { background: #2a3a2a; color: #7aab7a; }
-    .excluded .desk-badge { background: #2a2a3a; color: #7a7570; }
-    .desk-headline { font-size: 16px; }
-    .desk-count { font-size: 14px; color: #8a8580; margin-top: 0.5rem; }
 
     .toolbar {
       margin-top: 2rem;
@@ -112,7 +75,6 @@
     }
     .toolbar button:hover { background: #2e2e45; }
     .toolbar button.active { border-color: #d4a574; }
-    .confirm-msg { font-size: 13px; color: #7aab7a; }
 
     .issue-nav {
       display: flex;
@@ -130,7 +92,6 @@
     }
 
     footer { margin-top: 2rem; text-align: center; font-size: 13px; color: #5a5550; }
-    .storage-warning { font-size: 13px; color: #7a7570; text-align: center; margin-top: 0.5rem; }
 
     @media (pointer: coarse) {
       .c {
@@ -314,47 +275,9 @@
 
 </main>
 
-<!-- === EDITOR'S DESK === -->
-<section class="editors-desk">
-  <h2>編輯台 Editor's Desk</h2>
-  <p class="desk-instructions">選擇你最感興趣的 3 則標題 Pick your top 3 headlines</p>
-
-  <div class="desk-items">
-    <div class="desk-item included" data-desk-index="0">
-      <span class="desk-badge">收錄</span>
-      <span class="desk-headline">台積電宣布在日本興建第三座晶圓廠</span>
-    </div>
-    <div class="desk-item included" data-desk-index="1">
-      <span class="desk-badge">收錄</span>
-      <span class="desk-headline">聯準會維持利率不變，暗示年底前可能降息</span>
-    </div>
-    <div class="desk-item included" data-desk-index="2">
-      <span class="desk-badge">收錄</span>
-      <span class="desk-headline">密西根大學籃球隊闖進八強</span>
-    </div>
-    <div class="desk-item excluded" data-desk-index="3">
-      <span class="desk-badge">未收錄</span>
-      <span class="desk-headline">歐盟通過新的人工智慧監管法案</span>
-    </div>
-    <div class="desk-item excluded" data-desk-index="4">
-      <span class="desk-badge">未收錄</span>
-      <span class="desk-headline">SpaceX 星艦第五次試飛成功回收</span>
-    </div>
-    <div class="desk-item excluded" data-desk-index="5">
-      <span class="desk-badge">未收錄</span>
-      <span class="desk-headline">日本京都百年老店的經營哲學</span>
-    </div>
-  </div>
-
-  <p class="desk-count">已選：<span id="desk-count-num">0</span> / 3</p>
-</section>
-
 <!-- === TOOLBAR === -->
 <div class="toolbar" id="toolbar">
-  <button id="flag-toggle" type="button">標記模式 OFF</button>
   <button id="lookup-toggle" class="lookup-toggle" type="button">查詢模式 OFF</button>
-  <button id="export-btn" type="button">匯出回饋 Export Feedback</button>
-  <span id="export-confirm" class="confirm-msg" hidden>已匯出 ✓</span>
 </div>
 
 <footer>
@@ -376,114 +299,7 @@ const GLOSSARY = {};
 (function () {
   'use strict';
 
-  const STORAGE_KEY = 'newsletter-feedback';
-  const charStates = {};
-  let deskPicks = [];
-  let flaggingMode = false;
-  let lookupMode = false;
-
-  // === localStorage helpers ===
-
-  const isLocalStorageAvailable = () => {
-    try {
-      const key = '__test__';
-      localStorage.setItem(key, '1');
-      localStorage.removeItem(key);
-      return true;
-    } catch (e) {
-      return false;
-    }
-  };
-
-  const loadState = () => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      return saved ? JSON.parse(saved) : null;
-    } catch (e) {
-      localStorage.removeItem(STORAGE_KEY);
-      return null;
-    }
-  };
-
-  const saveState = () => {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({
-        characters: charStates,
-        deskPicks: deskPicks
-      }));
-    } catch (e) {
-      if (e.name === 'QuotaExceededError') {
-        console.warn('localStorage full');
-      }
-    }
-  };
-
-  // === Character state ===
-
-  const getCharState = (char) => charStates[char] || 'unmarked';
-
-  const setCharState = (char, state) => {
-    if (state === 'unmarked') {
-      delete charStates[char];
-    } else {
-      charStates[char] = state;
-    }
-    saveState();
-  };
-
-  const updateCharVisuals = (char, state) => {
-    document.querySelectorAll('.c').forEach(span => {
-      if (span.textContent === char) {
-        span.classList.remove('struggling', 'learned');
-        if (state === 'struggling') span.classList.add('struggling');
-        else if (state === 'learned') span.classList.add('learned');
-      }
-    });
-  };
-
-  // === Graceful degradation ===
-
-  const disableFeedbackFeatures = () => {
-    document.getElementById('flag-toggle').disabled = true;
-    document.getElementById('export-btn').disabled = true;
-    const note = document.createElement('p');
-    note.className = 'storage-warning';
-    note.textContent = '回饋功能需要啟用瀏覽器儲存 Feedback features require browser storage';
-    document.getElementById('toolbar').after(note);
-  };
-
-  // === Flagging mode toggle ===
-
-  document.getElementById('flag-toggle').addEventListener('click', function () {
-    flaggingMode = !flaggingMode;
-    this.textContent = flaggingMode ? '標記模式 ON' : '標記模式 OFF';
-    this.classList.toggle('active', flaggingMode);
-    document.body.classList.toggle('flagging-on', flaggingMode);
-    if (flaggingMode && lookupMode) {
-      lookupMode = false;
-      document.getElementById('lookup-toggle').textContent = '查詢模式 OFF';
-      document.getElementById('lookup-toggle').classList.remove('active');
-    }
-  });
-
-  // === Click-to-cycle character states ===
-
-  document.addEventListener('click', function (e) {
-    if (!flaggingMode) return;
-    const span = e.target.closest('.c');
-    if (!span) return;
-
-    const char = span.textContent;
-    const state = getCharState(char);
-
-    let newState;
-    if (state === 'unmarked') newState = 'struggling';
-    else if (state === 'struggling') newState = 'learned';
-    else newState = 'unmarked';
-
-    setCharState(char, newState);
-    updateCharVisuals(char, newState);
-  });
+  var lookupMode = false;
 
   // === Translation toggles ===
 
@@ -499,101 +315,24 @@ const GLOSSARY = {};
     });
   });
 
-  // === Editor's Desk ===
-
-  document.querySelectorAll('.desk-item').forEach(item => {
-    item.addEventListener('click', () => {
-      const index = parseInt(item.dataset.deskIndex);
-      const existingPos = deskPicks.indexOf(index);
-
-      if (existingPos !== -1) {
-        deskPicks.splice(existingPos, 1);
-        item.classList.remove('selected');
-      } else {
-        if (deskPicks.length >= 3) {
-          const oldest = deskPicks.shift();
-          document.querySelector('[data-desk-index="' + oldest + '"]').classList.remove('selected');
-        }
-        deskPicks.push(index);
-        item.classList.add('selected');
-      }
-
-      document.getElementById('desk-count-num').textContent = deskPicks.length;
-      saveState();
-    });
-  });
-
-  // === Feedback export ===
-
-  const downloadJSON = (data, filename) => {
-    const json = JSON.stringify(data, null, 2);
-    try {
-      const blob = new Blob([json], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = filename;
-      a.click();
-      URL.revokeObjectURL(url);
-    } catch (e) {
-      navigator.clipboard.writeText(json).then(() => {
-        alert('下載失敗，已複製到剪貼簿。請貼到一個 .json 檔案。' + '\n' + 'Download failed. Copied to clipboard. Paste into a .json file.');
-      });
-    }
-  };
-
-  const showExportConfirmation = () => {
-    const msg = document.getElementById('export-confirm');
-    msg.hidden = false;
-    setTimeout(() => { msg.hidden = true; }, 3000);
-  };
-
-  const exportFeedback = () => {
-    const offered = [...document.querySelectorAll('.desk-item')].map(item => ({
-      headline: item.querySelector('.desk-headline').textContent,
-      included_in_issue: item.classList.contains('included')
-    }));
-
-    const today = document.querySelector('.date').textContent;
-
-    const charExport = {};
-    for (const [char, charState] of Object.entries(charStates)) {
-      charExport[char] = { state: charState, date: today };
-    }
-
-    const exportData = {
-      date: today,
-      characters: charExport,
-      editors_desk: {
-        offered,
-        user_top_3: deskPicks.slice()
-      }
-    };
-
-    downloadJSON(exportData, 'feedback_' + today + '.json');
-    showExportConfirmation();
-  };
-
-  document.getElementById('export-btn').addEventListener('click', exportFeedback);
-
   // === Mobile character lookup ===
 
-  const isMobile = window.matchMedia('(pointer: coarse)').matches;
+  var isMobile = window.matchMedia('(pointer: coarse)').matches;
 
   if (isMobile) {
-    let longPressTimer = null;
-    let feedbackTimer = null;
-    let startX = 0;
-    let startY = 0;
-    let activeSpan = null;
-    const LONG_PRESS_MS = 400;
-    const MOVE_THRESHOLD = 10;
+    var longPressTimer = null;
+    var feedbackTimer = null;
+    var startX = 0;
+    var startY = 0;
+    var activeSpan = null;
+    var LONG_PRESS_MS = 400;
+    var MOVE_THRESHOLD = 10;
 
-    const popup = document.getElementById('char-popup');
-    const popupChar = document.getElementById('popup-char');
-    const popupZhuyin = document.getElementById('popup-zhuyin');
-    const popupDef = document.getElementById('popup-def');
-    const lookupToggleBtn = document.getElementById('lookup-toggle');
+    var popup = document.getElementById('char-popup');
+    var popupChar = document.getElementById('popup-char');
+    var popupZhuyin = document.getElementById('popup-zhuyin');
+    var popupDef = document.getElementById('popup-def');
+    var lookupToggleBtn = document.getElementById('lookup-toggle');
 
     function positionPopup(targetSpan) {
       var rect = targetSpan.getBoundingClientRect();
@@ -759,12 +498,6 @@ const GLOSSARY = {};
       lookupMode = !lookupMode;
       this.textContent = lookupMode ? '查詢模式 ON' : '查詢模式 OFF';
       this.classList.toggle('active', lookupMode);
-      if (lookupMode && flaggingMode) {
-        flaggingMode = false;
-        document.getElementById('flag-toggle').textContent = '標記模式 OFF';
-        document.getElementById('flag-toggle').classList.remove('active');
-        document.body.classList.remove('flagging-on');
-      }
     });
 
     document.addEventListener('click', function (e) {
@@ -776,40 +509,6 @@ const GLOSSARY = {};
       attachScrollDismiss();
     });
   }
-
-  // === Initialize ===
-
-  if (!isLocalStorageAvailable()) {
-    disableFeedbackFeatures();
-    return;
-  }
-
-  const saved = loadState();
-
-  if (saved) {
-    // Restore character states
-    for (const [char, charState] of Object.entries(saved.characters || {})) {
-      charStates[char] = charState;
-      updateCharVisuals(char, charState);
-    }
-    // Restore desk picks
-    for (const index of (saved.deskPicks || [])) {
-      const item = document.querySelector('[data-desk-index="' + index + '"]');
-      if (item) {
-        item.classList.add('selected');
-        deskPicks.push(index);
-      }
-    }
-  } else {
-    // First visit: seed with pre-flagged characters for testing
-    charStates['積'] = 'struggling';
-    charStates['廠'] = 'struggling';
-    saveState();
-    updateCharVisuals('積', 'struggling');
-    updateCharVisuals('廠', 'struggling');
-  }
-
-  document.getElementById('desk-count-num').textContent = deskPicks.length;
 })();
 </script>
 

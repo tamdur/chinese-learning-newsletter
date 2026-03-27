@@ -1,64 +1,12 @@
 # /go — Daily Newsletter Pipeline
 
-You are running the daily newsletter pipeline. This has two phases: cleanup (process feedback) then generation (produce today's issue).
+You are running the daily newsletter pipeline. This generates today's issue of 今日讀報.
 
 All intermediate results are checkpointed to `data/pipeline/`. If a previous run was interrupted, check for existing checkpoint files and resume from where it left off (see Step 0).
 
 ---
 
-## Phase 1: Cleanup
-
-### 1a. Scan for feedback files
-
-Look for files matching the glob pattern `feedback_*.json` in `~/Downloads/`. Sort any matches by the date in the filename (ascending — oldest first).
-
-- **No files found:** Print "No feedback to process — skipping cleanup." and go straight to Phase 2.
-- **One or more files found:** Process each one in chronological order (steps 1b–1d), then commit (step 1e).
-
-### 1b. Merge character flags
-
-Read `data/flagged_characters.json`. For each character in the feedback file's `characters` object:
-
-- **`"struggling"`**: Add or update the entry. Set `"state": "struggling"`, `"last_updated"` to the feedback date. If new, also set `"first_flagged"` to the feedback date.
-- **`"learned"`**: Update the entry. Set `"state": "learned"`, `"last_updated"` to the feedback date. Keep existing `"first_flagged"`. If new, set `"first_flagged"` to the feedback date.
-- **`"unmarked"`**: Remove the character from `flagged_characters.json` entirely — it's no longer tracked.
-- **Character absent from feedback**: No change. Absence means "no update", not "remove".
-
-When processing multiple feedback files, apply them in order. Later files override earlier ones for the same character.
-
-### 1c. Append to preference history
-
-Read `data/preference_history.json`. Append a new entry to the `sessions` array:
-
-```json
-{
-  "date": "<feedback date>",
-  "offered": [<the offered array from the feedback>],
-  "user_top_3": [<the user_top_3 array from the feedback>]
-}
-```
-
-If a session with the same date already exists, skip it (don't double-append).
-
-### 1d. Delete the processed feedback file
-
-After successfully merging, delete the feedback file from `~/Downloads/`. This prevents reprocessing on the next run.
-
-### 1e. Commit and push cleanup changes
-
-After ALL feedback files are processed:
-
-```
-git add data/flagged_characters.json data/preference_history.json
-git commit -m "Cleanup: merge feedback"
-git push
-```
-
-Only commit if there are actual changes to data files.
-
----
-
-## Phase 2: Generation
+## Generation
 
 This phase uses the subagent architecture. Execute these steps in order. After each step, **checkpoint results to `data/pipeline/`** using the Write tool.
 
@@ -78,13 +26,11 @@ Check if `data/pipeline/` exists and contains checkpoint files. If it does:
 
 If `data/pipeline/` doesn't exist, create it and start from Step 1.
 
-### Step 1: Read config and data files
+### Step 1: Read config files
 
 Read these files directly in this session:
 - `config/settings.json` — reading level, article count, title
 - `config/interests.json` — topics, source hints, selection guidance
-- `data/flagged_characters.json` — characters the user is struggling with or has learned
-- `data/preference_history.json` — past Editor's Desk picks
 
 ### Step 2: Dispatch four scout agents in parallel
 
@@ -110,15 +56,10 @@ Wait for all four to return.
 
 Merge results from all four scouts into a single candidate list. Launch the **story-selector** agent (Opus):
 - Pass the full combined candidate list as context
-- The agent will read `config/interests.json`, `data/preference_history.json`, and check `docs/archive/` for recent issues
-- Agent prompt: "Here are the candidate stories from today's news scouts:\n\n{combined_candidates}\n\nSelect 5 stories for today's newsletter and 3 runner-up headlines for the Editor's Desk. Follow the instructions in your agent definition."
+- The agent will read `config/interests.json` and check `docs/archive/` for recent issues
+- Agent prompt: "Here are the candidate stories from today's news scouts:\n\n{combined_candidates}\n\nSelect 5 stories for today's newsletter. Follow the instructions in your agent definition."
 
-**Checkpoint:** Write two files:
-- `data/pipeline/selected.json` — the selector's full output (5 selected stories + rationale), with a `"date": "{today}"` field added at the top level
-- `data/pipeline/desk_headlines.json` — array of 8 headlines for the Editor's Desk:
-  - First 5: the selected stories' headlines with `"included_in_issue": true`
-  - Last 3: the runner-up headlines with `"included_in_issue": false`
-  - Each entry has `"headline_zh"` (the Chinese headline — these come from the article-writer in Step 4, so for now use the English headline as a placeholder; update after Step 4)
+**Checkpoint:** Write `data/pipeline/selected.json` — the selector's full output (5 selected stories + rationale), with a `"date": "{today}"` field added at the top level.
 
 ### Step 3.5: Dispatch 5 story-researcher agents in parallel
 
@@ -134,12 +75,10 @@ All 5 run concurrently. Wait for all to return.
 
 Pass the 5 selected stories to the **article-writer** agent (Opus):
 - Include the **detailed research briefings from Step 3.5** (NOT the selector's thin summaries)
-- The agent will read `config/settings.json` and `data/flagged_characters.json`
+- The agent will read `config/settings.json`
 - Agent prompt: "Write all 5 articles for today's newsletter. Here are the selected stories with detailed research briefings:\n\n{stories_with_briefings}\n\nFollow the instructions in your agent definition."
 
 **Checkpoint:** Write `data/pipeline/articles.json` — the article-writer's JSON array output (each entry has `headline_html`, `body_html`, `headline_plain`, `source_label`).
-
-**Update desk_headlines.json:** Now that we have the Chinese headlines from the article-writer, update the first 5 entries in `data/pipeline/desk_headlines.json` to use `headline_plain` from the articles as their `headline_zh`. The 3 runner-up headlines need Chinese translations — ask the story-selector's output for the Chinese headlines it provided, or use the English headlines if Chinese wasn't provided.
 
 ### Step 5: Dispatch 5 translators in parallel
 
@@ -270,10 +209,10 @@ rm -f data/pipeline/*.json data/pipeline/*.txt
 
 ---
 
-## Phase 3: Summary
+## Summary
 
-Print a combined summary:
+Print a summary:
 
-- **Cleanup:** How many feedback files processed, new/changed character states, or "No feedback processed"
-- **Generation:** The 5 selected story headlines (in Chinese with English titles), the 3 runner-up headlines, any warnings
+- The 5 selected story headlines (in Chinese with English titles)
+- Any warnings from assembly or validation
 - **Link:** https://tamdur.github.io/chinese-learning-newsletter/

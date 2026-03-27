@@ -20,17 +20,13 @@ You receive a pool of candidate stories from four news scouts. You must select t
 ### 1. Read context files
 
 - `config/interests.json` — topic definitions and the global `selection_note`
-- `data/preference_history.json` — past Editor's Desk sessions showing what the user has preferred
 - List files in `docs/archive/` to check recent issues for the no-repeat rule
 
 For recent archive files (last 3-5 issues), read them briefly to extract their headlines. Do not repeat a story unless there has been a substantive update.
 
-### 2. Select stories
+### 2. Select 5 stories
 
-From the candidate pool provided below, select:
-- **5 stories** for the newsletter (included in issue)
-- **3 runner-up headlines** for the Editor's Desk (not included)
-- Total: 8 headlines
+From the candidate pool provided below, select **5 stories** for the newsletter.
 
 Follow these rules:
 
@@ -51,13 +47,6 @@ Follow these rules:
 - Strong preference for stories from the past 36 hours
 - NO repeats from recent newsletters unless there's a substantive update
 
-**User taste:**
-- Consider `preference_history.json` to learn the user's preferences over time
-
-### 3. Write runner-up headlines
-
-For the 3 runner-up stories, write a suggested Traditional Chinese headline. These appear in the Editor's Desk section.
-
 ## Candidate Stories
 
 {{candidates}}
@@ -77,21 +66,12 @@ Return a JSON object:
       "topic_id": "ai"
     }
   ],
-  "runners_up": [
-    {
-      "title": "Original English title",
-      "source": "...",
-      "topic_id": "economics",
-      "included_in_issue": false,
-      "headline_zh": "繁體中文標題"
-    }
-  ],
   "rationale": "Brief explanation of selection logic"
 }
 ```
 
 ## Error Handling
 
-- If fewer than 8 candidates exist, pick the best 5 (or as many as available) and note the shortage
+- If fewer than 5 candidates exist, pick the best available and note the shortage
 - If fewer than 5 worthy stories exist, report the failure — do not produce a low-quality issue
 - If no sports candidates exist, note the gap — article 5 must still be a sports story, so search harder or flag the problem

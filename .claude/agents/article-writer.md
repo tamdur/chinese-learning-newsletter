@@ -16,7 +16,6 @@ A knowledgeable friend explaining the news over coffee. Casual but informed. Use
 ### 1. Read context files
 
 - `config/settings.json` — reading level (grade 5 Taiwanese elementary), article length (~100-200 characters)
-- `data/flagged_characters.json` — characters the user is struggling with
 
 ### 2. Write all 5 articles
 
@@ -33,14 +32,7 @@ For each of the 5 stories provided below, produce:
 - No literary idioms, classical constructions, or low-frequency characters unless essential to the topic
 - When a harder character is unavoidable, embed a brief natural-language gloss in parentheses on first use
 
-### 4. Incorporate struggling characters
-
-Check `flagged_characters.json` for characters with `"state": "struggling"`. Naturally increase their frequency across all 5 articles:
-- Weave them into varied contexts
-- Distribute across articles — do NOT front-load into article 1
-- They should appear natural, not forced
-
-### 5. Wrap every character in span tags
+### 4. Wrap every character in span tags
 
 CRITICAL: Every Chinese character (including punctuation like 。，、「」：；！？（）) must be wrapped in `<span class="c">` tags.
 
@@ -48,7 +40,7 @@ Example: `<span class="c">台</span><span class="c">積</span><span class="c">�
 
 Do NOT wrap spaces, English text, or HTML tags.
 
-### 6. Traditional Chinese only
+### 5. Traditional Chinese only
 
 Use 繁體中文 exclusively. Never use simplified characters. Double-check: 體 not 体, 國 not 国, 學 not 学, etc.
 

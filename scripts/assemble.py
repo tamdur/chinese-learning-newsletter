@@ -33,7 +33,6 @@ INDEX = DOCS / "index.html"
 CHECKPOINT_FILES = {
     "articles": PIPELINE / "articles.json",
     "translations": PIPELINE / "translations.json",
-    "desk": PIPELINE / "desk_headlines.json",
     "glossary": PIPELINE / "glossary.json",
 }
 
@@ -57,25 +56,10 @@ def extract_css(html: str) -> str:
 
 def extract_main_js(html: str) -> str:
     """Extract the main IIFE <script> block (the second one, after GLOSSARY)."""
-    # Find all <script>...</script> blocks
     scripts = re.findall(r"<script>(.*?)</script>", html, re.DOTALL)
     if len(scripts) < 2:
         raise RuntimeError("Could not find main JS IIFE in template")
-    js = scripts[1]  # Second script block is the IIFE
-
-    # Remove the test seed data in the else block
-    # Replace the seed block with just saveState();
-    js = re.sub(
-        r"(} else \{)\s*\n\s*// First visit:.*?\n"
-        r"(?:.*?charStates\[.*?\n)*"
-        r"(?:.*?saveState\(\).*?\n)?"
-        r"(?:.*?updateCharVisuals\(.*?\n)*"
-        r"\s*(})",
-        r"\1\n    saveState();\n  \2",
-        js,
-        flags=re.DOTALL,
-    )
-    return js
+    return scripts[1]
 
 
 # ---------------------------------------------------------------------------
@@ -209,18 +193,6 @@ def build_article_html(article: dict, translation: str, article_id: int) -> str:
 </article>"""
 
 
-def build_desk_item(headline: dict, index: int) -> str:
-    """Build one Editor's Desk item."""
-    included = headline.get("included_in_issue", False)
-    css_class = "included" if included else "excluded"
-    badge = "收錄" if included else "未收錄"
-    text = headline.get("headline_zh", headline.get("headline", ""))
-    return f"""    <div class="desk-item {css_class}" data-desk-index="{index}">
-      <span class="desk-badge">{badge}</span>
-      <span class="desk-headline">{text}</span>
-    </div>"""
-
-
 def build_nav(archive_files: list[str]) -> str:
     """Build the navigation bar HTML."""
     if not archive_files:
@@ -234,8 +206,8 @@ def build_nav(archive_files: list[str]) -> str:
 
 
 def build_newsletter(today: str, articles: list, translations: list,
-                     desk_headlines: list, glossary: dict, css: str,
-                     main_js: str, archive_files: list[str]) -> str:
+                     glossary: dict, css: str, main_js: str,
+                     archive_files: list[str]) -> str:
     """Construct the complete newsletter HTML."""
 
     # Articles with <hr> separators
@@ -243,12 +215,6 @@ def build_newsletter(today: str, articles: list, translations: list,
     for i, (article, translation) in enumerate(zip(articles, translations)):
         article_blocks.append(build_article_html(article, translation, i + 1))
     articles_html = "\n\n<hr>\n\n".join(article_blocks)
-
-    # Editor's Desk items
-    desk_items = []
-    for i, headline in enumerate(desk_headlines):
-        desk_items.append(build_desk_item(headline, i))
-    desk_html = "\n".join(desk_items)
 
     # Navigation
     nav_html = build_nav(archive_files)
@@ -280,22 +246,8 @@ def build_newsletter(today: str, articles: list, translations: list,
 
 </main>
 
-<section class="editors-desk">
-  <h2>編輯台 Editor's Desk</h2>
-  <p class="desk-instructions">選擇你最感興趣的 3 則標題 Pick your top 3 headlines</p>
-
-  <div class="desk-items">
-{desk_html}
-  </div>
-
-  <p class="desk-count">已選：<span id="desk-count-num">0</span> / 3</p>
-</section>
-
 <div class="toolbar" id="toolbar">
-  <button id="flag-toggle" type="button">標記模式 OFF</button>
   <button id="lookup-toggle" class="lookup-toggle" type="button">查詢模式 OFF</button>
-  <button id="export-btn" type="button">匯出回饋 Export Feedback</button>
-  <span id="export-confirm" class="confirm-msg" hidden>已匯出 ✓</span>
 </div>
 
 <footer>
@@ -349,12 +301,12 @@ def main():
     # Load checkpoint data
     articles = load_json(CHECKPOINT_FILES["articles"])
     translations = load_json(CHECKPOINT_FILES["translations"])
-    desk_headlines = load_json(CHECKPOINT_FILES["desk"])
     glossary = load_json(CHECKPOINT_FILES["glossary"])
 
     # Validate article count
-    if len(articles) != 5:
-        print(f"WARNING: Expected 5 articles, got {len(articles)}", file=sys.stderr)
+    if len(articles) == 0:
+        print("ERROR: No articles found", file=sys.stderr)
+        sys.exit(1)
     if len(translations) != len(articles):
         print(f"WARNING: Article count ({len(articles)}) != translation count ({len(translations)})", file=sys.stderr)
 
@@ -370,7 +322,7 @@ def main():
     archive_files = list_archive_files()
 
     # Build the newsletter
-    html = build_newsletter(today, articles, translations, desk_headlines,
+    html = build_newsletter(today, articles, translations,
                             glossary, css, main_js, archive_files)
 
     # Write new index.html
@@ -378,12 +330,9 @@ def main():
     INDEX.write_text(html, encoding="utf-8")
 
     # Print summary
-    glossary_count = len(glossary)
-    desk_count = len(desk_headlines)
     print(f"Newsletter assembled for {today}")
     print(f"  Articles: {len(articles)}")
-    print(f"  Glossary entries: {glossary_count}")
-    print(f"  Editor's Desk headlines: {desk_count}")
+    print(f"  Glossary entries: {len(glossary)}")
     print(f"  Written to: {INDEX}")
 
 
