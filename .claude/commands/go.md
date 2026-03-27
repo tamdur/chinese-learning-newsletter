@@ -199,14 +199,19 @@ print(json.dumps(glossary, ensure_ascii=False))
 "
 ```
 
-**5.5c. Dispatch multi-character word agents**
+**5.5c. Dispatch multi-character word agents (ALWAYS run)**
 
-If using dictionary pre-match: dispatch `glossary-words` agents only for articles that have proper nouns or technical terms not covered by the dictionary. In practice, dispatch 2-3 agents for articles with the most specialized vocabulary.
+Even when the dictionary resolves all single characters, CEDICT definitions are often too generic for proper nouns, transliterated names, and context-specific compound words. Always dispatch glossary-words agents to supplement the dictionary.
 
-If NOT using dictionary pre-match (fallback): dispatch 5 parallel `glossary-words` agent calls, one per article's full plain text.
-- Agent prompt: "Be aggressive about coverage — include ALL proper nouns (especially transliterated names), ALL compound words, ALL technical terms. More entries is always better than fewer. When in doubt, include it.\n\nTEXT:\n{article_plain_text}"
+Batch articles into 2 parallel `glossary-words` agent calls to keep agent count low while ensuring full coverage:
+- Agent 1: articles 1-3 concatenated plain text
+- Agent 2: articles 4-5 concatenated plain text
 
-Parse each JSON response. Merge all (later overwrites earlier for duplicates).
+Each agent prompt: "Be aggressive about coverage — include ALL proper nouns (especially transliterated names), ALL compound words, ALL technical terms. More entries is always better than fewer. When in doubt, include it.\n\nTEXT:\n{article_plain_text}"
+
+If NOT using dictionary pre-match (fallback, no CEDICT file): dispatch 5 parallel agents instead (one per article).
+
+Parse each JSON response. Merge all (later overwrites earlier for duplicates). Agent word entries override dictionary entries for the same key, since agents have article context for better definitions of proper nouns and specialized terms.
 
 **5.5d. Merge all glossary sources**
 
