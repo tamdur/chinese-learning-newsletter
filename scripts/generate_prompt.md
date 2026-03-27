@@ -92,7 +92,12 @@ Pass all content to the assembler agent:
 ### 7. Archive and deploy
 
 The assembler handles:
-1. Archive existing `docs/index.html` to `docs/archive/YYYY-MM-DD.html`
+1. Archive existing `docs/index.html` — determine the archive filename:
+   - Check `docs/archive/` for existing files matching today's date
+   - First issue of the day: `docs/archive/YYYY-MM-DD.html`
+   - Second issue: `docs/archive/YYYY-MM-DD-2.html`
+   - Third issue: `docs/archive/YYYY-MM-DD-3.html` (and so on)
+   - The suffix increments based on the highest existing file for that date
 2. Patch navigation links in archived files
 3. Write new newsletter to `docs/index.html`
 4. `git add`, commit, push

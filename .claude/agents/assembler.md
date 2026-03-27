@@ -32,10 +32,10 @@ Create a complete standalone HTML file matching the template structure exactly:
 - **HTML structure**: Same classes, data attributes, and structure
 
 **Navigation bar**: After `</header>`, before `<main>`, insert the navigation bar:
-1. Scan `docs/archive/` for files matching the regex `/^\d{4}-\d{2}-\d{2}\.html$/`
-2. Sort matching filenames by date descending
+1. Scan `docs/archive/` for files matching the regex `/^\d{4}-\d{2}-\d{2}(-\d+)?\.html$/` (includes same-day suffixed files like `2026-03-21-2.html`)
+2. Sort matching filenames chronologically (date, then suffix number) descending
 3. If archive files exist: the most recent is the "previous" issue
-   - Insert `<nav class="issue-nav" data-prev="archive/{date}.html" data-next="">` with `.nav-prev` href pointing to same path, and `.nav-next` with empty href and `hidden` attribute
+   - Insert `<nav class="issue-nav" data-prev="archive/{most_recent_archive}.html" data-next="">` with `.nav-prev` href pointing to same path, and `.nav-next` with empty href and `hidden` attribute
 4. If no archive files exist (first-ever run): omit the `<nav>` element entirely
 
 Fill in:
@@ -68,30 +68,36 @@ If `docs/index.html` doesn't exist, skip this entire step.
    - Replace `data-prev="archive/` → `data-prev="`
    - Replace `href="archive/` in the `.nav-prev` link → `href="`
    This changes `archive/2026-03-14.html` to `2026-03-14.html` (correct for a file already in the archive directory).
-4. Write the modified content to `docs/archive/{old_date}.html`
-5. **Verify:** The date in the archived file should be DIFFERENT from today's date. If it matches today's date, something is wrong — you may have already overwritten index.html. Stop and report the error.
+4. **Determine archive filename** — multiple issues per day are supported:
+   - Check `docs/archive/` for existing files matching `{old_date}*.html` (e.g., `2026-03-21.html`, `2026-03-21-2.html`)
+   - If no file for `{old_date}` exists: use `{old_date}.html`
+   - If `{old_date}.html` exists: use `{old_date}-2.html`
+   - If `{old_date}-2.html` also exists: use `{old_date}-3.html` (and so on — find the next available suffix)
+   - Call the chosen filename `{archive_filename}`
+5. Write the modified content to `docs/archive/{archive_filename}`
+6. Note: the old issue date CAN match today's date if this is a same-day re-run — that is normal and expected.
 
 **4b. Patch the newly archived file (MANDATORY — do not skip)**
 
 The newly archived file has `data-next=""` and the next link is hidden. You MUST patch it to point forward to the new current issue:
 
-1. Read `docs/archive/{old_date}.html`
+1. Read `docs/archive/{archive_filename}`
 2. If it contains `<nav class="issue-nav"`, apply BOTH of these string replacements:
    - `data-next=""` → `data-next="../index.html"`
    - `href="" class="nav-link nav-next" hidden` → `href="../index.html" class="nav-link nav-next"`
-3. Write the patched file back to `docs/archive/{old_date}.html`
+3. Write the patched file back to `docs/archive/{archive_filename}`
 4. **Verify:** After writing, grep the file for `data-next="../index.html"` to confirm the patch took effect. If it didn't, report a warning.
 5. If the archived file has no `<nav class="issue-nav"` (pre-navigation issue), skip patching.
 
 **4c. Patch the previous archive file (strict sequential chain)**
 
-The previously most-recent archive file (the one before {old_date}) currently has `data-next="../index.html"` (set during the last run). Update it to point to the newly archived file instead:
+The previously most-recent archive file (the one before `{archive_filename}`) currently has `data-next="../index.html"` (set during the last run). Update it to point to the newly archived file instead:
 
-1. Scan `docs/archive/` for files matching `/^\d{4}-\d{2}-\d{2}\.html$/`, excluding `{old_date}.html`
-2. Sort by date descending — the first match is the previous archive
+1. Scan `docs/archive/` for all newsletter HTML files, excluding `{archive_filename}`
+2. Sort by date descending (files with suffixes like `-2`, `-3` sort after the base date file) — the first match is the previous archive
 3. If found, and it contains `<nav class="issue-nav"`:
-   - Replace `data-next="../index.html"` → `data-next="{old_date}.html"` (just the filename, since both files are in the same `archive/` directory)
-   - Replace `href="../index.html" class="nav-link nav-next"` → `href="{old_date}.html" class="nav-link nav-next"`
+   - Replace `data-next="../index.html"` → `data-next="{archive_filename}"` (just the filename, since both files are in the same `archive/` directory)
+   - Replace `href="../index.html" class="nav-link nav-next"` → `href="{archive_filename}" class="nav-link nav-next"`
 4. Write the patched file back
 5. If no previous archive exists or it has no `<nav class="issue-nav"` (pre-navigation issue), skip this step
 

@@ -13,6 +13,7 @@ A daily Chinese reading newsletter for a single user. A Claude Code pipeline sea
 - **Traditional Chinese only** (繁體中文) — never output simplified characters
 - **Zhongwen extension compatibility** — all Chinese text in standard DOM elements (p, span, h2, li, etc.); no canvas, SVG text, or CSS content for readable characters
 - **GitHub Pages delivery** — newsletter served from docs/ directory; docs/index.html is always the latest issue
+- **Dark theme** — night-mode color scheme (dark navy background `#1a1a2e`, warm light text `#e0dcd4`). All generated HTML must use the dark palette from `templates/newsletter.html`
 - **Claude Opus for generation** — use Opus for all newsletter content generation
 - **No frameworks** — vanilla HTML/CSS/JS only in generated output
 
@@ -22,7 +23,7 @@ A daily Chinese reading newsletter for a single user. A Claude Code pipeline sea
 - `data/flagged_characters.json` — per-character struggling/learned states with dates
 - `data/preference_history.json` — editor's desk sessions (offered headlines + user picks)
 - `docs/index.html` — current newsletter (GitHub Pages serves this)
-- `docs/archive/` — past newsletters (YYYY-MM-DD.html)
+- `docs/archive/` — past newsletters (YYYY-MM-DD.html, YYYY-MM-DD-2.html for same-day re-runs)
 - `templates/newsletter.html` — reference HTML for generation (spec, not runtime template)
 - `scripts/generate_prompt.md` — generation pipeline documentation and CC prompt
 - `scripts/cleanup_prompt.md` — cleanup pipeline documentation and CC prompt
@@ -81,4 +82,4 @@ Each newsletter includes 3 headlines that made the cut and 3 that didn't. User p
 ## Conventions
 - `USER:` prefix for inline annotations in plan/research docs
 - Dates in YYYY-MM-DD format, Asia/Taipei timezone
-- One newsletter per day, current issue always at docs/index.html
+- Multiple newsletters per day allowed; current issue always at docs/index.html; previous same-day issues archived with `-2`, `-3` suffixes
