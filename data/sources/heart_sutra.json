@@ -1,0 +1,49 @@
+{
+  "source_url": "https://pages.ucsd.edu/~dkjordan/chin/chtxts/ShinJing.html",
+  "title": "般若波羅蜜多心經",
+  "title_en": "Heart Sutra",
+  "segments": [
+    {
+      "day_index": 0,
+      "day_name": "Monday",
+      "text": "觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+      "translation_en": "Avalokitesvara Bodhisattva, when practicing the profound Prajna Paramita, illuminated the five aggregates and saw that they are all empty, thus overcoming all suffering and distress."
+    },
+    {
+      "day_index": 1,
+      "day_name": "Tuesday",
+      "text": "舍利子，色不異空，空不異色，色即是空，空即是色，受想行識，亦復如是。",
+      "translation_en": "Shariputra, form is not different from emptiness, emptiness is not different from form. Form is emptiness, emptiness is form. The same is true of feelings, perceptions, mental formations, and consciousness."
+    },
+    {
+      "day_index": 2,
+      "day_name": "Wednesday",
+      "text": "舍利子，是諸法空相，不生不滅，不垢不淨，不增不減。是故空中無色，無受想行識。",
+      "translation_en": "Shariputra, all dharmas are marked with emptiness — they are neither born nor destroyed, neither defiled nor pure, neither increasing nor decreasing. Therefore, in emptiness there is no form, no feelings, perceptions, mental formations, or consciousness."
+    },
+    {
+      "day_index": 3,
+      "day_name": "Thursday",
+      "text": "無眼耳鼻舌身意，無色聲香味觸法，無眼界，乃至無意識界。無無明，亦無無明盡，乃至無老死，亦無老死盡。",
+      "translation_en": "There are no eyes, ears, nose, tongue, body, or mind; no sights, sounds, smells, tastes, touches, or objects of mind; no realm of sight, and so on up to no realm of consciousness. There is no ignorance and no end of ignorance, and so on up to no old age and death and no end of old age and death."
+    },
+    {
+      "day_index": 4,
+      "day_name": "Friday",
+      "text": "無苦集滅道，無智亦無得。以無所得故，菩提薩埵，依般若波羅蜜多故，心無罣礙。",
+      "translation_en": "There is no suffering, no cause of suffering, no cessation, no path; no wisdom and no attainment. With nothing to attain, a bodhisattva relies on Prajna Paramita, and the mind is without hindrance."
+    },
+    {
+      "day_index": 5,
+      "day_name": "Saturday",
+      "text": "無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛，依般若波羅蜜多故，得阿耨多羅三藐三菩提。",
+      "translation_en": "Without hindrance, there is no fear. Far from all inverted views, one attains nirvana. All buddhas of past, present, and future rely on Prajna Paramita and attain supreme, perfect enlightenment."
+    },
+    {
+      "day_index": 6,
+      "day_name": "Sunday",
+      "text": "故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦，真實不虛。故說般若波羅蜜多咒，即說咒曰：揭諦揭諦，波羅揭諦，波羅僧揭諦，菩提薩婆訶。",
+      "translation_en": "Therefore, know that Prajna Paramita is the great transcendent mantra, the great bright mantra, the supreme mantra, the unequalled mantra, which can remove all suffering and is true, not false. Therefore he proclaimed the Prajna Paramita mantra, saying: Gate gate paragate parasamgate bodhi svaha."
+    }
+  ]
+}

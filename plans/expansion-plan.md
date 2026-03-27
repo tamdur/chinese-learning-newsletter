@@ -405,7 +405,14 @@ Print a consolidated summary with links to all generated pages.
 - Run `/go` — verify it runs the newsletter pipeline (wisdom/obsessions are placeholders)
 
 ### Phase 3 Outcome
-*(CC fills this in after completing Phase 3)*
+
+**Completed:** 2026-03-27
+
+- Created `.claude/commands/newsletter.md` — full newsletter pipeline extracted from go.md (identical content, renamed header)
+- Rewrote `.claude/commands/go.md` — thin orchestrator that reads and follows newsletter.md → wisdom.md → obsessions.md sequentially, with checkpoint cleanup between each
+- CC commands can't invoke other CC commands directly, so go.md tells the session to "read and follow" each sub-command file
+
+**No surprises.**
 
 ---
 
@@ -619,7 +626,23 @@ Replace the Phase 4 placeholder with the actual wisdom pipeline instructions (re
 - Run `/go`. Verify newsletter + wisdom both generate.
 
 ### Phase 4 Outcome
-*(CC fills this in after completing Phase 4)*
+
+**Completed:** 2026-03-27 (infrastructure only — source fetching partially done)
+
+**Created:**
+- `config/wisdom.json` — source configs for Heart Sutra, Mengzi, Zen
+- `data/wisdom_progress.json` — initial progress tracking (both at index 0)
+- `data/sources/heart_sutra.json` — 7 segments with canonical English translations (hardcoded from standard Buddhist canon text, not fetched live)
+- `templates/wisdom.html` — reference template with 3 wisdom sections
+- `.claude/agents/translator-classical.md` — classical Chinese translator agent
+- `.claude/commands/wisdom.md` — full wisdom pipeline with idempotency check
+- `scripts/build_wisdom_sources.py` — fetches Heart Sutra (hardcoded) and Mengzi (ctext.org API)
+
+**OPEN ITEMS requiring follow-up session:**
+1. **Mengzi source fetch:** `python3 scripts/build_wisdom_sources.py --mengzi` needs to be run to fetch from ctext.org API. This requires network access and may need debugging if ctext.org rate-limits or has API changes. The script is written but untested against the live API.
+2. **Zen passages:** Requires interactive curation session — CC searches for candidate Zen texts, user approves, then CC fetches/parses/segments. No `data/sources/zen_passages.json` exists yet.
+3. **Wisdom assembler:** `assemble.py` currently uses the generic `build_newsletter_content()` for wisdom pages. A wisdom-specific `build_wisdom_content()` that generates `<section class="wisdom-section" data-section="...">` structure instead of `<article>` elements should be added when the wisdom pipeline is first tested end-to-end.
+4. **E2E test:** `/wisdom` has not been run end-to-end yet.
 
 ---
 
@@ -718,7 +741,19 @@ Replace the Phase 5 placeholder with the actual obsessions pipeline.
 - Check site nav: all three page links should be active.
 
 ### Phase 5 Outcome
-*(CC fills this in after completing Phase 5)*
+
+**Completed:** 2026-03-27 (all infrastructure created)
+
+**Created:**
+- `config/obsessions.json` — editorial voice + one starter obsession (Taiwanese Electronic Music Pioneers)
+- `.claude/agents/obsessions-scout.md` — Sonnet agent: web searches for specific stories per obsession, with dedup against recent headlines
+- `.claude/agents/obsessions-writer.md` — Opus agent: museum curator voice, same span-wrapping requirements as article-writer
+- `templates/obsessions.html` — reference template with obsession sections
+- `.claude/commands/obsessions.md` — full pipeline: scout → write → translate → glossary → assemble → validate → commit/push
+
+**OPEN ITEMS:**
+1. **Assembler:** Like wisdom, `assemble.py` uses generic content builder. Needs `build_obsessions_content()` with `<section class="obsession-section" data-obsession-id="...">` structure when first tested e2e.
+2. **E2E test:** `/obsessions` has not been run end-to-end yet.
 
 ---
 
@@ -799,7 +834,15 @@ If the user wants to preserve an SE across regeneration, they can manually not r
 - Run `/newsletter` again — verify SEs are gone (fresh page)
 
 ### Phase 6 Outcome
-*(CC fills this in after completing Phase 6)*
+
+**Completed:** 2026-03-27 (command created, CSS added)
+
+**Created:**
+- `.claude/commands/se.md` — full SE pipeline: parse args → research → write → translate → glossary → insert into index.html → merge glossary → validate → commit/push. Handles multiple SEs per day (incrementing data-se-id).
+- Added `.se-header` CSS to `templates/_shared.css`
+
+**OPEN ITEMS:**
+1. **E2E test:** `/se` has not been run end-to-end yet.
 
 ---
 
@@ -845,7 +888,32 @@ Rewrite to reflect the new multi-page architecture:
 Brief update for the public repo.
 
 ### Phase 7 Outcome
-*(CC fills this in after completing Phase 7)*
+
+**Partially completed:** 2026-03-27
+
+- **Step 7.4 (CLAUDE.md):** Rewritten to reflect multi-page architecture, all new commands, page types, wisdom/obsessions/SE documentation.
+- **Steps 7.1-7.3, 7.5:** E2E testing and README deferred to follow-up session.
+
+---
+
+## Follow-up Items (consolidated)
+
+These items need attention in the next session before the expansion is fully operational:
+
+### Must-do before first `/go` with all pages:
+1. **Fetch Mengzi passages:** Run `python3 scripts/build_wisdom_sources.py --mengzi` — needs network, may need API debugging
+2. **Curate Zen source text:** Interactive session to select, fetch, parse, and cache Zen passages to `data/sources/zen_passages.json`
+3. **Add wisdom-specific assembler:** `assemble.py` needs `build_wisdom_content()` that produces `<section class="wisdom-section">` structure instead of `<article>` elements
+4. **Add obsessions-specific assembler:** Same — needs `build_obsessions_content()` with `<section class="obsession-section">` structure
+5. **E2E test `/newsletter`** — verify Phase 1+2 refactoring didn't break anything
+6. **E2E test `/wisdom`** — with real source data
+7. **E2E test `/obsessions`** — with at least one active obsession
+8. **E2E test `/se`** — after a newsletter is generated
+9. **E2E test `/go`** — full orchestration
+
+### Nice-to-have:
+10. **README.md update** (Step 7.5)
+11. **Wisdom idempotency edge case:** If Mengzi last_served_date is today but Zen is null (first run scenario), the idempotency check should handle this gracefully
 
 ---
 

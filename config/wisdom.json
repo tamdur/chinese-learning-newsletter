@@ -1,0 +1,20 @@
+{
+  "heart_sutra": {
+    "enabled": true,
+    "source_file": "data/sources/heart_sutra.json",
+    "section_title": "般若波羅蜜多心經",
+    "section_title_en": "Heart Sutra"
+  },
+  "mengzi": {
+    "enabled": true,
+    "source_file": "data/sources/mengzi_passages.json",
+    "section_title": "孟子",
+    "section_title_en": "Mencius"
+  },
+  "zen": {
+    "enabled": true,
+    "source_file": "data/sources/zen_passages.json",
+    "section_title": "禪宗經典",
+    "section_title_en": "Zen Buddhism"
+  }
+}

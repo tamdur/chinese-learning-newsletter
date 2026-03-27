@@ -130,6 +130,17 @@ hr { border: none; border-top: 1px solid #333340; margin: 2.5rem 0; }
 
 footer { margin-top: 2rem; text-align: center; font-size: 13px; color: #5a5550; }
 
+/* --- Special Edition --- */
+
+.se-header {
+  font-size: 22px;
+  color: #d4a574;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #d4a574;
+}
+
 /* --- Mobile touch styles --- */
 
 @media (pointer: coarse) {

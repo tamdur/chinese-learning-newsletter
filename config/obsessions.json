@@ -1,0 +1,11 @@
+{
+  "editorial_voice": "A thoughtful museum curator sharing real knowledge succinctly and clearly with the public. Not academic, not dumbed-down — the voice of someone who has spent years with this material and can make it vivid in a few sentences. Like a great wall text at a world-class museum.",
+  "obsessions": [
+    {
+      "id": "taiwan-electronic-music-70s",
+      "label": "Taiwanese Electronic Music Pioneers",
+      "guidance": "Discovering highly-regarded electronic music artists from Taiwan working in the 1970s. Focus on specific artists, albums, techniques, and cultural context.",
+      "active": true
+    }
+  ]
+}
