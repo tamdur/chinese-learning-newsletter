@@ -40,6 +40,7 @@ The assembler agent (Opus) was the critical failure point. Despite receiving exp
 3. Wrote an `index.html` with wrong stories (e.g., a tariff story that wasn't selected, different Michigan article content)
 
 **Root cause:** The assembler prompt was ~12,000 tokens of article HTML content. Combined with the instruction to read the 800-line previous issue, the agent's context was overwhelmed. It likely lost track of the provided content and fell back to generating new content based on the template structure it read.
+USER: Also note that there appears to be a 10k token read limit in the cloud, making that many tokens structurally impossible in this environment.
 
 ### HTTP 403 Errors (Scouts)
 - HN Algolia API, Marginal Revolution RSS, Carbon Brief RSS, MLB RSS — all returned 403.
@@ -52,6 +53,7 @@ The assembler agent (Opus) was the critical failure point. Despite receiving exp
 Background agent output files contain raw JSON protocol messages, not clean results. Extracting the actual content requires parsing through `{"parentUuid":...}` message envelopes. This makes it nearly impossible to efficiently read agent results when they exceed the direct-return limit.
 
 **Recommendation:** The pipeline should have agents write their results to well-known temp files in a structured format, not rely on the protocol output files.
+USER: Agreed
 
 ### 2. Assembler Context Overload
 The assembler agent receives the most content of any agent in the pipeline: 5 articles (HTML), 5 translations, 8 editor's desk headlines, a 23KB glossary JSON, plus it needs to read the ~800-line template. This is too much for a single agent call.
@@ -76,6 +78,7 @@ USER: Agreed, have fallback for RSS scouts. HN and Marginal Revolution aren't re
 18 parallel agent calls (13 char batches + 5 word agents) for 314 characters works, but generates enormous context overhead. Each agent call has ~27K tokens of overhead for a relatively simple lookup task.
 
 **Recommendation:** Consider a single Python script that generates the glossary from a pre-built dictionary file, only using agents for characters not in the dictionary. Or use fewer, larger batches.
+USER: See other comments on glossary
 
 ### 5. No Incremental Checkpointing
 If the pipeline fails at Step 6, all work from Steps 1-5.5 is lost. There's no way to resume from a checkpoint.
@@ -87,7 +90,7 @@ If the pipeline fails at Step 6, all work from Steps 1-5.5 is lost. There's no w
 - `data/pipeline/translations.json` after translation
 - `data/pipeline/glossary.json` after glossary
 - Then assembly reads all of these — and can be re-run independently
-
+USER: Agreed
 ### 6. Total Agent Count is Excessive
 This run launched approximately **35-40 agents** across all steps. In the cloud/scheduled environment, this creates:
 - Long total wall-clock time (each agent has startup overhead)
@@ -115,12 +118,13 @@ Rough estimate of total token usage for this (incomplete) run:
 1. **Replace the assembler agent with a Python script** that mechanically constructs the HTML
 2. **Write intermediate results to temp files** so the main session can read clean data
 3. **If RSS feeds 403, fall back to web search immediately** rather than failing
+USER: No complaints here
 
 ### Medium-term (pipeline redesign)
 1. **Pre-build a character dictionary** (`data/glossary_dictionary.json`) so the glossary step only needs agents for new/unknown characters
 USER: Great idea. Let's consider pre-loading a dictionary from the zongwen extension, https://github.com/cschiller/zhongwen/tree/master/data, or a related source.
 2. **Reduce agent count** to ~15 by consolidating glossary into 2-3 larger batches
-USER: This is done because beyond 25 character batches, haiku gets distracted. We can have this step occur after we already match against the character dictionary, which would be a huge help.
+USER: This is done because beyond 25 character batches, haiku gets distracted. We can have this step occur after we already match against the character dictionary, which would be a huge help, but we need lots of calls to keep Haiku on track.
 3. **Add checkpointing** so partial runs can be resumed
 4. **Make assembly deterministic** — Python template substitution, not LLM generation
 USER: Agreed

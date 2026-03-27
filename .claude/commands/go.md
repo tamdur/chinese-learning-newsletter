@@ -2,6 +2,8 @@
 
 You are running the daily newsletter pipeline. This has two phases: cleanup (process feedback) then generation (produce today's issue).
 
+All intermediate results are checkpointed to `data/pipeline/`. If a previous run was interrupted, check for existing checkpoint files and resume from where it left off (see Step 0).
+
 ---
 
 ## Phase 1: Cleanup
@@ -58,7 +60,23 @@ Only commit if there are actual changes to data files.
 
 ## Phase 2: Generation
 
-This phase uses the subagent architecture. Execute these steps in order.
+This phase uses the subagent architecture. Execute these steps in order. After each step, **checkpoint results to `data/pipeline/`** using the Write tool.
+
+### Step 0: Check for existing checkpoints (resume support)
+
+Check if `data/pipeline/` exists and contains checkpoint files. If it does:
+
+1. Read `data/pipeline/selected.json` (if it exists) and check its date field
+2. If the date matches today: resume from the latest checkpoint
+   - If `glossary.json` exists → skip to Step 6
+   - If `translations.json` exists but not `glossary.json` → skip to Step 5.5
+   - If `articles.json` exists but not `translations.json` → skip to Step 5
+   - If `briefings.json` exists but not `articles.json` → skip to Step 4
+   - If `selected.json` exists but not `briefings.json` → skip to Step 3.5
+   - If `candidates.json` exists but not `selected.json` → skip to Step 3
+3. If the date does NOT match today: delete all files in `data/pipeline/` and start fresh
+
+If `data/pipeline/` doesn't exist, create it and start from Step 1.
 
 ### Step 1: Read config and data files
 
@@ -86,12 +104,21 @@ Launch all four simultaneously using the Agent tool:
 
 Wait for all four to return.
 
+**Checkpoint:** Write combined candidate list to `data/pipeline/candidates.json`.
+
 ### Step 3: Combine results and dispatch story-selector
 
-Merge results from all three scouts into a single candidate list. Launch the **story-selector** agent (Opus):
+Merge results from all four scouts into a single candidate list. Launch the **story-selector** agent (Opus):
 - Pass the full combined candidate list as context
 - The agent will read `config/interests.json`, `data/preference_history.json`, and check `docs/archive/` for recent issues
 - Agent prompt: "Here are the candidate stories from today's news scouts:\n\n{combined_candidates}\n\nSelect 5 stories for today's newsletter and 3 runner-up headlines for the Editor's Desk. Follow the instructions in your agent definition."
+
+**Checkpoint:** Write two files:
+- `data/pipeline/selected.json` — the selector's full output (5 selected stories + rationale), with a `"date": "{today}"` field added at the top level
+- `data/pipeline/desk_headlines.json` — array of 8 headlines for the Editor's Desk:
+  - First 5: the selected stories' headlines with `"included_in_issue": true`
+  - Last 3: the runner-up headlines with `"included_in_issue": false`
+  - Each entry has `"headline_zh"` (the Chinese headline — these come from the article-writer in Step 4, so for now use the English headline as a placeholder; update after Step 4)
 
 ### Step 3.5: Dispatch 5 story-researcher agents in parallel
 
@@ -101,12 +128,18 @@ For each of the 5 selected stories, launch a **story-researcher** agent (Sonnet)
 
 All 5 run concurrently. Wait for all to return.
 
+**Checkpoint:** Write `data/pipeline/briefings.json` — array of 5 briefing objects keyed by article index (0-4).
+
 ### Step 4: Dispatch article-writer
 
 Pass the 5 selected stories to the **article-writer** agent (Opus):
 - Include the **detailed research briefings from Step 3.5** (NOT the selector's thin summaries)
 - The agent will read `config/settings.json` and `data/flagged_characters.json`
 - Agent prompt: "Write all 5 articles for today's newsletter. Here are the selected stories with detailed research briefings:\n\n{stories_with_briefings}\n\nFollow the instructions in your agent definition."
+
+**Checkpoint:** Write `data/pipeline/articles.json` — the article-writer's JSON array output (each entry has `headline_html`, `body_html`, `headline_plain`, `source_label`).
+
+**Update desk_headlines.json:** Now that we have the Chinese headlines from the article-writer, update the first 5 entries in `data/pipeline/desk_headlines.json` to use `headline_plain` from the articles as their `headline_zh`. The 3 runner-up headlines need Chinese translations — ask the story-selector's output for the Chinese headlines it provided, or use the English headlines if Chinese wasn't provided.
 
 ### Step 5: Dispatch 5 translators in parallel
 
@@ -117,24 +150,39 @@ Launch all 5 agents simultaneously:
 
 All 5 run concurrently. Wait for all to return.
 
+**Checkpoint:** Write `data/pipeline/translations.json` — array of 5 HTML translation strings.
+
 ### Step 5.5: Build and validate glossary
 
-The main session handles glossary building directly. Do NOT delegate this to the assembler.
+The main session handles glossary building. This step uses a dictionary pre-match to minimize agent calls.
 
-**5.5a. Extract and deduplicate characters**
+**5.5a. Run dictionary pre-match**
 
-Strip `<span class="c">` tags from all 5 articles' `headline_html` + `body_html` to get plain Chinese text. Collect ALL unique Chinese characters across all articles (exclude punctuation: ，。「」！？、：（）). Expected: ~200-250 unique characters.
+```bash
+python3 scripts/glossary_lookup.py
+```
 
-**5.5b. Dispatch single-character glossary agents (batches of 25)**
+This script:
+1. Reads `data/pipeline/articles.json`
+2. Extracts all unique Chinese characters
+3. Looks up each against `data/cedict_dictionary.json`
+4. Performs longest-match word scanning against the dictionary
+5. Writes `data/pipeline/glossary_matched.json` (resolved entries) and `data/pipeline/glossary_unresolved.txt` (characters needing agent lookup)
 
-Chunk the deduplicated character set into batches of 25-30 characters. At ~200-250 unique chars, this is 8-10 parallel `glossary-chars` agent calls.
+If `data/cedict_dictionary.json` doesn't exist, print a warning and fall back to the full agent-based approach (steps 5.5b-5.5c below with ALL characters).
+
+**5.5b. Dispatch single-character glossary agents for unresolved characters**
+
+Read `data/pipeline/glossary_unresolved.txt`. If empty, skip to 5.5d.
+
+Chunk unresolved characters into batches of 25. Dispatch parallel `glossary-chars` agent calls.
 
 Each agent gets:
 - CHARACTER_LIST: 25 characters (one per line)
 - TEXT: concatenated plain text from all 5 articles (for pronunciation context)
 - Agent prompt: "CHARACTER_LIST:\n{characters}\n\nTEXT:\n{plain_text}"
 
-Each agent returns TSV (not JSON). **Convert TSV to JSON programmatically** — write the agent's response to a temp file and parse with:
+Each agent returns TSV (not JSON). **Convert TSV to JSON programmatically:**
 
 ```bash
 echo "{agent_response}" | python3 -c "
@@ -151,18 +199,23 @@ print(json.dumps(glossary, ensure_ascii=False))
 "
 ```
 
-Bad lines are logged and their characters added to the missing list.
+**5.5c. Dispatch multi-character word agents**
 
-**5.5c. Dispatch multi-character word agents (one per article)**
+If using dictionary pre-match: dispatch `glossary-words` agents only for articles that have proper nouns or technical terms not covered by the dictionary. In practice, dispatch 2-3 agents for articles with the most specialized vocabulary.
 
-5 parallel `glossary-words` agent calls, one per article's full plain text.
+If NOT using dictionary pre-match (fallback): dispatch 5 parallel `glossary-words` agent calls, one per article's full plain text.
 - Agent prompt: "Be aggressive about coverage — include ALL proper nouns (especially transliterated names), ALL compound words, ALL technical terms. More entries is always better than fewer. When in doubt, include it.\n\nTEXT:\n{article_plain_text}"
 
-Parse each JSON response. Merge all 5 (later overwrites earlier for duplicates).
+Parse each JSON response. Merge all (later overwrites earlier for duplicates).
 
-**5.5d. Merge single-char and multi-char glossaries**
+**5.5d. Merge all glossary sources**
 
-Combine into one object. Both types of entries coexist — the `findLongestMatch()` function in the newsletter JS handles precedence at lookup time.
+Combine:
+1. Dictionary pre-matched entries (`glossary_matched.json`)
+2. Agent single-char entries (from 5.5b)
+3. Agent multi-char word entries (from 5.5c)
+
+Agent entries override dictionary entries for the same key (agents have article context for better definitions).
 
 **5.5e. Validate zhuyin format**
 
@@ -170,7 +223,7 @@ Check every entry's "zhuyin" value contains Bopomofo characters (Unicode U+3100-
 
 **5.5f. Validate completeness**
 
-Check that every unique character from 5.5a has a single-character key in the merged glossary. Collect missing characters.
+Check that every unique character from the articles has a single-character key in the merged glossary. Collect missing characters.
 
 **5.5g. Remediation (up to 3 passes)**
 
@@ -179,25 +232,26 @@ If missing characters exist:
 2. Convert TSV programmatically, validate zhuyin, merge
 3. Repeat up to 3 total remediation passes
 
-With 25-char batches, pass 1 should catch nearly everything; pass 2 guarantees it.
+**5.5h. Log stats and checkpoint**
 
-**5.5h. Log stats**
+Print: total entries, single-char entries, multi-char entries, dictionary-matched entries, agent-resolved entries, missing characters (if any after 3 passes).
 
-Print: total entries, single-char entries, multi-char entries, missing characters (if any after 3 passes). Pass the validated glossary JSON object to the assembler.
+**Checkpoint:** Write `data/pipeline/glossary.json` — the final merged glossary object.
 
-### Step 6: Dispatch assembler
+### Step 6: Dispatch validator
 
-Pass all content to the **assembler** agent (Opus):
-- 5 articles (headline HTML, body HTML, source labels)
-- 5 English translations
-- 8 Editor's Desk headlines (5 selected with Chinese headlines from article-writer + 3 runners-up with Chinese headlines from story-selector)
-- Validated glossary JSON object (from Step 5.5)
-- Today's date
-- Agent prompt: include all content pieces and instruct it to follow its agent definition
+Launch the **assembler** agent (Sonnet) — this is now a validation agent, not a content generator:
+- Agent prompt: "Today's date is {today}. Run assembly and validation per your agent definition. All checkpoint files are in data/pipeline/."
+- The agent runs `python3 scripts/assemble.py --date {today}` and `python3 scripts/validate.py`
+- It handles any validation failures by re-dispatching sub-agents as needed
+- It commits and pushes the result
 
-The assembler receives the pre-built, validated glossary and embeds it directly. It does NOT build the glossary itself.
+### Step 7: Cleanup checkpoints
 
-### Step 7: Done
+After successful commit, delete checkpoint files:
+```bash
+rm -f data/pipeline/*.json data/pipeline/*.txt
+```
 
 ---
 

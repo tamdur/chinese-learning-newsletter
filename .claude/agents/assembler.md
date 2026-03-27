@@ -1,118 +1,47 @@
 ---
-model: opus
-tools: Read, Write, Bash, Glob, Grep
+model: sonnet
+tools: Read, Write, Bash, Glob, Grep, Agent
 ---
 
-# Newsletter Assembler
+# Newsletter Validator
 
-Assemble the 今日讀報 newsletter HTML file from all content pieces.
+Validate the assembled 今日讀報 newsletter and fix any issues.
 
 ## Instructions
 
-### 1. Read the template
+### 1. Run assembly
 
-Read `templates/newsletter.html` for the exact structure, CSS, and JavaScript.
-
-### 2. Embed the glossary
-
-You receive a pre-built, validated glossary JSON object as input. Embed it as:
-```javascript
-const GLOSSARY = {glossary_json};
+```bash
+python3 scripts/assemble.py --date {{date}}
 ```
-in the JavaScript section, replacing the `const GLOSSARY = {};` placeholder.
 
-### 3. Build the HTML
+If this fails (missing checkpoint files, template errors), report the error and stop.
 
-Create a complete standalone HTML file matching the template structure exactly:
+### 2. Run validation
 
-- **CSS**: Copy verbatim from template
-- **JavaScript**: Copy verbatim from template, EXCEPT:
-  - In the initialization `else` block, remove the test seed data (`charStates['積'] = 'struggling'` etc.) and replace with just `saveState();`
-  - Replace the `const GLOSSARY = {};` placeholder with `const GLOSSARY = {validated_glossary};` using the glossary provided as input.
-- **HTML structure**: Same classes, data attributes, and structure
+```bash
+python3 scripts/validate.py
+```
 
-**Navigation bar**: After `</header>`, before `<main>`, insert the navigation bar:
-1. Scan `docs/archive/` for files matching the regex `/^\d{4}-\d{2}-\d{2}(-\d+)?\.html$/` (includes same-day suffixed files like `2026-03-21-2.html`)
-2. Sort matching filenames chronologically (date, then suffix number) descending
-3. If archive files exist: the most recent is the "previous" issue
-   - Insert `<nav class="issue-nav" data-prev="archive/{most_recent_archive}.html" data-next="">` with `.nav-prev` href pointing to same path, and `.nav-next` with empty href and `hidden` attribute
-4. If no archive files exist (first-ever run): omit the `<nav>` element entirely
+### 3. Handle validation results
 
-Fill in:
-- Today's date in `<title>` and `.date` element
-- All 5 articles with:
-  - Chinese headline (in `<h2 class="article-headline">`)
-  - Source label (in `<p class="article-source">`)
-  - Chinese body (in `<div class="article-body-zh">`)
-  - Translation toggle button
-  - English translation (in `<div class="article-body-en" hidden>`)
-  - `data-article-id` attributes (1-5)
-  - `<hr>` between articles
-- All 8 Editor's Desk headlines:
-  - First 5: class `included`, badge text `收錄`
-  - Last 3: class `excluded`, badge text `未收錄`
-  - `data-desk-index` attributes (0-7)
-  - Headlines in `<span class="desk-headline">` — plain text, no character span wrapping
+**If PASS:** Proceed to step 4.
 
-### 4. Archive the old issue and patch navigation
+**If FAIL (exit code 2):** Read the error details and fix:
 
-**CRITICAL: This entire step MUST complete before step 5. You MUST read the OLD docs/index.html, archive it, and patch navigation links BEFORE writing the new newsletter to docs/index.html. If you write the new issue first, the old issue is lost.**
+- **Simplified characters:** Read the article in `data/pipeline/articles.json` that contains the offending characters. Dispatch an `article-writer` agent to rewrite just that article, then update `data/pipeline/articles.json` with the corrected article. Re-run assembly + validation.
 
-If `docs/index.html` doesn't exist, skip this entire step.
+- **Unwrapped Chinese characters:** Same fix as above — the article-writer is responsible for `<span class="c">` wrapping.
 
-**4a. Read and archive the old issue**
+- **Missing glossary entries:** Read `data/pipeline/glossary.json` to confirm. Dispatch `glossary-chars` agents for the missing characters, merge results into `data/pipeline/glossary.json`. Re-run assembly + validation.
 
-1. Read `docs/index.html` and save its FULL content in memory
-2. Extract the date from the `<p class="date">` element — call this `{old_date}`
-3. **Fix relative paths for archive location:** The nav links in `index.html` use paths relative to `docs/` (e.g., `archive/2026-03-14.html`). Since the file is moving INTO `docs/archive/`, rewrite the prev link paths:
-   - Replace `data-prev="archive/` → `data-prev="`
-   - Replace `href="archive/` in the `.nav-prev` link → `href="`
-   This changes `archive/2026-03-14.html` to `2026-03-14.html` (correct for a file already in the archive directory).
-4. **Determine archive filename** — multiple issues per day are supported:
-   - Check `docs/archive/` for existing files matching `{old_date}*.html` (e.g., `2026-03-21.html`, `2026-03-21-2.html`)
-   - If no file for `{old_date}` exists: use `{old_date}.html`
-   - If `{old_date}.html` exists: use `{old_date}-2.html`
-   - If `{old_date}-2.html` also exists: use `{old_date}-3.html` (and so on — find the next available suffix)
-   - Call the chosen filename `{archive_filename}`
-5. Write the modified content to `docs/archive/{archive_filename}`
-6. Note: the old issue date CAN match today's date if this is a same-day re-run — that is normal and expected.
+- **Broken navigation:** Read the archive directory and the generated HTML to diagnose. Fix the navigation links manually in `docs/index.html` if the issue is straightforward.
 
-**4b. Patch the newly archived file (MANDATORY — do not skip)**
+- **Mobile glossary popup issues:** These indicate a problem with the template or assembly script. Report the specific missing elements — do not attempt to fix `scripts/assemble.py` yourself.
 
-The newly archived file has `data-next=""` and the next link is hidden. You MUST patch it to point forward to the new current issue:
+**If WARN (exit code 1):** Report warnings but proceed to step 4. Warnings are informational.
 
-1. Read `docs/archive/{archive_filename}`
-2. If it contains `<nav class="issue-nav"`, apply BOTH of these string replacements:
-   - `data-next=""` → `data-next="../index.html"`
-   - `href="" class="nav-link nav-next" hidden` → `href="../index.html" class="nav-link nav-next"`
-3. Write the patched file back to `docs/archive/{archive_filename}`
-4. **Verify:** After writing, grep the file for `data-next="../index.html"` to confirm the patch took effect. If it didn't, report a warning.
-5. If the archived file has no `<nav class="issue-nav"` (pre-navigation issue), skip patching.
-
-**4c. Patch the previous archive file (strict sequential chain)**
-
-The previously most-recent archive file (the one before `{archive_filename}`) currently has `data-next="../index.html"` (set during the last run). Update it to point to the newly archived file instead:
-
-1. Scan `docs/archive/` for all newsletter HTML files, excluding `{archive_filename}`
-2. Sort by date descending (files with suffixes like `-2`, `-3` sort after the base date file) — the first match is the previous archive
-3. If found, and it contains `<nav class="issue-nav"`:
-   - Replace `data-next="../index.html"` → `data-next="{archive_filename}"` (just the filename, since both files are in the same `archive/` directory)
-   - Replace `href="../index.html" class="nav-link nav-next"` → `href="{archive_filename}" class="nav-link nav-next"`
-4. Write the patched file back
-5. If no previous archive exists or it has no `<nav class="issue-nav"` (pre-navigation issue), skip this step
-
-### 5. Write the new issue
-
-**Only after step 4 is fully complete**, write the assembled HTML to `docs/index.html`.
-
-### 6. Validate
-
-Before committing, scan the HTML for:
-- Any simplified characters (common ones: 体/國→国, 學→学, 發→发, 時→时, etc.)
-- Any Chinese characters NOT wrapped in `<span class="c">` inside article body/headline elements
-- Report warnings if found
-
-### 7. Commit and push
+### 4. Commit and push
 
 ```bash
 git add docs/index.html docs/archive/
@@ -120,25 +49,17 @@ git commit -m "Newsletter {{date}}"
 git push
 ```
 
-## Content
+### 5. Report
 
-### Date
-{{date}}
-
-### Articles
-{{articles}}
-
-### Translations
-{{translations}}
-
-### Editor's Desk Headlines
-{{desk_headlines}}
-
-### Glossary
-{{glossary}}
+Print a summary:
+- Date
+- Article count
+- Glossary entry count
+- Any warnings from validation
+- Whether any remediation was needed
 
 ## Error Handling
 
-- If `docs/index.html` doesn't exist (first run), skip archiving
+- If assembly fails, do NOT attempt to build HTML manually
+- If validation fails after 2 remediation attempts, report the remaining errors and stop
 - If git push fails, report the error but don't retry
-- Report any validation warnings in your response

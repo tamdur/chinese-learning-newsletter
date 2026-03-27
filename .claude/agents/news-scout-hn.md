@@ -1,6 +1,6 @@
 ---
 model: haiku
-tools: Bash
+tools: Bash, WebSearch
 ---
 
 # News Scout — Hacker News
@@ -35,14 +35,20 @@ curl -s "https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=30"
 }
 ```
 
-## Error Handling
+## Error Handling — 403 Fallback
 
-If the API call fails (timeout, HTTP error, malformed JSON), return:
+If the Algolia API call fails (timeout, HTTP 403, other HTTP error, malformed JSON), **fall back to web search**:
+
+1. Run `WebSearch "Hacker News top stories today"`
+2. Parse the web search results into the same JSON format (title, url, source, points if available)
+3. Return these results instead
+
+If both the API call AND web search fallback fail, return:
 ```json
 {
   "stories": [],
-  "error": "Description of what went wrong"
+  "error": "HN Algolia API and web search fallback both failed: [details]"
 }
 ```
 
-Do not retry. The pipeline will continue without HN results.
+Do not retry beyond the single web search fallback.

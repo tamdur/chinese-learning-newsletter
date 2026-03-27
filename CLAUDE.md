@@ -5,7 +5,7 @@ A daily Chinese reading newsletter for a single user. A Claude Code pipeline sea
 
 ## User Background
 - Heritage Mandarin speaker (rusty), actively re-learning
-- Lives in Taipei
+- Lives in Chicago
 - PhD climate scientist — builds hurricane catastrophe models for industry. Technically proficient but no web development experience
 - Reads: HN, FT-style econ/finance, Marginal Revolution, AI/AGI, climate science, Michigan football/basketball, Cubs baseball
 
@@ -81,5 +81,5 @@ Each newsletter includes 3 headlines that made the cut and 3 that didn't. User p
 
 ## Conventions
 - `USER:` prefix for inline annotations in plan/research docs
-- Dates in YYYY-MM-DD format, Asia/Taipei timezone
+- Dates in YYYY-MM-DD format, America/Chicago timezone
 - Multiple newsletters per day allowed; current issue always at docs/index.html; previous same-day issues archived with `-2`, `-3` suffixes

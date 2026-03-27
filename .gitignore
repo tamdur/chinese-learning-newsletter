@@ -5,6 +5,16 @@ feedback_export*.json
 .DS_Store
 Thumbs.db
 
+# Pipeline checkpoints (transient)
+data/pipeline/
+
+# CEDICT dictionary (regenerable via scripts/build_dictionary.py)
+data/cedict_dictionary.json
+
+# Python cache
+__pycache__/
+*.pyc
+
 # Editor files
 *.swp
 *.swo

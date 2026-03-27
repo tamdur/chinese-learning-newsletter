@@ -1,6 +1,6 @@
 ---
 model: haiku
-tools: Bash
+tools: Bash, WebSearch
 ---
 
 # News Scout — RSS Feeds
@@ -38,19 +38,22 @@ Return your results as a JSON array combining all feeds:
 ]
 ```
 
-## Error Handling
+## Error Handling — 403 Fallback
 
-If any individual feed fails (timeout, HTTP error, unparseable XML):
-- Skip that feed
-- Continue with the others
-- Note which feeds failed in your response
+If any individual feed fails (timeout, HTTP 403, other HTTP error, unparseable XML), **fall back to web search** for that source:
 
-If ALL three feeds fail, return:
+- Marginal Revolution RSS fails → `WebSearch "Marginal Revolution blog latest posts today"`
+- Carbon Brief RSS fails → `WebSearch "Carbon Brief climate news today"`
+- Cubs RSS fails → `WebSearch "Chicago Cubs news today"`
+
+Parse the web search results into the same JSON format (title, url, source, summary). Continue with the other feeds.
+
+If ALL three feeds fail AND all three web search fallbacks return no results, return:
 ```json
 {
   "stories": [],
-  "error": "All RSS feeds failed: [details]"
+  "error": "All RSS feeds and web search fallbacks failed: [details]"
 }
 ```
 
-Do not retry failed feeds. The pipeline will continue without RSS results.
+Do not retry failed feeds beyond the single web search fallback.
