@@ -765,18 +765,27 @@ Replace the Phase 5 placeholder with the actual obsessions pipeline.
 
 ### Phase 5 Outcome
 
-**Completed:** 2026-03-27 (all infrastructure created)
+**Completed:** 2026-03-27 (infrastructure + first e2e run)
 
-**Created:**
-- `config/obsessions.json` — editorial voice + one starter obsession (Taiwanese Electronic Music Pioneers)
-- `.claude/agents/obsessions-scout.md` — Sonnet agent: web searches for specific stories per obsession, with dedup against recent headlines
+**Created (infrastructure):**
+- `config/obsessions.json` — editorial voice + 3 active obsessions (Taiwanese music, Finland honeymoon, Chicago events)
+- `.claude/agents/obsessions-scout.md` — Sonnet agent: web searches for specific stories per obsession
 - `.claude/agents/obsessions-writer.md` — Opus agent: museum curator voice, same span-wrapping requirements as article-writer
 - `templates/obsessions.html` — reference template with obsession sections
-- `.claude/commands/obsessions.md` — full pipeline: scout → write → translate → glossary → assemble → validate → commit/push
+- `.claude/commands/obsessions.md` — full pipeline with headline dedup log
 
-**OPEN ITEMS:**
-1. **Assembler:** Like wisdom, `assemble.py` uses generic content builder. Needs `build_obsessions_content()` with `<section class="obsession-section" data-obsession-id="...">` structure when first tested e2e.
-2. **E2E test:** `/obsessions` has not been run end-to-end yet.
+**E2E test completed 2026-03-27:**
+- 3 scouts dispatched in parallel, all returned successfully
+- Articles written by Opus: Lim Giong's 驚蟄, Kakslauttanen smoke saunas, David Byrne's Theater of the Mind
+- Full glossary pipeline (CEDICT pre-match + agent words), 421 entries, 100% char coverage
+- Assembly + validation pass with proper `<section class="obsession-section">` markup
+
+**Post-test improvements (same session):**
+- Created `data/obsessions_headline_log.json` — persistent per-obsession headline log for dedup
+- Updated `obsessions.md` pipeline to read/write headline log (Step 2 reads last 10 per obsession, Step 8 appends new headlines)
+- Added `build_obsessions_content()` to `assemble.py` — proper `<section class="obsession-section" data-obsession-id="...">` markup
+- Added `build_wisdom_content()` to `assemble.py` — proper `<section class="wisdom-section" data-section="...">` markup
+- Updated `validate.py` page-type checks to verify section markup + source attribution
 
 ---
 
@@ -915,39 +924,41 @@ Brief update for the public repo.
 **Partially completed:** 2026-03-27
 
 - **Step 7.4 (CLAUDE.md):** Rewritten to reflect multi-page architecture, all new commands, page types, wisdom/obsessions/SE documentation.
-- **Steps 7.1-7.3, 7.5:** E2E testing and README deferred to follow-up session.
+- **Step 7.1 (partial):** `/obsessions` e2e tested successfully. `/newsletter` and `/wisdom` not yet tested in this expansion.
+- **Steps 7.2-7.3, 7.5:** SE test, re-run test, and README deferred.
 
 ---
 
 ## Follow-up Items (consolidated)
 
-These items need attention before the expansion is fully operational:
+Updated: 2026-03-27 end-of-session
 
-### Done (this session):
-- ~~Fetch Mengzi passages~~ — 269 passages fetched from ctext.org API (14/14 chapters)
-- ~~Translate Mengzi~~ — 269/269 passages translated by 14 parallel Opus agents, cached in source file
-- ~~Curate Zen source text~~ — User selected: 信心銘 → 金剛經 → 六祖壇經 (shortest to longest)
+### Completed (across two sessions):
+- ~~Fetch Mengzi passages~~ — 269 passages from ctext.org API (14/14 chapters), fixed API endpoint + URNs
+- ~~Translate Mengzi~~ — 269/269 Opus translations cached in source file
+- ~~Curate Zen source text~~ — User selected 信心銘 → 金剛經 → 六祖壇經 (no koans)
+- ~~Fetch + segment + translate Zen texts~~ — 178 passages (4 + 43 + 131), all with Opus translations
+- ~~Build `data/sources/zen_passages.json`~~ — three texts combined sequentially with translations
 - ~~Upgrade translator-classical to Opus~~ — permanent translations deserve Opus quality
-- ~~Update config/wisdom.json~~ — Zen section now documents three-text sequence
-
-### In progress:
-1. **Fetch + segment + translate Zen texts** — 信心銘, 金剛經, 六祖壇經 being fetched from Wikisource now. Need segmentation into ~150-char passages and Opus translation.
+- ~~Update config/wisdom.json~~ — Zen section documents three-text sequence
+- ~~Add wisdom-specific assembler~~ — `build_wisdom_content()` with `<section class="wisdom-section" data-section="...">`
+- ~~Add obsessions-specific assembler~~ — `build_obsessions_content()` with `<section class="obsession-section" data-obsession-id="...">`
+- ~~Obsessions headline dedup~~ — `data/obsessions_headline_log.json` persistent log, pipeline reads/writes it
+- ~~E2E test `/obsessions`~~ — 3 obsessions, full pipeline, validation passes
+- ~~Validator updates~~ — page-specific checks for wisdom sections, obsession sections, source attribution
 
 ### Must-do before first `/go` with all pages:
-2. **Build `data/sources/zen_passages.json`** — combine all three Zen texts into one sequential passage file with translations
-3. **Add wisdom-specific assembler:** `assemble.py` needs `build_wisdom_content()` that produces `<section class="wisdom-section" data-section="...">` structure
-4. **Add obsessions-specific assembler:** Same — needs `build_obsessions_content()` with `<section class="obsession-section" data-obsession-id="...">` structure
-5. **Zen progression logic:** `wisdom_progress.json` / `wisdom.md` pipeline needs to track which of the three Zen texts is active and auto-advance when one completes
-6. **E2E test `/newsletter`** — verify Phase 1+2 refactoring didn't break anything
-7. **E2E test `/wisdom`** — with real source data
-8. **E2E test `/obsessions`** — with at least one active obsession
-9. **E2E test `/se`** — after a newsletter is generated
-10. **E2E test `/go`** — full orchestration
+1. **E2E test `/newsletter`** — verify Phase 1+2 refactoring didn't break the existing newsletter pipeline. This is the most important remaining test since the newsletter is the core product.
+2. **E2E test `/wisdom`** — with real source data (Heart Sutra, Mengzi, Zen). All source data is cached and ready. The pipeline needs to: read sources, select today's passages, wrap chars, use cached translations, build glossary, assemble with wisdom-specific builder, validate.
+3. **Zen progression logic:** The current `wisdom.md` pipeline and `wisdom_progress.json` track a single `next_passage_index` for Zen. Since `zen_passages.json` contains all three texts sequentially (indices 0-177), simple index incrementing works — it will naturally advance through Faith in Mind → Diamond Sutra → Platform Sutra. The `texts_in_order` metadata in `config/wisdom.json` documents which index ranges belong to which text, but the pipeline doesn't need to be aware of text boundaries for basic operation.
+4. **E2E test `/se`** — after a newsletter is generated, test inserting a Special Edition
+5. **E2E test `/go`** — full orchestration (newsletter → wisdom → obsessions)
 
 ### Nice-to-have:
-11. **README.md update** (Step 7.5)
-12. **Wisdom idempotency edge case:** If Mengzi last_served_date is today but Zen is null (first run scenario), the idempotency check should handle this gracefully
-13. **Future Zen texts:** After Platform Sutra completes (~6 months), consider adding 碧巖錄 (Blue Cliff Record, ~1,000+ passages / 3+ years) as a long-term source. User may reconsider koans by then.
+6. **README.md update** (Step 7.5)
+7. **Wisdom idempotency edge case:** If Mengzi last_served_date is today but Zen is null (first run scenario), the idempotency check should handle this gracefully. Current check: skips if BOTH Mengzi and Zen last_served_date match today. On first run both are null, so it won't skip — this is correct. Edge case only arises if pipeline crashes between Mengzi and Zen updates.
+8. **Future Zen texts:** After Platform Sutra completes (~6 months), consider adding 碧巖錄 (Blue Cliff Record, ~1,000+ passages / 3+ years). User may reconsider koans by then.
+9. **Obsessions dedup refinement:** Current dedup passes last 10 headlines per obsession to the scout. If scouts still repeat, could add semantic similarity checking or pass full article summaries instead of just headlines.
 
 ---
 
@@ -976,7 +987,69 @@ Same schema, different content. The pipeline doesn't know or care.
 
 - **Mobile-optimized layout** for all pages
 - **Wisdom auto-progression:** If the user skips a day, should Mengzi advance anyway? Current design: no — it only advances when the page is generated. This means skipping days doesn't lose passages.
-- **Obsessions archive search:** Preventing repeat stories across obsessions issues. Phase 5 includes basic "check recent archives" but a more robust dedup system could be added later.
+- **Obsessions dedup enhancement:** Current system uses persistent headline log (last 10 per obsession). Could add semantic similarity or full-summary dedup if scouts still repeat.
 - **SE preservation flag:** `--preserve-se` to carry special edition content across regeneration.
 - **Reading level auto-progression:** Deferred from Sprint 1, still deferred.
 - **Scheduled daily generation:** cron/launchd automation (deferred from Sprint 1).
+- **Future Zen texts:** After Platform Sutra completes (~6 months from first wisdom run), add 碧巖錄 (Blue Cliff Record) for 3+ years of content.
+
+## Current Codebase State (as of 2026-03-27 end-of-session)
+
+### What works end-to-end:
+- `/obsessions` — fully tested, generates page with 3 obsessions, proper section markup, glossary, dedup log
+
+### What has infrastructure but needs first e2e test:
+- `/newsletter` — refactored (Phases 1-3) but not tested since refactoring. All scripts parse, assembler/validator updated. Should work but needs verification.
+- `/wisdom` — all source data cached (Heart Sutra 7 segments, Mengzi 269 passages, Zen 178 passages — all with translations). Pipeline command written. Assembler has wisdom-specific builder. Needs first run to verify full pipeline.
+- `/se` — command written, CSS added. Needs a newsletter to exist first, then test inserting SE.
+- `/go` — orchestrator written (calls newsletter → wisdom → obsessions). Needs all three sub-pipelines working first.
+
+### Source data inventory:
+| Source | File | Passages | Translations | Ready? |
+|--------|------|----------|-------------|--------|
+| Heart Sutra | `data/sources/heart_sutra.json` | 7 segments | 7/7 canonical | Yes |
+| Mengzi | `data/sources/mengzi_passages.json` | 269 | 269/269 Opus | Yes |
+| Zen (3 texts) | `data/sources/zen_passages.json` | 178 | 178/178 Opus | Yes |
+| **Total** | | **454** | **454/454** | |
+
+### Key files created/modified in this expansion:
+```
+# Commands
+.claude/commands/go.md              — thin orchestrator
+.claude/commands/newsletter.md      — extracted from old go.md
+.claude/commands/wisdom.md          — wisdom pipeline with idempotency
+.claude/commands/obsessions.md      — obsessions pipeline with headline dedup
+.claude/commands/se.md              — special edition insert
+
+# Agents
+.claude/agents/translator-classical.md  — Opus, for permanent translations
+.claude/agents/obsessions-scout.md      — Sonnet, web search per obsession
+.claude/agents/obsessions-writer.md     — Opus, museum curator voice
+
+# Config
+config/wisdom.json                  — Heart Sutra, Mengzi, Zen configs
+config/obsessions.json              — 3 active obsessions + editorial voice
+
+# Data
+data/sources/heart_sutra.json       — 7 weekly segments with translations
+data/sources/mengzi_passages.json   — 269 passages with Opus translations
+data/sources/zen_passages.json      — 178 passages (3 texts) with Opus translations
+data/wisdom_progress.json           — Mengzi + Zen index tracking
+data/obsessions_headline_log.json   — persistent dedup log
+
+# Templates
+templates/_shared.css               — all shared styles incl. site nav, SE header
+templates/_shared.js                — translation toggle + mobile glossary
+templates/newsletter.html           — slimmed reference template
+templates/wisdom.html               — wisdom reference template
+templates/obsessions.html           — obsessions reference template
+
+# Scripts
+scripts/assemble.py                 — page-type-aware: newsletter/wisdom/obsessions builders
+scripts/validate.py                 — page-type-aware: section-specific checks
+scripts/build_wisdom_sources.py     — Heart Sutra + Mengzi fetcher (ctext.org API)
+
+# Generated
+docs/obsessions.html                — first obsessions issue (2026-03-27)
+docs/archive/obsessions/            — obsessions archive directory
+```
