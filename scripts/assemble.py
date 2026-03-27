@@ -370,6 +370,67 @@ def build_newsletter_content(articles: list, translations: list) -> str:
     return "\n\n<hr>\n\n".join(blocks)
 
 
+def build_wisdom_section_html(unit: dict, translation: str, section_id: str) -> str:
+    """Build one <section class="wisdom-section"> block."""
+    source_line = ""
+    if unit.get("source_label"):
+        source_line = f'\n  <p class="article-source">{unit["source_label"]}</p>'
+
+    return f"""<section class="wisdom-section" data-section="{section_id}">
+  <h2 class="section-title">{unit['headline_html']}</h2>{source_line}
+
+  <div class="section-body-zh">
+    {unit['body_html']}
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="section-body-en" hidden>
+    {translation}
+  </div>
+</section>"""
+
+
+def build_wisdom_content(articles: list, translations: list) -> str:
+    """Build the <main> inner content for the wisdom page."""
+    section_ids = ["heart-sutra", "mengzi", "zen"]
+    blocks = []
+    for i, (article, translation) in enumerate(zip(articles, translations)):
+        sid = section_ids[i] if i < len(section_ids) else f"section-{i}"
+        blocks.append(build_wisdom_section_html(article, translation, sid))
+    return "\n\n<hr>\n\n".join(blocks)
+
+
+def build_obsession_section_html(unit: dict, translation: str, obsession_id: str) -> str:
+    """Build one <section class="obsession-section"> block."""
+    source_line = ""
+    if unit.get("source_label"):
+        source_line = f'\n  <p class="article-source">來源：{unit["source_label"]}</p>'
+
+    return f"""<section class="obsession-section" data-obsession-id="{obsession_id}">
+  <h2 class="section-title">{unit['headline_html']}</h2>{source_line}
+
+  <div class="section-body-zh">
+    {unit['body_html']}
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="section-body-en" hidden>
+    {translation}
+  </div>
+</section>"""
+
+
+def build_obsessions_content(articles: list, translations: list) -> str:
+    """Build the <main> inner content for the obsessions page."""
+    blocks = []
+    for i, (article, translation) in enumerate(zip(articles, translations)):
+        obsession_id = article.get("obsession_id", f"obsession-{i}")
+        blocks.append(build_obsession_section_html(article, translation, obsession_id))
+    return "\n\n<hr>\n\n".join(blocks)
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -429,9 +490,11 @@ def main():
     # Build page content based on type
     if page_type == "newsletter":
         main_content = build_newsletter_content(articles, translations)
+    elif page_type == "wisdom":
+        main_content = build_wisdom_content(articles, translations)
+    elif page_type == "obsessions":
+        main_content = build_obsessions_content(articles, translations)
     else:
-        # Wisdom and obsessions will be implemented in later phases
-        # For now, use the same content unit builder
         main_content = build_newsletter_content(articles, translations)
 
     # Assemble complete page

@@ -6,22 +6,33 @@ All intermediate results are checkpointed to `data/pipeline/`.
 
 ---
 
-## Step 1: Read config
+## Step 1: Read config and headline log
 
 Read these files:
 - `config/settings.json` — reading level, timezone
 - `config/obsessions.json` — editorial voice and obsession definitions
+- `data/obsessions_headline_log.json` — running log of all past headlines (for dedup)
 
 Filter for active obsessions only (`"active": true`). If no obsessions are active, print "No active obsessions — skipping." and stop.
 
-## Step 2: Check recent archives for dedup
+## Step 2: Build dedup context
 
-List files in `docs/archive/obsessions/` (last 3-5 issues). For each recent issue, read it and extract headlines. Collect these as "recent headlines" to pass to scouts for dedup.
+From the headline log, collect the last 10 headlines **per obsession** (not just globally). Format them as a list for the scouts:
+
+```
+Recent headlines for "Interesting Taiwanese Music, Past and Present":
+- 2026-03-27: 林強的聲音世界：用台灣的聲音畫一幅畫 (Lim Giong's Insects Awaken)
+- ...
+
+Recent headlines for "Discovering Finland for March 2027 Honeymoon":
+- 2026-03-27: 煙燻桑拿：芬蘭最古老的溫暖 (Kakslauttanen smoke saunas)
+- ...
+```
 
 ## Step 3: Dispatch scouts in parallel
 
 For each active obsession, launch an **obsessions-scout** agent (Sonnet):
-- Pass the obsession's `label`, `guidance`, and recent headlines
+- Pass the obsession's `label`, `guidance`, and **that obsession's** recent headlines
 - Agent prompt: "Find a specific, interesting story for this obsession.\n\nLabel: {label}\nGuidance: {guidance}\n\nRecent headlines to avoid:\n{recent_headlines}\n\nFollow the instructions in your agent definition."
 
 All scouts run concurrently. Wait for all to return.
@@ -70,15 +81,27 @@ python3 scripts/validate.py --page-type obsessions
 
 Handle any validation failures.
 
-## Step 8: Commit and push
+## Step 8: Update headline log
+
+Append today's headlines to `data/obsessions_headline_log.json`. For each article produced, add:
+```json
+{
+  "date": "{today}",
+  "obsession_id": "{obsession_id from article}",
+  "headline": "{headline_plain}",
+  "headline_en": "{brief English description}"
+}
+```
+
+## Step 9: Commit and push
 
 ```bash
-git add docs/obsessions.html
+git add docs/obsessions.html data/obsessions_headline_log.json
 git commit -m "Obsessions {today}"
 git push
 ```
 
-## Step 9: Cleanup checkpoints
+## Step 10: Cleanup checkpoints
 
 ```bash
 rm -f data/pipeline/*.json data/pipeline/*.txt

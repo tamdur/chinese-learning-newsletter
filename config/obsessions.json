@@ -2,9 +2,21 @@
   "editorial_voice": "A thoughtful museum curator sharing real knowledge succinctly and clearly with the public. Not academic, not dumbed-down — the voice of someone who has spent years with this material and can make it vivid in a few sentences. Like a great wall text at a world-class museum.",
   "obsessions": [
     {
-      "id": "taiwan-electronic-music-70s",
-      "label": "Taiwanese Electronic Music Pioneers",
-      "guidance": "Discovering highly-regarded electronic music artists from Taiwan working in the 1970s. Focus on specific artists, albums, techniques, and cultural context.",
+      "id": "taiwanese-crate-digging",
+      "label": "Interesting Taiwanese Music, Past and Present",
+      "guidance": "Discovering highly-regarded and interesting albums from innovative and talented Taiwanese artists, past and present. In the style of Angie QQ's curation at https://www.nts.live/shows/angie-qq. Present a new album each time, with some backstory and why it's so exciting sonically.",
+      "active": true
+    },
+    {
+      "id": "finland-honeymoon",
+      "label": "Discovering Finland for March 2027 Honeymoon",
+      "guidance": "Evergreen info on places, experiences, restaurants, and lodging for a couple who can't wait to travel to Finland in March for their honeymoon to experience the elegant, thoughtful, nature-communing culture of Finland. Finnish spa culture is a particular source of excitement.",
+      "active": true
+    },
+    {
+      "id": "do-312",
+      "label": "Upcoming Chicago Experiences",
+      "guidance": "Describe upcoming events (with at least two days lead time) that make up the spice of life. Examples could be a local ikebana class, an amateur wrestling event, or a special lecture with a renowned chef. Special events that might fly under the radar but are open to anyone attending. Sources may include Block Club Chicago events, Chicago Reader things-to-do, TimeOut Chicago.",
       "active": true
     }
   ]

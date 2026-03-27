@@ -138,10 +138,10 @@ def check_navigation(html: str, page_type: str, result: ValidationResult):
 
 def check_translation_toggles(html: str, result: ValidationResult):
     """Check that each content section has a translation toggle and hidden English section."""
-    # Count content units (articles or sections)
+    # Count content units (articles, wisdom sections, or obsession sections)
     unit_count = len(re.findall(r'data-article-id="\d+"', html))
-    if unit_count == 0:
-        unit_count = len(re.findall(r'data-section="[^"]*"', html))
+    unit_count += len(re.findall(r'data-section="[^"]*"', html))
+    unit_count += len(re.findall(r'data-obsession-id="[^"]*"', html))
 
     toggle_count = html.count('class="translation-toggle"')
     en_count = len(re.findall(r'class="(?:article-body|section-body)-en"[^>]*hidden', html))
@@ -209,17 +209,29 @@ def check_newsletter(html: str, result: ValidationResult):
 
 
 def check_wisdom(html: str, result: ValidationResult):
-    """Wisdom-specific checks (placeholder for Phase 4)."""
+    """Wisdom-specific checks."""
     sections = re.findall(r'data-section="([^"]*)"', html)
-    if len(sections) < 3:
+    if not sections:
+        result.error("No wisdom sections found")
+    elif len(sections) < 3:
         result.warn(f"Expected 3 wisdom sections, found {len(sections)}")
+    # Check expected section IDs
+    expected = {"heart-sutra", "mengzi", "zen"}
+    found = set(sections)
+    missing = expected - found
+    if missing:
+        result.warn(f"Missing wisdom sections: {missing}")
 
 
 def check_obsessions(html: str, result: ValidationResult):
-    """Obsessions-specific checks (placeholder for Phase 5)."""
+    """Obsessions-specific checks."""
     sections = re.findall(r'data-obsession-id="([^"]*)"', html)
     if not sections:
-        result.warn("No obsession sections found")
+        result.error("No obsession sections found")
+    # Check each section has a source attribution
+    source_count = html.count('class="article-source"')
+    if source_count < len(sections):
+        result.warn(f"Some obsession sections missing source attribution ({source_count}/{len(sections)})")
 
 
 # ---------------------------------------------------------------------------
