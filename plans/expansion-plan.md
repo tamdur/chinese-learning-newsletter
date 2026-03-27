@@ -185,6 +185,7 @@ Run `/go` (the existing command, now updated) end-to-end. Verify:
 
 **Surprises:** None. Clean removal with no unexpected dependencies.
 **Step 1.8 (e2e test):** Deferred to user's next `/go` run.
+USER: Deferring this /go run until later, looks good based upon change report so far
 
 ---
 
@@ -319,7 +320,40 @@ Run the refactored pipeline via the existing `/go` command (which still only pro
 - Archive chain still works correctly
 
 ### Phase 2 Outcome
-*(CC fills this in after completing Phase 2)*
+
+**Completed:** 2026-03-27
+
+**Changes made (Steps 2.1-2.6):**
+
+- Created `templates/_shared.css` — all shared CSS: reset, body, content units (`.article`, `.section-title`, `.section-body-zh`), translation toggle, `.c` character styling, toolbar, site nav (`.site-nav`, `.site-nav-link`), issue nav, footer, mobile touch styles, char popup. Added `.page-header` as shared header class (replacing `.newsletter-header`).
+- Created `templates/_shared.js` — translation toggle (generalized: finds `.article`, `.wisdom-section`, or `.obsession-section` container; looks for `.article-body-en` or `.section-body-en`) + complete mobile glossary popup logic.
+- Refactored `scripts/assemble.py`:
+  - Added `--page-type newsletter|wisdom|obsessions` CLI arg (default: newsletter)
+  - `PAGE_CONFIG` dict maps page types to index paths, archive dirs, templates, titles
+  - CSS/JS loaded from `_shared.css` / `_shared.js` files directly (no more parsing from HTML template)
+  - `read_page_css()` reads page-specific CSS from template's `<style>` block
+  - Archive functions parameterized: `list_archive_files(archive_dir)`, `archive_old_issue(page_type, today)`
+  - `build_site_nav(current_page)` generates cross-page nav; omits links to non-existent pages; returns empty string when only one page exists
+  - `build_issue_nav()` replaces `build_nav()` with page-type awareness
+  - `build_content_unit_html()` replaces `build_article_html()` — same structure, more generic
+  - `build_page_shell()` is the shared HTML wrapper for all page types
+  - `build_newsletter_content()` builds the `<main>` inner content for newsletters
+  - Wisdom/obsessions fall through to generic content builder (stubs for later phases)
+- Refactored `scripts/validate.py`:
+  - Added `--page-type newsletter|wisdom|obsessions` CLI arg (default: newsletter)
+  - Content regex patterns generalized: `article-body-zh` OR `section-body-zh`, `article-headline` OR `section-title`
+  - Page-type-specific check functions: `check_newsletter()`, `check_wisdom()`, `check_obsessions()` (last two are stubs)
+- Slimmed `templates/newsletter.html` to reference spec only — comments point to `_shared.css` and `_shared.js`, contains only newsletter-specific CSS (currently empty/minimal), single sample article
+- Updated `.claude/commands/go.md` Step 6 to pass `--page-type newsletter` to both assemble.py and validate.py
+
+**Verified:**
+- `assemble.py --page-type newsletter` produces correct HTML with shared CSS/JS injected
+- `validate.py --page-type newsletter` passes all checks on assembled output
+- Site nav correctly returns empty string when only one page exists
+- Archive chain works correctly (tested with dummy data)
+- Step 2.7 (full `/go` e2e test): deferred to user's next run
+
+**Note:** The header class changed from `.newsletter-header` to `.page-header`. The next `/go` run will produce a newsletter with the new class name. Old archived issues retain `.newsletter-header` but this is harmless — the CSS still renders correctly since both styles are equivalent.
 
 ---
 

@@ -196,7 +196,7 @@ Print: total entries, single-char entries, multi-char entries, dictionary-matche
 
 Launch the **assembler** agent (Sonnet) — this is now a validation agent, not a content generator:
 - Agent prompt: "Today's date is {today}. Run assembly and validation per your agent definition. All checkpoint files are in data/pipeline/."
-- The agent runs `python3 scripts/assemble.py --date {today}` and `python3 scripts/validate.py`
+- The agent runs `python3 scripts/assemble.py --page-type newsletter --date {today}` and `python3 scripts/validate.py --page-type newsletter`
 - It handles any validation failures by re-dispatching sub-agents as needed
 - It commits and pushes the result
 

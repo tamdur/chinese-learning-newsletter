@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
-"""Deterministic HTML assembly for the 今日讀報 newsletter.
+"""Page-type-aware HTML assembly for 今日讀報.
 
-Reads checkpoint files from data/pipeline/ and the template from
-templates/newsletter.html, then constructs a complete standalone HTML file.
-Handles archiving the previous issue and patching navigation links.
+Reads checkpoint files from data/pipeline/ and shared/page-specific templates,
+then constructs a complete standalone HTML file. Handles archiving the previous
+issue and patching navigation links.
 
 Usage:
-    python3 scripts/assemble.py [--date YYYY-MM-DD]
-    Defaults to today in America/Chicago.
+    python3 scripts/assemble.py [--page-type newsletter|wisdom|obsessions] [--date YYYY-MM-DD]
+    Defaults to --page-type newsletter and today in America/Chicago.
 """
 
 import argparse
 import json
-import os
 import re
 import sys
 from datetime import datetime
@@ -24,17 +23,49 @@ from zoneinfo import ZoneInfo
 # ---------------------------------------------------------------------------
 
 REPO = Path(__file__).resolve().parent.parent
-TEMPLATE = REPO / "templates" / "newsletter.html"
+TEMPLATES = REPO / "templates"
+SHARED_CSS = TEMPLATES / "_shared.css"
+SHARED_JS = TEMPLATES / "_shared.js"
 PIPELINE = REPO / "data" / "pipeline"
 DOCS = REPO / "docs"
-ARCHIVE = DOCS / "archive"
-INDEX = DOCS / "index.html"
+
+# Page-type configuration: index file, archive dir, page title
+PAGE_CONFIG = {
+    "newsletter": {
+        "index": DOCS / "index.html",
+        "archive": DOCS / "archive",
+        "template": TEMPLATES / "newsletter.html",
+        "title": "今日讀報",
+        "footer": "今日讀報 — 以 Claude Code 製作",
+    },
+    "wisdom": {
+        "index": DOCS / "wisdom.html",
+        "archive": DOCS / "archive" / "wisdom",
+        "template": TEMPLATES / "wisdom.html",
+        "title": "每日智慧",
+        "footer": "每日智慧 — 以 Claude Code 製作",
+    },
+    "obsessions": {
+        "index": DOCS / "obsessions.html",
+        "archive": DOCS / "archive" / "obsessions",
+        "template": TEMPLATES / "obsessions.html",
+        "title": "深度專題",
+        "footer": "深度專題 — 以 Claude Code 製作",
+    },
+}
 
 CHECKPOINT_FILES = {
     "articles": PIPELINE / "articles.json",
     "translations": PIPELINE / "translations.json",
     "glossary": PIPELINE / "glossary.json",
 }
+
+# Site navigation pages (order matters for display)
+SITE_NAV_PAGES = [
+    ("newsletter", "index.html", "今日讀報"),
+    ("wisdom", "wisdom.html", "每日智慧"),
+    ("obsessions", "obsessions.html", "深度專題"),
+]
 
 
 def load_json(path: Path) -> dict | list:
@@ -43,36 +74,62 @@ def load_json(path: Path) -> dict | list:
 
 
 # ---------------------------------------------------------------------------
-# Template extraction
+# Shared asset loading
 # ---------------------------------------------------------------------------
 
-def extract_css(html: str) -> str:
-    """Extract content between <style> and </style>."""
+def read_shared_css() -> str:
+    """Read the shared CSS file."""
+    return SHARED_CSS.read_text(encoding="utf-8")
+
+
+def read_shared_js() -> str:
+    """Read the shared JS file."""
+    return SHARED_JS.read_text(encoding="utf-8")
+
+
+def read_page_css(page_type: str) -> str:
+    """Read page-specific CSS from the page template's <style> block, if any."""
+    template_path = PAGE_CONFIG[page_type]["template"]
+    if not template_path.exists():
+        return ""
+    html = template_path.read_text(encoding="utf-8")
     m = re.search(r"<style>(.*?)</style>", html, re.DOTALL)
-    if not m:
-        raise RuntimeError("Could not extract <style> from template")
-    return m.group(1)
-
-
-def extract_main_js(html: str) -> str:
-    """Extract the main IIFE <script> block (the second one, after GLOSSARY)."""
-    scripts = re.findall(r"<script>(.*?)</script>", html, re.DOTALL)
-    if len(scripts) < 2:
-        raise RuntimeError("Could not find main JS IIFE in template")
-    return scripts[1]
+    return m.group(1) if m else ""
 
 
 # ---------------------------------------------------------------------------
-# Archive management
+# Site navigation
 # ---------------------------------------------------------------------------
 
-def list_archive_files() -> list[str]:
+def build_site_nav(current_page: str) -> str:
+    """Build the site-wide navigation bar. Only shows links for pages that exist."""
+    links = []
+    for page_type, href, label in SITE_NAV_PAGES:
+        # Always show current page; show others only if their index file exists
+        page_path = DOCS / href
+        if page_type != current_page and not page_path.exists():
+            continue
+        active = " active" if page_type == current_page else ""
+        links.append(f'  <a href="{href}" class="site-nav-link{active}">{label}</a>')
+
+    if len(links) <= 1:
+        # Only one page exists — no need for site nav
+        return ""
+
+    return '<nav class="site-nav">\n' + "\n".join(links) + "\n</nav>"
+
+
+# ---------------------------------------------------------------------------
+# Archive management (parameterized by page type)
+# ---------------------------------------------------------------------------
+
+def list_archive_files(archive_dir: Path) -> list[str]:
     """Return sorted list of archive HTML filenames (date order, suffix order)."""
-    if not ARCHIVE.exists():
+    if not archive_dir.exists():
         return []
     pattern = re.compile(r"^(\d{4}-\d{2}-\d{2})(?:-(\d+))?\.html$")
     files = []
-    for f in ARCHIVE.iterdir():
+    for f in archive_dir.iterdir():
         m = pattern.match(f.name)
         if m:
             date_str = m.group(1)
@@ -82,14 +139,14 @@ def list_archive_files() -> list[str]:
     return [f[2] for f in files]
 
 
-def determine_archive_filename(old_date: str) -> str:
+def determine_archive_filename(archive_dir: Path, old_date: str) -> str:
     """Determine the archive filename for the old issue, handling same-day suffixes."""
     base = f"{old_date}.html"
-    if not (ARCHIVE / base).exists():
+    if not (archive_dir / base).exists():
         return base
 
     suffix = 2
-    while (ARCHIVE / f"{old_date}-{suffix}.html").exists():
+    while (archive_dir / f"{old_date}-{suffix}.html").exists():
         suffix += 1
     return f"{old_date}-{suffix}.html"
 
@@ -100,16 +157,25 @@ def extract_date_from_html(html: str) -> str | None:
     return m.group(1) if m else None
 
 
-def fix_paths_for_archive(html: str) -> str:
-    """Rewrite nav link paths for a file moving from docs/ into docs/archive/."""
-    # data-prev="archive/X.html" -> data-prev="X.html"
-    html = html.replace('data-prev="archive/', 'data-prev="')
-    # href="archive/X.html" in nav-prev -> href="X.html"
-    html = re.sub(
-        r'href="archive/([^"]*)" class="nav-link nav-prev"',
-        r'href="\1" class="nav-link nav-prev"',
-        html,
-    )
+def fix_paths_for_archive(html: str, page_type: str) -> str:
+    """Rewrite nav link paths for a file moving into its archive directory."""
+    if page_type == "newsletter":
+        # data-prev="archive/X.html" -> data-prev="X.html"
+        html = html.replace('data-prev="archive/', 'data-prev="')
+        html = re.sub(
+            r'href="archive/([^"]*)" class="nav-link nav-prev"',
+            r'href="\1" class="nav-link nav-prev"',
+            html,
+        )
+    else:
+        # For sub-pages: data-prev="archive/wisdom/X.html" -> data-prev="X.html"
+        archive_prefix = f"archive/{page_type}/"
+        html = html.replace(f'data-prev="{archive_prefix}', 'data-prev="')
+        html = re.sub(
+            rf'href="{archive_prefix}([^"]*)" class="nav-link nav-prev"',
+            r'href="\1" class="nav-link nav-prev"',
+            html,
+        )
     return html
 
 
@@ -120,7 +186,6 @@ def patch_next_link(html: str, next_target: str) -> str:
         'href="" class="nav-link nav-next" hidden',
         f'href="{next_target}" class="nav-link nav-next"',
     )
-    # Also handle case where href already has a value
     html = re.sub(
         r'href="[^"]*" class="nav-link nav-next"',
         f'href="{next_target}" class="nav-link nav-next"',
@@ -129,60 +194,93 @@ def patch_next_link(html: str, next_target: str) -> str:
     return html
 
 
-def archive_old_issue(today: str) -> str | None:
-    """Archive the current docs/index.html. Returns the archive filename or None."""
-    if not INDEX.exists():
+def archive_old_issue(page_type: str, today: str) -> str | None:
+    """Archive the current page's index file. Returns the archive filename or None."""
+    config = PAGE_CONFIG[page_type]
+    index_path = config["index"]
+    archive_dir = config["archive"]
+
+    if not index_path.exists():
         return None
 
-    old_html = INDEX.read_text(encoding="utf-8")
+    old_html = index_path.read_text(encoding="utf-8")
     old_date = extract_date_from_html(old_html)
     if not old_date:
-        print("WARNING: Could not extract date from old index.html, skipping archive", file=sys.stderr)
+        print(f"WARNING: Could not extract date from old {index_path.name}, skipping archive", file=sys.stderr)
         return None
 
-    ARCHIVE.mkdir(parents=True, exist_ok=True)
+    archive_dir.mkdir(parents=True, exist_ok=True)
 
-    archive_name = determine_archive_filename(old_date)
-    archive_path = ARCHIVE / archive_name
+    archive_name = determine_archive_filename(archive_dir, old_date)
+    archive_path = archive_dir / archive_name
 
     # Fix relative paths for archive location
-    archived_html = fix_paths_for_archive(old_html)
+    archived_html = fix_paths_for_archive(old_html, page_type)
     archive_path.write_text(archived_html, encoding="utf-8")
 
-    # Patch newly archived file: set data-next to ../index.html
+    # Patch newly archived file: set data-next to parent index
     archived_html = archive_path.read_text(encoding="utf-8")
-    archived_html = patch_next_link(archived_html, "../index.html")
+    if page_type == "newsletter":
+        archived_html = patch_next_link(archived_html, "../index.html")
+    else:
+        archived_html = patch_next_link(archived_html, f"../../{config['index'].name}")
     archive_path.write_text(archived_html, encoding="utf-8")
 
-    # Patch previous archive file's next link to point to newly archived file
-    all_archives = list_archive_files()
+    # Patch previous archive file's next link
+    all_archives = list_archive_files(archive_dir)
     if len(all_archives) >= 2:
-        # Find the file just before the newly archived one
         idx = all_archives.index(archive_name)
         if idx > 0:
             prev_archive = all_archives[idx - 1]
-            prev_path = ARCHIVE / prev_archive
+            prev_path = archive_dir / prev_archive
             prev_html = prev_path.read_text(encoding="utf-8")
             if '<nav class="issue-nav"' in prev_html:
                 prev_html = patch_next_link(prev_html, archive_name)
                 prev_path.write_text(prev_html, encoding="utf-8")
 
-    print(f"Archived old issue ({old_date}) to docs/archive/{archive_name}")
+    print(f"Archived old issue ({old_date}) to {archive_path.relative_to(REPO)}")
     return archive_name
 
 
 # ---------------------------------------------------------------------------
-# HTML construction
+# Issue navigation (prev/next within page type)
 # ---------------------------------------------------------------------------
 
-def build_article_html(article: dict, translation: str, article_id: int) -> str:
-    """Build one <article> block."""
-    return f"""<article class="article" data-article-id="{article_id}">
-  <h2 class="article-headline">{article['headline_html']}</h2>
-  <p class="article-source">來源：{article['source_label']}</p>
+def build_issue_nav(page_type: str, archive_dir: Path, archive_files: list[str]) -> str:
+    """Build the prev/next navigation bar HTML for a page type."""
+    if not archive_files:
+        return ""
+
+    config = PAGE_CONFIG[page_type]
+    most_recent = archive_files[-1]
+
+    if page_type == "newsletter":
+        prev_href = f"archive/{most_recent}"
+    else:
+        prev_href = f"archive/{page_type}/{most_recent}"
+
+    return f"""<nav class="issue-nav" data-prev="{prev_href}" data-next="">
+  <a href="{prev_href}" class="nav-link nav-prev">← 上一期</a>
+  <span class="nav-spacer"></span>
+  <a href="" class="nav-link nav-next" hidden>下一期 →</a>
+</nav>"""
+
+
+# ---------------------------------------------------------------------------
+# Content unit builder (shared across page types)
+# ---------------------------------------------------------------------------
+
+def build_content_unit_html(unit: dict, translation: str, unit_id: int) -> str:
+    """Build one <article> block for a content unit."""
+    source_line = ""
+    if unit.get("source_label"):
+        source_line = f'\n  <p class="article-source">來源：{unit["source_label"]}</p>'
+
+    return f"""<article class="article" data-article-id="{unit_id}">
+  <h2 class="article-headline">{unit['headline_html']}</h2>{source_line}
 
   <div class="article-body-zh">
-    {article['body_html']}
+    {unit['body_html']}
   </div>
 
   <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
@@ -193,56 +291,46 @@ def build_article_html(article: dict, translation: str, article_id: int) -> str:
 </article>"""
 
 
-def build_nav(archive_files: list[str]) -> str:
-    """Build the navigation bar HTML."""
-    if not archive_files:
-        return ""
-    most_recent = archive_files[-1]
-    return f"""<nav class="issue-nav" data-prev="archive/{most_recent}" data-next="">
-  <a href="archive/{most_recent}" class="nav-link nav-prev">← 上一期</a>
-  <span class="nav-spacer"></span>
-  <a href="" class="nav-link nav-next" hidden>下一期 →</a>
-</nav>"""
+# ---------------------------------------------------------------------------
+# Page-type builders
+# ---------------------------------------------------------------------------
 
-
-def build_newsletter(today: str, articles: list, translations: list,
-                     glossary: dict, css: str, main_js: str,
-                     archive_files: list[str]) -> str:
-    """Construct the complete newsletter HTML."""
-
-    # Articles with <hr> separators
-    article_blocks = []
-    for i, (article, translation) in enumerate(zip(articles, translations)):
-        article_blocks.append(build_article_html(article, translation, i + 1))
-    articles_html = "\n\n<hr>\n\n".join(article_blocks)
-
-    # Navigation
-    nav_html = build_nav(archive_files)
-
-    # Glossary JSON
+def build_page_shell(today: str, page_type: str, site_nav: str, issue_nav: str,
+                     main_content: str, glossary: dict, shared_css: str,
+                     page_css: str, shared_js: str) -> str:
+    """Build the complete HTML page shell shared by all page types."""
+    config = PAGE_CONFIG[page_type]
     glossary_json = json.dumps(glossary, ensure_ascii=False, separators=(",", ":"))
+
+    # Combine CSS
+    css = shared_css
+    if page_css.strip():
+        css += "\n\n    /* --- Page-specific CSS --- */\n" + page_css
 
     return f"""<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>今日讀報 — {today}</title>
-  <style>{css}
+  <title>{config['title']} — {today}</title>
+  <style>
+{css}
   </style>
 </head>
 <body>
 
-<header class="newsletter-header">
-  <h1>今日讀報</h1>
+{site_nav}
+
+<header class="page-header">
+  <h1>{config['title']}</h1>
   <p class="date">{today}</p>
 </header>
 
-{nav_html}
+{issue_nav}
 
 <main>
 
-{articles_html}
+{main_content}
 
 </main>
 
@@ -251,7 +339,7 @@ def build_newsletter(today: str, articles: list, translations: list,
 </div>
 
 <footer>
-  <p>今日讀報 — 以 Claude Code 製作</p>
+  <p>{config['footer']}</p>
 </footer>
 
 <div class="char-popup" id="char-popup" role="tooltip">
@@ -266,7 +354,7 @@ const GLOSSARY = {glossary_json};
 </script>
 
 <script>
-{main_js}
+{shared_js}
 </script>
 
 </body>
@@ -274,14 +362,27 @@ const GLOSSARY = {glossary_json};
 """
 
 
+def build_newsletter_content(articles: list, translations: list) -> str:
+    """Build the <main> inner content for the newsletter page."""
+    blocks = []
+    for i, (article, translation) in enumerate(zip(articles, translations)):
+        blocks.append(build_content_unit_html(article, translation, i + 1))
+    return "\n\n<hr>\n\n".join(blocks)
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="Assemble newsletter HTML")
+    parser = argparse.ArgumentParser(description="Assemble page HTML")
+    parser.add_argument("--page-type", choices=PAGE_CONFIG.keys(), default="newsletter",
+                        help="Page type to assemble (default: newsletter)")
     parser.add_argument("--date", help="Issue date (YYYY-MM-DD), defaults to today in America/Chicago")
     args = parser.parse_args()
+
+    page_type = args.page_type
+    config = PAGE_CONFIG[page_type]
 
     if args.date:
         today = args.date
@@ -303,37 +404,50 @@ def main():
     translations = load_json(CHECKPOINT_FILES["translations"])
     glossary = load_json(CHECKPOINT_FILES["glossary"])
 
-    # Validate article count
+    # Validate content unit count
     if len(articles) == 0:
-        print("ERROR: No articles found", file=sys.stderr)
+        print("ERROR: No content units found", file=sys.stderr)
         sys.exit(1)
     if len(translations) != len(articles):
-        print(f"WARNING: Article count ({len(articles)}) != translation count ({len(translations)})", file=sys.stderr)
+        print(f"WARNING: Content unit count ({len(articles)}) != translation count ({len(translations)})", file=sys.stderr)
 
-    # Load template
-    template_html = TEMPLATE.read_text(encoding="utf-8")
-    css = extract_css(template_html)
-    main_js = extract_main_js(template_html)
+    # Load shared assets
+    shared_css = read_shared_css()
+    shared_js = read_shared_js()
+    page_css = read_page_css(page_type)
 
     # Archive the old issue
-    archive_old_issue(today)
+    archive_old_issue(page_type, today)
 
     # Get current archive listing (after archiving)
-    archive_files = list_archive_files()
+    archive_files = list_archive_files(config["archive"])
 
-    # Build the newsletter
-    html = build_newsletter(today, articles, translations,
-                            glossary, css, main_js, archive_files)
+    # Build navigation
+    site_nav = build_site_nav(page_type)
+    issue_nav = build_issue_nav(page_type, config["archive"], archive_files)
 
-    # Write new index.html
-    DOCS.mkdir(parents=True, exist_ok=True)
-    INDEX.write_text(html, encoding="utf-8")
+    # Build page content based on type
+    if page_type == "newsletter":
+        main_content = build_newsletter_content(articles, translations)
+    else:
+        # Wisdom and obsessions will be implemented in later phases
+        # For now, use the same content unit builder
+        main_content = build_newsletter_content(articles, translations)
+
+    # Assemble complete page
+    html = build_page_shell(today, page_type, site_nav, issue_nav,
+                            main_content, glossary, shared_css, page_css, shared_js)
+
+    # Write output
+    index_path = config["index"]
+    index_path.parent.mkdir(parents=True, exist_ok=True)
+    index_path.write_text(html, encoding="utf-8")
 
     # Print summary
-    print(f"Newsletter assembled for {today}")
-    print(f"  Articles: {len(articles)}")
+    print(f"{config['title']} assembled for {today}")
+    print(f"  Content units: {len(articles)}")
     print(f"  Glossary entries: {len(glossary)}")
-    print(f"  Written to: {INDEX}")
+    print(f"  Written to: {index_path}")
 
 
 if __name__ == "__main__":
