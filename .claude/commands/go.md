@@ -93,14 +93,14 @@ Launch all four simultaneously using the Agent tool:
 1. **news-scout-hn** (Haiku): Fetch HN front page via Algolia API. No input needed.
    - Agent prompt: "Fetch the Hacker News front page stories via the Algolia API. Follow the instructions in your agent definition."
 
-2. **news-scout-rss** (Haiku): Fetch Marginal Revolution, Carbon Brief, MLB Cubs RSS feeds. No input needed.
-   - Agent prompt: "Fetch and parse RSS feeds for Marginal Revolution, Carbon Brief, and MLB Cubs. Follow the instructions in your agent definition."
+2. **news-scout-rss** (Haiku): Fetch Marginal Revolution and MLB Cubs RSS feeds. No input needed.
+   - Agent prompt: "Fetch and parse RSS feeds for Marginal Revolution and MLB Cubs. Follow the instructions in your agent definition."
 
-3. **news-scout-web** (Sonnet): Run targeted web searches. Pass today's date.
-   - Agent prompt: "Today's date is {today}. Run 4-6 targeted web searches to find current news stories. The user's core interests: generative AI/AGI, economics/finance, Michigan sports, Cubs baseball. Also find 1-2 serendipitous stories (niche-interesting, not mainstream trending — water cooler stories are covered by the national scout). Return results as a JSON array. Follow the instructions in your agent definition."
+3. **news-scout-web** (Sonnet): The Economist desk — AI, economics, world, business, ideas. Pass today's date.
+   - Agent prompt: "Today's date is {today}. Run 4-6 targeted web searches as the Economist desk. Lead beat: transformative AI. Also cover global economics/finance, international affairs, business & industry, and science/ideas. Sports and Chicago local are covered by the Chicago desk. Return results as a JSON array. Follow the instructions in your agent definition."
 
-4. **news-scout-national** (Sonnet): Run web searches for national politics, Chicago local news, and water cooler stories. Pass today's date.
-   - Agent prompt: "Today's date is {today}. Run 3-4 web searches for US national/political news (policy changes, legislation, court rulings, agency decisions), Chicago local news (city council, transit, public safety), and big water-cooler stories everyone is talking about. Return results as a JSON array. Follow the instructions in your agent definition."
+4. **news-scout-national** (Sonnet): Chicago & sports desk — US policy, Chicago/Illinois, and sports. Pass today's date.
+   - Agent prompt: "Today's date is {today}. Run 4-5 web searches for US governance/policy, Chicago/Illinois local news, Chicago sports (Cubs/Bulls/Bears — whichever in season), and Michigan football or basketball. Return results as a JSON array. Follow the instructions in your agent definition."
 
 Wait for all four to return.
 
@@ -156,7 +156,17 @@ All 5 run concurrently. Wait for all to return.
 
 The main session handles glossary building. This step uses a dictionary pre-match to minimize agent calls.
 
-**5.5a. Run dictionary pre-match**
+**5.5a. Ensure CEDICT dictionary exists, then run dictionary pre-match**
+
+First, check if the CEDICT dictionary exists. If not, build it (this happens on first run in cloud environments since the file is in .gitignore):
+
+```bash
+if [ ! -f data/cedict_dictionary.json ]; then
+  python3 scripts/build_dictionary.py
+fi
+```
+
+Then run the pre-match:
 
 ```bash
 python3 scripts/glossary_lookup.py
@@ -169,7 +179,7 @@ This script:
 4. Performs longest-match word scanning against the dictionary
 5. Writes `data/pipeline/glossary_matched.json` (resolved entries) and `data/pipeline/glossary_unresolved.txt` (characters needing agent lookup)
 
-If `data/cedict_dictionary.json` doesn't exist, print a warning and fall back to the full agent-based approach (steps 5.5b-5.5c below with ALL characters).
+If `build_dictionary.py` fails (e.g., network error downloading CEDICT), fall back to the full agent-based approach (steps 5.5b-5.5c below with ALL characters).
 
 **5.5b. Dispatch single-character glossary agents for unresolved characters**
 
