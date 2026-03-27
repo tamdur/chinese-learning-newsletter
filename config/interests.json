@@ -1,49 +1,54 @@
 {
+  "editorial_identity": "The Economist, reimagined as a Chicago-based local newspaper. Analytical, globally-minded, data-literate. Transformative AI is the defining story of our era — give it the editorial weight The Economist gave globalisation or China's rise. Article 5 is always from the sports desk.",
   "topics": [
     {
-      "id": "gen_ai",
-      "label": "Generative AI & AGI Progress",
-      "source_hints": ["Hacker News", "Ars Technica", "major AI lab announcements"]
+      "id": "ai",
+      "label": "Transformative AI",
+      "source_hints": ["Hacker News", "major AI lab announcements", "AI governance bodies"],
+      "selection_note": "The lead beat. AI model releases, capability milestones, regulation, economic impact, safety, workforce effects. Not 'tech' broadly — the AI transformation story specifically. Should appear in most issues."
     },
     {
-      "id": "econ_finance",
+      "id": "economics",
       "label": "Economics & Finance",
-      "source_hints": ["Financial Times style coverage", "Marginal Revolution"]
+      "source_hints": ["Reuters", "AP", "Marginal Revolution", "central bank releases"],
+      "selection_note": "The Economist's finance & economics section. Central bank decisions, trade policy, fiscal policy, macro indicators, emerging market developments, labour markets."
     },
     {
-      "id": "climate",
-      "label": "Hurricane / Catastrophe Modeling & Climate Risk",
-      "source_hints": ["reinsurance and catastrophe modeling industry news", "NOAA/NHC advisories", "major weather agencies"],
-      "selection_note": "Lowest priority topic. Only include when directly relevant to the user's work as a hurricane catastrophe modeler: large loss events (hurricanes, typhoons, major natural disasters), changes in climate data sources or agencies (e.g. NOAA restructuring, ERA5 updates), and significant shifts in the climate research establishment. Skip generic climate science, energy transition, or climate policy stories."
+      "id": "world",
+      "label": "International Affairs",
+      "source_hints": ["Reuters", "AP", "BBC"],
+      "selection_note": "Geopolitics, diplomacy, conflicts, elections abroad, institutional developments. Stories a well-informed Chicagoan should know about."
     },
     {
-      "id": "michigan_sports",
-      "label": "Michigan Football & Basketball",
-      "source_hints": ["MGoBlog", "The Athletic", "UMhoops.com"]
-    },
-    {
-      "id": "cubs",
-      "label": "Cubs Baseball",
-      "source_hints": ["ESPN", "The Athletic", "r/CHICubs subreddit"]
-    },
-    {
-      "id": "national_politics",
-      "label": "US National & Political News",
+      "id": "policy",
+      "label": "US Governance & Policy",
       "source_hints": ["AP", "Reuters", "Politico"],
-      "selection_note": "Consequential policy changes, executive actions, legislative votes, court rulings, major agency decisions. Include Illinois state politics when significant. Skip polls, campaign strategy, pundit takes, and horse-race coverage."
+      "selection_note": "Consequential executive actions, legislative votes, court rulings, agency decisions. Analytical, not horse-race. Include Illinois state politics when significant."
     },
     {
-      "id": "chicago_local",
-      "label": "Chicago Local News",
-      "source_hints": ["Chicago Tribune", "Block Club Chicago", "Chicago Sun-Times"],
-      "selection_note": "User is a registered Illinois voter with Chicago ties. City council votes, transit/infrastructure developments, public safety data, and major local events. Skip routine mayoral press conferences and minor announcements."
+      "id": "chicago",
+      "label": "Chicago & Illinois",
+      "source_hints": ["Chicago Tribune", "Block Club Chicago", "Crain's Chicago Business", "Chicago Sun-Times"],
+      "selection_note": "City council, transit, infrastructure, public safety, economic development. What a thoughtful Chicagoan needs to know about their city."
     },
     {
-      "id": "water_cooler",
-      "label": "Water Cooler Stories",
-      "source_hints": ["AP", "Reuters", "BBC"],
-      "selection_note": "The big stories everyone is talking about that don't fit neatly into other categories. Major cultural moments, viral news, significant events that a well-informed person should know about. These are distinct from serendipity picks — water cooler stories are mainstream-big, serendipity picks are niche-interesting."
+      "id": "business",
+      "label": "Business & Industry",
+      "source_hints": ["Reuters", "Hacker News", "industry press"],
+      "selection_note": "Corporate strategy, M&A, market structure, industry disruption, antitrust. Not earnings reports — stories that reveal how industries are changing."
+    },
+    {
+      "id": "sports",
+      "label": "Sports Desk",
+      "source_hints": ["ESPN", "The Athletic", "MGoBlog", "UMhoops.com"],
+      "selection_note": "Article 5 is ALWAYS a sports story. Chicago Cubs, Bulls, or Bears — whichever is in season. Michigan football (Sep–Jan) or basketball (Nov–Apr). Pick the most compelling sports story of the day."
+    },
+    {
+      "id": "ideas",
+      "label": "Science, Technology & Ideas",
+      "source_hints": ["Hacker News", "Nature", "academic press"],
+      "selection_note": "The Economist's back pages. Breakthroughs, research with policy implications, ideas that reframe thinking. Good for serendipity picks."
     }
   ],
-  "selection_note": "Pick 5 stories total. Aim for variety across topics but don't force every category into every issue. Lead with whatever is genuinely most interesting today. Include 1-2 stories outside these core topics that would appeal to a curious, well-read generalist — science, culture, history, unusual economics, etc. Think: the experience of flipping through a physical newspaper, not a hyper-targeted feed."
+  "selection_note": "Pick 5 stories total. Articles 1-4 are the Economist desk (AI, economics, world, policy, chicago, business, ideas — aim for variety, don't force every category). Article 5 is always sports. Lead with whatever is genuinely most interesting today — AI stories should appear frequently but don't need to lead every issue. The newspaper should feel like flipping through a smart, cosmopolitan local paper, not a hyper-targeted feed."
 }

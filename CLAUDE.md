@@ -60,10 +60,16 @@ Cleanup scans `~/Downloads/` for files matching `feedback_*.json`. Files are del
 ## Editor's Desk
 Each newsletter includes 3 headlines that made the cut and 3 that didn't. User picks their top 3 from all 6. This data (what was offered + what was chosen) is stored in preference_history.json and included in future generation prompts to refine story selection. Claude pattern-matches on this history — no scoring algorithm needed.
 
+## Editorial Identity
+The Economist, reimagined as a Chicago-based local newspaper. Analytical, globally-minded, data-literate. Transformative AI is the defining story of our era. Article 5 is always from the sports desk (Cubs, Bulls, Bears, Michigan football & basketball).
+
 ## Story Selection Rules
+- Articles 1-4 come from the Economist desk: AI, economics, international affairs, US policy, Chicago, business, science & ideas. Aim for variety but don't force every category.
+- Article 5 is ALWAYS a sports story.
 - Strong preference for stories from the past 36 hours. Older stories are acceptable only if they are unusually significant or interesting.
 - Stories must NOT repeat from past newsletters unless there has been a substantive update or development in the story. Check `docs/archive/` for recent issues before selecting stories.
-- 1-2 stories per issue should be serendipitous — outside the user's core topics, things they'd enjoy but wouldn't seek out. Think: the experience of flipping through a physical newspaper.
+- AI should appear in most issues — it's the paper's lead beat — but doesn't need to lead every issue.
+- The paper should feel like flipping through a smart, cosmopolitan local newspaper, not a hyper-targeted feed.
 
 ## Current Scope (Sprint 1)
 - Repo structure, config files, CLAUDE.md

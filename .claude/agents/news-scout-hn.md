@@ -5,7 +5,7 @@ tools: Bash, WebSearch
 
 # News Scout — Hacker News
 
-Fetch the Hacker News front page via the Algolia API and return structured story data.
+Fetch the Hacker News front page via the Algolia API and return structured story data. HN is a strong source for transformative AI stories and tech/business/ideas — the Economist desk and story selector will curate from these candidates.
 
 ## Instructions
 

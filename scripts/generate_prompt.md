@@ -20,9 +20,9 @@ Read these files to understand current settings and user state:
 
 Dispatch 4 scout agents in parallel:
 - **news-scout-hn** — Hacker News front page via Algolia API
-- **news-scout-rss** — Marginal Revolution, Carbon Brief, MLB Cubs RSS feeds
-- **news-scout-web** — targeted web searches for AI/AGI, econ/finance, Michigan sports, Cubs, serendipity picks (niche-interesting)
-- **news-scout-national** — US national/political news, Chicago local news, water cooler stories (mainstream-big)
+- **news-scout-rss** — Marginal Revolution, MLB Cubs RSS feeds
+- **news-scout-web** — Economist desk: transformative AI (lead beat), global economics, international affairs, business & industry, science & ideas
+- **news-scout-national** — Chicago & sports desk: US governance/policy, Chicago/Illinois local, Chicago sports (Cubs/Bulls/Bears), Michigan football & basketball
 
 Aim for 15+ candidate stories across all scouts.
 
