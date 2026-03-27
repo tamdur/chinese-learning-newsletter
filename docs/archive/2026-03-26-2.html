@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今日讀報 — 2026-03-26</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Noto Serif TC", "PMingLiU", "Apple LiSung", serif;
+      font-size: 19px;
+      line-height: 1.9;
+      color: #e0dcd4;
+      background: #1a1a2e;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .newsletter-header { text-align: center; margin-bottom: 2.5rem; }
+    .newsletter-header h1 { font-size: 32px; font-weight: 700; }
+    .newsletter-header .date { color: #8a8580; }
+
+    .article { margin-bottom: 0; }
+    .article-headline { font-size: 24px; font-weight: 700; margin-bottom: 0.5rem; }
+    .article-source { font-size: 14px; color: #7a7570; margin-bottom: 1rem; }
+    .article-body-zh p { margin-bottom: 1rem; }
+
+    hr { border: none; border-top: 1px solid #333340; margin: 2.5rem 0; }
+
+    .translation-toggle {
+      font-size: 14px;
+      padding: 6px 12px;
+      border: 1px solid #444458;
+      border-radius: 4px;
+      background: #252538;
+      color: #9a9590;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .translation-toggle:hover { background: #2e2e45; }
+
+    .article-body-en {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #9a9590;
+      font-size: 16px;
+      line-height: 1.6;
+      border-left: 3px solid #444458;
+      padding-left: 1rem;
+      margin-top: 1rem;
+    }
+    .article-body-en p { margin-bottom: 0.75rem; }
+
+    .c { cursor: default; }
+    .flagging-on .c { cursor: pointer; }
+    .flagging-on .c:hover { background: rgba(255, 255, 255, 0.06); border-radius: 2px; }
+    .c.struggling { border-bottom: 2px solid #d4a574; }
+    .c.learned { border-bottom: 2px dotted #7aab7a; }
+
+    .editors-desk {
+      background: #22223a;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .editors-desk h2 { font-size: 22px; margin-bottom: 0.5rem; }
+    .desk-instructions { font-size: 14px; color: #8a8580; margin-bottom: 1rem; }
+
+    .desk-item {
+      padding: 12px 14px;
+      border: 1px solid #333340;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: border-color 0.15s;
+      background: #252538;
+    }
+    .desk-item:hover { border-color: #555568; }
+    .desk-item.selected { border-color: #d4a574; background: rgba(212, 165, 116, 0.12); }
+
+    .desk-badge {
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-right: 8px;
+      display: inline-block;
+    }
+    .included .desk-badge { background: #2a3a2a; color: #7aab7a; }
+    .excluded .desk-badge { background: #2a2a3a; color: #7a7570; }
+    .desk-headline { font-size: 16px; }
+    .desk-count { font-size: 14px; color: #8a8580; margin-top: 0.5rem; }
+
+    .toolbar {
+      margin-top: 2rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #333340;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .toolbar button {
+      font-size: 14px;
+      padding: 6px 14px;
+      border: 1px solid #444458;
+      border-radius: 4px;
+      background: #252538;
+      color: #b0aaa4;
+      cursor: pointer;
+      user-select: none;
+    }
+    .toolbar button:hover { background: #2e2e45; }
+    .toolbar button.active { border-color: #d4a574; }
+    .confirm-msg { font-size: 13px; color: #7aab7a; }
+
+    .issue-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      font-size: 14px;
+    }
+    .nav-link {
+      color: #8a8580;
+      text-decoration: none;
+    }
+    .nav-link:hover {
+      color: #b0aaa4;
+    }
+
+    footer { margin-top: 2rem; text-align: center; font-size: 13px; color: #5a5550; }
+    .storage-warning { font-size: 13px; color: #7a7570; text-align: center; margin-top: 0.5rem; }
+
+    @media (pointer: coarse) {
+      .c {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+      }
+      .c.touch-active {
+        background: rgba(100, 160, 255, 0.2);
+        border-radius: 2px;
+        transition: background 0.1s ease;
+      }
+      .c.touch-selected {
+        background: rgba(100, 160, 255, 0.3);
+        border-radius: 2px;
+      }
+      .lookup-toggle { display: inline-block; }
+    }
+
+    .lookup-toggle { display: none; }
+
+    .char-popup {
+      display: none;
+      position: fixed;
+      width: 280px;
+      background: #252538;
+      border: 1px solid #444458;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      padding: 14px 16px;
+      z-index: 1000;
+      text-align: center;
+      font-family: "Noto Serif TC", "PMingLiU", serif;
+    }
+    .char-popup.visible { display: block; }
+    .char-popup-close {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: #7a7570;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .char-popup-char {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .char-popup-zhuyin {
+      font-size: 20px;
+      color: #9a9590;
+      margin-bottom: 6px;
+      font-family: "Apple LiGothic", "Microsoft JhengHei", sans-serif;
+    }
+    .char-popup-def {
+      font-size: 15px;
+      color: #b0aaa4;
+      line-height: 1.4;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+  
+  </style>
+</head>
+<body>
+
+<header class="newsletter-header">
+  <h1>今日讀報</h1>
+  <p class="date">2026-03-26</p>
+</header>
+
+<nav class="issue-nav" data-prev="2026-03-27.html" data-next="../index.html">
+  <a href="2026-03-27.html" class="nav-link nav-prev">← 上一期</a>
+  <span class="nav-spacer"></span>
+  <a href="../index.html" class="nav-link nav-next">下一期 →</a>
+</nav>
+
+<main>
+
+<article class="article" data-article-id="1">
+  <h2 class="article-headline">OpenAI <span class="c">關</span><span class="c">掉</span> Sora <span class="c">影</span><span class="c">片</span><span class="c">工</span><span class="c">具</span><span class="c">，</span><span class="c">迪</span><span class="c">士</span><span class="c">尼</span><span class="c">十</span><span class="c">億</span><span class="c">合</span><span class="c">作</span><span class="c">也</span><span class="c">沒</span><span class="c">了</span></h2>
+  <p class="article-source">來源：Variety</p>
+
+  <div class="article-body-zh">
+    <p>OpenAI <span class="c">在</span><span class="c">三</span><span class="c">月</span><span class="c">二</span><span class="c">十</span><span class="c">四</span><span class="c">日</span><span class="c">宣</span><span class="c">布</span><span class="c">，</span><span class="c">關</span><span class="c">掉</span><span class="c">他</span><span class="c">們</span><span class="c">的</span> AI <span class="c">影</span><span class="c">片</span><span class="c">工</span><span class="c">具</span> Sora<span class="c">。</span><span class="c">這</span><span class="c">個</span><span class="c">工</span><span class="c">具</span><span class="c">才</span><span class="c">上</span><span class="c">線</span><span class="c">六</span><span class="c">個</span><span class="c">月</span><span class="c">，</span><span class="c">結</span><span class="c">果</span><span class="c">每</span><span class="c">天</span><span class="c">要</span><span class="c">花</span><span class="c">一</span><span class="c">千</span><span class="c">五</span><span class="c">百</span><span class="c">萬</span><span class="c">美</span><span class="c">元</span><span class="c">來</span><span class="c">跑</span><span class="c">，</span><span class="c">但</span><span class="c">總</span><span class="c">共</span><span class="c">只</span><span class="c">賺</span><span class="c">了</span><span class="c">兩</span><span class="c">百</span><span class="c">一</span><span class="c">十</span><span class="c">萬</span><span class="c">。</span><span class="c">做</span><span class="c">一</span><span class="c">段</span><span class="c">十</span><span class="c">秒</span><span class="c">的</span><span class="c">影</span><span class="c">片</span><span class="c">就</span><span class="c">要</span> 130 <span class="c">美</span><span class="c">元</span><span class="c">，</span><span class="c">太</span><span class="c">貴</span><span class="c">了</span><span class="c">。</span></p><p><span class="c">更</span><span class="c">大</span><span class="c">的</span><span class="c">問</span><span class="c">題</span><span class="c">是</span><span class="c">，</span><span class="c">迪</span><span class="c">士</span><span class="c">尼</span><span class="c">本</span><span class="c">來</span><span class="c">要</span><span class="c">投</span><span class="c">資</span><span class="c">十</span><span class="c">億</span><span class="c">美</span><span class="c">元</span><span class="c">，</span><span class="c">讓</span> Sora <span class="c">用</span><span class="c">迪</span><span class="c">士</span><span class="c">尼</span><span class="c">和</span><span class="c">漫</span><span class="c">威</span><span class="c">的</span><span class="c">角</span><span class="c">色</span><span class="c">，</span><span class="c">結</span><span class="c">果</span><span class="c">這</span><span class="c">筆</span><span class="c">錢</span><span class="c">也</span><span class="c">沒</span><span class="c">了</span><span class="c">。</span>OpenAI <span class="c">說</span><span class="c">他</span><span class="c">們</span><span class="c">會</span><span class="c">把</span><span class="c">電</span><span class="c">腦</span><span class="c">資</span><span class="c">源</span><span class="c">轉</span><span class="c">去</span><span class="c">做</span><span class="c">機</span><span class="c">器</span><span class="c">人</span><span class="c">。</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>OpenAI announced on March 24th that they're shutting down Sora, their AI video tool. The tool had only been live for six months, but it was burning through 15 million dollars a day while generating just 2.1 million in revenue. Creating a ten-second video cost $130 — way too expensive.</p>
+<p>The bigger blow was Disney. Disney was planning to invest a billion dollars to let Sora use Disney and Marvel characters, but that deal evaporated. OpenAI said they're redirecting the computing resources toward robotics instead.</p>
+  </div>
+</article>
+
+<hr>
+
+<article class="article" data-article-id="2">
+  <h2 class="article-headline"><span class="c">法</span><span class="c">院</span><span class="c">首</span><span class="c">次</span><span class="c">判</span><span class="c">定</span> Meta <span class="c">和</span> YouTube <span class="c">讓</span><span class="c">小</span><span class="c">孩</span><span class="c">上</span><span class="c">網</span><span class="c">成</span><span class="c">癮</span></h2>
+  <p class="article-source">來源：The New York Times</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">洛</span><span class="c">杉</span><span class="c">磯</span><span class="c">的</span><span class="c">法</span><span class="c">院</span><span class="c">在</span><span class="c">三</span><span class="c">月</span><span class="c">二</span><span class="c">十</span><span class="c">五</span><span class="c">日</span><span class="c">做</span><span class="c">出</span><span class="c">歷</span><span class="c">史</span><span class="c">性</span><span class="c">的</span><span class="c">判</span><span class="c">決</span><span class="c">：</span>Meta <span class="c">和</span> YouTube <span class="c">讓</span><span class="c">年</span><span class="c">輕</span><span class="c">人</span><span class="c">上</span><span class="c">網</span><span class="c">站</span><span class="c">成</span><span class="c">癮</span><span class="c">，</span><span class="c">要</span><span class="c">負</span><span class="c">法</span><span class="c">律</span><span class="c">責</span><span class="c">任</span><span class="c">。</span><span class="c">這</span><span class="c">是</span><span class="c">全</span><span class="c">世</span><span class="c">界</span><span class="c">第</span><span class="c">一</span><span class="c">次</span><span class="c">有</span><span class="c">這</span><span class="c">樣</span><span class="c">的</span><span class="c">結</span><span class="c">果</span><span class="c">。</span></p><p><span class="c">受</span><span class="c">害</span><span class="c">人</span><span class="c">六</span><span class="c">歲</span><span class="c">就</span><span class="c">開</span><span class="c">始</span><span class="c">用</span> YouTube<span class="c">，</span><span class="c">九</span><span class="c">歲</span><span class="c">用</span> Instagram<span class="c">，</span><span class="c">有</span><span class="c">時</span><span class="c">一</span><span class="c">天</span><span class="c">看</span><span class="c">十</span><span class="c">六</span><span class="c">個</span><span class="c">小</span><span class="c">時</span><span class="c">。</span><span class="c">結</span><span class="c">果</span><span class="c">得</span><span class="c">了</span><span class="c">焦</span><span class="c">慮</span><span class="c">症</span><span class="c">和</span><span class="c">憂</span><span class="c">鬱</span><span class="c">症</span><span class="c">。</span>Meta <span class="c">內</span><span class="c">部</span><span class="c">文</span><span class="c">件</span><span class="c">也</span><span class="c">顯</span><span class="c">示</span><span class="c">，</span><span class="c">他</span><span class="c">們</span><span class="c">早</span><span class="c">就</span><span class="c">知</span><span class="c">道</span><span class="c">十</span><span class="c">三</span><span class="c">歲</span><span class="c">以</span><span class="c">下</span><span class="c">的</span><span class="c">小</span><span class="c">孩</span><span class="c">在</span><span class="c">用</span><span class="c">。</span><span class="c">法</span><span class="c">院</span><span class="c">判</span><span class="c">賠</span><span class="c">六</span><span class="c">百</span><span class="c">萬</span><span class="c">美</span><span class="c">元</span><span class="c">，</span><span class="c">還</span><span class="c">有</span><span class="c">近</span><span class="c">兩</span><span class="c">千</span><span class="c">件</span><span class="c">類</span><span class="c">似</span><span class="c">的</span><span class="c">案</span><span class="c">子</span><span class="c">在</span><span class="c">等</span><span class="c">。</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>A Los Angeles court made a historic ruling on March 25th: Meta and YouTube are legally responsible for addicting young people to their platforms. This is the first time in the world that such a verdict has been reached.</p>
+<p>One victim started using YouTube at age six and Instagram at nine, sometimes watching for sixteen hours a day. As a result, they developed anxiety and depression. Internal Meta documents also showed the company knew children under thirteen were using their platform. The court ordered a $6 million payout, and nearly two thousand similar cases are pending.</p>
+  </div>
+</article>
+
+<hr>
+
+<article class="article" data-article-id="3">
+  <h2 class="article-headline"><span class="c">小</span><span class="c">熊</span><span class="c">的</span><span class="c">大</span><span class="c">實</span><span class="c">驗</span><span class="c">：</span><span class="c">新</span><span class="c">人</span> Shaw <span class="c">打</span><span class="c">右</span><span class="c">外</span><span class="c">野</span></h2>
+  <p class="article-source">來源：Chicago Tribune</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">小</span><span class="c">熊</span><span class="c">隊</span><span class="c">今</span><span class="c">天</span><span class="c">開</span><span class="c">幕</span><span class="c">戰</span><span class="c">對</span><span class="c">華</span><span class="c">盛</span><span class="c">頓</span><span class="c">，</span><span class="c">做</span><span class="c">了</span><span class="c">一</span><span class="c">個</span><span class="c">很</span><span class="c">大</span><span class="c">膽</span><span class="c">的</span><span class="c">決</span><span class="c">定</span><span class="c">。</span>2023 <span class="c">年</span><span class="c">第</span><span class="c">一</span><span class="c">輪</span><span class="c">選</span><span class="c">的</span><span class="c">新</span><span class="c">人</span> Matt Shaw <span class="c">被</span><span class="c">放</span><span class="c">到</span><span class="c">右</span><span class="c">外</span><span class="c">野</span><span class="c">，</span><span class="c">但</span><span class="c">他</span><span class="c">以</span><span class="c">前</span><span class="c">從</span><span class="c">來</span><span class="c">沒</span><span class="c">打</span><span class="c">過</span><span class="c">這</span><span class="c">個</span><span class="c">位</span><span class="c">子</span><span class="c">！</span></p><p><span class="c">因</span><span class="c">為</span><span class="c">鈴</span><span class="c">木</span><span class="c">誠</span><span class="c">也</span><span class="c">膝</span><span class="c">蓋</span><span class="c">受</span><span class="c">傷</span><span class="c">上</span><span class="c">了</span><span class="c">傷</span><span class="c">兵</span><span class="c">名</span><span class="c">單</span><span class="c">，</span><span class="c">球</span><span class="c">隊</span><span class="c">只</span><span class="c">好</span><span class="c">想</span><span class="c">辦</span><span class="c">法</span><span class="c">。</span><span class="c">今</span><span class="c">年</span><span class="c">的</span><span class="c">先</span><span class="c">發</span><span class="c">陣</span><span class="c">容</span><span class="c">有</span><span class="c">很</span><span class="c">多</span><span class="c">年</span><span class="c">輕</span><span class="c">新</span><span class="c">人</span><span class="c">，</span><span class="c">像</span> Shaw<span class="c">、</span>Crow-Armstrong <span class="c">和</span> Ballesteros <span class="c">都</span><span class="c">先</span><span class="c">發</span><span class="c">。</span><span class="c">球</span><span class="c">迷</span><span class="c">很</span><span class="c">期</span><span class="c">待</span><span class="c">看</span><span class="c">結</span><span class="c">果</span><span class="c">怎</span><span class="c">麼</span><span class="c">樣</span><span class="c">。</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>The Cubs played their opening game against Washington today and made a very bold decision. Matt Shaw, a first-round pick in 2023, was put in right field, but he has never played that position before!</p>
+<p>Because Seiya Suzuki went on the injured list with a knee injury, the team had to figure something out. The starting lineup this year has lots of young rookies — Shaw, Crow-Armstrong, and Ballesteros all started. Fans are very eager to see how it turns out.</p>
+  </div>
+</article>
+
+<hr>
+
+<article class="article" data-article-id="4">
+  <h2 class="article-headline"><span class="c">深</span><span class="c">海</span><span class="c">發</span><span class="c">現</span> 24 <span class="c">種</span><span class="c">新</span><span class="c">生</span><span class="c">物</span><span class="c">，</span><span class="c">但</span><span class="c">採</span><span class="c">礦</span><span class="c">工</span><span class="c">廠</span><span class="c">也</span><span class="c">要</span><span class="c">來</span><span class="c">了</span></h2>
+  <p class="article-source">來源：ZooKeys</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">科</span><span class="c">學</span><span class="c">家</span><span class="c">在</span><span class="c">太</span><span class="c">平</span><span class="c">洋</span><span class="c">深</span><span class="c">海</span><span class="c">發</span><span class="c">現</span><span class="c">了</span> 24 <span class="c">種</span><span class="c">全</span><span class="c">新</span><span class="c">的</span><span class="c">小</span><span class="c">生</span><span class="c">物</span><span class="c">。</span><span class="c">這</span><span class="c">個</span><span class="c">海</span><span class="c">底</span><span class="c">區</span><span class="c">域</span><span class="c">在</span><span class="c">夏</span><span class="c">威</span><span class="c">夷</span><span class="c">和</span><span class="c">墨</span><span class="c">西</span><span class="c">哥</span><span class="c">之</span><span class="c">間</span><span class="c">，</span><span class="c">面</span><span class="c">積</span><span class="c">有</span><span class="c">六</span><span class="c">百</span><span class="c">萬</span><span class="c">平</span><span class="c">方</span><span class="c">公</span><span class="c">里</span><span class="c">。</span><span class="c">研</span><span class="c">究</span><span class="c">員</span><span class="c">說</span><span class="c">，</span><span class="c">那</span><span class="c">裡</span><span class="c">超</span><span class="c">過</span><span class="c">九</span><span class="c">成</span><span class="c">的</span><span class="c">生</span><span class="c">物</span><span class="c">還</span><span class="c">沒</span><span class="c">有</span><span class="c">名</span><span class="c">字</span><span class="c">。</span></p><p><span class="c">不</span><span class="c">過</span><span class="c">問</span><span class="c">題</span><span class="c">來</span><span class="c">了</span><span class="c">。</span><span class="c">今</span><span class="c">年</span><span class="c">一</span><span class="c">月</span><span class="c">，</span><span class="c">美</span><span class="c">國</span><span class="c">改</span><span class="c">了</span><span class="c">法</span><span class="c">律</span><span class="c">，</span><span class="c">讓</span><span class="c">採</span><span class="c">礦</span><span class="c">工</span><span class="c">廠</span><span class="c">可</span><span class="c">以</span><span class="c">同</span><span class="c">時</span><span class="c">申</span><span class="c">請</span><span class="c">探</span><span class="c">查</span><span class="c">和</span><span class="c">開</span><span class="c">採</span><span class="c">。</span><span class="c">之</span><span class="c">前</span><span class="c">的</span><span class="c">測</span><span class="c">試</span><span class="c">顯</span><span class="c">示</span><span class="c">，</span><span class="c">海</span><span class="c">底</span><span class="c">機</span><span class="c">器</span><span class="c">工</span><span class="c">作</span><span class="c">兩</span><span class="c">個</span><span class="c">月</span><span class="c">後</span><span class="c">，</span><span class="c">生</span><span class="c">物</span><span class="c">數</span><span class="c">量</span><span class="c">少</span><span class="c">了</span><span class="c">三</span><span class="c">成</span><span class="c">多</span><span class="c">。</span><span class="c">科</span><span class="c">學</span><span class="c">家</span><span class="c">正</span><span class="c">在</span><span class="c">跟</span><span class="c">時</span><span class="c">間</span><span class="c">賽</span><span class="c">跑</span><span class="c">。</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>Scientists discovered 24 brand-new tiny creatures in the deep Pacific Ocean. This underwater region sits between Hawaii and Mexico and spans six million square kilometers. Researchers say over 90 percent of the creatures living there don't have names yet.</p>
+<p>But here's the catch. In January this year, the United States changed its laws to let mining factories apply for exploration and extraction at the same time. Earlier tests showed that after underwater machines worked for two months, the number of creatures dropped by more than 30 percent. Scientists are now in a race against time.</p>
+  </div>
+</article>
+
+<hr>
+
+<article class="article" data-article-id="5">
+  <h2 class="article-headline"><span class="c">為</span><span class="c">什</span><span class="c">麼</span><span class="c">控</span><span class="c">制</span><span class="c">室</span><span class="c">都</span><span class="c">是</span><span class="c">淡</span><span class="c">綠</span><span class="c">色</span><span class="c">的</span><span class="c">？</span></h2>
+  <p class="article-source">來源：99% Invisible</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">你</span><span class="c">有</span><span class="c">沒</span><span class="c">有</span><span class="c">注</span><span class="c">意</span><span class="c">過</span><span class="c">，</span><span class="c">很</span><span class="c">多</span><span class="c">工</span><span class="c">廠</span><span class="c">、</span><span class="c">醫</span><span class="c">院</span><span class="c">和</span><span class="c">太</span><span class="c">空</span><span class="c">中</span><span class="c">心</span><span class="c">的</span><span class="c">牆</span><span class="c">都</span><span class="c">是</span><span class="c">淡</span><span class="c">綠</span><span class="c">色</span><span class="c">的</span><span class="c">？</span><span class="c">這</span><span class="c">要</span><span class="c">從</span><span class="c">一</span><span class="c">個</span><span class="c">叫</span> Faber Birren <span class="c">的</span><span class="c">人</span><span class="c">說</span><span class="c">起</span><span class="c">。</span><span class="c">他</span><span class="c">是</span><span class="c">研</span><span class="c">究</span><span class="c">顏</span><span class="c">色</span><span class="c">的</span><span class="c">專</span><span class="c">家</span><span class="c">，</span><span class="c">年</span><span class="c">輕</span><span class="c">時</span><span class="c">還</span><span class="c">把</span><span class="c">自</span><span class="c">己</span><span class="c">房</span><span class="c">間</span><span class="c">漆</span><span class="c">成</span><span class="c">紅</span><span class="c">色</span><span class="c">來</span><span class="c">做</span><span class="c">實</span><span class="c">驗</span><span class="c">！</span></p><p><span class="c">後</span><span class="c">來</span><span class="c">他</span><span class="c">幫</span><span class="c">軍</span><span class="c">隊</span><span class="c">的</span><span class="c">核</span><span class="c">武</span><span class="c">工</span><span class="c">廠</span><span class="c">選</span><span class="c">顏</span><span class="c">色</span><span class="c">。</span><span class="c">他</span><span class="c">發</span><span class="c">現</span><span class="c">淡</span><span class="c">綠</span><span class="c">色</span><span class="c">在</span><span class="c">光</span><span class="c">的</span><span class="c">中</span><span class="c">間</span><span class="c">，</span><span class="c">眼</span><span class="c">睛</span><span class="c">看</span><span class="c">了</span><span class="c">最</span><span class="c">不</span><span class="c">會</span><span class="c">累</span><span class="c">。</span>1944 <span class="c">年</span><span class="c">安</span><span class="c">全</span><span class="c">委</span><span class="c">員</span><span class="c">會</span><span class="c">採</span><span class="c">用</span><span class="c">了</span><span class="c">他</span><span class="c">的</span><span class="c">顏</span><span class="c">色</span><span class="c">規</span><span class="c">定</span><span class="c">，</span><span class="c">從</span><span class="c">此</span><span class="c">全</span><span class="c">世</span><span class="c">界</span><span class="c">的</span><span class="c">控</span><span class="c">制</span><span class="c">室</span><span class="c">都</span><span class="c">跟</span><span class="c">著</span><span class="c">用</span><span class="c">淡</span><span class="c">綠</span><span class="c">色</span><span class="c">了</span><span class="c">。</span><span class="c">他</span><span class="c">說</span><span class="c">過</span><span class="c">：</span><span class="c">「</span><span class="c">顏</span><span class="c">色</span><span class="c">要</span><span class="c">有</span><span class="c">用</span><span class="c">，</span><span class="c">不</span><span class="c">只</span><span class="c">是</span><span class="c">好</span><span class="c">看</span><span class="c">。</span><span class="c">」</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>Have you ever noticed that the walls in many factories, hospitals, and space centers are pale green? The story goes back to a man named Faber Birren. He was an expert who studied color, and when he was young, he even painted his own bedroom red as an experiment!</p>
+<p>Later, he helped the military choose colors for its nuclear weapons factories. He discovered that pale green sits in the middle of the light spectrum, so it causes the least eye strain when you look at it. In 1944, the safety committee adopted his color standards, and from then on, control rooms around the world started using pale green. He once said: "Color should be useful, not just beautiful."</p>
+  </div>
+</article>
+
+</main>
+
+<section class="editors-desk">
+  <h2>編輯台 Editor's Desk</h2>
+  <p class="desk-instructions">選擇你最感興趣的 3 則標題 Pick your top 3 headlines</p>
+
+  <div class="desk-items">
+    <div class="desk-item included" data-desk-index="0">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">OpenAI 關掉 Sora 影片工具，迪士尼十億合作也沒了</span>
+    </div>
+    <div class="desk-item included" data-desk-index="1">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">法院首次判定 Meta 和 YouTube 讓小孩上網成癮</span>
+    </div>
+    <div class="desk-item included" data-desk-index="2">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">小熊的大實驗：新人 Shaw 打右外野</span>
+    </div>
+    <div class="desk-item included" data-desk-index="3">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">深海發現 24 種新生物，但採礦工廠也要來了</span>
+    </div>
+    <div class="desk-item included" data-desk-index="4">
+      <span class="desk-badge">收錄</span>
+      <span class="desk-headline">為什麼控制室都是淡綠色的？</span>
+    </div>
+    <div class="desk-item excluded" data-desk-index="5">
+      <span class="desk-badge">未收錄</span>
+      <span class="desk-headline">芝加哥地鐵大改革：派警長上車保住五千萬補助</span>
+    </div>
+    <div class="desk-item excluded" data-desk-index="6">
+      <span class="desk-badge">未收錄</span>
+      <span class="desk-headline">DeepMind提出新框架：到底怎麼衡量AGI的進展？</span>
+    </div>
+    <div class="desk-item excluded" data-desk-index="7">
+      <span class="desk-badge">未收錄</span>
+      <span class="desk-headline">蘋果跟Google合作，要把Gemini塞進Siri裡</span>
+    </div>
+  </div>
+
+  <p class="desk-count">已選：<span id="desk-count-num">0</span> / 3</p>
+</section>
+
+<div class="toolbar" id="toolbar">
+  <button id="flag-toggle" type="button">標記模式 OFF</button>
+  <button id="lookup-toggle" class="lookup-toggle" type="button">查詢模式 OFF</button>
+  <button id="export-btn" type="button">匯出回饋 Export Feedback</button>
+  <span id="export-confirm" class="confirm-msg" hidden>已匯出 ✓</span>
+</div>
+
+<footer>
+  <p>今日讀報 — 以 Claude Code 製作</p>
+</footer>
+
+<div class="char-popup" id="char-popup" role="tooltip">
+  <button class="char-popup-close" id="popup-close" aria-label="Close">&times;</button>
+  <div class="char-popup-char" id="popup-char"></div>
+  <div class="char-popup-zhuyin" id="popup-zhuyin"></div>
+  <div class="char-popup-def" id="popup-def"></div>
+</div>
+
+<script>
+const GLOSSARY = {"什":{"zhuyin":"ㄕㄣˊ","english":"what; ten (used in fractions, writing checks etc); assorted; miscellaneous"},"總":{"zhuyin":"ㄗㄨㄥˇ","english":"general; overall; to sum up; in every case; always; invariably; anyway; after all; eventually; sooner or later; surely; (after a person's name) abbr. for 總經理|总经理[zong3 jing1 li3] or 總編|总编[zong3 bian1] etc"},"單":{"zhuyin":"ㄕㄢˋ","english":"surname Shan; used in 單于|单于[chan2yu2]; bill; list; form; single; only; sole; odd number; CL:個|个[ge4]"},"百":{"zhuyin":"ㄅㄞˇ","english":"surname Bai; hundred; numerous; all kinds of"},"查":{"zhuyin":"ㄓㄚ","english":"surname Zha; to research; to check; to investigate; to examine; to refer to; to look up (e.g. a word in a dictionary); variant of 楂[zha1]"},"控":{"zhuyin":"ㄎㄨㄥˋ","english":"to control; to accuse; to charge; to sue; to invert a container to empty it; (suffix) (slang) buff; enthusiast; devotee; -phile or -philia"},"幫":{"zhuyin":"ㄅㄤ","english":"to help; to assist; to support; for sb (i.e. as a help); hired (as worker); side (of pail, boat etc); outer layer; upper (of a shoe); group; gang; clique; party; secret society"},"癮":{"zhuyin":"ㄧㄣˇ","english":"addiction; craving"},"時":{"zhuyin":"ㄕˊ","english":"surname Shi; o'clock; time; when; hour; season; period"},"二":{"zhuyin":"ㄦˋ","english":"two; 2; (Beijing dialect) stupid"},"深":{"zhuyin":"ㄕㄣ","english":"deep (lit. and fig.)"},"那":{"zhuyin":"ㄋㄚ","english":"surname Na; surname Nuo; variant of 哪[na3]; (specifier) that; the; those (colloquial pr. [nei4]); (pronoun) that (referring to persons, things or situations); then (in that case); (archaic) many; beautiful; how; old variant of 挪[nuo2]"},"眼":{"zhuyin":"ㄧㄢˇ","english":"eye (CL:隻|只[zhi1],雙|双[shuang1]); (often used with 一[yi1]) a look; a glance; small hole; (bound form) salient point; classifier for wells, cave-dwellings etc"},"國":{"zhuyin":"ㄍㄨㄛˊ","english":"surname Guo; country; nation; state; (bound form) national"},"同":{"zhuyin":"ㄊㄨㄥˊ","english":"like; same; similar; together; alike; with"},"段":{"zhuyin":"ㄉㄨㄢˋ","english":"surname Duan; paragraph; section; segment; stage (of a process); classifier for stories, periods of time, lengths of thread etc"},"千":{"zhuyin":"ㄑㄧㄢ","english":"thousand"},"投":{"zhuyin":"ㄊㄡˊ","english":"to throw (sth in a specific direction: ball, javelin, grenade etc); to cast (a ballot); to cast (a glance, a shadow etc); to put in (money for investment, a coin to operate a slot machine); to send (a letter, a manuscript etc); to throw oneself into (a river, a well etc to commit suicide); to go to; to seek refuge; to place oneself into the hands of; (coll.) to rinse (clothes) in water"},"用":{"zhuyin":"ㄩㄥˋ","english":"to use; to make use of; to employ; (coverb) with; using; to need; to have to (usu. used in the negative or in questions); usefulness; utility; (bound form) expense; outlay; (courteous) to eat; to drink; (literary) hence; therefore"},"成":{"zhuyin":"ㄔㄥˊ","english":"surname Cheng; short name for Chengdu 成都[Cheng2du1]; to succeed; to finish; to complete; to accomplish; to become; to turn into; to be all right; OK!; one tenth"},"自":{"zhuyin":"ㄗˋ","english":"(bound form) self; oneself; from; since; naturally; as a matter of course"},"方":{"zhuyin":"ㄈㄤ","english":"surname Fang; square; power or involution (math.); upright; honest; fair and square; direction; side; party (to a contract, dispute etc); place; method; prescription (medicine); just when; only or just; classifier for square things; abbr. for square or cubic meter"},"賺":{"zhuyin":"ㄓㄨㄢˋ","english":"to earn; to make a profit; to cheat; to swindle"},"你":{"zhuyin":"ㄋㄧˇ","english":"you (informal, as opposed to courteous 您[nin2])"},"等":{"zhuyin":"ㄉㄥˇ","english":"to wait for; to await; by the time; when; till; and so on; etc.; et al.; (bound form) class; rank; grade; (bound form) equal to; same as; (used to end an enumeration); (literary) (plural suffix attached to a personal pronoun or noun)"},"和":{"zhuyin":"ㄏㄜˊ","english":"surname He; (joining two nouns) and; together with; with (Taiwan pr. [han4]); (math.) sum; to make peace; (sports) to draw; to tie; (bound form) harmonious; (bound form) Japan; Japanese; to compose a poem in reply (to sb's poem) using the same rhyme sequence; to join in the singing; to chime in with others; to complete a set in mahjong or playing cards; to combine a powdery substance (flour, plaster etc) with water; Taiwan pr. [huo4]; to mix (ingredients) together; to blend; classifier for rinses of clothes; classifier for boilings of medicinal herbs"},"海":{"zhuyin":"ㄏㄞˇ","english":"surname Hai; ocean; sea; CL:個|个[ge4],片[pian4]; great number of people or things; (dialect) numerous"},"種":{"zhuyin":"ㄓㄨㄥˇ","english":"seed; species; kind; type; classifier for types, kinds, sorts; to plant; to grow; to cultivate"},"測":{"zhuyin":"ㄘㄜˋ","english":"to survey; to measure; to conjecture"},"頓":{"zhuyin":"ㄉㄨㄣˋ","english":"to stop; to pause; to arrange; to lay out; to kowtow; to stamp (one's foot); at once; classifier for meals, beatings, scoldings etc: time, bout, spell, meal"},"戰":{"zhuyin":"ㄓㄢˋ","english":"to fight; fight; war; battle"},"武":{"zhuyin":"ㄨˇ","english":"surname Wu; martial; military"},"里":{"zhuyin":"ㄌㄧˇ","english":"Li (surname); li, ancient measure of length, approx. 500 m; neighborhood; ancient administrative unit of 25 families; (Tw) borough, administrative unit between the township 鎮|镇[zhen4] and neighborhood 鄰|邻[lin2] levels"},"關":{"zhuyin":"ㄍㄨㄢ","english":"surname Guan; mountain pass; to close; to shut; to turn off; to confine; to lock (sb) up; to shut (sb in a room, a bird in a cage etc); to concern; to involve"},"他":{"zhuyin":"ㄊㄚ","english":"(third-person singular) (since the early 20th century, usu. male) he; him; his; (bound form) other; another; some other (as in 他日[ta1ri4] and 他人[ta1ren2])"},"機":{"zhuyin":"ㄐㄧ","english":"surname Ji; (bound form) machine; mechanism; (bound form) aircraft; (bound form) an opportunity; (bound form) crucial point; pivot; (bound form) quick-witted; flexible; (bound form) organic"},"野":{"zhuyin":"ㄧㄝˇ","english":"field; plain; open space; limit; boundary; rude; feral"},"憂":{"zhuyin":"ㄧㄡ","english":"to worry; to concern oneself with; worried; anxiety; sorrow; (literary) to observe mourning"},"光":{"zhuyin":"ㄍㄨㄤ","english":"light; ray (CL:道[dao4]); bright; shiny; only; merely; used up; finished; to leave (a part of the body) uncovered"},"制":{"zhuyin":"ㄓˋ","english":"system; to control; to regulate; variant of 製|制[zhi4]"},"角":{"zhuyin":"ㄐㄩㄝˊ","english":"surname Jue; angle; corner; horn; horn-shaped; unit of money equal to 0.1 yuan, or 10 cents (a dime); CL:個|个[ge4]; role (theater); to compete; ancient three legged wine vessel; third note of pentatonic scale"},"膽":{"zhuyin":"ㄉㄢˇ","english":"gall bladder; courage; guts; gall; inner container (e.g. bladder of a football, inner container of a thermos)"},"員":{"zhuyin":"ㄩㄢˊ","english":"(bound form) person engaged in a certain field of activity; (bound form) member; classifier for military generals"},"受":{"zhuyin":"ㄕㄡˋ","english":"to receive; to accept; to suffer; subjected to; to bear; to stand; pleasant; (passive marker); (LGBT) bottom"},"為":{"zhuyin":"ㄨㄟˊ","english":"as (in the capacity of); to take sth as; to act as; to serve as; to behave as; to become; to be; to do; by (in the passive voice); because of; for; to"},"安":{"zhuyin":"ㄢ","english":"surname An; (bound form) calm; peaceful; to calm; to set at ease; safe; secure; in good health; content; satisfied (as in 安於|安于[an1yu2]); to place (sb) in a suitable position (job); to install; to fix; to fit; to bring (a charge against sb); to harbor (certain intentions); ampere (abbr. for 安培[an1pei2])"},"規":{"zhuyin":"ㄍㄨㄟ","english":"compass; a rule; regulation; to admonish; to plan; to scheme"},"磯":{"zhuyin":"ㄐㄧ","english":"breakwater; jetty"},"多":{"zhuyin":"ㄉㄨㄛ","english":"many; much; more; a lot of; too many; in excess; (after a numeral) ... odd; how (to what extent) (Taiwan pr. [duo2]); (bound form) multi-; poly-"},"平":{"zhuyin":"ㄆㄧㄥˊ","english":"surname Ping; flat; level; equal; to tie (make the same score); to draw (score); calm; peaceful; abbr. for 平聲|平声[ping2 sheng1]"},"杉":{"zhuyin":"ㄕㄢ","english":"China fir; Cunninghamia lanceolata; also pr. [sha1]"},"小":{"zhuyin":"ㄒㄧㄠˇ","english":"small; tiny; few; young"},"探":{"zhuyin":"ㄊㄢˋ","english":"to explore; to search out; to scout; to visit; to stretch forward"},"有":{"zhuyin":"ㄧㄡˇ","english":"to have; there is; (bound form) having; with; -ful; -ed; -al (as in 有意[you3yi4] intentional)"},"輕":{"zhuyin":"ㄑㄧㄥ","english":"light; easy; gentle; soft; reckless; unimportant; frivolous; small in number; unstressed; neutral; to disparage"},"採":{"zhuyin":"ㄘㄞˇ","english":"to pick; to pluck; to collect; to select; to choose; to gather"},"才":{"zhuyin":"ㄘㄞˊ","english":"ability; talent; sb of a certain type; a capable individual; then and only then; just now; (before an expression of quantity) only"},"洛":{"zhuyin":"ㄌㄨㄛˋ","english":"surname Luo; old name of several rivers (in Henan, Shaanxi, Sichuan and Anhui); used in transliteration"},"麼":{"zhuyin":"ㄇㄚˊ","english":"exclamatory final particle; interrogative final particle; suffix, used to form interrogative 什麼|什么[shen2 me5], what?, indefinite 這麼|这么[zhe4 me5] thus, etc; tiny; insignificant"},"礦":{"zhuyin":"ㄎㄨㄤˋ","english":"mineral deposit; ore deposit; ore; a mine"},"委":{"zhuyin":"ㄨㄟˇ","english":"surname Wei; used in 委蛇[wei1yi2]; to entrust; to cast aside; to shift (blame etc); to accumulate; roundabout; winding; dejected; listless; committee member; council; end; actually; certainly"},"放":{"zhuyin":"ㄈㄤˋ","english":"to put; to place; to release; to free; to let go; to let out; to set off (fireworks)"},"怎":{"zhuyin":"ㄗㄣˇ","english":"how"},"墨":{"zhuyin":"ㄇㄛˋ","english":"surname Mo; abbr. for 墨西哥[Mo4xi1ge1], Mexico; ink stick; China ink; CL:塊|块[kuai4]; corporal punishment consisting of tattooing characters on the victim's forehead"},"史":{"zhuyin":"ㄕˇ","english":"surname Shi; history; annals; title of an official historian in ancient China"},"六":{"zhuyin":"ㄌㄧㄡˋ","english":"six; 6"},"家":{"zhuyin":"ㄐㄧㄚ","english":"home; family; (polite) my (sister, uncle etc); classifier for families or businesses; refers to the philosophical schools of pre-Han China; noun suffix for a specialist in some activity, such as a musician or revolutionary, corresponding to English -ist, -er, -ary or -ian; CL:個|个[ge4]"},"心":{"zhuyin":"ㄒㄧㄣ","english":"heart; mind; intention; center; core; CL:顆|颗[ke1],個|个[ge4]"},"判":{"zhuyin":"ㄆㄢˋ","english":"(bound form) to differentiate; to distinguish; (bound form) clearly (different); to judge; to decide; to grade; (of a judge) to sentence"},"知":{"zhuyin":"ㄓ","english":"to know; to be aware"},"漫":{"zhuyin":"ㄇㄢˋ","english":"free; unrestrained; to inundate"},"院":{"zhuyin":"ㄩㄢˋ","english":"courtyard; institution; CL:個|个[ge4]"},"前":{"zhuyin":"ㄑㄧㄢˊ","english":"front; forward; ahead; first; top (followed by a number); future; ago; before; BC (e.g. 前293年); former; formerly"},"位":{"zhuyin":"ㄨㄟˋ","english":"position; location; place; seat; classifier for people (honorific); classifier for binary bits (e.g. 十六位 16-bit or 2 bytes); (physics) potential"},"迷":{"zhuyin":"ㄇㄧˊ","english":"to bewilder; crazy about; fan; enthusiast; lost; confused"},"房":{"zhuyin":"ㄈㄤˊ","english":"surname Fang; house; room; CL:間|间[jian1]; branch of an extended family; classifier for family members (or concubines)"},"孩":{"zhuyin":"ㄏㄞˊ","english":"(bound form) child"},"容":{"zhuyin":"ㄖㄨㄥˊ","english":"surname Rong; to hold; to contain; to allow; to tolerate; appearance; look; countenance"},"早":{"zhuyin":"ㄗㄠˇ","english":"early; morning; Good morning!; long ago; prematurely"},"生":{"zhuyin":"ㄕㄥ","english":"to be born; to give birth; life; to grow; raw; uncooked; student"},"起":{"zhuyin":"ㄑㄧˇ","english":"to rise; to raise; to get up; to set out; to start; to appear; to launch; to initiate (action); to draft; to establish; to get (from a depot or counter); verb suffix, to start; starting from (a time, place, price etc); classifier for occurrences or unpredictable events: case, instance; classifier for groups: batch, group"},"第":{"zhuyin":"ㄉㄧˋ","english":"(prefix indicating ordinal number, as in 第六[di4-liu4] \"sixth\"); (literary) grades in which successful candidates in the imperial examinations were placed; (old) residence of a high official; (literary) but; however; (literary) only; just"},"共":{"zhuyin":"ㄍㄨㄥˋ","english":"common; general; to share; together; total; altogether; abbr. for 共產黨|共产党[Gong4 chan3 dang3], Communist party"},"具":{"zhuyin":"ㄐㄩˋ","english":"tool; device; utensil; equipment; instrument; talent; ability; to possess; to have; to provide; to furnish; to state; classifier for devices, coffins, dead bodies"},"全":{"zhuyin":"ㄑㄩㄢˊ","english":"surname Quan; all; whole; entire; every; complete"},"得":{"zhuyin":"ㄉㄜˊ","english":"to obtain; to get; to gain; to catch (a disease); proper; suitable; proud; contented; to allow; to permit; ready; finished; structural particle: used after a verb (or adjective as main verb), linking it to following phrase indicating effect, degree, possibility etc; to have to; must; ought to; to need to"},"樣":{"zhuyin":"ㄧㄤˋ","english":"manner; pattern; way; appearance; shape; classifier: kind, type"},"華":{"zhuyin":"ㄏㄨㄚˊ","english":"abbr. for China; Mount Hua 華山|华山[Hua4 Shan1] in Shaanxi; surname Hua; old variant of 花[hua1]; flower; magnificent; splendid; flowery"},"花":{"zhuyin":"ㄏㄨㄚ","english":"surname Hua; flower; blossom; CL:朵[duo3],支[zhi1],束[shu4],把[ba3],盆[pen2],簇[cu4]; fancy pattern; florid; to spend (money, time); (coll.) lecherous; lustful"},"到":{"zhuyin":"ㄉㄠˋ","english":"to reach; to arrive; to leave for; to go to; to (a place); until (a time); up to (a point); (verb complement indicating arriving at a place or reaching a point); considerate; thoughtful; thorough"},"發":{"zhuyin":"ㄈㄚ","english":"to send out; to show (one's feeling); to issue; to develop; to make a bundle of money; classifier for gunshots (rounds)"},"威":{"zhuyin":"ㄨㄟ","english":"power; might; prestige"},"律":{"zhuyin":"ㄌㄩˋ","english":"surname Lü; law"},"可":{"zhuyin":"ㄎㄜˇ","english":"(prefix) can; may; able to; -able; to approve; to permit; to suit; (particle used for emphasis) certainly; very; but; however; used in 可汗[ke4 han2]"},"本":{"zhuyin":"ㄅㄣˇ","english":"(bound form) root; stem; (bound form) origin; source; (bound form) one's own; this; (bound form) this; the current (year etc); (bound form) original; (bound form) inherent; originally; initially; capital; principal; classifier for books, periodicals, files etc"},"間":{"zhuyin":"ㄐㄧㄢ","english":"between; among; within a definite time or space; room; section of a room or lateral space between two pairs of pillars; classifier for rooms; gap; to separate; to thin out (seedlings); to sow discontent"},"牆":{"zhuyin":"ㄑㄧㄤˊ","english":"wall (CL:面[mian4],堵[du3]); (slang) to block (a website) (usu. in the passive: 被牆|被墙[bei4 qiang2])"},"五":{"zhuyin":"ㄨˇ","english":"five; 5"},"此":{"zhuyin":"ㄘˇ","english":"this; these"},"示":{"zhuyin":"ㄕˋ","english":"to show; to reveal"},"熊":{"zhuyin":"ㄒㄩㄥˊ","english":"surname Xiong; bear; (coll.) to scold; to rebuke; (coll.) weak; incapable"},"題":{"zhuyin":"ㄊㄧˊ","english":"surname Ti; topic; problem for discussion; exam question; subject; to inscribe; to mention; CL:個|个[ge4],道[dao4]"},"期":{"zhuyin":"ㄑㄧ","english":"a period of time; phase; stage; classifier for issues of a periodical, courses of study; time; term; period; to hope; Taiwan pr. [qi2]"},"說":{"zhuyin":"ㄕㄨㄟˋ","english":"to persuade; to speak; to talk; to say; to explain; to comment; to scold; to tell off; (bound form) theory; doctrine"},"實":{"zhuyin":"ㄕˊ","english":"real; true; honest; really; solid; fruit; seed; definitely"},"先":{"zhuyin":"ㄒㄧㄢ","english":"beforehand; first; earlier; at first; originally; for the time being; for now; (prefix) my late (in referring to deceased relatives older than oneself)"},"片":{"zhuyin":"ㄆㄧㄢ","english":"disk; sheet; thin piece; flake; a slice; film; TV play; to slice; to carve thin; partial; incomplete; one-sided; classifier for slices, tablets, tract of land, area of water; classifier for CDs, movies, DVDs etc; used with numeral 一[yi1]: classifier for scenario, scene, feeling, atmosphere, sound etc; Kangxi radical 91"},"責":{"zhuyin":"ㄗㄜˊ","english":"duty; responsibility; to reproach; to blame"},"量":{"zhuyin":"ㄌㄧㄤˊ","english":"to measure; capacity; quantity; amount; to estimate; abbr. for 量詞|量词[liang4 ci2], classifier (in Chinese grammar); measure word"},"類":{"zhuyin":"ㄌㄟˋ","english":"kind; type; class; category; (classifier) kind; type; (bound form) to resemble; to be similar to"},"紅":{"zhuyin":"ㄏㄨㄥˊ","english":"surname Hong; used in 女紅|女红[nu:3gong1]; red; popular; revolutionary; bonus"},"站":{"zhuyin":"ㄓㄢˋ","english":"station; to stand; to halt; to stop; branch of a company or organization; website"},"沒":{"zhuyin":"ㄇㄟˊ","english":"(negative prefix for verbs) have not; not; drowned; to end; to die; to inundate"},"讓":{"zhuyin":"ㄖㄤˋ","english":"to yield; to permit; to let sb do sth; to have sb do sth; to make sb (feel sad etc); by (indicates the agent in a passive clause, like 被[bei4])"},"待":{"zhuyin":"ㄉㄞ","english":"to stay; to remain; to wait; to treat; to deal with; to need; going to (do sth); about to; intending to"},"還":{"zhuyin":"ㄏㄨㄢˊ","english":"surname Huan; still; still in progress; still more; yet; even more; in addition; fairly; passably (good); as early as; even; also; else; to pay back; to return"},"始":{"zhuyin":"ㄕˇ","english":"to begin; to start; then; only then"},"錢":{"zhuyin":"ㄑㄧㄢˊ","english":"surname Qian; coin; money; CL:筆|笔[bi3]; unit of weight, one tenth of a tael 兩|两[liang3]"},"作":{"zhuyin":"ㄗㄨㄛ","english":"(bound form) worker; (bound form) workshop; (slang) troublesome; high-maintenance (person); to do; to engage in; to write; to compose; to pretend; to feign; to regard as; to consider to be; to be; to act the part of; to feel (itchy, nauseous etc); writings; works"},"就":{"zhuyin":"ㄐㄧㄡˋ","english":"(after a suppositional clause) in that case; then; (after a clause of action) as soon as; immediately after; (same as 就是[jiu4 shi4]) merely; nothing else but; simply; just; precisely; exactly; only; as little as; as much as; as many as; to approach; to move towards; to undertake; to engage in; (often followed by 著|着[zhe5]) taking advantage of; (of food) to go with; with regard to; concerning; (pattern: 就[jiu4] ... 也[ye3] ...) even if ... still ...; (pattern: 不[bu4] ... 就[jiu4] ...) if not ... then must be ..."},"迪":{"zhuyin":"ㄉㄧˊ","english":"to enlighten"},"的":{"zhuyin":"˙ㄉㄜ","english":"of; ~'s (possessive particle); (used after an attribute when it modifies a noun); (used at the end of a declarative sentence for emphasis); (used after a noun, verb or adjective to form a nominal expression, as in 皮革的[pi2ge2 de5] \"one made of leather\" or 跑堂兒的|跑堂儿的[pao3tang2r5de5] \"a waiter (literally, one who runs back and forth in a restaurant)\" or 新的[xin1 de5] \"new one\"); also pr. [di4] or [di5] in poetry and songs; a taxi; a cab (abbr. for 的士[di1shi4]); really and truly; (bound form) bull's-eye; target"},"世":{"zhuyin":"ㄕˋ","english":"surname Shi; life; age; generation; era; world; lifetime; epoch; descendant; noble"},"隊":{"zhuyin":"ㄉㄨㄟˋ","english":"squadron; team; group; CL:個|个[ge4]"},"近":{"zhuyin":"ㄐㄧㄣˋ","english":"near; close to; approximately"},"積":{"zhuyin":"ㄐㄧ","english":"to amass; to accumulate; to store up; (math.) product (the result of multiplication); (TCM) constipation; indigestion"},"裡":{"zhuyin":"ㄌㄧˇ","english":"lining; interior; inside; internal; also written 裏|里[li3]"},"改":{"zhuyin":"ㄍㄞˇ","english":"to change; to alter; to transform; to correct"},"器":{"zhuyin":"ㄑㄧˋ","english":"device; tool; utensil; CL:臺|台[tai2]"},"九":{"zhuyin":"ㄐㄧㄡˇ","english":"nine; 9"},"這":{"zhuyin":"ㄓㄜˋ","english":"(pronoun) this; these; (bound form) this; the (followed by a noun); (bound form) this; these (followed by a classifier) (in this sense, commonly pr. [zhei4], esp. in Beijing); (coll.) this"},"首":{"zhuyin":"ㄕㄡˇ","english":"head; chief; first (occasion, thing etc); classifier for poems, songs etc"},"數":{"zhuyin":"ㄕㄨˇ","english":"to count; to count as; to regard as; to enumerate; to list; number; figure; several; a few; (literary) frequently; repeatedly"},"選":{"zhuyin":"ㄒㄩㄢˇ","english":"to choose; to pick; to select; to elect"},"專":{"zhuyin":"ㄓㄨㄢ","english":"for a particular person, occasion, purpose; focused on one thing; special; expert; particular (to sth); concentrated; specialized"},"掉":{"zhuyin":"ㄉㄧㄠˋ","english":"to fall; to drop; to lag behind; to lose; to go missing; to reduce; fall (in prices); to lose (value, weight etc); to wag; to swing; to turn; to change; to exchange; to swap; to show off; to shed (hair); (used after certain verbs to express completion, fulfillment, removal etc)"},"字":{"zhuyin":"ㄗˋ","english":"letter; symbol; character; word; CL:個|个[ge4]; courtesy or style name traditionally given to males aged 20 in dynastic China"},"道":{"zhuyin":"ㄉㄠˋ","english":"road; path (CL:條|条[tiao2],股[gu3]); (bound form) way; reason; principle; (bound form) a skill; an art; a specialization; (Daoism) the Way; the Dao; to say (introducing a direct quotation, as in a novel); (bound form) to express; to extend (polite words); classifier for long thin things (rivers, cracks etc), barriers (walls, doors etc), questions (in an exam etc), commands, courses in a meal, steps in a process; (old) circuit (administrative division)"},"顯":{"zhuyin":"ㄒㄧㄢˇ","english":"to make visible; to reveal; prominent; conspicuous; (prefix) phanero-"},"歲":{"zhuyin":"ㄙㄨㄟˋ","english":"classifier for years (of age); year; year (of crop harvests)"},"意":{"zhuyin":"ㄧˋ","english":"Italy; Italian (abbr. for 意大利[Yi4 da4 li4]); idea; meaning; thought; to think; wish; desire; intention; to expect; to anticipate"},"球":{"zhuyin":"ㄑㄧㄡˊ","english":"ball; sphere; globe; CL:個|个[ge4]; ball game; match; CL:場|场[chang3]"},"三":{"zhuyin":"ㄙㄢ","english":"surname San; three; 3"},"請":{"zhuyin":"ㄑㄧㄥˇ","english":"to ask; to invite; please (do sth); to treat (to a meal etc); to request"},"布":{"zhuyin":"ㄅㄨˋ","english":"cloth; to declare; to announce; to spread; to make known"},"正":{"zhuyin":"ㄓㄥ","english":"first month of the lunar year; straight; upright; proper; main; principal; to correct; to rectify; exactly; just (at that time); right (in that place); (math.) positive"},"任":{"zhuyin":"ㄖㄣˊ","english":"surname Ren; to assign; to appoint; to take up a post; office; responsibility; to let; to allow; to give free rein to; no matter (how, what etc); classifier for terms served in office, or for spouses, girlfriends etc (as in 前任男友)"},"現":{"zhuyin":"ㄒㄧㄢˋ","english":"to appear; present; now; existing; current"},"跟":{"zhuyin":"ㄍㄣ","english":"heel; to follow closely; to go with; (of a woman) to marry sb; with; compared with; to; towards; and (joining two nouns)"},"名":{"zhuyin":"ㄇㄧㄥˊ","english":"name; noun (part of speech); place (e.g. among winners); famous; classifier for people"},"轉":{"zhuyin":"ㄓㄨㄞˇ","english":"see 轉文|转文[zhuai3 wen2]; to turn; to change direction; to transfer; to forward (mail); (Internet) to share (sb else's content); to revolve; to turn; to circle about; to walk about; classifier for revolutions (per minute etc): revs, rpm; classifier for repeated actions"},"看":{"zhuyin":"ㄎㄢ","english":"to look after; to take care of; to watch; to guard; to see; to look at; to read; to watch; to visit; to call on; to consider; to regard as; to look after; to treat (a patient or illness); to depend on; to feel (that); (after a verb) to give it a try; to watch out for"},"工":{"zhuyin":"ㄍㄨㄥ","english":"work; worker; skill; profession; trade; craft; labor"},"公":{"zhuyin":"ㄍㄨㄥ","english":"public; collectively owned; common; international (e.g. high seas, metric system, calendar); make public; fair; just; Duke, highest of five orders of nobility 五等爵位[wu3 deng3 jue2 wei4]; honorable (gentlemen); father-in-law; male (animal)"},"也":{"zhuyin":"ㄧㄝˇ","english":"surname Ye; also; too; as well; (not ...) either; (used after a verbal or nominal expression X to indicate that X is an extreme or unexpected case) even (X); (literary) particle having functions similar to 啊[a5]"},"核":{"zhuyin":"ㄏㄜˊ","english":"pit; stone; nucleus; nuclear; to examine; to check; to verify"},"廠":{"zhuyin":"ㄔㄤˇ","english":"factory; yard; depot; workhouse; works; (industrial) plant"},"輪":{"zhuyin":"ㄌㄨㄣˊ","english":"wheel; disk; ring; steamship; to take turns; to rotate; classifier for big round objects: disk, or recurring events: round, turn"},"蓋":{"zhuyin":"ㄍㄜˇ","english":"surname Ge; lid; top; cover; canopy; to cover; to conceal; to build"},"區":{"zhuyin":"ㄡ","english":"surname Ou; area; region; district; small; distinguish; CL:個|个[ge4]"},"月":{"zhuyin":"ㄩㄝˋ","english":"moon; month; monthly; CL:個|个[ge4],輪|轮[lun2]"},"在":{"zhuyin":"ㄗㄞˋ","english":"to exist; to be alive; (of sb or sth) to be (located) at; (used before a verb to indicate an action in progress)"},"上":{"zhuyin":"ㄕㄤˇ","english":"used in 上聲|上声[shang3 sheng1]; (bound form) up; upper; above; previous; first (of multiple parts); to climb; to get onto; to go up; to attend (class or university); (directional complement) up; (noun suffix) on; above"},"洋":{"zhuyin":"ㄧㄤˊ","english":"ocean; vast; foreign; silver dollar or coin"},"叫":{"zhuyin":"ㄐㄧㄠˋ","english":"to shout; to call; to order; to ask; to be called; by (indicates agent in the passive mood)"},"辦":{"zhuyin":"ㄅㄢˋ","english":"to take care of (a matter); to deal with (a task, procedure etc); to organize (an event); to establish; to set up; to manage; to run (an enterprise); (law) to handle; to investigate; to prosecute (a case or suspect)"},"醫":{"zhuyin":"ㄧ","english":"medical; medicine; doctor; to cure; to treat"},"要":{"zhuyin":"ㄧㄠ","english":"(bound form) to demand; to coerce; to want; to need; to ask for; will; shall; about to; need to; should; if (same as 要是[yao4 shi5]); (bound form) important"},"年":{"zhuyin":"ㄋㄧㄢˊ","english":"surname Nian; year; CL:個|个[ge4]"},"資":{"zhuyin":"ㄗ","english":"resources; capital; to provide; to supply; to support; money; expense"},"不":{"zhuyin":"ㄅㄨˋ","english":"no; not so; (bound form) not; un-"},"好":{"zhuyin":"ㄏㄠˇ","english":"good; appropriate; proper; all right!; (before a verb) easy to; (before a verb) good to; (before an adjective for exclamatory effect) so; (verb complement indicating completion); (of two people) close; on intimate terms; (after a personal pronoun) hello; to be fond of; to have a tendency to; to be prone to"},"們":{"zhuyin":"˙ㄇㄣ","english":"plural marker for pronouns, and nouns referring to individuals"},"被":{"zhuyin":"ㄅㄟˋ","english":"quilt; to cover (with); (literary) to suffer (a misfortune); used to indicate passive voice (placed before the doer of the action like \"by\" in English passive-voice sentences, or, if the doer is not mentioned, before the verb); (since c. 2009) (sarcastic or jocular) used to indicate that the following word should be regarded as being in air quotes (as in 被旅遊|被旅游[bei4 lu:3you2] to \"go on a trip\")"},"以":{"zhuyin":"ㄧˇ","english":"abbr. for Israel 以色列[Yi3 se4 lie4]; to use; by means of; according to; in order to; because of; at (a certain date or place)"},"陣":{"zhuyin":"ㄓㄣˋ","english":"disposition of troops; wave; spate; burst; spell; short period of time; classifier for events or states of short duration"},"外":{"zhuyin":"ㄨㄞˋ","english":"outside; in addition; foreign; external"},"申":{"zhuyin":"ㄕㄣ","english":"old name for Shanghai 上海[Shang4hai3]; surname Shen; to extend; to state; to explain; 9th earthly branch: 3-5 p.m., 7th solar month (7th August-7th September), year of the Monkey; ancient Chinese compass point: 240°"},"秒":{"zhuyin":"ㄇㄧㄠˇ","english":"second (unit of time); arc second (angular measurement unit); (coll.) instantly"},"想":{"zhuyin":"ㄒㄧㄤˇ","english":"to think (about); to think of; to devise; to think (that); to believe (that); to desire; to want (to); to miss (feel wistful about the absence of)"},"宣":{"zhuyin":"ㄒㄩㄢ","english":"surname Xuan; to declare (publicly); to announce"},"己":{"zhuyin":"ㄐㄧˇ","english":"self; oneself; sixth of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; sixth in order; letter \"F\" or Roman \"VI\" in list \"A, B, C\", or \"I, II, III\" etc; hexa"},"盛":{"zhuyin":"ㄕㄥˋ","english":"surname Sheng; to hold; to contain; to ladle; to pick up with a utensil; flourishing; vigorous; magnificent; extensively"},"果":{"zhuyin":"ㄍㄨㄛˇ","english":"fruit; result; resolute; indeed; if really"},"部":{"zhuyin":"ㄅㄨˋ","english":"ministry; department; section; part; division; troops; board; classifier for works of literature, films, machines etc"},"空":{"zhuyin":"ㄎㄨㄥ","english":"empty; air; sky; in vain; to empty; vacant; unoccupied; space; leisure; free time"},"漆":{"zhuyin":"ㄑㄧ","english":"to paint"},"兩":{"zhuyin":"ㄌㄧㄤˇ","english":"two; both; some; a few; tael, unit of weight equal to 50 grams (modern) or 1⁄16 of a catty 斤[jin1] (old)"},"界":{"zhuyin":"ㄐㄧㄝˋ","english":"(bound form) boundary; border; (bound form) realm"},"都":{"zhuyin":"ㄉㄨ","english":"surname Du; all; both; entirely; (used for emphasis) even; already; (not) at all; capital city; metropolis"},"大":{"zhuyin":"ㄉㄚˋ","english":"big; large; great; older (than another person); eldest (as in 大姐[da4jie3]); greatly; freely; fully; (dialect) father; (dialect) uncle (father's brother); see 大夫[dai4 fu5]"},"顏":{"zhuyin":"ㄧㄢˊ","english":"surname Yan; color; face; countenance"},"軍":{"zhuyin":"ㄐㄩㄣ","english":"(bound form) army; military"},"新":{"zhuyin":"ㄒㄧㄣ","english":"abbr. for Xinjiang 新疆[Xin1jiang1]; abbr. for Singapore 新加坡[Xin1jia1po1]; surname Xin; new; newly; meso- (chemistry)"},"鬱":{"zhuyin":"ㄩˋ","english":"surname Yu; (bound form) (of vegetation) lush; luxuriant; (bound form) melancholy; depressed"},"線":{"zhuyin":"ㄒㄧㄢˋ","english":"thread; string; wire; line; CL:條|条[tiao2],股[gu3],根[gen1]; (after a number) tier (unofficial ranking of a Chinese city)"},"是":{"zhuyin":"ㄕˋ","english":"to be (followed by substantives only); correct; right; true; (respectful acknowledgement of a command) very well; (adverb for emphatic assertion)"},"後":{"zhuyin":"ㄏㄡˋ","english":"back; behind; rear; afterwards; after; later; post-"},"誠":{"zhuyin":"ㄔㄥˊ","english":"(bound form) sincere; authentic; (literary) really; truly"},"驗":{"zhuyin":"ㄧㄢˋ","english":"to examine; to test; to check"},"個":{"zhuyin":"ㄍㄜˇ","english":"used in 自個兒|自个儿[zi4 ge3 r5]; (classifier used before a noun that has no specific classifier); (bound form) individual"},"歷":{"zhuyin":"ㄌㄧˋ","english":"to experience; to undergo; to pass through; all; each; every; history"},"萬":{"zhuyin":"ㄨㄢˋ","english":"surname Wan; ten thousand; a great number"},"幕":{"zhuyin":"ㄇㄨˋ","english":"curtain or screen; canopy or tent; headquarters of a general; act (of a play)"},"問":{"zhuyin":"ㄨㄣˋ","english":"to ask; to inquire"},"文":{"zhuyin":"ㄨㄣˊ","english":"surname Wen; language; culture; writing; formal; literary; gentle; (old) classifier for coins; Kangxi radical 67"},"做":{"zhuyin":"ㄗㄨㄛˋ","english":"to make; to produce; to write; to compose; to do; to engage in; to hold (a party etc); (of a person) to be (an intermediary, a good student etc); to become (husband and wife, friends etc); (of a thing) to serve as; to be used for; to assume (an air or manner)"},"兵":{"zhuyin":"ㄅㄧㄥ","english":"soldiers; a force; an army; weapons; arms; military; warlike; CL:個|个[ge4]"},"域":{"zhuyin":"ㄩˋ","english":"field; region; area; domain (taxonomy)"},"睛":{"zhuyin":"ㄐㄧㄥ","english":"eye; eyeball"},"症":{"zhuyin":"ㄓㄥˋ","english":"disease; illness"},"內":{"zhuyin":"ㄋㄟˋ","english":"inside; inner; internal; within; interior"},"哥":{"zhuyin":"ㄍㄜ","english":"elder brother"},"太":{"zhuyin":"ㄊㄞˋ","english":"highest; greatest; too (much); very; extremely"},"對":{"zhuyin":"ㄉㄨㄟˋ","english":"right; correct; towards; at; for; concerning; regarding; to treat (sb a certain way); to face; (bound form) opposite; facing; matching; to match together; to adjust; to fit; to suit; to answer; to reply; to add; to pour in (a fluid); to check; to compare; classifier: couple; pair"},"性":{"zhuyin":"ㄒㄧㄥˋ","english":"nature; character; property; quality; attribute; sexuality; sex; gender; suffix forming adjective from verb; suffix forming noun from adjective, corresponding to -ness or -ity; essence; CL:個|个[ge4]"},"焦":{"zhuyin":"ㄐㄧㄠ","english":"surname Jiao; burnt; scorched; charred; worried; anxious; coke; joule (abbr. for 焦耳[jiao1 er3])"},"結":{"zhuyin":"ㄐㄧㄝ","english":"(of a plant) to produce (fruit or seeds); Taiwan pr. [jie2]; knot; sturdy; bond; to tie; to bind; to check out (of a hotel)"},"把":{"zhuyin":"ㄅㄚˇ","english":"to hold; to grasp; to hold a baby in position to help it urinate or defecate; handlebar; classifier: handful, bundle, bunch; classifier for things with handles; (used to put the object before the verb: 把[ba3] + {noun} + {verb})"},"究":{"zhuyin":"ㄐㄧㄡ","english":"after all; to investigate; to study carefully; Taiwan pr. [jiu4]"},"中":{"zhuyin":"ㄓㄨㄥ","english":"(bound form) China; Chinese; surname Zhong; within; among; in; middle; center; while (doing sth); during; (dialect) OK; all right; to hit (the mark); to be hit by; to suffer; to win (a prize, a lottery)"},"影":{"zhuyin":"ㄧㄥˇ","english":"picture; image; film; movie; photograph; reflection; shadow; trace"},"最":{"zhuyin":"ㄗㄨㄟˋ","english":"most; the most; -est (superlative suffix)"},"像":{"zhuyin":"ㄒㄧㄤˋ","english":"to resemble; to be like; to look as if; such as; appearance; image; portrait; image under a mapping (math.)"},"右":{"zhuyin":"ㄧㄡˋ","english":"(bound form) right; right-hand side; (bound form) (politics) right of center; (bound form) (old) west; (literary) the right side as the side of precedence"},"夷":{"zhuyin":"ㄧˊ","english":"non-Han people, esp. to the East of China; barbarians; to wipe out; to exterminate; to tear down; to raze"},"開":{"zhuyin":"ㄎㄞ","english":"to open (transitive or intransitive); (of ships, vehicles, troops etc) to start; to turn on; to put in operation; to operate; to run; to boil; to write out (a prescription, check, invoice etc); (directional complement) away; off; carat (gold); abbr. for Kelvin, 開爾文|开尔文[Kai1er3wen2]; abbr. for 開本|开本[kai1ben3], book format"},"出":{"zhuyin":"ㄔㄨ","english":"to go out; to come out; to arise; to occur; to produce; to yield; to go beyond; to exceed; (used after a verb to indicate an outward direction or a positive result); classifier for dramas, plays, operas etc"},"賽":{"zhuyin":"ㄙㄞˋ","english":"to compete; competition; match; to surpass; better than; superior to; to excel"},"件":{"zhuyin":"ㄐㄧㄢˋ","english":"item; component; classifier for events, things, clothes etc"},"網":{"zhuyin":"ㄨㄤˇ","english":"net; network"},"因":{"zhuyin":"ㄧㄣ","english":"cause; reason; because"},"木":{"zhuyin":"ㄇㄨˋ","english":"surname Mu; (bound form) tree; (bound form) wood; unresponsive; numb; wooden"},"似":{"zhuyin":"ㄕˋ","english":"used in 似的[shi4de5]; to seem; to appear; to resemble; similar; -like; pseudo-; (more) than"},"十":{"zhuyin":"ㄕˊ","english":"ten; 10"},"合":{"zhuyin":"ㄍㄜˇ","english":"100 ml; one-tenth of a peck; measure for dry grain equal to one-tenth of sheng 升 or liter, or one-hundredth dou 斗; to close; to join; to fit; to be equal to; whole; together; round (in battle); conjunction (astronomy); 1st note of pentatonic scale; old variant of 盒[he2]"},"夏":{"zhuyin":"ㄒㄧㄚˋ","english":"the Xia or Hsia dynasty c. 2000 BC; Xia of the Sixteen Kingdoms (407-432); surname Xia; summer"},"負":{"zhuyin":"ㄈㄨˋ","english":"to bear; to carry (on one's back); to turn one's back on; to be defeated; negative (math. etc)"},"但":{"zhuyin":"ㄉㄢˋ","english":"but; yet; however; still; merely; only; just"},"案":{"zhuyin":"ㄢˋ","english":"(legal) case; incident; record; file; table"},"西":{"zhuyin":"ㄒㄧ","english":"the West; abbr. for Spain 西班牙[Xi1 ban1 ya2]; Spanish; west"},"尼":{"zhuyin":"ㄋㄧˊ","english":"Buddhist nun; (often used in phonetic spellings)"},"美":{"zhuyin":"ㄇㄟˇ","english":"(bound form) the Americas (abbr. for 美洲[Mei3 zhou1]); (bound form) USA (abbr. for 美國|美国[Mei3 guo2]); beautiful; very satisfactory; good; to beautify; to be pleased with oneself"},"法":{"zhuyin":"ㄈㄚˇ","english":"France; French; abbr. for 法國|法国[Fa3 guo2]; Taiwan pr. [Fa4]; law; method; way; to emulate; (Buddhism) dharma; (abbr. for 法家[Fa3 jia1]) the Legalists; (physics) farad (abbr. for 法拉[fa3 la1])"},"打":{"zhuyin":"ㄉㄚˊ","english":"(loanword) dozen; Taiwan pr. [da3]; to beat; to strike; to hit; to break; to type; to mix up; to build; to fight; to fetch; to make; to tie up; to issue; to shoot; to calculate; to play (a game); since; from"},"色":{"zhuyin":"ㄙㄜˋ","english":"color; CL:種|种[zhong3]; look; appearance; sex; (coll.) color; used in 色子[shai3zi5]"},"之":{"zhuyin":"ㄓ","english":"(possessive particle, literary equivalent of 的[de5]); him; her; it"},"超":{"zhuyin":"ㄔㄠ","english":"to exceed; to overtake; to surpass; to transcend; to pass; to cross; ultra-; super-"},"少":{"zhuyin":"ㄕㄠˇ","english":"few; less; to lack; to be missing; to stop (doing sth); seldom; young"},"天":{"zhuyin":"ㄊㄧㄢ","english":"day; sky; heaven"},"次":{"zhuyin":"ㄘˋ","english":"next in sequence; second; the second (day, time etc); secondary; vice-; sub-; infra-; inferior quality; substandard; order; sequence; hypo- (chemistry); classifier for enumerated events: time"},"傷":{"zhuyin":"ㄕㄤ","english":"to injure; injury; wound"},"物":{"zhuyin":"ㄨˋ","english":"(bound form) thing; (literary) the outside world as distinct from oneself; people other than oneself"},"日":{"zhuyin":"ㄖˋ","english":"abbr. for 日本[Ri4 ben3], Japan; sun; day; date, day of the month"},"更":{"zhuyin":"ㄍㄥ","english":"to change or replace; to experience; one of the five two-hour periods into which the night was formerly divided; watch (e.g. of a sentry or guard); more; even more; further; still; still more"},"士":{"zhuyin":"ㄕˋ","english":"surname Shi; member of the senior ministerial class (old); scholar (old); bachelor; honorific; soldier; noncommissioned officer; specialist worker"},"源":{"zhuyin":"ㄩㄢˊ","english":"root; source; origin"},"去":{"zhuyin":"ㄑㄩˋ","english":"to go; to go to (a place); (of a time etc) last; just passed; to send; to remove; to get rid of; to reduce; to be apart from in space or time; to die (euphemism); to play (a part); (when used either before or after a verb) to go in order to do sth; (after a verb of motion indicates movement away from the speaker); (used after certain verbs to indicate detachment or separation)"},"子":{"zhuyin":"ㄗˇ","english":"son; child; seed; egg; small thing; 1st earthly branch: 11 p.m.-1 a.m., midnight, 11th solar month (7th December to 5th January), year of the rat; viscount, fourth of five orders of nobility 五等爵位[wu3deng3 jue2wei4]; ancient Chinese compass point: 0° (north); subsidiary; subordinate; (prefix) sub-; (noun suffix)"},"淡":{"zhuyin":"ㄉㄢˋ","english":"insipid; diluted; weak; mild; light in color; tasteless; indifferent; (variant of 氮[dan4]) nitrogen"},"四":{"zhuyin":"ㄙˋ","english":"four; 4"},"慮":{"zhuyin":"ㄌㄩˋ","english":"to think over; to consider; anxiety"},"過":{"zhuyin":"ㄍㄨㄛ","english":"surname Guo; to cross; to go over; to pass (time); to celebrate (a holiday); to live; to get along; excessively; too-; (experienced action marker)"},"試":{"zhuyin":"ㄕˋ","english":"to test; to try; experiment; examination; test"},"害":{"zhuyin":"ㄏㄞˋ","english":"to do harm to; to cause trouble to; harm; evil; calamity"},"著":{"zhuyin":"ㄓㄠ","english":"a move in chess (Taiwan pr. [zhuo2]); trick; tactic; (dialect) okay; all right; (dialect) to put in; to add; to touch; to come in contact with; to feel; to be affected by; to catch fire; to burn; (coll.) to fall asleep; (after a verb) hitting the mark; succeeding in; aspect particle indicating action in progress or ongoing state; to wear (clothes); to contact; to use; to apply; to make known; to show; to prove; to write; book; outstanding"},"定":{"zhuyin":"ㄉㄧㄥˋ","english":"to fix; to set; to make definite; to subscribe to (a newspaper etc); to book (tickets etc); to order (goods etc); to congeal; to coagulate; (literary) definitely"},"科":{"zhuyin":"ㄎㄜ","english":"branch of study; administrative section; division; field; branch; stage directions; family (taxonomy); rules; laws; to mete out (punishment); to levy (taxes etc); to fine sb; CL:個|个[ge4]"},"億":{"zhuyin":"ㄧˋ","english":"100 million"},"累":{"zhuyin":"ㄌㄟˇ","english":"to accumulate; to involve or implicate (Taiwan pr. [lei4]); continuous; repeated; tired; weary; to strain; to wear out; to work hard"},"膝":{"zhuyin":"ㄒㄧ","english":"knee"},"學":{"zhuyin":"ㄒㄩㄝˊ","english":"to learn; to study; to imitate; science; -ology"},"注":{"zhuyin":"ㄓㄨˋ","english":"to inject; to pour into; to concentrate; to pay attention; stake (gambling); classifier for sums of money; variant of 註|注[zhu4]"},"鈴":{"zhuyin":"ㄌㄧㄥˊ","english":"(small) bell; CL:隻|只[zhi1]"},"綠":{"zhuyin":"ㄌㄩˋ","english":"green; (slang) (derived from 綠帽子|绿帽子[lu:4 mao4 zi5]) to cheat on (one's spouse or boyfriend or girlfriend)"},"賠":{"zhuyin":"ㄆㄟˊ","english":"to compensate for loss; to indemnify; to suffer a financial loss"},"了":{"zhuyin":"˙ㄌㄜ","english":"(completed action marker); (modal particle indicating change of state, situation now); (modal particle intensifying preceding clause); to finish; (used with 得[de2] or 不[bu4] after a verb to express (im)possibility, as in 忘不了[wang4bu5liao3] \"cannot forget\"); (literary) (usually followed by a negative such as 無|无[wu2] or 不[bu4]) completely (not); entirely (not); (not) in the least; to understand clearly (variant of 瞭|了[liao3])"},"來":{"zhuyin":"ㄌㄞˊ","english":"to come; (used as a substitute for a more specific verb); hither (directional complement for motion toward the speaker, as in 回來|回来[hui2lai5]); ever since (as in 自古以來|自古以来[zi4gu3 yi3lai2]); for the past (amount of time); (prefix) the coming ...; the next ... (as in 來世|来世[lai2shi4]); (between two verbs) in order to; (after a round number) approximately; (used after 得[de2] to indicate possibility, as in 談得來|谈得来[tan2de5lai2], or after 不[bu4] to indicate impossibility, as in 吃不來|吃不来[chi1bu5lai2])"},"每":{"zhuyin":"ㄇㄟˇ","english":"each; every"},"研":{"zhuyin":"ㄧㄢˊ","english":"to grind; study; research"},"筆":{"zhuyin":"ㄅㄧˇ","english":"pen; pencil; writing brush; to write or compose; the strokes of Chinese characters; classifier for sums of money, deals; CL:支[zhi1],枝[zhi1]"},"一":{"zhuyin":"ㄧ","english":"one; single; a (article); as soon as; entire; whole; all; throughout; \"one\" radical in Chinese characters (Kangxi radical 1); also pr. [yao1] for greater clarity when spelling out numbers digit by digit"},"人":{"zhuyin":"ㄖㄣˊ","english":"person; people; CL:個|个[ge4],位[wei4]"},"會":{"zhuyin":"ㄏㄨㄟˋ","english":"can; to have the skill; to know how to; to be likely to; to be sure to; to meet; to get together; meeting; gathering; (suffix) union; group; association; (bound form) a moment (Taiwan pr. [hui3]); (bound form) to reckon accounts"},"今":{"zhuyin":"ㄐㄧㄣ","english":"now; the present time; current; contemporary; this (day, year etc)"},"很":{"zhuyin":"ㄏㄣˇ","english":"very; quite; (also, often used before an adjective without intensifying its meaning, i.e. as a meaningless syntactic element)"},"元":{"zhuyin":"ㄩㄢˊ","english":"surname Yuan; Yuan dynasty (1279-1368); currency unit (esp. Chinese yuan); (bound form) first; original; primary; (bound form) basic; fundamental; (bound form) constituent; part; (prefix) meta-; (math.) argument; variable; era (of a reign); (Tw) (geology) eon"},"只":{"zhuyin":"ㄓ","english":"variant of 隻|只[zhi1]; only; merely; just"},"從":{"zhuyin":"ㄘㄨㄥˊ","english":"surname Cong; from; through; via; (bound form) to follow; (bound form) to obey; (bound form) to engage in (an activity); (used before a negative) ever; (bound form) (Taiwan pr. [zong4]) retainer; attendant; (bound form) (Taiwan pr. [zong4]) assistant; auxiliary; subordinate; (bound form) (Taiwan pr. [zong4]) related by common paternal grandfather or earlier ancestor"},"跑":{"zhuyin":"ㄆㄠˊ","english":"(of an animal) to paw (the ground); to run; to run away; to escape; to run around (on errands etc); (of a gas or liquid) to leak or evaporate; (verb complement) away; off"},"貴":{"zhuyin":"ㄍㄨㄟˋ","english":"abbr. for Guizhou Province 貴州|贵州[Gui4zhou1]; expensive; (bound form) highly valued; precious; (bound form) noble; of high rank; (prefix) (honorific) your"},"決":{"zhuyin":"ㄐㄩㄝˊ","english":"to decide; to determine; to execute (sb); (of a dam etc) to breach or burst; definitely; certainly"},"下":{"zhuyin":"ㄒㄧㄚˋ","english":"down; downwards; below; lower; later; next (week etc); second (of two parts); to decline; to go down; to arrive at (a decision, conclusion etc); measure word to show the frequency of an action"},"室":{"zhuyin":"ㄕˋ","english":"surname Shi; room; work unit; grave; scabbard; family or clan; one of the 28 constellations of Chinese astronomy"},"面":{"zhuyin":"ㄇㄧㄢˋ","english":"face; side; surface; aspect; top; classifier for objects with flat surfaces such as drums, mirrors, flags etc"},"底":{"zhuyin":"˙ㄉㄜ","english":"(equivalent to 的 as possessive particle); bottom; base; background; foundation; copy (of a manuscript or receipt etc) kept as a record; (suffix) end of a year or month; (math.) radix; base (abbr. for 底數|底数[di3shu4])"},"電":{"zhuyin":"ㄉㄧㄢˋ","english":"lightning; electricity; electric (bound form); to get (or give) an electric shock; phone call or telegram etc; to send via telephone or telegram etc"},"腦":{"zhuyin":"ㄋㄠˇ","english":"brain; mind; head; essence"},"關掉":{"zhuyin":"ㄍㄨㄢ ㄉㄧㄠˋ","english":"to shut down, to close"},"影片":{"zhuyin":"ㄧㄥˇ ㄆㄧㄢˋ","english":"video, film"},"工具":{"zhuyin":"ㄍㄨㄥ ㄐㄩˋ","english":"tool"},"迪士尼":{"zhuyin":"ㄉㄧˊ ㄕˋ ㄋㄧˊ","english":"Disney"},"十億":{"zhuyin":"ㄕˊ ㄧˋ","english":"one billion; giga-"},"合作":{"zhuyin":"ㄏㄜˊ ㄗㄨㄛˋ","english":"to cooperate; to collaborate; to work together"},"沒了":{"zhuyin":"ㄇㄟˊ ˙ㄌㄜ","english":"to be dead; not to be, or cease to exist"},"三月":{"zhuyin":"ㄙㄢ ㄩㄝˋ","english":"March; third month (of the lunar year)"},"二十":{"zhuyin":"ㄦˋ ㄕˊ","english":"twenty; 20"},"宣布":{"zhuyin":"ㄒㄩㄢ ㄅㄨˋ","english":"to announce"},"他們":{"zhuyin":"ㄊㄚ ˙ㄇㄣ","english":"they; them"},"這個":{"zhuyin":"ㄓㄜˋ ˙ㄍㄜ","english":"(pronoun) this; (adjective) this"},"上線":{"zhuyin":"ㄕㄤˋ ㄒㄧㄢˋ","english":"to go online, to launch"},"結果":{"zhuyin":"ㄐㄧㄝˊ ㄍㄨㄛˇ","english":"result, outcome"},"每天":{"zhuyin":"ㄇㄟˇ ㄊㄧㄢ","english":"every day"},"百萬":{"zhuyin":"ㄅㄞˇ ㄨㄢˋ","english":"million"},"美元":{"zhuyin":"ㄇㄟˇ ㄩㄢˊ","english":"US dollar"},"總共":{"zhuyin":"ㄗㄨㄥˇ ㄍㄨㄥˋ","english":"altogether; in sum; in all; in total"},"十萬":{"zhuyin":"ㄕˊ ㄨㄢˋ","english":"hundred thousand"},"就要":{"zhuyin":"ㄐㄧㄡˋ ㄧㄠˋ","english":"will; shall; to be going to"},"問題":{"zhuyin":"ㄨㄣˋ ㄊㄧˊ","english":"question; problem; issue; topic; CL:個|个[ge4]"},"本來":{"zhuyin":"ㄅㄣˇ ㄌㄞˊ","english":"original; originally; at first; it goes without saying; of course"},"投資":{"zhuyin":"ㄊㄡˊ ㄗ","english":"to invest, investment"},"角色":{"zhuyin":"ㄐㄩㄝˊ ㄙㄜˋ","english":"character, role"},"電腦":{"zhuyin":"ㄉㄧㄢˋ ㄋㄠˇ","english":"computer"},"資源":{"zhuyin":"ㄗ ㄩㄢˊ","english":"resources"},"轉去":{"zhuyin":"ㄓㄨㄢˋ ㄑㄩˋ","english":"to return; to go back"},"機器人":{"zhuyin":"ㄐㄧ ㄑㄧˋ ㄖㄣˊ","english":"robot"},"法院":{"zhuyin":"ㄈㄚˇ ㄩㄢˋ","english":"court (legal)"},"首次":{"zhuyin":"ㄕㄡˇ ㄘˋ","english":"first; first time; for the first time"},"判定":{"zhuyin":"ㄆㄢˋ ㄉㄧㄥˋ","english":"to judge; to decide; judgment; determination"},"小孩":{"zhuyin":"ㄒㄧㄠˇ ㄏㄞˊ","english":"child; CL:個|个[ge4]"},"上網":{"zhuyin":"ㄕㄤˋ ㄨㄤˇ","english":"to go online; to connect to the Internet; (of a document etc) to be uploaded to the Internet; (tennis, volleyball etc) to move in close to the net"},"成癮":{"zhuyin":"ㄔㄥˊ ㄧㄣˇ","english":"to become addicted"},"洛杉磯":{"zhuyin":"ㄌㄨㄛˋ ㄕㄢ ㄐㄧ","english":"Los Angeles"},"做出":{"zhuyin":"ㄗㄨㄛˋ ㄔㄨ","english":"to put out; to issue"},"歷史性":{"zhuyin":"ㄌㄧˋ ㄕˇ ㄒㄧㄥˋ","english":"historic, landmark"},"判決":{"zhuyin":"ㄆㄢˋ ㄐㄩㄝˊ","english":"ruling, verdict"},"年輕人":{"zhuyin":"ㄋㄧㄢˊ ㄑㄧㄥ ㄖㄣˊ","english":"young people"},"法律責任":{"zhuyin":"ㄈㄚˇ ㄌㄩˋ ㄗㄜˊ ㄖㄣˋ","english":"legal responsibility"},"全世界第一":{"zhuyin":"ㄑㄩㄢˊ ㄕˋ ㄐㄧㄝˋ ㄉㄧˋ ㄧ","english":"world's first"},"這樣":{"zhuyin":"ㄓㄜˋ ㄧㄤˋ","english":"this kind of; so; this way; like this; such"},"受害人":{"zhuyin":"ㄕㄡˋ ㄏㄞˋ ㄖㄣˊ","english":"victim"},"開始":{"zhuyin":"ㄎㄞ ㄕˇ","english":"to begin; beginning; to start; initial; CL:個|个[ge4]"},"有時":{"zhuyin":"ㄧㄡˇ ㄕˊ","english":"sometimes; now and then"},"十六":{"zhuyin":"ㄕˊ ㄌㄧㄡˋ","english":"sixteen; 16"},"小時":{"zhuyin":"ㄒㄧㄠˇ ㄕˊ","english":"hour; CL:個|个[ge4]"},"得了":{"zhuyin":"ㄉㄜˊ ˙ㄌㄜ","english":"all right!; that's enough!; (emphatically, in rhetorical questions) possible"},"焦慮症":{"zhuyin":"ㄐㄧㄠ ㄌㄩˋ ㄓㄥˋ","english":"anxiety disorder"},"憂鬱症":{"zhuyin":"ㄧㄡ ㄩˋ ㄓㄥˋ","english":"depression (medical)"},"內部":{"zhuyin":"ㄋㄟˋ ㄅㄨˋ","english":"interior; inside (part, section); internal"},"文件":{"zhuyin":"ㄨㄣˊ ㄐㄧㄢˋ","english":"document; file; CL:份[fen4]"},"顯示":{"zhuyin":"ㄒㄧㄢˇ ㄕˋ","english":"to show, to indicate"},"早就":{"zhuyin":"ㄗㄠˇ ㄐㄧㄡˋ","english":"already at an earlier time"},"知道":{"zhuyin":"ㄓ ㄉㄠˋ","english":"to know; to become aware of; also pr. [zhi1dao5]"},"十三":{"zhuyin":"ㄕˊ ㄙㄢ","english":"thirteen; 13"},"以下":{"zhuyin":"ㄧˇ ㄒㄧㄚˋ","english":"that level or lower; that amount or less; the following"},"判賠":{"zhuyin":"ㄆㄢˋ ㄆㄟˊ","english":"to order compensation"},"還有":{"zhuyin":"ㄏㄞˊ ㄧㄡˇ","english":"there still remain(s); there is (or are) still; in addition"},"類似":{"zhuyin":"ㄌㄟˋ ㄙˋ","english":"similar"},"案子":{"zhuyin":"ㄢˋ ㄗ˙","english":"case (legal)"},"實驗":{"zhuyin":"ㄕˊ ㄧㄢˋ","english":"experiment"},"新人":{"zhuyin":"ㄒㄧㄣ ㄖㄣˊ","english":"newcomer, rookie"},"今天":{"zhuyin":"ㄐㄧㄣ ㄊㄧㄢ","english":"today; the present time; now"},"開幕":{"zhuyin":"ㄎㄞ ㄇㄨˋ","english":"to open (a conference); to inaugurate"},"對華":{"zhuyin":"ㄉㄨㄟˋ ㄏㄨㄚˊ","english":"(policy etc) towards China"},"一個":{"zhuyin":"ㄧ ˙ㄍㄜ","english":"a; an; one; the whole (afternoon, summer vacation etc)"},"大膽":{"zhuyin":"ㄉㄚˋ ㄉㄢˇ","english":"bold, daring"},"決定":{"zhuyin":"ㄐㄩㄝˊ ㄉㄧㄥˋ","english":"decision"},"第一輪":{"zhuyin":"ㄉㄧˋ ㄧ ㄌㄨㄣˊ","english":"first round (of match, or election)"},"以前":{"zhuyin":"ㄧˇ ㄑㄧㄢˊ","english":"before; formerly; previous; ago"},"從來沒":{"zhuyin":"ㄘㄨㄥˊ ㄌㄞˊ ㄇㄟˊ","english":"have never; has never"},"位子":{"zhuyin":"ㄨㄟˋ ˙ㄗ","english":"place; seat"},"因為":{"zhuyin":"ㄧㄣ ㄨㄟˋ","english":"because; owing to; on account of"},"鈴木":{"zhuyin":"ㄌㄧㄥˊ ㄇㄨˋ","english":"Suzuki (Japanese surname)"},"膝蓋":{"zhuyin":"ㄒㄧ ㄍㄞˋ","english":"knee"},"受傷":{"zhuyin":"ㄕㄡˋ ㄕㄤ","english":"injured"},"名單":{"zhuyin":"ㄇㄧㄥˊ ㄉㄢ","english":"list of names"},"球隊":{"zhuyin":"ㄑㄧㄡˊ ㄉㄨㄟˋ","english":"team (sports)"},"只好":{"zhuyin":"ㄓˇ ㄏㄠˇ","english":"to have no other option but to ...; to have to; to be forced to"},"辦法":{"zhuyin":"ㄅㄢˋ ㄈㄚˇ","english":"method; way (of doing sth); means; CL:條|条[tiao2],個|个[ge4]"},"今年":{"zhuyin":"ㄐㄧㄣ ㄋㄧㄢˊ","english":"this year"},"先發":{"zhuyin":"ㄒㄧㄢ ㄈㄚ","english":"to start (in a game)"},"陣容":{"zhuyin":"ㄓㄣˋ ㄖㄨㄥˊ","english":"troop arrangement; battle formation; lineup (of a sports team etc)"},"多年":{"zhuyin":"ㄉㄨㄛ ㄋㄧㄢˊ","english":"many years; for many years; longstanding"},"球迷":{"zhuyin":"ㄑㄧㄡˊ ㄇㄧˊ","english":"sports fan"},"期待":{"zhuyin":"ㄑㄧ ㄉㄞˋ","english":"to look forward to"},"怎麼樣":{"zhuyin":"ㄗㄣˇ ˙ㄇㄜ ㄧㄤˋ","english":"how?; how about?; how was it?; how are things?"},"深海":{"zhuyin":"ㄕㄣ ㄏㄞ","english":"deep sea"},"發現":{"zhuyin":"ㄈㄚ ㄒㄧㄢˋ","english":"to notice; to become aware of; to discover; to find; to detect; a discovery"},"新生":{"zhuyin":"ㄒㄧㄣ ㄕㄥ","english":"new; newborn; emerging; nascent; rebirth; regeneration; new life; new student"},"採礦":{"zhuyin":"ㄘㄞˇ ㄎㄨㄤˋ","english":"mining"},"工廠":{"zhuyin":"ㄍㄨㄥ ㄔㄤˇ","english":"factory"},"科學家":{"zhuyin":"ㄎㄜ ㄒㄩㄝ ㄐㄧㄚ","english":"scientists"},"太平洋":{"zhuyin":"ㄊㄞ ㄆㄧㄥ ㄧㄤ","english":"Pacific Ocean"},"全新":{"zhuyin":"ㄑㄩㄢˊ ㄒㄧㄣ","english":"all new; completely new"},"生物":{"zhuyin":"ㄕㄥ ㄨˋ","english":"organism; living creature; life form; biological; CL:個|个[ge4]"},"海底":{"zhuyin":"ㄏㄞˇ ㄉㄧˇ","english":"seabed; seafloor; bottom of the ocean"},"區域":{"zhuyin":"ㄑㄩ ㄩˋ","english":"region"},"夏威夷":{"zhuyin":"ㄒㄧㄚˋ ㄨㄟ ㄧˊ","english":"Hawaii"},"墨西哥":{"zhuyin":"ㄇㄛˋ ㄒㄧ ㄍㄜ","english":"Mexico"},"之間":{"zhuyin":"ㄓ ㄐㄧㄢ","english":"(after a noun) between; among; amid; (used after certain bisyllabic words to form expressions indicating a short period of time, e.g. 彈指之間|弹指之间[tan2zhi3 zhi1 jian1])"},"面積":{"zhuyin":"ㄇㄧㄢˋ ㄐㄧ","english":"area"},"平方公里":{"zhuyin":"ㄆㄧㄥ ㄈㄤ ㄍㄨㄥ ㄌㄧˇ","english":"square kilometers"},"研究員":{"zhuyin":"ㄧㄢ ㄐㄧㄡ ㄩㄢˊ","english":"researchers"},"那裡":{"zhuyin":"ㄋㄚˋ ˙ㄌㄧ","english":"there; that place"},"超過":{"zhuyin":"ㄔㄠ ㄍㄨㄛˋ","english":"to surpass; to exceed; to outstrip"},"九成":{"zhuyin":"ㄐㄧㄡˇ ㄔㄥˊ","english":"nine-tenths; ninety percent"},"沒有":{"zhuyin":"ㄇㄟˊ ㄧㄡˇ","english":"haven't; hasn't; doesn't exist; to not have; to not be"},"名字":{"zhuyin":"ㄇㄧㄥˊ ˙ㄗ","english":"name (of a person or thing); CL:個|个[ge4]"},"不過":{"zhuyin":"ㄅㄨˋ ㄍㄨㄛˋ","english":"only; merely; no more than; but; however; anyway (to get back to a previous topic); cannot be more (after adjectival)"},"一月":{"zhuyin":"ㄧ ㄩㄝˋ","english":"January; first month (of the lunar year)"},"美國":{"zhuyin":"ㄇㄟˇ ㄍㄨㄛˊ","english":"United States; USA; US"},"法律":{"zhuyin":"ㄈㄚˇ ㄌㄩˋ","english":"law; CL:條|条[tiao2], 套[tao4], 個|个[ge4]"},"可以":{"zhuyin":"ㄎㄜˇ ㄧˇ","english":"can; may; possible; able to; not bad; pretty good"},"同時":{"zhuyin":"ㄊㄨㄥˊ ㄕˊ","english":"at the same time; simultaneously"},"申請":{"zhuyin":"ㄕㄣ ㄑㄧㄥˇ","english":"to apply for"},"探查":{"zhuyin":"ㄊㄢˋ ㄔㄚˊ","english":"exploration"},"開採":{"zhuyin":"ㄎㄞ ㄘㄞˇ","english":"extraction, mining"},"之前":{"zhuyin":"ㄓ ㄑㄧㄢˊ","english":"before; prior to; ago; previously; beforehand"},"測試":{"zhuyin":"ㄘㄜˋ ㄕˋ","english":"test"},"機器":{"zhuyin":"ㄐㄧ ㄑㄧˋ","english":"machine"},"工作":{"zhuyin":"ㄍㄨㄥ ㄗㄨㄛˋ","english":"to work; (of a machine) to operate; job; work; task; CL:個|个[ge4],份[fen4],項|项[xiang4]"},"數量":{"zhuyin":"ㄕㄨˋ ㄌㄧㄤˋ","english":"amount; quantity (CL:個|个[ge4]); quantitative; (math.) scalar quantity"},"正在":{"zhuyin":"ㄓㄥˋ ㄗㄞˋ","english":"to be in the process of (doing sth); to be currently ...-ing"},"時間":{"zhuyin":"ㄕˊ ㄐㄧㄢ","english":"(concept of) time; (duration of) time; (point in) time"},"賽跑":{"zhuyin":"ㄙㄞˋ ㄆㄠˇ","english":"race"},"為什麼":{"zhuyin":"ㄨㄟˋ ㄕㄣˊ ˙ㄇㄜ","english":"why?; for what reason?"},"控制室":{"zhuyin":"ㄎㄨㄥˋ ㄓˋ ㄕˋ","english":"control room"},"綠色":{"zhuyin":"ㄌㄩˋ ㄙㄜˋ","english":"green"},"有沒有":{"zhuyin":"ㄧㄡˇ ㄇㄟˊ ㄧㄡˇ","english":"(before a noun) Do (you, they etc) have ...?; Is there a ...?; (before a verb) Did (you, they etc) (verb, infinitive)?; Have (you, they etc) (verb, past participle)?"},"注意":{"zhuyin":"ㄓㄨˋ ㄧˋ","english":"to take note of; to pay attention to"},"多工":{"zhuyin":"ㄉㄨㄛ ㄍㄨㄥ","english":"to multiplex; multiple; multi-"},"醫院":{"zhuyin":"ㄧ ㄩㄢˋ","english":"hospital"},"太空":{"zhuyin":"ㄊㄞˋ ㄎㄨㄥ","english":"outer space"},"中心":{"zhuyin":"ㄓㄨㄥ ㄒㄧㄣ","english":"center; heart; core"},"說起":{"zhuyin":"ㄕㄨㄛ ㄑㄧˇ","english":"to mention; to bring up (a subject); with regard to; as for"},"研究":{"zhuyin":"ㄧㄢˊ ㄐㄧㄡ","english":"research; a study; CL:項|项[xiang4]; to research; to look into"},"顏色":{"zhuyin":"ㄧㄢˊ ㄙㄜˋ","english":"color"},"專家":{"zhuyin":"ㄓㄨㄢ ㄐㄧㄚ","english":"expert"},"年輕":{"zhuyin":"ㄋㄧㄢˊ ㄑㄧㄥ","english":"young"},"自己":{"zhuyin":"ㄗˋ ㄐㄧˇ","english":"oneself; one's own"},"房間":{"zhuyin":"ㄈㄤˊ ㄐㄧㄢ","english":"room; CL:間|间[jian1],個|个[ge4]"},"紅色":{"zhuyin":"ㄏㄨㄥˊ ㄙㄜˋ","english":"red (color); revolutionary"},"後來":{"zhuyin":"ㄏㄡˋ ㄌㄞˊ","english":"afterwards; later; newly arrived"},"軍隊":{"zhuyin":"ㄐㄩㄣ ㄉㄨㄟˋ","english":"military"},"核武":{"zhuyin":"ㄏㄜˊ ㄨˇ","english":"nuclear weapons"},"中間":{"zhuyin":"ㄓㄨㄥ ㄐㄧㄢ","english":"the middle; the inside; in the middle; within; between; among; during; in the meantime"},"眼睛":{"zhuyin":"ㄧㄢˇ ˙ㄐㄧㄥ","english":"eye; CL:隻|只[zhi1],雙|双[shuang1]"},"不會":{"zhuyin":"ㄅㄨˋ ㄏㄨㄟˋ","english":"improbable; unlikely; will not (act, happen etc); not able; not having learned to do sth; (coll.) (Tw) don't mention it; not at all"},"安全":{"zhuyin":"ㄢ ㄑㄩㄢˊ","english":"safe; secure; safety; security"},"委員會":{"zhuyin":"ㄨㄟˇ ㄩㄢˊ ㄏㄨㄟˋ","english":"committee; commission"},"採用":{"zhuyin":"ㄘㄞˇ ㄩㄥˋ","english":"to adopt"},"規定":{"zhuyin":"ㄍㄨㄟ ㄉㄧㄥˋ","english":"regulation"},"從此":{"zhuyin":"ㄘㄨㄥˊ ㄘˇ","english":"from then on"},"全世界":{"zhuyin":"ㄑㄩㄢˊ ㄕˋ ㄐㄧㄝˋ","english":"worldwide; entire world"},"跟著":{"zhuyin":"ㄍㄣ ˙ㄓㄜ","english":"to follow after; immediately afterwards"},"要有":{"zhuyin":"ㄧㄠˋ ㄧㄡˇ","english":"to need; to require; must have"},"不只":{"zhuyin":"ㄅㄨˋ ㄓˇ","english":"not only; not merely"},"好看":{"zhuyin":"ㄏㄠˇ ㄎㄢˋ","english":"good-looking; nice-looking; (of a movie, book, TV show etc) good; in an embarrassing situation"},"漫威":{"zhuyin":"ㄇㄢˋ ㄨㄟˊ","english":"Marvel"},"內部文件":{"zhuyin":"ㄋㄟˋ ㄅㄨˋ ㄨㄣˊ ㄐㄧㄢˋ","english":"internal documents"},"小熊隊":{"zhuyin":"ㄒㄧㄠˇ ㄒㄩㄥˊ ㄉㄨㄟˋ","english":"Chicago Cubs"},"開幕戰":{"zhuyin":"ㄎㄞ ㄇㄨˋ ㄓㄢˋ","english":"opening day game"},"華盛頓":{"zhuyin":"ㄏㄨㄚˊ ㄕㄥˋ ㄉㄨㄣˋ","english":"Washington"},"右外野":{"zhuyin":"ㄧㄡˋ ㄨㄞˋ ㄧㄝˇ","english":"right field (baseball)"},"鈴木誠也":{"zhuyin":"ㄌㄧㄥˊ ㄇㄨˋ ㄔㄥˊ ㄧㄝˇ","english":"Seiya Suzuki"},"傷兵名單":{"zhuyin":"ㄕㄤ ㄅㄧㄥ ㄇㄧㄥˊ ㄉㄢ","english":"injured list (IL)"},"先發陣容":{"zhuyin":"ㄒㄧㄢ ㄈㄚ ㄓㄣˋ ㄖㄨㄥˊ","english":"starting lineup"},"跟時間賽跑":{"zhuyin":"ㄍㄣ ㄕˊ ㄐㄧㄢ ㄙㄞˋ ㄆㄠˇ","english":"racing against time"},"太空中心":{"zhuyin":"ㄊㄞˋ ㄎㄨㄥ ㄓㄨㄥ ㄒㄧㄣ","english":"space center"},"淡綠色":{"zhuyin":"ㄉㄢˋ ㄌㄩˋ ㄙㄜˋ","english":"pale green"},"安全委員會":{"zhuyin":"ㄢ ㄑㄩㄢˊ ㄨㄟˇ ㄩㄢˊ ㄏㄨㄟˋ","english":"safety committee"}};
+</script>
+
+<script>
+
+(function () {
+  'use strict';
+
+  const STORAGE_KEY = 'newsletter-feedback';
+  const charStates = {};
+  let deskPicks = [];
+  let flaggingMode = false;
+  let lookupMode = false;
+
+  // === localStorage helpers ===
+
+  const isLocalStorageAvailable = () => {
+    try {
+      const key = '__test__';
+      localStorage.setItem(key, '1');
+      localStorage.removeItem(key);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  };
+
+  const loadState = () => {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+      localStorage.removeItem(STORAGE_KEY);
+      return null;
+    }
+  };
+
+  const saveState = () => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        characters: charStates,
+        deskPicks: deskPicks
+      }));
+    } catch (e) {
+      if (e.name === 'QuotaExceededError') {
+        console.warn('localStorage full');
+      }
+    }
+  };
+
+  // === Character state ===
+
+  const getCharState = (char) => charStates[char] || 'unmarked';
+
+  const setCharState = (char, state) => {
+    if (state === 'unmarked') {
+      delete charStates[char];
+    } else {
+      charStates[char] = state;
+    }
+    saveState();
+  };
+
+  const updateCharVisuals = (char, state) => {
+    document.querySelectorAll('.c').forEach(span => {
+      if (span.textContent === char) {
+        span.classList.remove('struggling', 'learned');
+        if (state === 'struggling') span.classList.add('struggling');
+        else if (state === 'learned') span.classList.add('learned');
+      }
+    });
+  };
+
+  // === Graceful degradation ===
+
+  const disableFeedbackFeatures = () => {
+    document.getElementById('flag-toggle').disabled = true;
+    document.getElementById('export-btn').disabled = true;
+    const note = document.createElement('p');
+    note.className = 'storage-warning';
+    note.textContent = '回饋功能需要啟用瀏覽器儲存 Feedback features require browser storage';
+    document.getElementById('toolbar').after(note);
+  };
+
+  // === Flagging mode toggle ===
+
+  document.getElementById('flag-toggle').addEventListener('click', function () {
+    flaggingMode = !flaggingMode;
+    this.textContent = flaggingMode ? '標記模式 ON' : '標記模式 OFF';
+    this.classList.toggle('active', flaggingMode);
+    document.body.classList.toggle('flagging-on', flaggingMode);
+    if (flaggingMode && lookupMode) {
+      lookupMode = false;
+      document.getElementById('lookup-toggle').textContent = '查詢模式 OFF';
+      document.getElementById('lookup-toggle').classList.remove('active');
+    }
+  });
+
+  // === Click-to-cycle character states ===
+
+  document.addEventListener('click', function (e) {
+    if (!flaggingMode) return;
+    const span = e.target.closest('.c');
+    if (!span) return;
+
+    const char = span.textContent;
+    const state = getCharState(char);
+
+    let newState;
+    if (state === 'unmarked') newState = 'struggling';
+    else if (state === 'struggling') newState = 'learned';
+    else newState = 'unmarked';
+
+    setCharState(char, newState);
+    updateCharVisuals(char, newState);
+  });
+
+  // === Translation toggles ===
+
+  document.querySelectorAll('.translation-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const article = btn.closest('.article');
+      const enDiv = article.querySelector('.article-body-en');
+      const isHidden = enDiv.hidden;
+      enDiv.hidden = !isHidden;
+      btn.textContent = isHidden
+        ? '隱藏翻譯 Hide Translation'
+        : '顯示翻譯 Show Translation';
+    });
+  });
+
+  // === Editor's Desk ===
+
+  document.querySelectorAll('.desk-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const index = parseInt(item.dataset.deskIndex);
+      const existingPos = deskPicks.indexOf(index);
+
+      if (existingPos !== -1) {
+        deskPicks.splice(existingPos, 1);
+        item.classList.remove('selected');
+      } else {
+        if (deskPicks.length >= 3) {
+          const oldest = deskPicks.shift();
+          document.querySelector('[data-desk-index="' + oldest + '"]').classList.remove('selected');
+        }
+        deskPicks.push(index);
+        item.classList.add('selected');
+      }
+
+      document.getElementById('desk-count-num').textContent = deskPicks.length;
+      saveState();
+    });
+  });
+
+  // === Feedback export ===
+
+  const downloadJSON = (data, filename) => {
+    const json = JSON.stringify(data, null, 2);
+    try {
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      navigator.clipboard.writeText(json).then(() => {
+        alert('下載失敗，已複製到剪貼簿。請貼到一個 .json 檔案。' + '\n' + 'Download failed. Copied to clipboard. Paste into a .json file.');
+      });
+    }
+  };
+
+  const showExportConfirmation = () => {
+    const msg = document.getElementById('export-confirm');
+    msg.hidden = false;
+    setTimeout(() => { msg.hidden = true; }, 3000);
+  };
+
+  const exportFeedback = () => {
+    const offered = [...document.querySelectorAll('.desk-item')].map(item => ({
+      headline: item.querySelector('.desk-headline').textContent,
+      included_in_issue: item.classList.contains('included')
+    }));
+
+    const today = document.querySelector('.date').textContent;
+
+    const charExport = {};
+    for (const [char, charState] of Object.entries(charStates)) {
+      charExport[char] = { state: charState, date: today };
+    }
+
+    const exportData = {
+      date: today,
+      characters: charExport,
+      editors_desk: {
+        offered,
+        user_top_3: deskPicks.slice()
+      }
+    };
+
+    downloadJSON(exportData, 'feedback_' + today + '.json');
+    showExportConfirmation();
+  };
+
+  document.getElementById('export-btn').addEventListener('click', exportFeedback);
+
+  // === Mobile character lookup ===
+
+  const isMobile = window.matchMedia('(pointer: coarse)').matches;
+
+  if (isMobile) {
+    let longPressTimer = null;
+    let feedbackTimer = null;
+    let startX = 0;
+    let startY = 0;
+    let activeSpan = null;
+    const LONG_PRESS_MS = 400;
+    const MOVE_THRESHOLD = 10;
+
+    const popup = document.getElementById('char-popup');
+    const popupChar = document.getElementById('popup-char');
+    const popupZhuyin = document.getElementById('popup-zhuyin');
+    const popupDef = document.getElementById('popup-def');
+    const lookupToggleBtn = document.getElementById('lookup-toggle');
+
+    function positionPopup(targetSpan) {
+      var rect = targetSpan.getBoundingClientRect();
+      var popupWidth = 280;
+      var margin = 8;
+      var gap = 6;
+      var vw = window.innerWidth;
+
+      popup.classList.add('visible');
+      var popupHeight = popup.offsetHeight;
+
+      var left = rect.left + rect.width / 2 - popupWidth / 2;
+      left = Math.max(margin, Math.min(left, vw - popupWidth - margin));
+
+      var top = rect.top - popupHeight - gap;
+      if (top < margin) {
+        top = rect.bottom + gap;
+      }
+
+      popup.style.left = left + 'px';
+      popup.style.top = top + 'px';
+    }
+
+    function findLongestMatch(targetSpan) {
+      if (typeof GLOSSARY === 'undefined') return null;
+
+      var parent = targetSpan.closest('p, h2, li') || targetSpan.parentElement;
+      var spans = [].slice.call(parent.querySelectorAll('.c'));
+      var targetIdx = spans.indexOf(targetSpan);
+      if (targetIdx === -1) return null;
+
+      var chars = spans.map(function (s) { return s.textContent; });
+      var MAX_WORD_LEN = 6;
+      var bestMatch = null;
+      var bestSpans = null;
+
+      for (var len = Math.min(MAX_WORD_LEN, chars.length); len >= 1; len--) {
+        var startMin = Math.max(0, targetIdx - len + 1);
+        var startMax = Math.min(targetIdx, chars.length - len);
+
+        for (var start = startMin; start <= startMax; start++) {
+          var candidate = chars.slice(start, start + len).join('');
+          if (GLOSSARY[candidate]) {
+            if (!bestMatch || candidate.length > bestMatch.length) {
+              bestMatch = candidate;
+              bestSpans = spans.slice(start, start + len);
+            }
+          }
+        }
+
+        if (bestMatch && bestMatch.length === len) break;
+      }
+
+      return bestMatch
+        ? { text: bestMatch, entry: GLOSSARY[bestMatch], spans: bestSpans }
+        : null;
+    }
+
+    function showPopup(char, targetSpan) {
+      var match = findLongestMatch(targetSpan);
+
+      if (match) {
+        popupChar.textContent = match.text;
+        popupZhuyin.textContent = match.entry.zhuyin;
+        popupDef.textContent = match.entry.english;
+      } else {
+        popupChar.textContent = char;
+        popupZhuyin.textContent = '';
+        popupDef.textContent = '(not in glossary)';
+      }
+
+      document.querySelectorAll('.c.touch-selected').forEach(function (el) {
+        el.classList.remove('touch-selected');
+      });
+
+      var highlightSpans = match ? match.spans : [targetSpan];
+      highlightSpans.forEach(function (s) { s.classList.add('touch-selected'); });
+      activeSpan = targetSpan;
+
+      positionPopup(targetSpan);
+    }
+
+    function hidePopup() {
+      popup.classList.remove('visible');
+      document.querySelectorAll('.c.touch-selected').forEach(function (el) {
+        el.classList.remove('touch-selected');
+      });
+      activeSpan = null;
+    }
+
+    document.getElementById('popup-close').addEventListener('click', hidePopup);
+
+    document.addEventListener('click', function (e) {
+      if (!popup.classList.contains('visible')) return;
+      if (popup.contains(e.target)) return;
+      if (!e.target.closest('.c')) {
+        hidePopup();
+      }
+    });
+
+    var scrollDismissAttached = false;
+    function attachScrollDismiss() {
+      if (scrollDismissAttached) return;
+      scrollDismissAttached = true;
+      window.addEventListener('scroll', function onScroll() {
+        hidePopup();
+        window.removeEventListener('scroll', onScroll);
+        scrollDismissAttached = false;
+      }, { once: true });
+    }
+
+    document.addEventListener('touchstart', function (e) {
+      var span = e.target.closest('.c');
+      if (!span) return;
+
+      var touch = e.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+
+      feedbackTimer = setTimeout(function () {
+        span.classList.add('touch-active');
+      }, 100);
+
+      longPressTimer = setTimeout(function () {
+        span.classList.remove('touch-active');
+        showPopup(span.textContent, span);
+        attachScrollDismiss();
+      }, LONG_PRESS_MS);
+    }, { passive: true });
+
+    document.addEventListener('touchmove', function (e) {
+      if (!longPressTimer) return;
+      var touch = e.touches[0];
+      if (Math.abs(touch.clientX - startX) > MOVE_THRESHOLD ||
+          Math.abs(touch.clientY - startY) > MOVE_THRESHOLD) {
+        clearTimeout(longPressTimer);
+        clearTimeout(feedbackTimer);
+        longPressTimer = null;
+        document.querySelectorAll('.touch-active').forEach(function (el) {
+          el.classList.remove('touch-active');
+        });
+      }
+    }, { passive: true });
+
+    document.addEventListener('touchend', function (e) {
+      clearTimeout(longPressTimer);
+      clearTimeout(feedbackTimer);
+      longPressTimer = null;
+      var span = e.target.closest('.c');
+      if (span) span.classList.remove('touch-active');
+    }, { passive: true });
+
+    document.addEventListener('touchcancel', function () {
+      clearTimeout(longPressTimer);
+      clearTimeout(feedbackTimer);
+      longPressTimer = null;
+      document.querySelectorAll('.touch-active').forEach(function (el) {
+        el.classList.remove('touch-active');
+      });
+    }, { passive: true });
+
+    lookupToggleBtn.addEventListener('click', function () {
+      lookupMode = !lookupMode;
+      this.textContent = lookupMode ? '查詢模式 ON' : '查詢模式 OFF';
+      this.classList.toggle('active', lookupMode);
+      if (lookupMode && flaggingMode) {
+        flaggingMode = false;
+        document.getElementById('flag-toggle').textContent = '標記模式 OFF';
+        document.getElementById('flag-toggle').classList.remove('active');
+        document.body.classList.remove('flagging-on');
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!lookupMode) return;
+      var span = e.target.closest('.c');
+      if (!span) return;
+      e.stopPropagation();
+      showPopup(span.textContent, span);
+      attachScrollDismiss();
+    });
+  }
+
+  // === Initialize ===
+
+  if (!isLocalStorageAvailable()) {
+    disableFeedbackFeatures();
+    return;
+  }
+
+  const saved = loadState();
+
+  if (saved) {
+    // Restore character states
+    for (const [char, charState] of Object.entries(saved.characters || {})) {
+      charStates[char] = charState;
+      updateCharVisuals(char, charState);
+    }
+    // Restore desk picks
+    for (const index of (saved.deskPicks || [])) {
+      const item = document.querySelector('[data-desk-index="' + index + '"]');
+      if (item) {
+        item.classList.add('selected');
+        deskPicks.push(index);
+      }
+    }
+  } else {
+    saveState();
+  }
+
+  document.getElementById('desk-count-num').textContent = deskPicks.length;
+})();
+
+</script>
+
+</body>
+</html>
