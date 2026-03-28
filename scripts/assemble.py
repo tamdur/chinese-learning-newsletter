@@ -102,19 +102,11 @@ def read_page_css(page_type: str) -> str:
 # ---------------------------------------------------------------------------
 
 def build_site_nav(current_page: str) -> str:
-    """Build the site-wide navigation bar. Only shows links for pages that exist."""
+    """Build the site-wide navigation bar. Always shows all page links."""
     links = []
     for page_type, href, label in SITE_NAV_PAGES:
-        # Always show current page; show others only if their index file exists
-        page_path = DOCS / href
-        if page_type != current_page and not page_path.exists():
-            continue
         active = " active" if page_type == current_page else ""
         links.append(f'  <a href="{href}" class="site-nav-link{active}">{label}</a>')
-
-    if len(links) <= 1:
-        # Only one page exists — no need for site nav
-        return ""
 
     return '<nav class="site-nav">\n' + "\n".join(links) + "\n</nav>"
 
@@ -274,7 +266,7 @@ def build_content_unit_html(unit: dict, translation: str, unit_id: int) -> str:
     """Build one <article> block for a content unit."""
     source_line = ""
     if unit.get("source_label"):
-        source_line = f'\n  <p class="article-source">來源：{unit["source_label"]}</p>'
+        source_line = f'\n  <p class="article-source">{unit["source_label"]}</p>'
 
     return f"""<article class="article" data-article-id="{unit_id}">
   <h2 class="article-headline">{unit['headline_html']}</h2>{source_line}
@@ -405,7 +397,7 @@ def build_obsession_section_html(unit: dict, translation: str, obsession_id: str
     """Build one <section class="obsession-section"> block."""
     source_line = ""
     if unit.get("source_label"):
-        source_line = f'\n  <p class="article-source">來源：{unit["source_label"]}</p>'
+        source_line = f'\n  <p class="article-source">{unit["source_label"]}</p>'
 
     return f"""<section class="obsession-section" data-obsession-id="{obsession_id}">
   <h2 class="section-title">{unit['headline_html']}</h2>{source_line}
