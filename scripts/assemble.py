@@ -101,12 +101,16 @@ def read_page_css(page_type: str) -> str:
 # Site navigation
 # ---------------------------------------------------------------------------
 
-def build_site_nav(current_page: str) -> str:
-    """Build the site-wide navigation bar. Always shows all page links."""
+def build_site_nav(current_page: str, base_url: str = "") -> str:
+    """Build the site-wide navigation bar. Always shows all page links.
+
+    base_url is prepended to hrefs so links work from archive subdirectories.
+    Top-level pages pass "" (default); archive fixup rewrites to relative prefix.
+    """
     links = []
     for page_type, href, label in SITE_NAV_PAGES:
         active = " active" if page_type == current_page else ""
-        links.append(f'  <a href="{href}" class="site-nav-link{active}">{label}</a>')
+        links.append(f'  <a href="{base_url}{href}" class="site-nav-link{active}">{label}</a>')
 
     return '<nav class="site-nav">\n' + "\n".join(links) + "\n</nav>"
 
@@ -152,6 +156,7 @@ def extract_date_from_html(html: str) -> str | None:
 def fix_paths_for_archive(html: str, page_type: str) -> str:
     """Rewrite nav link paths for a file moving into its archive directory."""
     if page_type == "newsletter":
+        # Newsletter archives live in docs/archive/ (one level deep)
         # data-prev="archive/X.html" -> data-prev="X.html"
         html = html.replace('data-prev="archive/', 'data-prev="')
         html = re.sub(
@@ -159,8 +164,12 @@ def fix_paths_for_archive(html: str, page_type: str) -> str:
             r'href="\1" class="nav-link nav-prev"',
             html,
         )
+        # Site nav: "index.html" -> "../index.html", etc.
+        for _, href, _ in SITE_NAV_PAGES:
+            html = html.replace(f'href="{href}" class="site-nav-link', f'href="../{href}" class="site-nav-link')
     else:
-        # For sub-pages: data-prev="archive/wisdom/X.html" -> data-prev="X.html"
+        # Sub-page archives live in docs/archive/{page_type}/ (two levels deep)
+        # data-prev="archive/{type}/X.html" -> data-prev="X.html"
         archive_prefix = f"archive/{page_type}/"
         html = html.replace(f'data-prev="{archive_prefix}', 'data-prev="')
         html = re.sub(
@@ -168,6 +177,9 @@ def fix_paths_for_archive(html: str, page_type: str) -> str:
             r'href="\1" class="nav-link nav-prev"',
             html,
         )
+        # Site nav: "index.html" -> "../../index.html", etc.
+        for _, href, _ in SITE_NAV_PAGES:
+            html = html.replace(f'href="{href}" class="site-nav-link', f'href="../../{href}" class="site-nav-link')
     return html
 
 
@@ -208,14 +220,25 @@ def archive_old_issue(page_type: str, today: str) -> str | None:
 
     # Fix relative paths for archive location
     archived_html = fix_paths_for_archive(old_html, page_type)
+
+    # If the page has no issue nav (first-ever issue), inject one before </body>
+    if '<nav class="issue-nav"' not in archived_html:
+        empty_nav = """<nav class="issue-nav" data-prev="" data-next="">
+  <a href="" class="nav-link nav-prev" hidden>← 上一期</a>
+  <span class="nav-spacer"></span>
+  <a href="" class="nav-link nav-next" hidden>下一期 →</a>
+</nav>"""
+        archived_html = archived_html.replace("</body>", f"{empty_nav}\n</body>")
+
     archive_path.write_text(archived_html, encoding="utf-8")
 
     # Patch newly archived file: set data-next to parent index
     archived_html = archive_path.read_text(encoding="utf-8")
     if page_type == "newsletter":
-        archived_html = patch_next_link(archived_html, "../index.html")
+        next_target = "../index.html"
     else:
-        archived_html = patch_next_link(archived_html, f"../../{config['index'].name}")
+        next_target = f"../../{config['index'].name}"
+    archived_html = patch_next_link(archived_html, next_target)
     archive_path.write_text(archived_html, encoding="utf-8")
 
     # Patch previous archive file's next link
