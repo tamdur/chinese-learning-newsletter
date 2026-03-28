@@ -142,6 +142,7 @@ def check_translation_toggles(html: str, result: ValidationResult):
     unit_count = len(re.findall(r'data-article-id="\d+"', html))
     unit_count += len(re.findall(r'data-section="[^"]*"', html))
     unit_count += len(re.findall(r'data-obsession-id="[^"]*"', html))
+    unit_count += len(re.findall(r'data-se-id="\d+"', html))
 
     toggle_count = html.count('class="translation-toggle"')
     en_count = len(re.findall(r'class="(?:article-body|section-body)-en"[^>]*hidden', html))
