@@ -221,14 +221,18 @@ def archive_old_issue(page_type: str, today: str) -> str | None:
     # Fix relative paths for archive location
     archived_html = fix_paths_for_archive(old_html, page_type)
 
-    # If the page has no issue nav (first-ever issue), inject one before </body>
+    # If the page has no issue nav (first-ever issue), inject one after the header
     if '<nav class="issue-nav"' not in archived_html:
         empty_nav = """<nav class="issue-nav" data-prev="" data-next="">
   <a href="" class="nav-link nav-prev" hidden>← 上一期</a>
   <span class="nav-spacer"></span>
   <a href="" class="nav-link nav-next" hidden>下一期 →</a>
 </nav>"""
-        archived_html = archived_html.replace("</body>", f"{empty_nav}\n</body>")
+        archived_html = archived_html.replace("</header>\n\n\n\n<main>",
+                                              f"</header>\n\n{empty_nav}\n\n<main>")
+        # Fallback: if exact header pattern not found, try before <main>
+        if '<nav class="issue-nav"' not in archived_html:
+            archived_html = archived_html.replace("<main>", f"{empty_nav}\n\n<main>")
 
     archive_path.write_text(archived_html, encoding="utf-8")
 
