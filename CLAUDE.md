@@ -56,7 +56,7 @@ docs/
 - `/se <topic> [char_count]` — on-demand Special Edition: research → write → translate → glossary → insert into current newsletter → commit/push. Ephemeral (wiped on next `/newsletter` run).
 
 ## Reading Level Approach
-Reading level is natural language guidance to Claude Opus, NOT a character whitelist. Current setting: grade 5 (Taiwanese elementary school equivalent). The description in settings.json tells Claude what vocabulary, grammar, and character complexity to target. Adjust by editing the description conversationally.
+Reading level is natural language guidance to Claude Opus, NOT a character whitelist. Current setting: grade 4 (Taiwanese elementary school equivalent). The description in settings.json tells Claude what vocabulary, grammar, and character complexity to target. Adjust by editing the description conversationally.
 
 ## Tone Guidelines
 - **Newsletter:** Knowledgeable friend explaining the news over coffee. Casual but informed.
@@ -64,11 +64,12 @@ Reading level is natural language guidance to Claude Opus, NOT a character white
 - **Obsessions:** Museum curator voice — real knowledge shared vividly and succinctly.
 
 ## Editorial Identity
-The Economist, reimagined as a Chicago-based local newspaper. Analytical, globally-minded, data-literate. Transformative AI is the defining story of our era. Article 5 is always from the sports desk (Cubs, Bulls, Bears, Michigan football & basketball).
+The Economist, reimagined as a Chicago-based local newspaper. Analytical, globally-minded, data-literate. Transformative AI is the defining story of our era. Articles 5-6 are always from the sports desk: Article 5 covers Chicago & Michigan (Cubs, Bulls, Bears, Michigan football & basketball), Article 6 is the Arsenal beat (兵工廠線).
 
 ## Story Selection Rules
 - Articles 1-4 come from the Economist desk: AI, economics, international affairs, US policy, Chicago, business, science & ideas. Aim for variety but don't force every category.
-- Article 5 is ALWAYS a sports story.
+- Article 5 is ALWAYS a Chicago/Michigan sports story (Cubs, Bulls, Bears, Michigan football & basketball).
+- Article 6 is ALWAYS an Arsenal football story, introduced as the Arsenal beat (兵工廠線).
 - Strong preference for stories from the past 36 hours.
 - Stories must NOT repeat from past newsletters unless there has been a substantive update.
 - AI should appear in most issues — it's the paper's lead beat — but doesn't need to lead every issue.

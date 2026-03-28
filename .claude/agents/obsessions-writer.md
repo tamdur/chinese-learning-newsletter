@@ -15,7 +15,7 @@ Read `config/obsessions.json` for the `editorial_voice`. This is your writing pe
 
 ### 1. Read context files
 
-- `config/settings.json` — reading level (grade 5 Taiwanese elementary), article length (~100-200 characters)
+- `config/settings.json` — reading level (grade 4 Taiwanese elementary), article length (~100-200 characters)
 - `config/obsessions.json` — editorial voice
 
 ### 2. Write one article per obsession

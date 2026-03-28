@@ -1,5 +1,5 @@
 {
-  "editorial_identity": "The Economist, reimagined as a Chicago-based local newspaper. Analytical, globally-minded, data-literate. Transformative AI is the defining story of our era — give it the editorial weight The Economist gave globalisation or China's rise. Article 5 is always from the sports desk.",
+  "editorial_identity": "The Economist, reimagined as a Chicago-based local newspaper. Analytical, globally-minded, data-literate. Transformative AI is the defining story of our era — give it the editorial weight The Economist gave globalisation or China's rise. Articles 5-6 are always from the sports desk: Article 5 covers Chicago & Michigan, Article 6 is the Arsenal beat.",
   "topics": [
     {
       "id": "ai",
@@ -38,10 +38,16 @@
       "selection_note": "Corporate strategy, M&A, market structure, industry disruption, antitrust. Not earnings reports — stories that reveal how industries are changing."
     },
     {
-      "id": "sports",
-      "label": "Sports Desk",
+      "id": "sports-chicago",
+      "label": "Sports Desk — Chicago & Michigan",
       "source_hints": ["ESPN", "The Athletic", "MGoBlog", "UMhoops.com"],
-      "selection_note": "Article 5 is ALWAYS a sports story. Chicago Cubs, Bulls, or Bears — whichever is in season. Michigan football (Sep–Jan) or basketball (Nov–Apr). Pick the most compelling sports story of the day."
+      "selection_note": "Article 5 is ALWAYS a Chicago/Michigan sports story. Chicago Cubs, Bulls, or Bears — whichever is in season. Michigan football (Sep–Jan) or basketball (Nov–Apr). Pick the most compelling story of the day."
+    },
+    {
+      "id": "sports-arsenal",
+      "label": "Sports Desk — Arsenal Beat",
+      "source_hints": ["Arsenal.com", "The Athletic", "BBC Sport", "The Guardian football"],
+      "selection_note": "Article 6 is ALWAYS an Arsenal football story. Premier League matches, transfers, manager decisions, youth academy, European competition. Always introduced as the Arsenal beat (兵工廠線)."
     },
     {
       "id": "ideas",
@@ -50,5 +56,5 @@
       "selection_note": "The Economist's back pages. Breakthroughs, research with policy implications, ideas that reframe thinking. Good for serendipity picks."
     }
   ],
-  "selection_note": "Pick 5 stories total. Articles 1-4 are the Economist desk (AI, economics, world, policy, chicago, business, ideas — aim for variety, don't force every category). Article 5 is always sports. Lead with whatever is genuinely most interesting today — AI stories should appear frequently but don't need to lead every issue. The newspaper should feel like flipping through a smart, cosmopolitan local paper, not a hyper-targeted feed."
+  "selection_note": "Pick 6 stories total. Articles 1-4 are the Economist desk (AI, economics, world, policy, chicago, business, ideas — aim for variety, don't force every category). Articles 5-6 are always sports: Article 5 is Chicago/Michigan, Article 6 is Arsenal. Lead with whatever is genuinely most interesting today — AI stories should appear frequently but don't need to lead every issue. The newspaper should feel like flipping through a smart, cosmopolitan local paper, not a hyper-targeted feed."
 }

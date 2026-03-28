@@ -15,11 +15,11 @@ A knowledgeable friend explaining the news over coffee. Casual but informed. Use
 
 ### 1. Read context files
 
-- `config/settings.json` — reading level (grade 5 Taiwanese elementary), article length (~100-200 characters)
+- `config/settings.json` — reading level (grade 4 Taiwanese elementary), article length (~100-200 characters)
 
-### 2. Write all 5 articles
+### 2. Write all 6 articles
 
-For each of the 5 stories provided below, produce:
+For each of the 6 stories provided below, produce:
 
 1. **Headline** in Traditional Chinese — concise, newspaper-style
 2. **Body text** — 2-3 paragraphs, ~100-200 characters total. You receive detailed English research briefings for each story (key facts, quotes, context, interesting details). Use this material to write rich, specific articles — include concrete numbers, names, and details rather than vague summaries. You have more material than you need; select the most interesting and reader-relevant details.
@@ -48,9 +48,13 @@ Use 繁體中文 exclusively. Never use simplified characters. Double-check: 體
 
 {{stories}}
 
+### 6. Arsenal beat branding
+
+Article 6 (Arsenal) must always open with the desk slug 兵工廠線 (Arsenal beat). Use it naturally as a beat attribution at the start of the article, e.g. "兵工廠線——" followed by the lead sentence.
+
 ## Output
 
-Return a JSON array of 5 articles:
+Return a JSON array of 6 articles:
 ```json
 [
   {

@@ -18,17 +18,18 @@ Read these files to understand current settings and user state:
 
 ### 2. Search for today's news
 
-Dispatch 4 scout agents in parallel:
+Dispatch 5 scout agents in parallel:
 - **news-scout-hn** — Hacker News front page via Algolia API
-- **news-scout-rss** — Marginal Revolution, MLB Cubs RSS feeds
+- **news-scout-rss** — Marginal Revolution, MLB Cubs, Arsenal FC RSS feeds
 - **news-scout-web** — Economist desk: transformative AI (lead beat), global economics, international affairs, business & industry, science & ideas
-- **news-scout-national** — Chicago & sports desk: US governance/policy, Chicago/Illinois local, Chicago sports (Cubs/Bulls/Bears), Michigan football & basketball
+- **news-scout-national** — National & Chicago desk: US governance/policy, Chicago/Illinois local
+- **news-scout-sports** — Sports desk: Chicago sports (Cubs/Bulls/Bears), Michigan football & basketball, Arsenal FC
 
 Aim for 15+ candidate stories across all scouts.
 
 ### 3. Select stories
 
-Choose 5 stories for the issue and 3 runner-up headlines for the Editor's Desk section.
+Choose 6 stories for the issue and 3 runner-up headlines for the Editor's Desk section.
 
 Selection criteria:
 - Follow the `selection_note` in `interests.json`
@@ -36,10 +37,11 @@ Selection criteria:
 - Lead with the genuinely most interesting story
 - Consider `preference_history.json` — what kinds of stories has the user favored?
 - Include 1-2 stories that a curious generalist would enjoy
+- Articles 1-4: Economist desk; Article 5: Chicago/Michigan sports; Article 6: Arsenal beat
 
 ### 3.5. Research selected stories
 
-Dispatch 5 story-researcher agents in parallel (one per selected story). Each researcher:
+Dispatch 6 story-researcher agents in parallel (one per selected story). Each researcher:
 - Fetches the full article via WebFetch
 - Falls back to WebSearch if the primary URL is inaccessible (paywall, 403, timeout)
 - Falls back to the original selector summary if both fail
@@ -47,31 +49,32 @@ Dispatch 5 story-researcher agents in parallel (one per selected story). Each re
 
 ### 4. Write the articles in Traditional Chinese
 
-For each of the 5 selected stories, using the **detailed research briefings** (not the selector's thin summaries):
+For each of the 6 selected stories, using the **detailed research briefings** (not the selector's thin summaries):
 - Rewrite in Traditional Chinese (繁體中文) — never simplified characters
-- Follow the reading level description in `settings.json` (currently grade 5)
+- Follow the reading level description in `settings.json` (currently grade 4)
 - Use the conversational tone: knowledgeable friend over coffee, not textbook or news anchor
 - Include concrete numbers, names, and details from the briefings rather than vague summaries
 - Naturally increase frequency of characters listed as "struggling" in `flagged_characters.json` — weave them into the text in varied contexts
 - Gloss difficult characters in parentheses on first use when needed
 - Each article: 2-4 paragraphs, ~100-200 characters
+- Article 6 (Arsenal) opens with 兵工廠線 (Arsenal beat) desk slug
 
 ### 5. Write English translations
 
-Dispatch 5 translator agents in parallel. Each produces a natural English translation for the toggle feature — clear and readable, not literal word-for-word.
+Dispatch 6 translator agents in parallel. Each produces a natural English translation for the toggle feature — clear and readable, not literal word-for-word.
 
 ### 5.5. Glossary building (handled by main session)
 
 The main session (Opus) builds the glossary directly — NOT delegated to the assembler. Two specialized agents handle different tasks:
 
 **Single-character lookup** (`glossary-chars.md`):
-1. Deduplicate all unique Chinese characters across all 5 articles (~200-250 chars)
+1. Deduplicate all unique Chinese characters across all 6 articles (~200-300 chars)
 2. Chunk into batches of 25-30 characters
-3. Dispatch 8-10 `glossary-chars` agents in parallel, each returning TSV (char\tzhuyin\tenglish)
+3. Dispatch `glossary-chars` agents in parallel, each returning TSV (char\tzhuyin\tenglish)
 4. Convert TSV to JSON programmatically via python (not LLM-mediated)
 
 **Multi-character words** (`glossary-words.md`):
-1. Dispatch 5 `glossary-words` agents in parallel (one per article)
+1. Dispatch 2 `glossary-words` agents in parallel (articles 1-3, articles 4-6)
 2. Each returns JSON with multi-character entries only
 
 **Merge and validate:**
@@ -85,7 +88,7 @@ Both agents have `tools: []` — their responses ARE the output.
 ### 6. Generate the complete HTML file
 
 Pass all content to the assembler agent:
-- 5 articles, 5 translations, 8 Editor's Desk headlines, validated glossary, today's date
+- 6 articles, 6 translations, 8 Editor's Desk headlines, validated glossary, today's date
 - The assembler reads `templates/newsletter.html` as the spec and produces a complete standalone HTML file
 - The assembler embeds the pre-built glossary (it does NOT build the glossary itself)
 

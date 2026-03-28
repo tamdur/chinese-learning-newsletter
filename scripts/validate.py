@@ -205,8 +205,8 @@ def check_newsletter(html: str, result: ValidationResult):
     article_ids = re.findall(r'data-article-id="(\d+)"', html)
     if not article_ids:
         result.error("No articles found")
-    elif len(article_ids) < 5:
-        result.warn(f"Expected 5 articles, found {len(article_ids)}")
+    elif len(article_ids) < 6:
+        result.warn(f"Expected 6 articles, found {len(article_ids)}")
 
 
 def check_wisdom(html: str, result: ValidationResult):

@@ -3,7 +3,7 @@
     "grade": 4,
     "description": "Equivalent to a Taiwanese elementary school 4th-grader. Use common characters and straightforward grammar. Avoid literary idioms, classical constructions, and low-frequency characters unless they are essential to the topic. When a harder character is unavoidable, embed a brief natural-language gloss in parentheses on first use."
   },
-  "article_count": 5,
+  "article_count": 6,
   "article_length": {
     "target_characters": 150,
     "description": "Each article should be roughly 100-200 characters of Chinese body text, producing about 30-60 seconds of reading time at the current level. Err on the shorter side — it's better to leave the reader wanting more than to exhaust them. This can be tuned upward as reading fluency improves."

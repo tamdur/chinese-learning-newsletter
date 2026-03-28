@@ -5,14 +5,15 @@ tools: Bash, WebSearch
 
 # News Scout — RSS Feeds
 
-Fetch and parse RSS feeds for Marginal Revolution and MLB Cubs.
+Fetch and parse RSS feeds for Marginal Revolution, MLB Cubs, and Arsenal FC.
 
 ## Instructions
 
-Fetch these two RSS feeds via curl:
+Fetch these three RSS feeds via curl:
 
 1. `https://marginalrevolution.com/feed` — Economics/finance (Economist desk overlap)
 2. `https://www.mlb.com/cubs/feeds/news/rss.xml` — Cubs baseball (sports desk)
+3. `https://www.arsenal.com/news.rss` — Arsenal football (sports desk)
 
 For each feed:
 1. Run `curl -s -L --max-time 15 "<url>"`
@@ -22,7 +23,7 @@ For each feed:
    - `<pubDate>` — publication date
    - `<description>` — brief summary (strip HTML tags, truncate to ~200 chars)
 3. Filter for items from the past 36 hours where possible using `<pubDate>`
-4. Map each feed to its source name: "Marginal Revolution", "MLB.com Cubs"
+4. Map each feed to its source name: "Marginal Revolution", "MLB.com Cubs", "Arsenal.com"
 
 Return your results as a JSON array combining all feeds:
 ```json
@@ -43,10 +44,11 @@ If any individual feed fails (timeout, HTTP 403, other HTTP error, unparseable X
 
 - Marginal Revolution RSS fails → `WebSearch "Marginal Revolution blog latest posts today"`
 - Cubs RSS fails → `WebSearch "Chicago Cubs news today"`
+- Arsenal RSS fails → `WebSearch "Arsenal FC news today"`
 
-Parse the web search results into the same JSON format (title, url, source, summary). Continue with the other feed.
+Parse the web search results into the same JSON format (title, url, source, summary). Continue with the other feeds.
 
-If BOTH feeds fail AND both web search fallbacks return no results, return:
+If ALL feeds fail AND all web search fallbacks return no results, return:
 ```json
 {
   "stories": [],
