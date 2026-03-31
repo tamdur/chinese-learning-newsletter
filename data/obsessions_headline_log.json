@@ -41,6 +41,34 @@
       "headline": "花的雨：芝加哥春天花展免費看",
       "headline_en": "Showers of Flowers at Garfield Park Conservatory",
       "topic": "botanical gardens"
+    },
+    {
+      "date": "2026-03-31",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "夢東兄弟：用電子音樂打開台灣廟宇的門",
+      "headline_en": "Mong Tong: Opening Taiwan's Temple Doors with Electronic Music",
+      "topic": "psychedelic folk-religion electronic"
+    },
+    {
+      "date": "2026-03-31",
+      "obsession_id": "finland-honeymoon",
+      "headline": "住進大師的建築：赫爾辛基芬蘭廳開放過夜",
+      "headline_en": "Sleep Inside Alvar Aalto's Finlandia Hall",
+      "topic": "modernist architecture"
+    },
+    {
+      "date": "2026-03-31",
+      "obsession_id": "do-312",
+      "headline": "芝加哥玻璃圓頂下的免費音樂夜",
+      "headline_en": "Free Music Night Under Chicago's Glass Dome",
+      "topic": "free concert and clothing swap"
+    },
+    {
+      "date": "2026-03-31",
+      "obsession_id": "best-of-internet",
+      "headline": "一個沒有演算法的網路探險工具",
+      "headline_en": "Wander: A Decentralized Small-Web Discovery Console",
+      "topic": "indie web discovery tool"
     }
   ]
 }

@@ -1,0 +1,75 @@
+{
+  "description": "Aggregator sources for the Best of the Internet obsession. The scout reads this file to find hunting grounds for hidden gems, and may append new sources it discovers. Each source is a URL or search pattern that tends to surface passionate, depth-first websites.",
+  "sources": [
+    {
+      "url": "https://github.com/sindresorhus/awesome",
+      "type": "aggregator",
+      "notes": "Meta-list of 'awesome' lists on GitHub — covers every niche imaginable"
+    },
+    {
+      "url": "https://www.marginalia.nu/",
+      "type": "search-engine",
+      "notes": "Marginalia Search — indie search engine that favors text-heavy, non-commercial sites"
+    },
+    {
+      "url": "https://wiby.me/",
+      "type": "search-engine",
+      "notes": "Wiby — search engine for the old web; surfaces handmade personal sites"
+    },
+    {
+      "url": "https://ooh.directory/",
+      "type": "aggregator",
+      "notes": "Directory of active blogs organized by topic"
+    },
+    {
+      "url": "https://www.are.na/",
+      "type": "community",
+      "notes": "Are.na — visual bookmarking for researchers and artists; deep rabbit holes"
+    },
+    {
+      "url": "https://news.ycombinator.com/show",
+      "type": "community",
+      "notes": "Show HN — people sharing what they built; filter for passion projects"
+    },
+    {
+      "url": "https://www.metafilter.com/",
+      "type": "community",
+      "notes": "MetaFilter — curated links from a community that values substance over clicks"
+    },
+    {
+      "url": "https://lobste.rs/",
+      "type": "community",
+      "notes": "Lobsters — invite-only tech link aggregator; less noise than HN"
+    },
+    {
+      "url": "https://www.reddit.com/r/InternetIsBeautiful/top/?t=month",
+      "type": "community",
+      "notes": "r/InternetIsBeautiful — dedicated to interesting, non-mainstream websites"
+    },
+    {
+      "url": "https://www.reddit.com/r/DepthHub/top/?t=month",
+      "type": "community",
+      "notes": "r/DepthHub — long-form, in-depth content and discussion"
+    },
+    {
+      "url": "https://stumbled.cc/",
+      "type": "search-engine",
+      "notes": "Stumbled — StumbleUpon-style random discovery of small websites"
+    },
+    {
+      "url": "https://href.cool/",
+      "type": "aggregator",
+      "notes": "href.cool — curated directory of weird and wonderful websites"
+    },
+    {
+      "url": "https://neal.fun/",
+      "type": "exemplar",
+      "notes": "Neal.fun — interactive visualizations and curiosity-driven projects (exemplar of the genre)"
+    },
+    {
+      "url": "https://personalweb.pages.dev/",
+      "type": "aggregator",
+      "notes": "Personal Web directory — catalog of personal websites and digital gardens"
+    }
+  ]
+}
