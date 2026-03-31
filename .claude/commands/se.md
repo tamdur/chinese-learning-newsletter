@@ -11,6 +11,10 @@ Examples:
 
 If no character count is specified, default to the `article_length.target_characters` from `config/settings.json`.
 
+## Shell conventions
+
+**CRITICAL:** All Bash commands MUST use relative paths from the project root. The working directory is already the project root. NEVER prefix commands with `cd` — doing so breaks the auto-approval permission patterns. Use dedicated tools (Grep, Glob, Read) instead of bash grep/find/cat.
+
 ---
 
 ## Step 1: Parse arguments
@@ -19,85 +23,60 @@ Extract the topic description and optional character count from `$ARGUMENTS`.
 
 Read `config/settings.json` for the default character count.
 
-## Step 2: Research
+## Step 2: Research and write
 
-Dispatch a **story-researcher** agent (Sonnet) with a web search for the latest on the topic:
-- Agent prompt: "Research this topic in depth. Find the most recent developments (past 24 hours if possible).\n\nTopic: {topic}\n\nProduce a detailed English briefing with key facts, quotes, context, and interesting details (200-400 words). If specific URLs are hard to find, search broadly and synthesize."
+Dispatch the **article-writer** agent (Opus) with the topic. The article-writer has WebFetch and WebSearch tools and handles its own research.
 
-## Step 3: Write
-
-Dispatch the **article-writer** agent (Opus) with the research briefing:
 - Include only this one story
 - Specify the character count target
-- Agent prompt: "Write 1 article for a Special Edition insert. Target length: {char_count} characters.\n\nResearch briefing:\n{briefing}\n\nFollow the instructions in your agent definition. Output a JSON array with 1 article."
+- Agent prompt: "Write 1 article for a Special Edition insert. Target length: {char_count} characters.\n\nTopic: {topic}\nInstructions: Search the web for the latest developments on this topic (past 24 hours if possible). Fetch the best source you find. Then write the article directly from what you learn.\n\nFollow the instructions in your agent definition. Output a JSON array with 1 article."
 
 **Checkpoint:** Write `data/pipeline/articles.json`.
 
-## Step 4: Translate
+## Step 3: Translate
 
 Dispatch one **translator** agent (Haiku):
 - Agent prompt: "Translate this Traditional Chinese news article to natural English. Maintain paragraph structure. Output HTML <p> tags only.\n\nHeadline: {headline_plain}\n\n{body_text_plain}"
 
 **Checkpoint:** Write `data/pipeline/translations.json`.
 
-## Step 5: Build glossary
+## Step 4: Build glossary
 
-Follow the standard glossary pipeline:
+**4a. Dictionary pre-match:**
 
 ```bash
-if [ ! -f data/cedict_dictionary.json ]; then
-  python3 scripts/build_dictionary.py
-fi
 python3 scripts/glossary_lookup.py
 ```
 
-Then dispatch glossary-chars and glossary-words agents as needed (follow Steps 5.5b-5.5h from `.claude/commands/newsletter.md`).
+(This also builds the CEDICT dictionary on first run if missing.)
 
-**Checkpoint:** Write `data/pipeline/glossary.json`.
+**4b. Agent word lookup:**
 
-## Step 6: Insert into docs/index.html
+Dispatch a **glossary-words** agent (Sonnet) with the article plain text. The agent must return raw JSON only (no markdown fences). Write the agent's JSON response to `data/pipeline/glossary_agent_words.json` using the Write tool.
 
-Read the current `docs/index.html`.
+**4c. Merge and validate:**
 
-### Build the SE article HTML
-
-Using the article from `data/pipeline/articles.json` and translation from `data/pipeline/translations.json`:
-
-```html
-<article class="article se-article" data-se-id="{next_id}">
-  <h2 class="article-headline">{headline_html}</h2>
-  <p class="article-source">{source_label}</p>
-  <div class="article-body-zh">{body_html}</div>
-  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
-  <div class="article-body-en" hidden>{translation}</div>
-</article>
+```bash
+python3 scripts/glossary_merge.py
 ```
 
-### Insert into the page
+This merges dictionary pre-match + agent entries, validates zhuyin (Bopomofo only), and writes `data/pipeline/glossary.json`.
 
-1. Look for `<div id="special-editions">` in the HTML.
-2. **If it doesn't exist:** Create it. Insert after `</main>` and before the toolbar `<div class="toolbar"`:
-   ```html
-   <div id="special-editions">
-     <h2 class="se-header">特別報導 Special Edition</h2>
-     {se_article_html}
-   </div>
-   ```
-3. **If it already exists:** Find the closing `</div>` of the special-editions container. Insert the new SE article before it. Set `data-se-id` to one more than the highest existing SE id.
+## Step 5: Insert into docs/index.html
 
-### Merge glossary
+```bash
+python3 scripts/insert_se.py
+```
 
-Read the existing `GLOSSARY` object from the page's `<script>` block. Merge the new glossary entries (new entries override existing ones for the same key). Write the updated GLOSSARY back.
+This script reads checkpoint files from `data/pipeline/`, builds the SE HTML, inserts it into `docs/index.html` (creating the special-editions container if needed), and merges the new glossary into the existing GLOSSARY object.
 
-Write the modified HTML back to `docs/index.html`.
-
-## Step 7: Validate
+## Step 6: Validate
 
 ```bash
 python3 scripts/validate.py --page-type newsletter
 ```
 
-## Step 8: Commit and push
+## Step 7: Commit and push
 
 ```bash
 git add docs/index.html
@@ -105,7 +84,7 @@ git commit -m "Special Edition: {topic_short}"
 git push
 ```
 
-## Step 9: Cleanup
+## Step 8: Cleanup
 
 ```bash
 rm -f data/pipeline/*.json data/pipeline/*.txt

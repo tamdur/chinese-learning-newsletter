@@ -4,91 +4,43 @@
       "date": "2026-03-27",
       "obsession_id": "taiwanese-crate-digging",
       "headline": "林強的聲音世界：用台灣的聲音畫一幅畫",
-      "headline_en": "Lim Giong's Insects Awaken: Taiwan's Field-Recording Auteur"
+      "headline_en": "Lim Giong's Insects Awaken: Taiwan's Field-Recording Auteur",
+      "topic": "field recording and sound art"
     },
     {
       "date": "2026-03-27",
       "obsession_id": "finland-honeymoon",
       "headline": "煙燻桑拿：芬蘭最古老的溫暖",
-      "headline_en": "Inside Kakslauttanen's Smoke Sauna Village"
+      "headline_en": "Inside Kakslauttanen's Smoke Sauna Village",
+      "topic": "sauna culture"
     },
     {
       "date": "2026-03-27",
       "obsession_id": "do-312",
       "headline": "David Byrne的「心靈劇場」：你的感官在說謊",
-      "headline_en": "David Byrne's Theater of the Mind in Chicago"
+      "headline_en": "David Byrne's Theater of the Mind in Chicago",
+      "topic": "immersive theater"
     },
     {
       "date": "2026-03-28",
       "obsession_id": "taiwanese-crate-digging",
       "headline": "鬼島之聲：台灣電子音樂的黑暗面",
-      "headline_en": "Ghost Island: Meuko! Meuko!'s Dark Electronic Debut"
+      "headline_en": "Ghost Island: Meuko! Meuko!'s Dark Electronic Debut",
+      "topic": "dark electronic music"
     },
     {
       "date": "2026-03-28",
       "obsession_id": "finland-honeymoon",
       "headline": "芬蘭的公共三溫暖：下班後的新去處",
-      "headline_en": "Finland's Public Saunas: The New Happy Hour"
+      "headline_en": "Finland's Public Saunas: The New Happy Hour",
+      "topic": "sauna culture"
     },
     {
       "date": "2026-03-28",
       "obsession_id": "do-312",
       "headline": "花的雨：芝加哥春天花展免費看",
-      "headline_en": "Showers of Flowers at Garfield Park Conservatory"
-    },
-    {
-      "date": "2026-03-29",
-      "obsession_id": "taiwanese-crate-digging",
-      "headline": "夢東兄弟：用老合成器重新打造廟會音樂",
-      "headline_en": "Mong Tong Brothers: Reimagining Temple Music with Vintage Synthesizers"
-    },
-    {
-      "date": "2026-03-29",
-      "obsession_id": "finland-honeymoon",
-      "headline": "睡在玻璃屋裡看極光",
-      "headline_en": "Sleeping in a Glass Igloo to Watch the Northern Lights"
-    },
-    {
-      "date": "2026-03-29",
-      "obsession_id": "do-312",
-      "headline": "芝加哥遇見維也納：免費藝術展",
-      "headline_en": "Chicago Meets Vienna: Free Art Exhibition at Cultural Center"
-    },
-    {
-      "date": "2026-03-30",
-      "obsession_id": "taiwanese-crate-digging",
-      "headline": "落日飛車的城市流行夢",
-      "headline_en": "Sunset Rollercoaster: Taipei's City Pop Dream"
-    },
-    {
-      "date": "2026-03-30",
-      "obsession_id": "finland-honeymoon",
-      "headline": "拉普蘭的雪橇犬",
-      "headline_en": "Dog Sledding Through Lapland's Frozen Forests"
-    },
-    {
-      "date": "2026-03-30",
-      "obsession_id": "do-312",
-      "headline": "芝加哥紀錄片影展十歲了",
-      "headline_en": "Doc10 Documentary Film Festival Turns Ten"
-    },
-    {
-      "date": "2026-03-31",
-      "obsession_id": "taiwanese-crate-digging",
-      "headline": "綠帽：用電子音樂切開文化的刀",
-      "headline_en": "Tzusing's Green Hat: Club Music as Cultural Dissection"
-    },
-    {
-      "date": "2026-03-31",
-      "obsession_id": "finland-honeymoon",
-      "headline": "赫爾辛基的水上桑拿天堂",
-      "headline_en": "Allas Sea Pool: Helsinki's Floating Sauna Sanctuary"
-    },
-    {
-      "date": "2026-03-31",
-      "obsession_id": "do-312",
-      "headline": "世界最大蒂芙尼玻璃圓頂下的免費音樂會",
-      "headline_en": "Free Concert Under the World's Largest Tiffany Glass Dome"
+      "headline_en": "Showers of Flowers at Garfield Park Conservatory",
+      "topic": "botanical gardens"
     }
   ]
 }

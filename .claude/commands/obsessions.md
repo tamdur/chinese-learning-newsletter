@@ -17,17 +17,21 @@ Filter for active obsessions only (`"active": true`). If no obsessions are activ
 
 ## Step 2: Build dedup context
 
-From the headline log, collect the last 10 headlines **per obsession** (not just globally). Format them as a list for the scouts:
+From the headline log, collect the last 10 headlines **per obsession** (not just globally). Format them as a list for the scouts, including the `topic` field for semantic dedup:
 
 ```
-Recent headlines for "Interesting Taiwanese Music, Past and Present":
-- 2026-03-27: 林強的聲音世界：用台灣的聲音畫一幅畫 (Lim Giong's Insects Awaken)
-- ...
+Recent coverage for "Interesting Taiwanese Music, Past and Present":
+- 2026-03-28: topic=dark electronic music — 鬼島之聲：台灣電子音樂的黑暗面
+- 2026-03-27: topic=field recording and sound art — 林強的聲音世界：用台灣的聲音畫一幅畫
 
-Recent headlines for "Discovering Finland for March 2027 Honeymoon":
-- 2026-03-27: 煙燻桑拿：芬蘭最古老的溫暖 (Kakslauttanen smoke saunas)
-- ...
+Recent coverage for "Discovering Finland for March 2027 Honeymoon":
+- 2026-03-28: topic=sauna culture — 芬蘭的公共三溫暖：下班後的新去處
+- 2026-03-27: topic=sauna culture — 煙燻桑拿：芬蘭最古老的溫暖
+
+Do NOT cover any topic already listed above. Find a genuinely different facet of this obsession.
 ```
+
+When formatting recent headlines, use the `topic` field if present. If an entry has no `topic` field, format it as `topic=untagged` and include the headline as usual.
 
 ## Step 3: Dispatch scouts in parallel
 
@@ -89,9 +93,12 @@ Append today's headlines to `data/obsessions_headline_log.json`. For each articl
   "date": "{today}",
   "obsession_id": "{obsession_id from article}",
   "headline": "{headline_plain}",
-  "headline_en": "{brief English description}"
+  "headline_en": "{brief English description}",
+  "topic": "{2-4 word English topic label}"
 }
 ```
+
+Generate the `topic` field inline by identifying the article's core subject in 2-4 words (e.g., "sauna culture", "Finnish design", "Taiwanese hip-hop"). This does not need an agent call.
 
 ## Step 9: Commit and push
 

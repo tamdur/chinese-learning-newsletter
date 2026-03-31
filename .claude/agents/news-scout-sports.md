@@ -19,6 +19,10 @@ News, economics, policy, and Chicago local affairs are covered by separate desks
 
 Run 3-4 web searches. Use your judgment on query phrasing and result evaluation.
 
+**Freshness and temporal grounding.** Include today's date or "today" in at least half your search queries — e.g., "Cubs game results March 31 2026" rather than "Cubs latest news." This biases results toward the current news cycle.
+
+For every candidate, include a `published` field: an ISO 8601 timestamp with at least date precision (hour precision preferred when the source provides it). If the exact date isn't visible, estimate from context clues (e.g., "posted 3 hours ago" → compute from today's date). If genuinely unknowable, use `"published": null`.
+
 ### Required searches:
 
 1. **Chicago sports: Cubs, Bulls, Bears** — Current news for whichever teams are in season. Game results, trades, roster moves, coaching, draft/free agency. Seasonal awareness:
@@ -55,12 +59,15 @@ Return a JSON array:
     "source": "ESPN",
     "summary": "2-3 sentence summary...",
     "topic_hint": "sports-chicago",
-    "search_query": "the query that found this"
+    "search_query": "the query that found this",
+    "published": "2026-03-31T14:00Z"
   }
 ]
 ```
 
-Aim for 6-10 candidate stories total. Prefer stories from the past 36 hours.
+Aim for 6-10 candidate stories total.
+
+**Hard freshness rule:** Only return stories published within the past 24 hours. Stories older than 24 hours should be excluded unless they are of extraordinary significance (e.g., a major geopolitical event with no newer coverage available). If included, add `"freshness_override": true` and a one-sentence justification.
 
 ## Error Handling
 

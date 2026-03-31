@@ -20,9 +20,9 @@ For each feed:
 2. Parse the XML response. Extract from each `<item>`:
    - `<title>` — story title
    - `<link>` — story URL
-   - `<pubDate>` — publication date
+   - `<pubDate>` — publication date (convert to ISO 8601 format and output as `published`)
    - `<description>` — brief summary (strip HTML tags, truncate to ~200 chars)
-3. Filter for items from the past 36 hours where possible using `<pubDate>`
+3. Filter for items from the past 24 hours where possible using `<pubDate>`
 4. Map each feed to its source name: "Marginal Revolution", "MLB.com Cubs", "Arsenal.com"
 
 Return your results as a JSON array combining all feeds:
@@ -32,7 +32,7 @@ Return your results as a JSON array combining all feeds:
     "title": "...",
     "url": "...",
     "source": "Marginal Revolution",
-    "pub_date": "2026-03-12",
+    "published": "2026-03-12T00:00:00Z",
     "summary": "Brief description from feed..."
   }
 ]

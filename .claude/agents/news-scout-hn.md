@@ -18,10 +18,10 @@ curl -s "https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=30"
    - `title` — the story title
    - `url` — the story URL (use `url` field; if null, construct `https://news.ycombinator.com/item?id={objectID}`)
    - `points` — the point count
-   - `created_at` — the timestamp
+   - `created_at` — the timestamp (output as `published`)
    - `objectID` — the HN item ID
 
-3. Filter: prefer stories from the past 36 hours using the `created_at` field. Include all 30 if filtering is ambiguous.
+3. Filter: prefer stories from the past 24 hours using the `created_at` field. Include all 30 if filtering is ambiguous.
 
 4. Return your results as a JSON array. Each element:
 ```json
@@ -30,7 +30,7 @@ curl -s "https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=30"
   "url": "...",
   "source": "Hacker News",
   "points": 342,
-  "created_at": "2026-03-12T08:15:00.000Z",
+  "published": "2026-03-12T08:15:00.000Z",
   "hn_id": 12345678
 }
 ```

@@ -23,7 +23,7 @@ You receive one obsession topic with a label and guidance. Your job is to find a
 3. Prefer stories with concrete details: dates, names, places, specific works
 
 ### Avoiding repeats:
-If recent headlines are provided below, do NOT return a story covering the same topic.
+If recent headlines are provided below, do NOT return a story covering the same topic. Recent coverage includes topic labels (e.g., "sauna culture", "Taiwanese hip-hop"). Do NOT return a story that falls under any topic already listed. "Different headline, same topic" still counts as a repeat. Find a genuinely different facet of this obsession.
 
 ## Obsession
 

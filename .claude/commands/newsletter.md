@@ -19,8 +19,7 @@ Check if `data/pipeline/` exists and contains checkpoint files. If it does:
    - If `glossary.json` exists → skip to Step 6
    - If `translations.json` exists but not `glossary.json` → skip to Step 5.5
    - If `articles.json` exists but not `translations.json` → skip to Step 5
-   - If `briefings.json` exists but not `articles.json` → skip to Step 4
-   - If `selected.json` exists but not `briefings.json` → skip to Step 3.5
+   - If `selected.json` exists but not `articles.json` → skip to Step 4
    - If `candidates.json` exists but not `selected.json` → skip to Step 3
 3. If the date does NOT match today: delete all files in `data/pipeline/` and start fresh
 
@@ -58,28 +57,18 @@ Wait for all five to return.
 ### Step 3: Combine results and dispatch story-selector
 
 Merge results from all five scouts into a single candidate list. Launch the **story-selector** agent (Opus):
-- Pass the full combined candidate list as context
+- Pass the full combined candidate list as context, prefixed with today's date and approximate time
 - The agent will read `config/interests.json` and check `docs/archive/` for recent issues
-- Agent prompt: "Here are the candidate stories from today's news scouts:\n\n{combined_candidates}\n\nSelect 6 stories for today's newsletter. Follow the instructions in your agent definition."
+- Agent prompt: "Today is {today}, approximately {current_hour}:00 Chicago time. Here are the candidate stories from today's news scouts:\n\n{combined_candidates}\n\nSelect 6 stories for today's newsletter. Follow the instructions in your agent definition."
 
 **Checkpoint:** Write `data/pipeline/selected.json` — the selector's full output (6 selected stories + rationale), with a `"date": "{today}"` field added at the top level.
-
-### Step 3.5: Dispatch 6 story-researcher agents in parallel
-
-For each of the 6 selected stories, launch a **story-researcher** agent (Sonnet):
-- Pass the story's URL, title, source, and the selector's summary
-- Agent prompt: "Research this story in depth.\n\nURL: {url}\nTitle: {title}\nSource: {source}\nSummary: {summary}\n\nFetch the full article and produce a detailed English briefing with key facts, quotes, context, and interesting details (200-400 words). If the URL is inaccessible, search for alternative sources. Follow the instructions in your agent definition."
-
-All 6 run concurrently. Wait for all to return.
-
-**Checkpoint:** Write `data/pipeline/briefings.json` — array of 6 briefing objects keyed by article index (0-5).
 
 ### Step 4: Dispatch article-writer
 
 Pass the 6 selected stories to the **article-writer** agent (Opus):
-- Include the **detailed research briefings from Step 3.5** (NOT the selector's thin summaries)
-- The agent will read `config/settings.json`
-- Agent prompt: "Write all 6 articles for today's newsletter. Here are the selected stories with detailed research briefings:\n\n{stories_with_briefings}\n\nFollow the instructions in your agent definition."
+- Include for each story: `title`, `url`, `source`, `summary`, `new_development`
+- The agent will fetch the sources itself using WebFetch/WebSearch
+- Agent prompt: "Write all 6 articles for today's newsletter. Here are the selected stories:\n\n{stories_with_urls_and_summaries}\n\nFollow the instructions in your agent definition."
 
 **Checkpoint:** Write `data/pipeline/articles.json` — the article-writer's JSON array output (each entry has `headline_html`, `body_html`, `headline_plain`, `source_label`).
 

@@ -36,6 +36,7 @@ docs/
 - `config/interests.json` — newsletter topic labels, source hints, selection guidance
 - `config/wisdom.json` — wisdom source configs (Heart Sutra, Mengzi, Zen)
 - `config/obsessions.json` — obsession definitions + editorial voice
+- `data/obsessions_headline_log.json` — running headline log with `topic` field for semantic dedup
 - `data/wisdom_progress.json` — Mengzi + Zen passage tracking
 - `data/sources/` — cached source texts (Heart Sutra, Mengzi, Zen passages)
 - `templates/_shared.css` — shared CSS for all page types
@@ -50,7 +51,7 @@ docs/
 
 ## Commands
 - `/go` — daily orchestrator: runs `/newsletter` → `/wisdom` → `/obsessions` sequentially
-- `/newsletter` — full news pipeline: scout → select → research → write → translate → glossary → assemble → validate → commit/push
+- `/newsletter` — full news pipeline: scout → select → write (with integrated research) → translate → glossary → assemble → validate → commit/push
 - `/wisdom` — wisdom pipeline: select passages → wrap chars → translate (cached or agent) → glossary → assemble → commit/push. Idempotent per day.
 - `/obsessions` — obsessions pipeline: scout → write → translate → glossary → assemble → commit/push
 - `/se <topic> [char_count]` — on-demand Special Edition: research → write → translate → glossary → insert into current newsletter → commit/push. Ephemeral (wiped on next `/newsletter` run).
@@ -70,8 +71,8 @@ The Economist, reimagined as a Chicago-based local newspaper. Analytical, global
 - Articles 1-4 come from the Economist desk: AI, economics, international affairs, US policy, Chicago, business, science & ideas. Aim for variety but don't force every category.
 - Article 5 is ALWAYS a Chicago/Michigan sports story (Cubs, Bulls, Bears, Michigan football & basketball).
 - Article 6 is ALWAYS an Arsenal football story, introduced as the Arsenal beat (兵工廠線).
-- Strong preference for stories from the past 36 hours.
-- Stories must NOT repeat from past newsletters unless there has been a substantive update.
+- **Freshness is non-negotiable.** Every story must have a `published` timestamp within the past 24 hours. Stories about ongoing situations are welcome when today's installment has a specific new development. A 4-story issue that's all fresh is better than a 6-story issue padded with stale filler.
+- **Running stories are welcome.** If an ongoing story (war, tournament, AI race) had a genuine new development today, cover it — even if it appeared yesterday.
 - AI should appear in most issues — it's the paper's lead beat — but doesn't need to lead every issue.
 - The paper should feel like flipping through a smart, cosmopolitan local newspaper, not a hyper-targeted feed.
 
