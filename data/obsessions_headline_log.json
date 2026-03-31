@@ -69,6 +69,34 @@
       "headline": "一個沒有演算法的網路探險工具",
       "headline_en": "Wander: A Decentralized Small-Web Discovery Console",
       "topic": "indie web discovery tool"
+    },
+    {
+      "date": "2026-03-31",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "躁動綿羊的布魯克林夢",
+      "headline_en": "Manic Sheep's Brooklyn: Taiwan's Shoegaze Landmark",
+      "topic": "Taiwanese shoegaze"
+    },
+    {
+      "date": "2026-03-31",
+      "obsession_id": "finland-honeymoon",
+      "headline": "坦佩雷的黑血腸：芬蘭最有爭議的街頭小吃",
+      "headline_en": "Tampere's Mustamakkara: Finland's Most Divisive Street Food",
+      "topic": "Finnish regional street food"
+    },
+    {
+      "date": "2026-03-31",
+      "obsession_id": "do-312",
+      "headline": "芝加哥昆蟲館：親手製作蜘蛛標本",
+      "headline_en": "Tarantula Pinning Workshop at The Insect Asylum",
+      "topic": "insect specimen workshop"
+    },
+    {
+      "date": "2026-03-31",
+      "obsession_id": "best-of-internet",
+      "headline": "有人搶救了 CIA 的世界資料庫",
+      "headline_en": "CIA World Factbook Archive (1990-2025)",
+      "topic": "geopolitical data archive"
     }
   ]
 }
