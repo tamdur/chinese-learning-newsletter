@@ -42,6 +42,38 @@ def wrap_cjk_chars(text: str) -> str:
     return "".join(result)
 
 
+def normalize_article(art: dict) -> dict:
+    """Normalize agent output variants to the expected schema.
+
+    Handles common mismatches when the article-writer agent doesn't follow
+    the full spec (e.g., 'headline' instead of 'headline_html').
+    """
+    # Map shorthand keys to expected keys
+    if "headline" in art and "headline_html" not in art:
+        art["headline_html"] = art["headline"]
+    if "body" in art and "body_html" not in art:
+        art["body_html"] = art["body"]
+
+    # Ensure headline_plain exists
+    if "headline_plain" not in art:
+        art["headline_plain"] = re.sub(r"<[^>]+>", "", art.get("headline_html", ""))
+
+    # Ensure source_label exists
+    if "source_label" not in art:
+        art["source_label"] = "來源：Special Edition"
+
+    # Ensure CJK wrapping in HTML fields
+    for field in ("headline_html", "body_html", "source_label"):
+        if field in art:
+            # Check for bare CJK chars (not already wrapped in spans)
+            stripped = re.sub(r'<span class="c">[^<]*</span>', "", art[field])
+            stripped = re.sub(r"<[^>]+>", "", stripped)
+            if CJK_RE.search(stripped):
+                art[field] = wrap_cjk_chars(art[field])
+
+    return art
+
+
 def load_json(path: Path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -82,7 +114,7 @@ def main():
     translations = load_json(PIPELINE / "translations.json")
     new_glossary = load_json(PIPELINE / "glossary.json")
 
-    art = articles[0]
+    art = normalize_article(articles[0])
     trans = translations[0]
     # Support both string and dict translations
     if isinstance(trans, dict):

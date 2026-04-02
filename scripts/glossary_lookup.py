@@ -47,8 +47,9 @@ def extract_plain_text(articles: list) -> str:
     """Extract plain Chinese text from all articles."""
     parts = []
     for article in articles:
-        parts.append(strip_spans(article.get("headline_html", "")))
-        body = article.get("body_html", "")
+        headline = article.get("headline_html", article.get("headline", ""))
+        parts.append(strip_spans(headline))
+        body = article.get("body_html", article.get("body", ""))
         # Strip all HTML tags
         body = re.sub(r"<[^>]+>", "", strip_spans(body))
         parts.append(body)
