@@ -118,6 +118,27 @@
       "headline": "芝加哥菲律賓美食節回來了",
       "headline_en": "Chi-ibigan Returns: Chicago's Filipino Food Fest Goes Three Floors Deep",
       "topic": "Filipino food festival"
+    },
+    {
+      "date": "2026-04-02",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "蛋堡《家常音樂》——嘻哈走進金曲殿堂",
+      "headline_en": "Soft Lipa's Home Cookin': Hip-Hop Enters the Golden Melody Hall",
+      "topic": "jazz hip-hop"
+    },
+    {
+      "date": "2026-04-02",
+      "obsession_id": "finland-honeymoon",
+      "headline": "伊納里——薩米人的文化首都",
+      "headline_en": "Inari: The Cultural Capital of the Sámi People",
+      "topic": "Sámi culture and reindeer racing"
+    },
+    {
+      "date": "2026-04-02",
+      "obsession_id": "do-312",
+      "headline": "國際爵士日在芝加哥——走進傳奇的論壇咖啡廳",
+      "headline_en": "International Jazz Day at The Forum in Bronzeville",
+      "topic": "jazz heritage event"
     }
   ]
 }
