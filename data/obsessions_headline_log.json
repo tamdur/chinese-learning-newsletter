@@ -97,6 +97,27 @@
       "headline": "有人搶救了 CIA 的世界資料庫",
       "headline_en": "CIA World Factbook Archive (1990-2025)",
       "topic": "geopolitical data archive"
+    },
+    {
+      "date": "2026-04-01",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "阿爆：用母語唱出金曲獎歷史",
+      "headline_en": "Abao's Kinakaian: Paiwan Club Music Wins Taiwan's Grammy",
+      "topic": "indigenous electronic music"
+    },
+    {
+      "date": "2026-04-01",
+      "obsession_id": "finland-honeymoon",
+      "headline": "芬蘭荒野小屋：滑雪、極光、三溫暖",
+      "headline_en": "Hetta-Pallas: Skiing Hut to Hut Under the Northern Lights",
+      "topic": "cross-country skiing huts"
+    },
+    {
+      "date": "2026-04-01",
+      "obsession_id": "do-312",
+      "headline": "芝加哥菲律賓美食節回來了",
+      "headline_en": "Chi-ibigan Returns: Chicago's Filipino Food Fest Goes Three Floors Deep",
+      "topic": "Filipino food festival"
     }
   ]
 }

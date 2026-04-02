@@ -16,6 +16,31 @@ from pathlib import Path
 PIPELINE = Path("data/pipeline")
 INDEX = Path("docs/index.html")
 
+# CJK Unified Ideographs + CJK punctuation
+CJK_RE = re.compile(r"[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]")
+
+
+def wrap_cjk_chars(text: str) -> str:
+    """Wrap each CJK character in <span class="c"> for Zhongwen extension compatibility.
+
+    Preserves existing HTML tags and only wraps characters in text nodes.
+    """
+    # Split on HTML tags to avoid wrapping inside tags
+    parts = re.split(r"(<[^>]+>)", text)
+    result = []
+    for part in parts:
+        if part.startswith("<"):
+            result.append(part)
+        else:
+            wrapped = []
+            for ch in part:
+                if CJK_RE.match(ch):
+                    wrapped.append(f'<span class="c">{ch}</span>')
+                else:
+                    wrapped.append(ch)
+            result.append("".join(wrapped))
+    return "".join(result)
+
 
 def load_json(path: Path):
     with open(path, "r", encoding="utf-8") as f:
@@ -23,10 +48,13 @@ def load_json(path: Path):
 
 
 def build_se_html(article: dict, translation: str, se_id: int) -> str:
+    headline = wrap_cjk_chars(article['headline_html'])
+    body = wrap_cjk_chars(article['body_html'])
+    source = wrap_cjk_chars(article['source_label'])
     return f"""<article class="article se-article" data-se-id="{se_id}">
-  <h2 class="article-headline">{article['headline_html']}</h2>
-  <p class="article-source">{article['source_label']}</p>
-  <div class="article-body-zh">{article['body_html']}</div>
+  <h2 class="article-headline">{headline}</h2>
+  <p class="article-source">{source}</p>
+  <div class="article-body-zh">{body}</div>
   <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
   <div class="article-body-en" hidden>{translation}</div>
 </article>"""
@@ -56,6 +84,9 @@ def main():
 
     art = articles[0]
     trans = translations[0]
+    # Support both string and dict translations
+    if isinstance(trans, dict):
+        trans = trans.get("body_en", "")
 
     html = INDEX.read_text(encoding="utf-8")
 
