@@ -18,6 +18,12 @@
       "label": "Upcoming Chicago Experiences",
       "guidance": "Describe upcoming events (with at least two days lead time) that make up the spice of life. Examples could be a local ikebana class, an amateur wrestling event, or a special lecture with a renowned chef. Special events that might fly under the radar but are open to anyone attending. Sources may include Block Club Chicago events, Chicago Reader things-to-do, TimeOut Chicago.",
       "active": true
+    },
+    {
+      "id": "best-of-internet",
+      "label": "Best of the Internet",
+      "guidance": "Surface a hidden gem of the internet — a website, tool, or resource made by a passionate person or small group that rewards curiosity with depth. Think: an interactive history of electronic music, a hand-curated bibliography of world literature, a migration pattern visualizer, a solo economist's blog with years of original thinking. The spirit of early StumbleUpon and pre-commercial Reddit: people making things because they love them. NOT: mainstream apps, well-known platforms, corporate products, listicles, or content mills. Each day should be a genuinely different discovery. The scout for this obsession uses a persistent source file (data/sources/internet_gems_sources.json) — see obsessions-scout instructions for the two-phase meta-search workflow.",
+      "active": true
     }
   ]
 }

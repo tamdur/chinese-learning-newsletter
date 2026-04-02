@@ -6,12 +6,14 @@ All intermediate results are checkpointed to `data/pipeline/`.
 
 ---
 
-## Step 1: Read config and headline log
+## Step 1: Read config, headline log, and source files
 
 Read these files:
 - `config/settings.json` — reading level, timezone
 - `config/obsessions.json` — editorial voice and obsession definitions
 - `data/obsessions_headline_log.json` — running log of all past headlines (for dedup)
+
+For any obsession whose `guidance` references a persistent source file (e.g., `data/sources/internet_gems_sources.json`), read that file too. Its contents will be passed to the scout as `sources_context`.
 
 Filter for active obsessions only (`"active": true`). If no obsessions are active, print "No active obsessions — skipping." and stop.
 
@@ -33,15 +35,37 @@ Do NOT cover any topic already listed above. Find a genuinely different facet of
 
 When formatting recent headlines, use the `topic` field if present. If an entry has no `topic` field, format it as `topic=untagged` and include the headline as usual.
 
+## Step 2.5: Generate entropy tokens
+
+Generate one random entropy token per active obsession to inject serendipity into all scouts. Run:
+
+```bash
+python3 -c "
+import json, random, time
+random.seed(int(time.time()))
+with open('data/sources/entropy_tokens.json') as f:
+    tokens = json.load(f)['tokens']
+n = {number_of_active_obsessions}
+picks = random.sample(tokens, n)
+for p in picks:
+    print(p)
+"
+```
+
+Save the output as a list of `{entropy_tokens}`, one per obsession in the same order as the active obsessions list.
+
 ## Step 3: Dispatch scouts in parallel
 
 For each active obsession, launch an **obsessions-scout** agent (Sonnet):
-- Pass the obsession's `label`, `guidance`, and **that obsession's** recent headlines
-- Agent prompt: "Find a specific, interesting story for this obsession.\n\nLabel: {label}\nGuidance: {guidance}\n\nRecent headlines to avoid:\n{recent_headlines}\n\nFollow the instructions in your agent definition."
+- Pass the obsession's `label`, `guidance`, **that obsession's** recent headlines, and its entropy token
+- If a source file was loaded for this obsession in Step 1, pass its `sources` array as `sources_context`. Otherwise pass `sources_context` as "None — use standard search."
+- Agent prompt: "Find a specific, interesting story for this obsession.\n\nLabel: {label}\nGuidance: {guidance}\n\nRecent headlines to avoid:\n{recent_headlines}\n\nKnown sources:\n{sources_context}\n\nEntropy token: {entropy_token} — Let this word nudge your searching in an unexpected direction. Don't search for the word literally; let it guide your associations.\n\nFollow the instructions in your agent definition."
 
 All scouts run concurrently. Wait for all to return.
 
 **Checkpoint:** Write `data/pipeline/candidates.json` — array of scouted stories.
+
+**Source file update:** After all scouts return, check each result for a `new_source` field. If present and non-null, append the new source entry to the appropriate source file (e.g., `data/sources/internet_gems_sources.json`). This grows the source list over time.
 
 ## Step 4: Dispatch obsessions-writer
 
@@ -53,12 +77,14 @@ Pass all successfully scouted stories to the **obsessions-writer** agent (Opus):
 
 ## Step 5: Dispatch translators in parallel
 
-For each content unit, launch a **translator** agent (Haiku):
+For each article in `articles.json`, extract the plain Chinese body text by stripping all HTML tags from `body_html` (remove `<span class="c">`, `</span>`, `<p>`, `</p>` etc., leaving only the Chinese characters and punctuation).
+
+Then launch a **translator** agent (Haiku) for each article:
 - Agent prompt: "Translate this Traditional Chinese article to natural English. Maintain paragraph structure. Output HTML <p> tags only.\n\nHeadline: {headline_plain}\n\n{body_text_plain}"
 
 All translators run concurrently. Wait for all to return.
 
-**Checkpoint:** Write `data/pipeline/translations.json`.
+**Checkpoint:** Write `data/pipeline/translations.json` — an array of HTML strings, one per article. Each entry is the translator's raw HTML output (e.g., `"<p>First paragraph...</p><p>Second paragraph...</p>"`). Do NOT wrap these in objects — the array entries must be plain strings, not dicts.
 
 ## Step 6: Build glossary
 
@@ -103,7 +129,7 @@ Generate the `topic` field inline by identifying the article's core subject in 2
 ## Step 9: Commit and push
 
 ```bash
-git add docs/obsessions.html data/obsessions_headline_log.json
+git add docs/obsessions.html data/obsessions_headline_log.json data/sources/internet_gems_sources.json
 git commit -m "Obsessions {today}"
 git push
 ```
