@@ -139,6 +139,34 @@
       "headline": "國際爵士日在芝加哥——走進傳奇的論壇咖啡廳",
       "headline_en": "International Jazz Day at The Forum in Bronzeville",
       "topic": "jazz heritage event"
+    },
+    {
+      "date": "2026-04-03",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "台灣迪斯乳——七〇年代女王們的秘密舞池",
+      "headline_en": "Taiwan Disco: Secret Dance Floor of 70s Queens",
+      "topic": "Taiwanese disco and funk"
+    },
+    {
+      "date": "2026-04-03",
+      "obsession_id": "finland-honeymoon",
+      "headline": "芬蘭探戈——世界上最憂傷的舞蹈",
+      "headline_en": "Finnish Tango: The World's Most Melancholy Dance",
+      "topic": "Finnish tango culture"
+    },
+    {
+      "date": "2026-04-03",
+      "obsession_id": "do-312",
+      "headline": "博覽會芝加哥——海軍碼頭的國際當代藝術",
+      "headline_en": "EXPO Chicago: International Contemporary Art at Navy Pier",
+      "topic": "international art fair"
+    },
+    {
+      "date": "2026-04-03",
+      "obsession_id": "best-of-internet",
+      "headline": "音樂地圖——一個人花十年畫出流行音樂的族譜",
+      "headline_en": "Musicmap: One Person's Decade-Long Music Genre Genealogy",
+      "topic": "interactive music history"
     }
   ]
 }
