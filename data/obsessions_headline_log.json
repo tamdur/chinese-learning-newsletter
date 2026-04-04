@@ -167,6 +167,34 @@
       "headline": "音樂地圖——一個人花十年畫出流行音樂的族譜",
       "headline_en": "Musicmap: One Person's Decade-Long Music Genre Genealogy",
       "topic": "interactive music history"
+    },
+    {
+      "date": "2026-04-04",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "羅大佑的第一張專輯：之乎者也",
+      "headline_en": "Lo Ta-yu debut album rewrote Taiwanese music",
+      "topic": "protest rock singer-songwriter"
+    },
+    {
+      "date": "2026-04-04",
+      "obsession_id": "finland-honeymoon",
+      "headline": "芬蘭冰釣：人人都可以的自由",
+      "headline_en": "Ice fishing in Finland under everyman rights",
+      "topic": "ice fishing everyman rights"
+    },
+    {
+      "date": "2026-04-04",
+      "obsession_id": "do-312",
+      "headline": "梵蒂岡天文學家來芝加哥演講",
+      "headline_en": "Vatican astronomer lecture at Adler Planetarium",
+      "topic": "Vatican Observatory astronomy lecture"
+    },
+    {
+      "date": "2026-04-04",
+      "obsession_id": "best-of-internet",
+      "headline": "五萬九千座燈塔，一張地圖",
+      "headline_en": "Interactive map of 59K US lighthouses",
+      "topic": "lighthouse navigational aid map"
     }
   ]
 }
