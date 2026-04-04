@@ -27,8 +27,13 @@ Read `config/settings.json` for the default character count.
 
 The SE must be committed to main so GitHub Pages publishes it immediately. Cloud environments may start on a feature branch — switch to main first.
 
+Run these as **separate Bash calls** (not chained with `&&`):
+
 ```bash
-git checkout main && git pull origin main
+git checkout main
+```
+```bash
+git pull origin main
 ```
 
 Create the pipeline directory if needed:
@@ -37,10 +42,10 @@ Create the pipeline directory if needed:
 mkdir -p data/pipeline
 ```
 
-Ensure the CEDICT dictionary exists (it's in .gitignore and won't be present in fresh cloud environments):
+Ensure the CEDICT dictionary exists (it's in .gitignore and won't be present in fresh cloud environments). The script is idempotent — it skips if the file already exists:
 
 ```bash
-if [ ! -f data/cedict_dictionary.json ]; then python3 scripts/build_dictionary.py; fi
+python3 scripts/build_dictionary.py
 ```
 
 ## Step 2: Research and write
@@ -158,9 +163,15 @@ python3 scripts/validate.py --page-type newsletter
 
 ## Step 7: Commit and push
 
+Run these as **separate Bash calls** (each must complete before the next):
+
 ```bash
 git add docs/index.html
+```
+```bash
 git commit -m "Special Edition: {topic_short}"
+```
+```bash
 git push origin main
 ```
 

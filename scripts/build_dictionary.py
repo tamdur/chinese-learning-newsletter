@@ -364,7 +364,15 @@ def main():
                         help="Output JSON path")
     parser.add_argument("--input", type=Path, default=None,
                         help="Use local CEDICT file instead of downloading")
+    parser.add_argument("--force", action="store_true",
+                        help="Rebuild even if output file already exists")
     args = parser.parse_args()
+
+    # Idempotent: skip if output already exists (unless --force)
+    if not args.force and args.output.exists():
+        size_mb = args.output.stat().st_size / (1024 * 1024)
+        print(f"Dictionary already exists at {args.output} ({size_mb:.1f} MB), skipping. Use --force to rebuild.")
+        return
 
     if args.input:
         cedict_text = args.input.read_text(encoding="utf-8")
