@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今日讀報 — 2026-04-06</title>
+  <style>
+/* Shared CSS for all 今日讀報 page types.
+   This is a reference artifact — assemble.py reads and injects it into each page's <style> block. */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Noto Serif TC", "PMingLiU", "Apple LiSung", serif;
+  font-size: 19px;
+  line-height: 1.9;
+  color: #e0dcd4;
+  background: #1a1a2e;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* --- Page header (shared across all page types) --- */
+
+.page-header { text-align: center; margin-bottom: 2.5rem; }
+.page-header h1 { font-size: 32px; font-weight: 700; }
+.page-header .date { color: #8a8580; }
+.page-header .subtitle { color: #8a8580; font-size: 16px; }
+
+/* --- Content units (articles, wisdom sections, obsession sections) --- */
+
+.article { margin-bottom: 0; }
+.article-headline { font-size: 24px; font-weight: 700; margin-bottom: 0.5rem; }
+.article-source { font-size: 14px; color: #7a7570; margin-bottom: 1rem; }
+.article-body-zh p { margin-bottom: 1rem; }
+
+.section-title { font-size: 24px; font-weight: 700; margin-bottom: 0.5rem; }
+.section-subtitle { font-size: 14px; font-weight: 400; color: #8a8580; }
+.section-body-zh p { margin-bottom: 1rem; }
+
+hr { border: none; border-top: 1px solid #333340; margin: 2.5rem 0; }
+
+/* --- Translation toggle --- */
+
+.translation-toggle {
+  font-size: 14px;
+  padding: 6px 12px;
+  border: 1px solid #444458;
+  border-radius: 4px;
+  background: #252538;
+  color: #9a9590;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.translation-toggle:hover { background: #2e2e45; }
+
+.article-body-en, .section-body-en {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #9a9590;
+  font-size: 16px;
+  line-height: 1.6;
+  border-left: 3px solid #444458;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+.article-body-en p, .section-body-en p { margin-bottom: 0.75rem; }
+
+/* --- Character styling --- */
+
+.c { cursor: default; }
+
+/* --- Toolbar --- */
+
+.toolbar {
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid #333340;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.toolbar button {
+  font-size: 14px;
+  padding: 6px 14px;
+  border: 1px solid #444458;
+  border-radius: 4px;
+  background: #252538;
+  color: #b0aaa4;
+  cursor: pointer;
+  user-select: none;
+}
+.toolbar button:hover { background: #2e2e45; }
+.toolbar button.active { border-color: #d4a574; }
+
+/* --- Site navigation (cross-page) --- */
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333340;
+  font-size: 15px;
+}
+.site-nav-link {
+  color: #8a8580;
+  text-decoration: none;
+  padding: 4px 0;
+}
+.site-nav-link:hover { color: #b0aaa4; }
+.site-nav-link.active {
+  color: #e0dcd4;
+  border-bottom: 2px solid #d4a574;
+}
+
+/* --- Issue navigation (prev/next within page type) --- */
+
+.issue-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 14px;
+}
+.nav-link {
+  color: #8a8580;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #b0aaa4;
+}
+
+/* --- Footer --- */
+
+footer { margin-top: 2rem; text-align: center; font-size: 13px; color: #5a5550; }
+
+/* --- Special Edition --- */
+
+.se-header {
+  font-size: 22px;
+  color: #d4a574;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #d4a574;
+}
+
+/* --- Mobile touch styles --- */
+
+@media (pointer: coarse) {
+  .c {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+  .c.touch-active {
+    background: rgba(100, 160, 255, 0.2);
+    border-radius: 2px;
+    transition: background 0.1s ease;
+  }
+  .c.touch-selected {
+    background: rgba(100, 160, 255, 0.3);
+    border-radius: 2px;
+  }
+  .lookup-toggle { display: inline-block; }
+}
+
+.lookup-toggle { display: none; }
+
+/* --- Character popup (mobile glossary) --- */
+
+.char-popup {
+  display: none;
+  position: fixed;
+  width: 280px;
+  background: #252538;
+  border: 1px solid #444458;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  padding: 14px 16px;
+  z-index: 1000;
+  text-align: center;
+  font-family: "Noto Serif TC", "PMingLiU", serif;
+}
+.char-popup.visible { display: block; }
+.char-popup-close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #7a7570;
+  cursor: pointer;
+  line-height: 1;
+}
+.char-popup-char {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.char-popup-zhuyin {
+  font-size: 20px;
+  color: #9a9590;
+  margin-bottom: 6px;
+  font-family: "Apple LiGothic", "Microsoft JhengHei", sans-serif;
+}
+.char-popup-def {
+  font-size: 15px;
+  color: #b0aaa4;
+  line-height: 1.4;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+    /* --- Page-specific CSS --- */
+
+    /* Newsletter-specific CSS — merged after _shared.css by assemble.py */
+
+    /* Page header uses shared .page-header from _shared.css */
+    /* No newsletter-specific overrides needed at this time */
+  
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../index.html" class="site-nav-link active">今日讀報</a>
+  <a href="../wisdom.html" class="site-nav-link">每日智慧</a>
+  <a href="../obsessions.html" class="site-nav-link">深度專題</a>
+</nav>
+
+<header class="page-header">
+  <h1>今日讀報</h1>
+  <p class="date">2026-04-06</p>
+</header>
+
+<nav class="issue-nav" data-prev="2026-04-05.html" data-next="../index.html">
+  <a href="2026-04-05.html" class="nav-link nav-prev">← 上一期</a>
+  <span class="nav-spacer"></span>
+  <a href="../index.html" class="nav-link nav-next">下一期 →</a>
+</nav>
+
+<main>
+
+<article class="article" data-article-id="1">
+  <h2 class="article-headline"><span class="c">川</span><span class="c">普</span><span class="c">對</span><span class="c">伊</span><span class="c">朗</span><span class="c">的</span><span class="c">最</span><span class="c">後</span><span class="c">期</span><span class="c">限</span><span class="c">到</span><span class="c">了</span><span class="c">：</span><span class="c">石</span><span class="c">油</span><span class="c">飆</span><span class="c">漲</span><span class="c">，</span><span class="c">戰</span><span class="c">爭</span><span class="c">陰</span><span class="c">影</span><span class="c">加</span><span class="c">深</span></h2>
+  <p class="article-source">來源：CNBC</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">今</span><span class="c">天</span><span class="c">是</span><span class="c">四</span><span class="c">月</span><span class="c">六</span><span class="c">日</span><span class="c">，</span><span class="c">川</span><span class="c">普</span><span class="c">給</span><span class="c">伊</span><span class="c">朗</span><span class="c">的</span><span class="c">最</span><span class="c">後</span><span class="c">期</span><span class="c">限</span><span class="c">正</span><span class="c">式</span><span class="c">到</span><span class="c">期</span><span class="c">。</span><span class="c">他</span><span class="c">要</span><span class="c">求</span><span class="c">伊</span><span class="c">朗</span><span class="c">重</span><span class="c">新</span><span class="c">開</span><span class="c">放</span><span class="c">荷</span><span class="c">莫</span><span class="c">茲</span><span class="c">海</span><span class="c">峽</span><span class="c">（</span><span class="c">全</span><span class="c">球</span><span class="c">五</span><span class="c">分</span><span class="c">之</span><span class="c">一</span><span class="c">的</span><span class="c">石</span><span class="c">油</span><span class="c">經</span><span class="c">過</span><span class="c">那</span><span class="c">裡</span><span class="c">）</span><span class="c">，</span><span class="c">否</span><span class="c">則</span><span class="c">將</span><span class="c">攻</span><span class="c">擊</span><span class="c">伊</span><span class="c">朗</span><span class="c">的</span><span class="c">能</span><span class="c">源</span><span class="c">設</span><span class="c">施</span><span class="c">。</span><span class="c">伊</span><span class="c">朗</span><span class="c">拒</span><span class="c">絕</span><span class="c">了</span><span class="c">，</span><span class="c">說</span><span class="c">這</span><span class="c">是</span><span class="c">「</span><span class="c">無</span><span class="c">力</span><span class="c">的</span><span class="c">威</span><span class="c">脅</span><span class="c">」</span><span class="c">。</span></p><p><span class="c">戰</span><span class="c">爭</span><span class="c">已</span><span class="c">經</span><span class="c">打</span><span class="c">了</span><span class="c">六</span><span class="c">個</span><span class="c">星</span><span class="c">期</span><span class="c">，</span><span class="c">超</span><span class="c">過</span><span class="c">兩</span><span class="c">千</span><span class="c">人</span><span class="c">死</span><span class="c">亡</span><span class="c">。</span><span class="c">石</span><span class="c">油</span><span class="c">價</span><span class="c">格</span><span class="c">飆</span><span class="c">過</span><span class="c">一</span><span class="c">百</span><span class="c">美</span><span class="c">元</span><span class="c">，</span><span class="c">是</span><span class="c">二</span><span class="c">〇</span><span class="c">二</span><span class="c">二</span><span class="c">年</span><span class="c">以</span><span class="c">來</span><span class="c">最</span><span class="c">高</span><span class="c">。</span><span class="c">美</span><span class="c">國</span><span class="c">國</span><span class="c">會</span><span class="c">也</span><span class="c">面</span><span class="c">臨</span><span class="c">壓</span><span class="c">力</span><span class="c">，</span><span class="c">因</span><span class="c">為</span><span class="c">《</span><span class="c">戰</span><span class="c">爭</span><span class="c">權</span><span class="c">力</span><span class="c">法</span><span class="c">》</span><span class="c">的</span><span class="c">六</span><span class="c">十</span><span class="c">天</span><span class="c">期</span><span class="c">限</span><span class="c">快</span><span class="c">到</span><span class="c">了</span><span class="c">，</span><span class="c">總</span><span class="c">統</span><span class="c">需</span><span class="c">要</span><span class="c">國</span><span class="c">會</span><span class="c">同</span><span class="c">意</span><span class="c">才</span><span class="c">能</span><span class="c">繼</span><span class="c">續</span><span class="c">用</span><span class="c">兵</span><span class="c">。</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>Trump's deadline for Iran has arrived: oil soars, shadows of war deepen</p><p>Today, April 6th, marks the formal expiration of Trump's ultimatum to Iran. He demanded that Iran reopen the Strait of Hormuz (through which one-fifth of the world's oil passes), or face U.S. strikes on Iran's energy infrastructure. Iran refused, calling it a "powerless threat."</p><p>War has raged for six weeks, with over two thousand dead. Oil prices have surged past one hundred dollars, the highest since 2022. Congress also faces mounting pressure, as the sixty-day limit under the War Powers Act approaches, requiring presidential authorization from Congress to continue military operations.</p>
+  </div>
+</article>
+
+<hr>
+
+<article class="article" data-article-id="2">
+  <h2 class="article-headline">DeepSeek V4 <span class="c">發</span><span class="c">布</span><span class="c">：</span><span class="c">一</span><span class="c">兆</span><span class="c">參</span><span class="c">數</span><span class="c">，</span><span class="c">免</span><span class="c">費</span><span class="c">開</span><span class="c">放</span></h2>
+  <p class="article-source">來源：NxCode</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">中</span><span class="c">國</span><span class="c">的</span> AI <span class="c">公</span><span class="c">司</span><span class="c">深</span><span class="c">度</span><span class="c">求</span><span class="c">索</span><span class="c">（</span>DeepSeek<span class="c">）</span><span class="c">發</span><span class="c">布</span><span class="c">了</span> V4 <span class="c">模</span><span class="c">型</span><span class="c">。</span><span class="c">這</span><span class="c">個</span><span class="c">模</span><span class="c">型</span><span class="c">有</span><span class="c">一</span><span class="c">兆</span><span class="c">個</span><span class="c">參</span><span class="c">數</span><span class="c">，</span><span class="c">是</span><span class="c">目</span><span class="c">前</span><span class="c">最</span><span class="c">大</span><span class="c">的</span><span class="c">開</span><span class="c">放</span><span class="c">模</span><span class="c">型</span><span class="c">。</span><span class="c">它</span><span class="c">用</span><span class="c">了</span><span class="c">一</span><span class="c">種</span><span class="c">叫</span><span class="c">「</span><span class="c">混</span><span class="c">合</span><span class="c">專</span><span class="c">家</span><span class="c">」</span><span class="c">的</span><span class="c">技</span><span class="c">術</span><span class="c">，</span><span class="c">每</span><span class="c">次</span><span class="c">只</span><span class="c">用</span><span class="c">三</span><span class="c">百</span><span class="c">七</span><span class="c">十</span><span class="c">億</span><span class="c">個</span><span class="c">參</span><span class="c">數</span><span class="c">來</span><span class="c">回</span><span class="c">答</span><span class="c">問</span><span class="c">題</span><span class="c">，</span><span class="c">所</span><span class="c">以</span><span class="c">跑</span><span class="c">起</span><span class="c">來</span><span class="c">很</span><span class="c">快</span><span class="c">。</span></p><p><span class="c">最</span><span class="c">讓</span><span class="c">人</span><span class="c">吃</span><span class="c">驚</span><span class="c">的</span><span class="c">是</span><span class="c">訓</span><span class="c">練</span><span class="c">費</span><span class="c">用</span><span class="c">：</span><span class="c">只</span><span class="c">花</span><span class="c">了</span><span class="c">大</span><span class="c">約</span><span class="c">五</span><span class="c">百</span><span class="c">二</span><span class="c">十</span><span class="c">萬</span><span class="c">美</span><span class="c">元</span><span class="c">，</span><span class="c">比</span><span class="c">美</span><span class="c">國</span><span class="c">的</span><span class="c">類</span><span class="c">似</span><span class="c">模</span><span class="c">型</span><span class="c">便</span><span class="c">宜</span><span class="c">很</span><span class="c">多</span><span class="c">。</span><span class="c">任</span><span class="c">何</span><span class="c">人</span><span class="c">都</span><span class="c">可</span><span class="c">以</span><span class="c">免</span><span class="c">費</span><span class="c">下</span><span class="c">載</span><span class="c">使</span><span class="c">用</span><span class="c">，</span><span class="c">這</span><span class="c">對</span> AI <span class="c">產</span><span class="c">業</span><span class="c">的</span><span class="c">競</span><span class="c">爭</span><span class="c">格</span><span class="c">局</span><span class="c">影</span><span class="c">響</span><span class="c">很</span><span class="c">大</span><span class="c">。</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>DeepSeek V4 Released: One Trillion Parameters, Free and Open</p><p>Chinese AI company DeepSeek has released its V4 model. The model contains one trillion parameters, making it the largest open-source model to date. It uses a technique called "mixture of experts," deploying only 37 billion parameters per query, which makes it run extremely fast.</p><p>Most striking is the training cost: just approximately $5.2 million, far cheaper than comparable American models. Anyone can download and use it for free, which has major implications for competitive dynamics in the AI industry.</p>
+  </div>
+</article>
+
+<hr>
+
+<article class="article" data-article-id="3">
+  <h2 class="article-headline"><span class="c">川</span><span class="c">普</span><span class="c">限</span><span class="c">制</span><span class="c">郵</span><span class="c">寄</span><span class="c">投</span><span class="c">票</span><span class="c">，</span><span class="c">二</span><span class="c">十</span><span class="c">三</span><span class="c">州</span><span class="c">聯</span><span class="c">合</span><span class="c">提</span><span class="c">告</span></h2>
+  <p class="article-source">來源：White House / Capitol News Illinois</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">川</span><span class="c">普</span><span class="c">簽</span><span class="c">了</span><span class="c">一</span><span class="c">項</span><span class="c">行</span><span class="c">政</span><span class="c">命</span><span class="c">令</span><span class="c">，</span><span class="c">要</span><span class="c">建</span><span class="c">立</span><span class="c">全</span><span class="c">國</span><span class="c">選</span><span class="c">民</span><span class="c">名</span><span class="c">冊</span><span class="c">，</span><span class="c">並</span><span class="c">限</span><span class="c">制</span><span class="c">郵</span><span class="c">寄</span><span class="c">投</span><span class="c">票</span><span class="c">。</span><span class="c">他</span><span class="c">說</span><span class="c">這</span><span class="c">是</span><span class="c">為</span><span class="c">了</span><span class="c">防</span><span class="c">止</span><span class="c">選</span><span class="c">舉</span><span class="c">作</span><span class="c">弊</span><span class="c">，</span><span class="c">但</span><span class="c">批</span><span class="c">評</span><span class="c">者</span><span class="c">認</span><span class="c">為</span><span class="c">這</span><span class="c">會</span><span class="c">讓</span><span class="c">很</span><span class="c">多</span><span class="c">合</span><span class="c">法</span><span class="c">選</span><span class="c">民</span><span class="c">無</span><span class="c">法</span><span class="c">投</span><span class="c">票</span><span class="c">。</span></p><p><span class="c">包</span><span class="c">括</span><span class="c">伊</span><span class="c">利</span><span class="c">諾</span><span class="c">州</span><span class="c">在</span><span class="c">內</span><span class="c">的</span><span class="c">二</span><span class="c">十</span><span class="c">三</span><span class="c">個</span><span class="c">州</span><span class="c">馬</span><span class="c">上</span><span class="c">聯</span><span class="c">合</span><span class="c">提</span><span class="c">告</span><span class="c">，</span><span class="c">說</span><span class="c">總</span><span class="c">統</span><span class="c">沒</span><span class="c">有</span><span class="c">權</span><span class="c">力</span><span class="c">管</span><span class="c">各</span><span class="c">州</span><span class="c">怎</span><span class="c">麼</span><span class="c">辦</span><span class="c">選</span><span class="c">舉</span><span class="c">。</span><span class="c">伊</span><span class="c">利</span><span class="c">諾</span><span class="c">州</span><span class="c">檢</span><span class="c">察</span><span class="c">長</span><span class="c">羅</span><span class="c">爾</span><span class="c">（</span>Raoul<span class="c">）</span><span class="c">說</span><span class="c">，</span><span class="c">這</span><span class="c">是</span><span class="c">「</span><span class="c">重</span><span class="c">建</span><span class="c">時</span><span class="c">期</span><span class="c">以</span><span class="c">來</span><span class="c">最</span><span class="c">嚴</span><span class="c">重</span><span class="c">的</span><span class="c">聯</span><span class="c">邦</span><span class="c">干</span><span class="c">預</span><span class="c">」</span><span class="c">。</span><span class="c">今</span><span class="c">年</span><span class="c">十</span><span class="c">一</span><span class="c">月</span><span class="c">的</span><span class="c">期</span><span class="c">中</span><span class="c">選</span><span class="c">舉</span><span class="c">將</span><span class="c">是</span><span class="c">第</span><span class="c">一</span><span class="c">場</span><span class="c">考</span><span class="c">驗</span><span class="c">。</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>Trump Restricts Mail-in Voting; Twenty-Three States File Joint Lawsuit</p><p>Trump signed an executive order to establish a national voter registry and restrict mail-in voting. He said this is to prevent election fraud, but critics argue it will prevent many legitimate voters from casting ballots.</p><p>Twenty-three states, including Illinois, immediately filed a joint lawsuit, saying the president lacks the power to control how states conduct elections. Illinois Attorney General Raoul said this is "the most serious federal interference since Reconstruction." November's midterm election will be the first test.</p>
+  </div>
+</article>
+
+<hr>
+
+<article class="article" data-article-id="4">
+  <h2 class="article-headline"><span class="c">全</span><span class="c">球</span><span class="c">央</span><span class="c">行</span><span class="c">暫</span><span class="c">停</span><span class="c">降</span><span class="c">息</span><span class="c">，</span><span class="c">利</span><span class="c">率</span><span class="c">回</span><span class="c">不</span><span class="c">到</span><span class="c">疫</span><span class="c">情</span><span class="c">前</span></h2>
+  <p class="article-source">來源：KPMG / IMF</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">去</span><span class="c">年</span><span class="c">很</span><span class="c">多</span><span class="c">國</span><span class="c">家</span><span class="c">的</span><span class="c">中</span><span class="c">央</span><span class="c">銀</span><span class="c">行</span><span class="c">開</span><span class="c">始</span><span class="c">降</span><span class="c">低</span><span class="c">利</span><span class="c">率</span><span class="c">，</span><span class="c">但</span><span class="c">最</span><span class="c">新</span><span class="c">資</span><span class="c">料</span><span class="c">顯</span><span class="c">示</span><span class="c">，</span><span class="c">百</span><span class="c">分</span><span class="c">之</span><span class="c">七</span><span class="c">十</span><span class="c">的</span><span class="c">央</span><span class="c">行</span><span class="c">已</span><span class="c">經</span><span class="c">停</span><span class="c">下</span><span class="c">來</span><span class="c">了</span><span class="c">。</span><span class="c">利</span><span class="c">率</span><span class="c">比</span><span class="c">新</span><span class="c">冠</span><span class="c">疫</span><span class="c">情</span><span class="c">前</span><span class="c">高</span><span class="c">出</span><span class="c">不</span><span class="c">少</span><span class="c">，</span><span class="c">短</span><span class="c">期</span><span class="c">內</span><span class="c">很</span><span class="c">難</span><span class="c">再</span><span class="c">降</span><span class="c">。</span></p><p><span class="c">美</span><span class="c">國</span><span class="c">聯</span><span class="c">準</span><span class="c">會</span><span class="c">今</span><span class="c">年</span><span class="c">可</span><span class="c">能</span><span class="c">只</span><span class="c">會</span><span class="c">降</span><span class="c">息</span><span class="c">三</span><span class="c">次</span><span class="c">，</span><span class="c">六</span><span class="c">月</span><span class="c">才</span><span class="c">開</span><span class="c">始</span><span class="c">。</span><span class="c">荷</span><span class="c">莫</span><span class="c">茲</span><span class="c">海</span><span class="c">峽</span><span class="c">危</span><span class="c">機</span><span class="c">推</span><span class="c">高</span><span class="c">了</span><span class="c">油</span><span class="c">價</span><span class="c">，</span><span class="c">讓</span><span class="c">通</span><span class="c">膨</span><span class="c">（</span><span class="c">物</span><span class="c">價</span><span class="c">上</span><span class="c">漲</span><span class="c">）</span><span class="c">更</span><span class="c">難</span><span class="c">控</span><span class="c">制</span><span class="c">。</span><span class="c">國</span><span class="c">際</span><span class="c">貨</span><span class="c">幣</span><span class="c">基</span><span class="c">金</span><span class="c">（</span>IMF<span class="c">）</span><span class="c">預</span><span class="c">測</span><span class="c">今</span><span class="c">年</span><span class="c">全</span><span class="c">球</span><span class="c">經</span><span class="c">濟</span><span class="c">成</span><span class="c">長</span><span class="c">百</span><span class="c">分</span><span class="c">之</span><span class="c">三</span><span class="c">點</span><span class="c">四</span><span class="c">，</span><span class="c">穩</span><span class="c">定</span><span class="c">但</span><span class="c">不</span><span class="c">算</span><span class="c">好</span><span class="c">。</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>Global Central Banks Pause Rate Cuts, Interest Rates Unlikely to Return to Pre-Pandemic Levels</p><p>Many central banks around the world began lowering interest rates last year, but the latest data shows that 70 percent of them have now stopped. Interest rates remain significantly higher than before the COVID-19 pandemic, and it will be difficult to lower them further in the near term.</p><p>The U.S. Federal Reserve is likely to cut rates only three times this year, with cuts beginning in June. The Hormuz Strait crisis has driven up oil prices, making inflation (price increases) harder to control. The International Monetary Fund (IMF) forecasts global economic growth of 3.4 percent this year—stable but not particularly strong.</p>
+  </div>
+</article>
+
+<hr>
+
+<article class="article" data-article-id="5">
+  <h2 class="article-headline"><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">今</span><span class="c">晚</span><span class="c">爭</span><span class="c">冠</span><span class="c">！</span><span class="c">對</span><span class="c">手</span><span class="c">康</span><span class="c">乃</span><span class="c">狄</span><span class="c">克</span><span class="c">大</span><span class="c">學</span></h2>
+  <p class="article-source">來源：NBC News / mgoblue.com</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">大</span><span class="c">學</span><span class="c">今</span><span class="c">晚</span><span class="c">將</span><span class="c">在</span><span class="c">印</span><span class="c">第</span><span class="c">安</span><span class="c">納</span><span class="c">波</span><span class="c">利</span><span class="c">斯</span><span class="c">對</span><span class="c">上</span><span class="c">康</span><span class="c">乃</span><span class="c">狄</span><span class="c">克</span><span class="c">大</span><span class="c">學</span><span class="c">（</span>UConn<span class="c">）</span><span class="c">，</span><span class="c">爭</span><span class="c">奪</span> NCAA <span class="c">男</span><span class="c">籃</span><span class="c">全</span><span class="c">國</span><span class="c">冠</span><span class="c">軍</span><span class="c">。</span><span class="c">這</span><span class="c">是</span><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">自</span><span class="c">一</span><span class="c">九</span><span class="c">八</span><span class="c">九</span><span class="c">年</span><span class="c">以</span><span class="c">來</span><span class="c">第</span><span class="c">一</span><span class="c">次</span><span class="c">打</span><span class="c">進</span><span class="c">冠</span><span class="c">軍</span><span class="c">賽</span><span class="c">。</span></p><p><span class="c">上</span><span class="c">週</span><span class="c">五</span><span class="c">的</span><span class="c">四</span><span class="c">強</span><span class="c">賽</span><span class="c">，</span><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">以</span><span class="c">九</span><span class="c">十</span><span class="c">一</span><span class="c">比</span><span class="c">七</span><span class="c">十</span><span class="c">一</span><span class="c">大</span><span class="c">勝</span><span class="c">亞</span><span class="c">利</span><span class="c">桑</span><span class="c">那</span><span class="c">大</span><span class="c">學</span><span class="c">，</span><span class="c">中</span><span class="c">鋒</span><span class="c">馬</span><span class="c">拉</span><span class="c">（</span>Aday Mara<span class="c">）</span><span class="c">拿</span><span class="c">下</span><span class="c">二</span><span class="c">十</span><span class="c">六</span><span class="c">分</span><span class="c">。</span><span class="c">密</span><span class="c">西</span><span class="c">根</span><span class="c">已</span><span class="c">經</span><span class="c">連</span><span class="c">續</span><span class="c">五</span><span class="c">場</span><span class="c">比</span><span class="c">賽</span><span class="c">得</span><span class="c">分</span><span class="c">超</span><span class="c">過</span><span class="c">九</span><span class="c">十</span><span class="c">分</span><span class="c">以</span><span class="c">上</span><span class="c">，</span><span class="c">這</span><span class="c">是</span><span class="c">前</span><span class="c">所</span><span class="c">未</span><span class="c">有</span><span class="c">的</span><span class="c">。</span><span class="c">如</span><span class="c">果</span><span class="c">贏</span><span class="c">了</span><span class="c">，</span><span class="c">這</span><span class="c">將</span><span class="c">是</span><span class="c">隊</span><span class="c">史</span><span class="c">第</span><span class="c">二</span><span class="c">座</span><span class="c">冠</span><span class="c">軍</span><span class="c">。</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>Michigan Battles for the Championship Tonight! Facing UConn</p><p>Michigan will face the University of Connecticut (UConn) in Indianapolis tonight, competing for the NCAA men's basketball national championship. This is Michigan's first appearance in a championship game since 1989.</p><p>In the semifinals last Friday, Michigan defeated the University of Arizona 91-71, with center Aday Mara scoring 26 points. Michigan has now scored over 90 points in five consecutive games, which is unprecedented. A victory tonight would be the program's second national championship.</p>
+  </div>
+</article>
+
+<hr>
+
+<article class="article" data-article-id="6">
+  <h2 class="article-headline"><span class="c">兵</span><span class="c">工</span><span class="c">廠</span><span class="c">線</span><span class="c">—</span><span class="c">—</span><span class="c">南</span><span class="c">安</span><span class="c">普</span><span class="c">頓</span><span class="c">爆</span><span class="c">冷</span><span class="c">淘</span><span class="c">汰</span><span class="c">兵</span><span class="c">工</span><span class="c">廠</span><span class="c">，</span><span class="c">三</span><span class="c">冠</span><span class="c">夢</span><span class="c">碎</span></h2>
+  <p class="article-source">來源：Sky Sports</p>
+
+  <div class="article-body-zh">
+    <p><span class="c">兵</span><span class="c">工</span><span class="c">廠</span><span class="c">線</span><span class="c">—</span><span class="c">—</span><span class="c">兵</span><span class="c">工</span><span class="c">廠</span><span class="c">的</span><span class="c">三</span><span class="c">冠</span><span class="c">王</span><span class="c">美</span><span class="c">夢</span><span class="c">結</span><span class="c">束</span><span class="c">了</span><span class="c">。</span><span class="c">在</span><span class="c">足</span><span class="c">總</span><span class="c">盃</span><span class="c">八</span><span class="c">強</span><span class="c">賽</span><span class="c">中</span><span class="c">，</span><span class="c">面</span><span class="c">臨</span><span class="c">降</span><span class="c">級</span><span class="c">（</span><span class="c">可</span><span class="c">能</span><span class="c">掉</span><span class="c">到</span><span class="c">低</span><span class="c">一</span><span class="c">級</span><span class="c">聯</span><span class="c">賽</span><span class="c">）</span><span class="c">威</span><span class="c">脅</span><span class="c">的</span><span class="c">南</span><span class="c">安</span><span class="c">普</span><span class="c">頓</span><span class="c">竟</span><span class="c">然</span><span class="c">以</span><span class="c">二</span><span class="c">比</span><span class="c">一</span><span class="c">擊</span><span class="c">敗</span><span class="c">了</span><span class="c">英</span><span class="c">超</span><span class="c">領</span><span class="c">頭</span><span class="c">羊</span><span class="c">兵</span><span class="c">工</span><span class="c">廠</span><span class="c">。</span></p><p><span class="c">南</span><span class="c">安</span><span class="c">普</span><span class="c">頓</span><span class="c">的</span><span class="c">史</span><span class="c">都</span><span class="c">華</span><span class="c">（</span>Stewart<span class="c">）</span><span class="c">先</span><span class="c">進</span><span class="c">一</span><span class="c">球</span><span class="c">，</span><span class="c">兵</span><span class="c">工</span><span class="c">廠</span><span class="c">的</span><span class="c">居</span><span class="c">乎</span><span class="c">雷</span><span class="c">斯</span><span class="c">（</span>Gyökeres<span class="c">）</span><span class="c">扳</span><span class="c">平</span><span class="c">，</span><span class="c">但</span><span class="c">查</span><span class="c">爾</span><span class="c">斯</span><span class="c">（</span>Charles<span class="c">）</span><span class="c">在</span><span class="c">第</span><span class="c">八</span><span class="c">十</span><span class="c">五</span><span class="c">分</span><span class="c">鐘</span><span class="c">打</span><span class="c">進</span><span class="c">致</span><span class="c">勝</span><span class="c">球</span><span class="c">。</span><span class="c">兵</span><span class="c">工</span><span class="c">廠</span><span class="c">雖</span><span class="c">然</span><span class="c">在</span><span class="c">聯</span><span class="c">賽</span><span class="c">領</span><span class="c">先</span><span class="c">九</span><span class="c">分</span><span class="c">，</span><span class="c">但</span><span class="c">現</span><span class="c">在</span><span class="c">只</span><span class="c">剩</span><span class="c">聯</span><span class="c">賽</span><span class="c">和</span><span class="c">歐</span><span class="c">冠</span><span class="c">兩</span><span class="c">條</span><span class="c">戰</span><span class="c">線</span><span class="c">。</span><span class="c">四</span><span class="c">月</span><span class="c">十</span><span class="c">九</span><span class="c">日</span><span class="c">對</span><span class="c">曼</span><span class="c">城</span><span class="c">的</span><span class="c">比</span><span class="c">賽</span><span class="c">將</span><span class="c">是</span><span class="c">爭</span><span class="c">冠</span><span class="c">關</span><span class="c">鍵</span><span class="c">。</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="article-body-en" hidden>
+    <p>Arsenal Line — Southampton's Stunning Upset: Arsenal's Three-Crown Dream Shattered</p><p>Arsenal Line — Arsenal's treble dream has come to an end. In the FA Cup quarterfinals, Southampton, facing the threat of relegation (potentially dropping to a lower league), pulled off a stunning upset by defeating Premier League leaders Arsenal 2-1.</p><p>Southampton's Stewart scored first, Arsenal's Gyökeres equalized, but Charles scored the winning goal in the 85th minute. Despite Arsenal's nine-point league lead, they now have only the league and Champions League competitions remaining. The April 19th match against Manchester City will be crucial in the title race.</p>
+  </div>
+</article>
+
+</main>
+
+<div class="toolbar" id="toolbar">
+  <button id="lookup-toggle" class="lookup-toggle" type="button">查詢模式 OFF</button>
+</div>
+
+<footer>
+  <p>今日讀報 — 以 Claude Code 製作</p>
+</footer>
+
+<div class="char-popup" id="char-popup" role="tooltip">
+  <button class="char-popup-close" id="popup-close" aria-label="Close">&times;</button>
+  <div class="char-popup-char" id="popup-char"></div>
+  <div class="char-popup-zhuyin" id="popup-zhuyin"></div>
+  <div class="char-popup-def" id="popup-def"></div>
+</div>
+
+<script>
+const GLOSSARY = {"剩":{"zhuyin":"ㄕㄥˋ","english":"to remain; to be left; to have as remainder"},"州":{"zhuyin":"ㄓㄡ","english":"prefecture; (old) province; (old) administrative division; state (e.g. of US); oblast (Russia); canton (Switzerland)"},"拒":{"zhuyin":"ㄐㄩˋ","english":"to resist; to repel; to refuse"},"總":{"zhuyin":"ㄗㄨㄥˇ","english":"general; overall; to sum up; in every case; always; invariably; anyway; after all; eventually; sooner or later; surely; (after a person's name) abbr. for 總經理|总经理[zong3 jing1 li3] or 總編|总编[zong3 bian1] etc"},"已":{"zhuyin":"ㄧˇ","english":"already; to stop; then; afterwards"},"絕":{"zhuyin":"ㄐㄩㄝˊ","english":"to cut short; extinct; to disappear; to vanish; absolutely; by no means"},"參":{"zhuyin":"ㄙㄢ","english":"three (banker's anti-fraud numeral); to take part in; to participate; to join; to attend; to counsel; unequal; varied; irregular; uneven; not uniform; abbr. for 參議院|参议院 Senate, Upper House; used in 參差|参差[cen1 ci1]; ginseng; one of the 28 constellations"},"果":{"zhuyin":"ㄍㄨㄛˇ","english":"fruit; result; resolute; indeed; if really"},"建":{"zhuyin":"ㄐㄧㄢˋ","english":"to establish; to found; to set up; to build; to construct"},"費":{"zhuyin":"ㄈㄟˋ","english":"surname Fei; to cost; to spend; fee; wasteful; expenses"},"峽":{"zhuyin":"ㄒㄧㄚˊ","english":"gorge"},"穩":{"zhuyin":"ㄨㄣˇ","english":"settled; steady; stable"},"掉":{"zhuyin":"ㄉㄧㄠˋ","english":"to fall; to drop; to lag behind; to lose; to go missing; to reduce; fall (in prices); to lose (value, weight etc); to wag; to swing; to turn; to change; to exchange; to swap; to show off; to shed (hair); (used after certain verbs to express completion, fulfillment, removal etc)"},"學":{"zhuyin":"ㄒㄩㄝˊ","english":"to learn; to study; to imitate; science; -ology"},"在":{"zhuyin":"ㄗㄞˋ","english":"to exist; to be alive; (of sb or sth) to be (located) at; (used before a verb to indicate an action in progress)"},"領":{"zhuyin":"ㄌㄧㄥˇ","english":"neck; collar; to lead; to receive; classifier for clothes, mats, screens etc"},"鐘":{"zhuyin":"ㄓㄨㄥ","english":"a (large) bell (CL:架[jia4]); clock (CL:座[zuo4]); amount of time; o'clock (CL:點|点[dian3],分[fen1],秒[miao3]) (as in 三點鐘|三点钟[san1dian3zhong1] \"three o'clock\" or \"three hours\" or 五分鐘|五分钟[wu3fen1zhong1] \"five minutes\" etc)"},"濟":{"zhuyin":"ㄐㄧˇ","english":"used in place names associated with the Ji River 濟水|济水[Ji3 Shui3]; surname Ji; used in 濟濟|济济[ji3 ji3]; to cross a river; to aid or relieve; to be of help"},"如":{"zhuyin":"ㄖㄨˊ","english":"as; as if; such as"},"料":{"zhuyin":"ㄌㄧㄠˋ","english":"material; stuff; grain; feed; to expect; to anticipate; to guess"},"立":{"zhuyin":"ㄌㄧˋ","english":"surname Li; to stand; to set up; to establish; to lay down; to draw up; at once; immediately"},"爾":{"zhuyin":"ㄦˇ","english":"thus; so; like that; you; thou"},"束":{"zhuyin":"ㄕㄨˋ","english":"surname Shu; to bind; bunch; bundle; classifier for bunches, bundles, beams of light etc; to control"},"四":{"zhuyin":"ㄙˋ","english":"four; 4"},"寄":{"zhuyin":"ㄐㄧˋ","english":"to entrust; to place in sb's care; (bound form) to depend on; to attach oneself to; to reside temporarily; (bound form) foster (as in 寄女[ji4nu:3] foster daughter); to send by post; to mail"},"勝":{"zhuyin":"ㄕㄥˋ","english":"victory; success; to beat; to defeat; to surpass; victorious; superior to; to get the better of; better than; surpassing; superb (of vista); beautiful (scenery); wonderful (view); (Taiwan pr. [sheng1]) able to bear; equal to (a task)"},"亞":{"zhuyin":"ㄧㄚˋ","english":"Asia; Asian; Taiwan pr. [Ya3]; second; next to; inferior; sub-; Taiwan pr. [ya3]"},"放":{"zhuyin":"ㄈㄤˋ","english":"to put; to place; to release; to free; to let go; to let out; to set off (fireworks)"},"經":{"zhuyin":"ㄐㄧㄥ","english":"surname Jing; classics; sacred book; scripture; to pass through; to undergo; to bear; to endure; warp (textile); longitude; menstruation; channel (TCM); abbr. for economics 經濟|经济[jing1 ji4]"},"冷":{"zhuyin":"ㄌㄥˇ","english":"surname Leng; cold"},"七":{"zhuyin":"ㄑㄧ","english":"seven; 7"},"都":{"zhuyin":"ㄉㄨ","english":"surname Du; all; both; entirely; (used for emphasis) even; already; (not) at all; capital city; metropolis"},"只":{"zhuyin":"ㄓ","english":"variant of 隻|只[zhi1]; only; merely; just"},"根":{"zhuyin":"ㄍㄣ","english":"root; basis; classifier for long slender objects, e.g. cigarettes, guitar strings; CL:條|条[tiao2]; radical (chemistry)"},"率":{"zhuyin":"ㄌㄩˋ","english":"rate; frequency; to lead; to command; rash; hasty; frank; straightforward; generally; usually"},"雖":{"zhuyin":"ㄙㄨㄟ","english":"although; even though"},"康":{"zhuyin":"ㄎㄤ","english":"surname Kang; healthy; peaceful; abundant"},"命":{"zhuyin":"ㄇㄧㄥˋ","english":"life; fate; order or command; to assign a name, title etc"},"爭":{"zhuyin":"ㄓㄥ","english":"to strive for; to vie for; to argue or debate; deficient or lacking (dialect); how or what (literary)"},"疫":{"zhuyin":"ㄧˋ","english":"(bound form) epidemic; plague"},"兵":{"zhuyin":"ㄅㄧㄥ","english":"soldiers; a force; an army; weapons; arms; military; warlike; CL:個|个[ge4]"},"名":{"zhuyin":"ㄇㄧㄥˊ","english":"name; noun (part of speech); place (e.g. among winners); famous; classifier for people"},"軍":{"zhuyin":"ㄐㄩㄣ","english":"(bound form) army; military"},"力":{"zhuyin":"ㄌㄧˋ","english":"surname Li; power; force; strength; ability; strenuously"},"納":{"zhuyin":"ㄋㄚˋ","english":"surname Na; to receive; to accept; to enjoy; to bring into; to pay (tax etc); nano- (one billionth); to reinforce sole of shoes or stockings by close sewing"},"月":{"zhuyin":"ㄩㄝˋ","english":"moon; month; monthly; CL:個|个[ge4],輪|轮[lun2]"},"讓":{"zhuyin":"ㄖㄤˋ","english":"to yield; to permit; to let sb do sth; to have sb do sth; to make sb (feel sad etc); by (indicates the agent in a passive clause, like 被[bei4])"},"來":{"zhuyin":"ㄌㄞˊ","english":"to come; (used as a substitute for a more specific verb); hither (directional complement for motion toward the speaker, as in 回來|回来[hui2lai5]); ever since (as in 自古以來|自古以来[zi4gu3 yi3lai2]); for the past (amount of time); (prefix) the coming ...; the next ... (as in 來世|来世[lai2shi4]); (between two verbs) in order to; (after a round number) approximately; (used after 得[de2] to indicate possibility, as in 談得來|谈得来[tan2de5lai2], or after 不[bu4] to indicate impossibility, as in 吃不來|吃不来[chi1bu5lai2])"},"油":{"zhuyin":"ㄧㄡˊ","english":"oil; fat; grease; petroleum; to apply tung oil, paint or varnish; oily; greasy; glib; cunning"},"種":{"zhuyin":"ㄓㄨㄥˇ","english":"seed; species; kind; type; classifier for types, kinds, sorts; to plant; to grow; to cultivate"},"叫":{"zhuyin":"ㄐㄧㄠˋ","english":"to shout; to call; to order; to ask; to be called; by (indicates agent in the passive mood)"},"南":{"zhuyin":"ㄋㄢˊ","english":"surname Nan; used in 南無|南无[na1mo2]; Taiwan pr. [na2]; south"},"羅":{"zhuyin":"ㄌㄨㄛˊ","english":"surname Luo; gauze; to collect; to gather; to catch; to sift"},"索":{"zhuyin":"ㄙㄨㄛˇ","english":"surname Suo; abbr. for 索馬里|索马里[Suo3ma3li3], Somalia; to search; to demand; to ask; to exact; large rope; isolated"},"到":{"zhuyin":"ㄉㄠˋ","english":"to reach; to arrive; to leave for; to go to; to (a place); until (a time); up to (a point); (verb complement indicating arriving at a place or reaching a point); considerate; thoughtful; thorough"},"也":{"zhuyin":"ㄧㄝˇ","english":"surname Ye; also; too; as well; (not ...) either; (used after a verbal or nominal expression X to indicate that X is an extreme or unexpected case) even (X); (literary) particle having functions similar to 啊[a5]"},"聯":{"zhuyin":"ㄌㄧㄢˊ","english":"(bound form) to ally oneself with; to unite; to combine; to join; (bound form) (poetry) antithetical couplet"},"可":{"zhuyin":"ㄎㄜˇ","english":"(prefix) can; may; able to; -able; to approve; to permit; to suit; (particle used for emphasis) certainly; very; but; however; used in 可汗[ke4 han2]"},"才":{"zhuyin":"ㄘㄞˊ","english":"ability; talent; sb of a certain type; a capable individual; then and only then; just now; (before an expression of quantity) only"},"線":{"zhuyin":"ㄒㄧㄢˋ","english":"thread; string; wire; line; CL:條|条[tiao2],股[gu3],根[gen1]; (after a number) tier (unofficial ranking of a Chinese city)"},"今":{"zhuyin":"ㄐㄧㄣ","english":"now; the present time; current; contemporary; this (day, year etc)"},"是":{"zhuyin":"ㄕˋ","english":"to be (followed by substantives only); correct; right; true; (respectful acknowledgement of a command) very well; (adverb for emphatic assertion)"},"將":{"zhuyin":"ㄐㄧㄤ","english":"will; shall; to use; to take; to checkmate; just a short while ago; (introduces object of main verb, used in the same way as 把[ba3]); (bound form) a general; (literary) to command; to lead; (Chinese chess) general (on the black side, equivalent to a king in Western chess); to desire; to invite; to request"},"新":{"zhuyin":"ㄒㄧㄣ","english":"abbr. for Xinjiang 新疆[Xin1jiang1]; abbr. for Singapore 新加坡[Xin1jia1po1]; surname Xin; new; newly; meso- (chemistry)"},"際":{"zhuyin":"ㄐㄧˋ","english":"border; edge; boundary; interval; between; inter-; to meet; time; occasion; to meet with (circumstances)"},"更":{"zhuyin":"ㄍㄥ","english":"to change or replace; to experience; one of the five two-hour periods into which the night was formerly divided; watch (e.g. of a sentry or guard); more; even more; further; still; still more"},"脅":{"zhuyin":"ㄒㄧㄝˊ","english":"flank (the side of one's torso); to coerce; to threaten"},"控":{"zhuyin":"ㄎㄨㄥˋ","english":"to control; to accuse; to charge; to sue; to invert a container to empty it; (suffix) (slang) buff; enthusiast; devotee; -phile or -philia"},"停":{"zhuyin":"ㄊㄧㄥˊ","english":"to stop; to halt; to park (a car)"},"邦":{"zhuyin":"ㄅㄤ","english":"(bound form) country; nation; state"},"響":{"zhuyin":"ㄒㄧㄤˇ","english":"echo; sound; noise; to make a sound; to sound; to ring; loud; classifier for noises"},"後":{"zhuyin":"ㄏㄡˋ","english":"back; behind; rear; afterwards; after; later; post-"},"擊":{"zhuyin":"ㄐㄧ","english":"to hit; to strike; to break; Taiwan pr. [ji2]"},"開":{"zhuyin":"ㄎㄞ","english":"to open (transitive or intransitive); (of ships, vehicles, troops etc) to start; to turn on; to put in operation; to operate; to run; to boil; to write out (a prescription, check, invoice etc); (directional complement) away; off; carat (gold); abbr. for Kelvin, 開爾文|开尔文[Kai1er3wen2]; abbr. for 開本|开本[kai1ben3], book format"},"年":{"zhuyin":"ㄋㄧㄢˊ","english":"surname Nian; year; CL:個|个[ge4]"},"式":{"zhuyin":"ㄕˋ","english":"type; form; pattern; style"},"五":{"zhuyin":"ㄨˇ","english":"five; 5"},"下":{"zhuyin":"ㄒㄧㄚˋ","english":"down; downwards; below; lower; later; next (week etc); second (of two parts); to decline; to go down; to arrive at (a decision, conclusion etc); measure word to show the frequency of an action"},"贏":{"zhuyin":"ㄧㄥˊ","english":"to beat; to win; to profit"},"設":{"zhuyin":"ㄕㄜˋ","english":"to set up; to put in place; (math.) given; suppose; if"},"驗":{"zhuyin":"ㄧㄢˋ","english":"to examine; to test; to check"},"布":{"zhuyin":"ㄅㄨˋ","english":"cloth; to declare; to announce; to spread; to make known"},"機":{"zhuyin":"ㄐㄧ","english":"surname Ji; (bound form) machine; mechanism; (bound form) aircraft; (bound form) an opportunity; (bound form) crucial point; pivot; (bound form) quick-witted; flexible; (bound form) organic"},"否":{"zhuyin":"ㄈㄡˇ","english":"to negate; to deny; not; clogged; evil"},"物":{"zhuyin":"ㄨˋ","english":"(bound form) thing; (literary) the outside world as distinct from oneself; people other than oneself"},"載":{"zhuyin":"ㄗㄞˇ","english":"to record in writing; to carry (i.e. publish in a newspaper etc); Taiwan pr. [zai4]; year; to carry; to convey; to load; to hold; to fill up; and; also; as well as; simultaneously"},"桑":{"zhuyin":"ㄙㄤ","english":"surname Sang; (bound form) mulberry tree"},"座":{"zhuyin":"ㄗㄨㄛˋ","english":"seat; base; stand; (bound form) constellation; (archaic) suffix used in a respectful form of address (e.g. 師座|师座[shi1zuo4]); classifier for large immovable objects such as buildings, mountains, bridges etc"},"史":{"zhuyin":"ㄕˇ","english":"surname Shi; history; annals; title of an official historian in ancient China"},"盃":{"zhuyin":"ㄅㄟ","english":"variant of 杯[bei1]; trophy cup; classifier for certain containers of liquids: glass, cup"},"百":{"zhuyin":"ㄅㄞˇ","english":"surname Bai; hundred; numerous; all kinds of"},"作":{"zhuyin":"ㄗㄨㄛ","english":"(bound form) worker; (bound form) workshop; (slang) troublesome; high-maintenance (person); to do; to engage in; to write; to compose; to pretend; to feign; to regard as; to consider to be; to be; to act the part of; to feel (itchy, nauseous etc); writings; works"},"海":{"zhuyin":"ㄏㄞˇ","english":"surname Hai; ocean; sea; CL:個|个[ge4],片[pian4]; great number of people or things; (dialect) numerous"},"求":{"zhuyin":"ㄑㄧㄡˊ","english":"to seek; to look for; to request; to demand; to beseech"},"城":{"zhuyin":"ㄔㄥˊ","english":"city walls; city; town; CL:座[zuo4],道[dao4],個|个[ge4]"},"敗":{"zhuyin":"ㄅㄞˋ","english":"to defeat; to damage; to lose (to an opponent); to fail; to wither"},"兆":{"zhuyin":"ㄓㄠˋ","english":"surname Zhao; (bound form) omen; to foretell; million; mega-; (Tw) trillion; tera-; (old) billion"},"上":{"zhuyin":"ㄕㄤˇ","english":"used in 上聲|上声[shang3 sheng1]; (bound form) up; upper; above; previous; first (of multiple parts); to climb; to get onto; to go up; to attend (class or university); (directional complement) up; (noun suffix) on; above"},"週":{"zhuyin":"ㄓㄡ","english":"week; weekly; variant of 周[zhou1]"},"行":{"zhuyin":"ㄏㄤˊ","english":"(bound form) row; line; (bound form) line of business; trade; profession; (bound form) commercial firm; (bound form) to rank (first, second etc) among one's siblings (by age); (in data tables) row; (Tw) column; classifier for rows or lines; used in 道行[dao4heng2]; (bound form) to walk; to go; to travel; (literary) trip; journey; visit; (bound form) temporary; makeshift; (bound form) current; in circulation; (bound form) to do; to perform; capable; competent; all right; OK!; will do; behavior; conduct (Taiwan pr. [xing4]); (literary) about to; soon"},"鍵":{"zhuyin":"ㄐㄧㄢˋ","english":"key (on a piano or computer keyboard); button (on a mouse or other device); chemical bond; linchpin"},"使":{"zhuyin":"ㄕˇ","english":"to make; to cause; to enable; to use; to employ; to send; to instruct sb to do sth; envoy; messenger"},"問":{"zhuyin":"ㄨㄣˋ","english":"to ask; to inquire"},"大":{"zhuyin":"ㄉㄚˋ","english":"big; large; great; older (than another person); eldest (as in 大姐[da4jie3]); greatly; freely; fully; (dialect) father; (dialect) uncle (father's brother); see 大夫[dai4 fu5]"},"基":{"zhuyin":"ㄐㄧ","english":"(bound form) base; foundation; (bound form) radical (chemistry); (bound form) gay (loanword from English into Cantonese, Jyutping: gei1, followed by orthographic borrowing from Cantonese)"},"二":{"zhuyin":"ㄦˋ","english":"two; 2; (Beijing dialect) stupid"},"深":{"zhuyin":"ㄕㄣ","english":"deep (lit. and fig.)"},"這":{"zhuyin":"ㄓㄜˋ","english":"(pronoun) this; these; (bound form) this; the (followed by a noun); (bound form) this; these (followed by a classifier) (in this sense, commonly pr. [zhei4], esp. in Beijing); (coll.) this"},"管":{"zhuyin":"ㄍㄨㄢˇ","english":"surname Guan; to take care (of); to control; to manage; to be in charge of; to look after; to run; to care about; tube; pipe; woodwind; classifier for tube-shaped objects; particle similar to 把[ba3] in 管...叫 constructions; writing brush; (coll.) to; towards"},"降":{"zhuyin":"ㄐㄧㄤˋ","english":"to drop; to fall; to come down; to descend; to surrender; to capitulate; to subdue; to tame"},"兩":{"zhuyin":"ㄌㄧㄤˇ","english":"two; both; some; a few; tael, unit of weight equal to 50 grams (modern) or 1⁄16 of a catty 斤[jin1] (old)"},"先":{"zhuyin":"ㄒㄧㄢ","english":"beforehand; first; earlier; at first; originally; for the time being; for now; (prefix) my late (in referring to deceased relatives older than oneself)"},"跑":{"zhuyin":"ㄆㄠˊ","english":"(of an animal) to paw (the ground); to run; to run away; to escape; to run around (on errands etc); (of a gas or liquid) to leak or evaporate; (verb complement) away; off"},"施":{"zhuyin":"ㄕ","english":"surname Shi; (bound form) to put into effect (regulations etc); to distribute (alms etc); to apply (fertilizer etc)"},"條":{"zhuyin":"ㄊㄧㄠˊ","english":"strip; item; article; clause (of law or treaty); classifier for long thin things (ribbon, river, road, trousers etc)"},"限":{"zhuyin":"ㄒㄧㄢˋ","english":"to limit; to restrict; (bound form) limit; bound"},"比":{"zhuyin":"ㄅㄧˇ","english":"Belgium; Belgian; abbr. for 比利時|比利时[Bi3 li4 shi2]; euphemistic variant of 屄[bi1]; to compare; (followed by a noun and adjective) more {adj.} than {noun}; ratio; to gesture; (Taiwan pr. [bi4] in some compounds derived from Classical Chinese)"},"面":{"zhuyin":"ㄇㄧㄢˋ","english":"face; side; surface; aspect; top; classifier for objects with flat surfaces such as drums, mirrors, flags etc"},"制":{"zhuyin":"ㄓˋ","english":"system; to control; to regulate; variant of 製|制[zhi4]"},"續":{"zhuyin":"ㄒㄩˋ","english":"to continue; to replenish"},"情":{"zhuyin":"ㄑㄧㄥˊ","english":"(bound form) feelings; emotion; sentiment; passion; (bound form) situation; condition"},"期":{"zhuyin":"ㄑㄧ","english":"a period of time; phase; stage; classifier for issues of a periodical, courses of study; time; term; period; to hope; Taiwan pr. [qi2]"},"汰":{"zhuyin":"ㄊㄞˋ","english":"to discard; to eliminate"},"資":{"zhuyin":"ㄗ","english":"resources; capital; to provide; to supply; to support; money; expense"},"乎":{"zhuyin":"ㄏㄨ","english":"(classical particle similar to 於|于[yu2]) in; at; from; because; than; (classical final particle similar to 嗎|吗[ma5], 吧[ba5], 呢[ne5], expressing question, doubt or astonishment)"},"八":{"zhuyin":"ㄅㄚ","english":"eight"},"去":{"zhuyin":"ㄑㄩˋ","english":"to go; to go to (a place); (of a time etc) last; just passed; to send; to remove; to get rid of; to reduce; to be apart from in space or time; to die (euphemism); to play (a part); (when used either before or after a verb) to go in order to do sth; (after a verb of motion indicates movement away from the speaker); (used after certain verbs to indicate detachment or separation)"},"九":{"zhuyin":"ㄐㄧㄡˇ","english":"nine; 9"},"令":{"zhuyin":"ㄌㄧㄥˊ","english":"used in 脊令[ji2 ling2]; used in 令狐[Ling2 hu2] (Taiwan pr. [ling4]); classifier for a ream of paper; to order; to command; an order; warrant; writ; to cause; to make sth happen; virtuous; honorific title; season; government position (old); type of short song or poem"},"扳":{"zhuyin":"ㄅㄢ","english":"to pull; to turn (sth) around; to turn around (a situation); to recoup; variant of 攀[pan1]"},"繼":{"zhuyin":"ㄐㄧˋ","english":"to continue; to follow after; to go on with; to succeed; to inherit; then; afterwards"},"成":{"zhuyin":"ㄔㄥˊ","english":"surname Cheng; short name for Chengdu 成都[Cheng2du1]; to succeed; to finish; to complete; to accomplish; to become; to turn into; to be all right; OK!; one tenth"},"正":{"zhuyin":"ㄓㄥ","english":"first month of the lunar year; straight; upright; proper; main; principal; to correct; to rectify; exactly; just (at that time); right (in that place); (math.) positive"},"隊":{"zhuyin":"ㄉㄨㄟˋ","english":"squadron; team; group; CL:個|个[ge4]"},"民":{"zhuyin":"ㄇㄧㄣˊ","english":"surname Min; (bound form) the people; inhabitants of a country"},"要":{"zhuyin":"ㄧㄠ","english":"(bound form) to demand; to coerce; to want; to need; to ask for; will; shall; about to; need to; should; if (same as 要是[yao4 shi5]); (bound form) important"},"裡":{"zhuyin":"ㄌㄧˇ","english":"lining; interior; inside; internal; also written 裏|里[li3]"},"短":{"zhuyin":"ㄉㄨㄢˇ","english":"short; brief; to lack; weak point; fault"},"廠":{"zhuyin":"ㄔㄤˇ","english":"factory; yard; depot; workhouse; works; (industrial) plant"},"茲":{"zhuyin":"ㄘˊ","english":"used in 龜茲|龟兹[Qiu1ci2]; now; here; this; time; year"},"檢":{"zhuyin":"ㄐㄧㄢˇ","english":"to check; to examine; to inspect; to exercise restraint"},"低":{"zhuyin":"ㄉㄧ","english":"low; beneath; to lower (one's head); to let droop; to hang down; to incline"},"致":{"zhuyin":"ㄓˋ","english":"(literary) to send; to transmit; to convey; (bound form) to cause; to lead to; consequently"},"打":{"zhuyin":"ㄉㄚˊ","english":"(loanword) dozen; Taiwan pr. [da3]; to beat; to strike; to hit; to break; to type; to mix up; to build; to fight; to fetch; to make; to tie up; to issue; to shoot; to calculate; to play (a game); since; from"},"狄":{"zhuyin":"ㄉㄧˊ","english":"surname Di; generic name for northern ethnic minorities during the Qin and Han Dynasties (221 BC-220 AD); low ranking public official (old)"},"頭":{"zhuyin":"ㄊㄡˊ","english":"head; hair style; the top; end; beginning or end; a stub; remnant; chief; boss; side; aspect; first; leading; classifier for pigs or livestock; CL:個|个[ge4]; suffix for nouns"},"能":{"zhuyin":"ㄋㄥˊ","english":"surname Neng; can; to be able to; might possibly; ability; (physics) energy"},"石":{"zhuyin":"ㄕˊ","english":"surname Shi; abbr. for Shijiazhuang 石家莊|石家庄[Shi2jia1zhuang1], the capital of Hebei; dry measure for grain equal to ten dou 斗[dou3]; one hundred liters; ancient pr. [shi2]; rock; stone; stone inscription; one of the eight categories of ancient musical instruments 八音[ba1 yin1]"},"次":{"zhuyin":"ㄘˋ","english":"next in sequence; second; the second (day, time etc); secondary; vice-; sub-; infra-; inferior quality; substandard; order; sequence; hypo- (chemistry); classifier for enumerated events: time"},"飆":{"zhuyin":"ㄅㄧㄠ","english":"whirlwind; violent wind"},"拿":{"zhuyin":"ㄋㄚˊ","english":"to hold; to seize; to catch; to apprehend; to take; (used in the same way as 把[ba3]: to mark the following noun as a direct object)"},"似":{"zhuyin":"ㄕˋ","english":"used in 似的[shi4de5]; to seem; to appear; to resemble; similar; -like; pseudo-; (more) than"},"印":{"zhuyin":"ㄧㄣˋ","english":"surname Yin; abbr. for 印度[Yin4du4], India; to print; to mark; to engrave; a seal; a print; a stamp; a mark; a trace; image"},"了":{"zhuyin":"˙ㄌㄜ","english":"(completed action marker); (modal particle indicating change of state, situation now); (modal particle intensifying preceding clause); to finish; (used with 得[de2] or 不[bu4] after a verb to express (im)possibility, as in 忘不了[wang4bu5liao3] \"cannot forget\"); (literary) (usually followed by a negative such as 無|无[wu2] or 不[bu4]) completely (not); entirely (not); (not) in the least; to understand clearly (variant of 瞭|了[liao3])"},"爆":{"zhuyin":"ㄅㄠˋ","english":"to explode or burst; to quick fry or quick boil"},"伊":{"zhuyin":"ㄧ","english":"surname Yi; abbr. for 伊拉克[Yi1la1ke4], Iraq; abbr. for 伊朗[Yi1lang3], Iran; (old) third person singular pronoun (\"he\" or \"she\"); second person singular pronoun (\"you\"); (May 4th period) third person singular feminine pronoun (\"she\"); (Classical Chinese) introductory particle with no specific meaning; (preceding a noun) that"},"碎":{"zhuyin":"ㄙㄨㄟˋ","english":"(transitive or intransitive) to break into pieces; to shatter; to crumble; broken; fragmentary; scattered; garrulous"},"各":{"zhuyin":"ㄍㄜˋ","english":"each; every"},"需":{"zhuyin":"ㄒㄩ","english":"to require; to need; to want; necessity; need"},"會":{"zhuyin":"ㄏㄨㄟˋ","english":"can; to have the skill; to know how to; to be likely to; to be sure to; to meet; to get together; meeting; gathering; (suffix) union; group; association; (bound form) a moment (Taiwan pr. [hui3]); (bound form) to reckon accounts"},"目":{"zhuyin":"ㄇㄨˋ","english":"eye; (literary) to look; to regard; eye (of a net); mesh; mesh size; grit size (abbr. for 目數|目数[mu4 shu4]); item; section; list; catalogue; (taxonomy) order; name; title"},"推":{"zhuyin":"ㄊㄨㄟ","english":"to push; to cut; to refuse; to reject; to decline; to shirk (responsibility); to put off; to delay; to push forward; to nominate; to elect; massage"},"點":{"zhuyin":"ㄉㄧㄢˇ","english":"point; dot; drop; speck; o'clock; point (in space or time); to draw a dot; to check on a list; to choose; to order (food in a restaurant); to touch briefly; to hint; to light; to ignite; to pour a liquid drop by drop; (old) one fifth of a two-hour watch 更[geng1]; dot stroke in Chinese characters; classifier for items"},"發":{"zhuyin":"ㄈㄚ","english":"to send out; to show (one's feeling); to issue; to develop; to make a bundle of money; classifier for gunshots (rounds)"},"家":{"zhuyin":"ㄐㄧㄚ","english":"home; family; (polite) my (sister, uncle etc); classifier for families or businesses; refers to the philosophical schools of pre-Han China; noun suffix for a specialist in some activity, such as a musician or revolutionary, corresponding to English -ist, -er, -ary or -ian; CL:個|个[ge4]"},"現":{"zhuyin":"ㄒㄧㄢˋ","english":"to appear; present; now; existing; current"},"暫":{"zhuyin":"ㄗㄢˋ","english":"temporary; Taiwan pr. [zhan4]"},"的":{"zhuyin":"˙ㄉㄜ","english":"of; ~'s (possessive particle); (used after an attribute when it modifies a noun); (used at the end of a declarative sentence for emphasis); (used after a noun, verb or adjective to form a nominal expression, as in 皮革的[pi2ge2 de5] \"one made of leather\" or 跑堂兒的|跑堂儿的[pao3tang2r5de5] \"a waiter (literally, one who runs back and forth in a restaurant)\" or 新的[xin1 de5] \"new one\"); also pr. [di4] or [di5] in poetry and songs; a taxi; a cab (abbr. for 的士[di1shi4]); really and truly; (bound form) bull's-eye; target"},"選":{"zhuyin":"ㄒㄩㄢˇ","english":"to choose; to pick; to select; to elect"},"始":{"zhuyin":"ㄕˇ","english":"to begin; to start; then; only then"},"斯":{"zhuyin":"ㄙ","english":"Slovakia; Slovak; abbr. for 斯洛伐克[Si1 luo4 fa2 ke4]; (phonetic); this"},"測":{"zhuyin":"ㄘㄜˋ","english":"to survey; to measure; to conjecture"},"央":{"zhuyin":"ㄧㄤ","english":"center; end; to beg; to plead"},"荷":{"zhuyin":"ㄏㄜˊ","english":"Holland; the Netherlands (abbr. for 荷蘭|荷兰[He2lan2]); lotus; to carry on one's shoulder or back; burden; responsibility"},"格":{"zhuyin":"ㄍㄜˊ","english":"square; frame; rule; (legal) case; style; character; standard; pattern; (grammar) case; (classical) to obstruct; to hinder; (classical) to arrive; to come; (classical) to investigate; to study exhaustively"},"長":{"zhuyin":"ㄔㄤˊ","english":"length; long; forever; always; constantly; chief; head; elder; to grow; to develop; to increase; to enhance"},"和":{"zhuyin":"ㄏㄜˊ","english":"surname He; (joining two nouns) and; together with; with (Taiwan pr. [han4]); (math.) sum; to make peace; (sports) to draw; to tie; (bound form) harmonious; (bound form) Japan; Japanese; to compose a poem in reply (to sb's poem) using the same rhyme sequence; to join in the singing; to chime in with others; to complete a set in mahjong or playing cards; to combine a powdery substance (flour, plaster etc) with water; Taiwan pr. [huo4]; to mix (ingredients) together; to blend; classifier for rinses of clothes; classifier for boilings of medicinal herbs"},"曼":{"zhuyin":"ㄇㄢˋ","english":"handsome; large; long"},"怎":{"zhuyin":"ㄗㄣˇ","english":"how"},"日":{"zhuyin":"ㄖˋ","english":"abbr. for 日本[Ri4 ben3], Japan; sun; day; date, day of the month"},"它":{"zhuyin":"ㄊㄚ","english":"it"},"進":{"zhuyin":"ㄐㄧㄣˋ","english":"to go forward; to advance; to go in; to enter; to put in; to submit; to take in; to admit; (math.) base of a number system; classifier for sections in a building or residential compound"},"算":{"zhuyin":"ㄙㄨㄢˋ","english":"to regard as; to figure; to calculate; to compute"},"技":{"zhuyin":"ㄐㄧˋ","english":"skill"},"評":{"zhuyin":"ㄆㄧㄥˊ","english":"to discuss; to comment; to criticize; to judge; to choose (by public appraisal)"},"陰":{"zhuyin":"ㄧㄣ","english":"surname Yin; overcast (weather); cloudy; shady; Yin (the negative principle of Yin and Yang); negative (electric.); feminine; moon; implicit; hidden; genitalia"},"意":{"zhuyin":"ㄧˋ","english":"Italy; Italian (abbr. for 意大利[Yi4 da4 li4]); idea; meaning; thought; to think; wish; desire; intention; to expect; to anticipate"},"死":{"zhuyin":"ㄙˇ","english":"to die; impassable; uncrossable; inflexible; rigid; extremely; damned"},"鋒":{"zhuyin":"ㄈㄥ","english":"point of a spear; edge of a tool; vanguard; forward (in sports team)"},"川":{"zhuyin":"ㄔㄨㄢ","english":"abbr. for Sichuan Province 四川[Si4 chuan1] in southwest China; (bound form) river; creek; plain; an area of level country"},"公":{"zhuyin":"ㄍㄨㄥ","english":"public; collectively owned; common; international (e.g. high seas, metric system, calendar); make public; fair; just; Duke, highest of five orders of nobility 五等爵位[wu3 deng3 jue2 wei4]; honorable (gentlemen); father-in-law; male (animal)"},"以":{"zhuyin":"ㄧˇ","english":"abbr. for Israel 以色列[Yi3 se4 lie4]; to use; by means of; according to; in order to; because of; at (a certain date or place)"},"花":{"zhuyin":"ㄏㄨㄚ","english":"surname Hua; flower; blossom; CL:朵[duo3],支[zhi1],束[shu4],把[ba3],盆[pen2],簇[cu4]; fancy pattern; florid; to spend (money, time); (coll.) lecherous; lustful"},"時":{"zhuyin":"ㄕˊ","english":"surname Shi; o'clock; time; when; hour; season; period"},"出":{"zhuyin":"ㄔㄨ","english":"to go out; to come out; to arise; to occur; to produce; to yield; to go beyond; to exceed; (used after a verb to indicate an outward direction or a positive result); classifier for dramas, plays, operas etc"},"普":{"zhuyin":"ㄆㄨˇ","english":"general; popular; everywhere; universal"},"難":{"zhuyin":"ㄋㄢˊ","english":"difficult (to...); problem; difficulty; difficult; not good; disaster; distress; to scold"},"中":{"zhuyin":"ㄓㄨㄥ","english":"(bound form) China; Chinese; surname Zhong; within; among; in; middle; center; while (doing sth); during; (dialect) OK; all right; to hit (the mark); to be hit by; to suffer; to win (a prize, a lottery)"},"那":{"zhuyin":"ㄋㄚ","english":"surname Na; surname Nuo; variant of 哪[na3]; (specifier) that; the; those (colloquial pr. [nei4]); (pronoun) that (referring to persons, things or situations); then (in that case); (archaic) many; beautiful; how; old variant of 挪[nuo2]"},"天":{"zhuyin":"ㄊㄧㄢ","english":"day; sky; heaven"},"數":{"zhuyin":"ㄕㄨˇ","english":"to count; to count as; to regard as; to enumerate; to list; number; figure; several; a few; (literary) frequently; repeatedly"},"朗":{"zhuyin":"ㄌㄤˇ","english":"clear; bright"},"吃":{"zhuyin":"ㄔ","english":"to eat; to consume; to eat at (a cafeteria etc); to eradicate; to destroy; to absorb; to suffer (shock, injury, defeat etc)"},"競":{"zhuyin":"ㄐㄧㄥˋ","english":"to compete; to contend; to struggle"},"全":{"zhuyin":"ㄑㄩㄢˊ","english":"surname Quan; all; whole; entire; every; complete"},"億":{"zhuyin":"ㄧˋ","english":"100 million"},"法":{"zhuyin":"ㄈㄚˇ","english":"France; French; abbr. for 法國|法国[Fa3 guo2]; Taiwan pr. [Fa4]; law; method; way; to emulate; (Buddhism) dharma; (abbr. for 法家[Fa3 jia1]) the Legalists; (physics) farad (abbr. for 法拉[fa3 la1])"},"元":{"zhuyin":"ㄩㄢˊ","english":"surname Yuan; Yuan dynasty (1279-1368); currency unit (esp. Chinese yuan); (bound form) first; original; primary; (bound form) basic; fundamental; (bound form) constituent; part; (prefix) meta-; (math.) argument; variable; era (of a reign); (Tw) (geology) eon"},"產":{"zhuyin":"ㄔㄢˇ","english":"to give birth; to reproduce; to produce; product; resource; estate; property"},"波":{"zhuyin":"ㄅㄛ","english":"(bound form) Poland (abbr. for 波蘭|波兰[Bo1lan2]); surname Bo; wave; ripple; storm; surge"},"但":{"zhuyin":"ㄉㄢˋ","english":"but; yet; however; still; merely; only; just"},"國":{"zhuyin":"ㄍㄨㄛˊ","english":"surname Guo; country; nation; state; (bound form) national"},"簽":{"zhuyin":"ㄑㄧㄢ","english":"to sign one's name; to write brief comments on a document; inscribed bamboo stick (variant of 籤|签[qian1]); visa"},"然":{"zhuyin":"ㄖㄢˊ","english":"correct; right; so; thus; like this; -ly"},"晚":{"zhuyin":"ㄨㄢˇ","english":"evening; night; late"},"自":{"zhuyin":"ㄗˋ","english":"(bound form) self; oneself; from; since; naturally; as a matter of course"},"攻":{"zhuyin":"ㄍㄨㄥ","english":"to attack; to accuse; to study; (LGBT) top"},"題":{"zhuyin":"ㄊㄧˊ","english":"surname Ti; topic; problem for discussion; exam question; subject; to inscribe; to mention; CL:個|个[ge4],道[dao4]"},"頓":{"zhuyin":"ㄉㄨㄣˋ","english":"to stop; to pause; to arrange; to lay out; to kowtow; to stamp (one's foot); at once; classifier for meals, beatings, scoldings etc: time, bout, spell, meal"},"金":{"zhuyin":"ㄐㄧㄣ","english":"surname Jin; surname Kim (Korean); Jurchen Jin dynasty (1115-1234); gold; chemical element Au; generic term for lustrous and ductile metals; money; golden; highly respected; one of the eight categories of ancient musical instruments 八音[ba1 yin1]"},"批":{"zhuyin":"ㄆㄧ","english":"to ascertain; to act on; to criticize; to pass on; classifier for batches, lots, military flights; tier (for the ranking of universities and colleges)"},"同":{"zhuyin":"ㄊㄨㄥˊ","english":"like; same; similar; together; alike; with"},"包":{"zhuyin":"ㄅㄠ","english":"surname Bao; to cover; to wrap; to hold; to include; to take charge of; to contract (to or for); package; wrapper; container; bag; to hold or embrace; bundle; packet; CL:個|个[ge4],隻|只[zhi1]"},"源":{"zhuyin":"ㄩㄢˊ","english":"root; source; origin"},"通":{"zhuyin":"ㄊㄨㄥ","english":"to go through; to know well; (suffix) expert; to connect; to communicate; open; to clear; classifier for letters, telegrams, phone calls etc; classifier for an activity, taken in its entirety (tirade of abuse, stint of music playing, bout of drinking etc)"},"男":{"zhuyin":"ㄋㄢˊ","english":"(bound form) male; baron, the lowest of the five ranks of nobility 五等爵位[wu3deng3 jue2wei4]"},"認":{"zhuyin":"ㄖㄣˋ","english":"to recognize; to know; to admit"},"一":{"zhuyin":"ㄧ","english":"one; single; a (article); as soon as; entire; whole; all; throughout; \"one\" radical in Chinese characters (Kangxi radical 1); also pr. [yao1] for greater clarity when spelling out numbers digit by digit"},"防":{"zhuyin":"ㄈㄤˊ","english":"to protect; to defend; to guard against; to prevent"},"宜":{"zhuyin":"ㄧˊ","english":"surname Yi; proper; should; suitable; appropriate"},"預":{"zhuyin":"ㄩˋ","english":"to advance; in advance; beforehand; to prepare"},"居":{"zhuyin":"ㄐㄩ","english":"surname Ju; (archaic) sentence-final particle expressing a doubting attitude; to reside; to be (in a certain position); to store up; to be at a standstill; residence; house; restaurant; classifier for bedrooms"},"示":{"zhuyin":"ㄕˋ","english":"to show; to reveal"},"價":{"zhuyin":"ㄐㄧㄚˋ","english":"price; value; (chemistry) valence; particle used between an adverb and a verb or adjective; (dialect) particle used after a negative adverb such as 不[bu4] or 別|别[bie2] without any other following element"},"有":{"zhuyin":"ㄧㄡˇ","english":"to have; there is; (bound form) having; with; -ful; -ed; -al (as in 有意[you3yi4] intentional)"},"超":{"zhuyin":"ㄔㄠ","english":"to exceed; to overtake; to surpass; to transcend; to pass; to cross; ultra-; super-"},"十":{"zhuyin":"ㄕˊ","english":"ten; 10"},"淘":{"zhuyin":"ㄊㄠˊ","english":"to wash; to clean out; to cleanse; to eliminate; to dredge"},"場":{"zhuyin":"ㄔㄤˊ","english":"threshing floor; classifier for events and happenings: spell, episode, bout; large place used for a specific purpose; stage; scene (of a play); classifier for sporting or recreational activities; classifier for number of exams"},"手":{"zhuyin":"ㄕㄡˇ","english":"hand; (formal) to hold; person engaged in certain types of work; person skilled in certain types of work; personal(ly); convenient; classifier for skill; CL:雙|双[shuang1],隻|只[zhi1]"},"加":{"zhuyin":"ㄐㄧㄚ","english":"Canada (abbr. for 加拿大[Jia1na2da4]); surname Jia; to add; (math.) plus; to increase; to augment; (used before a disyllabic verb, often after an adverb like 不[bu4], 大[da4], 稍[shao1] etc, to indicate that the action applies to sth previously mentioned, as in 稍加改良[shao1jia1 gai3liang2] \"make some minor improvements to (it)\")"},"過":{"zhuyin":"ㄍㄨㄛ","english":"surname Guo; to cross; to go over; to pass (time); to celebrate (a holiday); to live; to get along; excessively; too-; (experienced action marker)"},"息":{"zhuyin":"ㄒㄧ","english":"breath; news; interest (on an investment or loan); to cease; to stop; to rest; Taiwan pr. [xi2]"},"他":{"zhuyin":"ㄊㄚ","english":"(third-person singular) (since the early 20th century, usu. male) he; him; his; (bound form) other; another; some other (as in 他日[ta1ri4] and 他人[ta1ren2])"},"票":{"zhuyin":"ㄆㄧㄠˋ","english":"ticket; ballot; banknote; CL:張|张[zhang1]; person held for ransom; amateur performance of Chinese opera; classifier for groups, batches, business transactions"},"關":{"zhuyin":"ㄍㄨㄢ","english":"surname Guan; mountain pass; to close; to shut; to turn off; to confine; to lock (sb) up; to shut (sb in a room, a bird in a cage etc); to concern; to involve"},"人":{"zhuyin":"ㄖㄣˊ","english":"person; people; CL:個|个[ge4],位[wei4]"},"密":{"zhuyin":"ㄇㄧˋ","english":"surname Mi; name of an ancient state; dense; close; thick; intimate; close; (bound form) secret; confidential; (Internet slang) to send a private message to (sb); to DM"},"安":{"zhuyin":"ㄢ","english":"surname An; (bound form) calm; peaceful; to calm; to set at ease; safe; secure; in good health; content; satisfied (as in 安於|安于[an1yu2]); to place (sb) in a suitable position (job); to install; to fix; to fit; to bring (a charge against sb); to harbor (certain intentions); ampere (abbr. for 安培[an1pei2])"},"平":{"zhuyin":"ㄆㄧㄥˊ","english":"surname Ping; flat; level; equal; to tie (make the same score); to draw (score); calm; peaceful; abbr. for 平聲|平声[ping2 sheng1]"},"專":{"zhuyin":"ㄓㄨㄢ","english":"for a particular person, occasion, purpose; focused on one thing; special; expert; particular (to sth); concentrated; specialized"},"威":{"zhuyin":"ㄨㄟ","english":"power; might; prestige"},"回":{"zhuyin":"ㄏㄨㄟˊ","english":"to circle; to go back; to turn around; to answer; to return; to revolve; Hui ethnic group (Chinese Muslims); time; classifier for acts of a play; section or chapter (of a classic book)"},"權":{"zhuyin":"ㄑㄩㄢˊ","english":"surname Quan; authority; power; right; (literary) to weigh; expedient; temporary"},"球":{"zhuyin":"ㄑㄧㄡˊ","english":"ball; sphere; globe; CL:個|个[ge4]; ball game; match; CL:場|场[chang3]"},"雷":{"zhuyin":"ㄌㄟˊ","english":"surname Lei; thunder; (bound form) (military) mine, as in 地雷[di4 lei2] land mine; (coll.) to shock; to stun; to astound; (Tw) (coll.) spoiler; (Tw) (coll.) to reveal plot details to (sb)"},"術":{"zhuyin":"ㄕㄨˋ","english":"method; technique; various genera of flowers of Asteracea family (daisies and chrysanthemums), including Atractylis lancea"},"貨":{"zhuyin":"ㄏㄨㄛˋ","english":"goods; money; commodity; CL:個|个[ge4]"},"則":{"zhuyin":"ㄗㄜˊ","english":"(literary) (conjunction used to express contrast with a previous clause) but; then; (bound form) standard; norm; (bound form) principle; (literary) to imitate; to follow; classifier for written items"},"訓":{"zhuyin":"ㄒㄩㄣˋ","english":"to teach; to train; to admonish; (bound form) instruction (from superiors); teachings; rule"},"舉":{"zhuyin":"ㄐㄩˇ","english":"to lift; to hold up; to cite; to enumerate; to act; to raise; to choose; to elect; act; move; deed"},"星":{"zhuyin":"ㄒㄧㄥ","english":"star; heavenly body; satellite; small amount"},"準":{"zhuyin":"ㄓㄨㄣˇ","english":"accurate; standard; definitely; certainly; about to become (bride, son-in-law etc); quasi-; para-"},"重":{"zhuyin":"ㄔㄨㄥˊ","english":"to repeat; repetition; again; re-; classifier: layer; heavy; serious; to attach importance to"},"臨":{"zhuyin":"ㄌㄧㄣˊ","english":"to face; to overlook; to arrive; to be (just) about to; just before"},"克":{"zhuyin":"ㄎㄜˋ","english":"abbr. for 克羅地亞|克罗地亚[Ke4 luo2 di4 ya4], Croatia; (Tw) abbr. for 克羅埃西亞|克罗埃西亚[Ke4 luo2 ai1 xi1 ya4], Croatia; to be able to; to subdue; to restrain; to overcome; gram; Tibetan unit of land area, about 6 ares"},"少":{"zhuyin":"ㄕㄠˇ","english":"few; less; to lack; to be missing; to stop (doing sth); seldom; young"},"郵":{"zhuyin":"ㄧㄡˊ","english":"post (office); mail"},"內":{"zhuyin":"ㄋㄟˋ","english":"inside; inner; internal; within; interior"},"止":{"zhuyin":"ㄓˇ","english":"to stop; to prohibit; until; only"},"者":{"zhuyin":"ㄓㄜˇ","english":"(after a verb or adjective) one who (is) ...; (after a noun) person involved in ...; -er; -ist; (used after a number or 後|后[hou4] or 前[qian2] to refer to sth mentioned previously); (used after a term, to mark a pause before defining the term); (old) (used at the end of a command); (old) this"},"不":{"zhuyin":"ㄅㄨˋ","english":"no; not so; (bound form) not; un-"},"政":{"zhuyin":"ㄓㄥˋ","english":"political; politics; government"},"三":{"zhuyin":"ㄙㄢ","english":"surname San; three; 3"},"嚴":{"zhuyin":"ㄧㄢˊ","english":"surname Yan; tight (closely sealed); stern; strict; rigorous; severe; father"},"免":{"zhuyin":"ㄇㄧㄢˇ","english":"to excuse sb; to exempt; to remove or dismiss from office; to avoid; to avert; to escape; to be prohibited; old variant of 絻[wen4]"},"馬":{"zhuyin":"ㄇㄚˇ","english":"surname Ma; abbr. for Malaysia 馬來西亞|马来西亚[Ma3lai2xi1ya4]; horse; CL:匹[pi3]; horse or cavalry piece in Chinese chess; knight in Western chess"},"驚":{"zhuyin":"ㄐㄧㄥ","english":"to startle; to be frightened; to be scared; alarm"},"亡":{"zhuyin":"ㄨㄤˊ","english":"to die; to lose; to be gone; to flee; deceased"},"麼":{"zhuyin":"ㄇㄚˊ","english":"exclamatory final particle; interrogative final particle; suffix, used to form interrogative 什麼|什么[shen2 me5], what?, indefinite 這麼|这么[zhe4 me5] thus, etc; tiny; insignificant"},"很":{"zhuyin":"ㄏㄣˇ","english":"very; quite; (also, often used before an adjective without intensifying its meaning, i.e. as a meaningless syntactic element)"},"約":{"zhuyin":"ㄧㄠ","english":"to weigh in a balance or on a scale; to make an appointment; to invite; approximately; pact; treaty; to economize; to restrict; to reduce (a fraction); concise"},"合":{"zhuyin":"ㄍㄜˇ","english":"100 ml; one-tenth of a peck; measure for dry grain equal to one-tenth of sheng 升 or liter, or one-hundredth dou 斗; to close; to join; to fit; to be equal to; whole; together; round (in battle); conjunction (astronomy); 1st note of pentatonic scale; old variant of 盒[he2]"},"壓":{"zhuyin":"ㄧㄚ","english":"to press; to push down; to keep under (control); pressure; used in 壓根兒|压根儿[ya4gen1r5]; used in 壓馬路|压马路[ya4ma3lu4]; used in 壓板|压板[ya4ban3]"},"王":{"zhuyin":"ㄨㄤˊ","english":"surname Wang; king or monarch; best or strongest of its type; grand; great; (literary) (of a monarch) to reign over (a kingdom)"},"最":{"zhuyin":"ㄗㄨㄟˋ","english":"most; the most; -est (superlative suffix)"},"足":{"zhuyin":"ㄐㄩˋ","english":"excessive; (bound form) foot; leg; sufficient; ample; as much as; fully"},"提":{"zhuyin":"ㄉㄧ","english":"used in 提防[di1 fang5] and 提溜[di1 liu5]; to carry (hanging down from the hand); to lift; to put forward; to mention; to raise (an issue); upwards character stroke; lifting brush stroke (in painting); scoop for measuring liquid"},"夢":{"zhuyin":"ㄇㄥˋ","english":"dream (CL:場|场[chang2],個|个[ge4]); (bound form) to dream"},"多":{"zhuyin":"ㄉㄨㄛ","english":"many; much; more; a lot of; too many; in excess; (after a numeral) ... odd; how (to what extent) (Taiwan pr. [duo2]); (bound form) multi-; poly-"},"統":{"zhuyin":"ㄊㄨㄥˇ","english":"to gather; to unite; to unify; whole"},"萬":{"zhuyin":"ㄨㄢˋ","english":"surname Wan; ten thousand; a great number"},"局":{"zhuyin":"ㄐㄩˊ","english":"office; situation; classifier for games: match, set, round etc"},"冠":{"zhuyin":"ㄍㄨㄢˋ","english":"surname Guan; hat; crown; crest; cap; to put on a hat; to be first; to dub"},"顯":{"zhuyin":"ㄒㄧㄢˇ","english":"to make visible; to reveal; prominent; conspicuous; (prefix) phanero-"},"六":{"zhuyin":"ㄌㄧㄡˋ","english":"six; 6"},"籃":{"zhuyin":"ㄌㄢˊ","english":"basket (receptacle); basket (in basketball)"},"說":{"zhuyin":"ㄕㄨㄟˋ","english":"to persuade; to speak; to talk; to say; to explain; to comment; to scold; to tell off; (bound form) theory; doctrine"},"羊":{"zhuyin":"ㄧㄤˊ","english":"surname Yang; sheep; goat; CL:頭|头[tou2],隻|只[zhi1]"},"華":{"zhuyin":"ㄏㄨㄚˊ","english":"abbr. for China; Mount Hua 華山|华山[Hua4 Shan1] in Shaanxi; surname Hua; old variant of 花[hua1]; flower; magnificent; splendid; flowery"},"個":{"zhuyin":"ㄍㄜˇ","english":"used in 自個兒|自个儿[zi4 ge3 r5]; (classifier used before a noun that has no specific classifier); (bound form) individual"},"類":{"zhuyin":"ㄌㄟˋ","english":"kind; type; class; category; (classifier) kind; type; (bound form) to resemble; to be similar to"},"諾":{"zhuyin":"ㄋㄨㄛˋ","english":"to consent; to promise; (literary) yes!"},"強":{"zhuyin":"ㄑㄧㄤˊ","english":"surname Qiang; stubborn; unyielding; strong; powerful; better; slightly more than; vigorous; violent; best in their category, e.g. see 百強|百强[bai3 qiang2]; to force; to compel; to strive; to make an effort"},"給":{"zhuyin":"ㄍㄟˇ","english":"to; for; for the benefit of; to give; to allow; to do sth (for sb); (grammatical equivalent of 被); (grammatical equivalent of 把); (sentence intensifier); to supply; to provide"},"所":{"zhuyin":"ㄙㄨㄛˇ","english":"actually; place; classifier for houses, small buildings, institutions etc; that which; particle introducing a relative clause or passive; CL:個|个[ge4]"},"型":{"zhuyin":"ㄒㄧㄥˊ","english":"mold; type; style; model"},"歐":{"zhuyin":"ㄡ","english":"Europe (abbr. for 歐洲|欧洲[Ou1zhou1]); surname Ou; (used for transliteration); old variant of 謳|讴[ou1]"},"對":{"zhuyin":"ㄉㄨㄟˋ","english":"right; correct; towards; at; for; concerning; regarding; to treat (sb a certain way); to face; (bound form) opposite; facing; matching; to match together; to adjust; to fit; to suit; to answer; to reply; to add; to pour in (a fluid); to check; to compare; classifier: couple; pair"},"未":{"zhuyin":"ㄨㄟˋ","english":"not yet; did not; have not; not; 8th earthly branch: 1-3 p.m., 6th solar month (7th July-6th August), year of the Sheep; ancient Chinese compass point: 210°"},"括":{"zhuyin":"ㄎㄨㄛˋ","english":"(bound form) to tie up; to tighten up; (bound form) to include; to comprise; to put (text) in brackets; Taiwan pr. [gua1]"},"得":{"zhuyin":"ㄉㄜˊ","english":"to obtain; to get; to gain; to catch (a disease); proper; suitable; proud; contented; to allow; to permit; ready; finished; structural particle: used after a verb (or adjective as main verb), linking it to following phrase indicating effect, degree, possibility etc; to have to; must; ought to; to need to"},"竟":{"zhuyin":"ㄐㄧㄥˋ","english":"unexpectedly; actually; to go so far as to; indeed"},"連":{"zhuyin":"ㄌㄧㄢˊ","english":"surname Lian; to link; to join; to connect; continuously; in succession; including; (used with 也[ye3], 都[dou1] etc) even; company (military)"},"快":{"zhuyin":"ㄎㄨㄞˋ","english":"rapid; quick; speed; rate; soon; almost; to make haste; clever; sharp (of knives or wits); forthright; plainspoken; gratified; pleased; pleasant"},"混":{"zhuyin":"ㄏㄨㄣˊ","english":"muddy; turbid (variant of 渾|浑[hun2]); brainless; foolish (variant of 渾|浑[hun2]); Taiwan pr. [hun4]; to mix; to mingle; muddled; to drift along; to muddle along; to pass for; to get along with sb; thoughtless; reckless"},"再":{"zhuyin":"ㄗㄞˋ","english":"again; once more; re-; further; beyond this point of time; (before an adjective) more; then (after sth, and not until then); no matter how ... (followed by an adjective or verb, and then (usually) 也[ye3] or 都[dou1] for emphasis); (used to introduce additional information, as in 再則|再则[zai4ze2], 再就是[zai4jiu4shi4] etc); (literary) to reappear; to reoccur"},"業":{"zhuyin":"ㄧㄝˋ","english":"surname Ye; line of business; industry; occupation; job; employment; school studies; enterprise; property; (Buddhism) karma; deed; to engage in; already"},"告":{"zhuyin":"ㄍㄠˋ","english":"(bound form) to say; to tell; to announce; to report; to denounce; to file a lawsuit; to sue"},"賽":{"zhuyin":"ㄙㄞˋ","english":"to compete; competition; match; to surpass; better than; superior to; to excel"},"查":{"zhuyin":"ㄓㄚ","english":"surname Zha; to research; to check; to investigate; to examine; to refer to; to look up (e.g. a word in a dictionary); variant of 楂[zha1]"},"影":{"zhuyin":"ㄧㄥˇ","english":"picture; image; film; movie; photograph; reflection; shadow; trace"},"分":{"zhuyin":"ㄈㄣ","english":"to divide; to separate; to distribute; to allocate; to distinguish (good and bad); (bound form) branch of (an organization); sub- (as in 分局[fen1 ju2]); fraction; one tenth (of certain units); unit of length equivalent to 0.33 cm; minute (unit of time); minute (angular measurement unit); a point (in sports or games); 0.01 yuan (unit of money); part; share; ingredient; component"},"好":{"zhuyin":"ㄏㄠˇ","english":"good; appropriate; proper; all right!; (before a verb) easy to; (before a verb) good to; (before an adjective for exclamatory effect) so; (verb complement indicating completion); (of two people) close; on intimate terms; (after a personal pronoun) hello; to be fond of; to have a tendency to; to be prone to"},"級":{"zhuyin":"ㄐㄧˊ","english":"level; grade; rank; step (of stairs); CL:個|个[ge4]; classifier: step, level"},"投":{"zhuyin":"ㄊㄡˊ","english":"to throw (sth in a specific direction: ball, javelin, grenade etc); to cast (a ballot); to cast (a glance, a shadow etc); to put in (money for investment, a coin to operate a slot machine); to send (a letter, a manuscript etc); to throw oneself into (a river, a well etc to commit suicide); to go to; to seek refuge; to place oneself into the hands of; (coll.) to rinse (clothes) in water"},"千":{"zhuyin":"ㄑㄧㄢ","english":"thousand"},"用":{"zhuyin":"ㄩㄥˋ","english":"to use; to make use of; to employ; (coverb) with; using; to need; to have to (usu. used in the negative or in questions); usefulness; utility; (bound form) expense; outlay; (courteous) to eat; to drink; (literary) hence; therefore"},"司":{"zhuyin":"ㄙ","english":"surname Si; to take charge of; to manage; department (under a ministry)"},"每":{"zhuyin":"ㄇㄟˇ","english":"each; every"},"拉":{"zhuyin":"ㄌㄚ","english":"to pull; to play (a bowed instrument); to drag; to draw; to chat; (coll.) to empty one's bowels; to make a cut in (sth); to slit; to gash; to slash; used in 拉拉蛄[la4la4gu3]; variant of 落[la4]"},"銀":{"zhuyin":"ㄧㄣˊ","english":"silver; silver-colored; relating to money or currency"},"定":{"zhuyin":"ㄉㄧㄥˋ","english":"to fix; to set; to make definite; to subscribe to (a newspaper etc); to book (tickets etc); to order (goods etc); to congeal; to coagulate; (literary) definitely"},"因":{"zhuyin":"ㄧㄣ","english":"cause; reason; because"},"危":{"zhuyin":"ㄨㄟ","english":"surname Wei; danger; to endanger; Taiwan pr. [wei2]"},"乃":{"zhuyin":"ㄋㄞˇ","english":"to be; thus; so; therefore; then; only; thereupon"},"高":{"zhuyin":"ㄍㄠ","english":"surname Gao; high; tall; above average; loud; your (honorific)"},"為":{"zhuyin":"ㄨㄟˊ","english":"as (in the capacity of); to take sth as; to act as; to serve as; to behave as; to become; to be; to do; by (in the passive voice); because of; for; to"},"冊":{"zhuyin":"ㄘㄜˋ","english":"book; booklet; classifier for books"},"利":{"zhuyin":"ㄌㄧˋ","english":"surname Li; sharp; favorable; advantage; benefit; profit; interest; to do good to; to benefit"},"工":{"zhuyin":"ㄍㄨㄥ","english":"work; worker; skill; profession; trade; craft; labor"},"任":{"zhuyin":"ㄖㄣˊ","english":"surname Ren; to assign; to appoint; to take up a post; office; responsibility; to let; to allow; to give free rein to; no matter (how, what etc); classifier for terms served in office, or for spouses, girlfriends etc (as in 前任男友)"},"沒":{"zhuyin":"ㄇㄟˊ","english":"(negative prefix for verbs) have not; not; drowned; to end; to die; to inundate"},"辦":{"zhuyin":"ㄅㄢˋ","english":"to take care of (a matter); to deal with (a task, procedure etc); to organize (an event); to establish; to set up; to manage; to run (an enterprise); (law) to handle; to investigate; to prosecute (a case or suspect)"},"莫":{"zhuyin":"ㄇㄛˋ","english":"surname Mo; do not; there is none who"},"西":{"zhuyin":"ㄒㄧ","english":"the West; abbr. for Spain 西班牙[Xi1 ban1 ya2]; Spanish; west"},"察":{"zhuyin":"ㄔㄚˊ","english":"short name for Chahar Province 察哈爾|察哈尔[Cha2 ha1 er3]; to examine; to inquire; to observe; to inspect; to look into; obvious; clearly evident"},"練":{"zhuyin":"ㄌㄧㄢˋ","english":"to practice; to train; to drill; to perfect (one's skill); exercise; (literary) white silk; to boil and scour raw silk"},"戰":{"zhuyin":"ㄓㄢˋ","english":"to fight; fight; war; battle"},"模":{"zhuyin":"ㄇㄛˊ","english":"to imitate; model; norm; pattern; mold; die; matrix; pattern"},"起":{"zhuyin":"ㄑㄧˇ","english":"to rise; to raise; to get up; to set out; to start; to appear; to launch; to initiate (action); to draft; to establish; to get (from a depot or counter); verb suffix, to start; starting from (a time, place, price etc); classifier for occurrences or unpredictable events: case, instance; classifier for groups: batch, group"},"何":{"zhuyin":"ㄏㄜˊ","english":"surname He; what; how; why; which; carry"},"英":{"zhuyin":"ㄧㄥ","english":"United Kingdom; British; England; English; abbr. for 英國|英国[Ying1 guo2]; hero; outstanding; excellent; (literary) flower; blossom"},"幣":{"zhuyin":"ㄅㄧˋ","english":"money; coins; currency; silk"},"漲":{"zhuyin":"ㄓㄤˇ","english":"to rise (of prices, rivers); to swell; to distend"},"結":{"zhuyin":"ㄐㄧㄝ","english":"(of a plant) to produce (fruit or seeds); Taiwan pr. [jie2]; knot; sturdy; bond; to tie; to bind; to check out (of a hotel)"},"度":{"zhuyin":"ㄉㄨˋ","english":"to pass; to spend (time); measure; limit; extent; degree of intensity; degree (angles, temperature etc); kilowatt-hour; classifier for events and occurrences; to estimate; Taiwan pr. [duo4]"},"之":{"zhuyin":"ㄓ","english":"(possessive particle, literary equivalent of 的[de5]); him; her; it"},"並":{"zhuyin":"ㄅㄧㄥˋ","english":"and; furthermore; also; together with; (not) at all; simultaneously; to combine; to join; to merge"},"無":{"zhuyin":"ㄇㄛˊ","english":"used in 南無|南无[na1mo2]; not to have; no; none; not; to lack; un-; -less"},"膨":{"zhuyin":"ㄆㄥˊ","english":"swollen"},"項":{"zhuyin":"ㄒㄧㄤˋ","english":"surname Xiang; back of neck; item; thing; term (in a mathematical formula); sum (of money); classifier for principles, items, clauses, tasks, research projects etc"},"美":{"zhuyin":"ㄇㄟˇ","english":"(bound form) the Americas (abbr. for 美洲[Mei3 zhou1]); (bound form) USA (abbr. for 美國|美国[Mei3 guo2]); beautiful; very satisfactory; good; to beautify; to be pleased with oneself"},"奪":{"zhuyin":"ㄉㄨㄛˊ","english":"to seize; to take away forcibly; to wrest control of; to compete or strive for; to force one's way through; to leave out; to lose"},"弊":{"zhuyin":"ㄅㄧˋ","english":"detriment; fraud; harm; defeat"},"答":{"zhuyin":"ㄉㄚ","english":"bound form having the same meaning as the free word 答[da2], used in 答應|答应[da1ying5], 答理[da1li5] etc; to answer; to reply; to respond"},"便":{"zhuyin":"ㄅㄧㄢˋ","english":"plain; informal; suitable; convenient; opportune; to urinate or defecate; equivalent to 就[jiu4]: then; in that case; even if; soon afterwards; used in 便宜[pian2yi5]; used in 便便[pian2pian2]; used in 便嬛[pian2xuan1]"},"前":{"zhuyin":"ㄑㄧㄢˊ","english":"front; forward; ahead; first; top (followed by a number); future; ago; before; BC (e.g. 前293年); former; formerly"},"第":{"zhuyin":"ㄉㄧˋ","english":"(prefix indicating ordinal number, as in 第六[di4-liu4] \"sixth\"); (literary) grades in which successful candidates in the imperial examinations were placed; (old) residence of a high official; (literary) but; however; (literary) only; just"},"考":{"zhuyin":"ㄎㄠˇ","english":"to check; to verify; to test; to examine; to take an exam; to take an entrance exam for; deceased father"},"干":{"zhuyin":"ㄍㄢ","english":"surname Gan; (bound form) to have to do with; to concern oneself with; one of the ten heavenly stems 天干[tian gan1]; (archaic) shield"},"川普":{"zhuyin":"ㄔㄨㄢ ㄆㄨˇ","english":"Trump (transliteration)"},"伊朗":{"zhuyin":"ㄧ ㄌㄤˇ","english":"Iran"},"最後期限":{"zhuyin":"ㄗㄨㄟˋ ㄏㄡˋ ㄑㄧ ㄒㄧㄢˋ","english":"deadline"},"到了":{"zhuyin":"ㄉㄠˋ ㄌㄧㄠˇ","english":"at last; finally; in the end"},"石油":{"zhuyin":"ㄕˊ ㄧㄡˊ","english":"petroleum, oil"},"飆漲":{"zhuyin":"ㄅㄧㄠ ㄓㄤˇ","english":"to surge, to skyrocket"},"戰爭":{"zhuyin":"ㄓㄢˋ ㄓㄥ","english":"war"},"陰影":{"zhuyin":"ㄧㄣ ㄧㄥˇ","english":"shadow, specter"},"加深":{"zhuyin":"ㄐㄧㄚ ㄕㄣ","english":"to deepen"},"今天":{"zhuyin":"ㄐㄧㄣ ㄊㄧㄢ","english":"today; the present time; now"},"四月":{"zhuyin":"ㄙˋ ㄩㄝˋ","english":"April; fourth month (of the lunar year)"},"正式":{"zhuyin":"ㄓㄥˋ ㄕˋ","english":"formal; official"},"到期":{"zhuyin":"ㄉㄠˋ ㄑㄧ","english":"to fall due (loan etc); to expire (visa etc); to mature (investment bond etc)"},"要求":{"zhuyin":"ㄧㄠ ㄑㄧㄡˊ","english":"to request; to require; requirement; to stake a claim; to ask; to demand; CL:點|点[dian3]"},"重新":{"zhuyin":"ㄔㄨㄥˊ ㄒㄧㄣ","english":"again; once more; re-"},"開放":{"zhuyin":"ㄎㄞ ㄈㄤˋ","english":"to bloom; to open; to be open (to the public); to open up (to the outside); to be open-minded; unrestrained by convention; unconstrained in one's sexuality"},"海峽":{"zhuyin":"ㄏㄞˇ ㄒㄧㄚˊ","english":"strait; channel"},"全球":{"zhuyin":"ㄑㄩㄢˊ ㄑㄧㄡˊ","english":"global, worldwide"},"五分之一":{"zhuyin":"ㄨˇ ㄈㄣ ㄓ ㄧ","english":"one fifth"},"經過":{"zhuyin":"ㄐㄧㄥ ㄍㄨㄛˋ","english":"to pass; to go through; process; course; CL:個|个[ge4]"},"那裡":{"zhuyin":"ㄋㄚˋ ˙ㄌㄧ","english":"there; that place"},"否則":{"zhuyin":"ㄈㄡˇ ㄗㄜˊ","english":"otherwise; if not; or (else)"},"攻擊":{"zhuyin":"ㄍㄨㄥ ㄐㄧ","english":"to attack; to accuse; to charge; an attack (terrorist or military)"},"能源":{"zhuyin":"ㄋㄥˊ ㄩㄢˊ","english":"energy"},"設施":{"zhuyin":"ㄕㄜˋ ㄕ","english":"facilities, infrastructure"},"拒絕":{"zhuyin":"ㄐㄩˋ ㄐㄩㄝˋ","english":"to refuse, to reject"},"無力":{"zhuyin":"ㄨˊ ㄌㄧˋ","english":"powerless; lacking strength"},"威脅":{"zhuyin":"ㄨㄟ ㄒㄧㄝˊ","english":"threat, to threaten"},"已經":{"zhuyin":"ㄧˇ ㄐㄧㄥ","english":"already"},"星期":{"zhuyin":"ㄒㄧㄥ ㄑㄧ","english":"week; CL:個|个[ge4]; day of the week; Sunday"},"超過":{"zhuyin":"ㄔㄠ ㄍㄨㄛˋ","english":"to surpass; to exceed; to outstrip"},"死亡":{"zhuyin":"ㄙˇ ㄨㄤˊ","english":"death"},"價格":{"zhuyin":"ㄐㄧㄚˋ ㄍㄜˊ","english":"price; CL:個|个[ge4]"},"美元":{"zhuyin":"ㄇㄟˇ ㄩㄢˊ","english":"American dollar; US dollar"},"以來":{"zhuyin":"ㄧˇ ㄌㄞˊ","english":"since (a previous event)"},"最高":{"zhuyin":"ㄗㄨㄟˋ ㄍㄠ","english":"tallest; highest; supreme (court etc)"},"美國國會":{"zhuyin":"ㄇㄟˇ ㄍㄨㄛˊ ㄍㄨㄛˊ ㄏㄨㄟˋ","english":"US Congress"},"面臨":{"zhuyin":"ㄇㄧㄢˋ ㄌㄧㄣˊ","english":"to face sth; to be confronted with"},"壓力":{"zhuyin":"ㄧㄚ ㄌㄧˋ","english":"pressure"},"因為":{"zhuyin":"ㄧㄣ ㄨㄟˋ","english":"because; owing to; on account of"},"權力":{"zhuyin":"ㄑㄩㄢˊ ㄌㄧˋ","english":"power; authority"},"六十":{"zhuyin":"ㄌㄧㄡˋ ㄕˊ","english":"sixty; 60"},"期限":{"zhuyin":"ㄑㄧ ㄒㄧㄢˋ","english":"time limit; deadline; allotted time"},"總統":{"zhuyin":"ㄗㄨㄥˇ ㄊㄨㄥˇ","english":"president"},"需要":{"zhuyin":"ㄒㄩ ㄧㄠˋ","english":"to need; to want; to demand; to require; needs"},"國會":{"zhuyin":"ㄍㄨㄛˊ ㄏㄨㄟˋ","english":"Congress"},"同意":{"zhuyin":"ㄊㄨㄥˊ ㄧˋ","english":"to agree; to consent; to approve"},"才能":{"zhuyin":"ㄘㄞˊ ㄋㄥˊ","english":"talent; ability; capacity"},"繼續":{"zhuyin":"ㄐㄧˋ ㄒㄩˋ","english":"to continue; to proceed with; to go on with"},"發布":{"zhuyin":"ㄈㄚ ㄅㄨˋ","english":"to release, to announce"},"參數":{"zhuyin":"ㄘㄢ ㄕㄨˋ","english":"parameter"},"免費":{"zhuyin":"ㄇㄧㄢˇ ㄈㄟˋ","english":"free (of charge)"},"中國":{"zhuyin":"ㄓㄨㄥ ㄍㄨㄛˊ","english":"China"},"公司":{"zhuyin":"ㄍㄨㄥ ㄙ","english":"company; firm; corporation; CL:家[jia1]"},"深度":{"zhuyin":"ㄕㄣ ㄉㄨˋ","english":"depth; (of a speech etc) profundity; advanced stage of development"},"求索":{"zhuyin":"ㄑㄧㄡˊ ㄙㄨㄛˇ","english":"to search for sth; to seek; to quest; to explore"},"模型":{"zhuyin":"ㄇㄛˊ ㄒㄧㄥˊ","english":"model"},"這個":{"zhuyin":"ㄓㄜˋ ˙ㄍㄜ","english":"(pronoun) this; (adjective) this"},"目前":{"zhuyin":"ㄇㄨˋ ㄑㄧㄢˊ","english":"at the present time; currently"},"一種":{"zhuyin":"ㄧ ㄓㄨㄥˇ","english":"one kind of; one type of"},"混合":{"zhuyin":"ㄏㄨㄣˋ ㄏㄜˊ","english":"to mix; to blend; hybrid; composite"},"專家":{"zhuyin":"ㄓㄨㄢ ㄐㄧㄚ","english":"expert; specialist"},"技術":{"zhuyin":"ㄐㄧˋ ㄕㄨˋ","english":"technology, technique"},"每次":{"zhuyin":"ㄇㄟˇ ㄘˋ","english":"every time"},"七十":{"zhuyin":"ㄑㄧ ㄕˊ","english":"seventy; 70"},"來回":{"zhuyin":"ㄌㄞˊ ㄏㄨㄟˊ","english":"to make a round trip; return journey; back and forth; to and fro; repeatedly"},"答問":{"zhuyin":"ㄉㄚˊ ㄨㄣˋ","english":"to answer a question; question and answer"},"所以":{"zhuyin":"ㄙㄨㄛˇ ㄧˇ","english":"therefore; as a result; so; the reason why"},"起來":{"zhuyin":"ㄑㄧˇ ˙ㄌㄞ","english":"to stand up; to get up; also pr. [qi3lai2]; (after a verb) indicating the beginning and continuation of an action or a state; indicating an upward movement (e.g. after 站[zhan4]); indicating completion; (after a perception verb, e.g. 看[kan4]) expressing preliminary judgment; also pr. [qi3lai5]"},"吃驚":{"zhuyin":"ㄔ ㄐㄧㄥ","english":"to be startled; to be shocked; to be amazed"},"訓練":{"zhuyin":"ㄒㄩㄣˋ ㄌㄧㄢˋ","english":"training"},"費用":{"zhuyin":"ㄈㄟˋ ㄩㄥˋ","english":"cost, expense"},"大約":{"zhuyin":"ㄉㄚˋ ㄩㄝ","english":"approximately; probably"},"二十":{"zhuyin":"ㄦˋ ㄕˊ","english":"twenty; 20"},"美國":{"zhuyin":"ㄇㄟˇ ㄍㄨㄛˊ","english":"United States; USA; US"},"類似":{"zhuyin":"ㄌㄟˋ ㄙˋ","english":"similar; analogous"},"便宜":{"zhuyin":"ㄅㄧㄢˋ ㄧˊ","english":"convenient; cheap; inexpensive; a petty advantage; to let sb off lightly"},"任何":{"zhuyin":"ㄖㄣˋ ㄏㄜˊ","english":"any; whatever; whichever"},"可以":{"zhuyin":"ㄎㄜˇ ㄧˇ","english":"can; may; possible; able to; not bad; pretty good"},"下載":{"zhuyin":"ㄒㄧㄚˋ ㄗㄞˇ","english":"to download"},"使用":{"zhuyin":"ㄕˇ ㄩㄥˋ","english":"to use; to employ; to apply; to make use of"},"產業":{"zhuyin":"ㄔㄢˇ ㄧㄝˋ","english":"industry"},"競爭":{"zhuyin":"ㄐㄧㄥˋ ㄓㄥ","english":"competition"},"格局":{"zhuyin":"ㄍㄜˊ ㄐㄩˊ","english":"pattern, landscape"},"影響":{"zhuyin":"ㄧㄥˇ ㄒㄧㄤˇ","english":"influence; effect; to influence; to affect (usually adversely); to disturb; CL:股[gu3]"},"限制":{"zhuyin":"ㄒㄧㄢˋ ㄓˋ","english":"to restrict; to limit; to confine; restriction; limit; CL:個|个[ge4]"},"郵寄":{"zhuyin":"ㄧㄡˊ ㄐㄧˋ","english":"to mail"},"投票":{"zhuyin":"ㄊㄡˊ ㄆㄧㄠˋ","english":"to vote, voting"},"聯合":{"zhuyin":"ㄌㄧㄢˊ ㄏㄜˊ","english":"to combine; to join; unite; alliance"},"提告":{"zhuyin":"ㄊㄧˊ ㄍㄠˋ","english":"(law) to sue"},"行政命令":{"zhuyin":"ㄒㄧㄥˊ ㄓㄥˋ ㄇㄧㄥˋ ㄌㄧㄥˋ","english":"executive order"},"建立":{"zhuyin":"ㄐㄧㄢˋ ㄌㄧˋ","english":"to establish; to set up; to found"},"全國":{"zhuyin":"ㄑㄩㄢˊ ㄍㄨㄛˊ","english":"whole nation; nationwide; countrywide; national"},"選民":{"zhuyin":"ㄒㄩㄢˇ ㄇㄧㄣˊ","english":"voters"},"名冊":{"zhuyin":"ㄇㄧㄥˊ ㄘㄜˋ","english":"registry, roster"},"為了":{"zhuyin":"ㄨㄟˋ ˙ㄌㄜ","english":"for; for the purpose of; in order to"},"防止":{"zhuyin":"ㄈㄤˊ ㄓˇ","english":"to prevent; to guard against; to take precautions"},"選舉":{"zhuyin":"ㄒㄩㄢˇ ㄐㄩˇ","english":"election"},"作弊":{"zhuyin":"ㄗㄨㄛˋ ㄅㄧˋ","english":"to cheat, fraud"},"批評者":{"zhuyin":"ㄆㄧ ㄆㄧㄥˊ ㄓㄜˇ","english":"critic; detractor"},"認為":{"zhuyin":"ㄖㄣˋ ㄨㄟˊ","english":"to believe; to think; to consider; to feel"},"合法":{"zhuyin":"ㄏㄜˊ ㄈㄚˇ","english":"lawful; legitimate; legal"},"無法":{"zhuyin":"ㄨˊ ㄈㄚˇ","english":"unable to; incapable of"},"包括":{"zhuyin":"ㄅㄠ ㄎㄨㄛˋ","english":"to comprise; to include; to involve; to incorporate; to consist of"},"伊利諾州":{"zhuyin":"ㄧ ㄌㄧˋ ㄋㄨㄛˋ ㄓㄡ","english":"Illinois"},"在內":{"zhuyin":"ㄗㄞˋ ㄋㄟˋ","english":"(included) in it; among them"},"馬上":{"zhuyin":"ㄇㄚˇ ㄕㄤˋ","english":"at once; right away; immediately; on horseback (i.e. by military force)"},"沒有":{"zhuyin":"ㄇㄟˊ ㄧㄡˇ","english":"haven't; hasn't; doesn't exist; to not have; to not be"},"怎麼辦":{"zhuyin":"ㄗㄣˇ ˙ㄇㄜ ㄅㄢˋ","english":"what's to be done"},"檢察":{"zhuyin":"ㄐㄧㄢˇ ㄔㄚˊ","english":"to inspect; (law) to prosecute; to investigate"},"重建":{"zhuyin":"ㄔㄨㄥˊ ㄐㄧㄢˋ","english":"to rebuild; to reestablish; reconstruction; rebuilding"},"時期":{"zhuyin":"ㄕˊ ㄑㄧ","english":"period; phase; CL:個|个[ge4]"},"嚴重":{"zhuyin":"ㄧㄢˊ ㄓㄨㄥˋ","english":"grave; serious; severe; critical"},"聯邦":{"zhuyin":"ㄌㄧㄢˊ ㄅㄤ","english":"federal"},"干預":{"zhuyin":"ㄍㄢ ㄩˋ","english":"to interfere"},"今年":{"zhuyin":"ㄐㄧㄣ ㄋㄧㄢˊ","english":"this year"},"十一月":{"zhuyin":"ㄕˊ ㄧ ㄩㄝˋ","english":"November; eleventh month (of the lunar year)"},"期中":{"zhuyin":"ㄑㄧ ㄓㄨㄥ","english":"interim; midterm"},"考驗":{"zhuyin":"ㄎㄠˇ ㄧㄢˋ","english":"test, trial"},"央行":{"zhuyin":"ㄧㄤ ㄏㄤˊ","english":"central bank"},"暫停":{"zhuyin":"ㄓㄢˋ ㄊㄧㄥˊ","english":"to pause, to suspend"},"降息":{"zhuyin":"ㄐㄧㄤˋ ㄒㄧˊ","english":"to cut interest rates"},"利率":{"zhuyin":"ㄌㄧˋ ㄌㄩˋ","english":"interest rate"},"不到":{"zhuyin":"ㄅㄨˋ ㄉㄠˋ","english":"not to arrive; not reaching; insufficient; less than"},"疫情":{"zhuyin":"ㄧˋ ㄑㄧㄥˊ","english":"epidemic, pandemic"},"去年":{"zhuyin":"ㄑㄩˋ ㄋㄧㄢˊ","english":"last year"},"多國":{"zhuyin":"ㄉㄨㄛ ㄍㄨㄛˊ","english":"multinational"},"家的":{"zhuyin":"ㄐㄧㄚ ˙ㄉㄜ","english":"(old) wife"},"中央銀行":{"zhuyin":"ㄓㄨㄥ ㄧㄤ ㄧㄣˊ ㄏㄤˊ","english":"central bank"},"開始":{"zhuyin":"ㄎㄞ ㄕˇ","english":"to begin; beginning; to start; initial; CL:個|个[ge4]"},"降低":{"zhuyin":"ㄐㄧㄤˋ ㄉㄧ","english":"to reduce; to lower; to bring down"},"最新":{"zhuyin":"ㄗㄨㄟˋ ㄒㄧㄣ","english":"latest; newest"},"資料":{"zhuyin":"ㄗ ㄌㄧㄠˋ","english":"material; resources; data; information; profile (Internet); CL:份[fen4],個|个[ge4]"},"顯示":{"zhuyin":"ㄒㄧㄢˇ ㄕˋ","english":"to show; to illustrate; to display; to demonstrate"},"百分之":{"zhuyin":"ㄅㄞˇ ㄈㄣ ㄓ","english":"percent"},"停下來":{"zhuyin":"ㄊㄧㄥˊ ㄒㄧㄚˋ ㄌㄞˊ","english":"to stop"},"新冠":{"zhuyin":"ㄒㄧㄣ ㄍㄨㄢ","english":"novel coronavirus (abbr. for 新型冠狀病毒|新型冠状病毒[xin1 xing2 guan1 zhuang4 bing4 du2]) (esp. SARS-CoV-2, the virus causing COVID-19)"},"高出":{"zhuyin":"ㄍㄠ ㄔㄨ","english":"to be higher (than the stated amount) by ..."},"不少":{"zhuyin":"ㄅㄨˋ ㄕㄠˇ","english":"many; a lot; not few"},"短期":{"zhuyin":"ㄉㄨㄢˇ ㄑㄧ","english":"short term; short-term"},"可能":{"zhuyin":"ㄎㄜˇ ㄋㄥˊ","english":"might (happen); possible; probable; possibility; probability; maybe; perhaps; CL:個|个[ge4]"},"三次":{"zhuyin":"ㄙㄢ ㄘˋ","english":"third; three times; (math.) degree three, cubic (equation)"},"六月":{"zhuyin":"ㄌㄧㄡˋ ㄩㄝˋ","english":"June; sixth month (of the lunar year)"},"危機":{"zhuyin":"ㄨㄟˊ ㄐㄧ","english":"crisis"},"油價":{"zhuyin":"ㄧㄡˊ ㄐㄧㄚˋ","english":"oil price"},"通膨":{"zhuyin":"ㄊㄨㄥ ㄆㄥˊ","english":"inflation"},"物價":{"zhuyin":"ㄨˋ ㄐㄧㄚˋ","english":"prices (of goods)"},"上漲":{"zhuyin":"ㄕㄤˋ ㄓㄤˇ","english":"to rise; to go up"},"控制":{"zhuyin":"ㄎㄨㄥˋ ㄓˋ","english":"to control"},"國際貨幣基金":{"zhuyin":"ㄍㄨㄛˊ ㄐㄧˋ ㄏㄨㄛˋ ㄅㄧˋ ㄐㄧ ㄐㄧㄣ","english":"International Monetary Fund (IMF)"},"預測":{"zhuyin":"ㄩˋ ㄘㄜˋ","english":"to forecast; to predict"},"經濟":{"zhuyin":"ㄐㄧㄥ ㄐㄧˋ","english":"economy; economic"},"成長":{"zhuyin":"ㄔㄥˊ ㄓㄤˇ","english":"to mature; to grow; growth"},"穩定":{"zhuyin":"ㄨㄣˇ ㄉㄧㄥˋ","english":"stable, steady"},"不算":{"zhuyin":"ㄅㄨˋ ㄙㄨㄢˋ","english":"to not calculate; to not count; to not be considered (as); to have no weight"},"密西根":{"zhuyin":"ㄇㄧˋ ㄒㄧ ㄍㄣ","english":"Michigan"},"今晚":{"zhuyin":"ㄐㄧㄣ ㄨㄢˇ","english":"tonight"},"對手":{"zhuyin":"ㄉㄨㄟˋ ㄕㄡˇ","english":"opponent; rival; competitor; (well-matched) adversary; match"},"康乃狄克":{"zhuyin":"ㄎㄤ ㄋㄞˇ ㄉㄧˊ ㄎㄜˋ","english":"Connecticut, US state (Tw)"},"大學":{"zhuyin":"ㄉㄚˋ ㄒㄩㄝˊ","english":"the Great Learning, one of the Four Books 四書|四书[Si4 shu1] in Confucianism; university; college; CL:所[suo3]"},"印第安納":{"zhuyin":"ㄧㄣˋ ㄉㄧˋ ㄢ ㄋㄚˋ","english":"Indiana, US state"},"對上":{"zhuyin":"ㄉㄨㄟˋ ㄕㄤˋ","english":"to fit one into the other; to bring two things into contact"},"爭奪":{"zhuyin":"ㄓㄥ ㄉㄨㄛˊ","english":"to fight over; to contest; to vie over"},"男籃":{"zhuyin":"ㄋㄢˊ ㄌㄢˊ","english":"men's basketball"},"冠軍":{"zhuyin":"ㄍㄨㄢˋ ㄐㄩㄣ","english":"champion, championship"},"第一次":{"zhuyin":"ㄉㄧˋ ㄧ ㄘˋ","english":"the first time; first; number one"},"打進":{"zhuyin":"ㄉㄚˇ ㄐㄧㄣˋ","english":"to breach; to invade"},"冠軍賽":{"zhuyin":"ㄍㄨㄢˋ ㄐㄩㄣ ㄙㄞˋ","english":"championship game"},"週五":{"zhuyin":"ㄓㄡ ㄨˇ","english":"Friday"},"四強賽":{"zhuyin":"ㄙˋ ㄑㄧㄤˊ ㄙㄞˋ","english":"Final Four (semifinals)"},"九十":{"zhuyin":"ㄐㄧㄡˇ ㄕˊ","english":"ninety"},"大勝":{"zhuyin":"ㄉㄚˋ ㄕㄥˋ","english":"to defeat decisively"},"亞利桑那":{"zhuyin":"ㄧㄚˋ ㄌㄧˋ ㄙㄤ ㄋㄚˋ","english":"Arizona"},"中鋒":{"zhuyin":"ㄓㄨㄥ ㄈㄥ","english":"center (basketball position)"},"馬拉":{"zhuyin":"ㄇㄚˇ ㄌㄚ","english":"Mara (Aday Mara, basketball player)"},"拿下":{"zhuyin":"ㄋㄚˊ ㄒㄧㄚˋ","english":"to arrest; to capture; to seize; to win (a set, a game etc)"},"連續":{"zhuyin":"ㄌㄧㄢˊ ㄒㄩˋ","english":"consecutive, continuous"},"比賽":{"zhuyin":"ㄅㄧˇ ㄙㄞˋ","english":"competition (sports etc); match; CL:場|场[chang3],次[ci4]; to compete"},"得分":{"zhuyin":"ㄉㄜˊ ㄈㄣ","english":"to score points"},"以上":{"zhuyin":"ㄧˇ ㄕㄤˋ","english":"that level or higher; that amount or more; the above-mentioned; (used to indicate that one has completed one's remarks) That is all."},"前所未有":{"zhuyin":"ㄑㄧㄢˊ ㄙㄨㄛˇ ㄨㄟˋ ㄧㄡˇ","english":"unprecedented"},"如果":{"zhuyin":"ㄖㄨˊ ㄍㄨㄛˇ","english":"if; in case; in the event that"},"第二":{"zhuyin":"ㄉㄧˋ ㄦˋ","english":"second; number two; next; secondary"},"兵工廠":{"zhuyin":"ㄅㄧㄥ ㄍㄨㄥ ㄔㄤˇ","english":"Arsenal (football club)"},"南安":{"zhuyin":"ㄋㄢˊ ㄢ","english":"Nan'an, county-level city in Quanzhou 泉州[Quan2 zhou1], Fujian"},"爆冷":{"zhuyin":"ㄅㄠˋ ㄌㄥˇ","english":"upset (in sports)"},"淘汰":{"zhuyin":"ㄊㄠˊ ㄊㄞˋ","english":"to eliminate, to knock out"},"結束":{"zhuyin":"ㄐㄧㄝˊ ㄕㄨˋ","english":"termination; to finish; to end; to conclude; to close"},"八強賽":{"zhuyin":"ㄅㄚ ㄑㄧㄤˊ ㄙㄞˋ","english":"quarterfinal"},"降級":{"zhuyin":"ㄐㄧㄤˋ ㄐㄧˊ","english":"relegation"},"一級":{"zhuyin":"ㄧ ㄐㄧˊ","english":"first class; category A"},"聯賽":{"zhuyin":"ㄌㄧㄢˊ ㄙㄞˋ","english":"league"},"竟然":{"zhuyin":"ㄐㄧㄥˋ ㄖㄢˊ","english":"unexpectedly; to one's surprise; in spite of everything; in that crazy way; actually; to go as far as to"},"擊敗":{"zhuyin":"ㄐㄧ ㄅㄞˋ","english":"to defeat"},"英超":{"zhuyin":"ㄧㄥ ㄔㄠ","english":"English Premier League"},"領頭羊":{"zhuyin":"ㄌㄧㄥˇ ㄊㄡˊ ㄧㄤˊ","english":"frontrunner, league leader"},"先進":{"zhuyin":"ㄒㄧㄢ ㄐㄧㄣˋ","english":"sophisticated; advanced (technology etc); meritorious; exemplary (deeds etc)"},"扳平":{"zhuyin":"ㄅㄢ ㄆㄧㄥˊ","english":"to equalize (sports)"},"查爾斯":{"zhuyin":"ㄔㄚˊ ㄦˇ ㄙ","english":"Charles (player name)"},"八十":{"zhuyin":"ㄅㄚ ㄕˊ","english":"eighty; 80"},"分鐘":{"zhuyin":"ㄈㄣ ㄓㄨㄥ","english":"minute"},"雖然":{"zhuyin":"ㄙㄨㄟ ㄖㄢˊ","english":"although; even though (often used correlatively with 可是[ke3 shi4] or 但是[dan4 shi4] etc)"},"領先":{"zhuyin":"ㄌㄧㄥˇ ㄒㄧㄢ","english":"to lead; to be in front"},"現在":{"zhuyin":"ㄒㄧㄢˋ ㄗㄞˋ","english":"now; at present; at the moment; modern; current; nowadays"},"歐冠":{"zhuyin":"ㄡ ㄍㄨㄢˋ","english":"Champions League"},"戰線":{"zhuyin":"ㄓㄢˋ ㄒㄧㄢˋ","english":"front, campaign"},"十九":{"zhuyin":"ㄕˊ ㄐㄧㄡˇ","english":"nineteen; 19"},"曼城":{"zhuyin":"ㄇㄢˋ ㄔㄥˊ","english":"Manchester City"},"關鍵":{"zhuyin":"ㄍㄨㄢ ㄐㄧㄢˋ","english":"crucial point; crux; CL:個|个[ge4]; key; crucial; pivotal"},"荷莫茲海峽":{"zhuyin":"ㄏㄜˊ ㄇㄛˋ ㄗ ㄏㄞˇ ㄒㄧㄚˊ","english":"Strait of Hormuz"},"戰爭權力法":{"zhuyin":"ㄓㄢˋ ㄓㄥ ㄑㄩㄢˊ ㄌㄧˋ ㄈㄚˇ","english":"War Powers Act"},"用兵":{"zhuyin":"ㄩㄥˋ ㄅㄧㄥ","english":"to wage war, to use troops"},"深度求索":{"zhuyin":"ㄕㄣ ㄉㄨˋ ㄑㄧㄡˊ ㄙㄨㄛˇ","english":"DeepSeek (Chinese name)"},"混合專家":{"zhuyin":"ㄏㄨㄣˋ ㄏㄜˊ ㄓㄨㄢ ㄐㄧㄚ","english":"mixture of experts (AI technique)"},"檢察長":{"zhuyin":"ㄐㄧㄢˇ ㄔㄚˊ ㄓㄤˇ","english":"attorney general"},"羅爾":{"zhuyin":"ㄌㄨㄛˊ ㄦˇ","english":"Raoul (transliteration)"},"重建時期":{"zhuyin":"ㄔㄨㄥˊ ㄐㄧㄢˋ ㄕˊ ㄑㄧ","english":"Reconstruction era"},"期中選舉":{"zhuyin":"ㄑㄧ ㄓㄨㄥ ㄒㄩㄢˇ ㄐㄩˇ","english":"midterm election"},"新冠疫情":{"zhuyin":"ㄒㄧㄣ ㄍㄨㄢ ㄧˋ ㄑㄧㄥˊ","english":"COVID-19 pandemic"},"聯準會":{"zhuyin":"ㄌㄧㄢˊ ㄓㄨㄣˇ ㄏㄨㄟˋ","english":"Federal Reserve (US)"},"經濟成長":{"zhuyin":"ㄐㄧㄥ ㄐㄧˋ ㄔㄥˊ ㄓㄤˇ","english":"economic growth"},"爭冠":{"zhuyin":"ㄓㄥ ㄍㄨㄢˋ","english":"compete for championship"},"康乃狄克大學":{"zhuyin":"ㄎㄤ ㄋㄞˇ ㄉㄧˊ ㄎㄜˋ ㄉㄚˋ ㄒㄩㄝˊ","english":"University of Connecticut (UConn)"},"印第安納波利斯":{"zhuyin":"ㄧㄣˋ ㄉㄧˋ ㄢ ㄋㄚˋ ㄅㄛ ㄌㄧˋ ㄙ","english":"Indianapolis"},"亞利桑那大學":{"zhuyin":"ㄧㄚˋ ㄌㄧˋ ㄙㄤ ㄋㄚˋ ㄉㄚˋ ㄒㄩㄝˊ","english":"University of Arizona"},"隊史":{"zhuyin":"ㄉㄨㄟˋ ㄕˇ","english":"team history"},"南安普頓":{"zhuyin":"ㄋㄢˊ ㄢ ㄆㄨˇ ㄉㄨㄣˋ","english":"Southampton (football club)"},"三冠王":{"zhuyin":"ㄙㄢ ㄍㄨㄢˋ ㄨㄤˊ","english":"treble (winning three titles)"},"足總盃":{"zhuyin":"ㄗㄨˊ ㄗㄨㄥˇ ㄅㄟ","english":"FA Cup"},"史都華":{"zhuyin":"ㄕˇ ㄉㄡ ㄏㄨㄚˊ","english":"Stewart (player name)"},"居乎雷斯":{"zhuyin":"ㄐㄩ ㄏㄨ ㄌㄟˊ ㄙ","english":"Gyökeres (player name)"},"致勝球":{"zhuyin":"ㄓˋ ㄕㄥˋ ㄑㄧㄡˊ","english":"winning goal"},"爭冠關鍵":{"zhuyin":"ㄓㄥ ㄍㄨㄢˋ ㄍㄨㄢ ㄐㄧㄢˋ","english":"key to the title race"},"美夢":{"zhuyin":"ㄇㄟˇ ㄇㄥˋ","english":"beautiful dream"},"夢碎":{"zhuyin":"ㄇㄥˋ ㄙㄨㄟˋ","english":"dream shattered"}};
+</script>
+
+<script>
+/* Shared JS for all 今日讀報 page types.
+   This is a reference artifact — assemble.py reads and injects it.
+   Expects: const GLOSSARY = {...}; defined before this script. */
+
+(function () {
+  'use strict';
+
+  var lookupMode = false;
+
+  // === Translation toggles ===
+
+  document.querySelectorAll('.translation-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const container = btn.closest('.article') || btn.closest('.wisdom-section') || btn.closest('.obsession-section') || btn.parentElement;
+      const enDiv = container.querySelector('.article-body-en') || container.querySelector('.section-body-en');
+      if (!enDiv) return;
+      const isHidden = enDiv.hidden;
+      enDiv.hidden = !isHidden;
+      btn.textContent = isHidden
+        ? '隱藏翻譯 Hide Translation'
+        : '顯示翻譯 Show Translation';
+    });
+  });
+
+  // === Mobile character lookup ===
+
+  var isMobile = window.matchMedia('(pointer: coarse)').matches;
+
+  if (isMobile) {
+    var longPressTimer = null;
+    var feedbackTimer = null;
+    var startX = 0;
+    var startY = 0;
+    var activeSpan = null;
+    var LONG_PRESS_MS = 400;
+    var MOVE_THRESHOLD = 10;
+
+    var popup = document.getElementById('char-popup');
+    var popupChar = document.getElementById('popup-char');
+    var popupZhuyin = document.getElementById('popup-zhuyin');
+    var popupDef = document.getElementById('popup-def');
+    var lookupToggleBtn = document.getElementById('lookup-toggle');
+
+    function positionPopup(targetSpan) {
+      var rect = targetSpan.getBoundingClientRect();
+      var popupWidth = 280;
+      var margin = 8;
+      var gap = 6;
+      var vw = window.innerWidth;
+
+      popup.classList.add('visible');
+      var popupHeight = popup.offsetHeight;
+
+      var left = rect.left + rect.width / 2 - popupWidth / 2;
+      left = Math.max(margin, Math.min(left, vw - popupWidth - margin));
+
+      var top = rect.top - popupHeight - gap;
+      if (top < margin) {
+        top = rect.bottom + gap;
+      }
+
+      popup.style.left = left + 'px';
+      popup.style.top = top + 'px';
+    }
+
+    function findLongestMatch(targetSpan) {
+      if (typeof GLOSSARY === 'undefined') return null;
+
+      var parent = targetSpan.closest('p, h2, li') || targetSpan.parentElement;
+      var spans = [].slice.call(parent.querySelectorAll('.c'));
+      var targetIdx = spans.indexOf(targetSpan);
+      if (targetIdx === -1) return null;
+
+      var chars = spans.map(function (s) { return s.textContent; });
+      var MAX_WORD_LEN = 6;
+      var bestMatch = null;
+      var bestSpans = null;
+
+      for (var len = Math.min(MAX_WORD_LEN, chars.length); len >= 1; len--) {
+        var startMin = Math.max(0, targetIdx - len + 1);
+        var startMax = Math.min(targetIdx, chars.length - len);
+
+        for (var start = startMin; start <= startMax; start++) {
+          var candidate = chars.slice(start, start + len).join('');
+          if (GLOSSARY[candidate]) {
+            if (!bestMatch || candidate.length > bestMatch.length) {
+              bestMatch = candidate;
+              bestSpans = spans.slice(start, start + len);
+            }
+          }
+        }
+
+        if (bestMatch && bestMatch.length === len) break;
+      }
+
+      return bestMatch
+        ? { text: bestMatch, entry: GLOSSARY[bestMatch], spans: bestSpans }
+        : null;
+    }
+
+    function showPopup(char, targetSpan) {
+      var match = findLongestMatch(targetSpan);
+
+      if (match) {
+        popupChar.textContent = match.text;
+        popupZhuyin.textContent = match.entry.zhuyin;
+        popupDef.textContent = match.entry.english;
+      } else {
+        popupChar.textContent = char;
+        popupZhuyin.textContent = '';
+        popupDef.textContent = '(not in glossary)';
+      }
+
+      document.querySelectorAll('.c.touch-selected').forEach(function (el) {
+        el.classList.remove('touch-selected');
+      });
+
+      var highlightSpans = match ? match.spans : [targetSpan];
+      highlightSpans.forEach(function (s) { s.classList.add('touch-selected'); });
+      activeSpan = targetSpan;
+
+      positionPopup(targetSpan);
+    }
+
+    function hidePopup() {
+      popup.classList.remove('visible');
+      document.querySelectorAll('.c.touch-selected').forEach(function (el) {
+        el.classList.remove('touch-selected');
+      });
+      activeSpan = null;
+    }
+
+    document.getElementById('popup-close').addEventListener('click', hidePopup);
+
+    document.addEventListener('click', function (e) {
+      if (!popup.classList.contains('visible')) return;
+      if (popup.contains(e.target)) return;
+      if (!e.target.closest('.c')) {
+        hidePopup();
+      }
+    });
+
+    var scrollDismissAttached = false;
+    function attachScrollDismiss() {
+      if (scrollDismissAttached) return;
+      scrollDismissAttached = true;
+      window.addEventListener('scroll', function onScroll() {
+        hidePopup();
+        window.removeEventListener('scroll', onScroll);
+        scrollDismissAttached = false;
+      }, { once: true });
+    }
+
+    document.addEventListener('touchstart', function (e) {
+      var span = e.target.closest('.c');
+      if (!span) return;
+
+      var touch = e.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+
+      feedbackTimer = setTimeout(function () {
+        span.classList.add('touch-active');
+      }, 100);
+
+      longPressTimer = setTimeout(function () {
+        span.classList.remove('touch-active');
+        showPopup(span.textContent, span);
+        attachScrollDismiss();
+      }, LONG_PRESS_MS);
+    }, { passive: true });
+
+    document.addEventListener('touchmove', function (e) {
+      if (!longPressTimer) return;
+      var touch = e.touches[0];
+      if (Math.abs(touch.clientX - startX) > MOVE_THRESHOLD ||
+          Math.abs(touch.clientY - startY) > MOVE_THRESHOLD) {
+        clearTimeout(longPressTimer);
+        clearTimeout(feedbackTimer);
+        longPressTimer = null;
+        document.querySelectorAll('.touch-active').forEach(function (el) {
+          el.classList.remove('touch-active');
+        });
+      }
+    }, { passive: true });
+
+    document.addEventListener('touchend', function (e) {
+      clearTimeout(longPressTimer);
+      clearTimeout(feedbackTimer);
+      longPressTimer = null;
+      var span = e.target.closest('.c');
+      if (span) span.classList.remove('touch-active');
+    }, { passive: true });
+
+    document.addEventListener('touchcancel', function () {
+      clearTimeout(longPressTimer);
+      clearTimeout(feedbackTimer);
+      longPressTimer = null;
+      document.querySelectorAll('.touch-active').forEach(function (el) {
+        el.classList.remove('touch-active');
+      });
+    }, { passive: true });
+
+    lookupToggleBtn.addEventListener('click', function () {
+      lookupMode = !lookupMode;
+      this.textContent = lookupMode ? '查詢模式 ON' : '查詢模式 OFF';
+      this.classList.toggle('active', lookupMode);
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!lookupMode) return;
+      var span = e.target.closest('.c');
+      if (!span) return;
+      e.stopPropagation();
+      showPopup(span.textContent, span);
+      attachScrollDismiss();
+    });
+  }
+})();
+
+</script>
+
+</body>
+</html>
