@@ -75,6 +75,11 @@
       "url": "https://bestofshowhn.com/",
       "type": "aggregator",
       "notes": "Best of Show HN — curated archive of top Hacker News 'Show HN' posts by month and year"
+    },
+    {
+      "url": "https://www.fondsound.com/tag/taiwan/",
+      "type": "aggregator",
+      "notes": "FOND/SOUND: deep-dive crate-digger blog by Diego Olivas with substantial Taiwan tag — long-form reviews of obscure Taiwanese, HK, Chinese records 1980s-90s."
     }
   ]
 }
