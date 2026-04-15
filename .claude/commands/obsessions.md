@@ -6,6 +6,16 @@ All intermediate results are checkpointed to `data/pipeline/`.
 
 ---
 
+## Step 0: Determine today's date in Chicago time
+
+**Do not trust the injected `# currentDate` for `{today}`.** Cloud schedulers may run in UTC, which can put the orchestrator on a different calendar day than Chicago. Compute the authoritative date once, here, and reuse for every downstream substitution (scout prompts, headline log entries, assemble.py --date, commit messages):
+
+```bash
+python3 -c "from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo('America/Chicago')).strftime('%Y-%m-%d'))"
+```
+
+Use the stdout — and only this — as the value of `{today}` for the rest of the pipeline.
+
 ## Step 1: Read config, headline log, and source files
 
 Read these files:

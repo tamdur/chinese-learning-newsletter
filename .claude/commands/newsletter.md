@@ -10,7 +10,21 @@ All intermediate results are checkpointed to `data/pipeline/`. If a previous run
 
 This phase uses the subagent architecture. Execute these steps in order. After each step, **checkpoint results to `data/pipeline/`** using the Write tool.
 
-### Step 0: Check for existing checkpoints (resume support)
+### Step 0a: Determine today's date in Chicago time
+
+**Do not trust the injected `# currentDate` for `{today}`.** Cloud schedulers may run in UTC, which can put the orchestrator on a different calendar day than Chicago. Compute the authoritative date once, here, and reuse it for every downstream `{today}` substitution (scout prompts, selected.json date field, assemble.py --date, commit messages, archive filenames):
+
+```bash
+python3 -c "from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo('America/Chicago')).strftime('%Y-%m-%d'))"
+```
+
+Use the stdout of this command — and only this command — as the value of `{today}` for the rest of the pipeline. Same for `{current_hour}` if needed:
+
+```bash
+python3 -c "from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo('America/Chicago')).strftime('%H'))"
+```
+
+### Step 0b: Check for existing checkpoints (resume support)
 
 Check if `data/pipeline/` exists and contains checkpoint files. If it does:
 

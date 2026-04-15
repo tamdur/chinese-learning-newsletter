@@ -6,6 +6,16 @@ All intermediate results are checkpointed to `data/pipeline/`.
 
 ---
 
+## Step 0: Determine today's date in Chicago time
+
+**Do not trust the injected `# currentDate` for `{today}`.** Cloud schedulers may run in UTC, which can put the orchestrator on a different calendar day than Chicago — and Heart Sutra segment selection depends on day-of-week. Compute the authoritative date and weekday once, here, and reuse for every downstream substitution:
+
+```bash
+python3 -c "from datetime import datetime; from zoneinfo import ZoneInfo; n=datetime.now(ZoneInfo('America/Chicago')); print(n.strftime('%Y-%m-%d')); print(n.weekday())"
+```
+
+First line is `{today}`. Second line is the day-of-week index (Monday=0, Sunday=6) for Heart Sutra segment selection.
+
 ## Step 1: Read config and check idempotency
 
 Read these files:
