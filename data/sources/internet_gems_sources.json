@@ -80,6 +80,11 @@
       "url": "https://www.fondsound.com/tag/taiwan/",
       "type": "aggregator",
       "notes": "FOND/SOUND: deep-dive crate-digger blog by Diego Olivas with substantial Taiwan tag — long-form reviews of obscure Taiwanese, HK, Chinese records 1980s-90s."
+    },
+    {
+      "url": "https://daily.bandcamp.com/scene-report/indie-rock-taipei-list",
+      "type": "aggregator",
+      "notes": "Bandcamp Daily scene report on underground rock in Taipei — names specific bands, labels (White Wabbit Records), and albums across eras, useful as a hunting ground for Taiwanese music obsession"
     }
   ]
 }
