@@ -74,9 +74,7 @@ fi
 python3 scripts/glossary_lookup.py
 ```
 
-**5b-5h.** Follow the same glossary-chars and glossary-words agent dispatch, merge, validate, and remediate steps as documented in `.claude/commands/newsletter.md` (Steps 5.5b through 5.5h).
-
-**Checkpoint:** Write `data/pipeline/glossary.json`.
+**5b-5f.** Follow the same glossary-chars and glossary-words agent dispatch, merge script, and remediation steps as documented in `.claude/commands/newsletter.md` (Steps 5.5b through 5.5f). All agents write their own output files to `data/pipeline/`; the merge script writes `glossary.json`.
 
 ## Step 6: Assemble and validate
 

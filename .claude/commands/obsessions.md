@@ -69,11 +69,11 @@ All scouts run concurrently. Wait for all to return.
 
 ## Step 4: Dispatch obsessions-writer
 
-Pass all successfully scouted stories to the **obsessions-writer** agent (Opus):
-- Include the editorial voice from `config/obsessions.json`
-- Agent prompt: "Write articles for today's Obsessions page. Here are the scouted stories:\n\n{scouted_stories}\n\nFollow the instructions in your agent definition."
+Dispatch the **obsessions-writer** agent (Opus). The agent reads `data/pipeline/candidates.json` and `config/obsessions.json` itself, and writes its output directly to `data/pipeline/articles.json`. It returns only a short manifest as text.
 
-**Checkpoint:** Write `data/pipeline/articles.json` — the writer's JSON array output.
+- Agent prompt: "Write today's Obsessions articles. Scouted stories are in `data/pipeline/candidates.json`. Follow the instructions in your agent definition."
+
+**Verify checkpoint:** After the agent returns, confirm `data/pipeline/articles.json` exists and contains a JSON array with one entry per successfully scouted story (each with `headline_html`, `body_html`, `headline_plain`, `source_label`, `obsession_id`). If missing or malformed, re-dispatch once.
 
 ## Step 5: Dispatch translators in parallel
 
@@ -98,9 +98,7 @@ fi
 python3 scripts/glossary_lookup.py
 ```
 
-**6b-6h.** Follow the same glossary-chars and glossary-words agent dispatch, merge, validate, and remediate steps as documented in `.claude/commands/newsletter.md` (Steps 5.5b through 5.5h).
-
-**Checkpoint:** Write `data/pipeline/glossary.json`.
+**6b-6f.** Follow the same glossary-chars and glossary-words agent dispatch, merge script, and remediation steps as documented in `.claude/commands/newsletter.md` (Steps 5.5b through 5.5f). All agents write their own output files to `data/pipeline/`; the merge script writes `glossary.json`.
 
 ## Step 7: Assemble and validate
 

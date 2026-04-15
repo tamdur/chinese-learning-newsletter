@@ -86,104 +86,67 @@ All 6 run concurrently. Wait for all to return.
 
 ### Step 5.5: Build and validate glossary
 
-The main session handles glossary building. This step uses a dictionary pre-match to minimize agent calls.
+This step keeps the orchestrator's tool-call payloads small: every agent writes its own output file, and a Python script does the merge/validation. The orchestrator never holds the merged glossary in-context.
 
 **5.5a. Ensure CEDICT dictionary exists, then run dictionary pre-match**
-
-First, check if the CEDICT dictionary exists. If not, build it (this happens on first run in cloud environments since the file is in .gitignore):
 
 ```bash
 if [ ! -f data/cedict_dictionary.json ]; then
   python3 scripts/build_dictionary.py
 fi
-```
-
-Then run the pre-match:
-
-```bash
 python3 scripts/glossary_lookup.py
 ```
 
-This script:
-1. Reads `data/pipeline/articles.json`
-2. Extracts all unique Chinese characters
-3. Looks up each against `data/cedict_dictionary.json`
-4. Performs longest-match word scanning against the dictionary
-5. Writes `data/pipeline/glossary_matched.json` (resolved entries) and `data/pipeline/glossary_unresolved.txt` (characters needing agent lookup)
+This writes `data/pipeline/glossary_matched.json` (dictionary-resolved entries) and `data/pipeline/glossary_unresolved.txt` (characters needing agent lookup).
 
-If `build_dictionary.py` fails (e.g., network error downloading CEDICT), fall back to the full agent-based approach (steps 5.5b-5.5c below with ALL characters).
+If `build_dictionary.py` fails (network error), fall back: skip 5.5a and treat ALL article characters as unresolved in 5.5b, with an empty `glossary_matched.json`.
 
-**5.5b. Dispatch single-character glossary agents for unresolved characters**
+**5.5b. Dispatch glossary-chars agents for unresolved characters**
 
-Read `data/pipeline/glossary_unresolved.txt`. If empty, skip to 5.5d.
+Read `data/pipeline/glossary_unresolved.txt`. If empty, skip to 5.5c.
 
-Chunk unresolved characters into batches of 25. Dispatch parallel `glossary-chars` agent calls.
+Chunk into batches of 25 characters. For each batch index `i` (starting at 1), dispatch one `glossary-chars` agent in parallel. Each agent prompt MUST include the OUTPUT_PATH:
 
-Each agent gets:
-- CHARACTER_LIST: 25 characters (one per line)
-- TEXT: concatenated plain text from all 6 articles (for pronunciation context)
-- Agent prompt: "CHARACTER_LIST:\n{characters}\n\nTEXT:\n{plain_text}"
+> "CHARACTER_LIST:\n{characters}\n\nTEXT:\n{plain_text}\n\nOUTPUT_PATH: data/pipeline/glossary_chars_b{i}.tsv"
 
-Each agent returns TSV (not JSON). **Convert TSV to JSON programmatically:**
+The agent writes its TSV directly to that unique path and returns a one-line manifest. The orchestrator does NOT need to capture or parse the TSV — the merge script reads it from disk.
+
+**5.5c. Dispatch glossary-words agents (ALWAYS run, in parallel with 5.5b)**
+
+Even when the dictionary resolves all single characters, CEDICT definitions are often too generic for proper nouns, transliterated names, and context-specific compounds. Always dispatch.
+
+Two parallel agents (or 6 if no CEDICT):
+- Agent 1 → `data/pipeline/glossary_words_b1.json` for articles 1-3 plain text
+- Agent 2 → `data/pipeline/glossary_words_b2.json` for articles 4-6 plain text
+
+Each prompt MUST include the OUTPUT_PATH:
+
+> "Be aggressive about coverage — include ALL proper nouns (especially transliterated names), ALL compound words, ALL technical terms. More entries is always better than fewer. When in doubt, include it.\n\nTEXT:\n{article_plain_text}\n\nOUTPUT_PATH: data/pipeline/glossary_words_b{i}.json"
+
+Each agent writes its JSON directly to that unique path and returns a one-line manifest.
+
+**5.5d. Merge and validate**
 
 ```bash
-echo "{agent_response}" | python3 -c "
-import json, sys
-glossary = {}
-for line in sys.stdin:
-    parts = line.strip().split('\t')
-    if len(parts) == 3:
-        glossary[parts[0]] = {'zhuyin': parts[1], 'english': parts[2]}
-    else:
-        if line.strip():
-            print(f'WARN: bad line: {line.strip()}', file=sys.stderr)
-print(json.dumps(glossary, ensure_ascii=False))
-"
+python3 scripts/glossary_merge.py
 ```
 
-**5.5c. Dispatch multi-character word agents (ALWAYS run)**
+This script reads `glossary_matched.json` + every `glossary_chars_*.tsv` + every `glossary_words_*.json`, applies override order (dictionary < chars-agent < words-agent), drops entries with non-Bopomofo zhuyin, checks completeness against `articles.json`, and writes `data/pipeline/glossary.json` plus `data/pipeline/glossary_missing.txt`.
 
-Even when the dictionary resolves all single characters, CEDICT definitions are often too generic for proper nouns, transliterated names, and context-specific compound words. Always dispatch glossary-words agents to supplement the dictionary.
+**5.5e. Remediation (up to 3 passes)**
 
-Batch articles into 2 parallel `glossary-words` agent calls to keep agent count low while ensuring full coverage:
-- Agent 1: articles 1-3 concatenated plain text
-- Agent 2: articles 4-6 concatenated plain text
+Read `data/pipeline/glossary_missing.txt`. If non-empty:
 
-Each agent prompt: "Be aggressive about coverage — include ALL proper nouns (especially transliterated names), ALL compound words, ALL technical terms. More entries is always better than fewer. When in doubt, include it.\n\nTEXT:\n{article_plain_text}"
+1. Chunk the missing characters into batches of 25.
+2. Dispatch fresh `glossary-chars` agents, each writing to a NEW unique path (e.g. `glossary_chars_r1_b1.tsv` for the first remediation round, batch 1) so prior batch outputs are preserved.
+3. Re-run `python3 scripts/glossary_merge.py`.
+4. Repeat up to 3 remediation rounds total.
 
-If NOT using dictionary pre-match (fallback, no CEDICT file): dispatch 6 parallel agents instead (one per article).
+After 3 rounds, accept any remaining missing characters and continue — the script's stdout reports the count.
 
-Parse each JSON response. Merge all (later overwrites earlier for duplicates). Agent word entries override dictionary entries for the same key, since agents have article context for better definitions of proper nouns and specialized terms.
+**5.5f. Verify checkpoint**
 
-**5.5d. Merge all glossary sources**
-
-Combine:
-1. Dictionary pre-matched entries (`glossary_matched.json`)
-2. Agent single-char entries (from 5.5b)
-3. Agent multi-char word entries (from 5.5c)
-
-Agent entries override dictionary entries for the same key (agents have article context for better definitions).
-
-**5.5e. Validate zhuyin format**
-
-Check every entry's "zhuyin" value contains Bopomofo characters (Unicode U+3100-U+312F: ㄅㄆㄇㄈ etc.), NOT romanized pinyin (Latin characters). Discard entries with pinyin; add their characters to the missing list.
-
-**5.5f. Validate completeness**
-
-Check that every unique character from the articles has a single-character key in the merged glossary. Collect missing characters.
-
-**5.5g. Remediation (up to 3 passes)**
-
-If missing characters exist:
-1. Dispatch another round of `glossary-chars` agents (still in batches of 25)
-2. Convert TSV programmatically, validate zhuyin, merge
-3. Repeat up to 3 total remediation passes
-
-**5.5h. Log stats and checkpoint**
-
-Print: total entries, single-char entries, multi-char entries, dictionary-matched entries, agent-resolved entries, missing characters (if any after 3 passes).
-
-**Checkpoint:** Write `data/pipeline/glossary.json` — the final merged glossary object.
+Confirm `data/pipeline/glossary.json` exists and contains entries. Note any chars from `glossary_missing.txt` for the run summary.
 
 ### Step 6: Dispatch validator
 
