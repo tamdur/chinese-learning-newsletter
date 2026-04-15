@@ -65,12 +65,13 @@ Merge results from all five scouts into a single candidate list. Launch the **st
 
 ### Step 4: Dispatch article-writer
 
-Pass the 6 selected stories to the **article-writer** agent (Opus):
-- Include for each story: `title`, `url`, `source`, `summary`, `new_development`
-- The agent will fetch the sources itself using WebFetch/WebSearch
-- Agent prompt: "Write all 6 articles for today's newsletter. Here are the selected stories:\n\n{stories_with_urls_and_summaries}\n\nFollow the instructions in your agent definition."
+Dispatch the **article-writer** agent (Opus). The agent reads `data/pipeline/selected.json` itself, fetches sources via WebFetch/WebSearch, and writes its output directly to `data/pipeline/articles.json`. It returns only a short manifest as text — do not expect the article HTML in the agent response.
 
-**Checkpoint:** Write `data/pipeline/articles.json` — the article-writer's JSON array output (each entry has `headline_html`, `body_html`, `headline_plain`, `source_label`).
+- Agent prompt: "Write today's articles. Selected stories are in `data/pipeline/selected.json`. Follow the instructions in your agent definition."
+
+**Verify checkpoint:** After the agent returns, confirm `data/pipeline/articles.json` exists and contains a JSON array of 6 entries (each with `headline_html`, `body_html`, `headline_plain`, `source_label`). If missing or malformed, re-dispatch once.
+
+**Why this pattern:** Large structured artifacts are written by the producing agent and read back by the orchestrator. This avoids streaming a large tool result and a large follow-up `Write` call in the same orchestrator turn — both of which can trip stream idle timeouts on the cloud harness. Apply the same pattern to any future agent whose output exceeds a few KB.
 
 ### Step 5: Dispatch 6 translators in parallel
 
