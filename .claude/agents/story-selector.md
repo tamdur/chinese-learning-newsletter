@@ -1,4 +1,6 @@
 ---
+name: story-selector
+description: Editor-in-chief for 今日讀報 — curate the six daily stories from scout candidates with Economist-style judgment.
 model: opus
 tools: Read, Glob
 ---

@@ -1,4 +1,6 @@
 ---
+name: glossary-words
+description: Identify multi-character Traditional Chinese words in article text and return a JSON glossary object.
 model: sonnet
 tools: []
 ---

@@ -1,4 +1,6 @@
 ---
+name: news-scout-sports
+description: Find today's Chicago sports, Michigan athletics, and Arsenal football stories via targeted web searches.
 model: sonnet
 tools: WebSearch
 ---

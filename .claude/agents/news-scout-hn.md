@@ -1,4 +1,6 @@
 ---
+name: news-scout-hn
+description: Fetch Hacker News front page stories via the Algolia API and return structured candidates for the newsletter selector.
 model: haiku
 tools: Bash, WebSearch
 ---

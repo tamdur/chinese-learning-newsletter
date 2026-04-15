@@ -1,4 +1,6 @@
 ---
+name: translator
+description: Translate a Traditional Chinese news article to natural English HTML for the newsletter translation toggle.
 model: haiku
 tools: []
 ---

@@ -1,4 +1,6 @@
 ---
+name: news-scout-national
+description: Find today's consequential US policy and Chicago local news stories as candidates for the newsletter.
 model: sonnet
 tools: WebSearch
 ---

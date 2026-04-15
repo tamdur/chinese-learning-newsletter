@@ -1,4 +1,6 @@
 ---
+name: translator-classical
+description: Translate a classical Chinese passage (Heart Sutra, Mengzi, Zen) into clear modern English for the Daily Wisdom page.
 model: opus
 tools: []
 ---

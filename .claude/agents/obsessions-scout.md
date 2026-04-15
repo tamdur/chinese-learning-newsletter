@@ -1,4 +1,6 @@
 ---
+name: obsessions-scout
+description: Research scout for the 深度專題 culture desk — find a specific, well-sourced topic for a given obsession.
 model: sonnet
 tools: WebSearch
 ---

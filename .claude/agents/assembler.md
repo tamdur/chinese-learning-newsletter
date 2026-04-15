@@ -1,4 +1,6 @@
 ---
+name: assembler
+description: Assemble the 今日讀報 newsletter HTML, run validation, remediate any failures, and commit/push the result.
 model: sonnet
 tools: Read, Write, Bash, Glob, Grep, Agent
 ---

@@ -1,4 +1,6 @@
 ---
+name: glossary-chars
+description: Look up single Traditional Chinese characters and return TSV glossary entries (char, zhuyin, English gloss).
 model: sonnet
 tools: []
 ---

@@ -1,4 +1,6 @@
 ---
+name: obsessions-writer
+description: Write a Traditional Chinese culture desk article for the 深度專題 (Obsessions) page in a museum-curator voice.
 model: opus
 tools: Read
 ---

@@ -1,4 +1,6 @@
 ---
+name: news-scout-web
+description: Find today's globally significant AI, economics, international, business, and ideas stories for the Economist desk.
 model: sonnet
 tools: WebSearch
 ---

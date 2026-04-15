@@ -1,4 +1,6 @@
 ---
+name: news-scout-rss
+description: Fetch and parse RSS feeds (Marginal Revolution, MLB Cubs, Arsenal FC) and return structured story candidates.
 model: haiku
 tools: Bash, WebSearch
 ---
