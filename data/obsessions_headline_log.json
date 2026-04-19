@@ -559,6 +559,34 @@
       "headline": "一位圖書館員的食物時間線",
       "headline_en": "The Food Timeline: A Librarian's 16-Year Solo Atlas of Food History",
       "topic": "food history chronology website"
+    },
+    {
+      "date": "2026-04-19",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "美人魚不需要王子：鄭宜蘋的噪音宇宙",
+      "headline_en": "Betty Apple's Taiwan Bay Be: Industrial Techno as Transdimensional Myth",
+      "topic": "avant-garde industrial techno-noise"
+    },
+    {
+      "date": "2026-04-19",
+      "obsession_id": "finland-honeymoon",
+      "headline": "裸麥魚包：芬蘭湖區烤了五百年的味道",
+      "headline_en": "Kalakukko: Finland's Lake District Fish Loaf",
+      "topic": "lake district traditional food"
+    },
+    {
+      "date": "2026-04-19",
+      "obsession_id": "do-312",
+      "headline": "用身體說話：芝加哥文化中心免費舞蹈工作坊",
+      "headline_en": "Praise House Language Workshop at Chicago Cultural Center",
+      "topic": "dance movement workshop"
+    },
+    {
+      "date": "2026-04-19",
+      "obsession_id": "best-of-internet",
+      "headline": "用文字畫畫的工具：GlyphDrawing.Club",
+      "headline_en": "GlyphDrawing.Club: Modular Text Art Editor with Typographic History",
+      "topic": "typographic text art tool"
     }
   ]
 }
