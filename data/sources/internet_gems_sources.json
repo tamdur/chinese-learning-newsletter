@@ -85,6 +85,11 @@
       "url": "https://daily.bandcamp.com/scene-report/indie-rock-taipei-list",
       "type": "aggregator",
       "notes": "Bandcamp Daily scene report on underground rock in Taipei — names specific bands, labels (White Wabbit Records), and albums across eras, useful as a hunting ground for Taiwanese music obsession"
+    },
+    {
+      "url": "https://mandogap.substack.com/",
+      "type": "aggregator",
+      "notes": "Mando Gap by Michael Hong — detailed critical rankings and essays on Mandopop albums by decade. Taiwan-focused, excellent for finding overlooked albums."
     }
   ]
 }
