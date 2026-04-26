@@ -90,6 +90,11 @@
       "url": "https://mandogap.substack.com/",
       "type": "aggregator",
       "notes": "Mando Gap by Michael Hong — detailed critical rankings and essays on Mandopop albums by decade. Taiwan-focused, excellent for finding overlooked albums."
+    },
+    {
+      "url": "https://en.xen.wiki/w/Main_Page",
+      "type": "aggregator",
+      "notes": "Xenharmonic Wiki — community encyclopedia of microtonal music theory and practice, active since 2005, covering tuning systems, composers, software tools, and scale mathematics."
     }
   ]
 }

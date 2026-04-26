@@ -727,6 +727,34 @@
       "headline": "一個三角形裡有多少秘密？六萬個點的百科全書",
       "headline_en": "Encyclopedia of Triangle Centers: 60K points by one mathematician",
       "topic": "mathematical geometry encyclopedia"
+    },
+    {
+      "date": "2026-04-26",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "廟口的搖滾樂：拍謝少年的北管搖滾",
+      "headline_en": "Sorry Youth's Beiguan temple music meets indie rock",
+      "topic": "Beiguan temple-music indie rock"
+    },
+    {
+      "date": "2026-04-26",
+      "obsession_id": "finland-honeymoon",
+      "headline": "芬蘭冬夜裡的光：坦佩雷燈節",
+      "headline_en": "Tampere's Festival of Light: five months illuminating winter darkness",
+      "topic": "Tampere light festival"
+    },
+    {
+      "date": "2026-04-26",
+      "obsession_id": "do-312",
+      "headline": "科學博物館的二手衣之夜",
+      "headline_en": "Thrift Lab: after-hours vintage fashion at Museum of Science and Industry",
+      "topic": "vintage fashion museum night"
+    },
+    {
+      "date": "2026-04-26",
+      "obsession_id": "best-of-internet",
+      "headline": "五千種音階的收藏家",
+      "headline_en": "Scala: one scientist's 25-year archive of 5200 tuning systems",
+      "topic": "microtonal tuning archive"
     }
   ]
 }
