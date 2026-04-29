@@ -811,6 +811,34 @@
       "headline": "七萬八千種顏料的家",
       "headline_en": "Artist Pigments: 78,000 paints catalogued with spectral data",
       "topic": "artist pigment database"
+    },
+    {
+      "date": "2026-04-29",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "從台東到阿姆斯特丹：李泰祥與美麗的哀愁",
+      "headline_en": "Li Tai-hsiang's Beautiful Melancholy with the Royal Concertgebouw Orchestra",
+      "topic": "orchestral folk crossover"
+    },
+    {
+      "date": "2026-04-29",
+      "obsession_id": "finland-honeymoon",
+      "headline": "芬蘭馬：從戰場到雪地雪橇",
+      "headline_en": "The Finnhorse: from Winter War pack animal to Lapland sleigh ride",
+      "topic": "Finnhorse national breed"
+    },
+    {
+      "date": "2026-04-29",
+      "obsession_id": "do-312",
+      "headline": "摩天大樓的真正起源：芝加哥人文節講座",
+      "headline_en": "Gregory Dreicer on the global origins of skyscrapers at Chicago Humanities Festival",
+      "topic": "architectural history lecture"
+    },
+    {
+      "date": "2026-04-29",
+      "obsession_id": "best-of-internet",
+      "headline": "一個人的公路百科全書",
+      "headline_en": "Kurumi.com: one man's highway interchange encyclopedia",
+      "topic": "highway infrastructure encyclopedia"
     }
   ]
 }
