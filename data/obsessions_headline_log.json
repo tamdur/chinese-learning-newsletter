@@ -979,6 +979,34 @@
       "headline": "鑄排機的最後百科全書",
       "headline_en": "Linotype.wiki: The Last Encyclopedia of Hot-Metal Typesetting",
       "topic": "hot metal typesetting preservation"
+    },
+    {
+      "date": "2026-05-05",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "透明雜誌：台北地下音樂的靈魂之聲",
+      "headline_en": "Touming Magazine: The Soul Sound of Taipei's Underground",
+      "topic": "underground noise-rock punk"
+    },
+    {
+      "date": "2026-05-05",
+      "obsession_id": "finland-honeymoon",
+      "headline": "卡累利亞派：一塊餡餅裡的戰爭記憶",
+      "headline_en": "Karelian Pie: Wartime Displacement in a Pastry",
+      "topic": "Karelian refugee food history"
+    },
+    {
+      "date": "2026-05-05",
+      "obsession_id": "do-312",
+      "headline": "千禧公園屋頂啤酒節",
+      "headline_en": "Beer Under Glass at Millennium Park Rooftop",
+      "topic": "craft beer tasting festival"
+    },
+    {
+      "date": "2026-05-05",
+      "obsession_id": "best-of-internet",
+      "headline": "世界概況檔案庫：一個人救回三十六年的資料",
+      "headline_en": "CIA World Factbook Archive: 36 Years Preserved by One Researcher",
+      "topic": "government data preservation"
     }
   ]
 }
