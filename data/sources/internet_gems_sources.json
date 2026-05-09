@@ -95,6 +95,11 @@
       "url": "https://en.xen.wiki/w/Main_Page",
       "type": "aggregator",
       "notes": "Xenharmonic Wiki — community encyclopedia of microtonal music theory and practice, active since 2005, covering tuning systems, composers, software tools, and scale mathematics."
+    },
+    {
+      "url": "https://cloudhiker.substack.com/",
+      "type": "aggregator",
+      "notes": "Web Wanderings by Cloudhiker — monthly newsletter hand-picking unusual, non-commercial websites"
     }
   ]
 }
