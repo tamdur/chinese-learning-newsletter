@@ -45,7 +45,7 @@ For each content unit's Chinese text, wrap every CJK character in `<span class="
 import re
 def wrap_chars(text):
     """Wrap each CJK character in <span class="c"> tags."""
-    return re.sub(r'([\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff，。、「」：；！？（）—])',
+    return re.sub(r'([一-鿿㐀-䶿豈-﫿，。、「」：；！？（）—])',
                   r'<span class="c">\1</span>', text)
 ```
 
@@ -105,10 +105,11 @@ Update `data/wisdom_progress.json`:
 ## Step 8: Commit and push
 
 ```bash
-git add docs/wisdom.html data/wisdom_progress.json
+git add docs/wisdom.html docs/archive/wisdom/ docs/shared.css docs/shared.js docs/glossary/ data/wisdom_progress.json
 git commit -m "Daily Wisdom {today}"
-git push
 ```
+
+Push via MCP: run `git diff --name-only HEAD~1`, read each changed file, push all via `mcp__github__push_files` with message "Daily Wisdom {today}". After success, sync local: `git fetch origin main && git reset --hard origin/main`. Fall back to `git push` if MCP fails.
 
 ## Step 9: Cleanup checkpoints
 

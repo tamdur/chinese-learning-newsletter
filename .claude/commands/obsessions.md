@@ -69,7 +69,7 @@ Save the output as a list of `{entropy_tokens}`, one per obsession in the same o
 For each active obsession, launch an **obsessions-scout** agent (Sonnet):
 - Pass the obsession's `label`, `guidance`, **that obsession's** recent headlines, and its entropy token
 - If a source file was loaded for this obsession in Step 1, pass its `sources` array as `sources_context`. Otherwise pass `sources_context` as "None — use standard search."
-- Agent prompt: "Find a specific, interesting story for this obsession.\n\nLabel: {label}\nGuidance: {guidance}\n\nRecent headlines to avoid:\n{recent_headlines}\n\nKnown sources:\n{sources_context}\n\nEntropy token: {entropy_token} — Let this word nudge your searching in an unexpected direction. Don't search for the word literally; let it guide your associations.\n\nFollow the instructions in your agent definition."
+- Agent prompt: "Find a specific, interesting story for this obsession.\n\nLabel: {label}\nGuidance: {guidance}\n\nRecent headlines to avoid:\n{recent_headlines}\n\nKnown sources:\n{sources_context}\n\nEntropy token: {entropy_token} — Let this word nudge your searching in an unexpected direction. Don’t search for the word literally; let it guide your associations.\n\nFollow the instructions in your agent definition."
 
 All scouts run concurrently. Wait for all to return.
 
@@ -137,10 +137,11 @@ Generate the `topic` field inline by identifying the article's core subject in 2
 ## Step 9: Commit and push
 
 ```bash
-git add docs/obsessions.html data/obsessions_headline_log.json data/sources/internet_gems_sources.json
+git add docs/obsessions.html docs/archive/obsessions/ docs/shared.css docs/shared.js docs/glossary/ data/obsessions_headline_log.json data/sources/internet_gems_sources.json
 git commit -m "Obsessions {today}"
-git push
 ```
+
+Push via MCP: run `git diff --name-only HEAD~1`, read each changed file, push all via `mcp__github__push_files` with message "Obsessions {today}". After success, sync local: `git fetch origin main && git reset --hard origin/main`. Fall back to `git push` if MCP fails.
 
 ## Step 10: Cleanup checkpoints
 

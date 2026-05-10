@@ -168,11 +168,21 @@ Launch the **assembler** agent (Sonnet) — this is now a validation agent, not 
 - Agent prompt: "Today's date is {today}. Run assembly and validation per your agent definition. All checkpoint files are in data/pipeline/."
 - The agent runs `python3 scripts/assemble.py --page-type newsletter --date {today}` and `python3 scripts/validate.py --page-type newsletter`
 - It handles any validation failures by re-dispatching sub-agents as needed
-- It commits and pushes the result
+- It commits (but does NOT push — the orchestrator handles that)
+
+### Step 6.5: Push via MCP
+
+The orchestrator pushes all changed files to GitHub using `mcp__github__push_files`. This bypasses the git proxy which may not support write operations.
+
+1. Run `git diff --name-only HEAD~1` to list files changed in the assembler's commit
+2. For each changed file, read its contents via the Read tool
+3. Push all files in a single `mcp__github__push_files` call with commit message "Newsletter {today}"
+4. After successful MCP push, sync local: `git fetch origin main && git reset --hard origin/main`
+5. If MCP push fails, try `git push` as fallback
 
 ### Step 7: Cleanup checkpoints
 
-After successful commit, delete checkpoint files:
+After successful push, delete checkpoint files:
 ```bash
 rm -f data/pipeline/*.json data/pipeline/*.txt
 ```
