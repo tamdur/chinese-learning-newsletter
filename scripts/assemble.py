@@ -87,6 +87,28 @@ def read_shared_js() -> str:
     return SHARED_JS.read_text(encoding="utf-8")
 
 
+def write_shared_assets():
+    """Write shared CSS and JS to docs/ if content has changed."""
+    for src, dst_name in [(SHARED_CSS, "shared.css"), (SHARED_JS, "shared.js")]:
+        content = src.read_text(encoding="utf-8")
+        dst = DOCS / dst_name
+        if not dst.exists() or dst.read_text(encoding="utf-8") != content:
+            dst.write_text(content, encoding="utf-8")
+
+
+def write_glossary_file(page_type: str, date: str, glossary: dict) -> str:
+    """Write glossary JSON to docs/glossary/ and return relative path from docs/."""
+    glossary_dir = DOCS / "glossary"
+    glossary_dir.mkdir(exist_ok=True)
+    filename = f"{page_type}-{date}.json"
+    path = glossary_dir / filename
+    path.write_text(
+        json.dumps(glossary, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
+    return f"glossary/{filename}"
+
+
 def read_page_css(page_type: str) -> str:
     """Read page-specific CSS from the page template's <style> block, if any."""
     template_path = PAGE_CONFIG[page_type]["template"]
@@ -154,22 +176,19 @@ def extract_date_from_html(html: str) -> str | None:
 
 
 def fix_paths_for_archive(html: str, page_type: str) -> str:
-    """Rewrite nav link paths for a file moving into its archive directory."""
+    """Rewrite nav link and asset paths for a file moving into its archive directory."""
     if page_type == "newsletter":
-        # Newsletter archives live in docs/archive/ (one level deep)
-        # data-prev="archive/X.html" -> data-prev="X.html"
+        prefix = "../"
         html = html.replace('data-prev="archive/', 'data-prev="')
         html = re.sub(
             r'href="archive/([^"]*)" class="nav-link nav-prev"',
             r'href="\1" class="nav-link nav-prev"',
             html,
         )
-        # Site nav: "index.html" -> "../index.html", etc.
         for _, href, _ in SITE_NAV_PAGES:
             html = html.replace(f'href="{href}" class="site-nav-link', f'href="../{href}" class="site-nav-link')
     else:
-        # Sub-page archives live in docs/archive/{page_type}/ (two levels deep)
-        # data-prev="archive/{type}/X.html" -> data-prev="X.html"
+        prefix = "../../"
         archive_prefix = f"archive/{page_type}/"
         html = html.replace(f'data-prev="{archive_prefix}', 'data-prev="')
         html = re.sub(
@@ -177,9 +196,12 @@ def fix_paths_for_archive(html: str, page_type: str) -> str:
             r'href="\1" class="nav-link nav-prev"',
             html,
         )
-        # Site nav: "index.html" -> "../../index.html", etc.
         for _, href, _ in SITE_NAV_PAGES:
             html = html.replace(f'href="{href}" class="site-nav-link', f'href="../../{href}" class="site-nav-link')
+    # Rewrite external asset paths
+    html = html.replace('href="shared.css"', f'href="{prefix}shared.css"')
+    html = html.replace('src="shared.js"', f'src="{prefix}shared.js"')
+    html = html.replace('GLOSSARY_URL = "glossary/', f'GLOSSARY_URL = "{prefix}glossary/')
     return html
 
 
@@ -315,16 +337,14 @@ def build_content_unit_html(unit: dict, translation: str, unit_id: int) -> str:
 # ---------------------------------------------------------------------------
 
 def build_page_shell(today: str, page_type: str, site_nav: str, issue_nav: str,
-                     main_content: str, glossary: dict, shared_css: str,
-                     page_css: str, shared_js: str) -> str:
+                     main_content: str, glossary_path: str,
+                     page_css: str) -> str:
     """Build the complete HTML page shell shared by all page types."""
     config = PAGE_CONFIG[page_type]
-    glossary_json = json.dumps(glossary, ensure_ascii=False, separators=(",", ":"))
 
-    # Combine CSS
-    css = shared_css
+    page_css_block = ""
     if page_css.strip():
-        css += "\n\n    /* --- Page-specific CSS --- */\n" + page_css
+        page_css_block = f"\n  <style>\n{page_css}\n  </style>"
 
     return f"""<!DOCTYPE html>
 <html lang="zh-Hant">
@@ -332,9 +352,7 @@ def build_page_shell(today: str, page_type: str, site_nav: str, issue_nav: str,
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{config['title']} — {today}</title>
-  <style>
-{css}
-  </style>
+  <link rel="stylesheet" href="shared.css">{page_css_block}
 </head>
 <body>
 
@@ -368,13 +386,8 @@ def build_page_shell(today: str, page_type: str, site_nav: str, issue_nav: str,
   <div class="char-popup-def" id="popup-def"></div>
 </div>
 
-<script>
-const GLOSSARY = {glossary_json};
-</script>
-
-<script>
-{shared_js}
-</script>
+<script>var GLOSSARY_URL = "{glossary_path}";</script>
+<script src="shared.js"></script>
 
 </body>
 </html>
@@ -491,10 +504,12 @@ def main():
     if len(translations) != len(articles):
         print(f"WARNING: Content unit count ({len(articles)}) != translation count ({len(translations)})", file=sys.stderr)
 
-    # Load shared assets
-    shared_css = read_shared_css()
-    shared_js = read_shared_js()
+    # Write shared assets to docs/ (idempotent)
+    write_shared_assets()
     page_css = read_page_css(page_type)
+
+    # Write glossary as external JSON file
+    glossary_path = write_glossary_file(page_type, today, glossary)
 
     # Archive the old issue
     archive_old_issue(page_type, today)
@@ -518,7 +533,7 @@ def main():
 
     # Assemble complete page
     html = build_page_shell(today, page_type, site_nav, issue_nav,
-                            main_content, glossary, shared_css, page_css, shared_js)
+                            main_content, glossary_path, page_css)
 
     # Write output
     index_path = config["index"]

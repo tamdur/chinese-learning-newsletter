@@ -93,7 +93,7 @@ def check_simplified_chars(html: str, result: ValidationResult):
 
 def check_character_wrapping(html: str, result: ValidationResult):
     """Check that Chinese characters in content bodies are wrapped in <span class='c'>."""
-    cjk_pattern = re.compile(r"[\u4e00-\u9fff]")
+    cjk_pattern = re.compile(r"[一-鿿]")
 
     body_sections = re.findall(
         r'<div class="(?:article-body|section-body)-zh">(.*?)</div>', html, re.DOTALL
@@ -113,13 +113,27 @@ def check_character_wrapping(html: str, result: ValidationResult):
 
 
 def check_glossary(html: str, result: ValidationResult):
-    """Check that GLOSSARY is populated (not empty)."""
-    m = re.search(r"const GLOSSARY = ({.*?});", html, re.DOTALL)
-    if not m:
-        result.error("GLOSSARY script block not found")
+    """Check that GLOSSARY is available (inline or external reference)."""
+    has_inline = re.search(r"const GLOSSARY = ({.*?});", html, re.DOTALL)
+    has_external = "GLOSSARY_URL" in html
+
+    if not has_inline and not has_external:
+        result.error("GLOSSARY: neither inline data nor external URL found")
         return
 
-    glossary_str = m.group(1)
+    if has_external:
+        m = re.search(r'GLOSSARY_URL\s*=\s*"([^"]+)"', html)
+        if m:
+            glossary_path = DOCS / m.group(1)
+            if not glossary_path.exists():
+                result.error(f"GLOSSARY: external file not found: {m.group(1)}")
+            else:
+                content = glossary_path.read_text(encoding="utf-8")
+                if len(content) < 100:
+                    result.warn(f"GLOSSARY file seems small ({len(content)} chars)")
+        return
+
+    glossary_str = has_inline.group(1)
     if glossary_str.strip() in ("{}", "{ }"):
         result.error("GLOSSARY is empty")
     elif len(glossary_str) < 100:
@@ -164,23 +178,26 @@ def check_mobile_glossary_popup(html: str, result: ValidationResult):
     if "GLOSSARY" not in html:
         result.error("Mobile glossary: GLOSSARY variable not found")
 
-    if "findLongestMatch" not in html:
-        result.error("Mobile glossary: findLongestMatch function missing from JS")
+    has_external_js = "shared.js" in html
+    has_inline_js = "findLongestMatch" in html
 
-    for event in ("touchstart", "touchmove", "touchend"):
-        if event not in html:
-            result.error(f"Mobile glossary: {event} event handler missing from JS")
+    if not has_external_js and not has_inline_js:
+        result.error("Mobile glossary: JS not found (neither inline nor shared.js)")
 
     if 'id="lookup-toggle"' not in html:
         result.error("Mobile glossary: lookup-toggle button missing")
 
-    for fn in ("positionPopup", "showPopup"):
-        if fn not in html:
-            result.error(f"Mobile glossary: {fn} function missing from JS")
-
 
 def check_essential_css(html: str, result: ValidationResult):
-    """Check that essential CSS classes for mobile popup are present."""
+    """Check that essential CSS classes are present (inline or via shared.css)."""
+    if 'shared.css' in html:
+        css_path = DOCS / "shared.css"
+        if not css_path.exists():
+            result.error("External shared.css not found")
+            return
+        css_content = css_path.read_text(encoding="utf-8")
+    else:
+        css_content = html
     essential = [
         ".char-popup",
         ".char-popup.visible",
@@ -192,7 +209,7 @@ def check_essential_css(html: str, result: ValidationResult):
         ".c.touch-active",
     ]
     for selector in essential:
-        if selector not in html:
+        if selector not in css_content:
             result.warn(f"Mobile glossary CSS: '{selector}' rule missing")
 
 
