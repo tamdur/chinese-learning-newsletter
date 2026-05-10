@@ -43,13 +43,14 @@ python3 scripts/validate.py
 
 **If WARN (exit code 1):** Report warnings but proceed to step 4. Warnings are informational.
 
-### 4. Commit and push
+### 4. Commit
 
 ```bash
-git add docs/index.html docs/archive/
+git add docs/index.html docs/archive/ docs/shared.css docs/shared.js docs/glossary/
 git commit -m "Newsletter {{date}}"
-git push
 ```
+
+Do NOT push — the orchestrator handles pushing via MCP.
 
 ### 5. Report
 

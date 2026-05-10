@@ -1,9 +1,23 @@
 /* Shared JS for all 今日讀報 page types.
-   This is a reference artifact — assemble.py reads and injects it.
-   Expects: const GLOSSARY = {...}; defined before this script. */
+   Glossary is loaded from an external JSON file (GLOSSARY_URL) or from an
+   inline const GLOSSARY on legacy archive pages. */
 
 (function () {
   'use strict';
+
+  var glossary = {};
+
+  // Use inline GLOSSARY if defined (legacy archive pages)
+  if (typeof GLOSSARY === 'object' && GLOSSARY !== null) {
+    glossary = GLOSSARY;
+  }
+  // Otherwise load from external URL
+  if (typeof GLOSSARY_URL === 'string' && GLOSSARY_URL) {
+    fetch(GLOSSARY_URL)
+      .then(function(r) { return r.json(); })
+      .then(function(data) { glossary = data; })
+      .catch(function() {});
+  }
 
   var lookupMode = false;
 
@@ -64,7 +78,7 @@
     }
 
     function findLongestMatch(targetSpan) {
-      if (typeof GLOSSARY === 'undefined') return null;
+      if (!glossary || Object.keys(glossary).length === 0) return null;
 
       var parent = targetSpan.closest('p, h2, li') || targetSpan.parentElement;
       var spans = [].slice.call(parent.querySelectorAll('.c'));
@@ -82,7 +96,7 @@
 
         for (var start = startMin; start <= startMax; start++) {
           var candidate = chars.slice(start, start + len).join('');
-          if (GLOSSARY[candidate]) {
+          if (glossary[candidate]) {
             if (!bestMatch || candidate.length > bestMatch.length) {
               bestMatch = candidate;
               bestSpans = spans.slice(start, start + len);
@@ -94,7 +108,7 @@
       }
 
       return bestMatch
-        ? { text: bestMatch, entry: GLOSSARY[bestMatch], spans: bestSpans }
+        ? { text: bestMatch, entry: glossary[bestMatch], spans: bestSpans }
         : null;
     }
 
