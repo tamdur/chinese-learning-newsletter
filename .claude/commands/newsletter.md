@@ -10,6 +10,29 @@ All intermediate results are checkpointed to `data/pipeline/`. If a previous run
 
 This phase uses the subagent architecture. Execute these steps in order. After each step, **checkpoint results to `data/pipeline/`** using the Write tool.
 
+### Step 0: Sync working tree with origin/main
+
+The cloud Routine's VM may retain working-tree state across runs. If
+the previous run's MCP push completed but the volume kept stale local
+files (or the previous push left a partial state), the next run will
+build against that stale state and the resulting archive will skip
+days. Always start from a clean origin/main.
+
+Run as **separate Bash calls** (not chained with `&&`):
+
+```bash
+git checkout main
+```
+```bash
+git fetch origin main
+```
+```bash
+git pull --rebase origin main
+```
+
+If `git pull` reports merge conflicts, stop the pipeline and surface
+the error.
+
 ### Step 0a: Determine today's date in Chicago time
 
 **Do not trust the injected `# currentDate` for `{today}`.** Cloud schedulers may run in UTC, which can put the orchestrator on a different calendar day than Chicago. Compute the authoritative date once, here, and reuse it for every downstream `{today}` substitution (scout prompts, selected.json date field, assemble.py --date, commit messages, archive filenames):
@@ -170,15 +193,51 @@ Launch the **assembler** agent (Sonnet) — this is now a validation agent, not 
 - It handles any validation failures by re-dispatching sub-agents as needed
 - It commits (but does NOT push — the orchestrator handles that)
 
-### Step 6.5: Push via MCP
+### Step 6.5: Push via MCP (chunked + verified)
 
-The orchestrator pushes all changed files to GitHub using `mcp__github__push_files`. This bypasses the git proxy which may not support write operations.
+The cloud Routine uses `mcp__github__push_files` because the git proxy
+returns HTTP 403 on push. A single push call has been observed to
+silently drop the largest files when the commit includes many or
+large files (the orchestrator exceeds its per-turn budget while
+reading file contents). The fix: push in small groups with explicit
+verification.
 
-1. Run `git diff --name-only HEAD~1` to list files changed in the assembler's commit
-2. For each changed file, read its contents via the Read tool
-3. Push all files in a single `mcp__github__push_files` call with commit message "Newsletter {today}"
-4. After successful MCP push, sync local: `git fetch origin main && git reset --hard origin/main`
-5. If MCP push fails, try `git push` as fallback
+1. **Plan the push.** Run:
+   ```bash
+   python3 scripts/push_planner.py
+   ```
+   The script reads `git diff --name-only HEAD~1`, sizes each file,
+   and prints a JSON plan with one or more `groups`, each ≤25 KB.
+   Read the plan output.
+
+2. **Push each group as a SEPARATE `mcp__github__push_files` call.**
+   Do NOT try to push everything in one call. For each group in order:
+   - Read every file in the group via the Read tool
+   - Call `mcp__github__push_files` with just that group's files
+   - Use commit message "Newsletter {today}" for every group (a single
+     run will produce one commit per group on origin/main; that is
+     expected and acceptable — better than dropped files)
+   - Wait for the call to return successfully before starting the
+     next group
+
+3. **Verify.** After the last group, run the plan's `verify_cmd`:
+   ```bash
+   git fetch origin main && git diff origin/main..HEAD --name-only
+   ```
+   Output MUST be empty. Any line is a file that did not land on
+   origin/main. Re-push each missing file in its own MCP call, then
+   re-verify.
+
+4. **Sync local.** Once verification is clean:
+   ```bash
+   git fetch origin main
+   git checkout main
+   git pull --rebase origin main
+   ```
+
+5. If MCP push fails repeatedly, fall back to `git push`. Report the
+   error so the user can investigate; do NOT generate top-up commits
+   (that's what produced the broken 2026-05-10 state).
 
 ### Step 7: Cleanup checkpoints
 

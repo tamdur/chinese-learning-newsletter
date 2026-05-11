@@ -6,7 +6,26 @@ All intermediate results are checkpointed to `data/pipeline/`.
 
 ---
 
-## Step 0: Determine today's date in Chicago time
+## Step 0a: Sync working tree with origin/main
+
+The cloud Routine's VM may retain working-tree state across runs.
+Without `git pull`, an older `docs/obsessions.html` will be archived
+under a stale date and the chain will skip days. Run as **separate
+Bash calls** (not chained with `&&`):
+
+```bash
+git checkout main
+```
+```bash
+git fetch origin main
+```
+```bash
+git pull --rebase origin main
+```
+
+If `git pull` reports conflicts, stop and surface the error.
+
+## Step 0b: Determine today's date in Chicago time
 
 **Do not trust the injected `# currentDate` for `{today}`.** Cloud schedulers may run in UTC, which can put the orchestrator on a different calendar day than Chicago. Compute the authoritative date once, here, and reuse for every downstream substitution (scout prompts, headline log entries, assemble.py --date, commit messages):
 
@@ -134,14 +153,45 @@ Append today's headlines to `data/obsessions_headline_log.json`. For each articl
 
 Generate the `topic` field inline by identifying the article's core subject in 2-4 words (e.g., "sauna culture", "Finnish design", "Taiwanese hip-hop"). This does not need an agent call.
 
-## Step 9: Commit and push
+## Step 9: Commit and push (chunked + verified)
 
 ```bash
 git add docs/obsessions.html docs/archive/obsessions/ docs/shared.css docs/shared.js docs/glossary/ data/obsessions_headline_log.json data/sources/internet_gems_sources.json
 git commit -m "Obsessions {today}"
 ```
 
-Push via MCP: run `git diff --name-only HEAD~1`, read each changed file, push all via `mcp__github__push_files` with message "Obsessions {today}". After success, sync local: `git fetch origin main && git reset --hard origin/main`. Fall back to `git push` if MCP fails.
+The cloud Routine uses `mcp__github__push_files` (the git proxy
+returns HTTP 403 on push). A single push call has been observed to
+silently drop the largest files. Push in small groups with explicit
+verification.
+
+1. **Plan.**
+   ```bash
+   python3 scripts/push_planner.py
+   ```
+   Read the JSON plan. Each `group` is ≤25 KB and corresponds to one
+   MCP call.
+
+2. **Push each group SEPARATELY** via `mcp__github__push_files`.
+   - Use commit message "Obsessions {today}" for every group.
+   - Wait for each call to succeed before starting the next.
+
+3. **Verify.**
+   ```bash
+   git fetch origin main && git diff origin/main..HEAD --name-only
+   ```
+   Output MUST be empty. Re-push any leftover files individually and
+   re-verify.
+
+4. **Sync local.** Once verification is clean:
+   ```bash
+   git fetch origin main
+   git checkout main
+   git pull --rebase origin main
+   ```
+
+Fall back to `git push` only if MCP fails repeatedly. Do NOT
+generate top-up commits.
 
 ## Step 10: Cleanup checkpoints
 
