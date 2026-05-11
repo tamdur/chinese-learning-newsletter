@@ -143,6 +143,11 @@ footer { margin-top: 2rem; text-align: center; font-size: 13px; color: #5a5550; 
 
 /* --- Mobile touch styles --- */
 
+/* Default: hide the explicit lookup-mode button. Must precede the
+   @media block below so the mobile override (same specificity)
+   wins on touch devices. */
+.lookup-toggle { display: none; }
+
 @media (pointer: coarse) {
   .c {
     -webkit-user-select: none;
@@ -160,8 +165,6 @@ footer { margin-top: 2rem; text-align: center; font-size: 13px; color: #5a5550; 
   }
   .lookup-toggle { display: inline-block; }
 }
-
-.lookup-toggle { display: none; }
 
 /* --- Character popup (mobile glossary) --- */
 
