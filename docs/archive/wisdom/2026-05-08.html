@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日智慧 — 2026-05-08</title>
+  <style>
+/* Shared CSS for all 今日讀報 page types.
+   This is a reference artifact — assemble.py reads and injects it into each page's <style> block. */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Noto Serif TC", "PMingLiU", "Apple LiSung", serif;
+  font-size: 19px;
+  line-height: 1.9;
+  color: #e0dcd4;
+  background: #1a1a2e;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* --- Page header (shared across all page types) --- */
+
+.page-header { text-align: center; margin-bottom: 2.5rem; }
+.page-header h1 { font-size: 32px; font-weight: 700; }
+.page-header .date { color: #8a8580; }
+.page-header .subtitle { color: #8a8580; font-size: 16px; }
+
+/* --- Content units (articles, wisdom sections, obsession sections) --- */
+
+.article { margin-bottom: 0; }
+.article-headline { font-size: 24px; font-weight: 700; margin-bottom: 0.5rem; }
+.article-source { font-size: 14px; color: #7a7570; margin-bottom: 1rem; }
+.article-body-zh p { margin-bottom: 1rem; }
+
+.section-title { font-size: 24px; font-weight: 700; margin-bottom: 0.5rem; }
+.section-subtitle { font-size: 14px; font-weight: 400; color: #8a8580; }
+.section-body-zh p { margin-bottom: 1rem; }
+
+hr { border: none; border-top: 1px solid #333340; margin: 2.5rem 0; }
+
+/* --- Translation toggle --- */
+
+.translation-toggle {
+  font-size: 14px;
+  padding: 6px 12px;
+  border: 1px solid #444458;
+  border-radius: 4px;
+  background: #252538;
+  color: #9a9590;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.translation-toggle:hover { background: #2e2e45; }
+
+.article-body-en, .section-body-en {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #9a9590;
+  font-size: 16px;
+  line-height: 1.6;
+  border-left: 3px solid #444458;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+.article-body-en p, .section-body-en p { margin-bottom: 0.75rem; }
+
+/* --- Character styling --- */
+
+.c { cursor: default; }
+
+/* --- Toolbar --- */
+
+.toolbar {
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid #333340;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.toolbar button {
+  font-size: 14px;
+  padding: 6px 14px;
+  border: 1px solid #444458;
+  border-radius: 4px;
+  background: #252538;
+  color: #b0aaa4;
+  cursor: pointer;
+  user-select: none;
+}
+.toolbar button:hover { background: #2e2e45; }
+.toolbar button.active { border-color: #d4a574; }
+
+/* --- Site navigation (cross-page) --- */
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333340;
+  font-size: 15px;
+}
+.site-nav-link {
+  color: #8a8580;
+  text-decoration: none;
+  padding: 4px 0;
+}
+.site-nav-link:hover { color: #b0aaa4; }
+.site-nav-link.active {
+  color: #e0dcd4;
+  border-bottom: 2px solid #d4a574;
+}
+
+/* --- Issue navigation (prev/next within page type) --- */
+
+.issue-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 14px;
+}
+.nav-link {
+  color: #8a8580;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #b0aaa4;
+}
+
+/* --- Footer --- */
+
+footer { margin-top: 2rem; text-align: center; font-size: 13px; color: #5a5550; }
+
+/* --- Special Edition --- */
+
+.se-header {
+  font-size: 22px;
+  color: #d4a574;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #d4a574;
+}
+
+/* --- Mobile touch styles --- */
+
+@media (pointer: coarse) {
+  .c {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+  .c.touch-active {
+    background: rgba(100, 160, 255, 0.2);
+    border-radius: 2px;
+    transition: background 0.1s ease;
+  }
+  .c.touch-selected {
+    background: rgba(100, 160, 255, 0.3);
+    border-radius: 2px;
+  }
+  .lookup-toggle { display: inline-block; }
+}
+
+.lookup-toggle { display: none; }
+
+/* --- Character popup (mobile glossary) --- */
+
+.char-popup {
+  display: none;
+  position: fixed;
+  width: 280px;
+  background: #252538;
+  border: 1px solid #444458;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  padding: 14px 16px;
+  z-index: 1000;
+  text-align: center;
+  font-family: "Noto Serif TC", "PMingLiU", serif;
+}
+.char-popup.visible { display: block; }
+.char-popup-close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #7a7570;
+  cursor: pointer;
+  line-height: 1;
+}
+.char-popup-char {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.char-popup-zhuyin {
+  font-size: 20px;
+  color: #9a9590;
+  margin-bottom: 6px;
+  font-family: "Apple LiGothic", "Microsoft JhengHei", sans-serif;
+}
+.char-popup-def {
+  font-size: 15px;
+  color: #b0aaa4;
+  line-height: 1.4;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+    /* --- Page-specific CSS --- */
+
+    /* Wisdom-specific CSS — merged after _shared.css by assemble.py */
+
+    .wisdom-section { margin-bottom: 0; }
+  
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../../index.html" class="site-nav-link">今日讀報</a>
+  <a href="../../wisdom.html" class="site-nav-link active">每日智慧</a>
+  <a href="../../obsessions.html" class="site-nav-link">深度專題</a>
+</nav>
+
+<header class="page-header">
+  <h1>每日智慧</h1>
+  <p class="date">2026-05-08</p>
+</header>
+
+<nav class="issue-nav" data-prev="2026-05-07.html" data-next="2026-05-10.html">
+  <a href="2026-05-07.html" class="nav-link nav-prev">← 上一期</a>
+  <span class="nav-spacer"></span>
+  <a href="2026-05-10.html" class="nav-link nav-next">下一期 →</a>
+</nav>
+
+<main>
+
+<section class="wisdom-section" data-section="heart-sutra">
+  <h2 class="section-title"><span class="c">般</span><span class="c">若</span><span class="c">波</span><span class="c">羅</span><span class="c">蜜</span><span class="c">多</span><span class="c">心</span><span class="c">經</span> — Heart Sutra — Friday</h2>
+
+  <div class="section-body-zh">
+    <p><span class="c">無</span><span class="c">苦</span><span class="c">集</span><span class="c">滅</span><span class="c">道</span><span class="c">，</span><span class="c">無</span><span class="c">智</span><span class="c">亦</span><span class="c">無</span><span class="c">得</span><span class="c">。</span><span class="c">以</span><span class="c">無</span><span class="c">所</span><span class="c">得</span><span class="c">故</span><span class="c">，</span><span class="c">菩</span><span class="c">提</span><span class="c">薩</span><span class="c">埵</span><span class="c">，</span><span class="c">依</span><span class="c">般</span><span class="c">若</span><span class="c">波</span><span class="c">羅</span><span class="c">蜜</span><span class="c">多</span><span class="c">故</span><span class="c">，</span><span class="c">心</span><span class="c">無</span><span class="c">罣</span><span class="c">礙</span><span class="c">。</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="section-body-en" hidden>
+    <p>There is no suffering, no cause of suffering, no cessation, no path; no wisdom and no attainment. With nothing to attain, a bodhisattva relies on Prajna Paramita, and the mind is without hindrance.</p>
+  </div>
+</section>
+
+<hr>
+
+<section class="wisdom-section" data-section="mengzi">
+  <h2 class="section-title"><span class="c">孟</span><span class="c">子</span> — <span class="c">梁</span><span class="c">惠</span><span class="c">王</span><span class="c">下</span> — Mencius</h2>
+
+  <div class="section-body-zh">
+    <p><span class="c">孟</span><span class="c">子</span><span class="c">對</span><span class="c">曰</span><span class="c">：</span><span class="c">「</span><span class="c">凶</span><span class="c">年</span><span class="c">饑</span><span class="c">歲</span><span class="c">，</span><span class="c">君</span><span class="c">之</span><span class="c">民</span><span class="c">老</span><span class="c">弱</span><span class="c">轉</span><span class="c">乎</span><span class="c">溝</span><span class="c">壑</span><span class="c">，</span><span class="c">壯</span><span class="c">者</span><span class="c">散</span><span class="c">而</span><span class="c">之</span><span class="c">四</span><span class="c">方</span><span class="c">者</span><span class="c">，</span><span class="c">幾</span><span class="c">千</span><span class="c">人</span><span class="c">矣</span><span class="c">；</span><span class="c">而</span><span class="c">君</span><span class="c">之</span><span class="c">倉</span><span class="c">廩</span><span class="c">實</span><span class="c">，</span><span class="c">府</span><span class="c">庫</span><span class="c">充</span><span class="c">，</span><span class="c">有</span><span class="c">司</span><span class="c">莫</span><span class="c">以</span><span class="c">告</span><span class="c">，</span><span class="c">是</span><span class="c">上</span><span class="c">慢</span><span class="c">而</span><span class="c">殘</span><span class="c">下</span><span class="c">也</span><span class="c">。</span><span class="c">曾</span><span class="c">子</span><span class="c">曰</span><span class="c">：</span><span class="c">『</span><span class="c">戒</span><span class="c">之</span><span class="c">戒</span><span class="c">之</span><span class="c">！</span><span class="c">出</span><span class="c">乎</span><span class="c">爾</span><span class="c">者</span><span class="c">，</span><span class="c">反</span><span class="c">乎</span><span class="c">爾</span><span class="c">者</span><span class="c">也</span><span class="c">。</span><span class="c">』</span><span class="c">夫</span><span class="c">民</span><span class="c">今</span><span class="c">而</span><span class="c">後</span><span class="c">得</span><span class="c">反</span><span class="c">之</span><span class="c">也</span><span class="c">。</span><span class="c">君</span><span class="c">無</span><span class="c">尤</span><span class="c">焉</span><span class="c">。</span><span class="c">君</span><span class="c">行</span><span class="c">仁</span><span class="c">政</span><span class="c">，</span><span class="c">斯</span><span class="c">民</span><span class="c">親</span><span class="c">其</span><span class="c">上</span><span class="c">、</span><span class="c">死</span><span class="c">其</span><span class="c">長</span><span class="c">矣</span><span class="c">。</span><span class="c">」</span><span class="c">滕</span><span class="c">文</span><span class="c">公</span><span class="c">問</span><span class="c">曰</span><span class="c">：</span><span class="c">「</span><span class="c">滕</span><span class="c">，</span><span class="c">小</span><span class="c">國</span><span class="c">也</span><span class="c">，</span><span class="c">間</span><span class="c">於</span><span class="c">齊</span><span class="c">楚</span><span class="c">。</span><span class="c">事</span><span class="c">齊</span><span class="c">乎</span><span class="c">？</span><span class="c">事</span><span class="c">楚</span><span class="c">乎</span><span class="c">？</span><span class="c">」</span><span class="c">孟</span><span class="c">子</span><span class="c">對</span><span class="c">曰</span><span class="c">：</span><span class="c">「</span><span class="c">是</span><span class="c">謀</span><span class="c">非</span><span class="c">吾</span><span class="c">所</span><span class="c">能</span><span class="c">及</span><span class="c">也</span><span class="c">。</span><span class="c">無</span><span class="c">已</span><span class="c">，</span><span class="c">則</span><span class="c">有</span><span class="c">一</span><span class="c">焉</span><span class="c">：</span><span class="c">鑿</span><span class="c">斯</span><span class="c">池</span><span class="c">也</span><span class="c">，</span><span class="c">築</span><span class="c">斯</span><span class="c">城</span><span class="c">也</span><span class="c">，</span><span class="c">與</span><span class="c">民</span><span class="c">守</span><span class="c">之</span><span class="c">，</span><span class="c">效</span><span class="c">死</span><span class="c">而</span><span class="c">民</span><span class="c">弗</span><span class="c">去</span><span class="c">，</span><span class="c">則</span><span class="c">是</span><span class="c">可</span><span class="c">為</span><span class="c">也</span><span class="c">。</span><span class="c">」</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="section-body-en" hidden>
+    <p>Mencius replied, "In years of famine and hardship, the old and weak among Your Lordship's people who ended up dead in ditches, and the able-bodied who scattered to the four directions, numbered in the thousands. Yet Your Lordship's granaries were full and your treasuries overflowing, and not a single official reported the crisis. This is for those above to be negligent and cruel to those below. Zengzi said, 'Beware, beware! What goes out from you will come back to you.' The people have now for the first time been able to repay what they received. Do not blame them, Your Lordship. If you practice benevolent government, the people will love their superiors and die for their leaders." Duke Wen of Teng asked, "Teng is a small state, wedged between Qi and Chu. Should I serve Qi, or should I serve Chu?" Mencius replied, "This is a question beyond my ability to answer. But if you insist, there is one course: dig your moats deeper, build your walls higher, and defend them together with your people. If the people would rather die than leave, then there is something worth doing."</p>
+  </div>
+</section>
+
+<hr>
+
+<section class="wisdom-section" data-section="zen">
+  <h2 class="section-title"><span class="c">金</span><span class="c">剛</span><span class="c">般</span><span class="c">若</span><span class="c">波</span><span class="c">羅</span><span class="c">蜜</span><span class="c">經</span> — <span class="c">淨</span><span class="c">心</span><span class="c">行</span><span class="c">善</span><span class="c">分</span><span class="c">第</span><span class="c">二</span><span class="c">十</span><span class="c">三</span> — Diamond Sutra</h2>
+
+  <div class="section-body-zh">
+    <p><span class="c">「</span><span class="c">復</span><span class="c">次</span><span class="c">，</span><span class="c">須</span><span class="c">菩</span><span class="c">提</span><span class="c">！</span><span class="c">是</span><span class="c">法</span><span class="c">平</span><span class="c">等</span><span class="c">，</span><span class="c">無</span><span class="c">有</span><span class="c">高</span><span class="c">下</span><span class="c">，</span><span class="c">是</span><span class="c">名</span><span class="c">『</span><span class="c">阿</span><span class="c">耨</span><span class="c">多</span><span class="c">羅</span><span class="c">三</span><span class="c">藐</span><span class="c">三</span><span class="c">菩</span><span class="c">提</span><span class="c">』</span><span class="c">；</span><span class="c">以</span><span class="c">無</span><span class="c">我</span><span class="c">、</span><span class="c">無</span><span class="c">人</span><span class="c">、</span><span class="c">無</span><span class="c">眾</span><span class="c">生</span><span class="c">、</span><span class="c">無</span><span class="c">壽</span><span class="c">者</span><span class="c">，</span><span class="c">修</span><span class="c">一</span><span class="c">切</span><span class="c">善</span><span class="c">法</span><span class="c">，</span><span class="c">則</span><span class="c">得</span><span class="c">阿</span><span class="c">耨</span><span class="c">多</span><span class="c">羅</span><span class="c">三</span><span class="c">藐</span><span class="c">三</span><span class="c">菩</span><span class="c">提</span><span class="c">。</span><span class="c">須</span><span class="c">菩</span><span class="c">提</span><span class="c">！</span><span class="c">所</span><span class="c">言</span><span class="c">善</span><span class="c">法</span><span class="c">者</span><span class="c">，</span><span class="c">如</span><span class="c">來</span><span class="c">說</span><span class="c">即</span><span class="c">非</span><span class="c">善</span><span class="c">法</span><span class="c">，</span><span class="c">是</span><span class="c">名</span><span class="c">善</span><span class="c">法</span><span class="c">。</span><span class="c">」</span></p>
+  </div>
+
+  <button class="translation-toggle" type="button">顯示翻譯 Show Translation</button>
+
+  <div class="section-body-en" hidden>
+    <p>"Furthermore, Subhuti, this Dharma is equal and without high or low. This is what is called anuttara-samyak-sambodhi. By cultivating all wholesome dharmas with no self, no person, no being, and no one who lives a lifespan, one attains anuttara-samyak-sambodhi. Subhuti, what are called wholesome dharmas — the Tathagata says they are not wholesome dharmas; they are merely called wholesome dharmas."</p>
+  </div>
+</section>
+
+</main>
+
+<div class="toolbar" id="toolbar">
+  <button id="lookup-toggle" class="lookup-toggle" type="button">查詢模式 OFF</button>
+</div>
+
+<footer>
+  <p>每日智慧 — 以 Claude Code 製作</p>
+</footer>
+
+<div class="char-popup" id="char-popup" role="tooltip">
+  <button class="char-popup-close" id="popup-close" aria-label="Close">&times;</button>
+  <div class="char-popup-char" id="popup-char"></div>
+  <div class="char-popup-zhuyin" id="popup-zhuyin"></div>
+  <div class="char-popup-def" id="popup-def"></div>
+</div>
+
+<script>
+const GLOSSARY = {"依":{"zhuyin":"ㄧ","english":"to depend on; to comply with or listen to sb; according to; in the light of"},"老":{"zhuyin":"ㄌㄠˇ","english":"prefix used before the surname of a person or a numeral indicating the order of birth of the children in a family or to indicate affection or familiarity; old (of people); venerable (person); experienced; of long standing; always; all the time; of the past; very; outdated; (of meat etc) tough"},"修":{"zhuyin":"ㄒㄧㄡ","english":"surname Xiu; to decorate; to embellish; to repair; to build; to write; to cultivate; to study; to take (a class)"},"梁":{"zhuyin":"ㄌㄧㄤˊ","english":"Liang Dynasty (502-557); Later Liang Dynasty (907-923); surname Liang; roof beam; beam (structure); bridge"},"等":{"zhuyin":"ㄉㄥˇ","english":"to wait for; to await; by the time; when; till; and so on; etc.; et al.; (bound form) class; rank; grade; (bound form) equal to; same as; (used to end an enumeration); (literary) (plural suffix attached to a personal pronoun or noun)"},"充":{"zhuyin":"ㄔㄨㄥ","english":"sufficient; full; to fill; to serve as; to act as; to act falsely as; to pose as"},"已":{"zhuyin":"ㄧˇ","english":"already; to stop; then; afterwards"},"反":{"zhuyin":"ㄈㄢˇ","english":"contrary; in reverse; inside out or upside down; to reverse; to return; to oppose; opposite; against; anti-; to rebel; to use analogy; instead; abbr. for 反切[fan3 qie4] phonetic system"},"無":{"zhuyin":"ㄇㄛˊ","english":"used in 南無|南无[na1mo2]; not to have; no; none; not; to lack; un-; -less"},"司":{"zhuyin":"ㄙ","english":"surname Si; to take charge of; to manage; department (under a ministry)"},"後":{"zhuyin":"ㄏㄡˋ","english":"back; behind; rear; afterwards; after; later; post-"},"倉":{"zhuyin":"ㄘㄤ","english":"barn; granary; storehouse; cabin; hold (in ship)"},"道":{"zhuyin":"ㄉㄠˋ","english":"road; path (CL:條|条[tiao2],股[gu3]); (bound form) way; reason; principle; (bound form) a skill; an art; a specialization; (Daoism) the Way; the Dao; to say (introducing a direct quotation, as in a novel); (bound form) to express; to extend (polite words); classifier for long thin things (rivers, cracks etc), barriers (walls, doors etc), questions (in an exam etc), commands, courses in a meal, steps in a process; (old) circuit (administrative division)"},"心":{"zhuyin":"ㄒㄧㄣ","english":"heart; mind; intention; center; core; CL:顆|颗[ke1],個|个[ge4]"},"鑿":{"zhuyin":"ㄗㄠˊ","english":"(bound form) chisel; to bore a hole; to chisel; to dig; (literary) certain; authentic; irrefutable; also pr. [zuo4]"},"滅":{"zhuyin":"ㄇㄧㄝˋ","english":"to extinguish or put out; to go out (of a fire etc); to exterminate or wipe out; to drown"},"君":{"zhuyin":"ㄐㄩㄣ","english":"monarch; lord; gentleman; ruler"},"壯":{"zhuyin":"ㄓㄨㄤˋ","english":"Zhuang ethnic group of Guangxi, the PRC's second most numerous ethnic group; to strengthen; strong; robust"},"齊":{"zhuyin":"ㄑㄧˊ","english":"(name of states and dynasties at several different periods); surname Qi; neat; even; level with; identical; simultaneous; all together; to even sth out"},"問":{"zhuyin":"ㄨㄣˋ","english":"to ask; to inquire"},"四":{"zhuyin":"ㄙˋ","english":"four; 4"},"復":{"zhuyin":"ㄈㄨˋ","english":"to go and return; to return; to resume; to return to a normal or original state; to repeat; again; to recover; to restore; to turn over; to reply; to answer; to reply to a letter; to retaliate; to carry out"},"出":{"zhuyin":"ㄔㄨ","english":"to go out; to come out; to arise; to occur; to produce; to yield; to go beyond; to exceed; (used after a verb to indicate an outward direction or a positive result); classifier for dramas, plays, operas etc"},"城":{"zhuyin":"ㄔㄥˊ","english":"city walls; city; town; CL:座[zuo4],道[dao4],個|个[ge4]"},"平":{"zhuyin":"ㄆㄧㄥˊ","english":"surname Ping; flat; level; equal; to tie (make the same score); to draw (score); calm; peaceful; abbr. for 平聲|平声[ping2 sheng1]"},"上":{"zhuyin":"ㄕㄤˇ","english":"used in 上聲|上声[shang3 sheng1]; (bound form) up; upper; above; previous; first (of multiple parts); to climb; to get onto; to go up; to attend (class or university); (directional complement) up; (noun suffix) on; above"},"礙":{"zhuyin":"ㄞˋ","english":"to hinder; to obstruct; to block"},"饑":{"zhuyin":"ㄐㄧ","english":"variant of 飢|饥[ji1]"},"吾":{"zhuyin":"ㄨˊ","english":"surname Wu; (old) I; my"},"壽":{"zhuyin":"ㄕㄡˋ","english":"surname Shou; long life; old age; age; life; birthday; funerary"},"下":{"zhuyin":"ㄒㄧㄚˋ","english":"down; downwards; below; lower; later; next (week etc); second (of two parts); to decline; to go down; to arrive at (a decision, conclusion etc); measure word to show the frequency of an action"},"夫":{"zhuyin":"ㄈㄨ","english":"husband; man; manual worker; conscripted laborer (old); (classical) this, that; he, she, they; (exclamatory final particle); (initial particle, introduces an opinion)"},"埵":{"zhuyin":"ㄉㄨㄛˇ","english":"solid earth"},"菩":{"zhuyin":"ㄆㄨˊ","english":"used in 菩薩|菩萨[pu2sa4]; used in 菩提[pu2ti2]"},"波":{"zhuyin":"ㄅㄛ","english":"(bound form) Poland (abbr. for 波蘭|波兰[Bo1lan2]); surname Bo; wave; ripple; storm; surge"},"則":{"zhuyin":"ㄗㄜˊ","english":"(literary) (conjunction used to express contrast with a previous clause) but; then; (bound form) standard; norm; (bound form) principle; (literary) to imitate; to follow; classifier for written items"},"滕":{"zhuyin":"ㄊㄥˊ","english":"vassal state of Zhou in Shandong; Teng County in Shandong; surname Teng"},"可":{"zhuyin":"ㄎㄜˇ","english":"(prefix) can; may; able to; -able; to approve; to permit; to suit; (particle used for emphasis) certainly; very; but; however; used in 可汗[ke4 han2]"},"民":{"zhuyin":"ㄇㄧㄣˊ","english":"surname Min; (bound form) the people; inhabitants of a country"},"池":{"zhuyin":"ㄔˊ","english":"surname Chi; pond; reservoir; moat"},"人":{"zhuyin":"ㄖㄣˊ","english":"person; people; CL:個|个[ge4],位[wei4]"},"之":{"zhuyin":"ㄓ","english":"(possessive particle, literary equivalent of 的[de5]); him; her; it"},"壑":{"zhuyin":"ㄏㄜˋ","english":"gully; ravine; Taiwan pr. [huo4]"},"千":{"zhuyin":"ㄑㄧㄢ","english":"thousand"},"於":{"zhuyin":"ㄩˊ","english":"(of time or place) in; at; on; (indicating any indirect relation) to; toward; vis-à-vis; with regard to; for; (indicating a source) from; out of; (used in comparison) than; (used in the passive voice) by; surname Yu; Taiwan pr. [Yu2]; (literary) Oh!; Ah!"},"楚":{"zhuyin":"ㄔㄨˇ","english":"surname Chu; abbr. for Hubei 湖北省[Hu2bei3 Sheng3] and Hunan 湖南省[Hu2nan2 Sheng3] provinces together; Chinese kingdom during the Spring and Autumn and Warring States Periods (722-221 BC); distinct; clear; orderly; pain; suffering; deciduous bush used in Chinese medicine (genus Vitex); punishment cane (old)"},"須":{"zhuyin":"ㄒㄩ","english":"must; to have to; to wait"},"親":{"zhuyin":"ㄑㄧㄣ","english":"parent; one's own (flesh and blood); relative; related; marriage; bride; close; intimate; in person; first-hand; in favor of; pro-; to kiss; (Internet slang) dear; parents-in-law of one's offspring"},"謀":{"zhuyin":"ㄇㄡˊ","english":"to plan; to seek; scheme"},"非":{"zhuyin":"ㄈㄟ","english":"abbr. for 非洲[Fei1 zhou1], Africa; to not be; not; wrong; incorrect; non-; un-; in-; de-; to reproach; to blame; (coll.) to insist on; simply must"},"守":{"zhuyin":"ㄕㄡˇ","english":"to guard; to defend; to keep watch; to abide by the law; to observe (rules or ritual); nearby; adjoining"},"二":{"zhuyin":"ㄦˋ","english":"two; 2; (Beijing dialect) stupid"},"罣":{"zhuyin":"ㄍㄨㄚˋ","english":"variant of 掛|挂[gua4]"},"言":{"zhuyin":"ㄧㄢˊ","english":"words; speech; to say; to talk"},"經":{"zhuyin":"ㄐㄧㄥ","english":"surname Jing; classics; sacred book; scripture; to pass through; to undergo; to bear; to endure; warp (textile); longitude; menstruation; channel (TCM); abbr. for economics 經濟|经济[jing1 ji4]"},"政":{"zhuyin":"ㄓㄥˋ","english":"political; politics; government"},"弗":{"zhuyin":"ㄈㄨˊ","english":"(literary) not; used in transliteration"},"集":{"zhuyin":"ㄐㄧˊ","english":"to gather; to collect; collected works; classifier for sections of a TV series etc: episode"},"與":{"zhuyin":"ㄩˊ","english":"variant of 歟|欤[yu2]; and; to give; together with; to take part in"},"第":{"zhuyin":"ㄉㄧˋ","english":"(prefix indicating ordinal number, as in 第六[di4-liu4] \"sixth\"); (literary) grades in which successful candidates in the imperial examinations were placed; (old) residence of a high official; (literary) but; however; (literary) only; just"},"莫":{"zhuyin":"ㄇㄛˋ","english":"surname Mo; do not; there is none who"},"苦":{"zhuyin":"ㄎㄨˇ","english":"bitter; hardship; pain; to suffer; to bring suffering to; painstakingly"},"散":{"zhuyin":"ㄙㄢˇ","english":"scattered; loose; to come loose; to fall apart; leisurely; powdered medicine; to scatter; to break up (a meeting etc); to disperse; to disseminate; to dispel; (coll.) to sack"},"國":{"zhuyin":"ㄍㄨㄛˊ","english":"surname Guo; country; nation; state; (bound form) national"},"告":{"zhuyin":"ㄍㄠˋ","english":"(bound form) to say; to tell; to announce; to report; to denounce; to file a lawsuit; to sue"},"能":{"zhuyin":"ㄋㄥˊ","english":"surname Neng; can; to be able to; might possibly; ability; (physics) energy"},"者":{"zhuyin":"ㄓㄜˇ","english":"(after a verb or adjective) one who (is) ...; (after a noun) person involved in ...; -er; -ist; (used after a number or 後|后[hou4] or 前[qian2] to refer to sth mentioned previously); (used after a term, to mark a pause before defining the term); (old) (used at the end of a command); (old) this"},"所":{"zhuyin":"ㄙㄨㄛˇ","english":"actually; place; classifier for houses, small buildings, institutions etc; that which; particle introducing a relative clause or passive; CL:個|个[ge4]"},"年":{"zhuyin":"ㄋㄧㄢˊ","english":"surname Nian; year; CL:個|个[ge4]"},"去":{"zhuyin":"ㄑㄩˋ","english":"to go; to go to (a place); (of a time etc) last; just passed; to send; to remove; to get rid of; to reduce; to be apart from in space or time; to die (euphemism); to play (a part); (when used either before or after a verb) to go in order to do sth; (after a verb of motion indicates movement away from the speaker); (used after certain verbs to indicate detachment or separation)"},"分":{"zhuyin":"ㄈㄣ","english":"to divide; to separate; to distribute; to allocate; to distinguish (good and bad); (bound form) branch of (an organization); sub- (as in 分局[fen1 ju2]); fraction; one tenth (of certain units); unit of length equivalent to 0.33 cm; minute (unit of time); minute (angular measurement unit); a point (in sports or games); 0.01 yuan (unit of money); part; share; ingredient; component"},"智":{"zhuyin":"ㄓˋ","english":"(literary) wise; wisdom"},"薩":{"zhuyin":"ㄙㄚˋ","english":"Bodhisattva; surname Sa"},"淨":{"zhuyin":"ㄐㄧㄥˋ","english":"clean; completely; only; net (income, exports etc); (Chinese opera) painted face male role"},"法":{"zhuyin":"ㄈㄚˇ","english":"France; French; abbr. for 法國|法国[Fa3 guo2]; Taiwan pr. [Fa4]; law; method; way; to emulate; (Buddhism) dharma; (abbr. for 法家[Fa3 jia1]) the Legalists; (physics) farad (abbr. for 法拉[fa3 la1])"},"小":{"zhuyin":"ㄒㄧㄠˇ","english":"small; tiny; few; young"},"蜜":{"zhuyin":"ㄇㄧˋ","english":"honey"},"慢":{"zhuyin":"ㄇㄢˋ","english":"slow"},"實":{"zhuyin":"ㄕˊ","english":"real; true; honest; really; solid; fruit; seed; definitely"},"事":{"zhuyin":"ㄕˋ","english":"matter; thing; item; work; affair; CL:件[jian4],樁|桩[zhuang1],回[hui2]"},"孟":{"zhuyin":"ㄇㄥˋ","english":"surname Meng; first month of a season; eldest amongst brothers"},"矣":{"zhuyin":"ㄧˇ","english":"classical final particle, similar to modern 了[le5]"},"提":{"zhuyin":"ㄉㄧ","english":"used in 提防[di1 fang5] and 提溜[di1 liu5]; to carry (hanging down from the hand); to lift; to put forward; to mention; to raise (an issue); upwards character stroke; lifting brush stroke (in painting); scoop for measuring liquid"},"效":{"zhuyin":"ㄒㄧㄠˋ","english":"effect; efficacy; to imitate"},"仁":{"zhuyin":"ㄖㄣˊ","english":"humane; kernel"},"高":{"zhuyin":"ㄍㄠ","english":"surname Gao; high; tall; above average; loud; your (honorific)"},"般":{"zhuyin":"ㄅㄢ","english":"sort; kind; class; way; manner; used in 般若[bo1re3]; see 般樂|般乐[pan2 le4]"},"有":{"zhuyin":"ㄧㄡˇ","english":"to have; there is; (bound form) having; with; -ful; -ed; -al (as in 有意[you3yi4] intentional)"},"得":{"zhuyin":"ㄉㄜˊ","english":"to obtain; to get; to gain; to catch (a disease); proper; suitable; proud; contented; to allow; to permit; ready; finished; structural particle: used after a verb (or adjective as main verb), linking it to following phrase indicating effect, degree, possibility etc; to have to; must; ought to; to need to"},"文":{"zhuyin":"ㄨㄣˊ","english":"surname Wen; language; culture; writing; formal; literary; gentle; (old) classifier for coins; Kangxi radical 67"},"一":{"zhuyin":"ㄧ","english":"one; single; a (article); as soon as; entire; whole; all; throughout; \"one\" radical in Chinese characters (Kangxi radical 1); also pr. [yao1] for greater clarity when spelling out numbers digit by digit"},"生":{"zhuyin":"ㄕㄥ","english":"to be born; to give birth; life; to grow; raw; uncooked; student"},"藐":{"zhuyin":"ㄇㄧㄠˇ","english":"to despise; small; variant of 渺[miao3]"},"歲":{"zhuyin":"ㄙㄨㄟˋ","english":"classifier for years (of age); year; year (of crop harvests)"},"子":{"zhuyin":"ㄗˇ","english":"son; child; seed; egg; small thing; 1st earthly branch: 11 p.m.-1 a.m., midnight, 11th solar month (7th December to 5th January), year of the rat; viscount, fourth of five orders of nobility 五等爵位[wu3deng3 jue2wei4]; ancient Chinese compass point: 0° (north); subsidiary; subordinate; (prefix) sub-; (noun suffix)"},"善":{"zhuyin":"ㄕㄢˋ","english":"good (virtuous); benevolent; well-disposed; good at sth; to improve or perfect"},"弱":{"zhuyin":"ㄖㄨㄛˋ","english":"weak; feeble; young; inferior; not as good as; (following a decimal or fraction) slightly less than"},"其":{"zhuyin":"ㄑㄧˊ","english":"his; her; its; their; that; such; it (refers to sth preceding it)"},"方":{"zhuyin":"ㄈㄤ","english":"surname Fang; square; power or involution (math.); upright; honest; fair and square; direction; side; party (to a contract, dispute etc); place; method; prescription (medicine); just when; only or just; classifier for square things; abbr. for square or cubic meter"},"戒":{"zhuyin":"ㄐㄧㄝˋ","english":"to guard against; to exhort; to admonish or warn; to give up or stop doing sth; Buddhist monastic discipline; ring (for a finger)"},"尤":{"zhuyin":"ㄧㄡˊ","english":"surname You; outstanding; particularly, especially; a fault; to express discontentment against"},"羅":{"zhuyin":"ㄌㄨㄛˊ","english":"surname Luo; gauze; to collect; to gather; to catch; to sift"},"爾":{"zhuyin":"ㄦˇ","english":"thus; so; like that; you; thou"},"名":{"zhuyin":"ㄇㄧㄥˊ","english":"name; noun (part of speech); place (e.g. among winners); famous; classifier for people"},"惠":{"zhuyin":"ㄏㄨㄟˋ","english":"surname Hui; (bound form) act of kindness (from a superior); (honorific prefix) kind (as in 惠顧|惠顾[hui4 gu4])"},"王":{"zhuyin":"ㄨㄤˊ","english":"surname Wang; king or monarch; best or strongest of its type; grand; great; (literary) (of a monarch) to reign over (a kingdom)"},"曰":{"zhuyin":"ㄩㄝ","english":"to speak; to say"},"乎":{"zhuyin":"ㄏㄨ","english":"(classical particle similar to 於|于[yu2]) in; at; from; because; than; (classical final particle similar to 嗎|吗[ma5], 吧[ba5], 呢[ne5], expressing question, doubt or astonishment)"},"是":{"zhuyin":"ㄕˋ","english":"to be (followed by substantives only); correct; right; true; (respectful acknowledgement of a command) very well; (adverb for emphatic assertion)"},"殘":{"zhuyin":"ㄘㄢˊ","english":"to destroy; to spoil; to ruin; to injure; cruel; oppressive; savage; brutal; incomplete; disabled; to remain; to survive; remnant; surplus"},"及":{"zhuyin":"ㄐㄧˊ","english":"and; to reach; up to; in time for"},"也":{"zhuyin":"ㄧㄝˇ","english":"surname Ye; also; too; as well; (not ...) either; (used after a verbal or nominal expression X to indicate that X is an extreme or unexpected case) even (X); (literary) particle having functions similar to 啊[a5]"},"長":{"zhuyin":"ㄔㄤˊ","english":"length; long; forever; always; constantly; chief; head; elder; to grow; to develop; to increase; to enhance"},"亦":{"zhuyin":"ㄧˋ","english":"also"},"庫":{"zhuyin":"ㄎㄨˋ","english":"warehouse; storehouse; (file) library"},"剛":{"zhuyin":"ㄍㄤ","english":"hard; firm; strong; just; barely; exactly"},"而":{"zhuyin":"ㄦˊ","english":"and; as well as; and so; but (not); yet (not); (indicates causal relation); (indicates change of state); (indicates contrast)"},"死":{"zhuyin":"ㄙˇ","english":"to die; impassable; uncrossable; inflexible; rigid; extremely; damned"},"切":{"zhuyin":"ㄑㄧㄝ","english":"to cut; to slice; to carve; (math) tangential; definitely; absolutely (not); (scoffing or dismissive interjection) Yeah, right.; Tut!; to grind; (bound form) close to; (bound form) eager; to correspond to; (used to indicate that the fanqie 反切[fan3 qie4] system should be applied to the previous two characters)"},"凶":{"zhuyin":"ㄒㄩㄥ","english":"vicious; fierce; ominous; inauspicious; famine; variant of 兇|凶[xiong1]"},"轉":{"zhuyin":"ㄓㄨㄞˇ","english":"see 轉文|转文[zhuai3 wen2]; to turn; to change direction; to transfer; to forward (mail); (Internet) to share (sb else's content); to revolve; to turn; to circle about; to walk about; classifier for revolutions (per minute etc): revs, rpm; classifier for repeated actions"},"故":{"zhuyin":"ㄍㄨˋ","english":"happening; instance; reason; cause; intentional; former; old; friend; therefore; hence; (of people) to die, dead"},"即":{"zhuyin":"ㄐㄧˊ","english":"namely; that is; i.e.; prompt; at once; at present; even if; prompted (by the occasion); to approach; to come into contact; to assume (office); to draw near"},"幾":{"zhuyin":"ㄐㄧ","english":"almost; how much; how many; several; a few"},"公":{"zhuyin":"ㄍㄨㄥ","english":"public; collectively owned; common; international (e.g. high seas, metric system, calendar); make public; fair; just; Duke, highest of five orders of nobility 五等爵位[wu3 deng3 jue2 wei4]; honorable (gentlemen); father-in-law; male (animal)"},"斯":{"zhuyin":"ㄙ","english":"Slovakia; Slovak; abbr. for 斯洛伐克[Si1 luo4 fa2 ke4]; (phonetic); this"},"曾":{"zhuyin":"ㄗㄥ","english":"surname Zeng; once; already; ever (in the past); former; previously; (past tense marker used before verb or clause); great- (grandfather, grandchild etc)"},"今":{"zhuyin":"ㄐㄧㄣ","english":"now; the present time; current; contemporary; this (day, year etc)"},"來":{"zhuyin":"ㄌㄞˊ","english":"to come; (used as a substitute for a more specific verb); hither (directional complement for motion toward the speaker, as in 回來|回来[hui2lai5]); ever since (as in 自古以來|自古以来[zi4gu3 yi3lai2]); for the past (amount of time); (prefix) the coming ...; the next ... (as in 來世|来世[lai2shi4]); (between two verbs) in order to; (after a round number) approximately; (used after 得[de2] to indicate possibility, as in 談得來|谈得来[tan2de5lai2], or after 不[bu4] to indicate impossibility, as in 吃不來|吃不来[chi1bu5lai2])"},"次":{"zhuyin":"ㄘˋ","english":"next in sequence; second; the second (day, time etc); secondary; vice-; sub-; infra-; inferior quality; substandard; order; sequence; hypo- (chemistry); classifier for enumerated events: time"},"間":{"zhuyin":"ㄐㄧㄢ","english":"between; among; within a definite time or space; room; section of a room or lateral space between two pairs of pillars; classifier for rooms; gap; to separate; to thin out (seedlings); to sow discontent"},"耨":{"zhuyin":"ㄋㄡˋ","english":"hoe; to hoe; to weed"},"若":{"zhuyin":"ㄖㄜˇ","english":"used in 般若[bo1re3]; used in 蘭若|兰若[lan2re3]; to seem; like; as; if"},"金":{"zhuyin":"ㄐㄧㄣ","english":"surname Jin; surname Kim (Korean); Jurchen Jin dynasty (1115-1234); gold; chemical element Au; generic term for lustrous and ductile metals; money; golden; highly respected; one of the eight categories of ancient musical instruments 八音[ba1 yin1]"},"廩":{"zhuyin":"ㄌㄧㄣˇ","english":"government granary"},"為":{"zhuyin":"ㄨㄟˊ","english":"as (in the capacity of); to take sth as; to act as; to serve as; to behave as; to become; to be; to do; by (in the passive voice); because of; for; to"},"多":{"zhuyin":"ㄉㄨㄛ","english":"many; much; more; a lot of; too many; in excess; (after a numeral) ... odd; how (to what extent) (Taiwan pr. [duo2]); (bound form) multi-; poly-"},"築":{"zhuyin":"ㄓㄨˋ","english":"to build; to construct; to ram; to hit; Taiwan pr. [zhu2]"},"十":{"zhuyin":"ㄕˊ","english":"ten; 10"},"以":{"zhuyin":"ㄧˇ","english":"abbr. for Israel 以色列[Yi3 se4 lie4]; to use; by means of; according to; in order to; because of; at (a certain date or place)"},"府":{"zhuyin":"ㄈㄨˇ","english":"seat of government; government repository (archive); official residence; mansion; presidential palace; (honorific) Your home; prefecture (from Tang to Qing times)"},"焉":{"zhuyin":"ㄧㄢ","english":"where; how"},"行":{"zhuyin":"ㄏㄤˊ","english":"(bound form) row; line; (bound form) line of business; trade; profession; (bound form) commercial firm; (bound form) to rank (first, second etc) among one's siblings (by age); (in data tables) row; (Tw) column; classifier for rows or lines; used in 道行[dao4heng2]; (bound form) to walk; to go; to travel; (literary) trip; journey; visit; (bound form) temporary; makeshift; (bound form) current; in circulation; (bound form) to do; to perform; capable; competent; all right; OK!; will do; behavior; conduct (Taiwan pr. [xing4]); (literary) about to; soon"},"阿":{"zhuyin":"ㄚ","english":"abbr. for country names that begin with 阿[a1]: Algeria 阿爾及利亞|阿尔及利亚[A1er3ji2li4ya4], Afghanistan 阿富汗[A1fu4han4] etc; prefix used before monosyllabic names, kinship terms etc to indicate familiarity; used in transliteration; also pr. [a4]; (literary) to flatter; to curry favor with"},"三":{"zhuyin":"ㄙㄢ","english":"surname San; three; 3"},"如":{"zhuyin":"ㄖㄨˊ","english":"as; as if; such as"},"我":{"zhuyin":"ㄨㄛˇ","english":"I; me; my"},"眾":{"zhuyin":"ㄓㄨㄥˋ","english":"abbr. for 眾議院|众议院[Zhong4 yi4 yuan4], House of Representatives; (bound form) crowd; multitude; (bound form) many; numerous"},"說":{"zhuyin":"ㄕㄨㄟˋ","english":"to persuade; to speak; to talk; to say; to explain; to comment; to scold; to tell off; (bound form) theory; doctrine"},"溝":{"zhuyin":"ㄍㄡ","english":"ditch; gutter; groove; gully; ravine; CL:道[dao4]"},"對":{"zhuyin":"ㄉㄨㄟˋ","english":"right; correct; towards; at; for; concerning; regarding; to treat (sb a certain way); to face; (bound form) opposite; facing; matching; to match together; to adjust; to fit; to suit; to answer; to reply; to add; to pour in (a fluid); to check; to compare; classifier: couple; pair"},"般若":{"zhuyin":"ㄅㄛ ㄖㄜˇ","english":"prajna; wisdom"},"波羅蜜":{"zhuyin":"ㄅㄛ ㄌㄨㄛˊ ㄇㄧˋ","english":"jackfruit; breadfruit; Artocarpus heterophyllus"},"多心":{"zhuyin":"ㄉㄨㄛ ㄒㄧㄣ","english":"oversensitive; suspicious"},"苦集滅道":{"zhuyin":"ㄎㄨˇ ㄐㄧˊ ㄇㄧㄝˋ ㄉㄠˋ","english":"the Four Noble Truths (Budd.), namely: all life is suffering 苦[ku3], the cause of suffering is desire 集[ji2], emancipation comes only by eliminating passions 滅|灭[mie4], the way 道[dao4] to emancipation is the Eight-fold Noble Way 八正道[ba1 zheng4 dao4]; also called 四諦|四谛[si4 di4]"},"所得":{"zhuyin":"ㄙㄨㄛˇ ㄉㄜˊ","english":"what one acquires; one's gains"},"菩提":{"zhuyin":"ㄆㄨˊ ㄊㄧˊ","english":"bodhi; enlightenment"},"孟子":{"zhuyin":"ㄇㄥˋ ㄗˇ","english":"Mencius"},"凶年":{"zhuyin":"ㄒㄩㄥ ㄋㄧㄢˊ","english":"year of disaster; calamitous year"},"溝壑":{"zhuyin":"ㄍㄡ ㄏㄜˋ","english":"ditches and gullies; to die in a ditch"},"四方":{"zhuyin":"ㄙˋ ㄈㄤ","english":"the four directions; all directions"},"幾千":{"zhuyin":"ㄐㄧˇ ㄑㄧㄢ","english":"several thousand"},"倉廩":{"zhuyin":"ㄘㄤ ㄌㄧㄣˇ","english":"granaries; storehouses for grain"},"府庫":{"zhuyin":"ㄈㄨˇ ㄎㄨˋ","english":"treasury; state coffers"},"有司":{"zhuyin":"ㄧㄡˇ ㄙ","english":"officials; those in charge"},"曾子":{"zhuyin":"ㄗㄥ ㄗˇ","english":"Zengzi (Confucian disciple)"},"出乎":{"zhuyin":"ㄔㄨ ㄏㄨ","english":"due to; to stem from; to go beyond (also fig. beyond reason, expectations etc); to go against (expectations)"},"而後":{"zhuyin":"ㄦˊ ㄏㄡˋ","english":"after that; then"},"反之":{"zhuyin":"ㄈㄢˇ ㄓ","english":"on the other hand...; conversely..."},"仁政":{"zhuyin":"ㄖㄣˊ ㄓㄥˋ","english":"benevolent governance"},"所能":{"zhuyin":"ㄙㄨㄛˇ ㄋㄥˊ","english":"according to one's capabilities; what sb is capable of"},"無已":{"zhuyin":"ㄨˊ ㄧˇ","english":"if there is no alternative"},"金剛":{"zhuyin":"ㄐㄧㄣ ㄍㄤ","english":"vajra; diamond"},"行善":{"zhuyin":"ㄒㄧㄥˊ ㄕㄢˋ","english":"do good; practice virtue"},"第二":{"zhuyin":"ㄉㄧˋ ㄦˋ","english":"second; number two; next; secondary"},"十三":{"zhuyin":"ㄕˊ ㄙㄢ","english":"thirteen; 13"},"平等":{"zhuyin":"ㄆㄧㄥˊ ㄉㄥˇ","english":"equal; impartial"},"高下":{"zhuyin":"ㄍㄠ ㄒㄧㄚˋ","english":"high or low; superiority"},"無我":{"zhuyin":"ㄨˊ ㄨㄛˇ","english":"no-self; anātman"},"無人":{"zhuyin":"ㄨˊ ㄖㄣˊ","english":"no other person; no-person"},"眾生":{"zhuyin":"ㄓㄨㄥˋ ㄕㄥ","english":"sentient beings; all living things"},"一切":{"zhuyin":"ㄧ ㄑㄧㄝˋ","english":"all; everything"},"如來":{"zhuyin":"ㄖㄨˊ ㄌㄞˊ","english":"Tathagata; the Buddha"},"無苦集滅道":{"zhuyin":"ㄨˊ ㄎㄨˇ ㄐㄧˊ ㄇㄧㄝˋ ㄉㄠˋ","english":"no suffering, origin, cessation, or path"},"無智亦無得":{"zhuyin":"ㄨˊ ㄓˋ ㄧˋ ㄨˊ ㄉㄜˊ","english":"no wisdom and no attainment"},"無所得":{"zhuyin":"ㄨˊ ㄙㄨㄛˇ ㄉㄜˊ","english":"nothing to be attained"},"以無所得故":{"zhuyin":"ㄧˇ ㄨˊ ㄙㄨㄛˇ ㄉㄜˊ ㄍㄨˋ","english":"because there is nothing to attain"},"菩提薩埵":{"zhuyin":"ㄆㄨˊ ㄊㄧˊ ㄙㄚˋ ㄉㄨㄛˇ","english":"bodhisattva"},"般若波羅蜜多":{"zhuyin":"ㄅㄛ ㄖㄜˇ ㄅㄛ ㄌㄨㄛˊ ㄇㄧˋ ㄉㄨㄛ","english":"prajnaparamita; perfection of wisdom"},"波羅蜜多":{"zhuyin":"ㄅㄛ ㄌㄨㄛˊ ㄇㄧˋ ㄉㄨㄛ","english":"paramita; perfection"},"心無罣礙":{"zhuyin":"ㄒㄧㄣ ㄨˊ ㄍㄨㄚˋ ㄞˋ","english":"mind free of obstacles"},"罣礙":{"zhuyin":"ㄍㄨㄚˋ ㄞˋ","english":"mental obstructions; hindrances"},"梁惠王":{"zhuyin":"ㄌㄧㄤˊ ㄏㄨㄟˋ ㄨㄤˊ","english":"King Hui of Liang"},"饑歲":{"zhuyin":"ㄐㄧ ㄙㄨㄟˋ","english":"year of famine"},"凶年饑歲":{"zhuyin":"ㄒㄩㄥ ㄋㄧㄢˊ ㄐㄧ ㄙㄨㄟˋ","english":"years of famine and disaster"},"老弱":{"zhuyin":"ㄌㄠˇ ㄖㄨㄛˋ","english":"the old and weak"},"轉乎溝壑":{"zhuyin":"ㄓㄨㄢˇ ㄏㄨ ㄍㄡ ㄏㄜˋ","english":"to die abandoned in ditches"},"散而之四方":{"zhuyin":"ㄙㄢˋ ㄦˊ ㄓ ㄙˋ ㄈㄤ","english":"scattered and fled to all directions"},"幾千人":{"zhuyin":"ㄐㄧˇ ㄑㄧㄢ ㄖㄣˊ","english":"several thousand people"},"倉廩實":{"zhuyin":"ㄘㄤ ㄌㄧㄣˇ ㄕˊ","english":"granaries are full"},"府庫充":{"zhuyin":"ㄈㄨˇ ㄎㄨˋ ㄔㄨㄥ","english":"treasury is abundant"},"莫以告":{"zhuyin":"ㄇㄛˋ ㄧˇ ㄍㄠˋ","english":"none reported it"},"上慢":{"zhuyin":"ㄕㄤˋ ㄇㄢˋ","english":"superiors being negligent"},"殘下":{"zhuyin":"ㄘㄢˊ ㄒㄧㄚˋ","english":"harming those below"},"上慢而殘下":{"zhuyin":"ㄕㄤˋ ㄇㄢˋ ㄦˊ ㄘㄢˊ ㄒㄧㄚˋ","english":"rulers negligent and cruel to subjects"},"戒之":{"zhuyin":"ㄐㄧㄝˋ ㄓ","english":"be warned; take heed"},"出乎爾者":{"zhuyin":"ㄔㄨ ㄏㄨ ㄦˇ ㄓㄜˇ","english":"what goes out from you"},"反乎爾者":{"zhuyin":"ㄈㄢˇ ㄏㄨ ㄦˇ ㄓㄜˇ","english":"returns to you"},"出乎爾者，反乎爾者也":{"zhuyin":"ㄔㄨ ㄏㄨ ㄦˇ ㄓㄜˇ ㄈㄢˇ ㄏㄨ ㄦˇ ㄓㄜˇ ㄧㄝˇ","english":"what you send out returns to you"},"得反之":{"zhuyin":"ㄉㄜˊ ㄈㄢˇ ㄓ","english":"able to retaliate"},"君無尤焉":{"zhuyin":"ㄐㄩㄣ ㄨˊ ㄧㄡˊ ㄧㄢ","english":"do not blame your lord"},"行仁政":{"zhuyin":"ㄒㄧㄥˊ ㄖㄣˊ ㄓㄥˋ","english":"practice benevolent rule"},"斯民":{"zhuyin":"ㄙ ㄇㄧㄣˊ","english":"these people; the people"},"親其上":{"zhuyin":"ㄑㄧㄣ ㄑㄧˊ ㄕㄤˋ","english":"love their superiors"},"死其長":{"zhuyin":"ㄙˇ ㄑㄧˊ ㄓㄤˇ","english":"die for their leaders"},"親其上、死其長":{"zhuyin":"ㄑㄧㄣ ㄑㄧˊ ㄕㄤˋ ㄙˇ ㄑㄧˊ ㄓㄤˇ","english":"love rulers and die for leaders"},"滕文公":{"zhuyin":"ㄊㄥˊ ㄨㄣˊ ㄍㄨㄥ","english":"Duke Wen of Teng"},"小國":{"zhuyin":"ㄒㄧㄠˇ ㄍㄨㄛˊ","english":"small state"},"間於齊楚":{"zhuyin":"ㄐㄧㄢˋ ㄩˊ ㄑㄧˊ ㄔㄨˇ","english":"situated between Qi and Chu"},"事齊":{"zhuyin":"ㄕˋ ㄑㄧˊ","english":"serve Qi"},"事楚":{"zhuyin":"ㄕˋ ㄔㄨˇ","english":"serve Chu"},"非吾所能及":{"zhuyin":"ㄈㄟ ㄨˊ ㄙㄨㄛˇ ㄋㄥˊ ㄐㄧˊ","english":"beyond my ability to advise"},"有一焉":{"zhuyin":"ㄧㄡˇ ㄧ ㄧㄢ","english":"there is one option"},"鑿斯池":{"zhuyin":"ㄗㄠˊ ㄙ ㄔˊ","english":"dig the moat"},"築斯城":{"zhuyin":"ㄓㄨˋ ㄙ ㄔㄥˊ","english":"build the walls"},"與民守之":{"zhuyin":"ㄩˇ ㄇㄧㄣˊ ㄕㄡˇ ㄓ","english":"defend it together with the people"},"效死":{"zhuyin":"ㄒㄧㄠˋ ㄙˇ","english":"willing to die in service"},"民弗去":{"zhuyin":"ㄇㄧㄣˊ ㄈㄨˊ ㄑㄩˋ","english":"the people do not leave"},"效死而民弗去":{"zhuyin":"ㄒㄧㄠˋ ㄙˇ ㄦˊ ㄇㄧㄣˊ ㄈㄨˊ ㄑㄩˋ","english":"offer your life and the people will not flee"},"可為也":{"zhuyin":"ㄎㄜˇ ㄨㄟˊ ㄧㄝˇ","english":"then it can be done"},"是謀":{"zhuyin":"ㄕˋ ㄇㄡˊ","english":"this plan; this strategy"},"無智":{"zhuyin":"ㄨˊ ㄓˋ","english":"no wisdom"},"無得":{"zhuyin":"ㄨˊ ㄉㄜˊ","english":"no attainment"},"無已則":{"zhuyin":"ㄨˊ ㄧˇ ㄗㄜˊ","english":"if unavoidable, then"},"心無":{"zhuyin":"ㄒㄧㄣ ㄨˊ","english":"mind is free of"},"孟子對曰":{"zhuyin":"ㄇㄥˋ ㄗˇ ㄉㄨㄟˋ ㄩㄝ","english":"Mencius replied"},"君之民":{"zhuyin":"ㄐㄩㄣ ㄓ ㄇㄧㄣˊ","english":"your lord's people"},"壯者":{"zhuyin":"ㄓㄨㄤˋ ㄓㄜˇ","english":"the able-bodied"},"老弱轉乎溝壑":{"zhuyin":"ㄌㄠˇ ㄖㄨㄛˋ ㄓㄨㄢˇ ㄏㄨ ㄍㄡ ㄏㄜˋ","english":"old and weak die in ditches"},"今而後":{"zhuyin":"ㄐㄧㄣ ㄦˊ ㄏㄡˋ","english":"from now on; henceforth"},"得反之也":{"zhuyin":"ㄉㄜˊ ㄈㄢˇ ㄓ ㄧㄝˇ","english":"can now retaliate"},"問曰":{"zhuyin":"ㄨㄣˋ ㄩㄝ","english":"asked, saying"},"間於":{"zhuyin":"ㄐㄧㄢˋ ㄩˊ","english":"sandwiched between"},"齊楚":{"zhuyin":"ㄑㄧˊ ㄔㄨˇ","english":"Qi and Chu (states)"},"斯池":{"zhuyin":"ㄙ ㄔˊ","english":"this moat"},"斯城":{"zhuyin":"ㄙ ㄔㄥˊ","english":"this city wall"},"是上慢":{"zhuyin":"ㄕˋ ㄕㄤˋ ㄇㄢˋ","english":"this is superiors being negligent"},"復次":{"zhuyin":"ㄈㄨˋ ㄘˋ","english":"furthermore; again"},"須菩提":{"zhuyin":"ㄒㄩ ㄆㄨˊ ㄊㄧˊ","english":"Subhuti (disciple of Buddha)"},"是法":{"zhuyin":"ㄕˋ ㄈㄚˇ","english":"this Dharma; this teaching"},"無有":{"zhuyin":"ㄨˊ ㄧㄡˇ","english":"there is no; without"},"是名":{"zhuyin":"ㄕˋ ㄇㄧㄥˊ","english":"this is called; is named"},"阿耨多羅三藐三菩提":{"zhuyin":"ㄚ ㄋㄡˋ ㄉㄨㄛ ㄌㄨㄛˊ ㄙㄢ ㄇㄧㄠˇ ㄙㄢ ㄆㄨˊ ㄊㄧˊ","english":"anuttara-samyak-sambodhi; supreme enlightenment"},"無眾生":{"zhuyin":"ㄨˊ ㄓㄨㄥˋ ㄕㄥ","english":"no sentient beings"},"無壽者":{"zhuyin":"ㄨˊ ㄕㄡˋ ㄓㄜˇ","english":"no lifespan; no soul"},"壽者":{"zhuyin":"ㄕㄡˋ ㄓㄜˇ","english":"one with a lifespan; a soul"},"修一切":{"zhuyin":"ㄒㄧㄡ ㄧ ㄑㄧㄝˋ","english":"cultivate all"},"善法":{"zhuyin":"ㄕㄢˋ ㄈㄚˇ","english":"wholesome dharmas; good teachings"},"修一切善法":{"zhuyin":"ㄒㄧㄡ ㄧ ㄑㄧㄝˋ ㄕㄢˋ ㄈㄚˇ","english":"cultivate all wholesome dharmas"},"則得":{"zhuyin":"ㄗㄜˊ ㄉㄜˊ","english":"then one attains"},"所言":{"zhuyin":"ㄙㄨㄛˇ ㄧㄢˊ","english":"what is spoken of; what is called"},"善法者":{"zhuyin":"ㄕㄢˋ ㄈㄚˇ ㄓㄜˇ","english":"what is called wholesome dharma"},"如來說":{"zhuyin":"ㄖㄨˊ ㄌㄞˊ ㄕㄨㄛ","english":"the Tathagata says"},"即非":{"zhuyin":"ㄐㄧˊ ㄈㄟ","english":"is precisely not; is in fact not"},"非善法":{"zhuyin":"ㄈㄟ ㄕㄢˋ ㄈㄚˇ","english":"not wholesome dharma"},"淨心":{"zhuyin":"ㄐㄧㄥˋ ㄒㄧㄣ","english":"pure mind; purify the mind"},"淨心行善分":{"zhuyin":"ㄐㄧㄥˋ ㄒㄧㄣ ㄒㄧㄥˊ ㄕㄢˋ ㄈㄣ","english":"chapter on pure mind and virtuous action"},"第二十三":{"zhuyin":"ㄉㄧˋ ㄦˋ ㄕˊ ㄙㄢ","english":"chapter twenty-three"},"金剛經":{"zhuyin":"ㄐㄧㄣ ㄍㄤ ㄐㄧㄥ","english":"Diamond Sutra"},"平等法":{"zhuyin":"ㄆㄧㄥˊ ㄉㄥˇ ㄈㄚˇ","english":"equal Dharma; impartial teaching"}};
+</script>
+
+<script>
+/* Shared JS for all 今日讀報 page types.
+   This is a reference artifact — assemble.py reads and injects it.
+   Expects: const GLOSSARY = {...}; defined before this script. */
+
+(function () {
+  'use strict';
+
+  var lookupMode = false;
+
+  // === Translation toggles ===
+
+  document.querySelectorAll('.translation-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const container = btn.closest('.article') || btn.closest('.wisdom-section') || btn.closest('.obsession-section') || btn.parentElement;
+      const enDiv = container.querySelector('.article-body-en') || container.querySelector('.section-body-en');
+      if (!enDiv) return;
+      const isHidden = enDiv.hidden;
+      enDiv.hidden = !isHidden;
+      btn.textContent = isHidden
+        ? '隱藏翻譯 Hide Translation'
+        : '顯示翻譯 Show Translation';
+    });
+  });
+
+  // === Mobile character lookup ===
+
+  var isMobile = window.matchMedia('(pointer: coarse)').matches;
+
+  if (isMobile) {
+    var longPressTimer = null;
+    var feedbackTimer = null;
+    var startX = 0;
+    var startY = 0;
+    var activeSpan = null;
+    var LONG_PRESS_MS = 400;
+    var MOVE_THRESHOLD = 10;
+
+    var popup = document.getElementById('char-popup');
+    var popupChar = document.getElementById('popup-char');
+    var popupZhuyin = document.getElementById('popup-zhuyin');
+    var popupDef = document.getElementById('popup-def');
+    var lookupToggleBtn = document.getElementById('lookup-toggle');
+
+    function positionPopup(targetSpan) {
+      var rect = targetSpan.getBoundingClientRect();
+      var popupWidth = 280;
+      var margin = 8;
+      var gap = 6;
+      var vw = window.innerWidth;
+
+      popup.classList.add('visible');
+      var popupHeight = popup.offsetHeight;
+
+      var left = rect.left + rect.width / 2 - popupWidth / 2;
+      left = Math.max(margin, Math.min(left, vw - popupWidth - margin));
+
+      var top = rect.top - popupHeight - gap;
+      if (top < margin) {
+        top = rect.bottom + gap;
+      }
+
+      popup.style.left = left + 'px';
+      popup.style.top = top + 'px';
+    }
+
+    function findLongestMatch(targetSpan) {
+      if (typeof GLOSSARY === 'undefined') return null;
+
+      var parent = targetSpan.closest('p, h2, li') || targetSpan.parentElement;
+      var spans = [].slice.call(parent.querySelectorAll('.c'));
+      var targetIdx = spans.indexOf(targetSpan);
+      if (targetIdx === -1) return null;
+
+      var chars = spans.map(function (s) { return s.textContent; });
+      var MAX_WORD_LEN = 6;
+      var bestMatch = null;
+      var bestSpans = null;
+
+      for (var len = Math.min(MAX_WORD_LEN, chars.length); len >= 1; len--) {
+        var startMin = Math.max(0, targetIdx - len + 1);
+        var startMax = Math.min(targetIdx, chars.length - len);
+
+        for (var start = startMin; start <= startMax; start++) {
+          var candidate = chars.slice(start, start + len).join('');
+          if (GLOSSARY[candidate]) {
+            if (!bestMatch || candidate.length > bestMatch.length) {
+              bestMatch = candidate;
+              bestSpans = spans.slice(start, start + len);
+            }
+          }
+        }
+
+        if (bestMatch && bestMatch.length === len) break;
+      }
+
+      return bestMatch
+        ? { text: bestMatch, entry: GLOSSARY[bestMatch], spans: bestSpans }
+        : null;
+    }
+
+    function showPopup(char, targetSpan) {
+      var match = findLongestMatch(targetSpan);
+
+      if (match) {
+        popupChar.textContent = match.text;
+        popupZhuyin.textContent = match.entry.zhuyin;
+        popupDef.textContent = match.entry.english;
+      } else {
+        popupChar.textContent = char;
+        popupZhuyin.textContent = '';
+        popupDef.textContent = '(not in glossary)';
+      }
+
+      document.querySelectorAll('.c.touch-selected').forEach(function (el) {
+        el.classList.remove('touch-selected');
+      });
+
+      var highlightSpans = match ? match.spans : [targetSpan];
+      highlightSpans.forEach(function (s) { s.classList.add('touch-selected'); });
+      activeSpan = targetSpan;
+
+      positionPopup(targetSpan);
+    }
+
+    function hidePopup() {
+      popup.classList.remove('visible');
+      document.querySelectorAll('.c.touch-selected').forEach(function (el) {
+        el.classList.remove('touch-selected');
+      });
+      activeSpan = null;
+    }
+
+    document.getElementById('popup-close').addEventListener('click', hidePopup);
+
+    document.addEventListener('click', function (e) {
+      if (!popup.classList.contains('visible')) return;
+      if (popup.contains(e.target)) return;
+      if (!e.target.closest('.c')) {
+        hidePopup();
+      }
+    });
+
+    var scrollDismissAttached = false;
+    function attachScrollDismiss() {
+      if (scrollDismissAttached) return;
+      scrollDismissAttached = true;
+      window.addEventListener('scroll', function onScroll() {
+        hidePopup();
+        window.removeEventListener('scroll', onScroll);
+        scrollDismissAttached = false;
+      }, { once: true });
+    }
+
+    document.addEventListener('touchstart', function (e) {
+      var span = e.target.closest('.c');
+      if (!span) return;
+
+      var touch = e.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+
+      feedbackTimer = setTimeout(function () {
+        span.classList.add('touch-active');
+      }, 100);
+
+      longPressTimer = setTimeout(function () {
+        span.classList.remove('touch-active');
+        showPopup(span.textContent, span);
+        attachScrollDismiss();
+      }, LONG_PRESS_MS);
+    }, { passive: true });
+
+    document.addEventListener('touchmove', function (e) {
+      if (!longPressTimer) return;
+      var touch = e.touches[0];
+      if (Math.abs(touch.clientX - startX) > MOVE_THRESHOLD ||
+          Math.abs(touch.clientY - startY) > MOVE_THRESHOLD) {
+        clearTimeout(longPressTimer);
+        clearTimeout(feedbackTimer);
+        longPressTimer = null;
+        document.querySelectorAll('.touch-active').forEach(function (el) {
+          el.classList.remove('touch-active');
+        });
+      }
+    }, { passive: true });
+
+    document.addEventListener('touchend', function (e) {
+      clearTimeout(longPressTimer);
+      clearTimeout(feedbackTimer);
+      longPressTimer = null;
+      var span = e.target.closest('.c');
+      if (span) span.classList.remove('touch-active');
+    }, { passive: true });
+
+    document.addEventListener('touchcancel', function () {
+      clearTimeout(longPressTimer);
+      clearTimeout(feedbackTimer);
+      longPressTimer = null;
+      document.querySelectorAll('.touch-active').forEach(function (el) {
+        el.classList.remove('touch-active');
+      });
+    }, { passive: true });
+
+    lookupToggleBtn.addEventListener('click', function () {
+      lookupMode = !lookupMode;
+      this.textContent = lookupMode ? '查詢模式 ON' : '查詢模式 OFF';
+      this.classList.toggle('active', lookupMode);
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!lookupMode) return;
+      var span = e.target.closest('.c');
+      if (!span) return;
+      e.stopPropagation();
+      showPopup(span.textContent, span);
+      attachScrollDismiss();
+    });
+  }
+})();
+
+</script>
+
+</body>
+</html>
