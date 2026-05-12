@@ -1,0 +1,28 @@
+name: Decode glossary file
+on:
+  push:
+    paths:
+      - 'docs/glossary/*.b64gz'
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode glossary files
+        run: |
+          for f in docs/glossary/*.b64gz; do
+            target="${f%.b64gz}"
+            base64 -d "$f" | gunzip > "$target"
+            rm "$f"
+          done
+      - name: Cleanup test files
+        run: rm -f docs/glossary/.test-push-verify
+      - name: Commit decoded files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git diff --staged --quiet || git commit -m 'Decode glossary files'
+          git push
