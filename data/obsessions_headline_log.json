@@ -1175,6 +1175,34 @@
       "headline": "三十五年的世界檔案：CIA 世界概況資料庫",
       "headline_en": "CIA World Factbook Archive: 35 Years of Country Data Preserved",
       "topic": "government reference data preservation"
+    },
+    {
+      "date": "2026-05-14",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "當鋼琴遇見笙：卡到音的慢速實驗",
+      "headline_en": "Ka Dao Yin's Slow: free improvisation with guzheng, sheng, and saxophone",
+      "topic": "free improvisation crossover quartet"
+    },
+    {
+      "date": "2026-05-14",
+      "obsession_id": "finland-honeymoon",
+      "headline": "住進芬蘭四百年莊園",
+      "headline_en": "Tertti Manor: sleeping in a 17th-century Swedish cavalry estate",
+      "topic": "lakeland manor farm hotel"
+    },
+    {
+      "date": "2026-05-14",
+      "obsession_id": "do-312",
+      "headline": "海德公園花市：芝加哥最老的植物市集",
+      "headline_en": "Hyde Park Garden Fair: Chicago's oldest community plant sale",
+      "topic": "community garden plant sale"
+    },
+    {
+      "date": "2026-05-14",
+      "obsession_id": "best-of-internet",
+      "headline": "一個人，二十五年，四萬五千種植物用途",
+      "headline_en": "Native American Ethnobotany Database: 25 years of solo scholarship",
+      "topic": "ethnobotany plant use database"
     }
   ]
 }
