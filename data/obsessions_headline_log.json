@@ -1287,6 +1287,34 @@
       "headline": "當程式碼變成詩",
       "headline_en": "The HTML Review: literary journal where code is the medium",
       "topic": "HTML literary journal"
+    },
+    {
+      "date": "2026-05-19",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "卡帶裡的革命：王福瑞與台灣噪音地下",
+      "headline_en": "Wang Fujui's NOISE label and Taiwan's cassette tape underground",
+      "topic": "noise art cassette underground"
+    },
+    {
+      "date": "2026-05-19",
+      "obsession_id": "finland-honeymoon",
+      "headline": "國王之路：穿越冰海的古老郵路",
+      "headline_en": "Finland's King's Road: the postal route across a frozen sea",
+      "topic": "historic postal road scenic drive"
+    },
+    {
+      "date": "2026-05-19",
+      "obsession_id": "do-312",
+      "headline": "吃掉你的鄰居：芝加哥野外採集散步",
+      "headline_en": "Urban foraging walk with Chicago's only full-time forager",
+      "topic": "urban foraging walk"
+    },
+    {
+      "date": "2026-05-19",
+      "obsession_id": "best-of-internet",
+      "headline": "一個人的鐘塔普查：六十年的全球鐘聲記錄",
+      "headline_en": "TowerBells.org: one carillonneur's 60-year global bell census",
+      "topic": "tower bell instrument database"
     }
   ]
 }
