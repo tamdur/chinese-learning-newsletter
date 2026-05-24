@@ -1427,6 +1427,34 @@
       "headline": "一個人的計算機博物館",
       "headline_en": "The Old Calculator Web Museum: 40 years of desktop calculator history",
       "topic": "vintage calculator museum website"
+    },
+    {
+      "date": "2026-05-24",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "台北地下的迷信音樂",
+      "headline_en": "Mong Tong's Mystery: Superstitious Music from Taipei's Occult Underground",
+      "topic": "occult sample-based psychedelia"
+    },
+    {
+      "date": "2026-05-24",
+      "obsession_id": "finland-honeymoon",
+      "headline": "芬蘭史詩的故鄉：庫赫莫小鎮",
+      "headline_en": "The Kalevala Heartland: Kuhmo's Living Epic on the Russian Border",
+      "topic": "Kalevala epic heartland destination"
+    },
+    {
+      "date": "2026-05-24",
+      "obsession_id": "do-312",
+      "headline": "芝加哥最老魔術社開門教你變牌",
+      "headline_en": "Chicago's Oldest Magic Club Opens Doors for Card-Force Workshop",
+      "topic": "magic workshop and lecture"
+    },
+    {
+      "date": "2026-05-24",
+      "obsession_id": "best-of-internet",
+      "headline": "一個人收藏四百張古地圖的網站",
+      "headline_en": "Cartographic Images: One Man's 45-Year Archive of 400 Ancient Maps",
+      "topic": "historical cartography archive"
     }
   ]
 }
