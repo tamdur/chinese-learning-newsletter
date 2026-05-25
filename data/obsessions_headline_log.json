@@ -1455,6 +1455,34 @@
       "headline": "一個人收藏四百張古地圖的網站",
       "headline_en": "Cartographic Images: One Man's 45-Year Archive of 400 Ancient Maps",
       "topic": "historical cartography archive"
+    },
+    {
+      "date": "2026-05-25",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "山中的聲音：陳世興的四張環境音樂專輯",
+      "headline_en": "Jimi Chen's Four Ambient Albums from the Mountains",
+      "topic": "ambient new age mountain retreat"
+    },
+    {
+      "date": "2026-05-25",
+      "obsession_id": "finland-honeymoon",
+      "headline": "坦佩雷的黑香腸：芬蘭最驕傲的街頭小吃",
+      "headline_en": "Tampere's Mustamakkara: Finland's Proudest Street Food",
+      "topic": "Tampere blood sausage street food"
+    },
+    {
+      "date": "2026-05-25",
+      "obsession_id": "do-312",
+      "headline": "奇珍異物博覽會：在芝加哥學做標本",
+      "headline_en": "Oddities & Curiosities Expo taxidermy class at McCormick Place",
+      "topic": "oddities expo taxidermy workshop"
+    },
+    {
+      "date": "2026-05-25",
+      "obsession_id": "best-of-internet",
+      "headline": "XWord Info：一個人建的填字遊戲資料庫",
+      "headline_en": "XWord Info: One Man's NYT Crossword Archive Since 1942",
+      "topic": "crossword puzzle statistical archive"
     }
   ]
 }
