@@ -1511,6 +1511,34 @@
       "headline": "一位哲學教授的打字機王國",
       "headline_en": "The Typewriter Database: A Philosophy Professor's 30-Year Obsession",
       "topic": "typewriter serial number archive"
+    },
+    {
+      "date": "2026-05-27",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "從台語流行到工業噪音：林強的大膽轉變",
+      "headline_en": "Lim Giong's Entertainment World: from Hokkien pop to industrial noise",
+      "topic": "industrial techno London production"
+    },
+    {
+      "date": "2026-05-27",
+      "obsession_id": "finland-honeymoon",
+      "headline": "芬蘭湖裡的稀有海豹：三月正是生寶寶的季節",
+      "headline_en": "Saimaa ringed seal: freshwater seal pupping in March",
+      "topic": "endangered freshwater seal pupping season"
+    },
+    {
+      "date": "2026-05-27",
+      "obsession_id": "do-312",
+      "headline": "大衛乘拜恩的腦科學劇場：芝加哥限定體驗",
+      "headline_en": "David Byrne's Theater of the Mind immersive experience",
+      "topic": "immersive neuroscience theater"
+    },
+    {
+      "date": "2026-05-27",
+      "obsession_id": "best-of-internet",
+      "headline": "一個人建的銅管樂團比賽資料庫",
+      "headline_en": "Brass Band Results: one developer's global contest database",
+      "topic": "brass band contest results database"
     }
   ]
 }
