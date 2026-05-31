@@ -1623,6 +1623,34 @@
       "headline": "一個人的電影圖書館",
       "headline_en": "FilmGrab: One Woman's Hand-Curated Film Still Archive",
       "topic": "film still archive website"
+    },
+    {
+      "date": "2026-05-31",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "解嚴之後的狂歌：黑名單工作室《抓狂歌》",
+      "headline_en": "Blacklist Studio's Songs of Madness: post-martial law noise document",
+      "topic": "post-martial law multilingual rock"
+    },
+    {
+      "date": "2026-05-31",
+      "obsession_id": "finland-honeymoon",
+      "headline": "冰湖上的木造音樂殿堂：拉赫蒂西貝流士音樂廳",
+      "headline_en": "Sibelius Hall: Finland's wooden concert hall on a frozen lake",
+      "topic": "wooden concert hall architecture"
+    },
+    {
+      "date": "2026-05-31",
+      "obsession_id": "do-312",
+      "headline": "用身體說故事：芝加哥肢體劇場節",
+      "headline_en": "Chicago Physical Theater Festival workshops open to public",
+      "topic": "physical theater festival workshops"
+    },
+    {
+      "date": "2026-05-31",
+      "obsession_id": "best-of-internet",
+      "headline": "收聽冷戰的幽靈電波：數字電台研究站",
+      "headline_en": "Numbers Stations Research Center: Cold War shortwave spy broadcasts",
+      "topic": "Cold War numbers stations database"
     }
   ]
 }
