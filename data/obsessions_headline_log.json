@@ -1651,6 +1651,34 @@
       "headline": "收聽冷戰的幽靈電波：數字電台研究站",
       "headline_en": "Numbers Stations Research Center: Cold War shortwave spy broadcasts",
       "topic": "Cold War numbers stations database"
+    },
+    {
+      "date": "2026-06-01",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "台灣地下電子聲響：模組合成器的島嶼紀錄",
+      "headline_en": "Pulses on the Horizon: Taiwan's modular synthesis cassette compilation",
+      "topic": "modular synthesis compilation"
+    },
+    {
+      "date": "2026-06-01",
+      "obsession_id": "finland-honeymoon",
+      "headline": "千年羊肉的秘密：芬蘭萊米村的白樺木槽",
+      "headline_en": "Lemin Särä: thousand-year-old lamb dish in birch-log trough",
+      "topic": "ancient lamb dish South Karelia"
+    },
+    {
+      "date": "2026-06-01",
+      "obsession_id": "do-312",
+      "headline": "用手做一本小誌，畫出你的街區地圖",
+      "headline_en": "Zine Club Chicago neighborhood mapping workshop June 8",
+      "topic": "community zine mapping workshop"
+    },
+    {
+      "date": "2026-06-01",
+      "obsession_id": "best-of-internet",
+      "headline": "Wiby：一個只找得到「老網路」的搜尋引擎",
+      "headline_en": "Wiby.me: search engine for the old, weird, human web",
+      "topic": "indie web search engine"
     }
   ]
 }
