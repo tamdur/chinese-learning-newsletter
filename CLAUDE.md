@@ -104,3 +104,6 @@ On-demand deep-dive articles via `/se`. Inserts into the current newsletter page
 - `USER:` prefix for inline annotations in plan/research docs
 - Dates in YYYY-MM-DD format, America/Chicago timezone
 - Multiple issues per day allowed; current issue always at index file; previous same-day issues archived with `-2`, `-3` suffixes
+
+## Local vs. Remote
+The daily pipeline runs unattended on a VM via a scheduled Claude routine and commits/pushes to `origin/main`; the user does **not** run it from this local clone. Expect **`origin/main` to be far ahead of local** (often 100+ commits of newsletter/wisdom/obsessions runs). This is normal, not a problem. Before committing local changes, always `git fetch origin main` and `git pull --rebase origin main` first. Those daily commits only touch generated content (`docs/`, glossary JSON, `data/` logs), so they rarely conflict with edits to pipeline source (agents, scripts, configs) — a rebase is typically clean.
