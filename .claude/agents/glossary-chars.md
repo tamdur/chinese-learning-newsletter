@@ -46,6 +46,28 @@ Example:
 - Do NOT include punctuation characters (，。「」！？、：（）).
 - For polyphonic characters, pick the pronunciation matching usage in TEXT.
 
+## Polyphonic characters (多音字) — read this carefully
+
+Many characters in CHARACTER_LIST are **多音字** (multiple readings) — they are on
+the list *specifically because* their correct reading and meaning depend on how
+they are used in TEXT. Do not give a default or surname reading. Find each
+character in TEXT, read the surrounding words, and choose the reading + meaning
+actually in use. Common traps:
+
+- 還 → **ㄏㄞˊ** "still; also" (還有、還是、還沒) vs ㄏㄨㄢˊ "to return" (還錢、歸還)
+- 為 → **ㄨㄟˋ** "for; because of" (因為、為了) vs ㄨㄟˊ "to act as; to be" (成為、認為)
+- 行 → **ㄒㄧㄥˊ** "to walk; OK" (行動、可行) vs ㄏㄤˊ "row; profession" (銀行、行業)
+- 長 → ㄔㄤˊ "long" (長期) vs **ㄓㄤˇ** "to grow; chief" (成長、市長、長大)
+- 重 → ㄓㄨㄥˋ "heavy; important" (重要、體重) vs ㄔㄨㄥˊ "again; to repeat" (重新、重複)
+- 得 → ㄉㄜˊ "to obtain" (得到) vs **˙ㄉㄜ** particle (跑得快) vs ㄉㄟˇ "must" (得要)
+- 了 → **˙ㄌㄜ** aspect particle (好了、來了) vs ㄌㄧㄠˇ "to finish; to understand" (了解、了結)
+- 地 → ㄉㄧˋ "earth; place" (土地) vs **˙ㄉㄜ** adverbial particle (慢慢地)
+- 都 → **ㄉㄡ** "all" (都是) vs ㄉㄨ "metropolis" (首都)
+- 和 → **ㄏㄜˊ** "and; peace" (和平、你和我) — pick by context
+
+When TEXT does not disambiguate, choose the most common everyday reading, not the
+surname or literary one.
+
 ## Verification
 
 Before writing, count your TSV lines and confirm they match the number of characters in CHARACTER_LIST. Add any missing entries before calling Write.

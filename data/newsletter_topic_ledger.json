@@ -1,0 +1,388 @@
+{
+  "entries": [
+    {
+      "date": "2026-05-02",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "Trump rejects Iran ceasefire proposal; talks deadlock",
+      "headline": "川普拒絕伊朗停火提案，談判陷入僵局"
+    },
+    {
+      "date": "2026-05-02",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "war depletes US weapons stockpile; deliveries to Europe delayed",
+      "headline": "伊朗戰爭耗光武器，美國告知歐洲盟友交貨要延遲"
+    },
+    {
+      "date": "2026-05-02",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "Google launches Gemini 3.1 Ultra; new memory benchmark",
+      "headline": "Google 推出 Gemini 3.1 Ultra，刷新 AI 記憶力紀錄"
+    },
+    {
+      "date": "2026-05-02",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "Medicaid/SNAP work requirements",
+      "angle": "Nebraska first to require work for Medicaid; 150k IL families lose food aid",
+      "headline": "內布拉斯加率先要求醫療補助者必須工作，伊利諾十五萬家庭失去食物補助"
+    },
+    {
+      "date": "2026-05-02",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "edge Diamondbacks 6-5 but injuries mount",
+      "headline": "小熊六比五險勝響尾蛇，但傷兵不斷"
+    },
+    {
+      "date": "2026-05-02",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "preview: home vs Fulham, key title-race match",
+      "headline": "兵工廠今晚主場迎戰富勒姆，爭冠關鍵一戰"
+    },
+    {
+      "date": "2026-05-03",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "China AI & chips",
+      "angle": "Zhipu trains new model on Huawei chips",
+      "headline": "中國智譜公司用華為晶片訓練出新 AI 模型"
+    },
+    {
+      "date": "2026-05-03",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "Trump rejects Iran's 14-point ceasefire plan",
+      "headline": "川普拒絕伊朗十四點停火方案"
+    },
+    {
+      "date": "2026-05-03",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US troops in Europe",
+      "angle": "US orders 5,000 troops withdrawn from Germany",
+      "headline": "美國下令從德國撤走五千名駐軍"
+    },
+    {
+      "date": "2026-05-03",
+      "rank": 4,
+      "topic_id": "ideas",
+      "topic": "neuro-bioengineering",
+      "angle": "Northwestern 3D-prints artificial neurons that talk to brain cells",
+      "headline": "西北大學用 3D 列印造出能和腦細胞溝通的人工神經"
+    },
+    {
+      "date": "2026-05-03",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "10th straight home win; Imanaga 7-inning shutout",
+      "headline": "小熊隊主場十連勝，今永昇太七局完封"
+    },
+    {
+      "date": "2026-05-03",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "beat Fulham 3-0, 6-point league lead (result recap)",
+      "headline": "兵工廠三比零勝富勒姆，領先六分衝冠"
+    },
+    {
+      "date": "2026-05-04",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI defense/government contracts",
+      "angle": "Pentagon approves 8 firms for classified AI; Anthropic excluded",
+      "headline": "五角大廈批准八家公司在機密網路部署 AI，Anthropic 被排除"
+    },
+    {
+      "date": "2026-05-04",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "Trump calls talks 'very positive'; launches Hormuz escort ops",
+      "headline": "川普稱美伊談判「非常正面」，同時啟動護航行動"
+    },
+    {
+      "date": "2026-05-04",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "oil & gas prices",
+      "angle": "US gas hits $4.39/gal, +50% since war began",
+      "headline": "美國油價飆到每加侖 4.39 美元，開戰後漲近五成"
+    },
+    {
+      "date": "2026-05-04",
+      "rank": 4,
+      "topic_id": "business",
+      "topic": "Musk: xAI/SpaceX",
+      "angle": "merged entity buys Cursor for $60B",
+      "headline": "SpaceX-xAI 合併後出手，六百億美元買下 Cursor"
+    },
+    {
+      "date": "2026-05-04",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "sweep Diamondbacks; 11-game home streak (18-yr record)",
+      "headline": "小熊橫掃響尾蛇，主場十一連勝創十八年紀錄"
+    },
+    {
+      "date": "2026-05-04",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "beat Fulham 3-0, prep for CL semifinal (result recap)",
+      "headline": "兵工廠三球完勝 Fulham，備戰歐冠四強"
+    },
+    {
+      "date": "2026-05-05",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "US helicopters sink 6 Iranian speedboats in Hormuz",
+      "headline": "美軍直升機在荷莫茲海峽擊沉六艘伊朗快艇"
+    },
+    {
+      "date": "2026-05-05",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "oil & gas prices",
+      "angle": "US gas $4.46/gal, may break $5",
+      "headline": "美國油價飆到每加侖四點四六美元，恐破五元"
+    },
+    {
+      "date": "2026-05-05",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Bears stadium",
+      "angle": "Bears stadium bill passes state House; governor critical of tax breaks",
+      "headline": "熊隊新球場法案過了州眾議院，州長批減稅太少"
+    },
+    {
+      "date": "2026-05-05",
+      "rank": 4,
+      "topic_id": "ai",
+      "topic": "agentic AI shift",
+      "angle": "3 major AI firms pivot to agentic architecture",
+      "headline": "三大AI公司全面轉向「代理型AI」架構"
+    },
+    {
+      "date": "2026-05-05",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "sweep Diamondbacks; 22-12 record",
+      "headline": "小熊橫掃響尾蛇，戰績飆到二十二勝十二敗"
+    },
+    {
+      "date": "2026-05-05",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "preview: vs Atletico, fighting to reach CL final",
+      "headline": "兵工廠今晚迎戰馬競，爭進歐冠決賽"
+    },
+    {
+      "date": "2026-05-06",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "Trump pauses Hormuz escort ops; says talks progressing",
+      "headline": "川普暫停荷莫茲海峽護航行動，稱與伊朗談判有進展"
+    },
+    {
+      "date": "2026-05-06",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "oil & gas prices",
+      "angle": "Brent breaks $114/barrel; global economy hit",
+      "headline": "國際油價飆破114美元，全球經濟受衝擊"
+    },
+    {
+      "date": "2026-05-06",
+      "rank": 3,
+      "topic_id": "business",
+      "topic": "AI products: finance",
+      "angle": "Anthropic launches 10 financial AI assistants for Wall Street",
+      "headline": "Anthropic推出十個金融AI助手，搶進華爾街"
+    },
+    {
+      "date": "2026-05-06",
+      "rank": 4,
+      "topic_id": "ai",
+      "topic": "AI capability progress",
+      "angle": "AI agent task success 20%→80% in a year",
+      "headline": "AI助手任務成功率一年內從兩成跳到近八成"
+    },
+    {
+      "date": "2026-05-06",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "Conforto walk-off HR; 12-game home streak",
+      "headline": "Conforto再見全壘打！小熊主場連勝12場"
+    },
+    {
+      "date": "2026-05-06",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "reach CL final (RESULT RECAP) — first in 20 years",
+      "headline": "兵工廠闖進歐冠決賽！等了二十年的夢"
+    },
+    {
+      "date": "2026-05-07",
+      "rank": 1,
+      "topic_id": "business",
+      "topic": "Musk: xAI/SpaceX",
+      "angle": "Musk merges xAI into SpaceX, biggest-ever AI merger",
+      "headline": "馬斯克把 xAI 併入 SpaceX，打造史上最大 AI 合併案"
+    },
+    {
+      "date": "2026-05-07",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "DeepSeek V4-Flash: efficient 13B model",
+      "headline": "DeepSeek 發布 V4-Flash：只用 13B 參數就能跑的超高效 AI"
+    },
+    {
+      "date": "2026-05-07",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "central banks & rates",
+      "angle": "Bank of England holds; oil crisis blocks cuts",
+      "headline": "英格蘭銀行利率不動，中東衝突推高油價讓降息無望"
+    },
+    {
+      "date": "2026-05-07",
+      "rank": 4,
+      "topic_id": "ideas",
+      "topic": "cancer research",
+      "angle": "pre-surgery immunotherapy: 3-yr remission in colon cancer",
+      "headline": "手術前先用免疫療法，大腸癌病人三年零復發"
+    },
+    {
+      "date": "2026-05-07",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "8-game streak; extra-innings walk-off vs Reds; 1st in NL Central",
+      "headline": "小乖連勝八場！延長賽再見勝紅人，登上國聯中區第一"
+    },
+    {
+      "date": "2026-05-07",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "CL final preview, can win Sunday (REPEAT of reach-final)",
+      "headline": "兵工廠二十年後重返歐冠決賽，週日可封王"
+    },
+    {
+      "date": "2026-05-08",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI government/safety testing",
+      "angle": "5 tech firms agree to let US govt test AI models",
+      "headline": "五大科技公司同意讓美國政府測試 AI 模型"
+    },
+    {
+      "date": "2026-05-08",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "post-ceasefire, Iran charges high tolls on passing ships",
+      "headline": "停火後伊朗對過路船收高價通行費"
+    },
+    {
+      "date": "2026-05-08",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "US–EU trade",
+      "angle": "Trump sets July 4 deadline for EU trade deal",
+      "headline": "川普給歐盟期限：七月四日前完成貿易協議"
+    },
+    {
+      "date": "2026-05-08",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago housing",
+      "angle": "Chicago fast-tracks ~2,000 new housing units",
+      "headline": "芝加哥一口氣通過近兩千戶新住宅開發案"
+    },
+    {
+      "date": "2026-05-08",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "9-game win streak; 15-game home streak record",
+      "headline": "小熊隊九連勝，主場十五連贏創紀錄"
+    },
+    {
+      "date": "2026-05-08",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "again: reached CL final after 20 years (REPEAT, no new angle)",
+      "headline": "兵工廠二十年後重返歐冠決賽"
+    },
+    {
+      "date": "2026-05-10",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI labor impact",
+      "angle": "Cloudflare: AI cost 1,100 jobs",
+      "headline": "Cloudflare 說 AI 讓一千一百人失去工作"
+    },
+    {
+      "date": "2026-05-10",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "national economies",
+      "angle": "Poland's GDP tops $1 trillion, nears global top 20",
+      "headline": "波蘭經濟規模突破一兆美元，挑戰全球前二十大"
+    },
+    {
+      "date": "2026-05-10",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI tooling / local LLMs",
+      "angle": "Redis creator's tool runs DeepSeek on Mac",
+      "headline": "Redis 作者打造新工具，讓 DeepSeek 大模型在 Mac 上跑"
+    },
+    {
+      "date": "2026-05-10",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago immigration enforcement",
+      "angle": "Chicago judge to decide on probe of immigration ops",
+      "headline": "芝加哥法官即將決定是否調查移民行動"
+    },
+    {
+      "date": "2026-05-10",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "10-game win streak ends; shut out by Rangers",
+      "headline": "小熊十連勝被終結，遭遊騎兵完封"
+    },
+    {
+      "date": "2026-05-10",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "preview vs West Ham; Premier League title race",
+      "headline": "兵工廠今天對西漢姆，贏了就離冠軍更近"
+    }
+  ]
+}

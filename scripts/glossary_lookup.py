@@ -28,6 +28,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 ARTICLES_PATH = REPO / "data" / "pipeline" / "articles.json"
 DICTIONARY_PATH = REPO / "data" / "cedict_dictionary.json"
+POLYPHONIC_PATH = REPO / "data" / "polyphonic_chars.json"
 MATCHED_PATH = REPO / "data" / "pipeline" / "glossary_matched.json"
 UNRESOLVED_PATH = REPO / "data" / "pipeline" / "glossary_unresolved.txt"
 
@@ -94,19 +95,32 @@ def longest_match_words(text: str, dictionary: dict, max_word_len: int = 6) -> d
     return matched
 
 
-def identify_polyphonic(char: str, dictionary: dict) -> bool:
-    """Check if a character has multiple readings (polyphonic).
+def load_polyphonic() -> set[str]:
+    """Load the committed list of polyphonic (多音字) single characters.
 
-    In our dictionary format, multiple meanings are joined with "; ".
-    A character is considered polyphonic if its zhuyin field contains
-    different readings — but since we only store one reading per entry
-    (the first CEDICT entry), we can't detect this from the dictionary alone.
-
-    Instead, flag characters where the single stored reading may not match
-    the article context. For now, we don't flag any — the dictionary's
-    first reading is usually the most common one.
+    Produced by build_dictionary.py. Missing/unreadable file → empty set, which
+    disables polyphone routing and preserves the prior (dictionary-only)
+    behavior. This is intentional: the pipeline must not break if the list is
+    absent.
     """
-    return False
+    try:
+        data = json.loads(POLYPHONIC_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return set()
+    chars = data.get("chars", []) if isinstance(data, dict) else data
+    return {c for c in chars if isinstance(c, str) and len(c) == 1}
+
+
+def identify_polyphonic(char: str, polyphonic: set[str]) -> bool:
+    """Whether a character has multiple readings whose choice depends on context.
+
+    The CEDICT pre-match stores only ONE reading per character (the first
+    CEDICT line, which is frequently a surname or rare reading), so resolving a
+    polyphone from the dictionary alone gives the wrong pronunciation roughly as
+    often as the right one (e.g. 還 → ㄏㄨㄢˊ when context wants ㄏㄞˊ). Polyphones
+    are therefore handed to the context-aware glossary-chars agent instead.
+    """
+    return char in polyphonic
 
 
 def main():
@@ -127,20 +141,32 @@ def main():
     with open(DICTIONARY_PATH, "r", encoding="utf-8") as f:
         dictionary = json.load(f)
 
+    polyphonic = load_polyphonic()
+
     # Extract text and characters
     plain_text = extract_plain_text(articles)
     unique_chars = extract_unique_chars(plain_text)
 
     print(f"Unique CJK characters in articles: {len(unique_chars)}")
     print(f"Dictionary entries loaded: {len(dictionary)}")
+    print(f"Polyphonic characters loaded: {len(polyphonic)}")
 
-    # Single-character lookup
+    # Single-character lookup.
+    # A character resolved from the dictionary still goes to the agent when it is
+    # polyphonic: the dictionary's single stored reading is context-blind, so we
+    # keep it only as a fallback and let the context-aware glossary-chars agent
+    # supply the reading that matches this article. The merge step prefers the
+    # agent's entry over the dictionary's.
     matched = {}
     unresolved = set()
+    routed_polyphones = 0
 
     for char in unique_chars:
         if char in dictionary:
             matched[char] = dictionary[char]
+            if identify_polyphonic(char, polyphonic):
+                unresolved.add(char)
+                routed_polyphones += 1
         else:
             unresolved.add(char)
 
@@ -148,13 +174,15 @@ def main():
     word_matches = longest_match_words(plain_text, dictionary)
     matched.update(word_matches)
 
-    # Stats
-    char_matched = len(unique_chars) - len(unresolved)
+    # Stats. Polyphones are counted as dictionary-matched (they have a fallback
+    # entry) even though they are also sent to the agent for a contextual reading.
+    char_matched = sum(1 for ch in unique_chars if ch in dictionary)
     char_pct = (char_matched / len(unique_chars) * 100) if unique_chars else 0
 
     print(f"Single-char matched: {char_matched}/{len(unique_chars)} ({char_pct:.1f}%)")
     print(f"Multi-char words matched: {len(word_matches)}")
-    print(f"Unresolved characters: {len(unresolved)}")
+    print(f"Polyphones routed to agent (with dict fallback): {routed_polyphones}")
+    print(f"Characters needing agent lookup: {len(unresolved)}")
 
     # Write outputs
     MATCHED_PATH.parent.mkdir(parents=True, exist_ok=True)

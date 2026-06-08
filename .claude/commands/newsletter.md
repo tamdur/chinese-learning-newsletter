@@ -95,10 +95,10 @@ Wait for all five to return.
 
 Merge results from all five scouts into a single candidate list. Launch the **story-selector** agent (Opus):
 - Pass the full combined candidate list as context, prefixed with today's date and approximate time
-- The agent will read `config/interests.json` and check `docs/archive/` for recent issues
+- The agent will read `config/interests.json` and `data/newsletter_topic_ledger.json` (its semantic memory of which topics/angles the paper already covered — used to reject same-story-different-day repeats)
 - Agent prompt: "Today is {today}, approximately {current_hour}:00 Chicago time. Here are the candidate stories from today's news scouts:\n\n{combined_candidates}\n\nSelect 6 stories for today's newsletter. Follow the instructions in your agent definition."
 
-**Checkpoint:** Write `data/pipeline/selected.json` — the selector's full output (6 selected stories + rationale), with a `"date": "{today}"` field added at the top level.
+**Checkpoint:** Write `data/pipeline/selected.json` — the selector's full output (6 selected stories + rationale), with a `"date": "{today}"` field added at the top level. Each selected story now carries `topic` and `angle` fields (in addition to `summary`/`new_development`); these are logged to the topic ledger in Step 7.
 
 ### Step 4: Dispatch article-writer
 
@@ -184,6 +184,22 @@ After 3 rounds, accept any remaining missing characters and continue — the scr
 **5.5f. Verify checkpoint**
 
 Confirm `data/pipeline/glossary.json` exists and contains entries. Note any chars from `glossary_missing.txt` for the run summary.
+
+### Step 5.7: Update the topic ledger
+
+Append today's stories to the topic ledger so tomorrow's selector remembers what
+angles ran today:
+
+```bash
+python3 scripts/ledger_update.py
+```
+
+This reads `data/pipeline/selected.json` (topic/angle per story) and
+`data/pipeline/articles.json` (Chinese headlines) and appends to the committed
+`data/newsletter_topic_ledger.json`. It is idempotent per date (safe on re-runs)
+and trims to the last ~30 days. The assembler stages this file in Step 6's
+commit, so it lands on origin atomically with the issue in Step 6.5 — if the
+push fails, the ledger isn't published either, keeping ledger and site in sync.
 
 ### Step 6: Dispatch validator
 

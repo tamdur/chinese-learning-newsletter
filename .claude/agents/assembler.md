@@ -46,9 +46,11 @@ python3 scripts/validate.py
 ### 4. Commit
 
 ```bash
-git add docs/index.html docs/archive/ docs/shared.css docs/shared.js docs/glossary/
+git add docs/index.html docs/archive/ docs/shared.css docs/shared.js docs/glossary/ data/newsletter_topic_ledger.json
 git commit -m "Newsletter {{date}}"
 ```
+
+(`data/newsletter_topic_ledger.json` is the topic ledger updated in Step 5.7; staging it here commits and pushes it atomically with the issue. If it has no changes, `git add` is a harmless no-op.)
 
 Do NOT push — the orchestrator handles pushing via MCP.
 

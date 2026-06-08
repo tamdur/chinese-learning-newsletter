@@ -37,6 +37,8 @@ docs/
 - `config/wisdom.json` — wisdom source configs (Heart Sutra, Mengzi, Zen)
 - `config/obsessions.json` — obsession definitions + editorial voice
 - `data/obsessions_headline_log.json` — running headline log with `topic` field for semantic dedup
+- `data/newsletter_topic_ledger.json` — newsletter `topic`+`angle` log for semantic/angle dedup (read by story-selector, appended by `ledger_update.py`)
+- `data/polyphonic_chars.json` — committed list of polyphonic (多音字) single characters; routes them to the context-aware glossary agent instead of a context-blind dictionary reading
 - `data/wisdom_progress.json` — Mengzi + Zen passage tracking
 - `data/sources/` — cached source texts (Heart Sutra, Mengzi, Zen passages)
 - `templates/_shared.css` — shared CSS for all page types
@@ -46,7 +48,9 @@ docs/
 - `templates/obsessions.html` — obsessions reference template
 - `scripts/assemble.py` — page-type-aware HTML assembly (`--page-type newsletter|wisdom|obsessions`)
 - `scripts/validate.py` — page-type-aware validation (`--page-type newsletter|wisdom|obsessions`)
-- `scripts/glossary_lookup.py` — CEDICT dictionary pre-match for glossary
+- `scripts/glossary_lookup.py` — CEDICT dictionary pre-match for glossary; routes polyphonic chars (from `data/polyphonic_chars.json`) to the context-aware agent
+- `scripts/build_dictionary.py` — build CEDICT dictionary (gitignored) + emit committed `data/polyphonic_chars.json`
+- `scripts/ledger_update.py` — append a published issue's stories to `data/newsletter_topic_ledger.json`
 - `scripts/build_wisdom_sources.py` — fetch and cache Heart Sutra + Mengzi texts
 
 ## Commands
@@ -69,10 +73,10 @@ The Economist, reimagined as a Chicago-based local newspaper. Analytical, global
 
 ## Story Selection Rules
 - Articles 1-4 come from the Economist desk: AI, economics, international affairs, US policy, Chicago, business, science & ideas. Aim for variety but don't force every category.
-- Article 5 is ALWAYS a Chicago/Michigan sports story (Cubs, Bulls, Bears, Michigan football & basketball).
-- Article 6 is ALWAYS an Arsenal football story, introduced as the Arsenal beat (兵工廠線).
-- **Freshness is non-negotiable.** Every story must have a `published` timestamp within the past 24 hours. Stories about ongoing situations are welcome when today's installment has a specific new development. A 4-story issue that's all fresh is better than a 6-story issue padded with stale filler.
-- **Running stories are welcome.** If an ongoing story (war, tournament, AI race) had a genuine new development today, cover it — even if it appeared yesterday.
+- Article 5 is ALWAYS a Chicago/Michigan sports story (Cubs, Bulls, Bears, Michigan football & basketball). Article 6 is ALWAYS an Arsenal football story, introduced as the Arsenal beat (兵工廠線). These are reserved beats — but the angle-fatigue rule below applies to them too: on a quiet day pick a fresh facet (preview, player feature, transfer/injury news, season-arc analysis), never reprint the last result.
+- **Freshness is non-negotiable.** Every story must have a `published` timestamp within the past 24 hours. A 4-story issue that's all fresh is better than a 6-story issue padded with stale filler.
+- **Running stories are welcome — but only with a new ANGLE.** An ongoing story (war, tournament, AI race) can appear on consecutive days, but the test is NOT "did something happen?" (a 1-0 loss and a 2-0 loss both happened). The test is "does today's installment give the reader an angle they haven't seen this week?" A changed score/number alone is the same story — drop it. One event yields several *different* stories over the following days (result → reaction → expert post-mortem → transfer/financial implications → what's next), not the same recap reprinted.
+- **Topic ledger.** The selector reads `data/newsletter_topic_ledger.json` — a log of each recent issue's story `topic` + `angle` — to enforce the angle-fatigue rule semantically (not just exact-headline dedup). `scripts/ledger_update.py` appends each published issue's stories (Step 5.7 of `/newsletter`). This is the newsletter analog of `data/obsessions_headline_log.json`.
 - AI should appear in most issues — it's the paper's lead beat — but doesn't need to lead every issue.
 - The paper should feel like flipping through a smart, cosmopolitan local newspaper, not a hyper-targeted feed.
 

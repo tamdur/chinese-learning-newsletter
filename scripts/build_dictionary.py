@@ -21,6 +21,12 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 DEFAULT_OUTPUT = REPO / "data" / "cedict_dictionary.json"
+# Small, git-tracked companion file listing polyphonic single characters
+# (多音字). The big dictionary above is gitignored and only rebuilt on the VM
+# when missing, so the polyphone list must be committed separately. The glossary
+# pre-match reads it to route polyphones to the context-aware agent instead of
+# resolving them to a single context-blind reading.
+POLYPHONIC_OUTPUT = REPO / "data" / "polyphonic_chars.json"
 
 CEDICT_URL = (
     "https://raw.githubusercontent.com/cschiller/zhongwen/master/data/cedict_ts.u8"
@@ -287,9 +293,31 @@ def download_cedict() -> str:
     return data
 
 
-def build_dictionary(cedict_text: str) -> dict:
-    """Parse CEDICT and build the dictionary with zhuyin."""
+def _is_substantive_reading(english: str) -> bool:
+    """True if a reading has at least one sense beyond a bare surname.
+
+    CC-CEDICT lists surname-only readings on their own line (e.g. "surname
+    Huan"). Those alternate readings should not, by themselves, make a common
+    character count as polyphonic — otherwise nearly every character with a
+    surname homograph would be flagged. A reading counts only if it carries a
+    non-surname meaning.
+    """
+    for sense in english.split(";"):
+        if not sense.strip().lower().startswith("surname"):
+            return True
+    return False
+
+
+def build_dictionary(cedict_text: str) -> tuple[dict, list[str]]:
+    """Parse CEDICT and build the dictionary with zhuyin.
+
+    Returns (dictionary, polyphonic_chars) where polyphonic_chars is the sorted
+    list of single traditional characters that have two or more substantive
+    (non-surname-only) readings.
+    """
     dictionary = {}
+    # single char → {zhuyin: has_substantive_sense} across all its CEDICT lines
+    char_readings: dict[str, dict[str, bool]] = {}
     total_lines = 0
     converted = 0
     failed_conversions = 0
@@ -323,12 +351,24 @@ def build_dictionary(cedict_text: str) -> dict:
             if english not in existing:
                 dictionary[traditional]["english"] = existing + "; " + english
 
+        # Track distinct readings for single characters, for polyphone detection.
+        if len(traditional) == 1:
+            readings = char_readings.setdefault(traditional, {})
+            readings[zhuyin] = readings.get(zhuyin, False) or _is_substantive_reading(english)
+
+    polyphonic = sorted(
+        ch
+        for ch, readings in char_readings.items()
+        if sum(1 for substantive in readings.values() if substantive) >= 2
+    )
+
     print(f"CEDICT lines parsed: {total_lines}")
     print(f"Successfully converted: {converted}")
     print(f"Failed pinyin→zhuyin conversions: {failed_conversions}")
     print(f"Unique dictionary entries: {len(dictionary)}")
+    print(f"Polyphonic single characters: {len(polyphonic)}")
 
-    return dictionary
+    return dictionary, polyphonic
 
 
 def validate_zhuyin(dictionary: dict) -> int:
@@ -379,8 +419,10 @@ def main():
     else:
         cedict_text = download_cedict()
 
-    dictionary = build_dictionary(cedict_text)
+    dictionary, polyphonic = build_dictionary(cedict_text)
     validate_zhuyin(dictionary)
+    # Keep only polyphones still present after zhuyin validation.
+    polyphonic = [ch for ch in polyphonic if ch in dictionary]
 
     # Ensure output directory exists
     args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -388,9 +430,15 @@ def main():
     with open(args.output, "w", encoding="utf-8") as f:
         json.dump(dictionary, f, ensure_ascii=False, separators=(",", ":"))
 
+    # Write the committed polyphone list (small; consumed by glossary_lookup.py).
+    POLYPHONIC_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    with open(POLYPHONIC_OUTPUT, "w", encoding="utf-8") as f:
+        json.dump({"chars": polyphonic}, f, ensure_ascii=False, indent=0)
+
     size_mb = args.output.stat().st_size / (1024 * 1024)
     print(f"\nDictionary written to {args.output} ({size_mb:.1f} MB)")
     print(f"Total entries: {len(dictionary)}")
+    print(f"Polyphone list written to {POLYPHONIC_OUTPUT} ({len(polyphonic)} chars)")
 
 
 if __name__ == "__main__":

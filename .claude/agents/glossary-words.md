@@ -57,6 +57,7 @@ JSON object. Each key is a multi-character Chinese string. Each value is an obje
 - For multi-character words, separate each character's zhuyin with a space
 - First tone has no mark. Use ˊ ˇ ˋ ˙ for other tones
 - English definitions: concise (1-5 words), pick the meaning most relevant to usage in TEXT
+- **Numbers & units:** for number+unit terms, give the correct magnitude. 萬 = ten thousand, 億 = one hundred million (NOT "billion"), 兆 = trillion. So 七百億 = "70 billion" (700 × 100 million), 三千萬 = "30 million", 一兆 = "1 trillion". Double-check the scale before writing.
 - Field names must be exactly "zhuyin" and "english"
 
 CRITICAL: The file content must be ONLY the JSON object. No markdown fencing (no ```). No text before the opening {. No text after the closing }.
