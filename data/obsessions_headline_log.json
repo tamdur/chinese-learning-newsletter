@@ -1819,6 +1819,34 @@
       "headline": "腳踏車為什麼不會倒？一個人親手寫的網站",
       "headline_en": "Bartosz Ciechanowskis hand-coded interactive physics essays (bicycle)",
       "topic": "interactive physics essays"
+    },
+    {
+      "date": "2026-06-10",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "林強的《娛樂世界》：被遺忘的電子奇作",
+      "headline_en": "Lim Giong Entertainment World (1994) lost industrial-techno album",
+      "topic": "experimental electronic album"
+    },
+    {
+      "date": "2026-06-10",
+      "obsession_id": "finland-honeymoon",
+      "headline": "芬蘭魯亞毯：從維京船到婚禮的織毯",
+      "headline_en": "Finnish ryijy rug: Viking origins to wedding ritual",
+      "topic": "ryijy textile tradition"
+    },
+    {
+      "date": "2026-06-10",
+      "obsession_id": "do-312",
+      "headline": "夏至聚會：在芝加哥森林裡迎接白晝",
+      "headline_en": "Summer solstice gathering at Beaubien Woods",
+      "topic": "solstice nature gathering"
+    },
+    {
+      "date": "2026-06-10",
+      "obsession_id": "best-of-internet",
+      "headline": "一個人的搶救：被刪掉的世界資料庫",
+      "headline_en": "CIA World Factbook Archive rescued by a solo developer",
+      "topic": "archival data rescue site"
     }
   ]
 }
