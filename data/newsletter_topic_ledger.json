@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-05-10",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI labor impact",
-      "angle": "Cloudflare: AI cost 1,100 jobs",
-      "headline": "Cloudflare 說 AI 讓一千一百人失去工作"
-    },
-    {
-      "date": "2026-05-10",
-      "rank": 2,
-      "topic_id": "economics",
-      "topic": "national economies",
-      "angle": "Poland's GDP tops $1 trillion, nears global top 20",
-      "headline": "波蘭經濟規模突破一兆美元，挑戰全球前二十大"
-    },
-    {
-      "date": "2026-05-10",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI tooling / local LLMs",
-      "angle": "Redis creator's tool runs DeepSeek on Mac",
-      "headline": "Redis 作者打造新工具，讓 DeepSeek 大模型在 Mac 上跑"
-    },
-    {
-      "date": "2026-05-10",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago immigration enforcement",
-      "angle": "Chicago judge to decide on probe of immigration ops",
-      "headline": "芝加哥法官即將決定是否調查移民行動"
-    },
-    {
-      "date": "2026-05-10",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "10-game win streak ends; shut out by Rangers",
-      "headline": "小熊十連勝被終結，遭遊騎兵完封"
-    },
-    {
-      "date": "2026-05-10",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "preview vs West Ham; Premier League title race",
-      "headline": "兵工廠今天對西漢姆，贏了就離冠軍更近"
-    },
-    {
       "date": "2026-06-09",
       "rank": 1,
       "topic_id": "world",
@@ -95,6 +47,54 @@
       "topic": "Arsenal FC",
       "angle": "The post-final reckoning shifts from result recap to consequences: Arteta clears out a senior backroom figure and opens a summer rebuild.",
       "headline": "兵工廠賽季後改組　辭退醫療主管"
+    },
+    {
+      "date": "2026-06-10",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "Yesterday the paper only flagged a 'new Claude' as imminent; today Anthropic actually ships Claude Fable 5, beating GPT-5.5 and pairing it with a guardrail-relaxed Mythos 5 for vetted cyber/bio use — a genuine capability-and-safety milestone, not just a price tweak.",
+      "headline": "新的克勞德問世　多項測驗贏過對手"
+    },
+    {
+      "date": "2026-06-10",
+      "rank": 2,
+      "topic_id": "ideas",
+      "topic": "US energy transition",
+      "angle": "A first-ever crossover — solar generates more US electricity than coal — a structural milestone the paper hasn't touched, with the open question of low-solar-hour grid reliability.",
+      "headline": "太陽能首度超越煤炭"
+    },
+    {
+      "date": "2026-06-10",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "AI labor impact",
+      "angle": "A month after the Cloudflare job-cuts story, fresh Q2 data reframes AI's labour effect as bifurcation, not just loss — a 56% wage premium for AI-skilled workers alongside 32,000 automation layoffs.",
+      "headline": "會用AI　薪水多五成"
+    },
+    {
+      "date": "2026-06-10",
+      "rank": 4,
+      "topic_id": "ai",
+      "topic": "AI governance",
+      "angle": "Shifts the AI story from capabilities to who governs them: Colorado's first comprehensive state AI law goes live June 30, colliding with a White House preemption push and the EU AI Act — a distinct regulatory angle the paper hasn't run.",
+      "headline": "AI該誰管　州和中央爭不停"
+    },
+    {
+      "date": "2026-06-10",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "Breaks a run of Cubs stories with a fresh Michigan offseason build — a same-day transfer-portal haul (Thiam, Estrella, Reed plus a top-25 recruit) reshaping the 2026-27 roster.",
+      "headline": "密大籃球補進三名高大球員"
+    },
+    {
+      "date": "2026-06-10",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Distinct from yesterday's backroom-shakeup/rebuild angle: a specific player-fitness story — Timber pulls out of the Dutch World Cup squad injured, clouding his pre-season, while Saliba returns for France.",
+      "headline": "提姆伯受傷　退出荷蘭世界盃"
     }
   ]
 }
