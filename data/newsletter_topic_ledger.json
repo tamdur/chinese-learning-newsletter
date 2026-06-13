@@ -95,6 +95,54 @@
       "topic": "Arsenal FC",
       "angle": "Distinct from yesterday's backroom-shakeup/rebuild angle: a specific player-fitness story — Timber pulls out of the Dutch World Cup squad injured, clouding his pre-season, while Saliba returns for France.",
       "headline": "提姆伯受傷　退出荷蘭世界盃"
+    },
+    {
+      "date": "2026-06-13",
+      "rank": 1,
+      "topic_id": "chicago",
+      "topic": "Chicago severe weather",
+      "angle": "A major local disaster on the reader's doorstep — a multi-tornado outbreak that knocked out power to hundreds of thousands and damaged schools across northern Illinois and Indiana, now in its recovery phase.",
+      "headline": "龍捲風侵襲芝加哥一帶　數十萬戶停電"
+    },
+    {
+      "date": "2026-06-13",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "ECB monetary policy",
+      "angle": "A genuine policy decision, not currency-share data — the ECB's first rate hike since 2023, reversing a year of cuts because the Iran conflict's Hormuz threat has reignited energy inflation.",
+      "headline": "歐洲央行兩年多來首次升息"
+    },
+    {
+      "date": "2026-06-13",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago city finances",
+      "angle": "Chicago's $36B pension hole becomes a live political fight as the council challenges the mayor's split-payment plan and Mendoza weaponizes it for the campaign — a fresh local-governance angle the paper hasn't run.",
+      "headline": "芝加哥退休金缺口三百六十億　市議會逼問市長"
+    },
+    {
+      "date": "2026-06-13",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "SCOTUS executive power",
+      "angle": "A consequential, imminent SCOTUS decision on how far executive immigration-enforcement power extends — the legal backbone of the mass-deportation campaign, expected within weeks.",
+      "headline": "美最高法院將裁定移民執法大案"
+    },
+    {
+      "date": "2026-06-13",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "An offseason recruiting story — Michigan lands 20 verbal commits and earns 'recruiting winner of June' honors — breaking from the recent Cubs-injury and Michigan-basketball entries with a distinct topic.",
+      "headline": "密西根美式足球招兵大豐收"
+    },
+    {
+      "date": "2026-06-13",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The transfer/financial-implications phase of the post-final arc: Arteta opens the window hunting a ~£100m midfielder (Kone, Casado linked), distinct from the earlier backroom-shakeup and Timber-injury angles.",
+      "headline": "兵工廠夏季補強　鎖定中場大將"
     }
   ]
 }
