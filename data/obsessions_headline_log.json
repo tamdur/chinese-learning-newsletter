@@ -1875,6 +1875,34 @@
       "headline": "用電話簿畫出來的畫",
       "headline_en": "The Morellet Art Generator: recreating a 1960 grid painting from a phone book",
       "topic": "generative art tool"
+    },
+    {
+      "date": "2026-06-16",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "甜梅號：在速食店桌上取名的傳奇樂團",
+      "headline_en": "Sugar Plum Ferry's 2001 debut 'Lack of Something' that pioneered Taiwanese post-rock",
+      "topic": "post-rock debut album"
+    },
+    {
+      "date": "2026-06-16",
+      "obsession_id": "finland-honeymoon",
+      "headline": "雪殼：三月芬蘭能走在雪上的奇蹟",
+      "headline_en": "Hankikanto, Finland's hard March snow crust that once served as a wilderness highway",
+      "topic": "spring snow crust"
+    },
+    {
+      "date": "2026-06-16",
+      "obsession_id": "do-312",
+      "headline": "玻璃花房變溜冰場：海軍碼頭的復古夏夜",
+      "headline_en": "Navy Pier's Crystal Gardens reopens June 18 as a lakefront roller rink",
+      "topic": "lakefront roller rink"
+    },
+    {
+      "date": "2026-06-16",
+      "obsession_id": "best-of-internet",
+      "headline": "一個人的電網地圖：看見英國的電從哪來",
+      "headline_en": "National Grid: Live, Kate Morley's solo real-time map of Britain's electricity",
+      "topic": "electricity grid dashboard"
     }
   ]
 }
