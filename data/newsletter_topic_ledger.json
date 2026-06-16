@@ -143,6 +143,54 @@
       "topic": "Arsenal FC",
       "angle": "The transfer/financial-implications phase of the post-final arc: Arteta opens the window hunting a ~£100m midfielder (Kone, Casado linked), distinct from the earlier backroom-shakeup and Timber-injury angles.",
       "headline": "兵工廠夏季補強　鎖定中場大將"
+    },
+    {
+      "date": "2026-06-16",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI governance",
+      "angle": "Distinct from prior AI-release and Colorado-vs-White-House regulation angles: the federal government, for the first time, forces a private lab to take its most powerful models offline on national-security grounds — a raw exercise of state power over frontier AI.",
+      "headline": "美國政府下令關掉Anthropic最強AI模型"
+    },
+    {
+      "date": "2026-06-16",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "Moves the war story from 'ceasefire being pushed' (last week) to an actual signed framework to end the war and reopen Hormuz, with a hard June 19 signing date and a new fault line over Israel's refusal to leave Lebanon.",
+      "headline": "美國伊朗談好停戰重開海峽"
+    },
+    {
+      "date": "2026-06-16",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "global reserve currencies",
+      "angle": "Contrasts with last week's 'dollar still dominant, euro stuck at 20%' read: a newer ECB report shows euro issuance at a record high and the dollar's bond-market share and Treasury holdings actively falling — de-dollarization is accelerating, not stalled.",
+      "headline": "歐元變紅　美元地位慢慢下滑"
+    },
+    {
+      "date": "2026-06-16",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "FISA Section 702",
+      "angle": "A US-governance angle the paper has not run: a major surveillance authority formally lapses through congressional dysfunction, even as prior certifications keep it operating until 2027.",
+      "headline": "美國監聽法過期　國會沒修就休會"
+    },
+    {
+      "date": "2026-06-16",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "An on-field individual feat (a rare cycle, 13th in franchise history) rather than the roster/injury-depth angle the Cubs beat ran last week.",
+      "headline": "小熊球星完成完全打擊"
+    },
+    {
+      "date": "2026-06-16",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A season-arc / World Cup feature (record 15 players, teammates facing off) rather than the transfer-target and injury angles that have dominated the Arsenal beat all week.",
+      "headline": "兵工廠十五人打世界盃"
     }
   ]
 }
