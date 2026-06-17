@@ -191,6 +191,54 @@
       "topic": "Arsenal FC",
       "angle": "A season-arc / World Cup feature (record 15 players, teammates facing off) rather than the transfer-target and injury angles that have dominated the Arsenal beat all week.",
       "headline": "兵工廠十五人打世界盃"
+    },
+    {
+      "date": "2026-06-17",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "Federal Reserve monetary policy",
+      "angle": "A fresh US-central-bank story the paper hasn't run: the new Fed chair Kevin Warsh's debut press conference and dot plot, a hold at 3.50-3.75% against a sticky 4.2% CPI.",
+      "headline": "美國利率不變　新主席首次開記者會"
+    },
+    {
+      "date": "2026-06-17",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "European AI sovereignty",
+      "angle": "A distinct AI angle from the paper's recent model-release and US-governance coverage: Europe's push to build its own AI/cloud stack, dramatized as VivaTech opens days after the EU sovereignty package.",
+      "headline": "巴黎科技展開幕　歐洲拚自己的人工智慧"
+    },
+    {
+      "date": "2026-06-17",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "G7 summit",
+      "angle": "A multilateral-diplomacy angle the paper hasn't run: the Évian G7 closes with the US watering down AI-governance language and allies fighting to keep Ukraine on the agenda, exposing intra-Western fractures.",
+      "headline": "七大工業國開完會　意見並不一致"
+    },
+    {
+      "date": "2026-06-17",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Illinois cannabis policy",
+      "angle": "A fresh Illinois local-policy outcome distinct from recent Chicago weather and pension coverage: Pritzker signs hemp/delta-8 rules ending a years-long regulatory gray zone.",
+      "headline": "伊利諾州簽新法　管大麻類產品"
+    },
+    {
+      "date": "2026-06-17",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A season-arc/financial angle distinct from last week's cycle and injury-depth Cubs entries: the team's fade to 37-35 puts the $175m Bregman deal under the microscope.",
+      "headline": "小熊成績下滑　高薪新球員被檢討"
+    },
+    {
+      "date": "2026-06-17",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "An individual player-fitness and honors angle distinct from this week's squad-count and Timber-injury entries: Saka risks a start despite his Achilles, while Rice is handed the England vice-captaincy.",
+      "headline": "薩卡帶傷先發　萊斯當上副隊長"
     }
   ]
 }
