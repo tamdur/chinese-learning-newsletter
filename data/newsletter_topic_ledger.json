@@ -239,6 +239,54 @@
       "topic": "Arsenal FC",
       "angle": "An individual player-fitness and honors angle distinct from this week's squad-count and Timber-injury entries: Saka risks a start despite his Achilles, while Rice is handed the England vice-captaincy.",
       "headline": "薩卡帶傷先發　萊斯當上副隊長"
+    },
+    {
+      "date": "2026-06-18",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI governance",
+      "angle": "The sequel to the federal shutdown order: the panic stemmed from mundane code-fixing tripping hidden filters — not a jailbreak — and Anthropic apologizes for shipping invisible guardrails, recasting the episode as opaque safety engineering and possible regulatory overreaction.",
+      "headline": "不是攻擊只是改程式 Anthropic為隱藏設定道歉"
+    },
+    {
+      "date": "2026-06-18",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI infrastructure",
+      "angle": "A new AI lens for the paper — not models, safety or regulation but the physical capacity crunch: a rival routing GitHub through AWS, labs paying SpaceX billions monthly, and a $7.6T capex forecast.",
+      "headline": "AI太熱門電腦不夠用 公司花大錢搶算力"
+    },
+    {
+      "date": "2026-06-18",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Obama Presidential Center",
+      "angle": "A major, never-covered local civic event lands on the reader's doorstep: the South Side center's grand opening, timed to a public debut on Juneteenth.",
+      "headline": "歐巴馬中心今開幕 明天對外開放"
+    },
+    {
+      "date": "2026-06-18",
+      "rank": 4,
+      "topic_id": "economics",
+      "topic": "global central bank policy",
+      "angle": "Distinct from yesterday's single-bank Warsh-debut story: a macro synthesis showing the Fed, BoE and BoJ all holding in unison this week — a synchronized global pause driven by Middle East energy risk, with the ECB the lone hawk.",
+      "headline": "擔心油價 英國利率不動 三大央行同步觀望"
+    },
+    {
+      "date": "2026-06-18",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "Distinct from this week's cycle-feat and team-fade/Bregman entries: a different player (Crow-Armstrong) completing the cycle inside a walk-off win — a single dramatic on-field moment, not a season-arc verdict.",
+      "headline": "小熊再見安打勝洛磯 克勞阿姆斯壯完成完全打擊"
+    },
+    {
+      "date": "2026-06-18",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A trophy, not a transfer rumor: Arsenal Women lift the inaugural FIFA Women's Champions Cup 3-2 — wholly distinct from this week's run of men's transfer-target and squad-feature angles.",
+      "headline": "兵工廠女足奪下首屆世界冠軍盃"
     }
   ]
 }
