@@ -100,6 +100,16 @@
       "url": "https://cloudhiker.substack.com/",
       "type": "aggregator",
       "notes": "Web Wanderings by Cloudhiker — monthly newsletter hand-picking unusual, non-commercial websites"
+    },
+    {
+      "url": "https://business.rpba.org",
+      "type": "aggregator",
+      "notes": "Rogers Park Business Alliance events calendar — lists neighborhood-level Chicago events that often fly under mainstream radar, good for hyperlocal and community-driven programming"
+    },
+    {
+      "url": "https://www.historytools.org",
+      "type": "aggregator",
+      "notes": "History Tools publishes well-researched narrative articles on historical places and cultural phenomena, with good depth on Finnish subjects — useful for design, architecture, and cultural history angles."
     }
   ]
 }
