@@ -287,6 +287,54 @@
       "topic": "Arsenal FC",
       "angle": "A trophy, not a transfer rumor: Arsenal Women lift the inaugural FIFA Women's Champions Cup 3-2 — wholly distinct from this week's run of men's transfer-target and squad-feature angles.",
       "headline": "兵工廠女足奪下首屆世界冠軍盃"
+    },
+    {
+      "date": "2026-06-19",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI security",
+      "angle": "A wholly new AI-risk lens for the paper: a self-replicating worm exploiting agentic open-weight models running on users' own hardware — a decentralized threat with no central kill switch, distinct from the week's Anthropic guardrail/shutdown saga.",
+      "headline": "會自己複製的 AI 病毒出現了"
+    },
+    {
+      "date": "2026-06-19",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI geopolitics",
+      "angle": "Frontier AI access as statecraft: Washington brokers foreign-government access to Anthropic's most-restricted model for an ally — a diplomacy/economic-alliance angle distinct from the domestic shutdown, safety-engineering and infrastructure angles run this week.",
+      "headline": "日本兩週內將用上最強 AI"
+    },
+    {
+      "date": "2026-06-19",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Juneteenth",
+      "angle": "A fresh holiday story tying local Chicago observance (parade, DuSable Museum) to a national policy friction — the Trump administration quietly removing Juneteenth from NPS fee-free days while it stays a federal holiday.",
+      "headline": "芝加哥慶祝六月節"
+    },
+    {
+      "date": "2026-06-19",
+      "rank": 4,
+      "topic_id": "ai",
+      "topic": "AI governance",
+      "angle": "A distinct federal-policy choice not yet in the ledger: Trump kills a drafted AI executive order to avoid constraining US labs against China, deliberately leaving a federal vacuum — different from the Anthropic-shutdown and Colorado-vs-White-House governance angles already run.",
+      "headline": "川普取消 AI 新規定"
+    },
+    {
+      "date": "2026-06-19",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A bullpen/injury angle: the Cubs lose their closer (Palencia) to the IL with elbow inflammation as a new Blue Jays series opens — distinct from this week's cycle-feat, walk-off and season-fade Cubs entries.",
+      "headline": "小熊王牌投手受傷"
+    },
+    {
+      "date": "2026-06-19",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A concrete transfer decision and a potential outgoing: top creative target Nico Paz rejects Arsenal to stay at Como, and the club may sell academy man Nwaneri — distinct from this week's Kone/Tzolis target-rumor, World Cup and women's-trophy angles.",
+      "headline": "帕茲拒絕兵工廠"
     }
   ]
 }
