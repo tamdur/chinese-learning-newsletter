@@ -335,6 +335,54 @@
       "topic": "Arsenal FC",
       "angle": "A concrete transfer decision and a potential outgoing: top creative target Nico Paz rejects Arsenal to stay at Como, and the club may sell academy man Nwaneri — distinct from this week's Kone/Tzolis target-rumor, World Cup and women's-trophy angles.",
       "headline": "帕茲拒絕兵工廠"
+    },
+    {
+      "date": "2026-06-20",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "European AI sovereignty",
+      "angle": "Brussels moves from policy package to picking a concrete winner — funding Italy's Domyn-led EUROPA consortium to build an openly released 400B-parameter model in all 24 EU languages, a sovereign-AI industrial-policy bet.",
+      "headline": "歐盟選中義大利團隊　自建大型人工智慧"
+    },
+    {
+      "date": "2026-06-20",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "The previewed June framework is now actually signed: a concrete 14-point MOU with executed terms — blockade lifted, Hormuz reopened, IAEA-supervised down-blending and a 60-day clock.",
+      "headline": "美國伊朗簽協議　先停戰六十天"
+    },
+    {
+      "date": "2026-06-20",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI and knowledge work",
+      "angle": "A fresh, ground-level lens on AI absorbed into the craft of a rigorous discipline — economists using Claude/ChatGPT to test mathematical guesses inside the research process.",
+      "headline": "經濟學家寫論文　愛找人工智慧幫忙"
+    },
+    {
+      "date": "2026-06-20",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago 2027 mayoral race",
+      "angle": "A new local-politics storyline: the 2027 mayoral field expands as Cardenas enters to challenge a weakened Johnson (~31% approval) alongside Mendoza and Quigley — distinct from the Obama Center opening itself.",
+      "headline": "芝加哥市長選舉　挑戰者越來越多"
+    },
+    {
+      "date": "2026-06-20",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "An individual-hero offensive showcase — backup catcher Carson Kelly's grand slam and career-high 6 RBIs in a 16-2 rout — distinct from this week's closer-injury and season-fade Cubs angles.",
+      "headline": "凱利轟滿貫全壘打　小熊大勝藍鳥"
+    },
+    {
+      "date": "2026-06-20",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A forward-looking season-arc angle — the 2026-27 fixture list drops, mapping the defending champions' opener, big-six clashes and run-in — distinct from this week's transfer-rumor and World Cup Arsenal angles.",
+      "headline": "兵工廠新球季賽程公布　首戰考文垂"
     }
   ]
 }
