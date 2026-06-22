@@ -431,6 +431,54 @@
       "topic": "Arsenal FC",
       "angle": "A concrete transfer ACTION, not another rumor: Arsenal lodge an official £70m bid for PSG's Barcola — distinct from this week's Kone/Tzolis links and the Nico Paz rejection.",
       "headline": "兵工廠正式出價 搶巴黎邊鋒巴爾科拉"
+    },
+    {
+      "date": "2026-06-22",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Latin America's rightward turn",
+      "angle": "A brand-new world story for the paper: Colombia's razor-thin election of a Trump-aligned hardliner read as the latest node in a region-wide swing to the populist right.",
+      "headline": "哥倫比亞大選右派險勝"
+    },
+    {
+      "date": "2026-06-22",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "disability rights policy",
+      "angle": "A never-covered US-governance story: a new DOJ opinion that could roll back the ADA's integration mandate, the legal floor under community living for disabled Americans.",
+      "headline": "美司法部挑戰身障者權利"
+    },
+    {
+      "date": "2026-06-22",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago neighborhood development",
+      "angle": "A doorstep local story distinct from recent Chicago coverage (weather, pensions, Obama Center, mayoral race): the court-ordered death of a 60-year Southwest Side mall and the fight over whether warehouses or housing replace it.",
+      "headline": "芝城福特城商場關門"
+    },
+    {
+      "date": "2026-06-22",
+      "rank": 4,
+      "topic_id": "economics",
+      "topic": "tax policy and labor supply",
+      "angle": "A fresh economics/ideas pick the paper hasn't run: empirical evidence that the 2017 tax cuts measurably raised labor-force participation, reframing a stale political fight with data.",
+      "headline": "研究：減稅讓更多人願意工作"
+    },
+    {
+      "date": "2026-06-22",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "Breaks a five-issue Cubs/Bulls run with Michigan: the title team's two draft departures (Lendeborg's Warriors workout, Johnson going pro) and what they leave Dusty May to rebuild — distinct from June's transfer-portal-haul Michigan entry.",
+      "headline": "密大兩球星投入NBA選秀"
+    },
+    {
+      "date": "2026-06-22",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A distinct new transfer storyline from this week's Barcola bid and Nico Paz rejection: Arsenal making Morgan Rogers a priority target with Rice recruiting him, against Villa's hard £100m stance.",
+      "headline": "兵工廠全力爭取羅傑斯"
     }
   ]
 }
