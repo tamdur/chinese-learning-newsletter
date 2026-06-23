@@ -479,6 +479,54 @@
       "topic": "Arsenal FC",
       "angle": "A distinct new transfer storyline from this week's Barcola bid and Nico Paz rejection: Arsenal making Morgan Rogers a priority target with Rice recruiting him, against Villa's hard £100m stance.",
       "headline": "兵工廠全力爭取羅傑斯"
+    },
+    {
+      "date": "2026-06-23",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "After the just-signed deal collapsed two days ago, the war actually ends: a Trump-brokered ceasefire takes effect tomorrow and Iran readmits IAEA inspectors — the conflict's resolution, not another breakdown-or-continuation.",
+      "headline": "川普宣布以色列伊朗停火 伊朗答應讓核子檢查員回國"
+    },
+    {
+      "date": "2026-06-23",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "The June model wave flagged since the 9th finally delivers Google's entry: Gemini 3.5 Pro hits its GA window with a record 2M-token context and a 'Deep Think' mode, reframing the frontier race around context length and reasoning tiers — a launch distinct from this month's Claude Fable 5 release.",
+      "headline": "Google新模型Gemini 3.5 Pro登場 一次能讀兩百萬字"
+    },
+    {
+      "date": "2026-06-23",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "UK political instability",
+      "angle": "A brand-new world story for the paper: a sitting G7 prime minister resigns under two years after a landslide, triggering a Labour leadership race and underscoring Britain churning through seven PMs in a decade.",
+      "headline": "英國首相施凱爾辭職 工黨要改選新黨魁"
+    },
+    {
+      "date": "2026-06-23",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "Voting Rights Act enforcement",
+      "angle": "A consequential SCOTUS non-decision distinct from the term's executive-power cases: by declining review, the Court quietly leaves private enforcement of the Voting Rights Act dead across seven states just as the midterms approach.",
+      "headline": "美國最高法院不受理 七州人民不能自己提告護投票權"
+    },
+    {
+      "date": "2026-06-23",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A season-arc MVP feature rather than a game recap: PCA's torrid June (.429, 9 HR, league-best defense) builds a genuine two-way NL MVP case — distinct from this week's single-game cycle, walk-off and grand-slam moments.",
+      "headline": "小熊隊克羅阿姆斯壯六月火燙 打進國聯MVP話題"
+    },
+    {
+      "date": "2026-06-23",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A confirmed signing, not another rumor: Arsenal beat both Manchester clubs to lock down a teenage prospect as their second summer arrival — distinct from this week's Barcola bid, Rogers pursuit and Nico Paz rejection.",
+      "headline": "兵工廠線：阿森納搶下16歲新星 今夏第二筆簽約"
     }
   ]
 }
