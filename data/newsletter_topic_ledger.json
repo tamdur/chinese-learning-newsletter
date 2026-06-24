@@ -527,6 +527,54 @@
       "topic": "Arsenal FC",
       "angle": "A confirmed signing, not another rumor: Arsenal beat both Manchester clubs to lock down a teenage prospect as their second summer arrival — distinct from this week's Barcola bid, Rogers pursuit and Nico Paz rejection.",
       "headline": "兵工廠線：阿森納搶下16歲新星 今夏第二筆簽約"
+    },
+    {
+      "date": "2026-06-24",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US–Iran war",
+      "angle": "Pivots the long-running Iran war story from ceasefire mechanics to a domestic constitutional reckoning: Congress, for the first time since 1973, passes a War Powers resolution rebuking the president, with four Republicans defecting.",
+      "headline": "參議院罕見表決 要川普停止對伊朗的戰爭"
+    },
+    {
+      "date": "2026-06-24",
+      "rank": 2,
+      "topic_id": "chicago",
+      "topic": "DOJ healthcare fraud",
+      "angle": "A never-covered local-enforcement story: the largest healthcare-fraud takedown in DOJ history reaches Chicago's doorstep, with 19 Illinois defendants and a $95M Medicaid scheme run out of Oak Lawn.",
+      "headline": "史上最大醫療詐騙案 伊利諾州十九人被告"
+    },
+    {
+      "date": "2026-06-24",
+      "rank": 3,
+      "topic_id": "ideas",
+      "topic": "US biomedical competitiveness",
+      "angle": "A fresh science-policy angle the paper hasn't run: Washington reorganizes its drug-trial pipeline (FDA/NIH/ARPA-H) explicitly to counter China's faster biotech sector.",
+      "headline": "美國推新計畫 加快新藥試驗追趕中國"
+    },
+    {
+      "date": "2026-06-24",
+      "rank": 4,
+      "topic_id": "economics",
+      "topic": "labor market regulation",
+      "angle": "A distinct economics-ideas pick the paper hasn't run: the fivefold rise of occupational licensing (5%→25% of workers) as a hidden brake on competition, mobility, and prices.",
+      "headline": "要執照的工作變多 恐拖累就業"
+    },
+    {
+      "date": "2026-06-24",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "A major, brand-new departure rather than another roster build: the title-winning head coach himself bolts to the NBA's Mavericks — first to do so right after a championship since Larry Brown in 1988 — throwing Michigan's offseason into chaos.",
+      "headline": "奪冠後閃人 梅伊離開密西根轉戰小牛"
+    },
+    {
+      "date": "2026-06-24",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "An individual recovery/availability update: Saka is cleared fit for England's World Cup — a clean bill of health, distinct from the mid-June 'risking a start on a bad Achilles' worry and the week's transfer-target churn.",
+      "headline": "薩卡傷癒 趕上英格蘭世界盃"
     }
   ]
 }
