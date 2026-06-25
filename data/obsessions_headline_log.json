@@ -2127,6 +2127,34 @@
       "headline": "一個人、二十年：伊利諾野花大百科",
       "headline_en": "Illinois Wildflowers solo botanical encyclopedia",
       "topic": "botanical encyclopedia site"
+    },
+    {
+      "date": "2026-06-25",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "廟會鼓聲裡的搖滾樂",
+      "headline_en": "Tsng-kha-lang fuses beiguan temple percussion into Taiwanese indie rock on their 2021 album",
+      "topic": "beiguan rock fusion"
+    },
+    {
+      "date": "2026-06-25",
+      "obsession_id": "finland-honeymoon",
+      "headline": "難民帶來的國民點心",
+      "headline_en": "How 420,000 Karelian refugees made the Karelian pasty Finland's national snack",
+      "topic": "Karelian pasty heritage"
+    },
+    {
+      "date": "2026-06-25",
+      "obsession_id": "do-312",
+      "headline": "走進大腦的劇場",
+      "headline_en": "David Byrne's immersive neuroscience walk-through 'Theater of the Mind' in Chicago",
+      "topic": "immersive theater experience"
+    },
+    {
+      "date": "2026-06-25",
+      "obsession_id": "best-of-internet",
+      "headline": "一張地圖看遍全美礦場",
+      "headline_en": "mines.fyi maps all 91,000+ US mines, searchable by state, commodity, and operator",
+      "topic": "US mines map tool"
     }
   ]
 }
