@@ -575,6 +575,54 @@
       "topic": "Arsenal FC",
       "angle": "An individual recovery/availability update: Saka is cleared fit for England's World Cup — a clean bill of health, distinct from the mid-June 'risking a start on a bad Achilles' worry and the week's transfer-target churn.",
       "headline": "薩卡傷癒 趕上英格蘭世界盃"
+    },
+    {
+      "date": "2026-06-25",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "SCOTUS executive power",
+      "angle": "The mid-June 'imminent ruling on immigration-enforcement power' finally lands as an actual decision: the Court lowers the bar for treating green-card holders as border applicants, weakening permanent residents' protections.",
+      "headline": "最高法院判決：綠卡族更難過關"
+    },
+    {
+      "date": "2026-06-25",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "Distinct from June's general-purpose frontier launches and prior abstract AI-security pieces: a major lab ships a purpose-built cyber-offense/defense model hitting 85.6% on CyberGym, turning AI security into a commercial product.",
+      "headline": "OpenAI 推出資安新模型"
+    },
+    {
+      "date": "2026-06-25",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago city governance",
+      "angle": "A new Chicago city-hall fight not yet in the ledger: aldermen revolt over Johnson cloaking a renegotiation of the infamous parking-meter deal behind a confidentiality agreement.",
+      "headline": "市議員不滿：停車費案太神秘"
+    },
+    {
+      "date": "2026-06-25",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago public safety",
+      "angle": "A distinct Chicago public-safety policy fight not in the ledger: an alderman moves to curb late-night bars after a Lincoln Park shooting, reviving the nightlife-vs-neighborhood-safety debate.",
+      "headline": "酒吧外槍擊案後 議員想管夜店"
+    },
+    {
+      "date": "2026-06-25",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bulls",
+      "angle": "The actual pick lands: after the paper covered the Bulls merely holding the No. 4 slot, they select PF Caleb Wilson — a concrete cornerstone for the new-era rebuild.",
+      "headline": "公牛第四順位選中威爾森"
+    },
+    {
+      "date": "2026-06-25",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A new, club-record-scale transfer action distinct from the week's Barcola/Rogers links and Saka fitness news: Arsenal lodge a £104m bid for Atletico's Julian Alvarez amid a four-club race.",
+      "headline": "兵工廠出手 天價搶阿瓦雷茲"
     }
   ]
 }
