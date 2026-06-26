@@ -623,6 +623,54 @@
       "topic": "Arsenal FC",
       "angle": "A new, club-record-scale transfer action distinct from the week's Barcola/Rogers links and Saka fitness news: Arsenal lodge a £104m bid for Atletico's Julian Alvarez amid a four-club race.",
       "headline": "兵工廠出手 天價搶阿瓦雷茲"
+    },
+    {
+      "date": "2026-06-26",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Venezuela earthquake",
+      "angle": "A brand-new world story for the paper: a rare twin-quake 'doublet' devastates northern Venezuela, with hundreds dead and seismologists warning the toll could climb past 10,000 because of soft-soil amplification and 1967-era building codes.",
+      "headline": "委內瑞拉連兩次強震　至少兩百多人死亡"
+    },
+    {
+      "date": "2026-06-26",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI governance",
+      "angle": "Distinct from the June domestic-shutdown saga and the Japan-access diplomacy story: Washington applies export-control law (a new Foreign Direct Product Rule) to treat AI model weights as controlled munitions, cutting all foreign nationals off from Anthropic's top models.",
+      "headline": "美國下令　Anthropic關閉外國人使用頂尖AI"
+    },
+    {
+      "date": "2026-06-26",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "Pivots the long-running Iran story from war and ceasefire mechanics to economic statecraft: post-conflict, Tehran stands up a new Strait Authority and mandatory insurance regime as the scaffolding for up to $2m-per-ship Hormuz transit fees.",
+      "headline": "伊朗要求過海峽的船買保險"
+    },
+    {
+      "date": "2026-06-26",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago severe weather",
+      "angle": "A fresh climate-data milestone, distinct from June's tornado-outbreak recovery story: Illinois has already broken its all-time annual tornado record with half the year left (172 vs. the 142 set in 2024).",
+      "headline": "才半年　伊利諾州龍捲風就破紀錄"
+    },
+    {
+      "date": "2026-06-26",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A rare individual offensive feat — 11 RBIs in a single day and a franchise-record 15-RBI series — distinct from this week's PCA-MVP, closer-injury and Kelly grand-slam Cubs angles.",
+      "headline": "史旺森一天打回十一分　寫下小熊隊紀錄"
+    },
+    {
+      "date": "2026-06-26",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A confirmed, completed signing — Hincapie made permanent for £34.5m — distinct from the week's run of unresolved bids and rumors (Barcola £70m, Rogers, the £104m Alvarez chase).",
+      "headline": "兵工廠正式買下後衛辛卡皮耶"
     }
   ]
 }
