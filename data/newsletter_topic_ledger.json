@@ -671,6 +671,54 @@
       "topic": "Arsenal FC",
       "angle": "A confirmed, completed signing — Hincapie made permanent for £34.5m — distinct from the week's run of unresolved bids and rumors (Barcola £70m, Rogers, the £104m Alvarez chase).",
       "headline": "兵工廠正式買下後衛辛卡皮耶"
+    },
+    {
+      "date": "2026-06-27",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "China security and governance",
+      "angle": "A dramatic, never-covered breach: a light plane hits Beijing's tallest tower in tightly controlled airspace, and the official information blackout becomes the story alongside the crash itself.",
+      "headline": "小飛機撞上北京第一高樓"
+    },
+    {
+      "date": "2026-06-27",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "US economic dynamism",
+      "angle": "A fresh, optimistic domestic-economy data point the paper hasn't run: record US business formation (2.9M startups Jan–May) as a counterpoint to the gloomy global-growth picture.",
+      "headline": "美國開新公司的人創新高"
+    },
+    {
+      "date": "2026-06-27",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Israel–Lebanon–Hezbollah conflict",
+      "angle": "A distinct northern-front diplomatic move separate from the wound-down US–Iran war: a US-brokered Israel–Lebanon framework that Hezbollah immediately rejects, exposing the gap between paper deal and reality.",
+      "headline": "美國牽線　以色列黎巴嫩簽約"
+    },
+    {
+      "date": "2026-06-27",
+      "rank": 4,
+      "topic_id": "ideas",
+      "topic": "H5N1 pandemic risk",
+      "angle": "A fresh science/ideas pick the paper hasn't touched: H5N1's surprising udder-tissue tropism explains dairy-herd spread and reframes the intervention around milking equipment, not airborne transmission.",
+      "headline": "禽流感愛躲在乳牛的乳房"
+    },
+    {
+      "date": "2026-06-27",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "The succession answer to the 06-24 Dusty May departure: Michigan names Boynton interim HC—an 'interim,' not permanent, choice that signals an unsettled program in flux, distinct from the departure-shock angle.",
+      "headline": "教練跳槽　密大找代理教練"
+    },
+    {
+      "date": "2026-06-27",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A scale-and-financing angle distinct from the week's single-target bids (Alvarez £104m, Hincapie completed, Rogers pursuit): a potential £200M DOUBLE swoop for Rogers AND Barcola and how Arsenal would pay for an attacking overhaul.",
+      "headline": "兵工廠想花大錢買兩名前鋒"
     }
   ]
 }
