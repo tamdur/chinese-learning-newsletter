@@ -719,6 +719,54 @@
       "topic": "Arsenal FC",
       "angle": "A scale-and-financing angle distinct from the week's single-target bids (Alvarez £104m, Hincapie completed, Rogers pursuit): a potential £200M DOUBLE swoop for Rogers AND Barcola and how Arsenal would pay for an attacking overhaul.",
       "headline": "兵工廠想花大錢買兩名前鋒"
+    },
+    {
+      "date": "2026-06-28",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "After the war had wound down to ceasefire mechanics and Hormuz transit fees, the conflict turns hot again — the first actual military strikes since the framework, triggered by a tanker attack, with the ceasefire visibly fraying.",
+      "headline": "美國再度空襲伊朗 停火幾乎破局"
+    },
+    {
+      "date": "2026-06-28",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "federal workforce reform",
+      "angle": "A never-covered US-governance thread: a new executive order tightening political control over senior career federal officials, escalating the campaign to reshape the civil service.",
+      "headline": "川普簽令 高階公務員更好開除"
+    },
+    {
+      "date": "2026-06-28",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago extreme heat",
+      "angle": "A fresh local doorstep story distinct from June's tornado-outbreak and record-setting coverage: an incoming 'double heat dome' pushing Chicago's heat index past 100°F as the city opens cooling centers.",
+      "headline": "雙重熱蓋罩頂 芝加哥體感破百"
+    },
+    {
+      "date": "2026-06-28",
+      "rank": 4,
+      "topic_id": "ai",
+      "topic": "AI and creative industries",
+      "angle": "A fresh AI lens distinct from the paper's recent governance, model-release and security coverage: a prestige film studio and a frontier lab strike a concrete $75M deal to bring generative AI into filmmaking as a creative tool, not a replacement.",
+      "headline": "谷歌投資七千五百萬 幫片廠做拍片工具"
+    },
+    {
+      "date": "2026-06-28",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A new-acquisition/roster angle distinct from this week's Swanson-RBI, PCA-MVP and closer-injury entries: deadline pickup David Peterson makes his Cubs debut at Milwaukee amid a 10-of-13 surge in the NL Central.",
+      "headline": "小熊十三場贏十場 新投手首登板"
+    },
+    {
+      "date": "2026-06-28",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A distinct, newly named midfield transfer target — Newcastle captain Bruno Guimaraes, who has greenlit a move — with a second bid coming after £60m was rejected, separate from the week's attacker chases (Alvarez, Rogers, Barcola) and completed Hincapie deal.",
+      "headline": "兵工廠準備加碼 再追中場大將"
     }
   ]
 }
