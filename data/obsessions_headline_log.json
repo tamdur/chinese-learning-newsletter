@@ -2239,6 +2239,34 @@
       "headline": "十八年的網路話題，變成一張圖",
       "headline_en": "Hacker Trends, 18 years of Hacker News charted",
       "topic": "Hacker News trends tool"
+    },
+    {
+      "date": "2026-06-29",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "飛到洛杉磯錄音的《平凡》",
+      "headline_en": "Kay Huang flew to LA to record her 1991 bossa-soul album Ordinary",
+      "topic": "Taiwanese bossa-soul album"
+    },
+    {
+      "date": "2026-06-29",
+      "obsession_id": "finland-honeymoon",
+      "headline": "每年長出新土地的海島",
+      "headline_en": "The Kvarken Archipelago, where post-glacial rebound grows new land yearly",
+      "topic": "post-glacial land rise"
+    },
+    {
+      "date": "2026-06-29",
+      "obsession_id": "do-312",
+      "headline": "在林肯公園找出五十種能吃的植物",
+      "headline_en": "Dave Odd urban foraging walk at Lincoln Park North Pond, July 18",
+      "topic": "urban foraging walk"
+    },
+    {
+      "date": "2026-06-29",
+      "obsession_id": "best-of-internet",
+      "headline": "一張會穿越時間的世界地圖",
+      "headline_en": "OpenHistoricalMap, a volunteer time-slider map spanning 4001 BCE to today",
+      "topic": "historical map tool"
     }
   ]
 }
