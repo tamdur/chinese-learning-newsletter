@@ -767,6 +767,54 @@
       "topic": "Arsenal FC",
       "angle": "A distinct, newly named midfield transfer target — Newcastle captain Bruno Guimaraes, who has greenlit a move — with a second bid coming after £60m was rejected, separate from the week's attacker chases (Alvarez, Rogers, Barcola) and completed Hincapie deal.",
       "headline": "兵工廠準備加碼 再追中場大將"
+    },
+    {
+      "date": "2026-06-29",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "SCOTUS executive power",
+      "angle": "A distinct, never-covered case at the term's close: the Court's imminent birthright-citizenship ruling (Trump v. Barbara) and the Lisa Cook firing case, not the green-card or Voting Rights decisions already logged this term.",
+      "headline": "美國最高法院今天公布最後判決"
+    },
+    {
+      "date": "2026-06-29",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "A genuinely new frontier launch distinct from June's Gemini 3.5 and Claude Fable 5 releases: OpenAI's three-tier GPT-5.6 family and, notably, a pre-release US-government briefing — capability paired with a new national-security disclosure norm.",
+      "headline": "OpenAI 推出新模型，先向政府報告"
+    },
+    {
+      "date": "2026-06-29",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI labor impact",
+      "angle": "A fresh, firm-level data lens distinct from the June 'AI-skilled wage premium' story: today's PwC barometer reframes AI's labour effect as a productivity concentration problem — a top quintile of firms capturing ~5x the average gains.",
+      "headline": "報告：人工智慧把工作分成兩條路"
+    },
+    {
+      "date": "2026-06-29",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Illinois LGBTQ policy",
+      "angle": "A fresh Illinois state-policy action never covered this cycle and distinct from recent Chicago heat/tornado/pension stories: a three-bill LGBTQ+ protection package explicitly positioned as a data-shield against other states.",
+      "headline": "伊利諾州州長簽三法，護同志族群"
+    },
+    {
+      "date": "2026-06-29",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A pitching-attrition angle distinct from this week's Peterson-debut, Swanson-RBI and PCA-MVP entries: an emergency appendectomy thins an already-injured staff just as the NL Central race tightens.",
+      "headline": "小熊投手緊急開刀，傷兵再添一人"
+    },
+    {
+      "date": "2026-06-29",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A status/analysis angle distinct from the June 18 result recap of the same trophy and from the week's men's transfer churn (Guimaraes, Alvarez, Hincapie): an expert post-mortem asking whether Arsenal Women are now the world's best club.",
+      "headline": "兵工廠女足奪冠，是世界最強嗎？"
     }
   ]
 }
