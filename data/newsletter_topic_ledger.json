@@ -815,6 +815,54 @@
       "topic": "Arsenal FC",
       "angle": "A status/analysis angle distinct from the June 18 result recap of the same trophy and from the week's men's transfer churn (Guimaraes, Alvarez, Hincapie): an expert post-mortem asking whether Arsenal Women are now the world's best club.",
       "headline": "兵工廠女足奪冠，是世界最強嗎？"
+    },
+    {
+      "date": "2026-06-30",
+      "rank": 1,
+      "topic_id": "business",
+      "topic": "AI-driven M&A",
+      "angle": "AI's transformation shows up as a structural reshaping of dealmaking itself — a record $2.4T in five months splitting into a megadeal-vs-tuck-in barbell, with data-center power demand driving a $119B utility merger.",
+      "headline": "人工智慧熱潮推動企業大併購"
+    },
+    {
+      "date": "2026-06-30",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "US-Iran war",
+      "angle": "After last week pivoted from ceasefire mechanics back to live US strikes, the story moves to a tense diplomatic track — Witkoff in Doha trying to save the deal while Iran publicly refuses to call it 'direct talks.'",
+      "headline": "美伊朗卡達會面　伊朗否認直接談判"
+    },
+    {
+      "date": "2026-06-30",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US housing policy",
+      "angle": "A rare bipartisan, generation-defining housing-supply bill becomes a political hostage — Trump withholds his signature to extract passage of the unrelated SAVE Act, a fresh US-governance standoff the paper hasn't run.",
+      "headline": "川普不簽住房法案　當作談判籌碼"
+    },
+    {
+      "date": "2026-06-30",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "South Africa xenophobia",
+      "angle": "A brand-new world story: vigilante 'deadline' politics forces over 13,000 foreigners to flee South Africa and puts the army on standby, with no legal order behind it — mob pressure as de facto immigration policy.",
+      "headline": "南非排外期限將到　上萬外國人逃離"
+    },
+    {
+      "date": "2026-06-30",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "Breaks a saturated Cubs run on the sports desk with a different team and a forward-looking angle — Ben Johnson's minicamp closes with second-year WR Luther Burden III tabbed to anchor a rebuilt, DJ Moore-less offense.",
+      "headline": "芝加哥熊隊看好新秀柏登"
+    },
+    {
+      "date": "2026-06-30",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The outgoing side of the rebuild, distinct from the week's run of incoming-bid stories (Alvarez, Guimaraes, Hincapie): 15 confirmed contract-expiry exits on June 30, including Women's captain Katie McCabe and Beth Mead.",
+      "headline": "兵工廠確認十五名球員離隊"
     }
   ]
 }
