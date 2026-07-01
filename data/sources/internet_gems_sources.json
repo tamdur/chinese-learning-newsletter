@@ -110,6 +110,16 @@
       "url": "https://www.historytools.org",
       "type": "aggregator",
       "notes": "History Tools publishes well-researched narrative articles on historical places and cultural phenomena, with good depth on Finnish subjects — useful for design, architecture, and cultural history angles."
+    },
+    {
+      "url": "https://storystudio.tw/article/gushi/完整回顧，臺灣禁歌史",
+      "type": "article/aggregator",
+      "notes": "StoryStudio 故事 — Taiwanese history/culture site with a thorough deep-dive on Taiwan's banned-song (禁歌) history under martial law; recurring well for censorship-era music stories."
+    },
+    {
+      "url": "https://chicagoraceriot.org/events/",
+      "type": "aggregator",
+      "notes": "Chicago Race Riot of 1919 Commemoration Project — posts its annual free public history bike/trolley tour through Bronzeville and Bridgeport each July, plus related lectures and memorial events; good recurring source for under-the-radar Chicago history experiences."
     }
   ]
 }
