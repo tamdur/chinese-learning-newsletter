@@ -863,6 +863,54 @@
       "topic": "Arsenal FC",
       "angle": "The outgoing side of the rebuild, distinct from the week's run of incoming-bid stories (Alvarez, Guimaraes, Hincapie): 15 confirmed contract-expiry exits on June 30, including Women's captain Katie McCabe and Beth Mead.",
       "headline": "兵工廠確認十五名球員離隊"
+    },
+    {
+      "date": "2026-07-01",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "SCOTUS executive power",
+      "angle": "The birthright-citizenship case the paper flagged as imminent on 06-29 now lands as an actual 6-3 decision striking down Trump's order — the ruling itself and its reasoning, not the preview.",
+      "headline": "美最高法院：在美國出生就是公民"
+    },
+    {
+      "date": "2026-07-01",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US health policy",
+      "angle": "A never-covered health-policy shift: Medicare's first-ever coverage of GLP-1 weight-loss drugs takes effect today, opening these medicines to millions of seniors and reshaping federal drug-spending math.",
+      "headline": "美國老人保險今起給付減肥藥"
+    },
+    {
+      "date": "2026-07-01",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "Distinct from the 06-26 insurance-regime angle: Iran and Oman jointly moving to actually charge Hormuz transit fees over open US objection, with the two sponsors publicly split on whether the fees are voluntary or compulsory as the free-passage clock runs out.",
+      "headline": "伊朗阿曼要在海峽收過路費"
+    },
+    {
+      "date": "2026-07-01",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "Russia–Ukraine war",
+      "angle": "A brand-new topic for the recent ledger and a rare crack in the Kremlin's line: Putin himself admitting Ukrainian refinery strikes are causing domestic fuel shortages, with gas-station lines and fights surfacing publicly.",
+      "headline": "普丁承認俄國鬧油荒"
+    },
+    {
+      "date": "2026-07-01",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bulls",
+      "angle": "Breaks a saturated Cubs run with the Bulls' first moves of free agency — roster cuts, a Collins extension, and cap space aimed at Kuminga and Powell — distinct from the earlier draft-slot and draft-pick angles.",
+      "headline": "公牛隊自由市場開張忙補強"
+    },
+    {
+      "date": "2026-07-01",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The Hincapié deal, flagged 06-26 as 'made permanent,' becomes legally official and registered on July 1 with confirmed five-year contract terms — the completed signing standing alone against a week otherwise dominated by unresolved bids and rumor churn.",
+      "headline": "兵工廠正式簽下後衛伊卡佩"
     }
   ]
 }
