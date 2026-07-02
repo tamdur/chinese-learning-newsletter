@@ -120,6 +120,16 @@
       "url": "https://chicagoraceriot.org/events/",
       "type": "aggregator",
       "notes": "Chicago Race Riot of 1919 Commemoration Project — posts its annual free public history bike/trolley tour through Bronzeville and Bridgeport each July, plus related lectures and memorial events; good recurring source for under-the-radar Chicago history experiences."
+    },
+    {
+      "url": "http://badewanne.fi",
+      "type": "specialist blog/archive",
+      "notes": "Badewanne — 20-year Finnish volunteer tech-diving team documenting Gulf of Finland shipwrecks (17th century to WWII) with video and heritage-agency collaborations; source for maritime-history/hidden-gem Finland angles."
+    },
+    {
+      "url": "https://www.chicagohoneycoop.com/classes",
+      "type": "aggregator",
+      "notes": "Chicago Honey Co-op class calendar — urban beekeeping nonprofit running recurring public hands-on classes through the growing season; recurring well for under-the-radar hands-on Chicago experiences."
     }
   ]
 }
