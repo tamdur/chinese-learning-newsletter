@@ -911,6 +911,54 @@
       "topic": "Arsenal FC",
       "angle": "The Hincapié deal, flagged 06-26 as 'made permanent,' becomes legally official and registered on July 1 with confirmed five-year contract terms — the completed signing standing alone against a week otherwise dominated by unresolved bids and rumor churn.",
       "headline": "兵工廠正式簽下後衛伊卡佩"
+    },
+    {
+      "date": "2026-07-02",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Russia–Ukraine war",
+      "angle": "A sharp battlefield escalation with a NATO dimension — a mass strike on Kyiv killing at least eight and prompting Poland to scramble jets — distinct from 07-01's Russian-home-front fuel-shortage angle.",
+      "headline": "俄軍大舉空襲基輔，波蘭緊急派戰機"
+    },
+    {
+      "date": "2026-07-02",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "North American trade policy",
+      "angle": "The 06-21 previewed USMCA six-year review now lands as an actual outcome — Greer declines to renew and shunts the pact into a decade of annual reviews — the decision itself, not the preview.",
+      "headline": "美國不再續簽美墨加貿易協定"
+    },
+    {
+      "date": "2026-07-02",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI labor impact",
+      "angle": "A macro sector-payroll lens — finance and information jobs shrinking ~28k/month in the occupations Stanford flags as AI-automatable, with bankers admitting role elimination — distinct from the earlier wage-premium and firm-concentration angles.",
+      "headline": "人工智慧衝擊職場，科技金融每月少兩萬多個工作"
+    },
+    {
+      "date": "2026-07-02",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Illinois policy",
+      "angle": "A doorstep round-up of the dozen-plus Illinois laws and the $56B FY2027 budget taking effect July 1 — a breadth-of-what-changed local angle distinct from the recent single-bill Illinois entries.",
+      "headline": "伊利諾多項新法七月一日上路"
+    },
+    {
+      "date": "2026-07-02",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "A forward-looking season preview — the 2026 schedule/theme-game reveal framed around the first year of the Kyle Whittingham era and a September 12 Oklahoma marquee — breaking a Cubs/Bulls-heavy desk with a topic unseen since 06-13.",
+      "headline": "密西根公布新賽季賽程，九月對戰奧克拉荷馬"
+    },
+    {
+      "date": "2026-07-02",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A tournament player-fitness angle — Rice's availability for England's World Cup last-32 tie — distinct from the fortnight of transfer-rumor churn and from the earlier Saka fitness story (a different player, at the knockout stage).",
+      "headline": "萊斯傷勢好轉，可望出戰世界盃"
     }
   ]
 }
