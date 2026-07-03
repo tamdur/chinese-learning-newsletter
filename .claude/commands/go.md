@@ -27,7 +27,26 @@ Read and follow the full instructions in `.claude/commands/obsessions.md`. This 
 
 ---
 
-## 4. Summary
+## 4. Verify published to main
+
+The live site is served by GitHub Pages from the `main` branch, so a run
+only counts as published once all three pipelines' commits are on
+`origin/main`. Confirm this before reporting success:
+```bash
+git fetch origin main && git log --oneline -3 origin/main
+```
+The top three commits should be today's **Obsessions**, **Daily Wisdom**,
+and **Newsletter**. If any are missing, the push fell back onto a stray
+working branch (e.g. a `claude/*` branch in an unattended cloud session).
+Publish the local commits to the Pages branch and re-verify:
+```bash
+git push origin HEAD:main
+git fetch origin main && git log --oneline -3 origin/main
+```
+Do not report success until today's three commits are visible on
+`origin/main`.
+
+## 5. Summary
 
 Print a consolidated summary:
 

@@ -251,9 +251,16 @@ verification.
    git pull --rebase origin main
    ```
 
-5. If MCP push fails repeatedly, fall back to `git push`. Report the
-   error so the user can investigate; do NOT generate top-up commits
-   (that's what produced the broken 2026-05-10 state).
+5. If MCP push fails repeatedly, fall back to `git push origin HEAD:main`
+   — this publishes the current commits straight to the Pages branch.
+   Do NOT use plain `git push`: in an unattended cloud session the
+   checkout may be on a `claude/*` working branch, and plain `git push`
+   would strand the day's commits off `main`, where GitHub Pages can't
+   see them (this is exactly what happened on 2026-07-03). After the
+   fallback, verify with `git log --oneline -1 origin/main` that
+   origin/main shows today's date. Report any error so the user can
+   investigate; do NOT generate top-up commits (that's what produced the
+   broken 2026-05-10 state).
 
 ### Step 7: Cleanup checkpoints
 

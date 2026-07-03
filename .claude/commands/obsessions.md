@@ -190,8 +190,12 @@ verification.
    git pull --rebase origin main
    ```
 
-Fall back to `git push` only if MCP fails repeatedly. Do NOT
-generate top-up commits.
+Fall back to `git push origin HEAD:main` only if MCP fails repeatedly —
+this publishes the commits straight to the Pages branch. Do NOT use plain
+`git push`: an unattended cloud session may be checked out on a `claude/*`
+working branch, and plain `git push` would strand the commits off `main`
+where GitHub Pages can't see them. Afterward verify `origin/main` advanced
+(`git log --oneline -1 origin/main`). Do NOT generate top-up commits.
 
 ## Step 10: Cleanup checkpoints
 

@@ -172,10 +172,10 @@ git add docs/index.html
 git commit -m "Special Edition: {topic_short}"
 ```
 ```bash
-git push origin main
+git push origin HEAD:main
 ```
 
-The explicit `origin main` ensures the push targets the correct branch for GitHub Pages regardless of upstream tracking configuration.
+The explicit `HEAD:main` ensures the push targets the Pages branch (`main`) regardless of what branch the session is checked out on. In an unattended cloud session the working branch may be a `claude/*` branch; a plain `git push` (or even `git push origin main` while off `main`) would strand the commit where GitHub Pages can't see it.
 
 ## Step 8: Cleanup
 
