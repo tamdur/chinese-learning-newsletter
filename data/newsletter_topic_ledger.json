@@ -959,6 +959,54 @@
       "topic": "Arsenal FC",
       "angle": "A tournament player-fitness angle — Rice's availability for England's World Cup last-32 tie — distinct from the fortnight of transfer-rumor churn and from the earlier Saka fitness story (a different player, at the knockout stage).",
       "headline": "萊斯傷勢好轉，可望出戰世界盃"
+    },
+    {
+      "date": "2026-07-03",
+      "rank": 1,
+      "topic_id": "economics",
+      "topic": "US labor market",
+      "angle": "A fresh, market-moving macro indicator the paper hasn't run recently: June payrolls at a third of forecast with sharp downward revisions, reframing the Fed debate from 'hike risk' to a stalling jobs engine.",
+      "headline": "美國六月只增五萬七千個工作 遠低於預期"
+    },
+    {
+      "date": "2026-07-03",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US immigration enforcement",
+      "angle": "A distinct operational-scale angle the ledger hasn't run: the raw pace of enforcement (10,000 arrests in five days) as ICE tries to normalize a record tempo while quietly lowering its visible footprint.",
+      "headline": "美國移民局五天逮捕一萬人"
+    },
+    {
+      "date": "2026-07-03",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI infrastructure",
+      "angle": "A fresh AI-economy angle distinct from the June 'compute scarcity/labs paying billions for capacity' story: Meta flips from compute buyer to seller, entering the hyperscaler cloud market with its surplus.",
+      "headline": "Meta要賣多餘的AI運算能力"
+    },
+    {
+      "date": "2026-07-03",
+      "rank": 4,
+      "topic_id": "ideas",
+      "topic": "synthetic biology",
+      "angle": "A never-covered landmark science first: a from-scratch synthetic cell that both grows and divides, crossing the self-replication threshold that prior synthetic-biology milestones could not.",
+      "headline": "科學家首次造出會生長分裂的人造細胞"
+    },
+    {
+      "date": "2026-07-03",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bulls",
+      "angle": "A concrete free-agency departure — a long-tenured veteran center actually leaving — distinct from the 07-01 'free agency opens, cuts and cap-space targets' angle.",
+      "headline": "武切維奇離開公牛 重返魔術隊"
+    },
+    {
+      "date": "2026-07-03",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A genuinely new named blockbuster target — Yildiz, a €100m+ Juventus winger surfacing post-World Cup — distinct from the fortnight's other pursuits and the Rice fitness story.",
+      "headline": "阿森納積極追求尤文圖斯前鋒伊爾迪茲"
     }
   ]
 }
