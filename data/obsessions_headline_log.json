@@ -2407,6 +2407,34 @@
       "headline": "被刪掉的城市：一張消失網路世界的地圖",
       "headline_en": "The Deleted City, Richard Vijgen's interactive GeoCities map",
       "topic": "GeoCities archive visualization"
+    },
+    {
+      "date": "2026-07-05",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "雷光夏的第一張專輯：把聲音當成一部電影",
+      "headline_en": "Summer Lei's 1995 debut used ambient sound design as composition",
+      "topic": "ambient singer-songwriter album"
+    },
+    {
+      "date": "2026-07-05",
+      "obsession_id": "finland-honeymoon",
+      "headline": "打鐵村變成芬蘭的設計之都",
+      "headline_en": "Fiskars, an old ironworks village reborn as Finland's design colony",
+      "topic": "Fiskars design village"
+    },
+    {
+      "date": "2026-07-05",
+      "obsession_id": "do-312",
+      "headline": "失蹤的默片，配上現場音樂重新登場",
+      "headline_en": "Chicago Film Society screens a lost 1926 silent film with live music July 12",
+      "topic": "silent film live screening"
+    },
+    {
+      "date": "2026-07-05",
+      "obsession_id": "best-of-internet",
+      "headline": "用簡單規則畫出大自然的孤獨藝術家",
+      "headline_en": "inconvergent.net, a solo generative artist open-sourcing algorithmic nature patterns",
+      "topic": "generative art website"
     }
   ]
 }

@@ -130,6 +130,16 @@
       "url": "https://www.chicagohoneycoop.com/classes",
       "type": "aggregator",
       "notes": "Chicago Honey Co-op class calendar — urban beekeeping nonprofit running recurring public hands-on classes through the growing season; recurring well for under-the-radar hands-on Chicago experiences."
+    },
+    {
+      "url": "https://www.discoveringfinland.com",
+      "type": "aggregator",
+      "notes": "Finland-focused travel blog with detailed, specific write-ups on villages, regional history, and hidden-gem day trips — good complement to historytools.org for lesser-known destinations."
+    },
+    {
+      "url": "https://www.chicagofilmsociety.org/calendar/current-season/",
+      "type": "aggregator",
+      "notes": "Chicago Film Society's season calendar — recurring Sunday/Thursday screenings of rare 35mm/16mm archival prints (silent films, restorations, studio vault finds) at Music Box Theatre, Siskel Film Center, and Constellation. Good recurring source for under-the-radar preservation-themed cultural events with reliably dated listings."
     }
   ]
 }
