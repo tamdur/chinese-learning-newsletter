@@ -1055,6 +1055,54 @@
       "topic": "Arsenal FC",
       "angle": "A confirmed off-pitch structural move rather than another transfer rumor: De Maesschalck named Academy Director, succeeding club legend Mertesacker from August 1.",
       "headline": "兵工廠青訓換帥 新總監八月上任"
+    },
+    {
+      "date": "2026-07-05",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI and national security",
+      "angle": "A fresh military-AI lens the ledger hasn't run: unsealed emails reveal the Pentagon may have blacklisted Anthropic in retaliation for the lab refusing to let Claude be wired into autonomous weapons.",
+      "headline": "五角大廈與AI公司為「自動武器」鬧翻"
+    },
+    {
+      "date": "2026-07-05",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "Chinese AI development",
+      "angle": "Distinct from June's Gemini/Claude/GPT release wave and from European-sovereignty coverage: the first frontier-scale model trained wholly on Chinese chips, a hardware-independence milestone that undercuts US export controls.",
+      "headline": "中國美團推出AI 全用國產晶片訓練"
+    },
+    {
+      "date": "2026-07-05",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago severe weather",
+      "angle": "A new doorstep weather disaster distinct from June's tornado-record and heat-dome entries: a July 4 storm system blacks out 200,000+ homes, floods roads and kills a woman in Kendall County.",
+      "headline": "芝加哥七月四日暴風雨 逾20萬戶停電"
+    },
+    {
+      "date": "2026-07-05",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "new American pope",
+      "angle": "Distinct from June's Spain-parliament address: the first American pope marks his home country's July 4 from Lampedusa with a pointed migrant-protection appeal, staking out a transatlantic voice on migration.",
+      "headline": "美國籍教宗 七月四日為移民發聲"
+    },
+    {
+      "date": "2026-07-05",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "The recruit-stability answer to the coaching chaos: a five-star freshman publicly reaffirms his Michigan commitment despite May's exit and the interim-coach limbo — distinct from the June departure-shock and succession angles.",
+      "headline": "五星新秀McCoy 決定留在密西根打球"
+    },
+    {
+      "date": "2026-07-05",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A confirmed OUTGOING senior sale — Trossard to Besiktas for €20m — distinct from the fortnight's incoming-target churn (Yildiz, Rogers, Barcola) and the off-pitch academy-director move.",
+      "headline": "兵工廠賣掉Trossard 進帳2000萬歐元"
     }
   ]
 }
