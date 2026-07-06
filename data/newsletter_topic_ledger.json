@@ -1103,6 +1103,54 @@
       "topic": "Arsenal FC",
       "angle": "A confirmed OUTGOING senior sale — Trossard to Besiktas for €20m — distinct from the fortnight's incoming-target churn (Yildiz, Rogers, Barcola) and the off-pitch academy-director move.",
       "headline": "兵工廠賣掉Trossard 進帳2000萬歐元"
+    },
+    {
+      "date": "2026-07-06",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI governance",
+      "angle": "The first US state to mandate independent third-party safety audits of frontier models — a hard-law, doorstep angle distinct from Colorado's 2026 comprehensive law and from the federal voluntary-standards push already logged this cycle.",
+      "headline": "伊利諾州簽署全美首例前沿AI安全法"
+    },
+    {
+      "date": "2026-07-06",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "Federal Reserve monetary policy",
+      "angle": "A structural change in how the Fed communicates — Warsh kills forward guidance and dot-plots outright — distinct from his June debut, which was a routine hold decision.",
+      "headline": "聯準會新主席取消未來利率指引"
+    },
+    {
+      "date": "2026-07-06",
+      "rank": 3,
+      "topic_id": "business",
+      "topic": "AI hardware and capital markets",
+      "angle": "The AI boom shows up as a record-breaking capital event — the largest ADR sale ever, staged specifically to build high-bandwidth-memory capacity for AI chips — a business/markets angle the ledger hasn't run.",
+      "headline": "SK海力士赴美掛牌 規模創史上最大"
+    },
+    {
+      "date": "2026-07-06",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "China–Russia military cooperation",
+      "angle": "A fresh international topic breaking the paper's recent Iran/Ukraine monotony: a large joint China-Russia naval drill and Pacific patrol signalling deepening military coordination.",
+      "headline": "中俄啟動「海上聯合2026」軍演"
+    },
+    {
+      "date": "2026-07-06",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A season-arc / trade-deadline positioning lens — a 43-37 team seven back and facing an Aug 3 buyer-or-seller decision — distinct from this cycle's individual-feat, injury-attrition, MVP and new-acquisition Cubs angles.",
+      "headline": "小熊6比4擊敗紅雀 避免被橫掃"
+    },
+    {
+      "date": "2026-07-06",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The incoming replacement for the departed Trossard — a newly named, specific left-wing target (Tzolis) with a stated fee — distinct from yesterday's outgoing Trossard sale and the fortnight's other target churn.",
+      "headline": "兵工廠鎖定布魯日左路翼鋒佐利斯"
     }
   ]
 }
