@@ -2463,6 +2463,34 @@
       "headline": "一個人畫出的「發明大地圖」",
       "headline_en": "historicaltechtree.com, a solo interactive map of invention causality",
       "topic": "interactive tech tree site"
+    },
+    {
+      "date": "2026-07-07",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "陳揚《現代四季》：台灣被遺忘的空靈之聲",
+      "headline_en": "Chen Yang's 1987 ambient album Modern Four Seasons",
+      "topic": "Taiwanese ambient album"
+    },
+    {
+      "date": "2026-07-07",
+      "obsession_id": "finland-honeymoon",
+      "headline": "開車過海：芬蘭最長的冰上道路走入歷史",
+      "headline_en": "Hailuoto's vanishing sea-ice road, replaced by a new causeway",
+      "topic": "Finnish ice road"
+    },
+    {
+      "date": "2026-07-07",
+      "obsession_id": "do-312",
+      "headline": "「魔法樹叢」的清晨：密西根湖畔的免費賞鳥之旅",
+      "headline_en": "Free beginner bird walk at Montrose Point Magic Hedge, July 11",
+      "topic": "Magic Hedge bird walk"
+    },
+    {
+      "date": "2026-07-07",
+      "obsession_id": "best-of-internet",
+      "headline": "聽見地球的心跳：一個把地震變成音樂的網站",
+      "headline_en": "Sounds of Seismic: granular synthesis fed by live earthquake data",
+      "topic": "seismic sonification site"
     }
   ]
 }

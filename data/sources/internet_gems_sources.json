@@ -140,6 +140,21 @@
       "url": "https://www.chicagofilmsociety.org/calendar/current-season/",
       "type": "aggregator",
       "notes": "Chicago Film Society's season calendar — recurring Sunday/Thursday screenings of rare 35mm/16mm archival prints (silent films, restorations, studio vault finds) at Music Box Theatre, Siskel Film Center, and Constellation. Good recurring source for under-the-radar preservation-themed cultural events with reliably dated listings."
+    },
+    {
+      "url": "https://www.discogs.com/digs/music/essential-taiwanese-ambient/",
+      "type": "aggregator",
+      "notes": "Discogs 'Digs' editorial list, 'Nine Essential Records From Taiwan's Ambient History' — curated overview of Taiwanese ambient/new-age LPs (Chen Yang and peers)."
+    },
+    {
+      "url": "https://europa.tips",
+      "type": "aggregator",
+      "notes": "Travel-focused site with detailed narrative articles on specific European destinations and infrastructure changes, including timely Finnish travel phenomena."
+    },
+    {
+      "url": "https://www.chicagobirder.org/events",
+      "type": "aggregator",
+      "notes": "Chicago Ornithological Society's events calendar — recurring free beginner-friendly bird walks at sites across the city; good recurring source for under-the-radar nature happenings."
     }
   ]
 }
