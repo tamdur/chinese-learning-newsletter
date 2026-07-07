@@ -1151,6 +1151,54 @@
       "topic": "Arsenal FC",
       "angle": "The incoming replacement for the departed Trossard — a newly named, specific left-wing target (Tzolis) with a stated fee — distinct from yesterday's outgoing Trossard sale and the fortnight's other target churn.",
       "headline": "兵工廠鎖定布魯日左路翼鋒佐利斯"
+    },
+    {
+      "date": "2026-07-07",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Gaza governance",
+      "angle": "A brand-new topic for the paper: Hamas voluntarily dissolves the body that has run Gaza, upending the post-war governance question rather than another battlefield or ceasefire-mechanics beat.",
+      "headline": "哈瑪斯宣布解散加薩管理機構"
+    },
+    {
+      "date": "2026-07-07",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI governance",
+      "angle": "The voluntary framework flagged on 07-04 as 'nearing announcement' becomes concrete and consequential — the first US attempt to gate a specific frontier model's (GPT-5.6) public release, not just a plan.",
+      "headline": "白宮新規把關 GPT-5.6 上市"
+    },
+    {
+      "date": "2026-07-07",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "Distinct from June's Gemini/GPT release-wave capability angles: a new Claude release paired with a competitive-business milestone — Anthropic reportedly overtaking OpenAI on revenue.",
+      "headline": "Anthropic 推出 Claude Sonnet 5 營收超車 OpenAI"
+    },
+    {
+      "date": "2026-07-07",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago flood infrastructure",
+      "angle": "A distinct infrastructure/climate-adaptation lens: the region's flagship Deep Tunnel/McCook drainage megaproject hitting capacity for the 6th time this year, testing the limits of a system built to be nearly failsafe.",
+      "headline": "芝加哥深隧道防洪 今年第六次快滿"
+    },
+    {
+      "date": "2026-07-07",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bulls",
+      "angle": "A developmental/forward-looking angle distinct from this cycle's free-agency churn: the Summer League roster reveal, new HC Splitter's first game July 10, and the debuts of draft picks Caleb Wilson and Dailyn Swain.",
+      "headline": "公牛隊夏季聯賽名單出爐 新教練七月十日首秀"
+    },
+    {
+      "date": "2026-07-07",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A captain-future / squad-stability angle (Odegaard quashing exit rumours) distinct from the fortnight of incoming-target and outgoing-sale transfer churn.",
+      "headline": "兵工廠線：厄德高否認轉會加拉塔薩雷"
     }
   ]
 }
