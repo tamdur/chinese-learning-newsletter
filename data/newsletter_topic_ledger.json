@@ -1199,6 +1199,54 @@
       "topic": "Arsenal FC",
       "angle": "A captain-future / squad-stability angle (Odegaard quashing exit rumours) distinct from the fortnight of incoming-target and outgoing-sale transfer churn.",
       "headline": "兵工廠線：厄德高否認轉會加拉塔薩雷"
+    },
+    {
+      "date": "2026-07-08",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI governance",
+      "angle": "The AI-governance story goes global and multilateral for the first time — a new UN body that literally seats frontier-lab CEOs beside heads of state, distinct from the week's US state/federal mandates.",
+      "headline": "聯合國成立人工智慧委員會 科技老闆與各國領袖同桌"
+    },
+    {
+      "date": "2026-07-08",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "post-Assad Syria",
+      "angle": "A brand-new topic for the paper: the first European leader to visit post-Assad Syria is met by explosions, dramatizing Europe's risky bid to re-engage and rebuild.",
+      "headline": "馬克宏訪敘利亞 大馬士革爆炸傷十八人"
+    },
+    {
+      "date": "2026-07-08",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "central bank monetary policy",
+      "angle": "A fresh economics decision showing the first macro dividend of the Iran ceasefire — a second straight Israeli rate cut driven by falling energy prices.",
+      "headline": "以色列再次降息 利率降到百分之三點五"
+    },
+    {
+      "date": "2026-07-08",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago city finances",
+      "angle": "A fresh local-fiscal fight distinct from June's pension-hole and parking-meter stories: a newly disclosed $131.7M mid-year gap that revives the corporate head-tax battle.",
+      "headline": "芝加哥年中短缺一億三千萬 企業稅之爭再起"
+    },
+    {
+      "date": "2026-07-08",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A specific new honor — PCA's second straight All-Star selection — a distinct milestone rather than the 07-06 team-arc/deadline framing.",
+      "headline": "小熊克羅阿姆斯壯 連兩年入選明星賽"
+    },
+    {
+      "date": "2026-07-08",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A confirmed incoming free signing at a new position — third-choice keeper Meslier — distinct from the week's attacker links and the Trossard sale.",
+      "headline": "兵工廠簽下門將梅利耶 補足守門陣容"
     }
   ]
 }
