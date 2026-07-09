@@ -1247,6 +1247,54 @@
       "topic": "Arsenal FC",
       "angle": "A confirmed incoming free signing at a new position — third-choice keeper Meslier — distinct from the week's attacker links and the Trossard sale.",
       "headline": "兵工廠簽下門將梅利耶 補足守門陣容"
+    },
+    {
+      "date": "2026-07-09",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US–Iran war",
+      "angle": "The war the reader thought had ended reignites: ceasefire declared dead, Iran strikes US bases in Kuwait and Bahrain, and Trump openly defies Congress's War Powers resolution — a constitutional showdown, not just 'more strikes.'",
+      "headline": "美國再度空襲伊朗 川普宣布停火結束"
+    },
+    {
+      "date": "2026-07-09",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "The gated GPT-5.6 flagship finally reaches the public — and the story is the hardware: it runs at a record 750 tok/s on anti-Nvidia Cerebras wafer-scale silicon under a $20bn deal, a shift toward inference infrastructure, not just another model announcement.",
+      "headline": "OpenAI 開放新模型 速度創下紀錄"
+    },
+    {
+      "date": "2026-07-09",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "global growth outlook",
+      "angle": "The war's price tag on the world economy, quantified: the IMF cuts 2026 global growth half a point to 3.0% while raising its inflation call to 4.7% — a fresh macro downgrade the paper hasn't run.",
+      "headline": "IMF 下修今年全球成長 歸咎伊朗戰爭"
+    },
+    {
+      "date": "2026-07-09",
+      "rank": 4,
+      "topic_id": "business",
+      "topic": "media megamergers",
+      "angle": "After the deal cleared federal regulators, the fight jumps to the states — a California-led AG coalition moves to block on antitrust grounds, a state-as-antitrust-backstop angle distinct from last week's DOJ/EU clearance.",
+      "headline": "好萊塢千億大合併 多州聯手出手擋"
+    },
+    {
+      "date": "2026-07-09",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "The championship team's pro dividend: eleven Wolverines hit NBA Summer League led by lottery pick Lendeborg's perfect-shooting debut — an alumni-showcase lens distinct from June's coaching-chaos and recruit-retention angles.",
+      "headline": "密西根球員發光 NBA 夏季聯賽"
+    },
+    {
+      "date": "2026-07-09",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The saga turns on player power: Guimaraes himself tells Newcastle he wants the move as Arsenal ready a third bid — a player-agitation beat distinct from June 28's club-side 'preparing to add' framing and the intervening Trossard/Meslier/Odegaard entries.",
+      "headline": "吉馬良斯想投奔兵工廠 阿森納準備再出價"
     }
   ]
 }
