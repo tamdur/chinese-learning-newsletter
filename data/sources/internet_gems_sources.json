@@ -160,6 +160,11 @@
       "url": "https://esolangs.org/wiki/Main_Page",
       "type": "aggregator",
       "notes": "Volunteer-run wiki cataloging 7,000+ esoteric programming languages since 2005 (Rockstar, Piet, Shakespeare, Malbolge, Befunge), each with syntax examples and history. Good hunting ground for Best of the Internet gems."
+    },
+    {
+      "url": "https://www.chicagoprintersguild.org/calendar",
+      "type": "aggregator",
+      "notes": "Chicago Printers Guild's public calendar lists their rotating 'Books & Beats' park series (papermaking, letterpress, zine-making, live music) held at different Chicago Park District locations throughout summer/fall — free, all-ages, drop-in craft events that recur monthly at different parks."
     }
   ]
 }
