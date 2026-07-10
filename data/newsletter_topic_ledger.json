@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-09",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "After a week of pure escalation coverage, the story turns: both sides halt strikes and Trump pushes an immediate ceasefire, with each side's terms laid out.",
-      "headline": "以色列和伊朗停手　川普推停火"
-    },
-    {
-      "date": "2026-06-09",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI model releases",
-      "angle": "xAI ships an agentic coding CLI and an image-to-video model, opening a packed June release wave (Gemini 3.5, new Claude, GPT-5.5 all imminent) — the first fresh model-release story since the early-June Microsoft cluster.",
-      "headline": "xAI推出寫程式和做影片新工具"
-    },
-    {
-      "date": "2026-06-09",
-      "rank": 3,
-      "topic_id": "economics",
-      "topic": "global reserve currencies",
-      "angle": "The ECB's annual report quantifies how little the dollar's dominance has eroded — euro stuck at 20%, dollar at 57% — a fresh economics angle after weeks of no economics coverage.",
-      "headline": "歐洲央行：美元還是老大"
-    },
-    {
-      "date": "2026-06-09",
-      "rank": 4,
-      "topic_id": "world",
-      "topic": "new American pope",
-      "angle": "The first American pope makes the first-ever papal address to Spain's parliament, framing his transatlantic voice around 'moral renewal' and institutional decay.",
-      "headline": "美國籍教宗在西班牙國會演講"
-    },
-    {
-      "date": "2026-06-09",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A roster/depth story — Shaw activated while four starters sit injured ahead of a brutal Coors Field series — rather than another game-result recap.",
-      "headline": "小熊投手受傷多　蕭歸隊"
-    },
-    {
-      "date": "2026-06-09",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The post-final reckoning shifts from result recap to consequences: Arteta clears out a senior backroom figure and opens a summer rebuild.",
-      "headline": "兵工廠賽季後改組　辭退醫療主管"
-    },
-    {
       "date": "2026-06-10",
       "rank": 1,
       "topic_id": "ai",
@@ -1295,6 +1247,54 @@
       "topic": "Arsenal FC",
       "angle": "The saga turns on player power: Guimaraes himself tells Newcastle he wants the move as Arsenal ready a third bid — a player-agitation beat distinct from June 28's club-side 'preparing to add' framing and the intervening Trossard/Meslier/Odegaard entries.",
       "headline": "吉馬良斯想投奔兵工廠 阿森納準備再出價"
+    },
+    {
+      "date": "2026-07-10",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US trade policy",
+      "angle": "Trade policy weaponized for a foreign political end — a 50% tariff on a major economy tied openly to a foreign leader's prosecution, a sovereignty clash distinct from the USMCA-renewal trade coverage run earlier.",
+      "headline": "川普對巴西課五成關稅 只因波索納洛案"
+    },
+    {
+      "date": "2026-07-10",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "The frontier race tips into a price war — a coding-specialized model matching the leaders while undercutting them 60% on cost, a cost-competition lens distinct from June/July's capability-and-hardware release angles.",
+      "headline": "xAI 推出 Grok 4.5 主打便宜寫程式"
+    },
+    {
+      "date": "2026-07-10",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US government shutdown",
+      "angle": "A fresh US-governance thread the ledger hasn't run: the FY appropriations process collapses in the Senate — a canceled markup and a top-line standoff reviving fall shutdown fears.",
+      "headline": "參議院預算談判破局 恐再度政府停擺"
+    },
+    {
+      "date": "2026-07-10",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago immigration enforcement",
+      "angle": "The national deportation surge lands on the reader's doorstep — a neighborhood-by-neighborhood spike in Chicago ICE activity after Operation Midway Blitz ended, a local lens distinct from July's national arrest-tempo coverage.",
+      "headline": "芝加哥移民逮捕再增加 四社區傳查緝"
+    },
+    {
+      "date": "2026-07-10",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "Breaks a sports desk saturated with Cubs/Bulls/Michigan-basketball entries: a fresh Bears roster move — signing center Garrett Bradbury to protect the young QB — the beat's first personnel news since June minicamp.",
+      "headline": "熊隊補進中鋒布萊柏瑞 門票卻出包"
+    },
+    {
+      "date": "2026-07-10",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A confirmed women's-team double signing (Stanway and Cerci) reinforcing the reigning club champions — a completed-business, women's-side angle distinct from the fortnight of men's transfer-rumor churn.",
+      "headline": "兵工廠線：女足簽下史坦威與瑟琪"
     }
   ]
 }
