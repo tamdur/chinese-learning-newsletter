@@ -1295,6 +1295,54 @@
       "topic": "Arsenal FC",
       "angle": "A teammate-versus-teammate World Cup quarterfinal — Odegaard's Norway against England's Arsenal contingent, with 10 Gunners in the last eight — a fresh tournament angle that breaks the fortnight of transfer-rumor churn and is distinct from the 06-16 squad-count and 07-02 Rice-fitness World Cup entries.",
       "headline": "兵工廠線：世界盃八強隊友對決"
+    },
+    {
+      "date": "2026-07-12",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "The war widens into a regional Gulf conflict — a US third strike wave on ~140 targets triggered by a Hormuz tanker attack draws Qatar and the UAE into Iran's retaliation for the first time, with civilian injuries, distinct from 07-09's US-bases/constitutional-showdown framing.",
+      "headline": "美國三度空襲伊朗，波斯灣捲入戰火"
+    },
+    {
+      "date": "2026-07-12",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "Strait of Hormuz oil shock",
+      "angle": "The war's economic chokepoint arrives — no large tanker has crossed Hormuz since fighting resumed, Brent swings >5%, and the IEA warns of a ~14M bbl/day shortfall — a global-oil-supply lens distinct from the strikes themselves and the 07-09 IMF growth downgrade.",
+      "headline": "荷姆茲海峽停運，全球油價震盪"
+    },
+    {
+      "date": "2026-07-12",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "Lindsey Graham death",
+      "angle": "A sitting, high-profile US senator's sudden death — Graham dies at 71 days after a Kyiv trip meeting Zelensky, opening a South Carolina succession fight mid-re-election-campaign.",
+      "headline": "美國參議員葛瑞姆病逝，享年七十一歲"
+    },
+    {
+      "date": "2026-07-12",
+      "rank": 4,
+      "topic_id": "ai",
+      "topic": "Apple–OpenAI legal dispute",
+      "angle": "The AI race spills into court — Apple sues OpenAI for systematic trade-secret theft centered on poached ex-Apple hardware execs, as former ChatGPT-Siri partners rupture over OpenAI's $6.4bn push into consumer hardware.",
+      "headline": "蘋果控告OpenAI偷商業機密"
+    },
+    {
+      "date": "2026-07-12",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "An offseason recruiting win — Michigan lands four-star OL Lincoln Mageo for a 2027 class ranked among the nation's best — a Michigan-football beat unseen since the 07-02 schedule reveal, breaking a Cubs/Bulls/Bears-heavy desk.",
+      "headline": "密西根美式足球簽下四星新秀馬吉歐"
+    },
+    {
+      "date": "2026-07-12",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The Tzolis pursuit flagged 07-06 as a mere target advances to a near-done club-record ~£35m deal — the largest fee ever for a Greek player — the confirmed-signing phase, distinct from the initial target-identification.",
+      "headline": "阿森納將破隊史紀錄簽下佐利斯"
     }
   ]
 }
