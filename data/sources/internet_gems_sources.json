@@ -165,6 +165,11 @@
       "url": "https://www.chicagoprintersguild.org/calendar",
       "type": "aggregator",
       "notes": "Chicago Printers Guild's public calendar lists their rotating 'Books & Beats' park series (papermaking, letterpress, zine-making, live music) held at different Chicago Park District locations throughout summer/fall — free, all-ages, drop-in craft events that recur monthly at different parks."
+    },
+    {
+      "url": "https://directory.repaircafe.us/view/cafe/168",
+      "type": "directory",
+      "notes": "National Repair Café directory listing Chicago-area chapters (Sulzer Library, Evanston, Aurora, Oak Park, Romeoville) with dates and locations — good recurring source for Chicago experiences beat."
     }
   ]
 }
