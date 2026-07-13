@@ -1343,6 +1343,54 @@
       "topic": "Arsenal FC",
       "angle": "The Tzolis pursuit flagged 07-06 as a mere target advances to a near-done club-record ~£35m deal — the largest fee ever for a Greek player — the confirmed-signing phase, distinct from the initial target-identification.",
       "headline": "阿森納將破隊史紀錄簽下佐利斯"
+    },
+    {
+      "date": "2026-07-13",
+      "rank": 1,
+      "topic_id": "economics",
+      "topic": "US trade policy",
+      "angle": "Shifts the trade-war story from foreign-policy leverage (07-10 Brazil sovereignty clash) to the aggregate fiscal magnitude at home — a specific new 30% Mexico rate that pushes the cumulative tariff program to the largest US tax increase since 1993.",
+      "headline": "美國對墨西哥加稅 八月一日開始"
+    },
+    {
+      "date": "2026-07-13",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Strait of Hormuz oil shock",
+      "angle": "Distinct from 07-12's de-facto-shutdown/price-swing lens: Iran now FORMALLY declares Hormuz closed while US CENTCOM openly disputes it — a contested-closure information war over the chokepoint, with traffic down to six crossings and Brent at $79.",
+      "headline": "伊朗宣布關閉荷姆茲海峽 油價大漲"
+    },
+    {
+      "date": "2026-07-13",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "A fresh sustainability lens the paper hasn't run recently: reframes the AI-bubble question around ENERGY as the true bottleneck (not demand or chips), with concrete evidence of years-ahead component sellouts — distinct from June/July's model-release, governance and lawsuit coverage.",
+      "headline": "AI需求「幾乎無限」 電力成最大難關"
+    },
+    {
+      "date": "2026-07-13",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago community recognition",
+      "angle": "A fresh doorstep local story distinct from recent Chicago coverage (ICE, city finances, flooding): a suburban Palestinian-American community wins formal recognition after alleged political interference delayed the signs.",
+      "headline": "芝加哥郊區立起「小巴勒斯坦路」路牌"
+    },
+    {
+      "date": "2026-07-13",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A pitching-attrition-driven deadline-strategy angle distinct from 07-06's general buyer-or-seller framing and 07-08's PCA All-Star honor: six injured starters force the Cubs into an aggressive arms hunt before Aug 3.",
+      "headline": "小熊隊投手鬧傷兵 交易大限前急找幫手"
+    },
+    {
+      "date": "2026-07-13",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Advances the Guimaraes saga from 07-09's player-agitation angle to the selling-club-resistance phase — Newcastle 'flabbergasted' and rejecting two concrete bids (£55m, £65m) — a negotiation-standoff lens rather than a reprint of 'player wants out.'",
+      "headline": "兵工廠爭搶紐卡隊長 轉會陷入僵局"
     }
   ]
 }
