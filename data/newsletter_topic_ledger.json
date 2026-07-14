@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-13",
-      "rank": 1,
-      "topic_id": "chicago",
-      "topic": "Chicago severe weather",
-      "angle": "A major local disaster on the reader's doorstep — a multi-tornado outbreak that knocked out power to hundreds of thousands and damaged schools across northern Illinois and Indiana, now in its recovery phase.",
-      "headline": "龍捲風侵襲芝加哥一帶　數十萬戶停電"
-    },
-    {
-      "date": "2026-06-13",
-      "rank": 2,
-      "topic_id": "economics",
-      "topic": "ECB monetary policy",
-      "angle": "A genuine policy decision, not currency-share data — the ECB's first rate hike since 2023, reversing a year of cuts because the Iran conflict's Hormuz threat has reignited energy inflation.",
-      "headline": "歐洲央行兩年多來首次升息"
-    },
-    {
-      "date": "2026-06-13",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Chicago city finances",
-      "angle": "Chicago's $36B pension hole becomes a live political fight as the council challenges the mayor's split-payment plan and Mendoza weaponizes it for the campaign — a fresh local-governance angle the paper hasn't run.",
-      "headline": "芝加哥退休金缺口三百六十億　市議會逼問市長"
-    },
-    {
-      "date": "2026-06-13",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "SCOTUS executive power",
-      "angle": "A consequential, imminent SCOTUS decision on how far executive immigration-enforcement power extends — the legal backbone of the mass-deportation campaign, expected within weeks.",
-      "headline": "美最高法院將裁定移民執法大案"
-    },
-    {
-      "date": "2026-06-13",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "An offseason recruiting story — Michigan lands 20 verbal commits and earns 'recruiting winner of June' honors — breaking from the recent Cubs-injury and Michigan-basketball entries with a distinct topic.",
-      "headline": "密西根美式足球招兵大豐收"
-    },
-    {
-      "date": "2026-06-13",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The transfer/financial-implications phase of the post-final arc: Arteta opens the window hunting a ~£100m midfielder (Kone, Casado linked), distinct from the earlier backroom-shakeup and Timber-injury angles.",
-      "headline": "兵工廠夏季補強　鎖定中場大將"
-    },
-    {
       "date": "2026-06-16",
       "rank": 1,
       "topic_id": "ai",
@@ -1391,6 +1343,54 @@
       "topic": "Arsenal FC",
       "angle": "Advances the Guimaraes saga from 07-09's player-agitation angle to the selling-club-resistance phase — Newcastle 'flabbergasted' and rejecting two concrete bids (£55m, £65m) — a negotiation-standoff lens rather than a reprint of 'player wants out.'",
       "headline": "兵工廠爭搶紐卡隊長 轉會陷入僵局"
+    },
+    {
+      "date": "2026-07-14",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "The AI-bubble question moves from think-pieces into the equity markets themselves: a genuine chip-sector rout as investors reprice AI-infrastructure ROI doubt, colliding with Iran-driven oil inflation — distinct from 07-13's energy-bottleneck framing and July's model-release/lawsuit coverage.",
+      "headline": "人工智慧股大跌，油價也上漲"
+    },
+    {
+      "date": "2026-07-14",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "The US flips from defending free passage to running its own naval blockade of Hormuz and floating a 20% cargo toll — the superpower militarily controlling and monetizing the chokepoint, distinct from Iran's own closure declarations and the earlier strike-wave and constitutional-showdown angles.",
+      "headline": "美國封鎖荷莫茲海峽並收費"
+    },
+    {
+      "date": "2026-07-14",
+      "rank": 3,
+      "topic_id": "ideas",
+      "topic": "neuroscience and AI",
+      "angle": "A fresh science-and-ideas pick tying a neuroscience result to the AI beat: decision signals emerge in sensory cortex earlier than assumed, challenging the feedforward assumption underlying today's ML architectures — distinct from recent ideas picks (synthetic cell, H5N1).",
+      "headline": "大腦做決定比想像中更早"
+    },
+    {
+      "date": "2026-07-14",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago homelessness policy",
+      "angle": "A doorstep local story distinct from recent Chicago coverage (Palestinian-road recognition, ICE, city finances): federal retreat from Permanent Supportive Housing threatens 3,000+ chronically homeless Chicagoans, a national-policy cut with a direct local human toll.",
+      "headline": "芝加哥住房補助恐被砍"
+    },
+    {
+      "date": "2026-07-14",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "A roster-construction angle — key returners locked in while others enter the portal — showing how the post-departure interim staff is rebuilding, distinct from July's Summer League alumni-showcase and June's coaching-chaos/recruit-retention angles.",
+      "headline": "密西根籃球隊換人重組陣容"
+    },
+    {
+      "date": "2026-07-14",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A collapsed pursuit forces a strategic pivot: with the Barcola deal dead, Arsenal throw their full attacking budget behind Atletico's Alvarez (£90m vs £100m gap) — a distinct attacker-pursuit development from 07-13's Guimaraes midfield standoff and 07-12's Tzolis signing.",
+      "headline": "阿森納改追前鋒阿爾瓦雷斯"
     }
   ]
 }
