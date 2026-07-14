@@ -170,6 +170,16 @@
       "url": "https://directory.repaircafe.us/view/cafe/168",
       "type": "directory",
       "notes": "National Repair Café directory listing Chicago-area chapters (Sulzer Library, Evanston, Aurora, Oak Park, Romeoville) with dates and locations — good recurring source for Chicago experiences beat."
+    },
+    {
+      "url": "https://www.taipeitimes.com/News/feat",
+      "type": "recurring column",
+      "notes": "Taipei Times runs a weekly 'Taiwan in Time' history feature covering forgotten figures and turning points in Taiwanese pop/folk music history (1930s Columbia Records era, campus folk, indigenous music)."
+    },
+    {
+      "url": "https://www.bronzevilleartdistrict.com/",
+      "type": "aggregator",
+      "notes": "Official site for the Bronzeville Art District's recurring 3rd-Friday trolley tour season (June-Sept) — a reliable recurring under-the-radar arts event, useful to check monthly."
     }
   ]
 }
