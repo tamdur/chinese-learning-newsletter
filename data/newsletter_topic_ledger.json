@@ -1391,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "A collapsed pursuit forces a strategic pivot: with the Barcola deal dead, Arsenal throw their full attacking budget behind Atletico's Alvarez (£90m vs £100m gap) — a distinct attacker-pursuit development from 07-13's Guimaraes midfield standoff and 07-12's Tzolis signing.",
       "headline": "阿森納改追前鋒阿爾瓦雷斯"
+    },
+    {
+      "date": "2026-07-15",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI chip export controls",
+      "angle": "A fresh AI-geopolitics lens distinct from July's model-release, energy-bottleneck and stock-rout coverage: the enforcement mechanism itself, with Nvidia policing its own customers via on-site inspectors as export controls are outsourced to the vendor.",
+      "headline": "輝達砍半亞洲買家名單，防晶片流入中國"
+    },
+    {
+      "date": "2026-07-15",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "US campaign against the ICC",
+      "angle": "A brand-new international-institutions story for the paper: a named US whole-of-government campaign to disable the ICC via sanctions and visa bans, drawing an unusually sharp EU rebuke.",
+      "headline": "美國要「拆掉」國際刑事法院，歐盟批不能接受"
+    },
+    {
+      "date": "2026-07-15",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US immigration enforcement",
+      "angle": "A retreat, not a surge: after weeks of arrest-tempo and Chicago-raid coverage, ICE halts a core enforcement tactic following two fatal shootings — the enforcement machine pulling back under its own pressure.",
+      "headline": "一週內兩人被擊斃，美國移民局暫停攔車抓人"
+    },
+    {
+      "date": "2026-07-15",
+      "rank": 4,
+      "topic_id": "ideas",
+      "topic": "climate carbon feedback",
+      "angle": "A rare 37-year empirical result that overturns a modeling assumption in the reader's own field — deep soil carbon, long treated as protected, is being released by microbes under sustained warming, implying a stronger feedback than models assume.",
+      "headline": "37年土壤實驗發現，深層碳被釋放恐加速暖化"
+    },
+    {
+      "date": "2026-07-15",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A season-arc turnaround into playoff position — a team that was seven back and sub-.500 in early July now holds a Wild Card lead and enters clear buyer mode — distinct from 07-13's injury-driven arms-hunt and 07-08's All-Star honor.",
+      "headline": "小熊爬上外卡龍頭，交易大限前轉為買家"
+    },
+    {
+      "date": "2026-07-15",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A player-fitness scare, not transfer churn: first-choice CB Saliba limps out of France's World Cup semi-final with a back injury and possible surgery — distinct from the fortnight of Alvarez/Guimaraes/Tzolis transfer coverage.",
+      "headline": "薩利巴背傷退場，兵工廠後防拉警報"
     }
   ]
 }
