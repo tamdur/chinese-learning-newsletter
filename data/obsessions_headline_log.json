@@ -2715,6 +2715,34 @@
       "headline": "一位英文老師的蘑菇地圖",
       "headline_en": "Michael Kuo's MushroomExpert.Com identification key",
       "topic": "mushroom identification site"
+    },
+    {
+      "date": "2026-07-16",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "最後被查禁的那張唱片",
+      "headline_en": "Taiwan's last banned album: Chao I-hao's 1989 punk record",
+      "topic": "martial-law banned album"
+    },
+    {
+      "date": "2026-07-16",
+      "obsession_id": "finland-honeymoon",
+      "headline": "追極光的百年科學站",
+      "headline_en": "Sodankylä Geophysical Observatory, 113-year aurora science station in Lapland",
+      "topic": "aurora observatory"
+    },
+    {
+      "date": "2026-07-16",
+      "obsession_id": "do-312",
+      "headline": "騎單車走過被埋起來的歷史",
+      "headline_en": "Chicago Race Riot of 1919 commemoration bike tour, July 25",
+      "topic": "history bike tour"
+    },
+    {
+      "date": "2026-07-16",
+      "obsession_id": "best-of-internet",
+      "headline": "讓老電腦回到過去的網路",
+      "headline_en": "The Old Net: proxy letting vintage computers browse the past web",
+      "topic": "retro web proxy"
     }
   ]
 }
