@@ -1439,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "A player-fitness scare, not transfer churn: first-choice CB Saliba limps out of France's World Cup semi-final with a back injury and possible surgery — distinct from the fortnight of Alvarez/Guimaraes/Tzolis transfer coverage.",
       "headline": "薩利巴背傷退場，兵工廠後防拉警報"
+    },
+    {
+      "date": "2026-07-16",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US election security",
+      "angle": "A brand-new US-governance story for the paper: a president using a primetime address and declassified intelligence to allege foreign election interference and machine vulnerabilities, which watchdogs warn revives debunked 2020 claims ahead of the midterms.",
+      "headline": "川普黃金時段演講　談選舉安全"
+    },
+    {
+      "date": "2026-07-16",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "An on-device efficiency milestone distinct from July's cloud-scale release, inference-hardware, cost-war and export-control angles: a 27B-class model now runs locally on a phone, pushing frontier-adjacent AI to the edge and outside any central control point.",
+      "headline": "手機就能跑的大型AI　新模型登場"
+    },
+    {
+      "date": "2026-07-16",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "post-Brexit EU-UK relations",
+      "angle": "A brand-new world story that breaks the week's Iran/Hormuz monotony: a historic EU-UK treaty physically dismantles the Gibraltar-Spain frontier and folds Gibraltar into Schengen, resolving one of Brexit's last unsettled loose ends.",
+      "headline": "直布羅陀拆邊界圍籬　併入申根區"
+    },
+    {
+      "date": "2026-07-16",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago development subsidies",
+      "angle": "A fresh doorstep local story distinct from recent Chicago coverage (homelessness cuts, Little Palestine, ICE): the Council commits $424M in public TIF money to infrastructure for a privately owned Fire stadium at The 78, reopening the public-subsidy-for-private-venues debate amid a budget gap.",
+      "headline": "芝加哥撥四億美元　建球場周邊設施"
+    },
+    {
+      "date": "2026-07-16",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A specific individual statistical milestone — PCA joining the 20-20 club (20 HR, 20 SB) as one of the youngest ever — distinct from 07-08's All-Star selection and 07-15's team buyer-mode angle.",
+      "headline": "小熊克羅阿姆斯壯　加入二十／二十俱樂部"
+    },
+    {
+      "date": "2026-07-16",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A newly named transfer target at a fresh position — winger Antonio Nusa to fill the Trossard-shaped gap on the flank — distinct from this fortnight's striker (Alvarez) and midfield (Guimaraes/Tzolis) pursuits and from yesterday's Saliba injury.",
+      "headline": "兵工廠鎖定努薩　備妥四千萬歐元"
     }
   ]
 }
