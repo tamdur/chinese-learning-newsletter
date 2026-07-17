@@ -2743,6 +2743,34 @@
       "headline": "讓老電腦回到過去的網路",
       "headline_en": "The Old Net: proxy letting vintage computers browse the past web",
       "topic": "retro web proxy"
+    },
+    {
+      "date": "2026-07-17",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "台灣狄斯可：被遺忘的七〇年代女聲",
+      "headline_en": "Taiwan Disco: Aberrant Records' reissue of lost 1970s female funk/disco",
+      "topic": "Taiwanese disco reissue"
+    },
+    {
+      "date": "2026-07-17",
+      "obsession_id": "finland-honeymoon",
+      "headline": "偵探社的祕密：赫爾辛基的禁酒年代",
+      "headline_en": "Helsinki Prohibition-era speakeasy Trillby & Chadwick",
+      "topic": "Finnish Prohibition speakeasy"
+    },
+    {
+      "date": "2026-07-17",
+      "obsession_id": "do-312",
+      "headline": "從菜園到餐桌：植物園的現摘料理秀",
+      "headline_en": "Chicago Botanic Garden free Garden Chef Series cooking demo",
+      "topic": "botanic garden chef demo"
+    },
+    {
+      "date": "2026-07-17",
+      "obsession_id": "best-of-internet",
+      "headline": "番茄醬的博物館：一個省錢念頭的二十年",
+      "headline_en": "The Condiment Packet Gallery, a 20-year online museum",
+      "topic": "condiment packet museum"
     }
   ]
 }
