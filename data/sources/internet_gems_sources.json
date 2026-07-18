@@ -190,6 +190,21 @@
       "url": "https://www.chicagobotanic.org/chef",
       "type": "aggregator",
       "notes": "Chicago Botanic Garden's Garden Chef Series page — a running summer schedule of free chef demonstrations in the Regenstein Fruit & Vegetable Garden amphitheater, updated with specific chefs/restaurants and dates every second and fourth weekend."
+    },
+    {
+      "url": "https://noiseartists.net/home/2017/12/18/taiwan-shoegaze-guide-part1",
+      "type": "aggregator",
+      "notes": "A multi-part guide to Taiwan's shoegaze and dream-pop scene, profiling bands like I Mean Us, DoZzz, Manic Sheep, TuT, and U.TA — a useful crate for a genre largely absent from mainstream Mandopop coverage."
+    },
+    {
+      "url": "https://www.reissuruoti.fi/en/",
+      "type": "aggregator",
+      "notes": "English-language blog run by a Lahti-based Finnish coach travel operator (est. 1957). Publishes practical, locally-grounded posts on Finnish seasonal phenomena, regional day trips, and winter travel logistics."
+    },
+    {
+      "url": "https://funkitswap.com",
+      "type": "aggregator",
+      "notes": "Chicago sustainable clothing swap collective; runs recurring 'Swap Social' pop-up events at bars/venues around the city, listed with dates and RSVP links."
     }
   ]
 }
