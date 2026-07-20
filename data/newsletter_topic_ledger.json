@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-19",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI security",
-      "angle": "A wholly new AI-risk lens for the paper: a self-replicating worm exploiting agentic open-weight models running on users' own hardware — a decentralized threat with no central kill switch, distinct from the week's Anthropic guardrail/shutdown saga.",
-      "headline": "會自己複製的 AI 病毒出現了"
-    },
-    {
-      "date": "2026-06-19",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI geopolitics",
-      "angle": "Frontier AI access as statecraft: Washington brokers foreign-government access to Anthropic's most-restricted model for an ally — a diplomacy/economic-alliance angle distinct from the domestic shutdown, safety-engineering and infrastructure angles run this week.",
-      "headline": "日本兩週內將用上最強 AI"
-    },
-    {
-      "date": "2026-06-19",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Juneteenth",
-      "angle": "A fresh holiday story tying local Chicago observance (parade, DuSable Museum) to a national policy friction — the Trump administration quietly removing Juneteenth from NPS fee-free days while it stays a federal holiday.",
-      "headline": "芝加哥慶祝六月節"
-    },
-    {
-      "date": "2026-06-19",
-      "rank": 4,
-      "topic_id": "ai",
-      "topic": "AI governance",
-      "angle": "A distinct federal-policy choice not yet in the ledger: Trump kills a drafted AI executive order to avoid constraining US labs against China, deliberately leaving a federal vacuum — different from the Anthropic-shutdown and Colorado-vs-White-House governance angles already run.",
-      "headline": "川普取消 AI 新規定"
-    },
-    {
-      "date": "2026-06-19",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A bullpen/injury angle: the Cubs lose their closer (Palencia) to the IL with elbow inflammation as a new Blue Jays series opens — distinct from this week's cycle-feat, walk-off and season-fade Cubs entries.",
-      "headline": "小熊王牌投手受傷"
-    },
-    {
-      "date": "2026-06-19",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A concrete transfer decision and a potential outgoing: top creative target Nico Paz rejects Arsenal to stay at Como, and the club may sell academy man Nwaneri — distinct from this week's Kone/Tzolis target-rumor, World Cup and women's-trophy angles.",
-      "headline": "帕茲拒絕兵工廠"
-    },
-    {
       "date": "2026-06-20",
       "rank": 1,
       "topic_id": "ai",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The transfer focus pivots to DEFENSE: after Saliba's injury scare (07-15), Arsenal move to reinforce left-back and central midfield (a French defender linked) — distinct from the fortnight's attacker chases (Alvarez/Nusa/Tzolis), the Guimaraes midfield saga and the 07-18 Tzolis-completion/Rogers entry.",
       "headline": "兵工廠線　阿森納改補後防"
+    },
+    {
+      "date": "2026-07-20",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI capability milestones",
+      "angle": "A pure research-capability milestone rather than markets or geopolitics: a frontier model closes a ~30-year open problem in convex optimization, AI acting as an original mathematical contributor.",
+      "headline": "AI破解三十年凸優化數學難題"
+    },
+    {
+      "date": "2026-07-20",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "Strait of Hormuz oil shock",
+      "angle": "The war's economic bill breaks a new threshold and the fear shifts to stagflation: Brent tops $90 (vs ~$79 a week ago) as the blockade deepens, a growth-plus-inflation squeeze distinct from 07-13's contested-closure information-war angle.",
+      "headline": "油價衝破九十美元，荷莫茲海峽封鎖加劇"
+    },
+    {
+      "date": "2026-07-20",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US immigration policy",
+      "angle": "A benefits-based legal-immigration rule rather than enforcement: DHS formally publishes a 'public charge' test that can deny green cards to immigrants who used Medicaid, food stamps or housing aid — distinct from July's arrest-tempo, ICE-pullback and visa-duration angles.",
+      "headline": "美國公布公共負擔新規，收緊綠卡資格"
+    },
+    {
+      "date": "2026-07-20",
+      "rank": 4,
+      "topic_id": "business",
+      "topic": "EU circular economy regulation",
+      "angle": "A brand-new topic for the paper that breaks the week's AI/Iran monotony: an EU ban on destroying unsold clothes and shoes takes force, using regulation to attack fast fashion's overproduction model.",
+      "headline": "歐盟禁止銷毀賣不掉的衣服鞋子"
+    },
+    {
+      "date": "2026-07-20",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The deadline arms-hunt finally produces an actual trade: after weeks of 'the Cubs need starters' framing (07-13 injury hunt, 07-15 buyer mode), they land RHP Aaron Civale — a concrete acquisition, not a milestone or honor.",
+      "headline": "小熊隊從運動家隊換來投手希瓦利"
+    },
+    {
+      "date": "2026-07-20",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A trophy/achievement angle, not transfer churn: three Gunners lift the World Cup as Spain edge Argentina, and Arsenal top every PL club with seven tournament medalists — distinct from the fortnight of transfer coverage and the 07-11 QF angle.",
+      "headline": "兵工廠三將隨西班牙奪世界盃冠軍"
     }
   ]
 }
