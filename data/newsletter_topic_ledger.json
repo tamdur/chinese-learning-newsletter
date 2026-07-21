@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-20",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "European AI sovereignty",
-      "angle": "Brussels moves from policy package to picking a concrete winner — funding Italy's Domyn-led EUROPA consortium to build an openly released 400B-parameter model in all 24 EU languages, a sovereign-AI industrial-policy bet.",
-      "headline": "歐盟選中義大利團隊　自建大型人工智慧"
-    },
-    {
-      "date": "2026-06-20",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "The previewed June framework is now actually signed: a concrete 14-point MOU with executed terms — blockade lifted, Hormuz reopened, IAEA-supervised down-blending and a 60-day clock.",
-      "headline": "美國伊朗簽協議　先停戰六十天"
-    },
-    {
-      "date": "2026-06-20",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI and knowledge work",
-      "angle": "A fresh, ground-level lens on AI absorbed into the craft of a rigorous discipline — economists using Claude/ChatGPT to test mathematical guesses inside the research process.",
-      "headline": "經濟學家寫論文　愛找人工智慧幫忙"
-    },
-    {
-      "date": "2026-06-20",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago 2027 mayoral race",
-      "angle": "A new local-politics storyline: the 2027 mayoral field expands as Cardenas enters to challenge a weakened Johnson (~31% approval) alongside Mendoza and Quigley — distinct from the Obama Center opening itself.",
-      "headline": "芝加哥市長選舉　挑戰者越來越多"
-    },
-    {
-      "date": "2026-06-20",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "An individual-hero offensive showcase — backup catcher Carson Kelly's grand slam and career-high 6 RBIs in a 16-2 rout — distinct from this week's closer-injury and season-fade Cubs angles.",
-      "headline": "凱利轟滿貫全壘打　小熊大勝藍鳥"
-    },
-    {
-      "date": "2026-06-20",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A forward-looking season-arc angle — the 2026-27 fixture list drops, mapping the defending champions' opener, big-six clashes and run-in — distinct from this week's transfer-rumor and World Cup Arsenal angles.",
-      "headline": "兵工廠新球季賽程公布　首戰考文垂"
-    },
-    {
       "date": "2026-06-21",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "A trophy/achievement angle, not transfer churn: three Gunners lift the World Cup as Spain edge Argentina, and Arsenal top every PL club with seven tournament medalists — distinct from the fortnight of transfer coverage and the 07-11 QF angle.",
       "headline": "兵工廠三將隨西班牙奪世界盃冠軍"
+    },
+    {
+      "date": "2026-07-21",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Russia–Ukraine war",
+      "angle": "Ukraine goes on the deep-strike offensive — a ~400-drone assault on the Moscow region hitting oil infrastructure and Black Sea ships, one of the war's largest, escalating the refinery-strangulation campaign, distinct from July's Patriots-production (07-11) and Kyiv-strike/Poland-jets (07-02) angles.",
+      "headline": "烏克蘭出動四百架無人機 襲擊莫斯科油庫"
+    },
+    {
+      "date": "2026-07-21",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US Medicaid work requirements",
+      "angle": "A never-covered implementation-failure story: contractor-built eligibility systems (Deloitte/Accenture/Optum) are wrongly cutting off disabled Americans — including Michigan patients — as states rush to enforce the tax law's new Medicaid work requirements, distinct from July's immigration-dominated policy coverage.",
+      "headline": "電腦系統出錯 殘障者被擋在健保外"
+    },
+    {
+      "date": "2026-07-21",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI and human judgment",
+      "angle": "A fresh cognitive-effects lens on AI, distinct from July's markets/geopolitics/model-release and math-milestone angles: empirical evidence that AI advice makes people measurably less accurate yet more confident — automation bias as the hidden cost of assistance.",
+      "headline": "研究：聽AI建議 人更不準卻更有自信"
+    },
+    {
+      "date": "2026-07-21",
+      "rank": 4,
+      "topic_id": "business",
+      "topic": "media megamergers",
+      "angle": "The Paramount–Warner fight escalates from the states' antitrust suit (07-09) to actual judicial action: a federal judge grants a 14-day TRO freezing the $110B deal — a court intervening, not just AGs filing.",
+      "headline": "法官喊停 派拉蒙併華納案暫停十四天"
+    },
+    {
+      "date": "2026-07-21",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan athletics",
+      "angle": "An administrative earthquake breaking the Cubs-saturated sports desk: AD Warde Manuel steps down alongside an internal investigation report on the Stalions/Weiss/Moore scandals — a top-of-the-department reckoning, distinct from July's Michigan football-recruiting and basketball-roster angles.",
+      "headline": "密西根體育主任下台 偷暗號醜聞收尾"
+    },
+    {
+      "date": "2026-07-21",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Saliba's back injury (a scare on 07-15) is confirmed as a 4-5 month, possibly surgical absence, and Arsenal respond with a concrete €70m Konsa bid — advancing the defensive-reinforcement thread (07-19) to a named target and a season-shaping prognosis.",
+      "headline": "兵工廠線：薩利巴傷停五個月 兵工廠追康薩"
     }
   ]
 }
