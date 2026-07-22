@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-21",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "A sharp reversal of the just-signed deal: only days after the MOU reopened Hormuz, Iran declares it closed again, blaming Israeli strikes in Lebanon — the ceasefire framework breaking down in real time, not 'continuing.'",
-      "headline": "伊朗宣布關閉荷姆茲海峽 停火協議破局"
-    },
-    {
-      "date": "2026-06-21",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI governance",
-      "angle": "A regulatory-readiness mismatch: the EU's landmark law goes fully binding Aug 2 but was built for assistive AI, while the new International AI Safety Report flags autonomous agents as the real governance gap.",
-      "headline": "歐盟AI新法八月上路 卻追不上新科技"
-    },
-    {
-      "date": "2026-06-21",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "immigration surveillance",
-      "angle": "A disclosed DHS plan to turn 1,300 local police forces into front-line immigration screeners via a facial-recognition app retaining citizens' photos for 15 years.",
-      "headline": "文件外流 美擬給警察人臉辨識手機程式"
-    },
-    {
-      "date": "2026-06-21",
-      "rank": 4,
-      "topic_id": "economics",
-      "topic": "North American trade policy",
-      "angle": "A fresh trade-policy story: the looming July 1 USMCA six-year review that decides the fate of North America's core trade pact after a year of tariff turmoil.",
-      "headline": "北美貿易協定七月大檢視 前途未定"
-    },
-    {
-      "date": "2026-06-21",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bulls",
-      "angle": "Breaks a five-issue Chicago Cubs streak with a different team and a forward-looking angle: the Bulls' No. 4 draft pick as the opening move of a new front-office and head-coach era.",
-      "headline": "公牛手握選秀第四順位 新團隊開局"
-    },
-    {
-      "date": "2026-06-21",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A concrete transfer ACTION, not another rumor: Arsenal lodge an official £70m bid for PSG's Barcola — distinct from this week's Kone/Tzolis links and the Nico Paz rejection.",
-      "headline": "兵工廠正式出價 搶巴黎邊鋒巴爾科拉"
-    },
-    {
       "date": "2026-06-22",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "Saliba's back injury (a scare on 07-15) is confirmed as a 4-5 month, possibly surgical absence, and Arsenal respond with a concrete €70m Konsa bid — advancing the defensive-reinforcement thread (07-19) to a named target and a season-shaping prognosis.",
       "headline": "兵工廠線：薩利巴傷停五個月 兵工廠追康薩"
+    },
+    {
+      "date": "2026-07-22",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "UK political instability",
+      "angle": "The 06-23 Starmer resignation resolves into an actual new government: Burnham takes office and unveils his first cabinet and opening policies, the government-forming phase rather than the resignation or leadership-race phase.",
+      "headline": "伯納姆就任英國新首相 公布內閣名單"
+    },
+    {
+      "date": "2026-07-22",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US government shutdown",
+      "angle": "The 07-10 'Senate budget talks collapse, shutdown fears' thread takes a surprising early turn — rather than drifting toward a fall brink, the House proactively passes a CR through December to defuse a pre-midterm shutdown.",
+      "headline": "美國眾議院提前通過撥款案 避免政府關門"
+    },
+    {
+      "date": "2026-07-22",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "The frontier race tips into a reasoning-tier-and-cost battle: OpenAI bolts high-effort 'max'/'ultra' modes onto GPT-5.6 Sol to chase Anthropic's Fable 5 at ~half the cost — distinct from July's on-device (07-16) and Chinese open-weight (07-17) release angles.",
+      "headline": "OpenAI 推出更強推理模式 追趕對手"
+    },
+    {
+      "date": "2026-07-22",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago quantum computing",
+      "angle": "A fresh doorstep economic-development story distinct from recent Chicago coverage (wildfire smoke, TIF stadium, homelessness cuts): Illinois lands a quantum firm's global HQ at a new $500M park, staking Chicago's claim as a quantum hub.",
+      "headline": "量子公司 Infleqtion 選芝加哥設全球總部"
+    },
+    {
+      "date": "2026-07-22",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "Breaks a Cubs-saturated sports desk (Cubs in 5 of the last 7 issues) with a QB-room-specific camp preview centered on Caleb Williams' pivotal year three, distinct from the 07-17 general Bears camp preview (Trapilo/Clowney/Odunze).",
+      "headline": "熊隊訓練營將開 威廉斯迎關鍵第三年"
+    },
+    {
+      "date": "2026-07-22",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A club-legend human-interest tribute that breaks a fortnight of transfer/injury churn (Konsa bid, Saliba injury, WC winners): Cazorla retires after 20+ years, his career defined by a stunning injury comeback and leading Real Oviedo back to La Liga.",
+      "headline": "阿森納傳奇卡索拉宣布退休"
     }
   ]
 }
