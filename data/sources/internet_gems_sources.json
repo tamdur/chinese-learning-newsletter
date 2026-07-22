@@ -205,6 +205,11 @@
       "url": "https://funkitswap.com",
       "type": "aggregator",
       "notes": "Chicago sustainable clothing swap collective; runs recurring 'Swap Social' pop-up events at bars/venues around the city, listed with dates and RSVP links."
+    },
+    {
+      "url": "http://sims.durgadas.com/",
+      "type": "creator collection",
+      "notes": "A single hobbyist growing personal archive of interactive simulations recreating obsolete electromechanical and early computing systems (telephone switchboards, vintage minicomputers, etc.) — worth revisiting for future finds."
     }
   ]
 }

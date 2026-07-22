@@ -2883,6 +2883,34 @@
       "headline": "兩萬個陌生人的夢",
       "headline_en": "DreamBank.net: a searchable archive of 20,000+ dream reports",
       "topic": "dream archive website"
+    },
+    {
+      "date": "2026-07-22",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "月琴裡的思想起：陳達的歌重新出版",
+      "headline_en": "Chen Da's 1971 folk field recordings reissued after 45 years",
+      "topic": "Chen Da folk reissue"
+    },
+    {
+      "date": "2026-07-22",
+      "obsession_id": "finland-honeymoon",
+      "headline": "靜默教堂：赫爾辛基裡沒有直角的木蛋",
+      "headline_en": "Helsinki's windowless curved-wood Kamppi Chapel of Silence",
+      "topic": "Kamppi Chapel architecture"
+    },
+    {
+      "date": "2026-07-22",
+      "obsession_id": "do-312",
+      "headline": "一起摺紙：芝加哥北區摺紙同好的週日聚會",
+      "headline_en": "Chicago Northside Origami Group's July 26 drop-in meetup",
+      "topic": "origami meetup"
+    },
+    {
+      "date": "2026-07-22",
+      "obsession_id": "best-of-internet",
+      "headline": "接線生的世界：一九一五年老電話總機模擬器",
+      "headline_en": "Browser simulator of a 1915 telephone switchboard",
+      "topic": "switchboard simulator"
     }
   ]
 }
