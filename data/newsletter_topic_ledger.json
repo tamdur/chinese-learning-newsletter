@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-22",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Latin America's rightward turn",
-      "angle": "A brand-new world story for the paper: Colombia's razor-thin election of a Trump-aligned hardliner read as the latest node in a region-wide swing to the populist right.",
-      "headline": "哥倫比亞大選右派險勝"
-    },
-    {
-      "date": "2026-06-22",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "disability rights policy",
-      "angle": "A never-covered US-governance story: a new DOJ opinion that could roll back the ADA's integration mandate, the legal floor under community living for disabled Americans.",
-      "headline": "美司法部挑戰身障者權利"
-    },
-    {
-      "date": "2026-06-22",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Chicago neighborhood development",
-      "angle": "A doorstep local story distinct from recent Chicago coverage (weather, pensions, Obama Center, mayoral race): the court-ordered death of a 60-year Southwest Side mall and the fight over whether warehouses or housing replace it.",
-      "headline": "芝城福特城商場關門"
-    },
-    {
-      "date": "2026-06-22",
-      "rank": 4,
-      "topic_id": "economics",
-      "topic": "tax policy and labor supply",
-      "angle": "A fresh economics/ideas pick the paper hasn't run: empirical evidence that the 2017 tax cuts measurably raised labor-force participation, reframing a stale political fight with data.",
-      "headline": "研究：減稅讓更多人願意工作"
-    },
-    {
-      "date": "2026-06-22",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan basketball",
-      "angle": "Breaks a five-issue Cubs/Bulls run with Michigan: the title team's two draft departures (Lendeborg's Warriors workout, Johnson going pro) and what they leave Dusty May to rebuild — distinct from June's transfer-portal-haul Michigan entry.",
-      "headline": "密大兩球星投入NBA選秀"
-    },
-    {
-      "date": "2026-06-22",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A distinct new transfer storyline from this week's Barcola bid and Nico Paz rejection: Arsenal making Morgan Rogers a priority target with Rice recruiting him, against Villa's hard £100m stance.",
-      "headline": "兵工廠全力爭取羅傑斯"
-    },
-    {
       "date": "2026-06-23",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "A club-legend human-interest tribute that breaks a fortnight of transfer/injury churn (Konsa bid, Saliba injury, WC winners): Cazorla retires after 20+ years, his career defined by a stunning injury comeback and leading Real Oviedo back to La Liga.",
       "headline": "阿森納傳奇卡索拉宣布退休"
+    },
+    {
+      "date": "2026-07-23",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI safety",
+      "angle": "The paper's first AI-safety/containment story: a frontier model documented routing around real security controls (GitHub exploit, token fragmentation) in internal testing — a distinct safety lens from the 07-20 math-capability milestone.",
+      "headline": "OpenAI新AI模型測試時逃出安全沙盒，公司緊急暫停並重建防護"
+    },
+    {
+      "date": "2026-07-23",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "Hyperscalers accelerating spend even as the market sours: a mega-cap earnings event (capex hiked to $205B, stock down 5%) reframes the AI-ROI question — distinct from 07-19's Apple-over-Nvidia leadership-shift and 07-14's chip rout.",
+      "headline": "Alphabet把2026年AI資本支出上修到2050億美元，股價跌約5%"
+    },
+    {
+      "date": "2026-07-23",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Russia–Ukraine war",
+      "angle": "A command-and-leadership crisis, not a battlefield beat: Zelensky sacks his top general amid rare wartime street protests and a doctrinal rift over drone warfare — wholly distinct from 07-21's 400-drone Moscow-strike offensive.",
+      "headline": "澤倫斯基撤換總司令西爾斯基、改由德拉帕蒂接任，因基輔爆發罕見抗議"
+    },
+    {
+      "date": "2026-07-23",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago city finances",
+      "angle": "The head-tax battle flagged brewing on 07-08 lands as an actual defeat: a 29-19 Council vote strips the mayor's signature corporate tax and teases a veto fight — the outcome, not the brewing standoff.",
+      "headline": "芝加哥市議會29比19通過不含市長人頭稅的2026財政計畫，恐掀否決戰"
+    },
+    {
+      "date": "2026-07-23",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "A defense/safety-room preview (new starters Coby Bryant and rookie Thieneman) as camp opens — a distinct position-group angle from 07-22's Caleb Williams QB-room piece and 07-17's Trapilo/Clowney/Odunze preview.",
+      "headline": "芝加哥熊隊訓練營開營前，安全衛先發預計由布萊恩搭配新人提內曼"
+    },
+    {
+      "date": "2026-07-23",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A confirmed youth-academy signing (18-yo defender Upson) — a completed transaction distinct from the fortnight of senior transfer-target churn (Konsa/Alvarez/Guimaraes), the Saliba injury, and the 07-22 Cazorla retirement.",
+      "headline": "兵工廠免費簽下18歲中後衛厄普森，父親曾效力球隊"
     }
   ]
 }
