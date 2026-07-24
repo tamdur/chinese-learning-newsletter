@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-23",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "After the just-signed deal collapsed two days ago, the war actually ends: a Trump-brokered ceasefire takes effect tomorrow and Iran readmits IAEA inspectors — the conflict's resolution, not another breakdown-or-continuation.",
-      "headline": "川普宣布以色列伊朗停火 伊朗答應讓核子檢查員回國"
-    },
-    {
-      "date": "2026-06-23",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI model releases",
-      "angle": "The June model wave flagged since the 9th finally delivers Google's entry: Gemini 3.5 Pro hits its GA window with a record 2M-token context and a 'Deep Think' mode, reframing the frontier race around context length and reasoning tiers — a launch distinct from this month's Claude Fable 5 release.",
-      "headline": "Google新模型Gemini 3.5 Pro登場 一次能讀兩百萬字"
-    },
-    {
-      "date": "2026-06-23",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "UK political instability",
-      "angle": "A brand-new world story for the paper: a sitting G7 prime minister resigns under two years after a landslide, triggering a Labour leadership race and underscoring Britain churning through seven PMs in a decade.",
-      "headline": "英國首相施凱爾辭職 工黨要改選新黨魁"
-    },
-    {
-      "date": "2026-06-23",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "Voting Rights Act enforcement",
-      "angle": "A consequential SCOTUS non-decision distinct from the term's executive-power cases: by declining review, the Court quietly leaves private enforcement of the Voting Rights Act dead across seven states just as the midterms approach.",
-      "headline": "美國最高法院不受理 七州人民不能自己提告護投票權"
-    },
-    {
-      "date": "2026-06-23",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A season-arc MVP feature rather than a game recap: PCA's torrid June (.429, 9 HR, league-best defense) builds a genuine two-way NL MVP case — distinct from this week's single-game cycle, walk-off and grand-slam moments.",
-      "headline": "小熊隊克羅阿姆斯壯六月火燙 打進國聯MVP話題"
-    },
-    {
-      "date": "2026-06-23",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A confirmed signing, not another rumor: Arsenal beat both Manchester clubs to lock down a teenage prospect as their second summer arrival — distinct from this week's Barcola bid, Rogers pursuit and Nico Paz rejection.",
-      "headline": "兵工廠線：阿森納搶下16歲新星 今夏第二筆簽約"
-    },
-    {
       "date": "2026-06-24",
       "rank": 1,
       "topic_id": "policy",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "A confirmed youth-academy signing (18-yo defender Upson) — a completed transaction distinct from the fortnight of senior transfer-target churn (Konsa/Alvarez/Guimaraes), the Saliba injury, and the 07-22 Cazorla retirement.",
       "headline": "兵工廠免費簽下18歲中後衛厄普森，父親曾效力球隊"
+    },
+    {
+      "date": "2026-07-24",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Strait of Hormuz oil shock",
+      "angle": "The war widens into a second maritime front — Houthis blockade Saudi Arabia at Bab al-Mandeb and hit Saudi tankers, pushing Brent over $100 (first time in two months) and prompting Trump to threaten a 'massive attack' on Iran.",
+      "headline": "葉門封鎖沙烏地、油價衝破百元"
+    },
+    {
+      "date": "2026-07-24",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "Washington itself now frames the AI boom as dot-com-scale systemic risk — a draft Treasury report plus a Fed stress test modeling a 54% AI-bust crash — a regulator/financial-stability lens distinct from 07-23's Alphabet-capex earnings angle.",
+      "headline": "財政部示警：AI熱潮像網路泡沫"
+    },
+    {
+      "date": "2026-07-24",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US trade policy",
+      "angle": "A new legal theory for tariffs — 'forced-labor enforcement' — is used to blanket 60 countries (99% of imports) as stopgap levies expire and after a Supreme Court defeat killed the prior tariff authority.",
+      "headline": "川普對六十國加關稅、理由是強迫勞動"
+    },
+    {
+      "date": "2026-07-24",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "US press freedom",
+      "angle": "A concrete government climbdown, not a threat: the DOJ abandons subpoenas of three NYT reporters (and improperly their families) after a judge signals a First Amendment quash — a new press-freedom topic for the paper.",
+      "headline": "司法部撤回對紐時記者的傳票"
+    },
+    {
+      "date": "2026-07-24",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "A marquee QB feature for the new era: Whittingham anoints former No. 1 recruit Bryce Underwood the starter as camp opens and Underwood vows to become Michigan's best-ever — a player-arc lens.",
+      "headline": "密西根新四分衛、安德伍德志在最強"
+    },
+    {
+      "date": "2026-07-24",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Pre-season is now underway, not just scheduled: the US tour opens in LA with Arteta rotating late-returning World Cup stars and auditioning fringe men (Vieira, Nelson) — a squad-building/season-kickoff lens.",
+      "headline": "兵工廠線——阿森納赴美季前熱身"
     }
   ]
 }
