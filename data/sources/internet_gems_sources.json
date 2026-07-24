@@ -210,6 +210,11 @@
       "url": "http://sims.durgadas.com/",
       "type": "creator collection",
       "notes": "A single hobbyist growing personal archive of interactive simulations recreating obsolete electromechanical and early computing systems (telephone switchboards, vintage minicomputers, etc.) — worth revisiting for future finds."
+    },
+    {
+      "url": "https://illinoismyco.org/events/",
+      "type": "aggregator",
+      "notes": "Illinois Mycological Association events calendar — public lectures on wild/edible fungi held at suburban Chicago libraries, plus members-only forays. Good recurring source for niche naturalist events with concrete dates and locations."
     }
   ]
 }
