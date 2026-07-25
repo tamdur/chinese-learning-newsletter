@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-24",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US–Iran war",
-      "angle": "Pivots the long-running Iran war story from ceasefire mechanics to a domestic constitutional reckoning: Congress, for the first time since 1973, passes a War Powers resolution rebuking the president, with four Republicans defecting.",
-      "headline": "參議院罕見表決 要川普停止對伊朗的戰爭"
-    },
-    {
-      "date": "2026-06-24",
-      "rank": 2,
-      "topic_id": "chicago",
-      "topic": "DOJ healthcare fraud",
-      "angle": "A never-covered local-enforcement story: the largest healthcare-fraud takedown in DOJ history reaches Chicago's doorstep, with 19 Illinois defendants and a $95M Medicaid scheme run out of Oak Lawn.",
-      "headline": "史上最大醫療詐騙案 伊利諾州十九人被告"
-    },
-    {
-      "date": "2026-06-24",
-      "rank": 3,
-      "topic_id": "ideas",
-      "topic": "US biomedical competitiveness",
-      "angle": "A fresh science-policy angle the paper hasn't run: Washington reorganizes its drug-trial pipeline (FDA/NIH/ARPA-H) explicitly to counter China's faster biotech sector.",
-      "headline": "美國推新計畫 加快新藥試驗追趕中國"
-    },
-    {
-      "date": "2026-06-24",
-      "rank": 4,
-      "topic_id": "economics",
-      "topic": "labor market regulation",
-      "angle": "A distinct economics-ideas pick the paper hasn't run: the fivefold rise of occupational licensing (5%→25% of workers) as a hidden brake on competition, mobility, and prices.",
-      "headline": "要執照的工作變多 恐拖累就業"
-    },
-    {
-      "date": "2026-06-24",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan basketball",
-      "angle": "A major, brand-new departure rather than another roster build: the title-winning head coach himself bolts to the NBA's Mavericks — first to do so right after a championship since Larry Brown in 1988 — throwing Michigan's offseason into chaos.",
-      "headline": "奪冠後閃人 梅伊離開密西根轉戰小牛"
-    },
-    {
-      "date": "2026-06-24",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "An individual recovery/availability update: Saka is cleared fit for England's World Cup — a clean bill of health, distinct from the mid-June 'risking a start on a bad Achilles' worry and the week's transfer-target churn.",
-      "headline": "薩卡傷癒 趕上英格蘭世界盃"
-    },
-    {
       "date": "2026-06-25",
       "rank": 1,
       "topic_id": "policy",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "Pre-season is now underway, not just scheduled: the US tour opens in LA with Arteta rotating late-returning World Cup stars and auditioning fringe men (Vieira, Nelson) — a squad-building/season-kickoff lens.",
       "headline": "兵工廠線——阿森納赴美季前熱身"
+    },
+    {
+      "date": "2026-07-25",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "A distinct lab and product from 07-22's OpenAI-reasoning-mode story: Anthropic ships a brand-new default model (Opus 5) at half its own flagship's price with an effort-toggle and an alignment pitch, underscoring a two-month, four-release cadence.",
+      "headline": "AI公司推出新模型Opus 5 價格只要一半"
+    },
+    {
+      "date": "2026-07-25",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "congressional stock-trading ban",
+      "angle": "A new US-governance thread distinct from 07-22's CR-passage angle: Congress votes to ban its own members from trading individual stocks, but bundles it with a national voter photo-ID mandate that turns an ethics win into a partisan fight.",
+      "headline": "美國眾議院通過禁止議員炒股法案"
+    },
+    {
+      "date": "2026-07-25",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Russia–Ukraine war",
+      "angle": "A Russian-offensive-casualty event distinct from this week's Ukraine-side angles (07-21 Moscow drone offensive, 07-23 Zelensky sacking his general): a rare daytime ballistic strike on a defense expo kills at least 10.",
+      "headline": "俄羅斯飛彈打中基輔軍武展 至少十人死亡"
+    },
+    {
+      "date": "2026-07-25",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago food access",
+      "angle": "A fresh doorstep local story with a today hook distinct from recent Chicago coverage: seven city-subsidized grocery stores in food-desert neighborhoods face closure Saturday as a licensing deal collapses amid a 26% SNAP-spending drop.",
+      "headline": "芝加哥七家平價超市 週六恐關門"
+    },
+    {
+      "date": "2026-07-25",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A brand-new individual DEFENSIVE record (most 5-star catches in Statcast history) distinct from PCA's prior offensive coverage this cycle (07-08 All-Star, 07-16 20-20 club) and avoiding a fourth trade-deadline retread.",
+      "headline": "小熊隊克羅阿姆斯壯 締造美技接殺紀錄"
+    },
+    {
+      "date": "2026-07-25",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The Guimaraes saga advances from 07-13's Newcastle standoff/rejection to a near-breakthrough (deal close, second winger lined up), paired with the fresh Rogers-to-Chelsea snub — a resolution-phase development, not a reprint of the standoff.",
+      "headline": "兵工廠快簽下布魯諾 卻錯過羅傑斯"
     }
   ]
 }
