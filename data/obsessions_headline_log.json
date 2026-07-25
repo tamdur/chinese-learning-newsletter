@@ -2967,6 +2967,34 @@
       "headline": "二十一棵知識樹上的每日猜謎",
       "headline_en": "GuessKin — daily taxonomy guessing game across 21 real classification systems",
       "topic": "taxonomy guessing game"
+    },
+    {
+      "date": "2026-07-25",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "廟宇裡的電子鬼魅",
+      "headline_en": "Mong Tong's 'Mystery 秘神' — Taiwanese temple occultism meets 80s synth psychedelia",
+      "topic": "psychedelic occult album"
+    },
+    {
+      "date": "2026-07-25",
+      "obsession_id": "finland-honeymoon",
+      "headline": "會被極光叫醒的夜車",
+      "headline_en": "Finland's Santa Claus Express overnight sleeper train to Lapland",
+      "topic": "overnight aurora train"
+    },
+    {
+      "date": "2026-07-25",
+      "obsession_id": "do-312",
+      "headline": "天文館裡的星空露營",
+      "headline_en": "Adler Planetarium's Adler After Dark 'Camp Adler' (Aug 20)",
+      "topic": "planetarium after-dark event"
+    },
+    {
+      "date": "2026-07-25",
+      "obsession_id": "best-of-internet",
+      "headline": "一張讓你起雞皮疙瘩的歌單",
+      "headline_en": "The CHiM dataset cataloging every song shown to cause musical frisson",
+      "topic": "musical frisson dataset"
     }
   ]
 }
