@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-25",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "SCOTUS executive power",
-      "angle": "The mid-June 'imminent ruling on immigration-enforcement power' finally lands as an actual decision: the Court lowers the bar for treating green-card holders as border applicants, weakening permanent residents' protections.",
-      "headline": "最高法院判決：綠卡族更難過關"
-    },
-    {
-      "date": "2026-06-25",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI model releases",
-      "angle": "Distinct from June's general-purpose frontier launches and prior abstract AI-security pieces: a major lab ships a purpose-built cyber-offense/defense model hitting 85.6% on CyberGym, turning AI security into a commercial product.",
-      "headline": "OpenAI 推出資安新模型"
-    },
-    {
-      "date": "2026-06-25",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Chicago city governance",
-      "angle": "A new Chicago city-hall fight not yet in the ledger: aldermen revolt over Johnson cloaking a renegotiation of the infamous parking-meter deal behind a confidentiality agreement.",
-      "headline": "市議員不滿：停車費案太神秘"
-    },
-    {
-      "date": "2026-06-25",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago public safety",
-      "angle": "A distinct Chicago public-safety policy fight not in the ledger: an alderman moves to curb late-night bars after a Lincoln Park shooting, reviving the nightlife-vs-neighborhood-safety debate.",
-      "headline": "酒吧外槍擊案後 議員想管夜店"
-    },
-    {
-      "date": "2026-06-25",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bulls",
-      "angle": "The actual pick lands: after the paper covered the Bulls merely holding the No. 4 slot, they select PF Caleb Wilson — a concrete cornerstone for the new-era rebuild.",
-      "headline": "公牛第四順位選中威爾森"
-    },
-    {
-      "date": "2026-06-25",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A new, club-record-scale transfer action distinct from the week's Barcola/Rogers links and Saka fitness news: Arsenal lodge a £104m bid for Atletico's Julian Alvarez amid a four-club race.",
-      "headline": "兵工廠出手 天價搶阿瓦雷茲"
-    },
-    {
       "date": "2026-06-26",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The Guimaraes saga advances from 07-13's Newcastle standoff/rejection to a near-breakthrough (deal close, second winger lined up), paired with the fresh Rogers-to-Chelsea snub — a resolution-phase development, not a reprint of the standoff.",
       "headline": "兵工廠快簽下布魯諾 卻錯過羅傑斯"
+    },
+    {
+      "date": "2026-07-26",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "European wildfires and heatwave",
+      "angle": "A brand-new world story for the paper and a different continent from July's Canadian-smoke/Chicago-AQI entry: a record European heatwave produces the largest fire evacuation the continent has seen, with 267,000+ people displaced across two countries and a French PM conceding the scale is unprecedented.",
+      "headline": "法國西班牙森林大火，二十六萬多人逃離家園"
+    },
+    {
+      "date": "2026-07-26",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "Federal Reserve monetary policy",
+      "angle": "The Hormuz/Red Sea oil shock finally transmits into US monetary policy: with Brent above $100, a July 28-29 rate HIKE has become a live one-in-three possibility and September odds jumped to 80% — a Fed-decision lens distinct from July's run of oil-price-level and blockade-mechanics stories, and from 07-06's Warsh forward-guidance overhaul.",
+      "headline": "油價破百，聯準會下週可能升息"
+    },
+    {
+      "date": "2026-07-26",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US election security",
+      "angle": "The judiciary becomes the check: after 07-16's presidential primetime interference claims and 07-18's DHS coercion of state election officials, an appeals court actually blocks the mail-in voting executive order from taking effect before November — the courts stopping the election-rules push rather than the executive advancing it.",
+      "headline": "上訴法院擋下川普郵寄投票新規定"
+    },
+    {
+      "date": "2026-07-26",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago public safety",
+      "angle": "A doorstep public-safety story the paper hasn't run since June, distinct from July's Chicago coverage (food access, city finances, quantum HQ, ICE): a single overnight wave killing five across Hyde Park, Uptown and West Garfield Park lands directly in the November ballot fight over restoring gunshot-detection technology.",
+      "headline": "芝加哥一夜六起槍擊，五人死亡"
+    },
+    {
+      "date": "2026-07-26",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "Camp actually begins: after three preview entries this month (07-17 Trapilo/Clowney/Odunze, 07-22 Caleb Williams' QB room, 07-23 the safety room), players are on the field July 26 — and the frame is a franchise opening camp as defending NFC North champions with nine public practices, an arrival-and-expectations lens rather than another position-group projection.",
+      "headline": "熊隊開訓，首度以分區冠軍身分備戰"
+    },
+    {
+      "date": "2026-07-26",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The window's most audacious name yet: Real Madrid's Vinicius Junior surfaces as an Arsenal target off the back of his contract standoff at the Bernabeu — a genuinely new target of a different order of magnitude, deliberately distinct from the Guimaraes saga already run on 07-09, 07-13 and 07-25.",
+      "headline": "兵工廠線：阿森納把目標指向維尼修斯"
     }
   ]
 }
