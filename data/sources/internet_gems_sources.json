@@ -215,6 +215,21 @@
       "url": "https://illinoismyco.org/events/",
       "type": "aggregator",
       "notes": "Illinois Mycological Association events calendar — public lectures on wild/edible fungi held at suburban Chicago libraries, plus members-only forays. Good recurring source for niche naturalist events with concrete dates and locations."
+    },
+    {
+      "url": "https://storystudio.tw/article/gushi/%E5%AE%8C%E6%95%B4%E5%9B%9E%E9%A1%A7%EF%BC%8C%E8%87%BA%E7%81%A3%E7%A6%81%E6%AD%8C%E5%8F%B2",
+      "type": "article/archive",
+      "notes": "StoryStudio's comprehensive history of Taiwan's 898 banned songs under martial law (1949-1990s) — a rich hunting ground for specific banned-album/artist stories (Yang Tsu-chin, Lo Ta-yu, folk standards like 望春風, 雨夜花) distinct from reissue/genre-focused coverage."
+    },
+    {
+      "url": "https://friendsofpullman.com/special-events/",
+      "type": "aggregator",
+      "notes": "Friends of Pullman National Historical Park events page — lists recurring free/low-cost public programs (walking tours, lectures, festivals) at the Pullman site on Chicago's South Side, updated regularly with dated Eventbrite listings."
+    },
+    {
+      "url": "https://blogroll.org/",
+      "type": "aggregator",
+      "notes": "Ye Olde Blogroll — a humanly curated (no algorithm) directory of ~1,300 independent personal blogs and sites, updated regularly. Good hunting ground for future internet-gem scouting."
     }
   ]
 }

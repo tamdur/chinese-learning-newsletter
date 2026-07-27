@@ -3023,6 +3023,34 @@
       "headline": "創業家就是英雄：一個部落格挖了幾十年",
       "headline_en": "A retired economics professor's decades-long blog mapping Campbell's hero's journey onto entrepreneurship",
       "topic": "solo economics blog"
+    },
+    {
+      "date": "2026-07-27",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "最後一張被查禁的唱片",
+      "headline_en": "Chao Yi-hao's 1990 punk debut, the last album Taiwan's Government Information Office ever banned",
+      "topic": "banned punk album"
+    },
+    {
+      "date": "2026-07-27",
+      "obsession_id": "finland-honeymoon",
+      "headline": "湖中小島上的磚牆實驗室",
+      "headline_en": "Alvar Aalto's Muuratsalo Experimental House, a courtyard of ~50 test brick panels on a Lake Päijänne island",
+      "topic": "Aalto experimental house"
+    },
+    {
+      "date": "2026-07-27",
+      "obsession_id": "do-312",
+      "headline": "走進老闆為工人蓋的城",
+      "headline_en": "Aug 2 First Sunday walking tour of the Pullman company town and the 1894 strike",
+      "topic": "Pullman walking tour"
+    },
+    {
+      "date": "2026-07-27",
+      "obsession_id": "best-of-internet",
+      "headline": "一個人畫了二十五年的口音地圖",
+      "headline_en": "Rick Aschmann's hand-built interactive map of North American English dialects",
+      "topic": "dialect map website"
     }
   ]
 }
