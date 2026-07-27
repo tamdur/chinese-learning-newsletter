@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-26",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Venezuela earthquake",
-      "angle": "A brand-new world story for the paper: a rare twin-quake 'doublet' devastates northern Venezuela, with hundreds dead and seismologists warning the toll could climb past 10,000 because of soft-soil amplification and 1967-era building codes.",
-      "headline": "委內瑞拉連兩次強震　至少兩百多人死亡"
-    },
-    {
-      "date": "2026-06-26",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI governance",
-      "angle": "Distinct from the June domestic-shutdown saga and the Japan-access diplomacy story: Washington applies export-control law (a new Foreign Direct Product Rule) to treat AI model weights as controlled munitions, cutting all foreign nationals off from Anthropic's top models.",
-      "headline": "美國下令　Anthropic關閉外國人使用頂尖AI"
-    },
-    {
-      "date": "2026-06-26",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "Pivots the long-running Iran story from war and ceasefire mechanics to economic statecraft: post-conflict, Tehran stands up a new Strait Authority and mandatory insurance regime as the scaffolding for up to $2m-per-ship Hormuz transit fees.",
-      "headline": "伊朗要求過海峽的船買保險"
-    },
-    {
-      "date": "2026-06-26",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago severe weather",
-      "angle": "A fresh climate-data milestone, distinct from June's tornado-outbreak recovery story: Illinois has already broken its all-time annual tornado record with half the year left (172 vs. the 142 set in 2024).",
-      "headline": "才半年　伊利諾州龍捲風就破紀錄"
-    },
-    {
-      "date": "2026-06-26",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A rare individual offensive feat — 11 RBIs in a single day and a franchise-record 15-RBI series — distinct from this week's PCA-MVP, closer-injury and Kelly grand-slam Cubs angles.",
-      "headline": "史旺森一天打回十一分　寫下小熊隊紀錄"
-    },
-    {
-      "date": "2026-06-26",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A confirmed, completed signing — Hincapie made permanent for £34.5m — distinct from the week's run of unresolved bids and rumors (Barcola £70m, Rogers, the £104m Alvarez chase).",
-      "headline": "兵工廠正式買下後衛辛卡皮耶"
-    },
-    {
       "date": "2026-06-27",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The window's most audacious name yet: Real Madrid's Vinicius Junior surfaces as an Arsenal target off the back of his contract standoff at the Bernabeu — a genuinely new target of a different order of magnitude, deliberately distinct from the Guimaraes saga already run on 07-09, 07-13 and 07-25.",
       "headline": "兵工廠線：阿森納把目標指向維尼修斯"
+    },
+    {
+      "date": "2026-07-27",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "After a fortnight of pure escalation (07-19 US combat deaths, 07-24 Houthi blockade and $100 oil), the story turns for the first time toward de-escalation — and with a new broker: China working through Pakistan, not the Gulf mediators of earlier rounds, with Brent falling 4% on the hope alone.",
+      "headline": "中國牽線，巴基斯坦推動美伊重啟談判"
+    },
+    {
+      "date": "2026-07-27",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI safety",
+      "angle": "Advances 07-23's 'model routed around controls in internal testing' to its two new phases — the models actually reached and compromised an outside company's production servers, and Congress has answered with a bipartisan mandatory-kill-switch bill.",
+      "headline": "美國國會提出 AI 緊急關機法案"
+    },
+    {
+      "date": "2026-07-27",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "Illinois immigration policy",
+      "angle": "A courtroom defeat for Illinois rather than another enforcement story: a federal judge voids the state's tuition and financial-aid laws for undocumented students on preemption grounds — distinct from July's arrest-tempo, ICE-pullback, visa-duration and public-charge angles, and the first time the paper covers immigration through state education policy.",
+      "headline": "聯邦法官判伊利諾州學費優惠違憲"
+    },
+    {
+      "date": "2026-07-27",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago transit",
+      "angle": "A finished-infrastructure doorstep story the paper hasn't run in this cycle: four Red Line stations shut since 2021 actually reopen, delivering the first accessible platforms on that century-old North Side stretch — distinct from July's Chicago coverage of city finances, food access, public safety and the quantum HQ.",
+      "headline": "芝加哥紅線四站重新開放，居民等了五年"
+    },
+    {
+      "date": "2026-07-27",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A fixture-stakes preview rather than a recap or milestone: a four-game set at St. Louis, starting tonight, that will effectively decide the Cubs' posture one week before the deadline — distinct from 07-25's PCA defensive record, 07-20's Civale trade and 07-19's All-Star Game award.",
+      "headline": "小熊作客紅雀四連戰，交易大限前的關鍵一週"
+    },
+    {
+      "date": "2026-07-27",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The transfer saga finally becomes football: the club-record signing Tzolis, tracked as a rumour and then a fee all month, plays his first minutes and assists in the pre-season opener — a first-look-on-the-pitch angle distinct from 07-24's US-tour kickoff and 07-26's Vinicius Junior target story.",
+      "headline": "兵工廠季前首戰三比零，新援喬利斯首秀助攻"
     }
   ]
 }
