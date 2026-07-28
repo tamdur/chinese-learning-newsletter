@@ -230,6 +230,16 @@
       "url": "https://blogroll.org/",
       "type": "aggregator",
       "notes": "Ye Olde Blogroll — a humanly curated (no algorithm) directory of ~1,300 independent personal blogs and sites, updated regularly. Good hunting ground for future internet-gem scouting."
+    },
+    {
+      "url": "https://purepersonpress.bandcamp.com",
+      "type": "label/aggregator",
+      "notes": "Pure Person Press — Taiwanese-American label run by NTS DJ Angie QQ, releasing field-recording and vinyl-digging projects rooted in Taiwan; good recurring hunting ground for backstory-rich releases."
+    },
+    {
+      "url": "https://www.ibiblio.org/",
+      "type": "aggregator",
+      "notes": "ibiblio is a UNC-Chapel Hill-hosted digital library and archive that has quietly hosted dozens of long-running solo passion projects (like the Lighthouse Directory) since the early web era — worth mining directly for more hidden gems."
     }
   ]
 }
