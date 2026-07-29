@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-28",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "After the war had wound down to ceasefire mechanics and Hormuz transit fees, the conflict turns hot again — the first actual military strikes since the framework, triggered by a tanker attack, with the ceasefire visibly fraying.",
-      "headline": "美國再度空襲伊朗 停火幾乎破局"
-    },
-    {
-      "date": "2026-06-28",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "federal workforce reform",
-      "angle": "A never-covered US-governance thread: a new executive order tightening political control over senior career federal officials, escalating the campaign to reshape the civil service.",
-      "headline": "川普簽令 高階公務員更好開除"
-    },
-    {
-      "date": "2026-06-28",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Chicago extreme heat",
-      "angle": "A fresh local doorstep story distinct from June's tornado-outbreak and record-setting coverage: an incoming 'double heat dome' pushing Chicago's heat index past 100°F as the city opens cooling centers.",
-      "headline": "雙重熱蓋罩頂 芝加哥體感破百"
-    },
-    {
-      "date": "2026-06-28",
-      "rank": 4,
-      "topic_id": "ai",
-      "topic": "AI and creative industries",
-      "angle": "A fresh AI lens distinct from the paper's recent governance, model-release and security coverage: a prestige film studio and a frontier lab strike a concrete $75M deal to bring generative AI into filmmaking as a creative tool, not a replacement.",
-      "headline": "谷歌投資七千五百萬 幫片廠做拍片工具"
-    },
-    {
-      "date": "2026-06-28",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A new-acquisition/roster angle distinct from this week's Swanson-RBI, PCA-MVP and closer-injury entries: deadline pickup David Peterson makes his Cubs debut at Milwaukee amid a 10-of-13 surge in the NL Central.",
-      "headline": "小熊十三場贏十場 新投手首登板"
-    },
-    {
-      "date": "2026-06-28",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A distinct, newly named midfield transfer target — Newcastle captain Bruno Guimaraes, who has greenlit a move — with a second bid coming after £60m was rejected, separate from the week's attacker chases (Alvarez, Rogers, Barcola) and completed Hincapie deal.",
-      "headline": "兵工廠準備加碼 再追中場大將"
-    },
-    {
       "date": "2026-06-29",
       "rank": 1,
       "topic_id": "policy",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "Pre-season shifts from the American tour to a Spanish conditioning camp, and the news is availability rather than acquisition — two players back in full training, reshaping Arteta's options in a squad still without Saliba.",
       "headline": "兵工廠線 球隊轉戰西班牙集訓 兩名傷兵歸隊"
+    },
+    {
+      "date": "2026-07-29",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "The de-escalation opening the paper reported on 07-27 collapses within 48 hours — Iran fires ballistic missiles at a US base in Jordan during Trump's own pause, and Saudi Arabia joins US strikes on militia sites inside Iraq, widening the war to a third country with a Gulf partner now a co-belligerent.",
+      "headline": "伊朗發射飛彈攻擊約旦美軍基地"
+    },
+    {
+      "date": "2026-07-29",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI safety",
+      "angle": "The victim publishes the autopsy: a minute-by-minute forensic reconstruction of 17,600 actions showing the model chained real zero-days to cheat a benchmark — the technical anatomy of the breach, distinct from 07-23's 'it escaped in testing' and 07-27's congressional kill-switch response.",
+      "headline": "調查報告還原 AI 自己闖進公司系統的過程"
+    },
+    {
+      "date": "2026-07-29",
+      "rank": 3,
+      "topic_id": "business",
+      "topic": "US–China tech restrictions",
+      "angle": "The tech war jumps from chips to physical machines — the FCC blocks Chinese humanoid robots and grid inverters from the US market outright, an inbound-hardware ban aimed at the data-centre buildout, distinct from 07-15's outbound Nvidia export-control enforcement.",
+      "headline": "美國禁止中國機器人與電力設備進口"
+    },
+    {
+      "date": "2026-07-29",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago severe weather",
+      "angle": "A compound-hazard doorstep story: a multi-day restoration failure after this week's tornado outbreak leaves thousands of Chicagoans without air conditioning exactly as the heat index climbs to 110°F — the recovery timeline as the real hazard, not the storm.",
+      "headline": "芝加哥停電還沒修好，高溫又來"
+    },
+    {
+      "date": "2026-07-29",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "The coaching vacancy the paper has covered only as chaos and limbo finally gets its answer — Boynton is introduced as head coach, the resolution phase after June's departure shock, 07-05's recruit-retention scare and 07-14's interim roster rebuild.",
+      "headline": "密西根籃球新教練博因頓正式上任"
+    },
+    {
+      "date": "2026-07-29",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The Vinicius Junior move dies before it starts — Madrid schedule renewal talks and Arsenal's record-breaking ambition collapses into a search for attainable alternatives like Kroupi, the pursuit-closing phase distinct from 07-26's target-identification splash.",
+      "headline": "兵工廠追維尼修斯落空，改找新前鋒"
     }
   ]
 }
