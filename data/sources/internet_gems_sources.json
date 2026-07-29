@@ -240,6 +240,16 @@
       "url": "https://www.ibiblio.org/",
       "type": "aggregator",
       "notes": "ibiblio is a UNC-Chapel Hill-hosted digital library and archive that has quietly hosted dozens of long-running solo passion projects (like the Lighthouse Directory) since the early web era — worth mining directly for more hidden gems."
+    },
+    {
+      "url": "https://viakarelia.fi/en/themes/military-history/",
+      "type": "aggregator",
+      "notes": "Regional tourism site covering Karelia/eastern Finland's military history sites (Salpa Line, WWII trenches, border museums) — useful for Finland 'hidden gems' or regional-character angles beyond Helsinki/Lapland."
+    },
+    {
+      "url": "https://www.fullmoonjam.org/schedule",
+      "type": "aggregator",
+      "notes": "Chicago Full Moon Jam's schedule page lists free monthly fire-performance and drum-circle gatherings at rotating Chicago beaches, timed to the lunar calendar — a recurring under-the-radar event series."
     }
   ]
 }
