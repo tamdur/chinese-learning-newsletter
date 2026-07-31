@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-30",
-      "rank": 1,
-      "topic_id": "business",
-      "topic": "AI-driven M&A",
-      "angle": "AI's transformation shows up as a structural reshaping of dealmaking itself — a record $2.4T in five months splitting into a megadeal-vs-tuck-in barbell, with data-center power demand driving a $119B utility merger.",
-      "headline": "人工智慧熱潮推動企業大併購"
-    },
-    {
-      "date": "2026-06-30",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "US-Iran war",
-      "angle": "After last week pivoted from ceasefire mechanics back to live US strikes, the story moves to a tense diplomatic track — Witkoff in Doha trying to save the deal while Iran publicly refuses to call it 'direct talks.'",
-      "headline": "美伊朗卡達會面　伊朗否認直接談判"
-    },
-    {
-      "date": "2026-06-30",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US housing policy",
-      "angle": "A rare bipartisan, generation-defining housing-supply bill becomes a political hostage — Trump withholds his signature to extract passage of the unrelated SAVE Act, a fresh US-governance standoff the paper hasn't run.",
-      "headline": "川普不簽住房法案　當作談判籌碼"
-    },
-    {
-      "date": "2026-06-30",
-      "rank": 4,
-      "topic_id": "world",
-      "topic": "South Africa xenophobia",
-      "angle": "A brand-new world story: vigilante 'deadline' politics forces over 13,000 foreigners to flee South Africa and puts the army on standby, with no legal order behind it — mob pressure as de facto immigration policy.",
-      "headline": "南非排外期限將到　上萬外國人逃離"
-    },
-    {
-      "date": "2026-06-30",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "Breaks a saturated Cubs run on the sports desk with a different team and a forward-looking angle — Ben Johnson's minicamp closes with second-year WR Luther Burden III tabbed to anchor a rebuilt, DJ Moore-less offense.",
-      "headline": "芝加哥熊隊看好新秀柏登"
-    },
-    {
-      "date": "2026-06-30",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The outgoing side of the rebuild, distinct from the week's run of incoming-bid stories (Alvarez, Guimaraes, Hincapie): 15 confirmed contract-expiry exits on June 30, including Women's captain Katie McCabe and Beth Mead.",
-      "headline": "兵工廠確認十五名球員離隊"
-    },
-    {
       "date": "2026-07-01",
       "rank": 1,
       "topic_id": "policy",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The manager's own voice replaces the rumour mill: Arteta publicly declares the champions' squad not good enough and promises imminent 'concrete moves', reframing a net-negative window (two in, three out) as deliberate patience — distinct from the week's target-identification and pursuit-collapse stories.",
       "headline": "阿爾特塔：兵工廠需要更好的球員"
+    },
+    {
+      "date": "2026-07-31",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "After two weeks in which the paper covered the AI trade only through its doubters — a chip rout, Apple dethroning Nvidia, Alphabet punished for capex, Treasury warning of a dot-com repeat — the ROI question gets its first hard affirmative answer from the income statement, in the largest single-day market-value gain any company has ever recorded.",
+      "headline": "微軟一天市值增加四千五百億美元，創股市紀錄"
+    },
+    {
+      "date": "2026-07-31",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Gaza governance",
+      "angle": "The governance vacuum the paper reported on July 7, when Hamas dissolved its own administrative body, now has a proposed filling — disarmament in exchange for phased withdrawal, a technocratic government and an international force — announced by Washington but confirmed by neither combatant and carrying no timeline.",
+      "headline": "川普宣布加薩協議，哈瑪斯交武器換以軍撤退"
+    },
+    {
+      "date": "2026-07-31",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Russia–Ukraine war",
+      "angle": "A new category of target rather than a new battlefield tally: Moscow destroys American corporate property inside Ukraine for the first time, testing whether US ownership carries any deterrent weight days after the Trump–Zelensky White House summit.",
+      "headline": "俄飛彈炸毀美國公司在基輔的無人機工廠"
+    },
+    {
+      "date": "2026-07-31",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago Lollapalooza",
+      "angle": "A doorstep story about municipal capacity, not culture: the city absorbs 115,000 people a day into Grant Park while pre-positioning emergency weather shelters and surging CTA and Metra service, one week after a storm-and-heat episode exposed how slowly Chicago recovers.",
+      "headline": "音樂節四天湧入五十萬人，芝加哥全城備戰"
+    },
+    {
+      "date": "2026-07-31",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The first time the paper covers the Bears as a public-finance question rather than a roster one: the board votes to advance an Indiana site backed by at least $1bn of that state's taxpayer money, after Illinois declined to compete and Pritzker conceded the team may leave.",
+      "headline": "熊隊新球場計畫轉向印第安納州"
+    },
+    {
+      "date": "2026-07-31",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The title defence is examined through availability rather than acquisition: with Saliba out for four to five months, Timber is now also in doubt for the opening fixture, leaving the champions' first-choice defence potentially unavailable on day one.",
+      "headline": "兵工廠線：提姆伯拚在開幕戰前復原"
     }
   ]
 }
