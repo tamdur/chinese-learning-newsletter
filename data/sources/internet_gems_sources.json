@@ -250,6 +250,11 @@
       "url": "https://www.fullmoonjam.org/schedule",
       "type": "aggregator",
       "notes": "Chicago Full Moon Jam's schedule page lists free monthly fire-performance and drum-circle gatherings at rotating Chicago beaches, timed to the lunar calendar — a recurring under-the-radar event series."
+    },
+    {
+      "url": "https://smallweb.cc/",
+      "type": "aggregator",
+      "notes": "Hand-curated collection of overlooked indie personal websites — homepages, blogs, niche creative projects. Actively accepts community submissions; good recurring hunting ground."
     }
   ]
 }
