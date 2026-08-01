@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-01",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "SCOTUS executive power",
-      "angle": "The birthright-citizenship case the paper flagged as imminent on 06-29 now lands as an actual 6-3 decision striking down Trump's order — the ruling itself and its reasoning, not the preview.",
-      "headline": "美最高法院：在美國出生就是公民"
-    },
-    {
-      "date": "2026-07-01",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US health policy",
-      "angle": "A never-covered health-policy shift: Medicare's first-ever coverage of GLP-1 weight-loss drugs takes effect today, opening these medicines to millions of seniors and reshaping federal drug-spending math.",
-      "headline": "美國老人保險今起給付減肥藥"
-    },
-    {
-      "date": "2026-07-01",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "Distinct from the 06-26 insurance-regime angle: Iran and Oman jointly moving to actually charge Hormuz transit fees over open US objection, with the two sponsors publicly split on whether the fees are voluntary or compulsory as the free-passage clock runs out.",
-      "headline": "伊朗阿曼要在海峽收過路費"
-    },
-    {
-      "date": "2026-07-01",
-      "rank": 4,
-      "topic_id": "world",
-      "topic": "Russia–Ukraine war",
-      "angle": "A brand-new topic for the recent ledger and a rare crack in the Kremlin's line: Putin himself admitting Ukrainian refinery strikes are causing domestic fuel shortages, with gas-station lines and fights surfacing publicly.",
-      "headline": "普丁承認俄國鬧油荒"
-    },
-    {
-      "date": "2026-07-01",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bulls",
-      "angle": "Breaks a saturated Cubs run with the Bulls' first moves of free agency — roster cuts, a Collins extension, and cap space aimed at Kuminga and Powell — distinct from the earlier draft-slot and draft-pick angles.",
-      "headline": "公牛隊自由市場開張忙補強"
-    },
-    {
-      "date": "2026-07-01",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The Hincapié deal, flagged 06-26 as 'made permanent,' becomes legally official and registered on July 1 with confirmed five-year contract terms — the completed signing standing alone against a week otherwise dominated by unresolved bids and rumor churn.",
-      "headline": "兵工廠正式簽下後衛伊卡佩"
-    },
-    {
       "date": "2026-07-02",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The title defence is examined through availability rather than acquisition: with Saliba out for four to five months, Timber is now also in doubt for the opening fixture, leaving the champions' first-choice defence potentially unavailable on day one.",
       "headline": "兵工廠線：提姆伯拚在開幕戰前復原"
+    },
+    {
+      "date": "2026-08-01",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Gaza governance",
+      "angle": "Yesterday the paper reported a Washington-announced framework that neither combatant had confirmed; today the missing confirmation arrives — Hamas itself accepts a specific disarmament mechanism for the first time, and attaches its own price (strike halt, yellow-line withdrawal, aid surge).",
+      "headline": "哈瑪斯首次同意交出武器"
+    },
+    {
+      "date": "2026-08-01",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "Chinese AI development",
+      "angle": "A budget tier beating its own maker's flagship on the same architecture — the frontier advancing through training technique rather than scale, and disclosed entirely through self-reported benchmarks no outside lab has yet reproduced; distinct from 07-17's Kimi K3 open-weight-scale angle and 07-25's Opus 5 pricing angle.",
+      "headline": "DeepSeek 便宜版模型打敗自家旗艦"
+    },
+    {
+      "date": "2026-08-01",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "Illinois technology policy",
+      "angle": "Illinois moves from regulating where children use screens (July's classroom phone ban) to regulating how the platforms are built — unanimous, first-in-the-nation design mandates on notifications, default privacy and in-app currency, with a two-year delay before they bite.",
+      "headline": "伊利諾州立法管社群媒體怎麼對待兒童"
+    },
+    {
+      "date": "2026-08-01",
+      "rank": 4,
+      "topic_id": "ideas",
+      "topic": "photonics research",
+      "angle": "A physics concept that existed only in theory and in atomic systems is built for the first time out of light itself — with the losses that blocked it halved, opening a practical path to terahertz lasers and optical computing.",
+      "headline": "全球第一個「光子時間晶體」誕生"
+    },
+    {
+      "date": "2026-08-01",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The deadline story shifts from posture to price: with 48 hours left, the specific arms Chicago is chasing are named and the front office signals willingness to trade a top prospect for controllable pitching — the cost of contending, not the fact of contending.",
+      "headline": "交易截止前兩天 小熊準備拿頂級新秀換投手"
+    },
+    {
+      "date": "2026-08-01",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Against a fortnight of failed marquee pursuits and injury bulletins, the club's actual completed business is a long-horizon scouting bet on two teenage brothers from South America's best academy who will not arrive until 2027.",
+      "headline": "兵工廠簽下厄瓜多雙胞胎 二〇二七年才報到"
     }
   ]
 }
