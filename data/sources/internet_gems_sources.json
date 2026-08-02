@@ -255,6 +255,11 @@
       "url": "https://smallweb.cc/",
       "type": "aggregator",
       "notes": "Hand-curated collection of overlooked indie personal websites — homepages, blogs, niche creative projects. Actively accepts community submissions; good recurring hunting ground."
+    },
+    {
+      "url": "https://www.chicagostylerollerderby.com/events",
+      "type": "aggregator",
+      "notes": "Official events/schedule page for Chicago-Style Roller Derby, an amateur flat-track league playing at venues in Roselle and Palatine, IL (Cook/DuPage suburbs) — a recurring source for under-the-radar amateur sports events in Chicago metro."
     }
   ]
 }
