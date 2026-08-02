@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-02",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Russia–Ukraine war",
-      "angle": "A sharp battlefield escalation with a NATO dimension — a mass strike on Kyiv killing at least eight and prompting Poland to scramble jets — distinct from 07-01's Russian-home-front fuel-shortage angle.",
-      "headline": "俄軍大舉空襲基輔，波蘭緊急派戰機"
-    },
-    {
-      "date": "2026-07-02",
-      "rank": 2,
-      "topic_id": "economics",
-      "topic": "North American trade policy",
-      "angle": "The 06-21 previewed USMCA six-year review now lands as an actual outcome — Greer declines to renew and shunts the pact into a decade of annual reviews — the decision itself, not the preview.",
-      "headline": "美國不再續簽美墨加貿易協定"
-    },
-    {
-      "date": "2026-07-02",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI labor impact",
-      "angle": "A macro sector-payroll lens — finance and information jobs shrinking ~28k/month in the occupations Stanford flags as AI-automatable, with bankers admitting role elimination — distinct from the earlier wage-premium and firm-concentration angles.",
-      "headline": "人工智慧衝擊職場，科技金融每月少兩萬多個工作"
-    },
-    {
-      "date": "2026-07-02",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Illinois policy",
-      "angle": "A doorstep round-up of the dozen-plus Illinois laws and the $56B FY2027 budget taking effect July 1 — a breadth-of-what-changed local angle distinct from the recent single-bill Illinois entries.",
-      "headline": "伊利諾多項新法七月一日上路"
-    },
-    {
-      "date": "2026-07-02",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "A forward-looking season preview — the 2026 schedule/theme-game reveal framed around the first year of the Kyle Whittingham era and a September 12 Oklahoma marquee — breaking a Cubs/Bulls-heavy desk with a topic unseen since 06-13.",
-      "headline": "密西根公布新賽季賽程，九月對戰奧克拉荷馬"
-    },
-    {
-      "date": "2026-07-02",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A tournament player-fitness angle — Rice's availability for England's World Cup last-32 tie — distinct from the fortnight of transfer-rumor churn and from the earlier Saka fitness story (a different player, at the knockout stage).",
-      "headline": "萊斯傷勢好轉，可望出戰世界盃"
-    },
-    {
       "date": "2026-07-03",
       "rank": 1,
       "topic_id": "economics",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "Against a fortnight of failed marquee pursuits and injury bulletins, the club's actual completed business is a long-horizon scouting bet on two teenage brothers from South America's best academy who will not arrive until 2027.",
       "headline": "兵工廠簽下厄瓜多雙胞胎 二〇二七年才報到"
+    },
+    {
+      "date": "2026-08-02",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI governance",
+      "angle": "AI regulation stops being a legislative debate and becomes an operating requirement — EU and California labeling mandates switch on the same day, the first synchronized transnational rules on disclosing AI-generated content.",
+      "headline": "歐盟與加州同日實施 AI 標示新規"
+    },
+    {
+      "date": "2026-08-02",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US–Iran war",
+      "angle": "The war opens a domestic front — a suspected Iran-linked intrusion into Michigan and Minnesota water utilities brings the conflict onto American soil and into civilian infrastructure.",
+      "headline": "密西根明尼蘇達水廠遭駭 FBI 查是否與伊朗有關"
+    },
+    {
+      "date": "2026-08-02",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US immigration policy",
+      "angle": "Immigration policy through the courtroom's due-process gap rather than enforcement: a lapsed contract leaves 26,000 unaccompanied children facing deportation hearings without lawyers.",
+      "headline": "聯邦合約到期 兩萬六千名移民兒童失去律師"
+    },
+    {
+      "date": "2026-08-02",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago transit",
+      "angle": "The doorstep price of the transit rescue arrives in the reader's own receipts — a quarter-point sales tax effective August 1 that funds NITA and makes Chicago's rate the highest of any major US city.",
+      "headline": "交通稅八月上路 芝加哥消費稅全美最高"
+    },
+    {
+      "date": "2026-08-02",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "A specific position battle rather than camp scene-setting: Amegadjie takes first-team left-tackle reps ahead of Braxton Jones with pads going on Monday.",
+      "headline": "熊隊左護鋒之爭開打 阿梅加吉搶下先發練習"
+    },
+    {
+      "date": "2026-08-02",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The month-long Guimaraes saga reaches an agreed fee and a booked medical — £70m plus £10m and a five-year deal — the deal-closing phase and the 'concrete move' Arteta promised on 07-30.",
+      "headline": "兵工廠八千萬英鎊談妥紐卡索隊長吉馬良斯"
     }
   ]
 }
