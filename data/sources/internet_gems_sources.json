@@ -260,6 +260,11 @@
       "url": "https://www.chicagostylerollerderby.com/events",
       "type": "aggregator",
       "notes": "Official events/schedule page for Chicago-Style Roller Derby, an amateur flat-track league playing at venues in Roselle and Palatine, IL (Cook/DuPage suburbs) — a recurring source for under-the-radar amateur sports events in Chicago metro."
+    },
+    {
+      "url": "https://amp.dascene.net/",
+      "type": "database",
+      "notes": "Volunteer-run demoscene music database (est. 1999) documenting Amiga tracker musicians and their groups/aliases — a rich vein for future 'hidden gem' stories about demoscene, chiptune, and cracking culture."
     }
   ]
 }
