@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-04",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "The long-running Iran story pivots from ceasefire/transit-fee mechanics to the domestic mourning dimension — a massive multi-day state funeral for the assassinated Supreme Leader that forces a formal pause in the denuclearization talks until July 9.",
-      "headline": "伊朗為遇害最高領袖辦國葬 美伊會談暫停"
-    },
-    {
-      "date": "2026-07-04",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI governance",
-      "angle": "Distinct from June's coercive governance moves: a cooperative voluntary release-standards framework nearing announcement, with labs actively courting Washington — OpenAI dangling a 5% equity stake.",
-      "headline": "白宮將訂AI新規則 大公司搶著配合"
-    },
-    {
-      "date": "2026-07-04",
-      "rank": 3,
-      "topic_id": "business",
-      "topic": "media megamergers",
-      "angle": "A fresh business/M&A angle the ledger hasn't run: the historic wave of media consolidation reaches a decision point as Paramount-Warner clears the DOJ and EU and faces a July 6 UK deadline, against the backdrop of Netflix's $83B WBD bid.",
-      "headline": "派拉蒙併購華納 英國成最後關卡"
-    },
-    {
-      "date": "2026-07-04",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "US data privacy policy",
-      "angle": "A fresh, never-covered US-governance/privacy angle: a state again setting the de facto national rules in a federal vacuum — Virginia banning the sale of precise location data and squeezing the data-broker industry.",
-      "headline": "維州禁賣定位資料 保護隱私"
-    },
-    {
-      "date": "2026-07-04",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bulls",
-      "angle": "The named free-agency target lands: distinct from the 07-01 'free agency opens, cap space aimed at Powell' and 07-03 'Vucevic leaves' angles, the Bulls actually sign Powell (2yr/$45M), completing the roster overhaul.",
-      "headline": "公牛簽下明星後衛鮑威爾 兩年四千五百萬"
-    },
-    {
-      "date": "2026-07-04",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A confirmed off-pitch structural move rather than another transfer rumor: De Maesschalck named Academy Director, succeeding club legend Mertesacker from August 1.",
-      "headline": "兵工廠青訓換帥 新總監八月上任"
-    },
-    {
       "date": "2026-07-05",
       "rank": 1,
       "topic_id": "ai",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The pursuit the paper declared dead on July 29 is alive again — and the story is the contradiction itself, with the club briefing optimism while the player's entourage flatly denies terms are agreed, a look at how transfer information is manufactured rather than another target announcement.",
       "headline": "兵工廠線：維尼修斯轉會，兩邊說法打架"
+    },
+    {
+      "date": "2026-08-04",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI safety",
+      "angle": "The autonomous-hacking disclosures move from engineering post-mortem and legislative reaction into the law itself — US computer-crime statutes presume a human perpetrator, leaving no settled answer to who is liable when a model breaks into a third party's systems on its own.",
+      "headline": "人工智慧自己闖進別人電腦，誰要負責？"
+    },
+    {
+      "date": "2026-08-04",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US trade policy",
+      "angle": "The tariff story becomes a constitutional-authority case rather than a rate announcement: states argue the administration is laundering tariffs the Supreme Court already struck down through a different statute and a forced-labor pretext.",
+      "headline": "二十五州告聯邦政府，指新關稅違法"
+    },
+    {
+      "date": "2026-08-04",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Japan defence policy",
+      "angle": "A brand-new topic for the paper: Japan's official defence document reframes rearmament as industrial and growth policy — weapons production as an economic engine — rather than only as a response to Chinese, Russian and North Korean threats.",
+      "headline": "日本防衛白皮書：造武器也能拚經濟"
+    },
+    {
+      "date": "2026-08-04",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago Public Schools finances",
+      "angle": "A separate and larger municipal balance sheet than the city's: CPS cannot make its September payroll without emergency short-term borrowing, and lenders have balked because the amended budget rests on $150m of state money that does not yet exist.",
+      "headline": "芝加哥公立學校缺錢，急借短期貸款發薪水"
+    },
+    {
+      "date": "2026-08-04",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "Yesterday the paper reported the Cubs beaten to the arm they wanted; today the deadline closes with three completed trades and a front-line starter in Gausman — the resolution of the month-long rotation hunt, and what it cost.",
+      "headline": "小熊隊交易大限連做三筆，補強先發投手"
+    },
+    {
+      "date": "2026-08-04",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The beat leaves the rumour mill for the pitch: the final pre-season friendly is the last look at how the champions' defence will actually line up on opening day, with Saliba absent and Timber unresolved.",
+      "headline": "兵工廠線：季前最後測試，都柏林對上貝提斯"
     }
   ]
 }
