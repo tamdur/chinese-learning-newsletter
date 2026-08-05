@@ -265,6 +265,21 @@
       "url": "https://amp.dascene.net/",
       "type": "database",
       "notes": "Volunteer-run demoscene music database (est. 1999) documenting Amiga tracker musicians and their groups/aliases — a rich vein for future 'hidden gem' stories about demoscene, chiptune, and cracking culture."
+    },
+    {
+      "url": "https://www.multitude.asia/archives/53",
+      "type": "archive/timeline",
+      "notes": "Multitude.asia's chronological archive of 黑手那卡西 (Black Hand Nakasi) albums, songs, and labor-movement collaborations from 1996 onward — primary resource for Taiwan's protest-music and workers' song tradition."
+    },
+    {
+      "url": "https://forwardchicago.org",
+      "type": "aggregator",
+      "notes": "Forward Chicago's site and its Sulzer Library Substack post monthly rundowns of under-the-radar Lincoln Square library programming, including the recurring Repair Cafe — good recurring source for small, free, hands-on community events."
+    },
+    {
+      "url": "https://www.curioustaxonomy.net/",
+      "type": "single-source gem",
+      "notes": "Solo-maintained (Mark Isaak) deep-dive catalog of unusual scientific species names, organized by etymology, puns, and wordplay. Revisitable via different sub-pages without repeating."
     }
   ]
 }
