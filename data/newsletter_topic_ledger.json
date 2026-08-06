@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-06",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI governance",
-      "angle": "The first US state to mandate independent third-party safety audits of frontier models — a hard-law, doorstep angle distinct from Colorado's 2026 comprehensive law and from the federal voluntary-standards push already logged this cycle.",
-      "headline": "伊利諾州簽署全美首例前沿AI安全法"
-    },
-    {
-      "date": "2026-07-06",
-      "rank": 2,
-      "topic_id": "economics",
-      "topic": "Federal Reserve monetary policy",
-      "angle": "A structural change in how the Fed communicates — Warsh kills forward guidance and dot-plots outright — distinct from his June debut, which was a routine hold decision.",
-      "headline": "聯準會新主席取消未來利率指引"
-    },
-    {
-      "date": "2026-07-06",
-      "rank": 3,
-      "topic_id": "business",
-      "topic": "AI hardware and capital markets",
-      "angle": "The AI boom shows up as a record-breaking capital event — the largest ADR sale ever, staged specifically to build high-bandwidth-memory capacity for AI chips — a business/markets angle the ledger hasn't run.",
-      "headline": "SK海力士赴美掛牌 規模創史上最大"
-    },
-    {
-      "date": "2026-07-06",
-      "rank": 4,
-      "topic_id": "world",
-      "topic": "China–Russia military cooperation",
-      "angle": "A fresh international topic breaking the paper's recent Iran/Ukraine monotony: a large joint China-Russia naval drill and Pacific patrol signalling deepening military coordination.",
-      "headline": "中俄啟動「海上聯合2026」軍演"
-    },
-    {
-      "date": "2026-07-06",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A season-arc / trade-deadline positioning lens — a 43-37 team seven back and facing an Aug 3 buyer-or-seller decision — distinct from this cycle's individual-feat, injury-attrition, MVP and new-acquisition Cubs angles.",
-      "headline": "小熊6比4擊敗紅雀 避免被橫掃"
-    },
-    {
-      "date": "2026-07-06",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The incoming replacement for the departed Trossard — a newly named, specific left-wing target (Tzolis) with a stated fee — distinct from yesterday's outgoing Trossard sale and the fortnight's other target churn.",
-      "headline": "兵工廠鎖定布魯日左路翼鋒佐利斯"
-    },
-    {
       "date": "2026-07-07",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "An outgoing transfer rather than an incoming one: a squad player who won a title medal from the bench is leaving after a single season, showing how Arsenal are clearing midfield wages - distinct from the Guimaraes fee saga, the Vinicius rumours and the Betis friendly preview.",
       "headline": "Christian Norgaard set to leave Arsenal for Everton in GBP 7m deal"
+    },
+    {
+      "date": "2026-08-06",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI talent and lab structure",
+      "angle": "Not a model, a market move or a safety incident but the human org chart of the frontier race: Google's foundational engineers walk out to build a company that automates research itself, while Alphabet simultaneously collapses AI decision-making up to Pichai and moves DeepMind's founder into a chairman's role.",
+      "headline": "谷歌功臣離職，創辦人工智慧新公司"
+    },
+    {
+      "date": "2026-08-06",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Strait of Hormuz oil shock",
+      "angle": "The reopening moves from Trump's assertion that a framework exists (Aug 3) to its actual negotiated terms and negotiators — Oman, a 60-day ceasefire and toll-free passage, the opposite of the US toll floated in July — while a Houthi strike on a Saudi tanker shows the deal would reopen one strait and leave another closed.",
+      "headline": "伊朗與阿曼將達成協議，荷莫茲海峽可望重開"
+    },
+    {
+      "date": "2026-08-06",
+      "rank": 3,
+      "topic_id": "business",
+      "topic": "logistics real-estate consolidation",
+      "angle": "A different industry and a different driver from the paper's recent merger coverage (media, then pharma): warehouse landlords consolidating because AI data centres are now competing for the same industrial land and power, with London losing another major listing.",
+      "headline": "普洛斯併購西格羅，成為全球最大倉庫房東"
+    },
+    {
+      "date": "2026-08-06",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago Public Schools finances",
+      "angle": "Tuesday's story was the accounting — CPS unable to make payroll without borrowing against state money that doesn't exist; today it becomes an open city-versus-state political rupture, with a named revenue alternative (a 3% millionaire surcharge) and a race-laced exchange between a sitting alderman and the governor's office.",
+      "headline": "芝加哥市議員槓上州長，為學校經費吵翻"
+    },
+    {
+      "date": "2026-08-06",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The new era stops being talk and starts being work: Whittingham's first actual practice, and his tempering of expectations by pointing at depth rather than at the roster's headline talent — distinct from July 30's Big Ten Media Days debut and July 24's naming of Underwood.",
+      "headline": "密西根大學開始秋季集訓，新教練點出隱憂"
+    },
+    {
+      "date": "2026-08-06",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The beat's first player-voice feature in weeks: the club-record signing explains how a failed Premier League spell at Norwich built the complete player Arsenal paid for — a development-and-character lens, not another fee, medical or target report.",
+      "headline": "兵工廠線：佐利斯說諾里奇讓他變得更完整"
     }
   ]
 }
