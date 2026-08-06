@@ -280,6 +280,11 @@
       "url": "https://www.curioustaxonomy.net/",
       "type": "single-source gem",
       "notes": "Solo-maintained (Mark Isaak) deep-dive catalog of unusual scientific species names, organized by etymology, puns, and wordplay. Revisitable via different sub-pages without repeating."
+    },
+    {
+      "url": "https://speculativeevolution.fandom.com/wiki/Speculative_Evolution",
+      "type": "aggregator",
+      "notes": "Fan-run wiki cataloguing dozens of amateur speculative-evolution/speculative-biology projects — a rich hunting ground of solo-creator passion projects similar in spirit to Serina."
     }
   ]
 }
