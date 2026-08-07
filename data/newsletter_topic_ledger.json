@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-07",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Gaza governance",
-      "angle": "A brand-new topic for the paper: Hamas voluntarily dissolves the body that has run Gaza, upending the post-war governance question rather than another battlefield or ceasefire-mechanics beat.",
-      "headline": "哈瑪斯宣布解散加薩管理機構"
-    },
-    {
-      "date": "2026-07-07",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI governance",
-      "angle": "The voluntary framework flagged on 07-04 as 'nearing announcement' becomes concrete and consequential — the first US attempt to gate a specific frontier model's (GPT-5.6) public release, not just a plan.",
-      "headline": "白宮新規把關 GPT-5.6 上市"
-    },
-    {
-      "date": "2026-07-07",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI model releases",
-      "angle": "Distinct from June's Gemini/GPT release-wave capability angles: a new Claude release paired with a competitive-business milestone — Anthropic reportedly overtaking OpenAI on revenue.",
-      "headline": "Anthropic 推出 Claude Sonnet 5 營收超車 OpenAI"
-    },
-    {
-      "date": "2026-07-07",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago flood infrastructure",
-      "angle": "A distinct infrastructure/climate-adaptation lens: the region's flagship Deep Tunnel/McCook drainage megaproject hitting capacity for the 6th time this year, testing the limits of a system built to be nearly failsafe.",
-      "headline": "芝加哥深隧道防洪 今年第六次快滿"
-    },
-    {
-      "date": "2026-07-07",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bulls",
-      "angle": "A developmental/forward-looking angle distinct from this cycle's free-agency churn: the Summer League roster reveal, new HC Splitter's first game July 10, and the debuts of draft picks Caleb Wilson and Dailyn Swain.",
-      "headline": "公牛隊夏季聯賽名單出爐 新教練七月十日首秀"
-    },
-    {
-      "date": "2026-07-07",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A captain-future / squad-stability angle (Odegaard quashing exit rumours) distinct from the fortnight of incoming-target and outgoing-sale transfer churn.",
-      "headline": "兵工廠線：厄德高否認轉會加拉塔薩雷"
-    },
-    {
       "date": "2026-07-08",
       "rank": 1,
       "topic_id": "ai",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The beat's first player-voice feature in weeks: the club-record signing explains how a failed Premier League spell at Norwich built the complete player Arsenal paid for — a development-and-character lens, not another fee, medical or target report.",
       "headline": "兵工廠線：佐利斯說諾里奇讓他變得更完整"
+    },
+    {
+      "date": "2026-08-07",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US immigration policy",
+      "angle": "After a Supreme Court defeat on birthright citizenship in June, the administration returns to the same target by a narrower route — visa denials and carve-outs rather than a frontal constitutional challenge — a citizenship-at-birth angle the paper has never run, distinct from August 2's unaccompanied-children legal-representation gap and July's enforcement, visa-duration and public-charge entries.",
+      "headline": "川普簽兩道命令限制出生公民權"
+    },
+    {
+      "date": "2026-08-07",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI safety",
+      "angle": "The recurring breach stories converge on a single common cause that is not a model at all: three separate labs have now been undone by the same misconfiguration at shared third-party evaluation vendors, shifting the safety question from 'can models escape?' to 'who is testing the testers?' — distinct from July 23's internal-sandbox escape, July 27's kill-switch bill, July 29's forensic reconstruction, July 30's Copilot worms and August 4's criminal-liability gap.",
+      "headline": "Meta 的 AI 測試出錯，入侵外部公司系統"
+    },
+    {
+      "date": "2026-08-07",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Yemen civil war",
+      "angle": "A thread the paper has never run: the Houthis turn from attacking ships to attacking armies, shattering a four-year land truce inside Yemen — the regional war flowing back into the conflict it came from, rather than another Red Sea shipping or Hormuz chokepoint story.",
+      "headline": "葉門停火破裂，青年運動攻擊政府軍"
+    },
+    {
+      "date": "2026-08-07",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Illinois tariff politics",
+      "angle": "The tariff story arrives at the reader's own kitchen table via the refund cheque: the Court struck the levies down and Treasury has now returned $100bn — all of it to corporations, none to the households that paid — which a governor is turning into a demand for $1,700 per family, a distribution-of-the-refund lens distinct from August 4's constitutional-authority lawsuit and July's rate-announcement coverage.",
+      "headline": "關稅退款只給企業，州長要求發錢給家庭"
+    },
+    {
+      "date": "2026-08-07",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "A player-voice recovery-and-ambition feature — Odunze declaring his surgically repaired foot sound and setting a 1,000-yard, 100-catch target in the camp's first heavy padded session — distinct from August 5's Bryant knee injury, August 2's left-tackle battle, July 31's Indiana stadium financing and July's position-group previews.",
+      "headline": "熊隊訓練營，歐頓齊說腳傷已經全好"
+    },
+    {
+      "date": "2026-08-07",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The window's biggest saga ends with a signature rather than a rumour — a six-year Madrid contract to 2032 vindicates the player's camp over Arsenal's briefings and leaves the champions with a left-wing hole and only days to fill it, the closure-and-consequence phase distinct from July 26's target identification, July 29's speculative collapse and August 3's duelling-narratives story.",
+      "headline": "維尼修斯續約留在皇馬，兵工廠落空"
     }
   ]
 }
