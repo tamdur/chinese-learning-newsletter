@@ -285,6 +285,11 @@
       "url": "https://speculativeevolution.fandom.com/wiki/Speculative_Evolution",
       "type": "aggregator",
       "notes": "Fan-run wiki cataloguing dozens of amateur speculative-evolution/speculative-biology projects — a rich hunting ground of solo-creator passion projects similar in spirit to Serina."
+    },
+    {
+      "url": "https://singleservingsites.cool/",
+      "type": "aggregator",
+      "notes": "Hand-curated directory of single-purpose, single-page websites (the term coined by Jason Kottke in 2008) — ranges from absurdist jokes to quietly profound projects like memento mori clocks and data art. Good recurring hunting ground for hidden-gem single-page sites."
     }
   ]
 }
