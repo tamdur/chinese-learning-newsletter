@@ -290,6 +290,21 @@
       "url": "https://singleservingsites.cool/",
       "type": "aggregator",
       "notes": "Hand-curated directory of single-purpose, single-page websites (the term coined by Jason Kottke in 2008) — ranges from absurdist jokes to quietly profound projects like memento mori clocks and data art. Good recurring hunting ground for hidden-gem single-page sites."
+    },
+    {
+      "url": "https://randomdailyurls.com/",
+      "type": "aggregator",
+      "notes": "Steven Irby's free daily newsletter — one interesting/weird/passion-project link per weekday, run by a solo internet builder. Good hunting ground for small-web maker projects, similar spirit to singleservingsites.cool but newsletter-format and personally curated."
+    },
+    {
+      "url": "https://blow.streetvoice.com/",
+      "type": "aggregator",
+      "notes": "Blow 吹音樂 (StreetVoice's editorial arm) — deep-dive Taiwanese artist interviews and an annual 'Best Taiwanese Albums' list; strong source for under-the-radar Taiwanese releases with critical context."
+    },
+    {
+      "url": "https://esperanto-chicago.org/events/",
+      "type": "aggregator",
+      "notes": "Event calendar for the Esperanto Society of Chicago (est. 1954) — recurring free 'Manĝu, Manĝu!' meetups at rotating Chicago bars/restaurants, plus picnics and an annual December Zamenhof banquet. Good recurring source for offbeat, open-to-anyone language/culture meetups."
     }
   ]
 }

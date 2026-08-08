@@ -3359,6 +3359,34 @@
       "headline": "你在看，數字才會走",
       "headline_en": "Since You Arrived, a real-time counter page that runs only while you watch",
       "topic": "real-time memento mori page"
+    },
+    {
+      "date": "2026-08-08",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "藏起來的鄉愁：搖滾樂裡的台北七個地方",
+      "headline_en": "COLD DEW's debut LP maps seven Taipei places onto Pai Hsien-yung's Taipei People",
+      "topic": "Taipei literary concept album"
+    },
+    {
+      "date": "2026-08-08",
+      "obsession_id": "finland-honeymoon",
+      "headline": "啄木鳥的咖啡：芬蘭樹上的戰時飲料",
+      "headline_en": "Chaga, the birch fungus Finns brewed as wartime coffee ersatz",
+      "topic": "chaga coffee substitute"
+    },
+    {
+      "date": "2026-08-08",
+      "obsession_id": "do-312",
+      "headline": "沒有祖國的語言：芝加哥的世界語之夜",
+      "headline_en": "Free Esperanto Society of Chicago meet-up in Lakeview on Aug 11",
+      "topic": "Esperanto meetup"
+    },
+    {
+      "date": "2026-08-08",
+      "obsession_id": "best-of-internet",
+      "headline": "開一台不存在的車：一個人的二十五個網站",
+      "headline_en": "Lofi Car, project 18 of Steven Irby's 25-sites-in-25-weeks challenge",
+      "topic": "solo maker web project"
     }
   ]
 }
