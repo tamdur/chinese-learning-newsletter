@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-08",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI governance",
-      "angle": "The AI-governance story goes global and multilateral for the first time — a new UN body that literally seats frontier-lab CEOs beside heads of state, distinct from the week's US state/federal mandates.",
-      "headline": "聯合國成立人工智慧委員會 科技老闆與各國領袖同桌"
-    },
-    {
-      "date": "2026-07-08",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "post-Assad Syria",
-      "angle": "A brand-new topic for the paper: the first European leader to visit post-Assad Syria is met by explosions, dramatizing Europe's risky bid to re-engage and rebuild.",
-      "headline": "馬克宏訪敘利亞 大馬士革爆炸傷十八人"
-    },
-    {
-      "date": "2026-07-08",
-      "rank": 3,
-      "topic_id": "economics",
-      "topic": "central bank monetary policy",
-      "angle": "A fresh economics decision showing the first macro dividend of the Iran ceasefire — a second straight Israeli rate cut driven by falling energy prices.",
-      "headline": "以色列再次降息 利率降到百分之三點五"
-    },
-    {
-      "date": "2026-07-08",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago city finances",
-      "angle": "A fresh local-fiscal fight distinct from June's pension-hole and parking-meter stories: a newly disclosed $131.7M mid-year gap that revives the corporate head-tax battle.",
-      "headline": "芝加哥年中短缺一億三千萬 企業稅之爭再起"
-    },
-    {
-      "date": "2026-07-08",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A specific new honor — PCA's second straight All-Star selection — a distinct milestone rather than the 07-06 team-arc/deadline framing.",
-      "headline": "小熊克羅阿姆斯壯 連兩年入選明星賽"
-    },
-    {
-      "date": "2026-07-08",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A confirmed incoming free signing at a new position — third-choice keeper Meslier — distinct from the week's attacker links and the Trossard sale.",
-      "headline": "兵工廠簽下門將梅利耶 補足守門陣容"
-    },
-    {
       "date": "2026-07-09",
       "rank": 1,
       "topic_id": "policy",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The window's biggest saga ends with a signature rather than a rumour — a six-year Madrid contract to 2032 vindicates the player's camp over Arsenal's briefings and leaves the champions with a left-wing hole and only days to fill it, the closure-and-consequence phase distinct from July 26's target identification, July 29's speculative collapse and August 3's duelling-narratives story.",
       "headline": "維尼修斯續約留在皇馬，兵工廠落空"
+    },
+    {
+      "date": "2026-08-08",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Strait of Hormuz oil shock",
+      "angle": "After a month in which the paper covered Hormuz only through closure declarations, blockades, tolls and oil prices, ships are actually crossing again — the physical reopening arriving before the diplomacy that is meant to authorise it, and still reversible.",
+      "headline": "荷姆茲海峽再現油輪，有望重新開放"
+    },
+    {
+      "date": "2026-08-08",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "COVID-19 origins investigation",
+      "angle": "The 30 July story was a chairman scheduling a contempt vote; today that vote passed 8-7 and was routed around the full Senate straight to the Justice Department, turning a hearing-room standoff into a live prosecution decision with precedent-setting stakes for the Fifth Amendment before Congress.",
+      "headline": "美參院委員會認定佛奇藐視國會"
+    },
+    {
+      "date": "2026-08-08",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Illinois regulatory oversight",
+      "angle": "A doorstep story about the machinery of state licensing rather than about crime or the city budget: operators already shut down once last year for mishandling about 100 bodies were still licensed to accumulate 57 more — a fresh Chicago thread distinct from the CPS-finance, tariff-refund and public-safety-data entries of the past week.",
+      "headline": "芝加哥殯儀館驚見五十七具遺體"
+    },
+    {
+      "date": "2026-08-08",
+      "rank": 4,
+      "topic_id": "business",
+      "topic": "US housing industry consolidation",
+      "angle": "A new industry and a new driver for the paper's merger coverage after media, pharma and warehouses: homebuilders are merging because high financing costs have made mid-sized builders unviable — consolidation as a symptom of the interest-rate story rather than of dealmaking appetite.",
+      "headline": "美國建商合併潮再添一樁"
+    },
+    {
+      "date": "2026-08-08",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bulls",
+      "angle": "The Bulls' first appearance in the paper in nearly a month, and a season-arc verdict rather than a game or a signing: the completed offseason under new EVP Bryson Graham reads as a deliberate refusal to tank — breaking a sports desk saturated by Bears camp and Cubs deadline coverage.",
+      "headline": "公牛隊補強，新球季不想再墊底"
+    },
+    {
+      "date": "2026-08-08",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Yesterday's Vinicius story was a target staying where he was; today a target Arsenal actively pursued is reinforcing a direct title rival — the window's cost measured in a competitor's gain rather than in Arsenal's own empty shirt.",
+      "headline": "兵工廠線：羅傑斯改投切爾西"
     }
   ]
 }
