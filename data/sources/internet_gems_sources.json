@@ -305,6 +305,11 @@
       "url": "https://esperanto-chicago.org/events/",
       "type": "aggregator",
       "notes": "Event calendar for the Esperanto Society of Chicago (est. 1954) — recurring free 'Manĝu, Manĝu!' meetups at rotating Chicago bars/restaurants, plus picnics and an annual December Zamenhof banquet. Good recurring source for offbeat, open-to-anyone language/culture meetups."
+    },
+    {
+      "url": "https://amber-fossils.com/",
+      "type": "single-source gem",
+      "notes": "Danish amber specialist's free one-person database: amber formation, archaeology of the amber trade, and extreme macro photography of insects and plants trapped in Baltic amber. No paywall, no shop."
     }
   ]
 }
