@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-09",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US–Iran war",
-      "angle": "The war the reader thought had ended reignites: ceasefire declared dead, Iran strikes US bases in Kuwait and Bahrain, and Trump openly defies Congress's War Powers resolution — a constitutional showdown, not just 'more strikes.'",
-      "headline": "美國再度空襲伊朗 川普宣布停火結束"
-    },
-    {
-      "date": "2026-07-09",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI model releases",
-      "angle": "The gated GPT-5.6 flagship finally reaches the public — and the story is the hardware: it runs at a record 750 tok/s on anti-Nvidia Cerebras wafer-scale silicon under a $20bn deal, a shift toward inference infrastructure, not just another model announcement.",
-      "headline": "OpenAI 開放新模型 速度創下紀錄"
-    },
-    {
-      "date": "2026-07-09",
-      "rank": 3,
-      "topic_id": "economics",
-      "topic": "global growth outlook",
-      "angle": "The war's price tag on the world economy, quantified: the IMF cuts 2026 global growth half a point to 3.0% while raising its inflation call to 4.7% — a fresh macro downgrade the paper hasn't run.",
-      "headline": "IMF 下修今年全球成長 歸咎伊朗戰爭"
-    },
-    {
-      "date": "2026-07-09",
-      "rank": 4,
-      "topic_id": "business",
-      "topic": "media megamergers",
-      "angle": "After the deal cleared federal regulators, the fight jumps to the states — a California-led AG coalition moves to block on antitrust grounds, a state-as-antitrust-backstop angle distinct from last week's DOJ/EU clearance.",
-      "headline": "好萊塢千億大合併 多州聯手出手擋"
-    },
-    {
-      "date": "2026-07-09",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan basketball",
-      "angle": "The championship team's pro dividend: eleven Wolverines hit NBA Summer League led by lottery pick Lendeborg's perfect-shooting debut — an alumni-showcase lens distinct from June's coaching-chaos and recruit-retention angles.",
-      "headline": "密西根球員發光 NBA 夏季聯賽"
-    },
-    {
-      "date": "2026-07-09",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The saga turns on player power: Guimaraes himself tells Newcastle he wants the move as Arsenal ready a third bid — a player-agitation beat distinct from June 28's club-side 'preparing to add' framing and the intervening Trossard/Meslier/Odegaard entries.",
-      "headline": "吉馬良斯想投奔兵工廠 阿森納準備再出價"
-    },
-    {
       "date": "2026-07-10",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "Yesterday's Vinicius story was a target staying where he was; today a target Arsenal actively pursued is reinforcing a direct title rival — the window's cost measured in a competitor's gain rather than in Arsenal's own empty shirt.",
       "headline": "兵工廠線：羅傑斯改投切爾西"
+    },
+    {
+      "date": "2026-08-09",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US Justice Department leadership",
+      "angle": "The paper's first story on who actually runs the Justice Department: a president's former personal defence lawyer confirmed attorney general by a single vote, and the specific price — Epstein-files concessions to one senator — that bought the majority.",
+      "headline": "布蘭奇以一票之差出任美國司法部長"
+    },
+    {
+      "date": "2026-08-09",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI safety",
+      "angle": "For the first time the labs' voluntary safety thresholds actually bind: OpenAI withholds a finished model because it crossed its own 'critical' cyber-offence tier — a self-restraint story, distinct from the ledger's run of breach post-mortems, the kill-switch bill and the criminal-liability gap.",
+      "headline": "網路攻擊能力太強，OpenAI 放慢新模型"
+    },
+    {
+      "date": "2026-08-09",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "China trade and exports",
+      "angle": "The AI boom shows up in the customs data: China's record surplus is being driven by a near-doubling of semiconductor exports, making the data-centre buildout — not consumer goods — the engine of the world's biggest trade imbalance.",
+      "headline": "晶片需求帶動，中國七月出口大增"
+    },
+    {
+      "date": "2026-08-09",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "US immigration policy",
+      "angle": "Yesterday's paper reported the executive orders; today the courts answer with a device the reader has not seen — the first nationwide class certification of all US-born children, the workaround plaintiffs are using now that the Supreme Court has curtailed universal injunctions.",
+      "headline": "法官擋下新命令，保護在美出生的孩子"
+    },
+    {
+      "date": "2026-08-09",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "A position group collapses rather than a single player going down: with a third safety lost, the Bears are signing free agents off the street mid-camp — a roster-construction crisis distinct from earlier injury bulletins and camp features.",
+      "headline": "安全衛接連受傷，熊隊急著補人"
+    },
+    {
+      "date": "2026-08-09",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The window closes and the ledger's two failures (Vinicius, Rogers) get their answer: the one marquee arrival is confirmed and signed, and the question becomes what a £75m holding midfielder — rather than the winger Arteta wanted — does to the champions' shape days from the Community Shield.",
+      "headline": "兵工廠七千五百萬英鎊簽下布魯諾"
     }
   ]
 }
