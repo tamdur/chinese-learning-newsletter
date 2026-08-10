@@ -310,6 +310,11 @@
       "url": "https://amber-fossils.com/",
       "type": "single-source gem",
       "notes": "Danish amber specialist's free one-person database: amber formation, archaeology of the amber trade, and extreme macro photography of insects and plants trapped in Baltic amber. No paywall, no shop."
+    },
+    {
+      "url": "https://cloudhiker.net/",
+      "type": "aggregator",
+      "notes": "Human-curated (no algorithm) random-website button with ~24,000-30,000 personal pages, obsessive archives and single-purpose oddities filed into 20 categories. Companion Substack 'Web Wanderings' (cloudhiker.substack.com) writes up standout finds."
     }
   ]
 }
