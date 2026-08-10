@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-10",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US trade policy",
-      "angle": "Trade policy weaponized for a foreign political end — a 50% tariff on a major economy tied openly to a foreign leader's prosecution, a sovereignty clash distinct from the USMCA-renewal trade coverage run earlier.",
-      "headline": "川普對巴西課五成關稅 只因波索納洛案"
-    },
-    {
-      "date": "2026-07-10",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI model releases",
-      "angle": "The frontier race tips into a price war — a coding-specialized model matching the leaders while undercutting them 60% on cost, a cost-competition lens distinct from June/July's capability-and-hardware release angles.",
-      "headline": "xAI 推出 Grok 4.5 主打便宜寫程式"
-    },
-    {
-      "date": "2026-07-10",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US government shutdown",
-      "angle": "A fresh US-governance thread the ledger hasn't run: the FY appropriations process collapses in the Senate — a canceled markup and a top-line standoff reviving fall shutdown fears.",
-      "headline": "參議院預算談判破局 恐再度政府停擺"
-    },
-    {
-      "date": "2026-07-10",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago immigration enforcement",
-      "angle": "The national deportation surge lands on the reader's doorstep — a neighborhood-by-neighborhood spike in Chicago ICE activity after Operation Midway Blitz ended, a local lens distinct from July's national arrest-tempo coverage.",
-      "headline": "芝加哥移民逮捕再增加 四社區傳查緝"
-    },
-    {
-      "date": "2026-07-10",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "Breaks a sports desk saturated with Cubs/Bulls/Michigan-basketball entries: a fresh Bears roster move — signing center Garrett Bradbury to protect the young QB — the beat's first personnel news since June minicamp.",
-      "headline": "熊隊補進中鋒布萊柏瑞 門票卻出包"
-    },
-    {
-      "date": "2026-07-10",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A confirmed women's-team double signing (Stanway and Cerci) reinforcing the reigning club champions — a completed-business, women's-side angle distinct from the fortnight of men's transfer-rumor churn.",
-      "headline": "兵工廠線：女足簽下史坦威與瑟琪"
-    },
-    {
       "date": "2026-07-11",
       "rank": 1,
       "topic_id": "policy",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The window closes and the ledger's two failures (Vinicius, Rogers) get their answer: the one marquee arrival is confirmed and signed, and the question becomes what a £75m holding midfielder — rather than the winger Arteta wanted — does to the champions' shape days from the Community Shield.",
       "headline": "兵工廠七千五百萬英鎊簽下布魯諾"
+    },
+    {
+      "date": "2026-08-10",
+      "rank": 1,
+      "topic_id": "economics",
+      "topic": "Strait of Hormuz oil shock",
+      "angle": "The reopening the paper reported on August 8 goes into reverse — Tehran refuses direct talks and a refinery strike reignites the squeeze — and for the first time the cost is measured not in tanker crossings but in American interest rates, with markets now pricing Fed hikes rather than cuts.",
+      "headline": "荷姆茲談判破局，油價漲破八十四美元"
+    },
+    {
+      "date": "2026-08-10",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Ethiopia Tigray conflict",
+      "angle": "A country of 130 million quietly slides back toward the civil war the world declared over in 2022 — a brand-new international thread for the paper that breaks a fortnight in which every world story ran through the Gulf.",
+      "headline": "提格雷再度開戰，衣索比亞和平協議動搖"
+    },
+    {
+      "date": "2026-08-10",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI and labour markets",
+      "angle": "A central bank finally puts numbers on the AI-jobs question and finds the displacement everyone argues about has not shown up in the data — an evidence lens the ledger's month of model releases, safety breaches, lab politics and market swings has never touched.",
+      "headline": "紐約聯準銀行研究：人工智慧改變徵人，沒造成失業潮"
+    },
+    {
+      "date": "2026-08-10",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "US separation of powers",
+      "angle": "A dispute over a ballroom becomes a clean constitutional question the paper has never run — whether a president can alter federal property without Congress — with the demolition already done and only a two-week stay standing between the ruling and the Supreme Court.",
+      "headline": "上訴法院：白宮宴會廳要國會同意才能蓋"
+    },
+    {
+      "date": "2026-08-10",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The deadline story finally becomes a baseball story: the rotation Chicago spent prospects to fix is producing — Gausman seven scoreless in his debut, Boyd to 8-1, an 18-hit rout — the on-field verdict on the front-office moves the paper covered on August 3 and 4.",
+      "headline": "小熊敲十八支安打，十比二大勝皇家"
+    },
+    {
+      "date": "2026-08-10",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The window's spending is judged by what happened on the pitch rather than by fees: the champions' last rehearsal before the Community Shield was undone by three teenagers, exposing the defence Arsenal spent the summer not reinforcing while the money went to midfield.",
+      "headline": "兵工廠線：多特蒙德三比二擊敗兵工廠"
     }
   ]
 }
