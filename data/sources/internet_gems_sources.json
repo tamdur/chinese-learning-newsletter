@@ -315,6 +315,11 @@
       "url": "https://cloudhiker.net/",
       "type": "aggregator",
       "notes": "Human-curated (no algorithm) random-website button with ~24,000-30,000 personal pages, obsessive archives and single-purpose oddities filed into 20 categories. Companion Substack 'Web Wanderings' (cloudhiker.substack.com) writes up standout finds."
+    },
+    {
+      "url": "https://www.aaroads.com/",
+      "type": "aggregator",
+      "notes": "Long-running solo-turned-community road/highway enthusiast site (founded 2000) with an exhaustive Shield Gallery of route marker designs plus a companion wiki (wiki.aaroads.com) — good hunting ground for future 'obsessive hobbyist archive' finds."
     }
   ]
 }
