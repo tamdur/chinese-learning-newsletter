@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-11",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US housing policy",
-      "angle": "The generation-defining housing bill the paper flagged on 06-30 as Trump's political hostage now actually becomes law — enacted at midnight without his signature or veto, the resolution of that standoff rather than the standoff itself.",
-      "headline": "美國住房大法案半夜生效　川普沒簽名"
-    },
-    {
-      "date": "2026-07-11",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Russia–Ukraine war",
-      "angle": "A weapons-production and NATO-summit diplomacy development — Washington authorizing Ukraine to build Patriots itself — distinct from this month's battlefield (07-02 Kyiv strike/Poland jets) and Russian-home-front (07-01 fuel shortage) angles.",
-      "headline": "川普同意烏克蘭自造愛國者飛彈"
-    },
-    {
-      "date": "2026-07-11",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US gun policy / Illinois assault weapons ban",
-      "angle": "A never-covered doorstep legal story: the 7th Circuit reinstates Illinois' Highland Park-era assault-weapons ban, teeing up the SCOTUS case the Court just agreed to hear.",
-      "headline": "上訴法院維持伊利諾州攻擊槍禁令"
-    },
-    {
-      "date": "2026-07-11",
-      "rank": 4,
-      "topic_id": "business",
-      "topic": "AI hardware and capital markets",
-      "angle": "The follow-through to 07-06's record-ADR listing: the deal is now consummated and the market's verdict is in — a 12.8% debut-day pop crowning the largest foreign IPO in US history, a first-day-result angle distinct from the earlier pricing/deal-announcement story.",
-      "headline": "SK海力士上市首日大漲近一成三"
-    },
-    {
-      "date": "2026-07-11",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bulls",
-      "angle": "The payoff to 07-07's Summer League roster-reveal preview: lottery pick Caleb Wilson's actual debut — a red-hot 7-for-11 from three in Splitter's first game — a concrete on-court performance rather than the roster announcement.",
-      "headline": "公牛新秀威爾森三分神準　球隊惜敗"
-    },
-    {
-      "date": "2026-07-11",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A teammate-versus-teammate World Cup quarterfinal — Odegaard's Norway against England's Arsenal contingent, with 10 Gunners in the last eight — a fresh tournament angle that breaks the fortnight of transfer-rumor churn and is distinct from the 06-16 squad-count and 07-02 Rice-fitness World Cup entries.",
-      "headline": "兵工廠線：世界盃八強隊友對決"
-    },
-    {
       "date": "2026-07-12",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The window's spending is judged by what happened on the pitch rather than by fees: the champions' last rehearsal before the Community Shield was undone by three teenagers, exposing the defence Arsenal spent the summer not reinforcing while the money went to midfield.",
       "headline": "兵工廠線：多特蒙德三比二擊敗兵工廠"
+    },
+    {
+      "date": "2026-08-11",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US vaccine policy",
+      "angle": "A brand-new topic for the paper: an executive order that does not argue about vaccines but rewrites the federal schedule itself — 18 diseases cut to 11, MMR split into three — turning a rhetorical fight into an administrative instruction that insurers and schools are legally tied to.",
+      "headline": "川普下令，兒童疫苗從十八種減到十一種"
+    },
+    {
+      "date": "2026-08-11",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI infrastructure",
+      "angle": "The compute crunch reaches a new class of landlord — a frontier lab signs a 20-year lease on a bitcoin miner's Texas power campus, showing that what labs are now buying is grid interconnection, not chips, and that crypto's stranded-energy estate is being converted into AI capacity.",
+      "headline": "人工智慧公司砸九十一億美元，租下比特幣礦場"
+    },
+    {
+      "date": "2026-08-11",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Colombia earthquake",
+      "angle": "A brand-new world story that breaks a fortnight in which almost every international entry ran through the Gulf: Colombia's strongest quake in a century, with the hospital wards that collapsed making the point that the casualty toll is a function of building stock rather than of magnitude.",
+      "headline": "哥倫比亞百年最強地震，一百三十二人死亡"
+    },
+    {
+      "date": "2026-08-11",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago extreme heat adaptation",
+      "angle": "The city's first Chicago entry in three issues, and an adaptation-policy lens rather than a disaster one: cooling capacity is being rationed by a Heat Vulnerability Index, with 13 of 20 extended pools placed in the most at-risk neighbourhoods — heat treated as a public-health inequality to be targeted, not a weather event to be endured.",
+      "headline": "芝加哥二十座泳池，延長開到勞動節"
+    },
+    {
+      "date": "2026-08-11",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "An individual-awards lens rather than a team result: PCA overtakes Ohtani as NL MVP frontrunner on a case built substantially on centre-field defence, distinct from August 10's 'the new rotation is producing' game story and from July's All-Star, 20-20 and Statcast-catch milestones.",
+      "headline": "小熊外野手超越大谷，成最有價值球員大熱門"
+    },
+    {
+      "date": "2026-08-11",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A definitive prognosis rather than a match report or a fee: surgery is avoided but both first-choice defenders are formally ruled out of the Community Shield and probably the opener, converting the summer's unaddressed defensive gap into a named, dated availability problem — distinct from August 10's Dortmund-defeat post-mortem and July 21's 'four-to-five months, possibly surgical' scare.",
+      "headline": "兵工廠兩大後衛受傷，錯過社區盾杯"
     }
   ]
 }
