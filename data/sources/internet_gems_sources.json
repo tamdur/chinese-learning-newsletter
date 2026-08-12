@@ -320,6 +320,11 @@
       "url": "https://www.aaroads.com/",
       "type": "aggregator",
       "notes": "Long-running solo-turned-community road/highway enthusiast site (founded 2000) with an exhaustive Shield Gallery of route marker designs plus a companion wiki (wiki.aaroads.com) — good hunting ground for future 'obsessive hobbyist archive' finds."
+    },
+    {
+      "url": "https://blog.wfmu.org/freeform/",
+      "type": "archive_blog",
+      "notes": "WFMU's long-running freeform-radio blog (Beware of the Blog) — DJ-written deep dives on obscure music, ephemera, and the '365 Days Project' daily-rarity archive. Good recurring well for music/audio-history hidden gems."
     }
   ]
 }
