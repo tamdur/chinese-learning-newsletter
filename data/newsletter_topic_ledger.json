@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-12",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "The war widens into a regional Gulf conflict — a US third strike wave on ~140 targets triggered by a Hormuz tanker attack draws Qatar and the UAE into Iran's retaliation for the first time, with civilian injuries, distinct from 07-09's US-bases/constitutional-showdown framing.",
-      "headline": "美國三度空襲伊朗，波斯灣捲入戰火"
-    },
-    {
-      "date": "2026-07-12",
-      "rank": 2,
-      "topic_id": "economics",
-      "topic": "Strait of Hormuz oil shock",
-      "angle": "The war's economic chokepoint arrives — no large tanker has crossed Hormuz since fighting resumed, Brent swings >5%, and the IEA warns of a ~14M bbl/day shortfall — a global-oil-supply lens distinct from the strikes themselves and the 07-09 IMF growth downgrade.",
-      "headline": "荷姆茲海峽停運，全球油價震盪"
-    },
-    {
-      "date": "2026-07-12",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "Lindsey Graham death",
-      "angle": "A sitting, high-profile US senator's sudden death — Graham dies at 71 days after a Kyiv trip meeting Zelensky, opening a South Carolina succession fight mid-re-election-campaign.",
-      "headline": "美國參議員葛瑞姆病逝，享年七十一歲"
-    },
-    {
-      "date": "2026-07-12",
-      "rank": 4,
-      "topic_id": "ai",
-      "topic": "Apple–OpenAI legal dispute",
-      "angle": "The AI race spills into court — Apple sues OpenAI for systematic trade-secret theft centered on poached ex-Apple hardware execs, as former ChatGPT-Siri partners rupture over OpenAI's $6.4bn push into consumer hardware.",
-      "headline": "蘋果控告OpenAI偷商業機密"
-    },
-    {
-      "date": "2026-07-12",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "An offseason recruiting win — Michigan lands four-star OL Lincoln Mageo for a 2027 class ranked among the nation's best — a Michigan-football beat unseen since the 07-02 schedule reveal, breaking a Cubs/Bulls/Bears-heavy desk.",
-      "headline": "密西根美式足球簽下四星新秀馬吉歐"
-    },
-    {
-      "date": "2026-07-12",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The Tzolis pursuit flagged 07-06 as a mere target advances to a near-done club-record ~£35m deal — the largest fee ever for a Greek player — the confirmed-signing phase, distinct from the initial target-identification.",
-      "headline": "阿森納將破隊史紀錄簽下佐利斯"
-    },
-    {
       "date": "2026-07-13",
       "rank": 1,
       "topic_id": "economics",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "A definitive prognosis rather than a match report or a fee: surgery is avoided but both first-choice defenders are formally ruled out of the Community Shield and probably the opener, converting the summer's unaddressed defensive gap into a named, dated availability problem — distinct from August 10's Dortmund-defeat post-mortem and July 21's 'four-to-five months, possibly surgical' scare.",
       "headline": "兵工廠兩大後衛受傷，錯過社區盾杯"
+    },
+    {
+      "date": "2026-08-12",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "The financing structure of the AI buildout, not its price or its power supply: compute is being securitised into a borrowable asset class, pushing the risk of an AI bust out of tech balance sheets and into private credit and asset managers.",
+      "headline": "輝達拉來六大金主 籌五千億美元建AI機房"
+    },
+    {
+      "date": "2026-08-12",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Turkey–PKK peace process",
+      "angle": "A brand-new international thread for the paper: a 468-88 parliamentary vote converts a four-decade insurgency into a legal disarmament-for-pardon mechanism, and the PKK's immediate rejection of its terms shows the deal is legislated but not agreed.",
+      "headline": "土耳其國會通過特赦 庫德武裝團體不買帳"
+    },
+    {
+      "date": "2026-08-12",
+      "rank": 3,
+      "topic_id": "business",
+      "topic": "media megamergers",
+      "angle": "The merger fight escalates from courtrooms to corporate hostage-taking: the acquirer threatens to relocate out of California entirely unless the state drops its antitrust suit, with a $7m-a-day penalty clock forcing the deadline.",
+      "headline": "派拉蒙嗆搬離加州 州檢察長批勒索"
+    },
+    {
+      "date": "2026-08-12",
+      "rank": 4,
+      "topic_id": "ideas",
+      "topic": "solar eclipse",
+      "angle": "A back-page science pick with a same-day hook and no precedent in the ledger: the first total solar eclipse over mainland Spain in 121 years, arriving at sunset and beginning an unusually tight three-eclipse sequence for one country.",
+      "headline": "日全食今掃過冰島與西班牙 已等一百二十一年"
+    },
+    {
+      "date": "2026-08-12",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The worry Whittingham named when camp opened is easing: five practices in, the offensive line is outperforming his own warning, the left tackle job is a three-man fight, and a non-headline receiver emerges as the staff's first breakout endorsement — an evaluation angle, not another camp-opening scene-setter.",
+      "headline": "密大教頭改口 誇進攻線比預期好"
+    },
+    {
+      "date": "2026-08-12",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Yesterday's injury bulletin becomes a spending decision: with both first-choice centre-backs out, Arsenal's remaining window budget is being redirected from the winger Arteta chased all summer to centre-backs — including Tottenham's captain — after €167.5m already spent.",
+      "headline": "兵工廠線：後衛倒一片 阿爾特塔改買中後衛"
     }
   ]
 }
