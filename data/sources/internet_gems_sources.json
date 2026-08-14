@@ -325,6 +325,16 @@
       "url": "https://blog.wfmu.org/freeform/",
       "type": "archive_blog",
       "notes": "WFMU's long-running freeform-radio blog (Beware of the Blog) — DJ-written deep dives on obscure music, ephemera, and the '365 Days Project' daily-rarity archive. Good recurring well for music/audio-history hidden gems."
+    },
+    {
+      "url": "https://aberrant-records.com",
+      "type": "label/reissue",
+      "notes": "Reissue label specializing in obscure Asian disco/funk/soul 45s from the 70s-80s, including dedicated Taiwan and pan-Asian disco compilations sourced from original vinyl. Good hunting ground for pre-CD-era Taiwanese pop that rarely surfaces elsewhere."
+    },
+    {
+      "url": "https://oulu2026.eu/en/oulu-the-worlds-tar-capital/",
+      "type": "article",
+      "notes": "Oulu2026 European Capital of Culture site's history section - good for offbeat economic-history angles on Finnish regional cities beyond Helsinki/Lapland."
     }
   ]
 }
