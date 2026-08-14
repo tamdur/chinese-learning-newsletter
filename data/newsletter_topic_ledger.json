@@ -1,102 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-13",
-      "rank": 1,
-      "topic_id": "economics",
-      "topic": "US trade policy",
-      "angle": "Shifts the trade-war story from foreign-policy leverage (07-10 Brazil sovereignty clash) to the aggregate fiscal magnitude at home — a specific new 30% Mexico rate that pushes the cumulative tariff program to the largest US tax increase since 1993.",
-      "headline": "美國對墨西哥加稅 八月一日開始"
-    },
-    {
-      "date": "2026-07-13",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Strait of Hormuz oil shock",
-      "angle": "Distinct from 07-12's de-facto-shutdown/price-swing lens: Iran now FORMALLY declares Hormuz closed while US CENTCOM openly disputes it — a contested-closure information war over the chokepoint, with traffic down to six crossings and Brent at $79.",
-      "headline": "伊朗宣布關閉荷姆茲海峽 油價大漲"
-    },
-    {
-      "date": "2026-07-13",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI investment boom",
-      "angle": "A fresh sustainability lens the paper hasn't run recently: reframes the AI-bubble question around ENERGY as the true bottleneck (not demand or chips), with concrete evidence of years-ahead component sellouts — distinct from June/July's model-release, governance and lawsuit coverage.",
-      "headline": "AI需求「幾乎無限」 電力成最大難關"
-    },
-    {
-      "date": "2026-07-13",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago community recognition",
-      "angle": "A fresh doorstep local story distinct from recent Chicago coverage (ICE, city finances, flooding): a suburban Palestinian-American community wins formal recognition after alleged political interference delayed the signs.",
-      "headline": "芝加哥郊區立起「小巴勒斯坦路」路牌"
-    },
-    {
-      "date": "2026-07-13",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A pitching-attrition-driven deadline-strategy angle distinct from 07-06's general buyer-or-seller framing and 07-08's PCA All-Star honor: six injured starters force the Cubs into an aggressive arms hunt before Aug 3.",
-      "headline": "小熊隊投手鬧傷兵 交易大限前急找幫手"
-    },
-    {
-      "date": "2026-07-13",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Advances the Guimaraes saga from 07-09's player-agitation angle to the selling-club-resistance phase — Newcastle 'flabbergasted' and rejecting two concrete bids (£55m, £65m) — a negotiation-standoff lens rather than a reprint of 'player wants out.'",
-      "headline": "兵工廠爭搶紐卡隊長 轉會陷入僵局"
-    },
-    {
-      "date": "2026-07-14",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI investment boom",
-      "angle": "The AI-bubble question moves from think-pieces into the equity markets themselves: a genuine chip-sector rout as investors reprice AI-infrastructure ROI doubt, colliding with Iran-driven oil inflation — distinct from 07-13's energy-bottleneck framing and July's model-release/lawsuit coverage.",
-      "headline": "人工智慧股大跌，油價也上漲"
-    },
-    {
-      "date": "2026-07-14",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "The US flips from defending free passage to running its own naval blockade of Hormuz and floating a 20% cargo toll — the superpower militarily controlling and monetizing the chokepoint, distinct from Iran's own closure declarations and the earlier strike-wave and constitutional-showdown angles.",
-      "headline": "美國封鎖荷莫茲海峽並收費"
-    },
-    {
-      "date": "2026-07-14",
-      "rank": 3,
-      "topic_id": "ideas",
-      "topic": "neuroscience and AI",
-      "angle": "A fresh science-and-ideas pick tying a neuroscience result to the AI beat: decision signals emerge in sensory cortex earlier than assumed, challenging the feedforward assumption underlying today's ML architectures — distinct from recent ideas picks (synthetic cell, H5N1).",
-      "headline": "大腦做決定比想像中更早"
-    },
-    {
-      "date": "2026-07-14",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago homelessness policy",
-      "angle": "A doorstep local story distinct from recent Chicago coverage (Palestinian-road recognition, ICE, city finances): federal retreat from Permanent Supportive Housing threatens 3,000+ chronically homeless Chicagoans, a national-policy cut with a direct local human toll.",
-      "headline": "芝加哥住房補助恐被砍"
-    },
-    {
-      "date": "2026-07-14",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan basketball",
-      "angle": "A roster-construction angle — key returners locked in while others enter the portal — showing how the post-departure interim staff is rebuilding, distinct from July's Summer League alumni-showcase and June's coaching-chaos/recruit-retention angles.",
-      "headline": "密西根籃球隊換人重組陣容"
-    },
-    {
-      "date": "2026-07-14",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A collapsed pursuit forces a strategic pivot: with the Barcola deal dead, Arsenal throw their full attacking budget behind Atletico's Alvarez (£90m vs £100m gap) — a distinct attacker-pursuit development from 07-13's Guimaraes midfield standoff and 07-12's Tzolis signing.",
-      "headline": "阿森納改追前鋒阿爾瓦雷斯"
-    },
-    {
       "date": "2026-07-15",
       "rank": 1,
       "topic_id": "ai",
@@ -1487,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "Yesterday's injury bulletin becomes a spending decision: with both first-choice centre-backs out, Arsenal's remaining window budget is being redirected from the winger Arteta chased all summer to centre-backs — including Tottenham's captain — after €167.5m already spent.",
       "headline": "兵工廠線：後衛倒一片 阿爾特塔改買中後衛"
+    },
+    {
+      "date": "2026-08-14",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI safety",
+      "angle": "Five days after the paper reported OpenAI withholding a model for crossing its own critical cyber-offence threshold, the lab does the opposite - shipping a deliberately less-refusing offensive-security model to vetted customers, which has already found two live Chrome zero-days - turning containment into gatekeeping and making the screening process, not the model, the safety mechanism.",
+      "headline": "OpenAI 推出資安模型，只開放給通過審查的客戶"
+    },
+    {
+      "date": "2026-08-14",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Russia-Ukraine war",
+      "angle": "The deep-strike campaign is no longer occasional or symbolic - four strikes in three days, the newest 800 miles inside Russia at a refinery near the Urals, showing Ukraine has turned refining capacity into a systematically bombarded industrial front rather than a headline-grabbing raid.",
+      "headline": "烏克蘭無人機深入八百英里，炸俄國大煉油廠"
+    },
+    {
+      "date": "2026-08-14",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "Strait of Hormuz oil shock",
+      "angle": "The war premium has drained out of the market - Iran attacked two Emirati tankers in the strait and oil still fell more than 2% while US equities hit a record, an inversion of the 10 August story in which the same conflict was pushing crude and American interest rates up.",
+      "headline": "美股創新高，油價反而下跌"
+    },
+    {
+      "date": "2026-08-14",
+      "rank": 4,
+      "topic_id": "ai",
+      "topic": "Chinese AI development",
+      "angle": "The cheap-Chinese-AI story reverses: the company that built its name on undercutting Western labs is now raising API prices and rationing by peak and off-peak hours, conceding that compute costs bind it too - an economics-of-inference angle distinct from the 1 August benchmark-beating-budget-model story.",
+      "headline": "DeepSeek 推出新模型，同時大幅漲價"
+    },
+    {
+      "date": "2026-08-14",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The first real preseason-usage decision of the Bears' year: a defending division champion holds its franchise quarterback out of Saturday's opener entirely and hands the game to Tyson Bagent - a risk-management choice, not another injury bulletin or position battle.",
+      "headline": "熊隊季前賽首戰，威廉斯不上場"
+    },
+    {
+      "date": "2026-08-14",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The summer's injuries and transfer misses finally become a starting eleven: with Saliba and Timber doubtful and Rice and Saka expected to be rested after the World Cup, Arteta faces Manchester City in Saturday's Community Shield with Mosquera and Ben White at centre-back and Madueke and Zubimendi promoted - a selection-and-fixture lens, not another injury prognosis or transfer target.",
+      "headline": "兵工廠對曼城，社區盾為新球季揭幕"
     }
   ]
 }
