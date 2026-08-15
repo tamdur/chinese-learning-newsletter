@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-15",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI chip export controls",
-      "angle": "A fresh AI-geopolitics lens distinct from July's model-release, energy-bottleneck and stock-rout coverage: the enforcement mechanism itself, with Nvidia policing its own customers via on-site inspectors as export controls are outsourced to the vendor.",
-      "headline": "輝達砍半亞洲買家名單，防晶片流入中國"
-    },
-    {
-      "date": "2026-07-15",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "US campaign against the ICC",
-      "angle": "A brand-new international-institutions story for the paper: a named US whole-of-government campaign to disable the ICC via sanctions and visa bans, drawing an unusually sharp EU rebuke.",
-      "headline": "美國要「拆掉」國際刑事法院，歐盟批不能接受"
-    },
-    {
-      "date": "2026-07-15",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US immigration enforcement",
-      "angle": "A retreat, not a surge: after weeks of arrest-tempo and Chicago-raid coverage, ICE halts a core enforcement tactic following two fatal shootings — the enforcement machine pulling back under its own pressure.",
-      "headline": "一週內兩人被擊斃，美國移民局暫停攔車抓人"
-    },
-    {
-      "date": "2026-07-15",
-      "rank": 4,
-      "topic_id": "ideas",
-      "topic": "climate carbon feedback",
-      "angle": "A rare 37-year empirical result that overturns a modeling assumption in the reader's own field — deep soil carbon, long treated as protected, is being released by microbes under sustained warming, implying a stronger feedback than models assume.",
-      "headline": "37年土壤實驗發現，深層碳被釋放恐加速暖化"
-    },
-    {
-      "date": "2026-07-15",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A season-arc turnaround into playoff position — a team that was seven back and sub-.500 in early July now holds a Wild Card lead and enters clear buyer mode — distinct from 07-13's injury-driven arms-hunt and 07-08's All-Star honor.",
-      "headline": "小熊爬上外卡龍頭，交易大限前轉為買家"
-    },
-    {
-      "date": "2026-07-15",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A player-fitness scare, not transfer churn: first-choice CB Saliba limps out of France's World Cup semi-final with a back injury and possible surgery — distinct from the fortnight of Alvarez/Guimaraes/Tzolis transfer coverage.",
-      "headline": "薩利巴背傷退場，兵工廠後防拉警報"
-    },
-    {
       "date": "2026-07-16",
       "rank": 1,
       "topic_id": "policy",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The summer's injuries and transfer misses finally become a starting eleven: with Saliba and Timber doubtful and Rice and Saka expected to be rested after the World Cup, Arteta faces Manchester City in Saturday's Community Shield with Mosquera and Ben White at centre-back and Madueke and Zubimendi promoted - a selection-and-fixture lens, not another injury prognosis or transfer target.",
       "headline": "兵工廠對曼城，社區盾為新球季揭幕"
+    },
+    {
+      "date": "2026-08-15",
+      "rank": 1,
+      "topic_id": "economics",
+      "topic": "US economic slowdown",
+      "angle": "The summer's macro story finally shows up in the household ledger rather than in oil prices or Fed statements — July retail sales post their worst month in over a year and August sentiment drops about 8%, meaning the squeeze the paper has tracked through Hormuz and the bond market has now reached what Americans actually spend.",
+      "headline": "美國七月零售銷售大跌，消費信心跟著下滑"
+    },
+    {
+      "date": "2026-08-15",
+      "rank": 2,
+      "topic_id": "business",
+      "topic": "AI investment boom",
+      "angle": "Three days after the paper described AI compute being securitised into a new asset class, the market prices the downside for the first time — a bank puts a $370bn debt number on one company's off-balance-sheet AI vehicle and its shares fall 5-6% with a downgrade, turning a financing innovation into a credit problem.",
+      "headline": "博通股價重挫，人工智慧的借錢模式引發擔心"
+    },
+    {
+      "date": "2026-08-15",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US–Iran war",
+      "angle": "The war measured in sailors rather than in barrels or missiles — a 240-day unbroken carrier deployment produces mouldy water, a mental-health crisis and a public rebuke from the president, the first time the paper covers the Iran campaign as a question of military sustainability and human cost.",
+      "headline": "林肯號官兵家屬喊苦，川普說時間還不夠長"
+    },
+    {
+      "date": "2026-08-15",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Illinois disaster and flood policy",
+      "angle": "Illinois starts paying for its own disasters: with a record 200-plus tornadoes this year and federal aid requests rejected, the state routes flood-repair money through two neighbourhood home-equity programmes — adaptation financed locally because Washington declined, distinct from 11 August's heat-vulnerability rationing story.",
+      "headline": "伊利諾州自己出錢救水災，今年龍捲風破紀錄"
+    },
+    {
+      "date": "2026-08-15",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The Cubs' pitching problem moves from the rotation to the bullpen: on the same night a deadline starter delivers a home shutout, a key reliever is lost for the season to a torn patellar tendon — a bullpen-attrition angle distinct from 10 August's 'the new rotation is producing' rout and 11 August's PCA MVP case.",
+      "headline": "小熊三比零完封紅雀，後援投手梅頓恐報銷"
+    },
+    {
+      "date": "2026-08-15",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Arteta closes the door the paper reported he was opening: with only three fit senior centre-backs and Timber now weeks rather than days away, the manager rules out an emergency defensive signing — the summer's unfilled defensive gap will be lived with, not bought out, reversing 12 August's 'budget redirected to centre-backs' story.",
+      "headline": "兵工廠線：中後衛只剩三人，阿爾特塔不急著補人"
     }
   ]
 }
