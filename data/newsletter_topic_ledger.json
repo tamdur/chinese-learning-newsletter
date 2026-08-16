@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-16",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US election security",
-      "angle": "A brand-new US-governance story for the paper: a president using a primetime address and declassified intelligence to allege foreign election interference and machine vulnerabilities, which watchdogs warn revives debunked 2020 claims ahead of the midterms.",
-      "headline": "川普黃金時段演講　談選舉安全"
-    },
-    {
-      "date": "2026-07-16",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI model releases",
-      "angle": "An on-device efficiency milestone distinct from July's cloud-scale release, inference-hardware, cost-war and export-control angles: a 27B-class model now runs locally on a phone, pushing frontier-adjacent AI to the edge and outside any central control point.",
-      "headline": "手機就能跑的大型AI　新模型登場"
-    },
-    {
-      "date": "2026-07-16",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "post-Brexit EU-UK relations",
-      "angle": "A brand-new world story that breaks the week's Iran/Hormuz monotony: a historic EU-UK treaty physically dismantles the Gibraltar-Spain frontier and folds Gibraltar into Schengen, resolving one of Brexit's last unsettled loose ends.",
-      "headline": "直布羅陀拆邊界圍籬　併入申根區"
-    },
-    {
-      "date": "2026-07-16",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago development subsidies",
-      "angle": "A fresh doorstep local story distinct from recent Chicago coverage (homelessness cuts, Little Palestine, ICE): the Council commits $424M in public TIF money to infrastructure for a privately owned Fire stadium at The 78, reopening the public-subsidy-for-private-venues debate amid a budget gap.",
-      "headline": "芝加哥撥四億美元　建球場周邊設施"
-    },
-    {
-      "date": "2026-07-16",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A specific individual statistical milestone — PCA joining the 20-20 club (20 HR, 20 SB) as one of the youngest ever — distinct from 07-08's All-Star selection and 07-15's team buyer-mode angle.",
-      "headline": "小熊克羅阿姆斯壯　加入二十／二十俱樂部"
-    },
-    {
-      "date": "2026-07-16",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A newly named transfer target at a fresh position — winger Antonio Nusa to fill the Trossard-shaped gap on the flank — distinct from this fortnight's striker (Alvarez) and midfield (Guimaraes/Tzolis) pursuits and from yesterday's Saliba injury.",
-      "headline": "兵工廠鎖定努薩　備妥四千萬歐元"
-    },
-    {
       "date": "2026-07-17",
       "rank": 1,
       "topic_id": "ai",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "Arteta closes the door the paper reported he was opening: with only three fit senior centre-backs and Timber now weeks rather than days away, the manager rules out an emergency defensive signing — the summer's unfilled defensive gap will be lived with, not bought out, reversing 12 August's 'budget redirected to centre-backs' story.",
       "headline": "兵工廠線：中後衛只剩三人，阿爾特塔不急著補人"
+    },
+    {
+      "date": "2026-08-16",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "The ceasefire architecture is unravelling on a second, land front — the deadliest Israeli strikes in Lebanon since June's Hezbollah truce — rather than at the Gulf chokepoint the paper has covered all month through oil prices, tanker crossings and carrier crews.",
+      "headline": "以色列空襲黎巴嫩，十一人死亡"
+    },
+    {
+      "date": "2026-08-16",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI commercial adoption",
+      "angle": "The bubble argument gets tested from the demand side for once — actual enterprise revenue tripling in eight months and $1m-plus customers doubling in under two months — an income-statement lens the ledger's month of capex, securitisation and credit-risk stories never touched.",
+      "headline": "產業報告：Anthropic 年營收增為三倍"
+    },
+    {
+      "date": "2026-08-16",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "Democratic Party politics",
+      "angle": "Immigration seen from the opposition bench rather than the executive or the courts: the DNC passes two contradictory ICE resolutions on the same day, a party incapable of naming its own position four months from the midterms.",
+      "headline": "民主黨同一天通過兩種相反主張"
+    },
+    {
+      "date": "2026-08-16",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "Japan–China relations",
+      "angle": "A brand-new international thread for the paper and a different hemisphere from a fortnight of Gulf and Ukraine coverage: Northeast Asia's memory politics as a live diplomatic instrument, read through a nationalist PM sending an offering instead of attending.",
+      "headline": "日相只送供品，中韓仍抗議"
+    },
+    {
+      "date": "2026-08-16",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "Not a Cubs result but a record set against them — the first player in MLB history to homer in his first three at-bats did it at Wrigley — a history-made-by-the-opponent lens distinct from this week's rotation-verdict, MVP-case and bullpen-attrition entries.",
+      "headline": "紅雀新人前三打席連三轟，小熊吞敗"
+    },
+    {
+      "date": "2026-08-16",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The season's first competitive fixture as an audit of the summer rather than a team-sheet projection: €167m spent on midfield, no winger, an unreinforced defence and one win in five in pre-season, all going on trial against City at 9am Chicago time.",
+      "headline": "兵工廠今開季戰曼城，社區盾在卡地夫"
     }
   ]
 }
