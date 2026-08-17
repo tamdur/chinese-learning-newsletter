@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-17",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "Chinese AI development",
-      "angle": "China ships the world's largest open-weight model, ranking third on real-world benchmarks and topping developers' blind coding preference — an open-source frontier challenge closing the US gap, distinct from July's on-device, cost-war, export-control and domestic-chip-training angles.",
-      "headline": "中國Kimi K3登場 開源模型挑戰美國"
-    },
-    {
-      "date": "2026-07-17",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "DR Congo Ebola outbreak",
-      "angle": "A brand-new world/health story for the paper: the Bundibugyo-strain outbreak becomes the fastest-spreading Ebola ever recorded (1,000 cases in 40 days) and the third-largest, as a monoclonal-antibody trial gets underway — breaking the week's Iran/Hormuz monotony.",
-      "headline": "剛果伊波拉疫情 擴散速度史上最快"
-    },
-    {
-      "date": "2026-07-17",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US immigration and visa policy",
-      "angle": "A distinct legal-immigration angle rather than enforcement: a DHS final rule scrapping 'duration of status' and capping student, exchange and journalist visas — distinct from July's arrest-tempo, Chicago-raid and ICE-pullback coverage.",
-      "headline": "美國縮短學生與記者簽證年限"
-    },
-    {
-      "date": "2026-07-17",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago air quality / Canadian wildfire smoke",
-      "angle": "A fresh doorstep climate story distinct from recent Chicago coverage: Canadian-wildfire smoke drives Chicago to the world's worst AQI (753) and the first beach and pool closures since COVID.",
-      "headline": "加拿大野火煙霧 芝加哥關閉海灘泳池"
-    },
-    {
-      "date": "2026-07-17",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "Breaks a Cubs-saturated sports desk with a Bears training-camp preview — Trapilo's injury recovery, Clowney reunion talk and Odunze as WR1 — the beat's first news since the 07-10 Bradbury signing.",
-      "headline": "熊隊備戰新球季 盼避免開季慢熱"
-    },
-    {
-      "date": "2026-07-17",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Pre-season begins: Arsenal confirm their opening 2026-27 friendly and a Europe-based training camp built around late-returning World Cup players — a season-arc kickoff distinct from the fortnight of transfer-rumor churn and the Saliba injury.",
-      "headline": "兵工廠季前熱身賽開踢"
-    },
-    {
       "date": "2026-07-18",
       "rank": 1,
       "topic_id": "ai",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The season's first competitive fixture as an audit of the summer rather than a team-sheet projection: €167m spent on midfield, no winger, an unreinforced defence and one win in five in pre-season, all going on trial against City at 9am Chicago time.",
       "headline": "兵工廠今開季戰曼城，社區盾在卡地夫"
+    },
+    {
+      "date": "2026-08-17",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Gaza governance",
+      "angle": "The coalition that brokered the postwar plan turns on Israel: six Arab and Muslim governments issue a joint statement blaming Israel for the stall while Kushner shuttles to Cairo — the mediators-versus-Israel phase, distinct from 1 August's 'Hamas accepts disarmament' breakthrough and from this month's Lebanon/Gulf strands of the war.",
+      "headline": "阿拉伯八國指責以色列，庫許納趕赴開羅救和平計畫"
+    },
+    {
+      "date": "2026-08-17",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US transgender healthcare policy",
+      "angle": "A brand-new US policy thread for the paper: the fight over youth gender medicine moves from rhetoric and state legislatures into a finalized federal payment rule with a date on it (13 October) and a grace period, forcing state Medicaid agencies to choose between dropping coverage and paying for it alone.",
+      "headline": "美國新規定：聯邦不再出錢付未成年變性醫療"
+    },
+    {
+      "date": "2026-08-17",
+      "rank": 3,
+      "topic_id": "business",
+      "topic": "AI infrastructure",
+      "angle": "The 11 August Riot–Anthropic lease gets its market verdict: bitcoin is down 44% while miners are up 43–152%, meaning equity investors have stopped valuing the sector on hash rate and started valuing it on hyperscaler contracts — the AI buildout repricing a whole industry, not a single deal.",
+      "headline": "比特幣大跌，挖礦公司股價卻飛上天"
+    },
+    {
+      "date": "2026-08-17",
+      "rank": 4,
+      "topic_id": "economics",
+      "topic": "Japan economy",
+      "angle": "The Gulf oil shock the paper has tracked through tanker crossings, Brent prices and US retail sales now lands on the Bank of Japan's desk: a Q2 growth miss of nearly half the forecast, driven by stalled consumption, that puts next month's planned rate rise in doubt.",
+      "headline": "日本第二季成長不到預期一半，央行升息計畫生變"
+    },
+    {
+      "date": "2026-08-17",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A city-rivalry lens rather than a scoreboard one: the Crosstown Series opens tonight at Wrigley with both Chicago clubs in the playoff conversation, a civic frame distinct from the past week's rotation-verdict, PCA MVP-case, bullpen-attrition and opponent-record entries.",
+      "headline": "跨城大戰今晚開打，小熊主場迎戰白襪"
+    },
+    {
+      "date": "2026-08-17",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The summer's audit gets its verdict on the pitch: the makeshift defence the paper has worried about all month kept a clean sheet against City in a 3-0 Community Shield win, with a goal inside 24 seconds — the result phase of the fixture previewed on 16 August, and the first trophy of the title defence.",
+      "headline": "兵工廠三比零踢下曼城，捧回社區盾"
     }
   ]
 }
