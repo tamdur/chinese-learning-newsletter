@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-18",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI geopolitics",
-      "angle": "China erects its own multilateral AI institution — a 29-nation Global-South bloc headquartered in Shanghai with the UN chief attending — recasting AI governance as rival-bloc geopolitics, distinct from July's model-release, chip-control, energy and stock-rout AI angles and from the 07-08 US-backed UN AI committee.",
-      "headline": "習近平在上海成立中國主導的全球人工智慧聯盟"
-    },
-    {
-      "date": "2026-07-18",
-      "rank": 2,
-      "topic_id": "business",
-      "topic": "EU tech antitrust",
-      "angle": "Brussels uses binding DMA orders to force Google to hand rival AI assistants equal Android access and share Search data — antitrust deployed specifically to open the AI-search gateway, a European tech-regulation angle the paper hasn't run recently.",
-      "headline": "歐盟要求谷歌向對手開放安卓與搜尋資料"
-    },
-    {
-      "date": "2026-07-18",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US election security",
-      "angle": "Federal coercion of state election officials — DHS threatens funding cuts and prison over a voter-roll database a judge already blocked — a concrete executive-pressure escalation distinct from 07-16's Trump-speech foreign-interference framing.",
-      "headline": "美國國土安全部長威脅不聽話的選務官員"
-    },
-    {
-      "date": "2026-07-18",
-      "rank": 4,
-      "topic_id": "ideas",
-      "topic": "Alzheimer's drug repurposing",
-      "angle": "A spinal-cord-injury drug repurposed to hit several Alzheimer's pathways at once by repairing DNA damage in mice — a fresh science pick distinct from recent ideas entries (soil-carbon feedback, early brain decisions).",
-      "headline": "治脊椎傷的藥意外在老鼠身上修復阿茲海默症損傷"
-    },
-    {
-      "date": "2026-07-18",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "An amateur-draft/pipeline angle — the Cubs lock up their entire top draft class including first-rounder Cade Townsend — distinct from this week's PCA 20-20 milestone, buyer-mode and injury-arms-hunt Cubs entries.",
-      "headline": "小熊隊簽下五名選秀新人　包括首輪湯森"
-    },
-    {
-      "date": "2026-07-18",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The Tzolis deal moves from 07-12's 'near-done' to completion (medical booked for the weekend) as the third signing, while Morgan Rogers surfaces as an almost-agreed fourth target — a deal-closing-plus-new-target progression distinct from the fortnight's target churn.",
-      "headline": "兵工廠談成佐利斯轉會　下個目標鎖定羅傑斯"
-    },
-    {
       "date": "2026-07-19",
       "rank": 1,
       "topic_id": "world",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The summer's audit gets its verdict on the pitch: the makeshift defence the paper has worried about all month kept a clean sheet against City in a 3-0 Community Shield win, with a goal inside 24 seconds — the result phase of the fixture previewed on 16 August, and the first trophy of the title defence.",
       "headline": "兵工廠三比零踢下曼城，捧回社區盾"
+    },
+    {
+      "date": "2026-08-18",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI industry consolidation",
+      "angle": "A payments company buys the switchboard between developers and every frontier model for $7bn — five times its valuation three months ago — showing the contested prize in AI has moved to the routing layer, a market-structure and M&A lens distinct from the ledger's month of capex, securitisation, credit-risk and revenue-growth stories.",
+      "headline": "支付公司Stripe七十億美元買下AI「轉接台」"
+    },
+    {
+      "date": "2026-08-18",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "The war's diplomatic architecture, not its battlefield or its oil price: the president's own 60-day Versailles ultimatum expires with nothing agreed, he declares deadlines meaningless, and he threatens to bomb Oman — a mediator — distinct from 15 August's carrier-sustainability story and 16 August's Lebanon strikes.",
+      "headline": "美伊六十天期限到期 川普放話要炸阿曼"
+    },
+    {
+      "date": "2026-08-18",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "China economy",
+      "angle": "A structural-stagnation lens on the world's second-largest economy — output, consumption and investment all missing at once, reviving the Japanification debate weeks before October trade talks — a country and a diagnosis the paper has not run, distinct from 17 August's Japan Q2 miss and 15 August's US retail-sales story.",
+      "headline": "中國七月數據全面走弱 學者談「日本化」"
+    },
+    {
+      "date": "2026-08-18",
+      "rank": 4,
+      "topic_id": "ideas",
+      "topic": "screen time and cognition",
+      "angle": "A back-page science finding that cuts against the premise of laws the paper has already reported: eight years of Finnish longitudinal data associate more screen time with better teenage cognitive processing, complicating Illinois's classroom phone ban and its app-design mandates.",
+      "headline": "芬蘭八年研究：多看螢幕的孩子 長大反應更好"
+    },
+    {
+      "date": "2026-08-18",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The roster-construction phase rather than a game story: the day after the 34-10 preseason opener that Williams sat out, the Bears sign a veteran pass-rusher and start cutting, turning camp evaluation into subtraction — the consequence of 14 August's 'hold the quarterback out' decision, and a break from a Cubs-heavy sports desk.",
+      "headline": "熊隊季前賽大勝 隔天就動刀換人"
+    },
+    {
+      "date": "2026-08-18",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The season arc rather than a result: with the Shield won, the question becomes whether a club defending an English title for the first time in over twenty years can do it with its best defender out and the deepest chasing pack in years — a nine-month horizon distinct from 17 August's Shield result and 16 August's single-fixture audit.",
+      "headline": "兵工廠線：二十二年來第一次以冠軍開季 卻少了最強後衛"
     }
   ]
 }
