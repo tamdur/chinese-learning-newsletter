@@ -345,6 +345,16 @@
       "url": "https://mwrd.org/education/tours",
       "type": "aggregator",
       "notes": "MWRD's tours page lists free public facility tours (Deep Tunnel, water reclamation plants) across Cook County — a reliable source of genuinely under-the-radar, open-to-anyone Chicago infrastructure experiences."
+    },
+    {
+      "url": "https://www.newberry.org/calendar/public-programs",
+      "type": "aggregator",
+      "notes": "Newberry Library's public programs calendar — free, offbeat lectures and hybrid talks drawing on rare book/manuscript collections, open to the general public, updated regularly with niche historical/cultural topics."
+    },
+    {
+      "url": "https://fragmentarium.ms/",
+      "type": "aggregator",
+      "notes": "Digital laboratory/database of medieval manuscript fragments with virtual reconstruction tools — a rich hunting ground for future 'reunited/reconstructed' hidden-gem stories."
     }
   ]
 }
