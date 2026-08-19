@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-19",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "The renewed war produces its first American combat deaths since March — two US troops killed, one missing in Jordan on night eight — pivoting the story from Hormuz blockade/toll mechanics (07-14) to a mounting US casualty toll and its domestic-political weight.",
-      "headline": "伊朗攻擊約旦基地　兩名美軍身亡"
-    },
-    {
-      "date": "2026-07-19",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI investment boom",
-      "angle": "Distinct from 07-14's single-day chip rout: the AI-infrastructure trade has durably broken — Apple has dethroned Nvidia as the world's most valuable company and the S&P booked its first losing week in three — a leadership regime shift, not another one-day dip.",
-      "headline": "蘋果超越輝達　重回全球第一"
-    },
-    {
-      "date": "2026-07-19",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "TikTok divestiture",
-      "angle": "A topic the paper hasn't run: the multi-year TikTok fight quietly resolves — with ByteDance ceding majority control to American-led JV TikTok USDS, DOJ reverses the 2022 federal-device ban, marking the divestiture as effectively done.",
-      "headline": "美國解禁　公務手機可裝抖音"
-    },
-    {
-      "date": "2026-07-19",
-      "rank": 4,
-      "topic_id": "ideas",
-      "topic": "new species discovery",
-      "angle": "A fresh back-page science serendipity: the formal description of a new Congo Basin monkey species, 'Likweli' — distinct from recent ideas picks (Alzheimer's drug repurposing, deep-soil carbon, early brain decisions).",
-      "headline": "剛果雨林　發現新猴子"
-    },
-    {
-      "date": "2026-07-19",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A civic/franchise-honor angle rather than on-field action: Wrigley Field will host the 2027 All-Star Game (logo unveiled today) — distinct from this week's draft-class signing (07-18), PCA's 20-20 milestone (07-16) and buyer-mode (07-15) Cubs entries.",
-      "headline": "明星賽回娘家　小熊主場辦盛會"
-    },
-    {
-      "date": "2026-07-19",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The transfer focus pivots to DEFENSE: after Saliba's injury scare (07-15), Arsenal move to reinforce left-back and central midfield (a French defender linked) — distinct from the fortnight's attacker chases (Alvarez/Nusa/Tzolis), the Guimaraes midfield saga and the 07-18 Tzolis-completion/Rogers entry.",
-      "headline": "兵工廠線　阿森納改補後防"
-    },
-    {
       "date": "2026-07-20",
       "rank": 1,
       "topic_id": "ai",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The season arc rather than a result: with the Shield won, the question becomes whether a club defending an English title for the first time in over twenty years can do it with its best defender out and the deepest chasing pack in years — a nine-month horizon distinct from 17 August's Shield result and 16 August's single-fixture audit.",
       "headline": "兵工廠線：二十二年來第一次以冠軍開季 卻少了最強後衛"
+    },
+    {
+      "date": "2026-08-19",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI and children",
+      "angle": "The frontier labs turn their own products into age-gated environments: OpenAI ships a restricted teen ChatGPT governed by an age-prediction system that classifies users without asking them — a consumer-product and child-safety lens the ledger's month of capex, securitisation, credit risk, cyber-offence and lab-politics stories has never touched.",
+      "headline": "OpenAI推出青少年版ChatGPT，靠系統猜你幾歲"
+    },
+    {
+      "date": "2026-08-19",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US separation of powers",
+      "angle": "The ballroom fight moves from the appellate ruling this paper reported on August 10 to the Supreme Court's emergency docket with a hard August 21 deadline — the question shifting from whether the president needed Congress to whether the justices will pause a ruling when the building has already been torn down.",
+      "headline": "白宮舞廳工程喊停，最高法院兩天內要決定"
+    },
+    {
+      "date": "2026-08-19",
+      "rank": 3,
+      "topic_id": "ideas",
+      "topic": "aviation climate impact",
+      "angle": "A brand-new science thread for the paper and a rare case of AI being used on the mitigation side of the climate ledger rather than the emissions side: an entire ocean's airspace becomes a live experiment in steering planes around machine-predicted contrails.",
+      "headline": "英國與Google啟動AI試驗，幫飛機避開凝結尾"
+    },
+    {
+      "date": "2026-08-19",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Illinois disaster and flood policy",
+      "angle": "Where August 15 showed Illinois improvising its own repair money after Washington said no, today the state uses a formal disaster proclamation over 15 named counties to reopen a different federal door — block-grant disaster funding — turning a workaround into a legal instrument.",
+      "headline": "普利茲克簽災難聲明，十五個郡可申請聯邦補助"
+    },
+    {
+      "date": "2026-08-19",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The Cubs' attrition moves from the bullpen (August 15) to the middle of the diamond: an everyday shortstop lost for four to six weeks forces Hoerner across the bag and reshapes the whole infield in a playoff race — a roster-reconfiguration angle, not another game result or milestone.",
+      "headline": "小熊游擊手史旺森側腹拉傷，預計休四到六週"
+    },
+    {
+      "date": "2026-08-19",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The league campaign itself begins: Friday's opener against a promoted Coventry side is where the £167m summer stops being a Shield-day audit and becomes a 38-game defence, with the record signing Tzolis in line for his first Premier League start — a specific opening-fixture and selection lens rather than August 18's nine-month season-arc essay.",
+      "headline": "兵工廠線：新球季首戰主場對考文垂"
     }
   ]
 }
