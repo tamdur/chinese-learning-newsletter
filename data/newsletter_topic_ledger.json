@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-20",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI capability milestones",
-      "angle": "A pure research-capability milestone rather than markets or geopolitics: a frontier model closes a ~30-year open problem in convex optimization, AI acting as an original mathematical contributor.",
-      "headline": "AI破解三十年凸優化數學難題"
-    },
-    {
-      "date": "2026-07-20",
-      "rank": 2,
-      "topic_id": "economics",
-      "topic": "Strait of Hormuz oil shock",
-      "angle": "The war's economic bill breaks a new threshold and the fear shifts to stagflation: Brent tops $90 (vs ~$79 a week ago) as the blockade deepens, a growth-plus-inflation squeeze distinct from 07-13's contested-closure information-war angle.",
-      "headline": "油價衝破九十美元，荷莫茲海峽封鎖加劇"
-    },
-    {
-      "date": "2026-07-20",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US immigration policy",
-      "angle": "A benefits-based legal-immigration rule rather than enforcement: DHS formally publishes a 'public charge' test that can deny green cards to immigrants who used Medicaid, food stamps or housing aid — distinct from July's arrest-tempo, ICE-pullback and visa-duration angles.",
-      "headline": "美國公布公共負擔新規，收緊綠卡資格"
-    },
-    {
-      "date": "2026-07-20",
-      "rank": 4,
-      "topic_id": "business",
-      "topic": "EU circular economy regulation",
-      "angle": "A brand-new topic for the paper that breaks the week's AI/Iran monotony: an EU ban on destroying unsold clothes and shoes takes force, using regulation to attack fast fashion's overproduction model.",
-      "headline": "歐盟禁止銷毀賣不掉的衣服鞋子"
-    },
-    {
-      "date": "2026-07-20",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The deadline arms-hunt finally produces an actual trade: after weeks of 'the Cubs need starters' framing (07-13 injury hunt, 07-15 buyer mode), they land RHP Aaron Civale — a concrete acquisition, not a milestone or honor.",
-      "headline": "小熊隊從運動家隊換來投手希瓦利"
-    },
-    {
-      "date": "2026-07-20",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A trophy/achievement angle, not transfer churn: three Gunners lift the World Cup as Spain edge Argentina, and Arsenal top every PL club with seven tournament medalists — distinct from the fortnight of transfer coverage and the 07-11 QF angle.",
-      "headline": "兵工廠三將隨西班牙奪世界盃冠軍"
-    },
-    {
       "date": "2026-07-21",
       "rank": 1,
       "topic_id": "world",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The league campaign itself begins: Friday's opener against a promoted Coventry side is where the £167m summer stops being a Shield-day audit and becomes a 38-game defence, with the record signing Tzolis in line for his first Premier League start — a specific opening-fixture and selection lens rather than August 18's nine-month season-arc essay.",
       "headline": "兵工廠線：新球季首戰主場對考文垂"
+    },
+    {
+      "date": "2026-08-20",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI industry finance",
+      "angle": "The frontier race reaches the public markets: OpenAI names a year for its IPO, which would force the sector's most-argued-about balance sheet into audited quarterly disclosure — a capital-markets and ownership lens distinct from the ledger's month of capex, securitisation, credit-risk, revenue-growth and M&A stories.",
+      "headline": "OpenAI 說 2027 年要上市"
+    },
+    {
+      "date": "2026-08-20",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "US federal debt",
+      "angle": "A brand-new fiscal thread for the paper: the debt crosses $40tn years ahead of official projections, and the story is the interest bill — near $1.2tn a year, now bigger than defence — arriving precisely as this summer's higher long-term yields reprice the whole stock.",
+      "headline": "美國國債首度突破 40 兆美元"
+    },
+    {
+      "date": "2026-08-20",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "US-Iran war",
+      "angle": "The Gulf states stop hedging: Iran's second-largest trading partner and its main sanctions-evasion channel severs commercial ties outright — an economic-isolation-by-neighbours lens distinct from 18 August's expired ultimatum, 16 August's Lebanon strikes, 15 August's carrier-crew story and the month's oil-price coverage.",
+      "headline": "阿聯酋停止與伊朗所有貿易"
+    },
+    {
+      "date": "2026-08-20",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "US trade policy",
+      "angle": "The tariff fight comes home to North America and to a never-used statute: 50% levies on Canada are deferred by three days under Section 338 of the 1930 Tariff Act, the third distinct legal theory the administration has reached for — distinct from 24 July's forced-labour blanket, 4 August's 25-state lawsuit and 7 August's refund-distribution story.",
+      "headline": "美國對加拿大的五成關稅延後三天"
+    },
+    {
+      "date": "2026-08-20",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "Camp's open questions start closing: the left-tackle competition Whittingham called a three-man fight on 12 August resolves to Babalola for Week One, and Underwood's practice reviews give the new staff its first concrete evaluation of its quarterback — a decision-and-verdict angle, not another camp scene-setter, and a break from a Cubs- and Bears-saturated sports desk.",
+      "headline": "密西根秋訓：左護鋒人選出爐"
+    },
+    {
+      "date": "2026-08-20",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Arteta reverses himself with hours to spare: five days after publicly ruling out an emergency centre-back, Arsenal agree £51m for Konsa and race a midday registration deadline to have him available for the opener — the summer's unfilled defensive gap finally bought out rather than lived with.",
+      "headline": "兵工廠砸 5100 萬英鎊簽下孔薩"
     }
   ]
 }
