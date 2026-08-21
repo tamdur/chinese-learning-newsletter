@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-21",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Russia–Ukraine war",
-      "angle": "Ukraine goes on the deep-strike offensive — a ~400-drone assault on the Moscow region hitting oil infrastructure and Black Sea ships, one of the war's largest, escalating the refinery-strangulation campaign, distinct from July's Patriots-production (07-11) and Kyiv-strike/Poland-jets (07-02) angles.",
-      "headline": "烏克蘭出動四百架無人機 襲擊莫斯科油庫"
-    },
-    {
-      "date": "2026-07-21",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US Medicaid work requirements",
-      "angle": "A never-covered implementation-failure story: contractor-built eligibility systems (Deloitte/Accenture/Optum) are wrongly cutting off disabled Americans — including Michigan patients — as states rush to enforce the tax law's new Medicaid work requirements, distinct from July's immigration-dominated policy coverage.",
-      "headline": "電腦系統出錯 殘障者被擋在健保外"
-    },
-    {
-      "date": "2026-07-21",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI and human judgment",
-      "angle": "A fresh cognitive-effects lens on AI, distinct from July's markets/geopolitics/model-release and math-milestone angles: empirical evidence that AI advice makes people measurably less accurate yet more confident — automation bias as the hidden cost of assistance.",
-      "headline": "研究：聽AI建議 人更不準卻更有自信"
-    },
-    {
-      "date": "2026-07-21",
-      "rank": 4,
-      "topic_id": "business",
-      "topic": "media megamergers",
-      "angle": "The Paramount–Warner fight escalates from the states' antitrust suit (07-09) to actual judicial action: a federal judge grants a 14-day TRO freezing the $110B deal — a court intervening, not just AGs filing.",
-      "headline": "法官喊停 派拉蒙併華納案暫停十四天"
-    },
-    {
-      "date": "2026-07-21",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan athletics",
-      "angle": "An administrative earthquake breaking the Cubs-saturated sports desk: AD Warde Manuel steps down alongside an internal investigation report on the Stalions/Weiss/Moore scandals — a top-of-the-department reckoning, distinct from July's Michigan football-recruiting and basketball-roster angles.",
-      "headline": "密西根體育主任下台 偷暗號醜聞收尾"
-    },
-    {
-      "date": "2026-07-21",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Saliba's back injury (a scare on 07-15) is confirmed as a 4-5 month, possibly surgical absence, and Arsenal respond with a concrete €70m Konsa bid — advancing the defensive-reinforcement thread (07-19) to a named target and a season-shaping prognosis.",
-      "headline": "兵工廠線：薩利巴傷停五個月 兵工廠追康薩"
-    },
-    {
       "date": "2026-07-22",
       "rank": 1,
       "topic_id": "world",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "Arteta reverses himself with hours to spare: five days after publicly ruling out an emergency centre-back, Arsenal agree £51m for Konsa and race a midday registration deadline to have him available for the opener — the summer's unfilled defensive gap finally bought out rather than lived with.",
       "headline": "兵工廠砸 5100 萬英鎊簽下孔薩"
+    },
+    {
+      "date": "2026-08-21",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI chip supply chain",
+      "angle": "A hyperscaler is now paid in its own supplier's equity to switch chip vendors — Google takes a $12.2bn warrant in Marvell that vests only as it buys, a customer-supplier ownership structure that is a market-structure and custom-silicon lens distinct from the ledger's run of AI capex, credit risk, M&A and capital-markets stories.",
+      "headline": "谷歌買晶片，還拿到馬維爾股票"
+    },
+    {
+      "date": "2026-08-21",
+      "rank": 2,
+      "topic_id": "ideas",
+      "topic": "software supply-chain security",
+      "angle": "A brand-new security thread for the paper: the attack lands not on a running program but on the act of compiling one, exposing how a single hijacked maintainer account inside a package registry sits upstream of a third of the world's code — a build-time-trust lens distinct from the ledger's month of model-escape and lab-safety stories.",
+      "headline": "程式套件被下毒，編譯就中招"
+    },
+    {
+      "date": "2026-08-21",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "Federal Reserve monetary policy",
+      "angle": "The minutes reveal the July hold was far closer to a hike than the vote implied — 'many' participants, not just the three dissenters, saw tightening as likely — and that the chair is quietly proposing to cut the Fed's own meeting calendar from eight to six, an institutional-reform detail distinct from 30 July's market-reaction coverage of the same decision.",
+      "headline": "聯準會七月紀錄：九比三，三人要升息"
+    },
+    {
+      "date": "2026-08-21",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago national political standing",
+      "angle": "A doorstep story about the city's standing in national politics rather than its budget or its weather: two years after hosting, Chicago is cut in the very first round of the 2028 convention race with no explanation given — distinct from the recent run of Chicago entries on flood policy, CPS finances and heat adaptation.",
+      "headline": "芝加哥出局，無緣二零二八民主黨大會"
+    },
+    {
+      "date": "2026-08-21",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "Camp is ending with its two biggest questions still open rather than closing: Burden is shut down for the whole preseason and the left-tackle job has reverted to an unresolved two-man split waiting on an injured third man — a nothing-settled-in-time angle distinct from 18 August's roster-cuts story and 2 August's 'Amegadjie takes the reps' report.",
+      "headline": "熊隊訓練營收尾，兩大問題沒答案"
+    },
+    {
+      "date": "2026-08-21",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The window's closing ten days seen as unfinished business rather than a completed signing: with the defence patched, the money swings back to the winger Arteta failed to buy all summer, a second defender is still wanted, and the manager publicly slams the door on interest in Lewis-Skelly — a retention-and-remaining-priorities lens distinct from 20 August's Konsa deal and 19 August's Coventry preview.",
+      "headline": "兵工廠線：阿特塔還想再簽一名邊鋒"
     }
   ]
 }
