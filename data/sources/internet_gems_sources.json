@@ -355,6 +355,11 @@
       "url": "https://fragmentarium.ms/",
       "type": "aggregator",
       "notes": "Digital laboratory/database of medieval manuscript fragments with virtual reconstruction tools — a rich hunting ground for future 'reunited/reconstructed' hidden-gem stories."
+    },
+    {
+      "url": "https://www.obb.design/",
+      "type": "personal-portfolio",
+      "notes": "Solo origami designer Boice Wong's site — free downloadable crease patterns, tutorials, and deep-dives into reading crease patterns. Cross-linked from Gilad's Origami Page (giladorigami.com), a broader hand-curated origami resource directory."
     }
   ]
 }
