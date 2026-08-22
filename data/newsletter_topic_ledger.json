@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-22",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "UK political instability",
-      "angle": "The 06-23 Starmer resignation resolves into an actual new government: Burnham takes office and unveils his first cabinet and opening policies, the government-forming phase rather than the resignation or leadership-race phase.",
-      "headline": "伯納姆就任英國新首相 公布內閣名單"
-    },
-    {
-      "date": "2026-07-22",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US government shutdown",
-      "angle": "The 07-10 'Senate budget talks collapse, shutdown fears' thread takes a surprising early turn — rather than drifting toward a fall brink, the House proactively passes a CR through December to defuse a pre-midterm shutdown.",
-      "headline": "美國眾議院提前通過撥款案 避免政府關門"
-    },
-    {
-      "date": "2026-07-22",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI model releases",
-      "angle": "The frontier race tips into a reasoning-tier-and-cost battle: OpenAI bolts high-effort 'max'/'ultra' modes onto GPT-5.6 Sol to chase Anthropic's Fable 5 at ~half the cost — distinct from July's on-device (07-16) and Chinese open-weight (07-17) release angles.",
-      "headline": "OpenAI 推出更強推理模式 追趕對手"
-    },
-    {
-      "date": "2026-07-22",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago quantum computing",
-      "angle": "A fresh doorstep economic-development story distinct from recent Chicago coverage (wildfire smoke, TIF stadium, homelessness cuts): Illinois lands a quantum firm's global HQ at a new $500M park, staking Chicago's claim as a quantum hub.",
-      "headline": "量子公司 Infleqtion 選芝加哥設全球總部"
-    },
-    {
-      "date": "2026-07-22",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "Breaks a Cubs-saturated sports desk (Cubs in 5 of the last 7 issues) with a QB-room-specific camp preview centered on Caleb Williams' pivotal year three, distinct from the 07-17 general Bears camp preview (Trapilo/Clowney/Odunze).",
-      "headline": "熊隊訓練營將開 威廉斯迎關鍵第三年"
-    },
-    {
-      "date": "2026-07-22",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A club-legend human-interest tribute that breaks a fortnight of transfer/injury churn (Konsa bid, Saliba injury, WC winners): Cazorla retires after 20+ years, his career defined by a stunning injury comeback and leading Real Oviedo back to La Liga.",
-      "headline": "阿森納傳奇卡索拉宣布退休"
-    },
-    {
       "date": "2026-07-23",
       "rank": 1,
       "topic_id": "ai",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The window's closing ten days seen as unfinished business rather than a completed signing: with the defence patched, the money swings back to the winger Arteta failed to buy all summer, a second defender is still wanted, and the manager publicly slams the door on interest in Lewis-Skelly — a retention-and-remaining-priorities lens distinct from 20 August's Konsa deal and 19 August's Coventry preview.",
       "headline": "兵工廠線：阿特塔還想再簽一名邊鋒"
+    },
+    {
+      "date": "2026-08-22",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI industry finance",
+      "angle": "Two days after OpenAI penciled in a 2027 listing, Anthropic moves to front-run it — filing within weeks for an October debut at ~$2tn that would be the largest IPO in history, with $65bn of annualized revenue as the justification.",
+      "headline": "Anthropic 準備上市　規模可能寫下史上最大紀錄"
+    },
+    {
+      "date": "2026-08-22",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US separation of powers",
+      "angle": "The 21 August deadline this paper flagged produces its answer — Roberts lets the concrete keep pouring while the constitutional question is unresolved, making the half-built building itself the strongest argument against stopping it.",
+      "headline": "大法官放行　白宮宴會廳繼續施工"
+    },
+    {
+      "date": "2026-08-22",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "Eurozone economy",
+      "angle": "After a fortnight in which the paper reported the world's second and third largest economies missing — China's across-the-board weakness, Japan's halved Q2 growth — Europe delivers the opposite, and the engine is the AI buildout showing up as German factory orders and the first job growth of 2026.",
+      "headline": "歐元區工廠回溫　景氣升到九個月新高"
+    },
+    {
+      "date": "2026-08-22",
+      "rank": 4,
+      "topic_id": "business",
+      "topic": "European banking consolidation",
+      "angle": "A new industry and a new defensive logic for the paper's merger coverage after pharma, warehouses, homebuilders and AI routing: a 554-year-old rescued bank tries to avoid being eaten by buying two rivals at once on the same day.",
+      "headline": "世界最老銀行出手　同時要買兩家對手"
+    },
+    {
+      "date": "2026-08-22",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears stadium",
+      "angle": "The stadium fight leaves the Illinois-versus-Indiana taxpayer contest the paper covered on 31 July and hits a veto point neither state controls — the other 31 NFL owners, who must approve any move out of the Chicago market.",
+      "headline": "熊隊想搬去印第安納　還得過老闆們這關"
+    },
+    {
+      "date": "2026-08-22",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The opener previewed on 19 August delivers, but the telling detail is who scored: the title defense's first three goals came from last season's spine, not from the summer's new arrivals, and Arteta used the win to demand more from the forwards rather than to declare the squad complete.",
+      "headline": "兵工廠三比零勝考文垂　衛冕之路開好頭"
     }
   ]
 }
