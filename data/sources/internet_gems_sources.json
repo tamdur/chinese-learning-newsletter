@@ -360,6 +360,21 @@
       "url": "https://www.obb.design/",
       "type": "personal-portfolio",
       "notes": "Solo origami designer Boice Wong's site — free downloadable crease patterns, tutorials, and deep-dives into reading crease patterns. Cross-linked from Gilad's Origami Page (giladorigami.com), a broader hand-curated origami resource directory."
+    },
+    {
+      "url": "https://insheepsclothinghifi.com",
+      "type": "aggregator",
+      "notes": "LA-based record shop/label blog (In Sheeps Clothing HiFi) with detailed writeups on Taiwanese and Asian diaspora vinyl releases, including deep-dive interviews with artists like Lim Giong and Angie QQ."
+    },
+    {
+      "url": "https://www.tellmewhyshow.com/events-calendar",
+      "type": "aggregator",
+      "notes": "Calendar for the recurring 'Show & Tell for Grown-Ups' / Tell Me Why It's Cool Show series, which rotates through Chicago bars and cafes (Tack Room/Thalia Hall, Clara, Snakes & Lattes, Simone's). Good recurring source of quirky, open-to-anyone amateur-expert nights."
+    },
+    {
+      "url": "https://database.conlang.org/",
+      "type": "database",
+      "notes": "Community-built, searchable catalog of constructed languages (conlangs) with structured metadata on phonology, script, and creators — a passion-project archive of amateur language invention, maintained via the Language Creation Society."
     }
   ]
 }
