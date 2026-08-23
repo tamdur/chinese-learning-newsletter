@@ -375,6 +375,11 @@
       "url": "https://database.conlang.org/",
       "type": "database",
       "notes": "Community-built, searchable catalog of constructed languages (conlangs) with structured metadata on phonology, script, and creators — a passion-project archive of amateur language invention, maintained via the Language Creation Society."
+    },
+    {
+      "url": "https://sevish.com/category/microtonal-music/",
+      "type": "blog",
+      "notes": "Composer Sevish's own blog documenting the origin and development history of microtonal music tools like Scale Workshop; a good recurring well for solo-creator music-tech stories."
     }
   ]
 }
