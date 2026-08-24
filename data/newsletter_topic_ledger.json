@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-24",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Strait of Hormuz oil shock",
-      "angle": "The war widens into a second maritime front — Houthis blockade Saudi Arabia at Bab al-Mandeb and hit Saudi tankers, pushing Brent over $100 (first time in two months) and prompting Trump to threaten a 'massive attack' on Iran.",
-      "headline": "葉門封鎖沙烏地、油價衝破百元"
-    },
-    {
-      "date": "2026-07-24",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI investment boom",
-      "angle": "Washington itself now frames the AI boom as dot-com-scale systemic risk — a draft Treasury report plus a Fed stress test modeling a 54% AI-bust crash — a regulator/financial-stability lens distinct from 07-23's Alphabet-capex earnings angle.",
-      "headline": "財政部示警：AI熱潮像網路泡沫"
-    },
-    {
-      "date": "2026-07-24",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US trade policy",
-      "angle": "A new legal theory for tariffs — 'forced-labor enforcement' — is used to blanket 60 countries (99% of imports) as stopgap levies expire and after a Supreme Court defeat killed the prior tariff authority.",
-      "headline": "川普對六十國加關稅、理由是強迫勞動"
-    },
-    {
-      "date": "2026-07-24",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "US press freedom",
-      "angle": "A concrete government climbdown, not a threat: the DOJ abandons subpoenas of three NYT reporters (and improperly their families) after a judge signals a First Amendment quash — a new press-freedom topic for the paper.",
-      "headline": "司法部撤回對紐時記者的傳票"
-    },
-    {
-      "date": "2026-07-24",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "A marquee QB feature for the new era: Whittingham anoints former No. 1 recruit Bryce Underwood the starter as camp opens and Underwood vows to become Michigan's best-ever — a player-arc lens.",
-      "headline": "密西根新四分衛、安德伍德志在最強"
-    },
-    {
-      "date": "2026-07-24",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Pre-season is now underway, not just scheduled: the US tour opens in LA with Arteta rotating late-returning World Cup stars and auditioning fringe men (Vieira, Nelson) — a squad-building/season-kickoff lens.",
-      "headline": "兵工廠線——阿森納赴美季前熱身"
-    },
-    {
       "date": "2026-07-25",
       "rank": 1,
       "topic_id": "ai",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The reaction-and-post-mortem installment, not the result: the paper already ran the 3-0 scoreline on 22 August, so today's Arsenal beat covers what the win revealed — Arteta's own verdict from the press conference, the player ratings, and the rebuilt White–Saka right flank standing in for an injury-hit defence. Explicitly NOT a reprint of the scoreline or of the 20 August Konsa signing.",
       "headline": "兵工廠線：阿爾特塔誇薩卡「非常出色」"
+    },
+    {
+      "date": "2026-08-24",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "The war's economic-pressure phase reaches its peak just as Iran itself shows its first public leadership fissure — Washington's 'toughest sanctions in history' meets Pezeshkian conceding 'we cannot continue with war forever,' a domestic-cracks-inside-Tehran lens distinct from Aug 20's UAE trade cut, Aug 18's expired 60-day ultimatum, Aug 16's Lebanon strikes and Aug 15's carrier-crew story.",
+      "headline": "美國對伊朗祭出「史上最重」制裁"
+    },
+    {
+      "date": "2026-08-24",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI infrastructure",
+      "angle": "The AI buildout hits its first real supply-cost ceiling — not GPU allocation or grid power, but HBM/DRAM memory — forcing Nvidia to pass a 15%+ price hike through to customers on 2027 systems; a physical cost-inflation lens distinct from Aug 21's Google-Marvell warrant, Aug 15's Broadcom-credit-risk story and Aug 11's Riot bitcoin-power lease.",
+      "headline": "記憶體大缺貨　輝達AI伺服器要漲價"
+    },
+    {
+      "date": "2026-08-24",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Russia–Ukraine war",
+      "angle": "The war's diplomatic axis pivots to the Global South — Kyiv turning to non-aligned capitals like Pretoria to isolate Moscow while Paris speeds up missile deliveries — a diplomatic-flanking lens distinct from Aug 14's 800-mile deep-strike-campaign story.",
+      "headline": "澤倫斯基向南方國家求助　盼壓俄停戰"
+    },
+    {
+      "date": "2026-08-24",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago Public Schools",
+      "angle": "The doorstep first-day-of-school moment for the district whose finances the paper covered as a payroll crisis on Aug 4 and a city-versus-state rupture on Aug 6 — kids actually walk in on schedule, with free CTA rides bundling schools and transit into a single municipal opening rather than a fiscal-fight story.",
+      "headline": "芝加哥公立學校開學　搭車免費"
+    },
+    {
+      "date": "2026-08-24",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The playoff-standings picture rather than another injury or milestone: with about a month left, Chicago holds the top NL Wild Card spot by two games over Philadelphia and four over San Diego despite the summer's bullpen and infield losses — a playoff-race-positioning angle distinct from Aug 19's Swanson-injury infield reshuffle, Aug 16's opponent record and Aug 10's rotation-verdict blowout.",
+      "headline": "小熊6比5勝響尾蛇　外卡領先兩場"
+    },
+    {
+      "date": "2026-08-24",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A marquee outbound sale rather than the summer's inbound business: Martinelli — omitted from the Shield and opening-week squads — is in Al-Hilal talks while Atletico publicly close the Alvarez door, meaning the winger Arteta chased is unavailable and the one he had is being sold; a departure-and-blocked-pursuit lens distinct from Aug 22's Coventry post-match, Aug 21's 'still wants a winger' and Aug 20's Konsa signing.",
+      "headline": "兵工廠談賣馬丁內利　艾瓦雷茲買不成"
     }
   ]
 }
