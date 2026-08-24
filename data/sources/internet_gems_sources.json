@@ -380,6 +380,21 @@
       "url": "https://sevish.com/category/microtonal-music/",
       "type": "blog",
       "notes": "Composer Sevish's own blog documenting the origin and development history of microtonal music tools like Scale Workshop; a good recurring well for solo-creator music-tech stories."
+    },
+    {
+      "url": "https://eukonkanto.fi/en/front-page/",
+      "type": "single-event site",
+      "notes": "Official site for Finland's Wife-Carrying World Championship in Sonkajärvi — quirky, couple-themed Finnish folk sport with strong legend/history angle, useful for offbeat cultural facets."
+    },
+    {
+      "url": "https://everout.com/chicago/",
+      "type": "aggregator",
+      "notes": "EverOut Chicago is a comprehensive, frequently updated events/things-to-do aggregator (monthly roundups, weekend picks, free-events lists) — useful for surfacing smaller/under-the-radar listings TimeOut and Block Club miss."
+    },
+    {
+      "url": "https://www.realbanknotes.com/",
+      "type": "hand-curated encyclopedia",
+      "notes": "Free, community-fed encyclopedia of world banknotes run since 2008 by a single anonymous collector ('Proteus'). Deep catalog of issuance dates, signature variants, and print runs for currencies worldwide."
     }
   ]
 }
