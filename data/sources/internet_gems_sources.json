@@ -395,6 +395,11 @@
       "url": "https://www.realbanknotes.com/",
       "type": "hand-curated encyclopedia",
       "notes": "Free, community-fed encyclopedia of world banknotes run since 2008 by a single anonymous collector ('Proteus'). Deep catalog of issuance dates, signature variants, and print runs for currencies worldwide."
+    },
+    {
+      "url": "https://512kb.club/",
+      "type": "aggregator",
+      "notes": "A curated webring/showcase of personal websites under 512KB uncompressed — a community of developers fighting web bloat with radical minimalism. Good hunting ground for future hidden-gem finds; sites are hand-submitted and reviewed for genuine content, not just link pages."
     }
   ]
 }
