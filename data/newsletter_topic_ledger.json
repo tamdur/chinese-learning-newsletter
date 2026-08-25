@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-25",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI model releases",
-      "angle": "A distinct lab and product from 07-22's OpenAI-reasoning-mode story: Anthropic ships a brand-new default model (Opus 5) at half its own flagship's price with an effort-toggle and an alignment pitch, underscoring a two-month, four-release cadence.",
-      "headline": "AI公司推出新模型Opus 5 價格只要一半"
-    },
-    {
-      "date": "2026-07-25",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "congressional stock-trading ban",
-      "angle": "A new US-governance thread distinct from 07-22's CR-passage angle: Congress votes to ban its own members from trading individual stocks, but bundles it with a national voter photo-ID mandate that turns an ethics win into a partisan fight.",
-      "headline": "美國眾議院通過禁止議員炒股法案"
-    },
-    {
-      "date": "2026-07-25",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "Russia–Ukraine war",
-      "angle": "A Russian-offensive-casualty event distinct from this week's Ukraine-side angles (07-21 Moscow drone offensive, 07-23 Zelensky sacking his general): a rare daytime ballistic strike on a defense expo kills at least 10.",
-      "headline": "俄羅斯飛彈打中基輔軍武展 至少十人死亡"
-    },
-    {
-      "date": "2026-07-25",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago food access",
-      "angle": "A fresh doorstep local story with a today hook distinct from recent Chicago coverage: seven city-subsidized grocery stores in food-desert neighborhoods face closure Saturday as a licensing deal collapses amid a 26% SNAP-spending drop.",
-      "headline": "芝加哥七家平價超市 週六恐關門"
-    },
-    {
-      "date": "2026-07-25",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A brand-new individual DEFENSIVE record (most 5-star catches in Statcast history) distinct from PCA's prior offensive coverage this cycle (07-08 All-Star, 07-16 20-20 club) and avoiding a fourth trade-deadline retread.",
-      "headline": "小熊隊克羅阿姆斯壯 締造美技接殺紀錄"
-    },
-    {
-      "date": "2026-07-25",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The Guimaraes saga advances from 07-13's Newcastle standoff/rejection to a near-breakthrough (deal close, second winger lined up), paired with the fresh Rogers-to-Chelsea snub — a resolution-phase development, not a reprint of the standoff.",
-      "headline": "兵工廠快簽下布魯諾 卻錯過羅傑斯"
-    },
-    {
       "date": "2026-07-26",
       "rank": 1,
       "topic_id": "world",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "A marquee outbound sale rather than the summer's inbound business: Martinelli — omitted from the Shield and opening-week squads — is in Al-Hilal talks while Atletico publicly close the Alvarez door, meaning the winger Arteta chased is unavailable and the one he had is being sold; a departure-and-blocked-pursuit lens distinct from Aug 22's Coventry post-match, Aug 21's 'still wants a winger' and Aug 20's Konsa signing.",
       "headline": "兵工廠談賣馬丁內利　艾瓦雷茲買不成"
+    },
+    {
+      "date": "2026-08-25",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US election security",
+      "angle": "The mail-ballot fight the paper followed from an appellate block (26 July) to an emergency application with a mid-August deadline (28 July) finally gets its Supreme Court answer — a 6-3 order letting the executive order operate in 23 states through the midterms while deliberately leaving unresolved whether a president can direct state election administration at all.",
+      "headline": "最高法院放行　川普郵寄投票命令可先上路"
+    },
+    {
+      "date": "2026-08-25",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "US trade policy",
+      "angle": "The Canada trade war escalates from symbolic consumer goods into the continent's most integrated industry — a threatened 50% levy on cars and parts, dated January 2027, that hands automakers and Midwest suppliers a shot clock rather than an immediate shock; distinct from 20 August's Section 338 deferral and 23 August's 'the levies hit and Canada scheduled retaliation'.",
+      "headline": "川普放話：加拿大汽車關稅要加到五成"
+    },
+    {
+      "date": "2026-08-25",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI industry consolidation",
+      "angle": "The AI commons itself goes on the block: the field's default public repository of open models is quietly shopping itself at nearly triple its 2023 valuation, raising the question of who ends up owning the neutral ground open-source AI depends on — distinct from 18 August's Stripe/routing-layer acquisition and from the ledger's OpenAI and Anthropic IPO entries.",
+      "headline": "AI 模型共享平台 Hugging Face 傳出價一百三十億美元"
+    },
+    {
+      "date": "2026-08-25",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "French politics",
+      "angle": "A brand-new international thread for the paper that breaks a fortnight of Gulf, Ukraine and tariff coverage: the runoff France now expects in 2027 pits far left against far right, with the centre polled out of the final round entirely — the collapse of Macron's political centre measured in numbers rather than argued about.",
+      "headline": "法國民調：極左梅蘭雄可能對上勒龐"
+    },
+    {
+      "date": "2026-08-25",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "Camp ends with the new coach holding the information: Whittingham says the Week One depth chart is finalised but refuses to publish it, leaving the quarterback behind Underwood as the last admitted unknown — a camp-closing, information-control lens distinct from 20 August's left-tackle resolution and 12 August's offensive-line evaluation, and a break from a Bears- and Cubs-saturated sports desk.",
+      "headline": "密西根新教頭排好名單　卻不公開"
+    },
+    {
+      "date": "2026-08-25",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A deadline-week arithmetic and squad-shape analysis rather than another transfer bulletin: Arsenal are on course to finish the window with fewer senior attackers than they began it, so the question is what Arteta's front line looks like on 2 September and how a title defence absorbs that — explicitly not a reprint of 24 August's Martinelli-sale-and-blocked-Alvarez news.",
+      "headline": "兵工廠線：轉會窗最後一週　前場人數不增反減"
     }
   ]
 }
