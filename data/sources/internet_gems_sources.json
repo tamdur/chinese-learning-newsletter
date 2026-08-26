@@ -400,6 +400,11 @@
       "url": "https://512kb.club/",
       "type": "aggregator",
       "notes": "A curated webring/showcase of personal websites under 512KB uncompressed — a community of developers fighting web bloat with radical minimalism. Good hunting ground for future hidden-gem finds; sites are hand-submitted and reviewed for genuine content, not just link pages."
+    },
+    {
+      "url": "https://www.maproomblog.com/",
+      "type": "aggregator",
+      "notes": "The Map Room - a long-running blog (since 2003) about maps and cartography that regularly surfaces small, independent, hand-built mapping projects. Good hunting ground for cartography/geography gems."
     }
   ]
 }

@@ -3835,6 +3835,34 @@
       "headline": "一個人做出來的搜尋引擎",
       "headline_en": "Marginalia, a one-man search engine for the small web",
       "topic": "independent search engine"
+    },
+    {
+      "date": "2026-08-26",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "音樂精靈的告別之作：《平凡》",
+      "headline_en": "Kay Huang's 1991 farewell album for Rolling Stone Records, a rare Mandarin city pop record, reissued on vinyl",
+      "topic": "city pop album reissue"
+    },
+    {
+      "date": "2026-08-26",
+      "obsession_id": "finland-honeymoon",
+      "headline": "北國小鎮的憂傷舞步",
+      "headline_en": "Finnish tango, the Seinajoki Tangomarkkinat festival, and the lakeside dance pavilion tradition",
+      "topic": "Finnish tango culture"
+    },
+    {
+      "date": "2026-08-26",
+      "obsession_id": "do-312",
+      "headline": "地底下的芝加哥：走進迷宮的兩小時",
+      "headline_en": "A two-hour walking tour of downtown Chicago's underground Pedway, Sept 12",
+      "topic": "Pedway walking tour"
+    },
+    {
+      "date": "2026-08-26",
+      "obsession_id": "best-of-internet",
+      "headline": "每個故事都發生在真實的地方",
+      "headline_en": "Reading Maps, a solo-built interactive atlas plotting over a thousand journeys from literature",
+      "topic": "literary journey atlas"
     }
   ]
 }
