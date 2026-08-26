@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-26",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "European wildfires and heatwave",
-      "angle": "A brand-new world story for the paper and a different continent from July's Canadian-smoke/Chicago-AQI entry: a record European heatwave produces the largest fire evacuation the continent has seen, with 267,000+ people displaced across two countries and a French PM conceding the scale is unprecedented.",
-      "headline": "法國西班牙森林大火，二十六萬多人逃離家園"
-    },
-    {
-      "date": "2026-07-26",
-      "rank": 2,
-      "topic_id": "economics",
-      "topic": "Federal Reserve monetary policy",
-      "angle": "The Hormuz/Red Sea oil shock finally transmits into US monetary policy: with Brent above $100, a July 28-29 rate HIKE has become a live one-in-three possibility and September odds jumped to 80% — a Fed-decision lens distinct from July's run of oil-price-level and blockade-mechanics stories, and from 07-06's Warsh forward-guidance overhaul.",
-      "headline": "油價破百，聯準會下週可能升息"
-    },
-    {
-      "date": "2026-07-26",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US election security",
-      "angle": "The judiciary becomes the check: after 07-16's presidential primetime interference claims and 07-18's DHS coercion of state election officials, an appeals court actually blocks the mail-in voting executive order from taking effect before November — the courts stopping the election-rules push rather than the executive advancing it.",
-      "headline": "上訴法院擋下川普郵寄投票新規定"
-    },
-    {
-      "date": "2026-07-26",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago public safety",
-      "angle": "A doorstep public-safety story the paper hasn't run since June, distinct from July's Chicago coverage (food access, city finances, quantum HQ, ICE): a single overnight wave killing five across Hyde Park, Uptown and West Garfield Park lands directly in the November ballot fight over restoring gunshot-detection technology.",
-      "headline": "芝加哥一夜六起槍擊，五人死亡"
-    },
-    {
-      "date": "2026-07-26",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "Camp actually begins: after three preview entries this month (07-17 Trapilo/Clowney/Odunze, 07-22 Caleb Williams' QB room, 07-23 the safety room), players are on the field July 26 — and the frame is a franchise opening camp as defending NFC North champions with nine public practices, an arrival-and-expectations lens rather than another position-group projection.",
-      "headline": "熊隊開訓，首度以分區冠軍身分備戰"
-    },
-    {
-      "date": "2026-07-26",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The window's most audacious name yet: Real Madrid's Vinicius Junior surfaces as an Arsenal target off the back of his contract standoff at the Bernabeu — a genuinely new target of a different order of magnitude, deliberately distinct from the Guimaraes saga already run on 07-09, 07-13 and 07-25.",
-      "headline": "兵工廠線：阿森納把目標指向維尼修斯"
-    },
-    {
       "date": "2026-07-27",
       "rank": 1,
       "topic_id": "world",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "A deadline-week arithmetic and squad-shape analysis rather than another transfer bulletin: Arsenal are on course to finish the window with fewer senior attackers than they began it, so the question is what Arteta's front line looks like on 2 September and how a title defence absorbs that — explicitly not a reprint of 24 August's Martinelli-sale-and-blocked-Alvarez news.",
       "headline": "兵工廠線：轉會窗最後一週　前場人數不增反減"
+    },
+    {
+      "date": "2026-08-26",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "Illinois immigration policy",
+      "angle": "Sanctuary law failing from the inside rather than being attacked from Washington: an investigation shows a third of Illinois counties' own police and prosecutors have been feeding people to ICE in violation of the TRUST Act, and that the statute has no enforcement machinery.",
+      "headline": "調查：伊利諾州警察暗中幫忙遣送移民"
+    },
+    {
+      "date": "2026-08-26",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI industry structure",
+      "angle": "The AI story seen from the incumbents rather than the labs: a 175-year-old legal-information publisher builds its own model on an open-weight base plus proprietary Westlaw data, arguing the durable moat is the corpus and the professional judgment, not the model.",
+      "headline": "湯森路透推出自家法律AI模型"
+    },
+    {
+      "date": "2026-08-26",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Russia-Ukraine war",
+      "angle": "The war's western edge rather than its Russian depths: three strikes in two weeks on Moldova-adjacent border crossings show Moscow deliberately squeezing Ukraine's westward exits and accepting spillover risk into an undefended EU-candidate state.",
+      "headline": "俄軍無人機兩星期內三度炸邊界關口"
+    },
+    {
+      "date": "2026-08-26",
+      "rank": 4,
+      "topic_id": "ideas",
+      "topic": "Greenland ice sheet",
+      "angle": "An Arctic calving event that raises sea level by nothing today but removes the brake on a basin holding 30cm of it, making the story about ocean heat under the ice rather than air temperature above it.",
+      "headline": "格陵蘭冰川斷出曼哈頓大小的冰島"
+    },
+    {
+      "date": "2026-08-26",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "Accountability moves from the coaching staff to the locker room: it is Jaylon Johnson calling a players-only meeting at the last fan practice, and the offensive line problem spreads from left tackle to the injured starting right tackle, with cuts days away.",
+      "headline": "熊隊最後一練：萊特受傷，強森召集開會"
+    },
+    {
+      "date": "2026-08-26",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The deal Arsenal were racing to register in time for the opener is completed instead at a higher fee and too late to play - so the defender's first act in an Arsenal shirt will be facing the club that sold him at Villa Park on 31 August. Build the piece around that consequence, not around 'Arsenal have signed a defender'.",
+      "headline": "兵工廠線：康薩加盟，首秀可能在維拉公園"
     }
   ]
 }
