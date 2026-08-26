@@ -266,7 +266,7 @@ verification.
 
 After successful push, delete checkpoint files:
 ```bash
-rm -f data/pipeline/*.json data/pipeline/*.txt
+rm -f data/pipeline/*.json data/pipeline/*.txt data/pipeline/*.tsv
 ```
 
 ---

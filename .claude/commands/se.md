@@ -180,7 +180,7 @@ The explicit `HEAD:main` ensures the push targets the Pages branch (`main`) rega
 ## Step 8: Cleanup
 
 ```bash
-rm -f data/pipeline/*.json data/pipeline/*.txt
+rm -f data/pipeline/*.json data/pipeline/*.txt data/pipeline/*.tsv
 ```
 
 ## Summary

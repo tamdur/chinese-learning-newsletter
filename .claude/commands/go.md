@@ -4,7 +4,7 @@ You are running the daily content pipeline for 今日讀報. This generates all 
 
 Execute each pipeline in sequence. After each pipeline completes (including its commit/push), clean up checkpoint files before starting the next one:
 ```bash
-rm -f data/pipeline/*.json data/pipeline/*.txt
+rm -f data/pipeline/*.json data/pipeline/*.txt data/pipeline/*.tsv
 ```
 
 ---

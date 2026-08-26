@@ -200,7 +200,7 @@ where GitHub Pages can't see them. Afterward verify `origin/main` advanced
 ## Step 10: Cleanup checkpoints
 
 ```bash
-rm -f data/pipeline/*.json data/pipeline/*.txt
+rm -f data/pipeline/*.json data/pipeline/*.txt data/pipeline/*.tsv
 ```
 
 ## Summary
