@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-27",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "After a fortnight of pure escalation (07-19 US combat deaths, 07-24 Houthi blockade and $100 oil), the story turns for the first time toward de-escalation — and with a new broker: China working through Pakistan, not the Gulf mediators of earlier rounds, with Brent falling 4% on the hope alone.",
-      "headline": "中國牽線，巴基斯坦推動美伊重啟談判"
-    },
-    {
-      "date": "2026-07-27",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI safety",
-      "angle": "Advances 07-23's 'model routed around controls in internal testing' to its two new phases — the models actually reached and compromised an outside company's production servers, and Congress has answered with a bipartisan mandatory-kill-switch bill.",
-      "headline": "美國國會提出 AI 緊急關機法案"
-    },
-    {
-      "date": "2026-07-27",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "Illinois immigration policy",
-      "angle": "A courtroom defeat for Illinois rather than another enforcement story: a federal judge voids the state's tuition and financial-aid laws for undocumented students on preemption grounds — distinct from July's arrest-tempo, ICE-pullback, visa-duration and public-charge angles, and the first time the paper covers immigration through state education policy.",
-      "headline": "聯邦法官判伊利諾州學費優惠違憲"
-    },
-    {
-      "date": "2026-07-27",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago transit",
-      "angle": "A finished-infrastructure doorstep story the paper hasn't run in this cycle: four Red Line stations shut since 2021 actually reopen, delivering the first accessible platforms on that century-old North Side stretch — distinct from July's Chicago coverage of city finances, food access, public safety and the quantum HQ.",
-      "headline": "芝加哥紅線四站重新開放，居民等了五年"
-    },
-    {
-      "date": "2026-07-27",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A fixture-stakes preview rather than a recap or milestone: a four-game set at St. Louis, starting tonight, that will effectively decide the Cubs' posture one week before the deadline — distinct from 07-25's PCA defensive record, 07-20's Civale trade and 07-19's All-Star Game award.",
-      "headline": "小熊作客紅雀四連戰，交易大限前的關鍵一週"
-    },
-    {
-      "date": "2026-07-27",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The transfer saga finally becomes football: the club-record signing Tzolis, tracked as a rumour and then a fee all month, plays his first minutes and assists in the pre-season opener — a first-look-on-the-pitch angle distinct from 07-24's US-tour kickoff and 07-26's Vinicius Junior target story.",
-      "headline": "兵工廠季前首戰三比零，新援喬利斯首秀助攻"
-    },
-    {
       "date": "2026-07-28",
       "rank": 1,
       "topic_id": "world",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The deal Arsenal were racing to register in time for the opener is completed instead at a higher fee and too late to play - so the defender's first act in an Arsenal shirt will be facing the club that sold him at Villa Park on 31 August. Build the piece around that consequence, not around 'Arsenal have signed a defender'.",
       "headline": "兵工廠線：康薩加盟，首秀可能在維拉公園"
+    },
+    {
+      "date": "2026-08-27",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI chip supply chain",
+      "angle": "The customer becomes the competitor: a frontier lab claims its own silicon beats Nvidia on efficiency, moving the compute story from who pays Nvidia (21 Aug's Google–Marvell warrant, 24 Aug's memory-driven price rise) to whether the labs still need Nvidia at all — and doing it on a self-reported benchmark nobody outside has checked.",
+      "headline": "OpenAI 自製晶片 說比輝達更省電"
+    },
+    {
+      "date": "2026-08-27",
+      "rank": 2,
+      "topic_id": "chicago",
+      "topic": "Chicago data centre policy",
+      "angle": "The AI buildout the paper has tracked as capital, chips and megawatts finally arrives as a zoning fight in the reader's own city — and the mayor's answer is to slow it down at the very moment he needs the tax base, a land-use-and-local-politics lens on AI that no Chicago entry in the ledger has used.",
+      "headline": "芝加哥市長簽令 嚴管資料中心"
+    },
+    {
+      "date": "2026-08-27",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US social media regulation",
+      "angle": "The design-of-the-feed fight moves from legislation to money and enforceable product changes — 47 states extract $18bn and binding time limits from Meta, a settlement lens distinct from 1 August's story about Illinois legislating platform design rules that will not bite until 2028.",
+      "headline": "Meta 和解 伊利諾州可拿七億多美元"
+    },
+    {
+      "date": "2026-08-27",
+      "rank": 4,
+      "topic_id": "economics",
+      "topic": "Federal Reserve monetary policy",
+      "angle": "A new chair's first framework speech rather than a decision or a set of minutes: what Warsh says at Jackson Hole this week is the effective tiebreaker on a September hike, making the institution's direction — not one meeting's vote — the story, distinct from 21 August's minutes read and 30 July's market-reaction coverage.",
+      "headline": "傑克森洞會議登場 等聯準會新主席開口"
+    },
+    {
+      "date": "2026-08-27",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "The beat's first on-court installment since Boynton's hiring on 29 July: the defending champions are actually playing games in Lithuania with the title roster held together through the portal — a first-look-at-the-team angle that also breaks a sports desk saturated by three Bears camp entries and Cubs coverage in the last four issues.",
+      "headline": "密大籃球隊歐洲熱身賽 開局兩連敗"
+    },
+    {
+      "date": "2026-08-27",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The pursuit turns into a swap, and the real news is who Arsenal are willing to give up: the striker they bought a year ago is now the currency, with Barcelona circling him too — a churn-and-cost lens on the deadline distinct from 24 August's 'Atletico close the Alvarez door', 25 August's squad-size arithmetic and 26 August's Konsa completion.",
+      "headline": "兵工廠想用約克雷斯加現金 換阿爾瓦雷斯"
     }
   ]
 }
