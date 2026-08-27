@@ -3863,6 +3863,34 @@
       "headline": "每個故事都發生在真實的地方",
       "headline_en": "Reading Maps, a solo-built interactive atlas plotting over a thousand journeys from literature",
       "topic": "literary journey atlas"
+    },
+    {
+      "date": "2026-08-27",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "獵人：奶奶聽得懂的歌",
+      "headline_en": "Biung's 2000 debut album The Hunter, written in Bunun at his grandmother's request",
+      "topic": "Bunun-language debut album"
+    },
+    {
+      "date": "2026-08-27",
+      "obsession_id": "finland-honeymoon",
+      "headline": "三國石堆：十秒走過三個國家",
+      "headline_en": "Treriksröset, the Finland-Sweden-Norway tripoint you can walk around on the frozen lake in March",
+      "topic": "three-country border cairn"
+    },
+    {
+      "date": "2026-08-27",
+      "obsession_id": "do-312",
+      "headline": "三百五十張桌子的玩具兵大會",
+      "headline_en": "Chicagoland Toy Soldier Show in Schaumburg, Sept 20, with diorama and painting competitions",
+      "topic": "toy soldier collectors show"
+    },
+    {
+      "date": "2026-08-27",
+      "obsession_id": "best-of-internet",
+      "headline": "信任的演化：一個人做出來的遊戲",
+      "headline_en": "Nicky Case's The Evolution of Trust, a playable game-theory essay",
+      "topic": "playable game theory essay"
     }
   ]
 }

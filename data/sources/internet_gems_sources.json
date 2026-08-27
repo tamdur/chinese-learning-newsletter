@@ -405,6 +405,11 @@
       "url": "https://www.maproomblog.com/",
       "type": "aggregator",
       "notes": "The Map Room - a long-running blog (since 2003) about maps and cartography that regularly surfaces small, independent, hand-built mapping projects. Good hunting ground for cartography/geography gems."
+    },
+    {
+      "url": "https://explorabl.es",
+      "type": "aggregator",
+      "notes": "Explorable Explanations — curated directory of interactive, playable essays that teach concepts (game theory, epidemiology, music, physics) through simulation rather than prose. Maintained by Nicky Case; links to dozens of independent creators' interactive teaching projects."
     }
   ]
 }
