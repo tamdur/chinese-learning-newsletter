@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-28",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Russia–Ukraine war",
-      "angle": "The war returns to leader-level diplomacy for the first time this month — a White House summit — and the telling detail is Russia cancelling its Navy Day parade for a second year, conceding that Ukraine's deep-strike reach now shapes Moscow's own calendar.",
-      "headline": "川普在白宮會見澤倫斯基 烏克蘭想要更多防空武器"
-    },
-    {
-      "date": "2026-07-28",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US election security",
-      "angle": "The mail-ballot fight escalates from the appellate blockade of 07-26 to the Supreme Court itself, with the administration attaching a deadline — a ruling by mid-August — that makes the midterm calendar, not the legal merits, the operative pressure.",
-      "headline": "郵寄選票禁令上訴 政府要求最高法院八月前決定"
-    },
-    {
-      "date": "2026-07-28",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI infrastructure",
-      "angle": "Against a fortnight of AI-bubble anxiety in the markets, the buildout is quietly being written into a country's industrial strategy — a 2GW AI factory and an HBM4 supply pact that bind South Korean manufacturing to Nvidia's roadmap, a physical-capacity lens rather than a share-price one.",
-      "headline": "輝達與韓國SK集團簽下五千億美元AI大單"
-    },
-    {
-      "date": "2026-07-28",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Illinois education policy",
-      "angle": "A brand-new Illinois policy thread for the paper: the state legislates phones out of every classroom statewide by 2027-28 — over teachers'-union objection — putting Chicago inside a national experiment on adolescent attention.",
-      "headline": "伊利諾新法 全州公立學校上課全程禁用手機"
-    },
-    {
-      "date": "2026-07-28",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "Yesterday's preview gets its answer: the Cubs take the opener on the road 7-3, and the win — Hoerner's eighth-inning homer sealing it — turns the four-game set into a chance to buy from strength rather than desperation before August 3.",
-      "headline": "小熊客場七比三擊敗紅雀 交易截止前先贏一場"
-    },
-    {
-      "date": "2026-07-28",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Pre-season shifts from the American tour to a Spanish conditioning camp, and the news is availability rather than acquisition — two players back in full training, reshaping Arteta's options in a squad still without Saliba.",
-      "headline": "兵工廠線 球隊轉戰西班牙集訓 兩名傷兵歸隊"
-    },
-    {
       "date": "2026-07-29",
       "rank": 1,
       "topic_id": "world",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The pursuit turns into a swap, and the real news is who Arsenal are willing to give up: the striker they bought a year ago is now the currency, with Barcelona circling him too — a churn-and-cost lens on the deadline distinct from 24 August's 'Atletico close the Alvarez door', 25 August's squad-size arithmetic and 26 August's Konsa completion.",
       "headline": "兵工廠想用約克雷斯加現金 換阿爾瓦雷斯"
+    },
+    {
+      "date": "2026-08-28",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI industry consolidation",
+      "angle": "The 25 August question — who ends up owning open-source AI's neutral ground — gets its answer, and it is the chipmaker every lab is currently trying to design its way around, making this a vertical-integration and conflict-of-interest story rather than another valuation rumour.",
+      "headline": "輝達傳出要用一百二十九億美元買下 Hugging Face"
+    },
+    {
+      "date": "2026-08-28",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "US–China trade",
+      "angle": "The trade war swings back from Canada to China, and the mechanism is deliberately self-limiting — a rise engineered to land exactly on the agreed 20% cap so that maximum pressure can be applied without breaking the truce weeks before Xi arrives in Washington.",
+      "headline": "美國準備對中國再加百分之七點五關稅"
+    },
+    {
+      "date": "2026-08-28",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI and robotics",
+      "angle": "A brand-new AI thread for the paper: the frontier labs are no longer competing only over models but over the interface standard by which software agents will physically operate machines — the first embodiment story in the ledger.",
+      "headline": "Anthropic 推出新標準，讓 Claude 直接操作機器人"
+    },
+    {
+      "date": "2026-08-28",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "Sudan civil war",
+      "angle": "A brand-new international thread that breaks a month of Gulf, Ukraine and tariff coverage: the RSF's push is now about geography rather than cities — a captured Ethiopian border strip giving the paramilitaries an external supply frontier while El-Obeid's siege threatens the road back to Khartoum.",
+      "headline": "蘇丹快速支援部隊攻下邊界城鎮，戰火往兩邊擴大"
+    },
+    {
+      "date": "2026-08-28",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "Camp stops being an evaluation story and becomes a dated deadline with a named casualty list — 38 players cut by Sunday, Bryant lost to knee surgery for four to six months and both starting corners down, making the secondary rather than the offensive line the group Chicago cannot fix in time.",
+      "headline": "熊隊三十一日要裁掉三十八人，後防最讓人擔心"
+    },
+    {
+      "date": "2026-08-28",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The beat finally leaves the transfer window for the competition itself: the season's European map is set — Real Madrid at the Emirates, Bayern and Napoli away — and the question becomes whether a squad that finished the window with fewer senior attackers than it started can carry that fixture load; the ledger has no Champions League entry all summer.",
+      "headline": "歐冠抽籤出爐，兵工廠八個對手全定了"
     }
   ]
 }
