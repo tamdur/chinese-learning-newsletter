@@ -410,6 +410,16 @@
       "url": "https://explorabl.es",
       "type": "aggregator",
       "notes": "Explorable Explanations — curated directory of interactive, playable essays that teach concepts (game theory, epidemiology, music, physics) through simulation rather than prose. Maintained by Nicky Case; links to dozens of independent creators' interactive teaching projects."
+    },
+    {
+      "url": "https://audio.nmth.gov.tw",
+      "type": "aggregator",
+      "notes": "臺灣音聲100年 — National Museum of Taiwan History's digitized audio archive of 20th-century Taiwanese recordings (folk, protest songs, ritual music, radio). Good hunting ground for historically rooted Taiwanese music stories."
+    },
+    {
+      "url": "https://www.chicagotextilecenter.org/whats-happening-1",
+      "type": "aggregator",
+      "notes": "Chicago Textile Center's public events calendar — mending circles, dye workshops, spinning/weaving classes and fiber-arts meetups around the city, often hosted by partner collectives at other venues. Recurring hunting ground for offbeat, hands-on craft events open to the public."
     }
   ]
 }
