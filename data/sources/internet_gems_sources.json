@@ -420,6 +420,16 @@
       "url": "https://www.chicagotextilecenter.org/whats-happening-1",
       "type": "aggregator",
       "notes": "Chicago Textile Center's public events calendar — mending circles, dye workshops, spinning/weaving classes and fiber-arts meetups around the city, often hosted by partner collectives at other venues. Recurring hunting ground for offbeat, hands-on craft events open to the public."
+    },
+    {
+      "url": "https://wiki.aineetonkulttuuriperinto.fi/wiki/Tablet_weaving",
+      "type": "aggregator",
+      "notes": "Finland's living-heritage wiki (Elävän perinnön wikiluettelo) cataloguing intangible cultural heritage practices — folk crafts, traditions, and skills still practiced today, each with sourcing and practitioner details. Good hunting ground for specific, museum-quality craft stories beyond the obvious sauna/Sami angles."
+    },
+    {
+      "url": "https://www.glessnerhouse.org/events",
+      "type": "aggregator",
+      "notes": "Glessner House (National Historic Landmark on Prairie Avenue) runs a recurring calendar of small-capacity specialty tours — architecture tours, servants'-story tours, brick-architecture walks, neighborhood history walks — often led by named historians/authors, limited to 8-15 people."
     }
   ]
 }
