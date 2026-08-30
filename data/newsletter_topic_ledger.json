@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-30",
-      "rank": 1,
-      "topic_id": "economics",
-      "topic": "Federal Reserve monetary policy",
-      "angle": "The July 26 preview lands as a decision: the Fed holds but with three dissents FOR a hike and a hawkish inflation warning, and the market's verdict — the worst Fed-day rout since 2024 and 30-year yields at 2007 highs — shows the Gulf oil shock arriving in American long-term borrowing costs.",
-      "headline": "美國利率不動，股市大跌"
-    },
-    {
-      "date": "2026-07-30",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Japan earthquake",
-      "angle": "A brand-new world story the paper has never run: a M7.1 quake in Kumamoto kills at least 23, with a mall explosion and a collapsed factory chimney as the deadliest points of failure, and rescuers now inside the closing 72-hour survival window.",
-      "headline": "日本熊本強震，至少二十三人死亡"
-    },
-    {
-      "date": "2026-07-30",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI safety",
-      "angle": "The AI-security story leaves the lab: rather than a frontier model misbehaving in internal testing, researchers show self-replicating prompt-injection worms spreading between ordinary users through Microsoft Copilot for Word — malware made of plain text, in the software hundreds of millions of office workers open every day.",
-      "headline": "藏在文件裡的AI病毒會自己傳染"
-    },
-    {
-      "date": "2026-07-30",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "COVID-19 origins investigation",
-      "angle": "A brand-new US-governance thread for the paper: the country's most famous public-health official refuses to answer a single question under the Fifth Amendment, and the chairman responds by scheduling a contempt vote — a fight over compelled testimony rather than over the virus itself.",
-      "headline": "佛奇拒絕回答，參議院要投票追究"
-    },
-    {
-      "date": "2026-07-30",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "Michigan's new era faces the conference press for the first time — Whittingham's Big Ten Media Days debut in Chicago, where a coach imported from Utah must sell a rebuilt staff and a scandal-scarred, AD-less department, not just name a starting quarterback.",
-      "headline": "密西根新教頭首次面對大十聯盟媒體"
-    },
-    {
-      "date": "2026-07-30",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The manager's own voice replaces the rumour mill: Arteta publicly declares the champions' squad not good enough and promises imminent 'concrete moves', reframing a net-negative window (two in, three out) as deliberate patience — distinct from the week's target-identification and pursuit-collapse stories.",
-      "headline": "阿爾特塔：兵工廠需要更好的球員"
-    },
-    {
       "date": "2026-07-31",
       "rank": 1,
       "topic_id": "ai",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The manager confirms a player has been removed from first-team training three days before deadline — an exclusion rather than a rumour, and the clearest signal yet that Arsenal will end the window with fewer forwards, while the record signing becomes available for Villa Park.",
       "headline": "兵工廠線：耶穌未隨一隊練球"
+    },
+    {
+      "date": "2026-08-30",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Himalayan glacier flood",
+      "angle": "A brand-new international thread for the paper, and the first climate-disaster story in the ledger framed as a monitoring-and-warning failure rather than as weather: a glacier collapse that has now killed 750 with 3,000 missing, in a hazard class scientists have mapped for years and could in principle have warned about.",
+      "headline": "冰川崩落引發洪水，尼泊爾已七百五十人死亡"
+    },
+    {
+      "date": "2026-08-30",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US immigration policy",
+      "angle": "Immigration policy aimed for the first time at the legal, high-skilled tier and at the spouse rather than the visa-holder — about 100,000 mostly Indian women losing the right to work — a household-economics lens distinct from the ledger's birthright orders (7 Aug), class certification (9 Aug) and consular 'public charge' freeze (23 Aug).",
+      "headline": "美國打算取消 H-1B 配偶工作許可"
+    },
+    {
+      "date": "2026-08-30",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI and economic growth",
+      "angle": "The AI debate reduced to a single falsifiable wager with a deadline — 15% US GDP-per-capita growth in one year by 2033 — a macro-takeoff lens the ledger's month of capex, chips, IPOs, consolidation and safety stories has never used.",
+      "headline": "學者公開打賭：AI 能讓經濟一年長百分之十五嗎"
+    },
+    {
+      "date": "2026-08-30",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Illinois economic development",
+      "angle": "A new Illinois thread for the paper and a rare look at the limits of state economic power: a governor with no authority to stop a plant closing can only try to broker a sale for 2,500 workers, distinct from the ledger's recent Chicago entries on data-centre zoning (27 Aug) and licence-plate surveillance (29 Aug).",
+      "headline": "泰森工廠突然關門，州長承諾拚命找買家"
+    },
+    {
+      "date": "2026-08-30",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The race moves from positioning to a clinch-watch — magic number two, a six-year playoff drought about to end — and the question flips to whether the deadline rotation the paper praised on 10 August is falling apart at exactly the wrong moment, distinct from 24 August's wild-card standings entry.",
+      "headline": "小熊隊逼近季後賽，投手表現令人擔心"
+    },
+    {
+      "date": "2026-08-30",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The beat finally leaves a fortnight of transfer churn for the team sheet: Arteta's Villa Park availability list gives Saliba a months-long prognosis, puts the record signing Guimaraes in doubt, and delivers the Konsa-against-his-old-club debut the paper flagged on 26 August — a selection-and-fitness lens, not another deadline rumour.",
+      "headline": "兵工廠線：七人確定缺陣，週一作客維拉"
     }
   ]
 }
