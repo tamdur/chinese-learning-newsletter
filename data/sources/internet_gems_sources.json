@@ -430,6 +430,16 @@
       "url": "https://www.glessnerhouse.org/events",
       "type": "aggregator",
       "notes": "Glessner House (National Historic Landmark on Prairie Avenue) runs a recurring calendar of small-capacity specialty tours — architecture tours, servants'-story tours, brick-architecture walks, neighborhood history walks — often led by named historians/authors, limited to 8-15 people."
+    },
+    {
+      "url": "https://wiki.pumpingstationone.org/wiki/TOOOL_Chicago",
+      "type": "aggregator",
+      "notes": "Pumping Station: One is a Chicago hackerspace whose wiki and event pages list recurring niche public meetups (lockpicking, electronics, fabrication) that rarely surface in mainstream event calendars."
+    },
+    {
+      "url": "https://www.self-experiments.org/",
+      "type": "personal science blog",
+      "notes": "Alex Chernavsky's ongoing n=1 self-experimentation log with rigorous self-blinding/placebo protocols; part of the small 'personal science'/Quantified Self scene alongside Seth Roberts's work."
     }
   ]
 }
