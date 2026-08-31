@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-07-31",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI investment boom",
-      "angle": "After two weeks in which the paper covered the AI trade only through its doubters — a chip rout, Apple dethroning Nvidia, Alphabet punished for capex, Treasury warning of a dot-com repeat — the ROI question gets its first hard affirmative answer from the income statement, in the largest single-day market-value gain any company has ever recorded.",
-      "headline": "微軟一天市值增加四千五百億美元，創股市紀錄"
-    },
-    {
-      "date": "2026-07-31",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Gaza governance",
-      "angle": "The governance vacuum the paper reported on July 7, when Hamas dissolved its own administrative body, now has a proposed filling — disarmament in exchange for phased withdrawal, a technocratic government and an international force — announced by Washington but confirmed by neither combatant and carrying no timeline.",
-      "headline": "川普宣布加薩協議，哈瑪斯交武器換以軍撤退"
-    },
-    {
-      "date": "2026-07-31",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "Russia–Ukraine war",
-      "angle": "A new category of target rather than a new battlefield tally: Moscow destroys American corporate property inside Ukraine for the first time, testing whether US ownership carries any deterrent weight days after the Trump–Zelensky White House summit.",
-      "headline": "俄飛彈炸毀美國公司在基輔的無人機工廠"
-    },
-    {
-      "date": "2026-07-31",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago Lollapalooza",
-      "angle": "A doorstep story about municipal capacity, not culture: the city absorbs 115,000 people a day into Grant Park while pre-positioning emergency weather shelters and surging CTA and Metra service, one week after a storm-and-heat episode exposed how slowly Chicago recovers.",
-      "headline": "音樂節四天湧入五十萬人，芝加哥全城備戰"
-    },
-    {
-      "date": "2026-07-31",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The first time the paper covers the Bears as a public-finance question rather than a roster one: the board votes to advance an Indiana site backed by at least $1bn of that state's taxpayer money, after Illinois declined to compete and Pritzker conceded the team may leave.",
-      "headline": "熊隊新球場計畫轉向印第安納州"
-    },
-    {
-      "date": "2026-07-31",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The title defence is examined through availability rather than acquisition: with Saliba out for four to five months, Timber is now also in doubt for the opening fixture, leaving the champions' first-choice defence potentially unavailable on day one.",
-      "headline": "兵工廠線：提姆伯拚在開幕戰前復原"
-    },
-    {
       "date": "2026-08-01",
       "rank": 1,
       "topic_id": "world",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The beat finally leaves a fortnight of transfer churn for the team sheet: Arteta's Villa Park availability list gives Saliba a months-long prognosis, puts the record signing Guimaraes in doubt, and delivers the Konsa-against-his-old-club debut the paper flagged on 26 August — a selection-and-fitness lens, not another deadline rumour.",
       "headline": "兵工廠線：七人確定缺陣，週一作客維拉"
+    },
+    {
+      "date": "2026-08-31",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "After a month in which the paper covered this war only through sanctions, diplomacy and economics, the shooting resumes — and the specific trigger is sea mines being readied for Hormuz, meaning Washington struck to protect the shipping lane rather than to punish Tehran.",
+      "headline": "美軍空襲伊朗火箭發射車"
+    },
+    {
+      "date": "2026-08-31",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US government funding",
+      "angle": "The paper's first appropriations story: a shutdown is averted by a 90-6 Senate vote, but the live dispute inside the bill is a legislative attempt to fence off the White House budget office from money Congress has already appropriated — a spending-power question, not a shutdown countdown.",
+      "headline": "參議院通過短期預算案"
+    },
+    {
+      "date": "2026-08-31",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI industry rivalry",
+      "angle": "Model access becomes a weapon rather than a product: a frontier lab terminates a top customer purely because of who bought it, with a dated cut-off — a supplier-power lens distinct from the ledger's Stripe routing-layer, Hugging Face and IPO consolidation stories.",
+      "headline": "OpenAI 斷掉 Cursor 的模型供應"
+    },
+    {
+      "date": "2026-08-31",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago–federal immigration standoff",
+      "angle": "Chicago fights federal immigration enforcement with its chequebook rather than its sanctuary statute — disclosure of ICE ties made a condition of winning city contracts — distinct from 26 August's story about Illinois police quietly violating the TRUST Act.",
+      "headline": "芝加哥用市府合約向廠商施壓"
+    },
+    {
+      "date": "2026-08-31",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The 28 August preview gets its outcome, and the news is in the mechanism: the Bears absorbed their injury crisis by shelving starters on PUP and IR and cutting preseason standouts, rather than by adding players — the shape of the actual opening-day roster, not another injury bulletin.",
+      "headline": "熊隊裁到五十三人，傷兵先擺著"
+    },
+    {
+      "date": "2026-08-31",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The academy-pipeline lens the beat has never used this summer: a Hale End graduate of 18 years is released for free on deadline eve by the same club that failed all window to buy the winger it says it needs, showing the squad is being thinned at the exact position Arteta could not reinforce.",
+      "headline": "十八年畫下句點：尼爾森告別兵工廠"
     }
   ]
 }
