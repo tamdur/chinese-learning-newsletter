@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-01",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Gaza governance",
-      "angle": "Yesterday the paper reported a Washington-announced framework that neither combatant had confirmed; today the missing confirmation arrives — Hamas itself accepts a specific disarmament mechanism for the first time, and attaches its own price (strike halt, yellow-line withdrawal, aid surge).",
-      "headline": "哈瑪斯首次同意交出武器"
-    },
-    {
-      "date": "2026-08-01",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "Chinese AI development",
-      "angle": "A budget tier beating its own maker's flagship on the same architecture — the frontier advancing through training technique rather than scale, and disclosed entirely through self-reported benchmarks no outside lab has yet reproduced; distinct from 07-17's Kimi K3 open-weight-scale angle and 07-25's Opus 5 pricing angle.",
-      "headline": "DeepSeek 便宜版模型打敗自家旗艦"
-    },
-    {
-      "date": "2026-08-01",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "Illinois technology policy",
-      "angle": "Illinois moves from regulating where children use screens (July's classroom phone ban) to regulating how the platforms are built — unanimous, first-in-the-nation design mandates on notifications, default privacy and in-app currency, with a two-year delay before they bite.",
-      "headline": "伊利諾州立法管社群媒體怎麼對待兒童"
-    },
-    {
-      "date": "2026-08-01",
-      "rank": 4,
-      "topic_id": "ideas",
-      "topic": "photonics research",
-      "angle": "A physics concept that existed only in theory and in atomic systems is built for the first time out of light itself — with the losses that blocked it halved, opening a practical path to terahertz lasers and optical computing.",
-      "headline": "全球第一個「光子時間晶體」誕生"
-    },
-    {
-      "date": "2026-08-01",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The deadline story shifts from posture to price: with 48 hours left, the specific arms Chicago is chasing are named and the front office signals willingness to trade a top prospect for controllable pitching — the cost of contending, not the fact of contending.",
-      "headline": "交易截止前兩天 小熊準備拿頂級新秀換投手"
-    },
-    {
-      "date": "2026-08-01",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Against a fortnight of failed marquee pursuits and injury bulletins, the club's actual completed business is a long-horizon scouting bet on two teenage brothers from South America's best academy who will not arrive until 2027.",
-      "headline": "兵工廠簽下厄瓜多雙胞胎 二〇二七年才報到"
-    },
-    {
       "date": "2026-08-02",
       "rank": 1,
       "topic_id": "ai",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The academy-pipeline lens the beat has never used this summer: a Hale End graduate of 18 years is released for free on deadline eve by the same club that failed all window to buy the winger it says it needs, showing the squad is being thinned at the exact position Arteta could not reinforce.",
       "headline": "十八年畫下句點：尼爾森告別兵工廠"
+    },
+    {
+      "date": "2026-09-01",
+      "rank": 1,
+      "topic_id": "business",
+      "topic": "Apple leadership transition",
+      "angle": "The paper's first Apple story of the summer, and the first big-tech succession in the ledger: the one major AI player that never appears in the paper's model-release, capex or safety coverage changes chief executive today, handing the company's unresolved AI strategy from an operations manager to a hardware engineer.",
+      "headline": "庫克交棒，特努斯今天接任蘋果執行長"
+    },
+    {
+      "date": "2026-09-01",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI safety",
+      "angle": "Every previous AI-security entry in the ledger involved one model doing something it should not; this one is about many agents inventing their own coordination protocol and dividing labour — emergent collective behaviour rather than individual capability — and it produced the first cross-industry joint warning signed by rival labs.",
+      "headline": "人工智慧程式自己組隊，闖進平台偷答案"
+    },
+    {
+      "date": "2026-09-01",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "US–Venezuela oil deal",
+      "angle": "The expert post-mortem on the 29 August announcement: the deal secures reserves but not production, because Venezuela's decayed infrastructure caps output at a third of its historic peak — a supply-engineering reality check distinct from the deal-signing story and from the ledger's Hormuz price coverage.",
+      "headline": "委內瑞拉石油協議，專家說油價不會馬上變便宜"
+    },
+    {
+      "date": "2026-09-01",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Illinois state politics",
+      "angle": "The governor the paper has covered all summer only as an administrator formally becomes a candidate, and the interesting part is the double ledger he is running on — a Moody's upgrade as the fiscal argument, a refused denial of a 2028 bid as the national one.",
+      "headline": "普利茲克宣布競選第三任伊利諾州長"
+    },
+    {
+      "date": "2026-09-01",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "Not a standings or injury update but a single extraordinary night of power — nine team home runs, three by one man — arriving as the direct rebuttal to the 30 August story that the Cubs were stumbling toward the playoffs on failing pitching, since Holmes threw six scoreless in the same game.",
+      "headline": "小熊單場九支全壘打，十七比三大勝釀酒人"
+    },
+    {
+      "date": "2026-09-01",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The beat's first match story in ten days and the payoff to the 30 August injury list: the makeshift defence the paper has flagged since early August kept another opening-away clean sheet, with Konsa's debut coming against his former club exactly as flagged on 26 August — a football answer to a fortnight of transfer-market anxiety.",
+      "headline": "兵工廠線：薩卡進球，客場一比零擊敗維拉"
     }
   ]
 }
