@@ -440,6 +440,11 @@
       "url": "https://www.self-experiments.org/",
       "type": "personal science blog",
       "notes": "Alex Chernavsky's ongoing n=1 self-experimentation log with rigorous self-blinding/placebo protocols; part of the small 'personal science'/Quantified Self scene alongside Seth Roberts's work."
+    },
+    {
+      "url": "https://studiomoniker.com/projects",
+      "type": "portfolio",
+      "notes": "Project archive of Studio Moniker (Amsterdam interactive design studio behind Radio Garden) — dozens of small playful web experiments, participatory art, browser toys, data visualisations made by a tiny team."
     }
   ]
 }
