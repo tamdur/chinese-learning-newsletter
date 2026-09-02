@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-02",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI governance",
-      "angle": "AI regulation stops being a legislative debate and becomes an operating requirement — EU and California labeling mandates switch on the same day, the first synchronized transnational rules on disclosing AI-generated content.",
-      "headline": "歐盟與加州同日實施 AI 標示新規"
-    },
-    {
-      "date": "2026-08-02",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US–Iran war",
-      "angle": "The war opens a domestic front — a suspected Iran-linked intrusion into Michigan and Minnesota water utilities brings the conflict onto American soil and into civilian infrastructure.",
-      "headline": "密西根明尼蘇達水廠遭駭 FBI 查是否與伊朗有關"
-    },
-    {
-      "date": "2026-08-02",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US immigration policy",
-      "angle": "Immigration policy through the courtroom's due-process gap rather than enforcement: a lapsed contract leaves 26,000 unaccompanied children facing deportation hearings without lawyers.",
-      "headline": "聯邦合約到期 兩萬六千名移民兒童失去律師"
-    },
-    {
-      "date": "2026-08-02",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago transit",
-      "angle": "The doorstep price of the transit rescue arrives in the reader's own receipts — a quarter-point sales tax effective August 1 that funds NITA and makes Chicago's rate the highest of any major US city.",
-      "headline": "交通稅八月上路 芝加哥消費稅全美最高"
-    },
-    {
-      "date": "2026-08-02",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "A specific position battle rather than camp scene-setting: Amegadjie takes first-team left-tackle reps ahead of Braxton Jones with pads going on Monday.",
-      "headline": "熊隊左護鋒之爭開打 阿梅加吉搶下先發練習"
-    },
-    {
-      "date": "2026-08-02",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The month-long Guimaraes saga reaches an agreed fee and a booked medical — £70m plus £10m and a five-year deal — the deal-closing phase and the 'concrete move' Arteta promised on 07-30.",
-      "headline": "兵工廠八千萬英鎊談妥紐卡索隊長吉馬良斯"
-    },
-    {
       "date": "2026-08-03",
       "rank": 1,
       "topic_id": "world",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The beat's first match story in ten days and the payoff to the 30 August injury list: the makeshift defence the paper has flagged since early August kept another opening-away clean sheet, with Konsa's debut coming against his former club exactly as flagged on 26 August — a football answer to a fortnight of transfer-market anxiety.",
       "headline": "兵工廠線：薩卡進球，客場一比零擊敗維拉"
+    },
+    {
+      "date": "2026-09-02",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI in government and defence",
+      "angle": "AI stops being an industry story and becomes state infrastructure: three frontier models are issued to 3 million Defence Department staff on a classified-adjacent network, and the news is which lab is missing — Anthropic — making willingness to accept military use, not capability, the thing that now sorts the labs.",
+      "headline": "美國國防部把 ChatGPT 和 Grok 發給三百萬人"
+    },
+    {
+      "date": "2026-09-02",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US separation of powers",
+      "angle": "The ballroom fight ends without anyone deciding whether it was legal — the Court disposes of it on standing while four justices including the Chief Justice say the project is probably unlawful, showing that the barrier to checking executive action is now who is allowed to sue rather than what the constitution says.",
+      "headline": "最高法院放行　白宮宴會廳繼續施工"
+    },
+    {
+      "date": "2026-09-02",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Russia–China–Iran alignment",
+      "angle": "Iran's answer to being cut off by its Gulf neighbours is a rival payments bloc rather than a battlefield move — Putin's first meeting with Pezeshkian since the war began is about routing commodity trade around the dollar, a financial-architecture lens on the conflict distinct from the ledger's strikes, ultimatums, oil prices and sanctions entries.",
+      "headline": "上合組織峰會　普丁會見伊朗總統談繞開美元"
+    },
+    {
+      "date": "2026-09-02",
+      "rank": 4,
+      "topic_id": "ai",
+      "topic": "AI and labour markets",
+      "angle": "The 10 August finding that AI displacement was invisible in the macro data gets its counter-evidence from the employer side — the share of layoffs firms themselves blame on AI has gone from 8% to 54% in a year — making the question why what companies say and what the aggregate data show have come apart.",
+      "headline": "今年一半以上的裁員　公司說是因為 AI"
+    },
+    {
+      "date": "2026-09-02",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The depth chart Whittingham refused to publish on 25 August is forced open by injury four days before his debut — the left tackle resolved on 20 August is hurt and Jordan Marshall is named at running back — turning camp secrecy into a concrete Week One personnel problem.",
+      "headline": "密西根新教頭首戰在即　主力左截鋒受傷"
+    },
+    {
+      "date": "2026-09-02",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The window shuts and the resolution is subtraction: three attackers out on deadline day and none in, with the telling choice being that Arsenal sent Nwaneri — the academy's best forward and the obvious internal answer to the winger they could not sign — abroad on loan instead of using him.",
+      "headline": "兵工廠關窗前再送走一人　努瓦內里外借多特蒙德"
     }
   ]
 }
