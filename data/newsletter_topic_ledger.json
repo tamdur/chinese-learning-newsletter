@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-03",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "For the first time the war reaches a stated deal framework rather than another escalation or a collapsed opening — Trump personally cancels a planned strike and puts Hormuz's reopening on the table, the settlement phase after a month the paper covered only as widening conflict.",
-      "headline": "川普取消攻擊伊朗，稱協議架構已談成"
-    },
-    {
-      "date": "2026-08-03",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI capability milestones",
-      "angle": "The mathematical community's verdict arrives: rather than one isolated proof, an unreleased model clears ten open problems at once and a Fields Medalist publicly calls one of them journal-ready — external peer validation, not a lab's own benchmark claim.",
-      "headline": "OpenAI 新模型解開十道數學難題"
-    },
-    {
-      "date": "2026-08-03",
-      "rank": 3,
-      "topic_id": "business",
-      "topic": "pharmaceutical megamergers",
-      "angle": "A brand-new industry for the paper's M&A coverage: the consolidation wave jumps from media and tech to drugmakers, with a potential $455bn combination driven by a looming patent cliff rather than by streaming economics.",
-      "headline": "兩大藥廠傳出談合併，規模上看四千億美元"
-    },
-    {
-      "date": "2026-08-03",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "US election security",
-      "angle": "The voter-roll campaign the paper covered on July 18 as federal coercion of state officials gets its scorecard — nineteen consecutive court defeats, none reversed, and an Illinois dismissal with prejudice that forecloses refiling.",
-      "headline": "法官駁回選民名冊訴訟，聯邦政府連輸十九次"
-    },
-    {
-      "date": "2026-08-03",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The deadline story flips to the losing side of the market: the arm Chicago wanted goes to Tampa Bay for three prospects, showing what the Cubs' stated willingness to pay is actually worth against rival bidders — not another statement of intent.",
-      "headline": "佩拉塔轉戰光芒，小熊補強落空"
-    },
-    {
-      "date": "2026-08-03",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The pursuit the paper declared dead on July 29 is alive again — and the story is the contradiction itself, with the club briefing optimism while the player's entourage flatly denies terms are agreed, a look at how transfer information is manufactured rather than another target announcement.",
-      "headline": "兵工廠線：維尼修斯轉會，兩邊說法打架"
-    },
-    {
       "date": "2026-08-04",
       "rank": 1,
       "topic_id": "ai",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The window shuts and the resolution is subtraction: three attackers out on deadline day and none in, with the telling choice being that Arsenal sent Nwaneri — the academy's best forward and the obvious internal answer to the winger they could not sign — abroad on loan instead of using him.",
       "headline": "兵工廠關窗前再送走一人　努瓦內里外借多特蒙德"
+    },
+    {
+      "date": "2026-09-03",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "After a month in which the paper covered AI only as finance, chips, safety incidents and government procurement, the frontier race returns to actual products — Anthropic ships a two-model split rather than a single successor, weeks before the IPO that will force those product claims into audited disclosure.",
+      "headline": "Anthropic 同時推出兩款新模型"
+    },
+    {
+      "date": "2026-09-03",
+      "rank": 2,
+      "topic_id": "business",
+      "topic": "US big-tech antitrust",
+      "angle": "The government wins the finding and loses the fix — a court that already ruled Google an illegal monopolist refuses to order a divestiture, decoupling liability from remedy and quietly retiring the break-up as the default answer in American tech antitrust.",
+      "headline": "法官判 Google 不必賣掉廣告平台"
+    },
+    {
+      "date": "2026-09-03",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Illinois grid and utility costs",
+      "angle": "Climate adaptation reaches the reader's own electricity bill: ComEd wants $15bn more to storm-proof the grid after Illinois led the nation in tornadoes, and the question is whether the billions customers already paid actually bought reliability — a rate-case-and-who-pays lens distinct from August's state disaster-proclamation and flood-money entries.",
+      "headline": "ComEd 要花百億美元強化電網，錢誰出？"
+    },
+    {
+      "date": "2026-09-03",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "US social safety net",
+      "angle": "The first hard count of who the One Big Beautiful Bill Act actually removed — 82,000 Hoosiers, a 14.5% drop, lost mostly to paperwork and verification rather than to rising incomes — a brand-new safety-net thread the ledger has never run.",
+      "headline": "印第安納州八萬多人失去食物補助"
+    },
+    {
+      "date": "2026-09-03",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The Bears beat leaves roster churn for the balance sheet: the club is now surveying its own fans about crossing the state line to Hammond, Indiana — a relocation-leverage story distinct from the past fortnight's cuts, injury bulletins and 53-man roster entries.",
+      "headline": "熊隊發問卷，問球迷搬到印第安納好不好"
+    },
+    {
+      "date": "2026-09-03",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The window shut but the pursuit did not — Atletico now force Alvarez to choose, meaning the forward Arteta failed to sign in August becomes a January problem carried into a title defence already short of attackers; a what-happens-next lens distinct from the ledger's deal mechanics (24, 27 Aug) and its deadline-day subtraction story (2 Sept).",
+      "headline": "兵工廠線：馬競逼阿瓦雷斯表態"
     }
   ]
 }
