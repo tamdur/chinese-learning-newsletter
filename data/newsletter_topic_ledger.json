@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-04",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI safety",
-      "angle": "The autonomous-hacking disclosures move from engineering post-mortem and legislative reaction into the law itself — US computer-crime statutes presume a human perpetrator, leaving no settled answer to who is liable when a model breaks into a third party's systems on its own.",
-      "headline": "人工智慧自己闖進別人電腦，誰要負責？"
-    },
-    {
-      "date": "2026-08-04",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US trade policy",
-      "angle": "The tariff story becomes a constitutional-authority case rather than a rate announcement: states argue the administration is laundering tariffs the Supreme Court already struck down through a different statute and a forced-labor pretext.",
-      "headline": "二十五州告聯邦政府，指新關稅違法"
-    },
-    {
-      "date": "2026-08-04",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "Japan defence policy",
-      "angle": "A brand-new topic for the paper: Japan's official defence document reframes rearmament as industrial and growth policy — weapons production as an economic engine — rather than only as a response to Chinese, Russian and North Korean threats.",
-      "headline": "日本防衛白皮書：造武器也能拚經濟"
-    },
-    {
-      "date": "2026-08-04",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago Public Schools finances",
-      "angle": "A separate and larger municipal balance sheet than the city's: CPS cannot make its September payroll without emergency short-term borrowing, and lenders have balked because the amended budget rests on $150m of state money that does not yet exist.",
-      "headline": "芝加哥公立學校缺錢，急借短期貸款發薪水"
-    },
-    {
-      "date": "2026-08-04",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "Yesterday the paper reported the Cubs beaten to the arm they wanted; today the deadline closes with three completed trades and a front-line starter in Gausman — the resolution of the month-long rotation hunt, and what it cost.",
-      "headline": "小熊隊交易大限連做三筆，補強先發投手"
-    },
-    {
-      "date": "2026-08-04",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The beat leaves the rumour mill for the pitch: the final pre-season friendly is the last look at how the champions' defence will actually line up on opening day, with Saliba absent and Timber unresolved.",
-      "headline": "兵工廠線：季前最後測試，都柏林對上貝提斯"
-    },
-    {
       "date": "2026-08-05",
       "rank": 1,
       "topic_id": "policy",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The window shut but the pursuit did not — Atletico now force Alvarez to choose, meaning the forward Arteta failed to sign in August becomes a January problem carried into a title defence already short of attackers; a what-happens-next lens distinct from the ledger's deal mechanics (24, 27 Aug) and its deadline-day subtraction story (2 Sept).",
       "headline": "兵工廠線：馬競逼阿瓦雷斯表態"
+    },
+    {
+      "date": "2026-09-04",
+      "rank": 1,
+      "topic_id": "economics",
+      "topic": "US labour market",
+      "angle": "The Fed's September question flips 180 degrees in one data release — after a fortnight in which the paper reported markets pricing a hike on Warsh's inflation warning, a near-zero payroll print and 4.3% unemployment turn it into an 88% bet on a cut, making the labour market rather than prices the thing that now decides policy.",
+      "headline": "美國八月只增兩萬多份工作，聯準會降息機率大增"
+    },
+    {
+      "date": "2026-09-04",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "The line OpenAI refused to cross in August is crossed by its flagship: the first broadly deployed 'Critical'-tier cyber model ships anyway, with capability rationed by feature and customer rather than withheld — the voluntary safety threshold turning from a stop sign into a product-configuration question.",
+      "headline": "OpenAI 推出新模型，首次列為最高風險等級"
+    },
+    {
+      "date": "2026-09-04",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US higher education policy",
+      "angle": "A brand-new policy thread for the paper: the campus fight moves from grant conditions and investigations into the tax code itself, with charitable status — and with it endowment income, donor deductions and bond access — made contingent on how a college describes its student aid.",
+      "headline": "美財政部擬取消部分私校免稅資格"
+    },
+    {
+      "date": "2026-09-04",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Shedd Aquarium beluga deaths",
+      "angle": "A rescue that Chicago celebrated three weeks ago becomes an accountability story: three belugas dead since the Marineland transfer, including both a newly arrived rescue and a resident of the existing pod, putting the decision to move the animals — not their care after arrival — under scrutiny.",
+      "headline": "謝德水族館又有兩隻白鯨死亡"
+    },
+    {
+      "date": "2026-09-04",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The beat crosses from camp into competition: after a month of practice reports, depth-chart secrecy and an injured left tackle, Whittingham's first actual game arrives against a MAC champion whose strength — the run — points straight at the group Michigan spent August worrying about.",
+      "headline": "密大今晚開季，新教練首度帶隊上陣"
+    },
+    {
+      "date": "2026-09-04",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The window's cost gets a price tag rather than another name: Arsenal's largest-ever outgoing fee is completed after the European deadline through the still-open Saudi window, thinning the attack at a moment when it cannot be replaced — but banking the money for the January move the paper reported yesterday.",
+      "headline": "兵工廠線：馬丁尼利轉會，創球會賣人新高"
     }
   ]
 }
