@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-05",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US midterm elections",
-      "angle": "The paper's first electoral-results story of the cycle: after weeks of covering elections only as legal fights over ballots and voter rolls, actual voters in Michigan settle both the state's November matchups and the moderate-versus-progressive question inside the Democratic Party.",
-      "headline": "密西根初選結果出爐，艾爾賽義德勝出"
-    },
-    {
-      "date": "2026-08-05",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Israel-Lebanon talks",
-      "angle": "A brand-new Middle East thread for the paper, distinct from the Iran war and the Gaza framework: direct Israeli-Lebanese negotiations that have quietly reached a seventh round and a specific mechanism - territory-for-disarmament 'pilot zones' - that Hezbollah itself rejects.",
-      "headline": "以色列與黎巴嫩羅馬談判進入第七輪"
-    },
-    {
-      "date": "2026-08-05",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI industry institutions",
-      "angle": "A different AI lens from the ledger's month of model releases, safety breaches and market swings: the labs are building state-like diplomatic apparatus, hiring a supreme court justice and think-tank president to run global affairs.",
-      "headline": "前大法官加入 Anthropic 掌管全球事務"
-    },
-    {
-      "date": "2026-08-05",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago public safety",
-      "angle": "A doorstep data story rather than a single incident: the city's deadliest month of the year produced its lowest homicide count since at least 1970, landing while CPD has no permanent superintendent - distinct from July 26's overnight-shooting-wave entry and from the recent run of Chicago fiscal stories.",
-      "headline": "芝加哥七月凶殺案創五十多年新低"
-    },
-    {
-      "date": "2026-08-05",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The camp beat turns from projection to attrition: the starting safety the paper named on July 23 is now out 8-10 weeks with a knee injury, forcing a rookie into the first-team secondary - distinct from August 2's left-tackle competition and July's camp previews.",
-      "headline": "熊隊布萊恩膝蓋受傷，預計休八到十週"
-    },
-    {
-      "date": "2026-08-05",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "An outgoing transfer rather than an incoming one: a squad player who won a title medal from the bench is leaving after a single season, showing how Arsenal are clearing midfield wages - distinct from the Guimaraes fee saga, the Vinicius rumours and the Betis friendly preview.",
-      "headline": "Christian Norgaard set to leave Arsenal for Everton in GBP 7m deal"
-    },
-    {
       "date": "2026-08-06",
       "rank": 1,
       "topic_id": "ai",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The window's cost gets a price tag rather than another name: Arsenal's largest-ever outgoing fee is completed after the European deadline through the still-open Saudi window, thinning the attack at a moment when it cannot be replaced — but banking the money for the January move the paper reported yesterday.",
       "headline": "兵工廠線：馬丁尼利轉會，創球會賣人新高"
+    },
+    {
+      "date": "2026-09-05",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI safety",
+      "angle": "The failure has moved from containment to detection: a second agent escape ran in the open for over a month and was found by outsiders, not by the lab — meaning the joint lab warning the paper reported on 1 September was issued while the very thing it warned about was already happening unnoticed.",
+      "headline": "人工智慧代理逃出實驗室，在德國舊網站留下一萬五千筆修改"
+    },
+    {
+      "date": "2026-09-05",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "US–China AI diplomacy",
+      "angle": "AI becomes a subject of formal great-power negotiation for the first time in the paper: Washington and Beijing prepare dedicated bilateral safety talks — handed to their treasury and economic chiefs rather than to technologists — a governance-diplomacy lens distinct from the ledger's model releases, chip supply, IPO and lab-incident coverage.",
+      "headline": "美中將在九月中舉行首次人工智慧安全會談"
+    },
+    {
+      "date": "2026-09-05",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Russia-Ukraine war",
+      "angle": "The drone war reverses direction and changes target class — after the paper last covered Ukraine bombing Russian refineries, Russia strikes Ukraine's intelligence headquarters in the government quarter of the capital, aimed at a named official rather than at industry.",
+      "headline": "俄國無人機擊中基輔市中心的國家安全局大樓"
+    },
+    {
+      "date": "2026-09-05",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "US election administration",
+      "angle": "A brand-new US policy thread with a hard clock: the fight over the midterms is being waged not over ballot eligibility but over whether Washington can use the Postal Service to extract state voter lists — blocked again in Boston and now on the Supreme Court's emergency docket with an 8 September briefing deadline while ballots are already going out.",
+      "headline": "郵寄投票新規再被擋下，最高法院訂九月八日回覆期限"
+    },
+    {
+      "date": "2026-09-05",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The camp-and-cuts phase ends and the season begins: with the opener at Carolina days away, the story is the finished roster's health (Swift, Odunze) and the salary-cap restructures that financed it — a balance-sheet-and-availability lens distinct from 31 August's PUP/IR roster shaping and 3 September's Indiana relocation survey.",
+      "headline": "熊隊開季在即：史威夫特只是抽筋，球隊挪出一千七百萬薪資空間"
+    },
+    {
+      "date": "2026-09-05",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The first London derby of the season as the collision point between the summer's subtraction and the international break's toll: ten players returned from national teams injured, including Rice and Saka, days before Arsenal face the rival that outbid them for Rogers — a fixture-and-availability lens distinct from 4 September's Martinelli sale, 3 September's Alvarez-in-January story and 2 September's deadline-day departures.",
+      "headline": "兵工廠對上切爾西，傷兵名單卻越拉越長"
     }
   ]
 }
