@@ -4115,6 +4115,34 @@
       "headline": "兩個人守了二十五年的夢境圖書館",
       "headline_en": "DreamBank: 25-Year Two-Person Dream Report Archive",
       "topic": "dream report archive"
+    },
+    {
+      "date": "2026-09-05",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "一張寄到五個國家的專輯",
+      "headline_en": "9m88's globally-remixed neo-soul album 9m88 Radio",
+      "topic": "international neo-soul collaboration"
+    },
+    {
+      "date": "2026-09-05",
+      "obsession_id": "finland-honeymoon",
+      "headline": "魚骨做的琴：芬蘭的坎特勒",
+      "headline_en": "The Kantele: born from a pike jawbone in the Kalevala",
+      "topic": "kantele instrument mythology"
+    },
+    {
+      "date": "2026-09-05",
+      "obsession_id": "do-312",
+      "headline": "七十個攤位的黑膠挖寶日",
+      "headline_en": "Chicagoland Record & CD Collectors Show, Sept 20",
+      "topic": "vinyl record collectors show"
+    },
+    {
+      "date": "2026-09-05",
+      "obsession_id": "best-of-internet",
+      "headline": "會讀洞的織布機",
+      "headline_en": "A solo Jacquard loom simulator built in Rust",
+      "topic": "Jacquard loom computing history"
     }
   ]
 }
