@@ -465,6 +465,11 @@
       "url": "https://bulkeley.org/",
       "type": "archive_blog",
       "notes": "Kelly Bulkeley's Sleep and Dream Database (SDDb) project blog — covers dream research archives and related solo/small-team digital humanities projects; good adjacent hunting ground for future obsession scouting"
+    },
+    {
+      "url": "https://www.columbia.edu/~brennan/abandoned/",
+      "type": "single-source gem",
+      "notes": "Joseph Brennan's decades-running solo archive of NYC's abandoned subway 'ghost' stations, hosted on his personal Columbia University page — station-by-station essays with historical photos and track plans."
     }
   ]
 }
