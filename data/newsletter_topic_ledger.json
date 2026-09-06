@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-06",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI talent and lab structure",
-      "angle": "Not a model, a market move or a safety incident but the human org chart of the frontier race: Google's foundational engineers walk out to build a company that automates research itself, while Alphabet simultaneously collapses AI decision-making up to Pichai and moves DeepMind's founder into a chairman's role.",
-      "headline": "谷歌功臣離職，創辦人工智慧新公司"
-    },
-    {
-      "date": "2026-08-06",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Strait of Hormuz oil shock",
-      "angle": "The reopening moves from Trump's assertion that a framework exists (Aug 3) to its actual negotiated terms and negotiators — Oman, a 60-day ceasefire and toll-free passage, the opposite of the US toll floated in July — while a Houthi strike on a Saudi tanker shows the deal would reopen one strait and leave another closed.",
-      "headline": "伊朗與阿曼將達成協議，荷莫茲海峽可望重開"
-    },
-    {
-      "date": "2026-08-06",
-      "rank": 3,
-      "topic_id": "business",
-      "topic": "logistics real-estate consolidation",
-      "angle": "A different industry and a different driver from the paper's recent merger coverage (media, then pharma): warehouse landlords consolidating because AI data centres are now competing for the same industrial land and power, with London losing another major listing.",
-      "headline": "普洛斯併購西格羅，成為全球最大倉庫房東"
-    },
-    {
-      "date": "2026-08-06",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago Public Schools finances",
-      "angle": "Tuesday's story was the accounting — CPS unable to make payroll without borrowing against state money that doesn't exist; today it becomes an open city-versus-state political rupture, with a named revenue alternative (a 3% millionaire surcharge) and a race-laced exchange between a sitting alderman and the governor's office.",
-      "headline": "芝加哥市議員槓上州長，為學校經費吵翻"
-    },
-    {
-      "date": "2026-08-06",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "The new era stops being talk and starts being work: Whittingham's first actual practice, and his tempering of expectations by pointing at depth rather than at the roster's headline talent — distinct from July 30's Big Ten Media Days debut and July 24's naming of Underwood.",
-      "headline": "密西根大學開始秋季集訓，新教練點出隱憂"
-    },
-    {
-      "date": "2026-08-06",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The beat's first player-voice feature in weeks: the club-record signing explains how a failed Premier League spell at Norwich built the complete player Arsenal paid for — a development-and-character lens, not another fee, medical or target report.",
-      "headline": "兵工廠線：佐利斯說諾里奇讓他變得更完整"
-    },
-    {
       "date": "2026-08-07",
       "rank": 1,
       "topic_id": "policy",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The first London derby of the season as the collision point between the summer's subtraction and the international break's toll: ten players returned from national teams injured, including Rice and Saka, days before Arsenal face the rival that outbid them for Rogers — a fixture-and-availability lens distinct from 4 September's Martinelli sale, 3 September's Alvarez-in-January story and 2 September's deadline-day departures.",
       "headline": "兵工廠對上切爾西，傷兵名單卻越拉越長"
+    },
+    {
+      "date": "2026-09-06",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Russia–Ukraine war",
+      "angle": "One day after the paper reported Russia bombing Ukraine's intelligence headquarters in central Kyiv, the same war produces its first genuine diplomatic opening in eight months — a three-hour Kremlin meeting and a mutual, dated pause on strikes against each other's capitals, making de-escalation rather than escalation the story.",
+      "headline": "美國特使見普丁 俄烏戰爭出現轉機"
+    },
+    {
+      "date": "2026-09-06",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Himalayan glacier flood",
+      "angle": "Where the paper's 30 August entry framed the disaster as a warning-system failure at 750 dead, today's story is what the water actually hit — people still being pulled alive from flooded hydropower tunnels a week on, exposing how the region's energy infrastructure was built inside the path of a hazard now made routine by Himalayan warming.",
+      "headline": "尼泊爾冰河崩塌 死亡人數升到一千三百多人"
+    },
+    {
+      "date": "2026-09-06",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago city budget",
+      "angle": "The paper's recent Chicago coverage has been about utilities, surveillance and an aquarium; today the city's own ledger comes due — an $882m 2027 hole in which police-misconduct settlements alone account for $401m, forcing a mayor to choose between layoffs and a property-tax rise in an election year.",
+      "headline": "芝加哥明年短少八億八千萬美元"
+    },
+    {
+      "date": "2026-09-06",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "Philippines political crisis",
+      "angle": "A brand-new international thread for the paper and a different hemisphere from a fortnight of Ukraine, Iran and Gulf coverage: the criminal courts, not impeachment or the ballot box, become the instrument for settling a feud between a sitting president and his own vice president.",
+      "headline": "菲律賓副總統莎拉交保"
+    },
+    {
+      "date": "2026-09-06",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The 4 September preview gets its answer, and the answer is uncomfortable: the new era opens with a one-point escape and 13 points scored at home against a MAC team, turning a month of camp optimism about Underwood and the offensive line into a live problem in Week One.",
+      "headline": "密西根最後一秒長傳 十三比十二險勝"
+    },
+    {
+      "date": "2026-09-06",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The 29 August training-ground exclusion reaches its conclusion as a signed deal, and with it the summer's subtraction is complete — Arsenal have now sold both Jesus and Martinelli within days, bought no forward at all, and must defend a title and play eight Champions League games with the shortest attack of Arteta's tenure.",
+      "headline": "兵工廠賣掉傑穌斯 前鋒只出不進"
     }
   ]
 }
