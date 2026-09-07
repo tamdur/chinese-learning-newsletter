@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-07",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US immigration policy",
-      "angle": "After a Supreme Court defeat on birthright citizenship in June, the administration returns to the same target by a narrower route — visa denials and carve-outs rather than a frontal constitutional challenge — a citizenship-at-birth angle the paper has never run, distinct from August 2's unaccompanied-children legal-representation gap and July's enforcement, visa-duration and public-charge entries.",
-      "headline": "川普簽兩道命令限制出生公民權"
-    },
-    {
-      "date": "2026-08-07",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI safety",
-      "angle": "The recurring breach stories converge on a single common cause that is not a model at all: three separate labs have now been undone by the same misconfiguration at shared third-party evaluation vendors, shifting the safety question from 'can models escape?' to 'who is testing the testers?' — distinct from July 23's internal-sandbox escape, July 27's kill-switch bill, July 29's forensic reconstruction, July 30's Copilot worms and August 4's criminal-liability gap.",
-      "headline": "Meta 的 AI 測試出錯，入侵外部公司系統"
-    },
-    {
-      "date": "2026-08-07",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "Yemen civil war",
-      "angle": "A thread the paper has never run: the Houthis turn from attacking ships to attacking armies, shattering a four-year land truce inside Yemen — the regional war flowing back into the conflict it came from, rather than another Red Sea shipping or Hormuz chokepoint story.",
-      "headline": "葉門停火破裂，青年運動攻擊政府軍"
-    },
-    {
-      "date": "2026-08-07",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Illinois tariff politics",
-      "angle": "The tariff story arrives at the reader's own kitchen table via the refund cheque: the Court struck the levies down and Treasury has now returned $100bn — all of it to corporations, none to the households that paid — which a governor is turning into a demand for $1,700 per family, a distribution-of-the-refund lens distinct from August 4's constitutional-authority lawsuit and July's rate-announcement coverage.",
-      "headline": "關稅退款只給企業，州長要求發錢給家庭"
-    },
-    {
-      "date": "2026-08-07",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "A player-voice recovery-and-ambition feature — Odunze declaring his surgically repaired foot sound and setting a 1,000-yard, 100-catch target in the camp's first heavy padded session — distinct from August 5's Bryant knee injury, August 2's left-tackle battle, July 31's Indiana stadium financing and July's position-group previews.",
-      "headline": "熊隊訓練營，歐頓齊說腳傷已經全好"
-    },
-    {
-      "date": "2026-08-07",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The window's biggest saga ends with a signature rather than a rumour — a six-year Madrid contract to 2032 vindicates the player's camp over Arsenal's briefings and leaves the champions with a left-wing hole and only days to fill it, the closure-and-consequence phase distinct from July 26's target identification, July 29's speculative collapse and August 3's duelling-narratives story.",
-      "headline": "維尼修斯續約留在皇馬，兵工廠落空"
-    },
-    {
       "date": "2026-08-08",
       "rank": 1,
       "topic_id": "world",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The 29 August training-ground exclusion reaches its conclusion as a signed deal, and with it the summer's subtraction is complete — Arsenal have now sold both Jesus and Martinelli within days, bought no forward at all, and must defend a title and play eight Champions League games with the shortest attack of Arteta's tenure.",
       "headline": "兵工廠賣掉傑穌斯 前鋒只出不進"
+    },
+    {
+      "date": "2026-09-07",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "German politics",
+      "angle": "A brand-new international thread for the paper — after a fortnight in which every world entry ran through Ukraine, the Himalayas or the Gulf, Germany's postwar taboo meets an arithmetic problem: the AfD wins 43.8% in Saxony-Anhalt and the question stops being whether the far right can win and becomes whether the mainstream firewall can survive contact with a majority.",
+      "headline": "德國極右派政黨大勝，「防火牆」受考驗"
+    },
+    {
+      "date": "2026-09-07",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI capability milestones",
+      "angle": "The AI story returns to raw capability in a domain the ledger has never touched — formal mathematics — and the point is verifiability: an 11-day autonomous run producing 13 million lines of machine-checked Lean is the first frontier-model output that needs no human trust at all, a sharp contrast to the month of finance, chips, procurement and containment-failure entries.",
+      "headline": "人工智慧完成費馬定理的電腦驗證"
+    },
+    {
+      "date": "2026-09-07",
+      "rank": 3,
+      "topic_id": "ai",
+      "topic": "AI regulation",
+      "angle": "Governance of AI moves from talks about talks to enforceable engineering: where the paper covered Washington and Beijing merely scheduling their first safety negotiation on 5 September, Brussels this week starts actually binding labs — chatbot disclosure and machine-readable labelling of synthetic media — making Europe the first jurisdiction where AI rules are a product requirement rather than a position.",
+      "headline": "歐盟開始執行人工智慧透明規定"
+    },
+    {
+      "date": "2026-09-07",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago mayoral politics",
+      "angle": "Yesterday's $882m budget hole acquires a candidate: the mayor who must choose between layoffs and a tax rise is about to ask for four more years at 23% approval against nine-plus challengers, turning a fiscal-arithmetic story into the opening of a mayoral race whose runoff maths may favour an unpopular incumbent.",
+      "headline": "芝加哥市長預告「特別宣布」"
+    },
+    {
+      "date": "2026-09-07",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The 6 September result story becomes a verdict story: the national polls, not the box score, now judge the debut, and the interesting thing is how little a 13-12 escape moved a ranking built entirely on preseason reputation — the poll-inertia lens, not another recap of the Hail Mary.",
+      "headline": "密西根險勝，全國排名引發爭論"
+    },
+    {
+      "date": "2026-09-07",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The summer's subtraction gets its first competitive rebuttal: the man Chelsea bought instead of Arsenal scores first, and Arsenal's remaining, unreinforced attack comes from behind to win the derby anyway.",
+      "headline": "兵工廠線：阿森納逆轉切爾西"
     }
   ]
 }
