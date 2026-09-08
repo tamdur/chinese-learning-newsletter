@@ -4199,6 +4199,34 @@
       "headline": "五百種玩法：一個人守了三十年的紙牌圖書館",
       "headline_en": "Pagat.com: One Mathematician's 30-Year Card Game Encyclopedia",
       "topic": "solo-maintained card game rules encyclopedia"
+    },
+    {
+      "date": "2026-09-08",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "《台灣之聲》：一封用聲音寄回家的信",
+      "headline_en": "Voices of Taiwan: Angie QQ turns Lim Giong's field recordings into a collaborative love letter home",
+      "topic": "field recording collaborative compilation"
+    },
+    {
+      "date": "2026-09-08",
+      "obsession_id": "finland-honeymoon",
+      "headline": "開往北極的旅館房間",
+      "headline_en": "VR's redesigned 2026 night train sleeper cabins to Lapland",
+      "topic": "night train sleeper cabin redesign"
+    },
+    {
+      "date": "2026-09-08",
+      "obsession_id": "do-312",
+      "headline": "捏一朵菊花：和菓子裡的秋天",
+      "headline_en": "Wagashi chrysanthemum workshop at Chicago's Heritage Museum of Asian Art",
+      "topic": "wagashi workshop seasonal festival"
+    },
+    {
+      "date": "2026-09-08",
+      "obsession_id": "best-of-internet",
+      "headline": "讓電腦學會投票的一頁動畫",
+      "headline_en": "The Secret Lives of Data: a scroll-driven visualization of the Raft consensus algorithm",
+      "topic": "distributed systems consensus visualization"
     }
   ]
 }
