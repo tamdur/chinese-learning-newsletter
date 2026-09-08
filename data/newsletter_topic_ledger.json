@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-08",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Strait of Hormuz oil shock",
-      "angle": "After a month in which the paper covered Hormuz only through closure declarations, blockades, tolls and oil prices, ships are actually crossing again — the physical reopening arriving before the diplomacy that is meant to authorise it, and still reversible.",
-      "headline": "荷姆茲海峽再現油輪，有望重新開放"
-    },
-    {
-      "date": "2026-08-08",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "COVID-19 origins investigation",
-      "angle": "The 30 July story was a chairman scheduling a contempt vote; today that vote passed 8-7 and was routed around the full Senate straight to the Justice Department, turning a hearing-room standoff into a live prosecution decision with precedent-setting stakes for the Fifth Amendment before Congress.",
-      "headline": "美參院委員會認定佛奇藐視國會"
-    },
-    {
-      "date": "2026-08-08",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Illinois regulatory oversight",
-      "angle": "A doorstep story about the machinery of state licensing rather than about crime or the city budget: operators already shut down once last year for mishandling about 100 bodies were still licensed to accumulate 57 more — a fresh Chicago thread distinct from the CPS-finance, tariff-refund and public-safety-data entries of the past week.",
-      "headline": "芝加哥殯儀館驚見五十七具遺體"
-    },
-    {
-      "date": "2026-08-08",
-      "rank": 4,
-      "topic_id": "business",
-      "topic": "US housing industry consolidation",
-      "angle": "A new industry and a new driver for the paper's merger coverage after media, pharma and warehouses: homebuilders are merging because high financing costs have made mid-sized builders unviable — consolidation as a symptom of the interest-rate story rather than of dealmaking appetite.",
-      "headline": "美國建商合併潮再添一樁"
-    },
-    {
-      "date": "2026-08-08",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bulls",
-      "angle": "The Bulls' first appearance in the paper in nearly a month, and a season-arc verdict rather than a game or a signing: the completed offseason under new EVP Bryson Graham reads as a deliberate refusal to tank — breaking a sports desk saturated by Bears camp and Cubs deadline coverage.",
-      "headline": "公牛隊補強，新球季不想再墊底"
-    },
-    {
-      "date": "2026-08-08",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Yesterday's Vinicius story was a target staying where he was; today a target Arsenal actively pursued is reinforcing a direct title rival — the window's cost measured in a competitor's gain rather than in Arsenal's own empty shirt.",
-      "headline": "兵工廠線：羅傑斯改投切爾西"
-    },
-    {
       "date": "2026-08-09",
       "rank": 1,
       "topic_id": "policy",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The summer's subtraction gets its first competitive rebuttal: the man Chelsea bought instead of Arsenal scores first, and Arsenal's remaining, unreinforced attack comes from behind to win the derby anyway.",
       "headline": "兵工廠線：阿森納逆轉切爾西"
+    },
+    {
+      "date": "2026-09-08",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "The war stops being a bilateral exchange and starts destroying a third country's oil plant: Saudi Aramco facilities are reportedly hit and Hormuz is physically shut to shipping, so the price move reflects damaged production capacity rather than the risk premium the paper has priced all summer.",
+      "headline": "油價漲到六週新高，沙烏地煉油廠傳出被打中"
+    },
+    {
+      "date": "2026-09-08",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Russia–Ukraine war",
+      "angle": "The diplomatic opening the paper reported on 6 September closes: Zelensky publicly abandons the expectation of a breakthrough and the strikes resume, meaning the Kremlin meeting bought a pause on capitals rather than a path to a settlement.",
+      "headline": "俄軍一夜放出九十二架無人機，和談停住"
+    },
+    {
+      "date": "2026-09-08",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US election administration",
+      "angle": "The mechanism, not the docket: the rule would make a DHS-compiled citizenship list the gatekeeper for whether the Postal Service accepts a ballot, and the Boston injunction's state-by-state carve-out means the midterms could be run under two different federal ballot rules at once.",
+      "headline": "郵寄投票新規定，送上美國最高法院"
+    },
+    {
+      "date": "2026-09-08",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Illinois state politics",
+      "angle": "The third-term bid announced on 1 September gets its opponent and its terrain — Bailey, the minimum wage and organised labour — with a Labor Day picnic serving as the state party's first live test of its midterm argument.",
+      "headline": "普里茲克在勞工野餐會上開打連任戰"
+    },
+    {
+      "date": "2026-09-08",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "A milestone chase with a countdown rather than a standings or injury update: PCA's 40th home run leaves him seven steals and 18 games from becoming the eighth 40-40 player in MLB history — distinct from 11 August's defence-based MVP case.",
+      "headline": "小熊隊克羅阿姆斯壯挑戰四十轟四十盜"
+    },
+    {
+      "date": "2026-09-08",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The competition changes: after a fortnight of transfer subtraction and domestic fixtures, Arsenal begin an eight-game Champions League phase away at Napoli — the first test of whether a squad that sold two forwards and bought none can carry two campaigns at once.",
+      "headline": "兵工廠線：歐冠首戰作客拿坡里"
     }
   ]
 }
