@@ -4227,6 +4227,34 @@
       "headline": "讓電腦學會投票的一頁動畫",
       "headline_en": "The Secret Lives of Data: a scroll-driven visualization of the Raft consensus algorithm",
       "topic": "distributed systems consensus visualization"
+    },
+    {
+      "date": "2026-09-09",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "工地走出來的台語饒舌",
+      "headline_en": "Construction foreman DJ Didilong's 2016 debut album pioneers Hokkien-language rap",
+      "topic": "Taiwanese Hokkien hip-hop"
+    },
+    {
+      "date": "2026-09-09",
+      "obsession_id": "finland-honeymoon",
+      "headline": "玻璃鳥的故鄉：芬蘭最老的玻璃村",
+      "headline_en": "Nuutajärvi, Finland's oldest glass village, and Oiva Toikka's iconic birds",
+      "topic": "Finnish glass craft village"
+    },
+    {
+      "date": "2026-09-09",
+      "obsession_id": "do-312",
+      "headline": "樓梯底下的人生：格萊斯納屋僕人導覽",
+      "headline_en": "Sept 26 servants'-quarters tour at Chicago's Glessner House",
+      "topic": "Chicago historic house servants' tour"
+    },
+    {
+      "date": "2026-09-09",
+      "obsession_id": "best-of-internet",
+      "headline": "一副教你好好迷路的紙牌",
+      "headline_en": "Near Future Laboratory's 2008 Drift Deck for practicing urban dérive",
+      "topic": "psychogeography drift-walking cards"
     }
   ]
 }
