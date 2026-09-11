@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-11",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US vaccine policy",
-      "angle": "A brand-new topic for the paper: an executive order that does not argue about vaccines but rewrites the federal schedule itself — 18 diseases cut to 11, MMR split into three — turning a rhetorical fight into an administrative instruction that insurers and schools are legally tied to.",
-      "headline": "川普下令，兒童疫苗從十八種減到十一種"
-    },
-    {
-      "date": "2026-08-11",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI infrastructure",
-      "angle": "The compute crunch reaches a new class of landlord — a frontier lab signs a 20-year lease on a bitcoin miner's Texas power campus, showing that what labs are now buying is grid interconnection, not chips, and that crypto's stranded-energy estate is being converted into AI capacity.",
-      "headline": "人工智慧公司砸九十一億美元，租下比特幣礦場"
-    },
-    {
-      "date": "2026-08-11",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "Colombia earthquake",
-      "angle": "A brand-new world story that breaks a fortnight in which almost every international entry ran through the Gulf: Colombia's strongest quake in a century, with the hospital wards that collapsed making the point that the casualty toll is a function of building stock rather than of magnitude.",
-      "headline": "哥倫比亞百年最強地震，一百三十二人死亡"
-    },
-    {
-      "date": "2026-08-11",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago extreme heat adaptation",
-      "angle": "The city's first Chicago entry in three issues, and an adaptation-policy lens rather than a disaster one: cooling capacity is being rationed by a Heat Vulnerability Index, with 13 of 20 extended pools placed in the most at-risk neighbourhoods — heat treated as a public-health inequality to be targeted, not a weather event to be endured.",
-      "headline": "芝加哥二十座泳池，延長開到勞動節"
-    },
-    {
-      "date": "2026-08-11",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "An individual-awards lens rather than a team result: PCA overtakes Ohtani as NL MVP frontrunner on a case built substantially on centre-field defence, distinct from August 10's 'the new rotation is producing' game story and from July's All-Star, 20-20 and Statcast-catch milestones.",
-      "headline": "小熊外野手超越大谷，成最有價值球員大熱門"
-    },
-    {
-      "date": "2026-08-11",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A definitive prognosis rather than a match report or a fee: surgery is avoided but both first-choice defenders are formally ruled out of the Community Shield and probably the opener, converting the summer's unaddressed defensive gap into a named, dated availability problem — distinct from August 10's Dortmund-defeat post-mortem and July 21's 'four-to-five months, possibly surgical' scare.",
-      "headline": "兵工廠兩大後衛受傷，錯過社區盾杯"
-    },
-    {
       "date": "2026-08-12",
       "rank": 1,
       "topic_id": "ai",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The two previews get their tactical answer, and it is not about the forwards at all: the goal came from the captain in midfield and the win from a third clean sheet, so a squad that sold two strikers and bought none is winning by not conceding — a shape-of-the-team lens rather than a result recap.",
       "headline": "賣掉兩名前鋒的兵工廠，靠零失球贏歐冠首戰"
+    },
+    {
+      "date": "2026-09-11",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI regulation",
+      "angle": "Where the paper's 7 September entry showed Brussels binding labs through product requirements and its 5 September entry showed Washington and Beijing merely scheduling talks, today the push for US rules originates inside a frontier lab itself — a researcher's resignation, backed publicly by a colleague, becomes the thing that moves both parties in Congress, with even OpenAI now asking to be regulated.",
+      "headline": "Anthropic 研究員辭職，美國兩黨要求立法管 AI"
+    },
+    {
+      "date": "2026-09-11",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US redistricting",
+      "angle": "A brand-new election thread for the paper: after a fortnight covering the midterms through mail-ballot rules, Postal Service voter lists and a Dallas convention, the fight moves to the map itself — the Supreme Court strikes down a Republican gerrymander and hands Missouri back its old six-seat lines with the House majority in the balance.",
+      "headline": "最高法院擋下密蘇里州新選區地圖"
+    },
+    {
+      "date": "2026-09-11",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Red Sea shipping and the Houthis",
+      "angle": "The war acquires a second chokepoint and a different geography: rather than another Hormuz oil-price move, an Iranian ally takes physical ground at Bab el-Mandeb, putting the southern entrance to Suez and 12% of world shipping under the control of a militia rather than a navy.",
+      "headline": "胡塞武裝攻下紅海摩卡港"
+    },
+    {
+      "date": "2026-09-11",
+      "rank": 4,
+      "topic_id": "business",
+      "topic": "AI industry consolidation",
+      "angle": "Antitrust catches up with the form of AI dealmaking rather than its price: the DOJ asks whether a $20bn licence is a merger in disguise, the first time a regulator has challenged the legal structure the ledger's Hugging Face, Stripe and Marvell entries all took for granted.",
+      "headline": "司法部調查輝達二百億美元授權案"
+    },
+    {
+      "date": "2026-09-11",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The season's ceiling drops: a three-game sweep by Milwaukee ends the division race and reduces a summer of wild-card leads and MVP campaigns to a scramble for a play-in berth — a season-arc verdict distinct from 8 September's PCA 40-40 milestone chase and 24 August's wild-card-standings entry.",
+      "headline": "釀酒人橫掃小熊，分區冠軍沒指望了"
+    },
+    {
+      "date": "2026-09-11",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The depth problem crosses from the attack to the back four: one day after the paper credited Arsenal's unbeaten start to three clean sheets rather than to goals, Arteta confirms Saliba is out three to four weeks, so the foundation the whole season was resting on loses its best defender just as Timber returns.",
+      "headline": "兵工廠線：主力後衛受傷，要休三到四週"
     }
   ]
 }
