@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-12",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI investment boom",
-      "angle": "The financing structure of the AI buildout, not its price or its power supply: compute is being securitised into a borrowable asset class, pushing the risk of an AI bust out of tech balance sheets and into private credit and asset managers.",
-      "headline": "輝達拉來六大金主 籌五千億美元建AI機房"
-    },
-    {
-      "date": "2026-08-12",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Turkey–PKK peace process",
-      "angle": "A brand-new international thread for the paper: a 468-88 parliamentary vote converts a four-decade insurgency into a legal disarmament-for-pardon mechanism, and the PKK's immediate rejection of its terms shows the deal is legislated but not agreed.",
-      "headline": "土耳其國會通過特赦 庫德武裝團體不買帳"
-    },
-    {
-      "date": "2026-08-12",
-      "rank": 3,
-      "topic_id": "business",
-      "topic": "media megamergers",
-      "angle": "The merger fight escalates from courtrooms to corporate hostage-taking: the acquirer threatens to relocate out of California entirely unless the state drops its antitrust suit, with a $7m-a-day penalty clock forcing the deadline.",
-      "headline": "派拉蒙嗆搬離加州 州檢察長批勒索"
-    },
-    {
-      "date": "2026-08-12",
-      "rank": 4,
-      "topic_id": "ideas",
-      "topic": "solar eclipse",
-      "angle": "A back-page science pick with a same-day hook and no precedent in the ledger: the first total solar eclipse over mainland Spain in 121 years, arriving at sunset and beginning an unusually tight three-eclipse sequence for one country.",
-      "headline": "日全食今掃過冰島與西班牙 已等一百二十一年"
-    },
-    {
-      "date": "2026-08-12",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "The worry Whittingham named when camp opened is easing: five practices in, the offensive line is outperforming his own warning, the left tackle job is a three-man fight, and a non-headline receiver emerges as the staff's first breakout endorsement — an evaluation angle, not another camp-opening scene-setter.",
-      "headline": "密大教頭改口 誇進攻線比預期好"
-    },
-    {
-      "date": "2026-08-12",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Yesterday's injury bulletin becomes a spending decision: with both first-choice centre-backs out, Arsenal's remaining window budget is being redirected from the winger Arteta chased all summer to centre-backs — including Tottenham's captain — after €167.5m already spent.",
-      "headline": "兵工廠線：後衛倒一片 阿爾特塔改買中後衛"
-    },
-    {
       "date": "2026-08-14",
       "rank": 1,
       "topic_id": "ai",
@@ -1439,6 +1391,54 @@
       "topic": "Arsenal FC",
       "angle": "The depth problem crosses from the attack to the back four: one day after the paper credited Arsenal's unbeaten start to three clean sheets rather than to goals, Arteta confirms Saliba is out three to four weeks, so the foundation the whole season was resting on loses its best defender just as Timber returns.",
       "headline": "兵工廠線：主力後衛受傷，要休三到四週"
+    },
+    {
+      "date": "2026-09-12",
+      "rank": 1,
+      "topic_id": "economics",
+      "topic": "Federal Reserve monetary policy",
+      "angle": "The September Fed question flips a second time in eight days and in the opposite direction: where the paper reported on 4 September that a dead payroll print had turned the meeting into an 88% bet on a cut, one inflation print turns it into an 85% bet on a hike — so the committee is now being pulled both ways at once, and the paper's 10 September framing of a Fed about to ease while the ECB tightened is now obsolete.",
+      "headline": "美國八月物價再漲，聯準會下週可能升息"
+    },
+    {
+      "date": "2026-09-12",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "The frontier product race stops being about building a bigger model and becomes about building a conductor: a non-American lab ships a flagship that is a routing layer over other companies' models, arguing that orchestration plus cost discipline beats scale — distinct from 3 September's Anthropic two-model split and 4 September's safety-tier release, and the first time the ledger sees a lab compete without owning the underlying model.",
+      "headline": "日本AI公司推新系統，靠指揮別家模型取勝"
+    },
+    {
+      "date": "2026-09-12",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "BRICS and de-dollarisation",
+      "angle": "De-dollarisation stops being a slogan or a two-country workaround and becomes an infrastructure project with a host and a date: eleven governments meeting in New Delhi have abandoned the common-currency idea entirely and are instead building payment rails on India's UPI — a plumbing-not-money lens distinct from 2 September's bilateral Russia-Iran trade-routing story.",
+      "headline": "金磚國家新德里開會，目標是少用美元"
+    },
+    {
+      "date": "2026-09-12",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Illinois food access policy",
+      "angle": "A brand-new Chicago thread for the paper: after a fortnight of Chicago entries on budget holes, mayoral polling, utility rate cases and surveillance cameras, the state tries to fix food deserts by reopening dead stores rather than building new ones — an economic-development lens on a grocery aisle, and state money arriving exactly where city money has run out.",
+      "headline": "伊利諾州出錢，讓關掉的超市重新開門"
+    },
+    {
+      "date": "2026-09-12",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The market-versus-voters question the paper posed on 10 September gets settled on the field, and the market wins: Oklahoma covers as a road favourite in Ann Arbor, 13 points is confirmed as Michigan's actual offensive ceiling rather than a one-week fluke, and a ranking built entirely on preseason reputation collapses in the first real test.",
+      "headline": "奧克拉荷馬爆冷，二十四比十三擊敗密西根"
+    },
+    {
+      "date": "2026-09-12",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The beat leaves the match cycle entirely for the first time in over a week: after previews, a Napoli result, a clean-sheet tactical read and a Saliba injury bulletin, the question becomes who manages this club beyond this season — Arteta publicly describing his own contract as a day-by-day matter while the team he built sits top of the league.",
+      "headline": "兵工廠線：阿特塔談合約，一天一天來"
     }
   ]
 }
