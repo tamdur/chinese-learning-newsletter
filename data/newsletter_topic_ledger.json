@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-15",
-      "rank": 1,
-      "topic_id": "economics",
-      "topic": "US economic slowdown",
-      "angle": "The summer's macro story finally shows up in the household ledger rather than in oil prices or Fed statements — July retail sales post their worst month in over a year and August sentiment drops about 8%, meaning the squeeze the paper has tracked through Hormuz and the bond market has now reached what Americans actually spend.",
-      "headline": "美國七月零售銷售大跌，消費信心跟著下滑"
-    },
-    {
-      "date": "2026-08-15",
-      "rank": 2,
-      "topic_id": "business",
-      "topic": "AI investment boom",
-      "angle": "Three days after the paper described AI compute being securitised into a new asset class, the market prices the downside for the first time — a bank puts a $370bn debt number on one company's off-balance-sheet AI vehicle and its shares fall 5-6% with a downgrade, turning a financing innovation into a credit problem.",
-      "headline": "博通股價重挫，人工智慧的借錢模式引發擔心"
-    },
-    {
-      "date": "2026-08-15",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US–Iran war",
-      "angle": "The war measured in sailors rather than in barrels or missiles — a 240-day unbroken carrier deployment produces mouldy water, a mental-health crisis and a public rebuke from the president, the first time the paper covers the Iran campaign as a question of military sustainability and human cost.",
-      "headline": "林肯號官兵家屬喊苦，川普說時間還不夠長"
-    },
-    {
-      "date": "2026-08-15",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Illinois disaster and flood policy",
-      "angle": "Illinois starts paying for its own disasters: with a record 200-plus tornadoes this year and federal aid requests rejected, the state routes flood-repair money through two neighbourhood home-equity programmes — adaptation financed locally because Washington declined, distinct from 11 August's heat-vulnerability rationing story.",
-      "headline": "伊利諾州自己出錢救水災，今年龍捲風破紀錄"
-    },
-    {
-      "date": "2026-08-15",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The Cubs' pitching problem moves from the rotation to the bullpen: on the same night a deadline starter delivers a home shutout, a key reliever is lost for the season to a torn patellar tendon — a bullpen-attrition angle distinct from 10 August's 'the new rotation is producing' rout and 11 August's PCA MVP case.",
-      "headline": "小熊三比零完封紅雀，後援投手梅頓恐報銷"
-    },
-    {
-      "date": "2026-08-15",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Arteta closes the door the paper reported he was opening: with only three fit senior centre-backs and Timber now weeks rather than days away, the manager rules out an emergency defensive signing — the summer's unfilled defensive gap will be lived with, not bought out, reversing 12 August's 'budget redirected to centre-backs' story.",
-      "headline": "兵工廠線：中後衛只剩三人，阿爾特塔不急著補人"
-    },
-    {
       "date": "2026-08-16",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The beat turns from Sunday's win to the fixture it sets up: Guimaraes faces Newcastle, the club that sold him for a club-record fee weeks ago, while Arteta must field a back line missing Saliba with Mosquera and Timber doubtful — a reunion-and-reshuffle lens rather than another recap of a match already printed.",
       "headline": "兵工廠線：布魯諾對上老東家紐卡索"
+    },
+    {
+      "date": "2026-09-15",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "US–China AI rivalry",
+      "angle": "The paper has covered Washington and Beijing scheduling AI safety talks (5 Sept) and the labs asking each other to slow down (13 Sept); today the Chinese state answers a frontier-lab CEO by name, and its security ministry — not its trade or foreign policy arm — reclassifies American AI models as a threat to China's ideological and institutional order.",
+      "headline": "中國回應美國AI老闆的警告"
+    },
+    {
+      "date": "2026-09-15",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US election administration",
+      "angle": "The emergency docket fight the paper followed to a briefing deadline gets its answer, and the reasoning is about the calendar rather than the constitution — the court blocks the rule because it came too late to administer, deliberately leaving the underlying question of federal power over state elections unresolved for after the midterms.",
+      "headline": "最高法院擋下郵寄投票新規定"
+    },
+    {
+      "date": "2026-09-15",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US immigration policy",
+      "angle": "A brand-new immigration thread for the paper that touches the reader's own campuses: after covering birthright orders, consular 'public charge' freezes and H-1B spouses, immigration restriction now arrives as a paperwork clock on 1.2m students, and it takes effect today rather than being announced for later.",
+      "headline": "留學生簽證新制上路前一天被擋"
+    },
+    {
+      "date": "2026-09-15",
+      "rank": 4,
+      "topic_id": "economics",
+      "topic": "China economy",
+      "angle": "A month after the paper's 'everything is weak at once / Japanification' read of July's data, August splits the economy in two — a 25% export boom sitting on top of a deepening consumption and investment slump — turning the story from general stagnation into a supply-demand imbalance that is now also a trade-negotiation argument.",
+      "headline": "中國八月出口大增，內需更冷"
+    },
+    {
+      "date": "2026-09-15",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The record opener printed on 14 September is turned around and viewed from the opponent's locker room: Detroit prepares for the coach who used to design its own offence, making Week 2 a test of whether Johnson's scheme works against people who helped build it — a next-fixture-and-reunion lens rather than another result recap.",
+      "headline": "熊隊對上獅隊，強森回老東家"
+    },
+    {
+      "date": "2026-09-15",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The 12 September 'one day at a time' deflection becomes a concrete institutional plan: Arsenal are not just renewing a manager to 2033 but signing up the spine — Rice, Odegaard, Timber — in parallel, a continuity-and-retention lens rather than another fixture preview, injury bulletin or match recap.",
+      "headline": "阿特塔續約在即，兵工廠留住主力"
     }
   ]
 }
