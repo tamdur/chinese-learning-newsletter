@@ -490,6 +490,11 @@
       "url": "https://www.histochart.com/community",
       "type": "aggregator",
       "notes": "Histochart's community page links to related solo/small-team historical mapping projects (HistorIQly, Omniatlas, HistoAtlas) — a useful seed cluster for future 'hidden gem' visualizer searches in this obsession."
+    },
+    {
+      "url": "https://nikiforovyevgen.com",
+      "type": "solo research site",
+      "notes": "Photographer Yevgen Nikiforov's personal archive of Soviet monumental mosaics across Ukraine, including 'Decommunized' and its follow-up 'Soviet Modernist Mosaics from 1960 to 1990' — a rare visual record of artworks later destroyed under decommunization law."
     }
   ]
 }
