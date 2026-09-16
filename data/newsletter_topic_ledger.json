@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-16",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "The ceasefire architecture is unravelling on a second, land front — the deadliest Israeli strikes in Lebanon since June's Hezbollah truce — rather than at the Gulf chokepoint the paper has covered all month through oil prices, tanker crossings and carrier crews.",
-      "headline": "以色列空襲黎巴嫩，十一人死亡"
-    },
-    {
-      "date": "2026-08-16",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI commercial adoption",
-      "angle": "The bubble argument gets tested from the demand side for once — actual enterprise revenue tripling in eight months and $1m-plus customers doubling in under two months — an income-statement lens the ledger's month of capex, securitisation and credit-risk stories never touched.",
-      "headline": "產業報告：Anthropic 年營收增為三倍"
-    },
-    {
-      "date": "2026-08-16",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "Democratic Party politics",
-      "angle": "Immigration seen from the opposition bench rather than the executive or the courts: the DNC passes two contradictory ICE resolutions on the same day, a party incapable of naming its own position four months from the midterms.",
-      "headline": "民主黨同一天通過兩種相反主張"
-    },
-    {
-      "date": "2026-08-16",
-      "rank": 4,
-      "topic_id": "world",
-      "topic": "Japan–China relations",
-      "angle": "A brand-new international thread for the paper and a different hemisphere from a fortnight of Gulf and Ukraine coverage: Northeast Asia's memory politics as a live diplomatic instrument, read through a nationalist PM sending an offering instead of attending.",
-      "headline": "日相只送供品，中韓仍抗議"
-    },
-    {
-      "date": "2026-08-16",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "Not a Cubs result but a record set against them — the first player in MLB history to homer in his first three at-bats did it at Wrigley — a history-made-by-the-opponent lens distinct from this week's rotation-verdict, MVP-case and bullpen-attrition entries.",
-      "headline": "紅雀新人前三打席連三轟，小熊吞敗"
-    },
-    {
-      "date": "2026-08-16",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The season's first competitive fixture as an audit of the summer rather than a team-sheet projection: €167m spent on midfield, no winger, an unreinforced defence and one win in five in pre-season, all going on trial against City at 9am Chicago time.",
-      "headline": "兵工廠今開季戰曼城，社區盾在卡地夫"
-    },
-    {
       "date": "2026-08-17",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The 12 September 'one day at a time' deflection becomes a concrete institutional plan: Arsenal are not just renewing a manager to 2033 but signing up the spine — Rice, Odegaard, Timber — in parallel, a continuity-and-retention lens rather than another fixture preview, injury bulletin or match recap.",
       "headline": "阿特塔續約在即，兵工廠留住主力"
+    },
+    {
+      "date": "2026-09-16",
+      "rank": 1,
+      "topic_id": "economics",
+      "topic": "Federal Reserve monetary policy",
+      "angle": "The paper has covered this meeting twice as a probability — a payroll miss making it an 88% bet on a cut (4 Sept), a CPI print flipping it to an 85% bet on a hike (12 Sept); today it stops being odds and becomes a decision, and the story is what it means for a central bank to raise rates into a war-driven supply shock while its own labour market is stalling, with the 10-year above 5% showing the market got there first.",
+      "headline": "美國聯準會可能升息 二〇二三年以來第一次"
+    },
+    {
+      "date": "2026-09-16",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI model competition",
+      "angle": "The frontier race measured not by benchmarks, capex or safety pledges — the ledger's staple lenses this fortnight — but by which model a rival lab's own employees are allowed to use at work, with Google conceding internally that its competitor writes better code.",
+      "headline": "谷歌開放工程師用對手的模型"
+    },
+    {
+      "date": "2026-09-16",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago–federal immigration standoff",
+      "angle": "Immigration enforcement measured in receipts rather than in rights or jurisdiction — a year-long federal operation audited as $1.26bn of missing restaurant and retail spending and $107m of forgone sales tax in a city already $882m short, distinct from the ledger's TRUST Act non-compliance (26 Aug) and city-contract leverage (31 Aug) entries.",
+      "headline": "芝加哥移民大抓捕滿一年 研究算出損失"
+    },
+    {
+      "date": "2026-09-16",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "DR Congo term limits",
+      "angle": "A brand-new international thread that breaks a fortnight of Gulf, Red Sea, Ukraine and European-election coverage: the erosion of term limits treated as a constitutional-engineering story in the country that supplies most of the world's cobalt.",
+      "headline": "剛果警察驅散反對修憲的遊行"
+    },
+    {
+      "date": "2026-09-16",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The season flips from the 11 September verdict that the ceiling had dropped to a clinch-watch with a countable number — seven — turning a summer of wild-card positioning into the imminent end of a six-year drought, and breaking four consecutive issues of Bears coverage on the sports desk.",
+      "headline": "小熊勝勇士 魔術數字剩下七"
+    },
+    {
+      "date": "2026-09-16",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The beat's first officiating lens of the season: rather than a result, an injury bulletin, a contract or a fixture preview, the story is the Key Match Incident Panel formally confirming a missed VAR call in Arsenal's favour, and what a retrospective review body with no power to change anything is actually for.",
+      "headline": "英超認錯：兵工廠該有一個罰球"
     }
   ]
 }
