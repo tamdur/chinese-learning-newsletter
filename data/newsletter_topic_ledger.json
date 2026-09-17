@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-17",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Gaza governance",
-      "angle": "The coalition that brokered the postwar plan turns on Israel: six Arab and Muslim governments issue a joint statement blaming Israel for the stall while Kushner shuttles to Cairo — the mediators-versus-Israel phase, distinct from 1 August's 'Hamas accepts disarmament' breakthrough and from this month's Lebanon/Gulf strands of the war.",
-      "headline": "阿拉伯八國指責以色列，庫許納趕赴開羅救和平計畫"
-    },
-    {
-      "date": "2026-08-17",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US transgender healthcare policy",
-      "angle": "A brand-new US policy thread for the paper: the fight over youth gender medicine moves from rhetoric and state legislatures into a finalized federal payment rule with a date on it (13 October) and a grace period, forcing state Medicaid agencies to choose between dropping coverage and paying for it alone.",
-      "headline": "美國新規定：聯邦不再出錢付未成年變性醫療"
-    },
-    {
-      "date": "2026-08-17",
-      "rank": 3,
-      "topic_id": "business",
-      "topic": "AI infrastructure",
-      "angle": "The 11 August Riot–Anthropic lease gets its market verdict: bitcoin is down 44% while miners are up 43–152%, meaning equity investors have stopped valuing the sector on hash rate and started valuing it on hyperscaler contracts — the AI buildout repricing a whole industry, not a single deal.",
-      "headline": "比特幣大跌，挖礦公司股價卻飛上天"
-    },
-    {
-      "date": "2026-08-17",
-      "rank": 4,
-      "topic_id": "economics",
-      "topic": "Japan economy",
-      "angle": "The Gulf oil shock the paper has tracked through tanker crossings, Brent prices and US retail sales now lands on the Bank of Japan's desk: a Q2 growth miss of nearly half the forecast, driven by stalled consumption, that puts next month's planned rate rise in doubt.",
-      "headline": "日本第二季成長不到預期一半，央行升息計畫生變"
-    },
-    {
-      "date": "2026-08-17",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A city-rivalry lens rather than a scoreboard one: the Crosstown Series opens tonight at Wrigley with both Chicago clubs in the playoff conversation, a civic frame distinct from the past week's rotation-verdict, PCA MVP-case, bullpen-attrition and opponent-record entries.",
-      "headline": "跨城大戰今晚開打，小熊主場迎戰白襪"
-    },
-    {
-      "date": "2026-08-17",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The summer's audit gets its verdict on the pitch: the makeshift defence the paper has worried about all month kept a clean sheet against City in a 3-0 Community Shield win, with a goal inside 24 seconds — the result phase of the fixture previewed on 16 August, and the first trophy of the title defence.",
-      "headline": "兵工廠三比零踢下曼城，捧回社區盾"
-    },
-    {
       "date": "2026-08-18",
       "rank": 1,
       "topic_id": "ai",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The beat's first officiating lens of the season: rather than a result, an injury bulletin, a contract or a fixture preview, the story is the Key Match Incident Panel formally confirming a missed VAR call in Arsenal's favour, and what a retrospective review body with no power to change anything is actually for.",
       "headline": "英超認錯：兵工廠該有一個罰球"
+    },
+    {
+      "date": "2026-09-17",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US Russia sanctions policy",
+      "angle": "Congress, not the White House, moves on Russia — and it does so by a mechanism the paper's Russia coverage has never used: secondary tariffs aimed at China and India as oil buyers rather than at Moscow itself, distinct from the ledger's drone-strike (8 Sept) and Global-South-diplomacy (24 Aug) entries on the war.",
+      "headline": "美國國會通過制裁俄羅斯法案"
+    },
+    {
+      "date": "2026-09-17",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "Kennedy Center and presidential power",
+      "angle": "A court ruling against the president is answered within minutes not by appeal but by the board closing the building itself — executive power routed through control of an institution's own trustees and its renovation money, a different mechanism from the ballroom litigation the paper closed out on 2 September.",
+      "headline": "法官擋下改名，甘迺迪中心決定關門兩年"
+    },
+    {
+      "date": "2026-09-17",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago housing policy",
+      "angle": "A brand-new Chicago thread — renter protections — and a bargaining-power lens on the mayoral race: Johnson only wins committee 12-9 by deleting the heart of his own ordinance, showing what an unpopular incumbent can actually still pass, distinct from the ledger's Chicago entries on budget holes, grocery subsidies, transit safety and ICE economics.",
+      "headline": "芝加哥租客保護條例以十二比九過關"
+    },
+    {
+      "date": "2026-09-17",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago downtown redevelopment",
+      "angle": "The AI boom the paper has tracked as capex, chips and a data-centre zoning fight arrives in the Loop as architecture instead — a big tech firm anchoring a salvaged landmark and, with it, the case for downtown office space, a lens no Chicago entry in the ledger has used.",
+      "headline": "谷歌公布湯普森中心新設計"
+    },
+    {
+      "date": "2026-09-17",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The Bears beat moves from results and roster attrition to a single contract decision and its immediate payoff: a running back paid $33.75m over three years who two days later posts the franchise's best rushing game in a decade — a money-and-position-value lens, not another game recap or injury bulletin.",
+      "headline": "熊隊史威夫特剛續約就跑出好成績"
+    },
+    {
+      "date": "2026-09-17",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The defensive-injury story flips from subtraction to return: Timber back in full training, Mosquera's withdrawal downgraded to precaution and Saliba registered for Europe — a recovery-and-availability lens distinct from 11 September's 'Saliba out three to four weeks', 14 September's doubt-ridden Newcastle preview and 16 September's VAR-panel story.",
+      "headline": "兵工廠線：後衛一個一個歸隊"
     }
   ]
 }
