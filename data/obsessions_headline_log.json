@@ -4479,6 +4479,34 @@
       "headline": "程式碼是一幅畫：Piet",
       "headline_en": "Piet, the esoteric programming language where code is a painting",
       "topic": "visual esoteric programming language"
+    },
+    {
+      "date": "2026-09-18",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "合成器與古琴之間：袁中平的南風旅程",
+      "headline_en": "Between Synthesizer and Guqin: Yuan Jung-Ping's South Wind Journey",
+      "topic": "1989 new age synth-fusion album before guqin career"
+    },
+    {
+      "date": "2026-09-18",
+      "obsession_id": "finland-honeymoon",
+      "headline": "樹皮做的麵包：芬蘭大飢荒留下的三塊黑麵包",
+      "headline_en": "Bark Bread: Three Loaves from Finland's Great Famine",
+      "topic": "famine-era bark bread food history"
+    },
+    {
+      "date": "2026-09-18",
+      "obsession_id": "do-312",
+      "headline": "開鎖之夜：芝加哥人把鎖當成謎題",
+      "headline_en": "Lockpicking Night: Chicagoans Treat Locks as Puzzles",
+      "topic": "monthly lockpicking meetup"
+    },
+    {
+      "date": "2026-09-18",
+      "obsession_id": "best-of-internet",
+      "headline": "亂中有序：一個畫出奇異吸子的小網站",
+      "headline_en": "Order in Chaos: A Small Site That Draws Strange Attractors",
+      "topic": "solo interactive strange attractor visualizer"
     }
   ]
 }
