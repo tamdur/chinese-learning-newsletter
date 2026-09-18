@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-18",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI industry consolidation",
-      "angle": "A payments company buys the switchboard between developers and every frontier model for $7bn — five times its valuation three months ago — showing the contested prize in AI has moved to the routing layer, a market-structure and M&A lens distinct from the ledger's month of capex, securitisation, credit-risk and revenue-growth stories.",
-      "headline": "支付公司Stripe七十億美元買下AI「轉接台」"
-    },
-    {
-      "date": "2026-08-18",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "The war's diplomatic architecture, not its battlefield or its oil price: the president's own 60-day Versailles ultimatum expires with nothing agreed, he declares deadlines meaningless, and he threatens to bomb Oman — a mediator — distinct from 15 August's carrier-sustainability story and 16 August's Lebanon strikes.",
-      "headline": "美伊六十天期限到期 川普放話要炸阿曼"
-    },
-    {
-      "date": "2026-08-18",
-      "rank": 3,
-      "topic_id": "economics",
-      "topic": "China economy",
-      "angle": "A structural-stagnation lens on the world's second-largest economy — output, consumption and investment all missing at once, reviving the Japanification debate weeks before October trade talks — a country and a diagnosis the paper has not run, distinct from 17 August's Japan Q2 miss and 15 August's US retail-sales story.",
-      "headline": "中國七月數據全面走弱 學者談「日本化」"
-    },
-    {
-      "date": "2026-08-18",
-      "rank": 4,
-      "topic_id": "ideas",
-      "topic": "screen time and cognition",
-      "angle": "A back-page science finding that cuts against the premise of laws the paper has already reported: eight years of Finnish longitudinal data associate more screen time with better teenage cognitive processing, complicating Illinois's classroom phone ban and its app-design mandates.",
-      "headline": "芬蘭八年研究：多看螢幕的孩子 長大反應更好"
-    },
-    {
-      "date": "2026-08-18",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The roster-construction phase rather than a game story: the day after the 34-10 preseason opener that Williams sat out, the Bears sign a veteran pass-rusher and start cutting, turning camp evaluation into subtraction — the consequence of 14 August's 'hold the quarterback out' decision, and a break from a Cubs-heavy sports desk.",
-      "headline": "熊隊季前賽大勝 隔天就動刀換人"
-    },
-    {
-      "date": "2026-08-18",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The season arc rather than a result: with the Shield won, the question becomes whether a club defending an English title for the first time in over twenty years can do it with its best defender out and the deepest chasing pack in years — a nine-month horizon distinct from 17 August's Shield result and 16 August's single-fixture audit.",
-      "headline": "兵工廠線：二十二年來第一次以冠軍開季 卻少了最強後衛"
-    },
-    {
       "date": "2026-08-19",
       "rank": 1,
       "topic_id": "ai",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The defensive-injury story flips from subtraction to return: Timber back in full training, Mosquera's withdrawal downgraded to precaution and Saliba registered for Europe — a recovery-and-availability lens distinct from 11 September's 'Saliba out three to four weeks', 14 September's doubt-ridden Newcastle preview and 16 September's VAR-panel story.",
       "headline": "兵工廠線：後衛一個一個歸隊"
+    },
+    {
+      "date": "2026-09-18",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI chip supply chain",
+      "angle": "The compute story stops being about who buys from Nvidia or designs around it and becomes about whether a second, sealed-off national supply chain can exist at all — Huawei answers export controls with a dated two-year roadmap and a 4,096-processor cluster design, betting that scale-out beats per-chip parity.",
+      "headline": "華為公布新AI晶片 挑戰輝達地位"
+    },
+    {
+      "date": "2026-09-18",
+      "rank": 2,
+      "topic_id": "business",
+      "topic": "US media consolidation and antitrust",
+      "angle": "Antitrust enforcement passes from Washington to the state attorneys general, and the merging company's counter-move is territorial rather than legal — Paramount threatens to take its headquarters out of the state that is suing it, making corporate residency itself a bargaining chip in a $111bn deal.",
+      "headline": "派拉蒙併購案被告 傳考慮搬離加州"
+    },
+    {
+      "date": "2026-09-18",
+      "rank": 3,
+      "topic_id": "ideas",
+      "topic": "Himalayan glacier flood",
+      "angle": "The disaster the paper reported as a failure of warning gets its causal verdict three weeks later: attribution scientists tie the rock collapse itself to industrial-era warming, extending a method built for heatwaves and rainfall to the physical integrity of a mountain.",
+      "headline": "研究指暖化助長尼泊爾山崩洪災"
+    },
+    {
+      "date": "2026-09-18",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago–federal immigration standoff",
+      "angle": "The standoff moves from institutions to individuals and from politics to liability: residents use the Federal Tort Claims Act to seek money damages from DHS itself, a route that neither the governor nor the mayor controls.",
+      "headline": "十五名伊利諾居民 向國土安全部求償"
+    },
+    {
+      "date": "2026-09-18",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The August injury that forced the whole infield to move is reversed just in time, so the story is October roster construction — who is actually available for a short series — rather than another magic-number or home-run-milestone bulletin.",
+      "headline": "史旺森傷癒歸隊 小熊內野歸位"
+    },
+    {
+      "date": "2026-09-18",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The Arsenal beat's first academy-pathway story of the season, and it turns on an inconsistency: having exported Nwaneri on loan a fortnight ago, Arsenal are now refusing every loan bid for a 16-year-old who has just scored twice in a cup tie.",
+      "headline": "兵工廠拒絕外借 十六歲多曼留隊"
     }
   ]
 }
