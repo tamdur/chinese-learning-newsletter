@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-19",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI and children",
-      "angle": "The frontier labs turn their own products into age-gated environments: OpenAI ships a restricted teen ChatGPT governed by an age-prediction system that classifies users without asking them — a consumer-product and child-safety lens the ledger's month of capex, securitisation, credit risk, cyber-offence and lab-politics stories has never touched.",
-      "headline": "OpenAI推出青少年版ChatGPT，靠系統猜你幾歲"
-    },
-    {
-      "date": "2026-08-19",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US separation of powers",
-      "angle": "The ballroom fight moves from the appellate ruling this paper reported on August 10 to the Supreme Court's emergency docket with a hard August 21 deadline — the question shifting from whether the president needed Congress to whether the justices will pause a ruling when the building has already been torn down.",
-      "headline": "白宮舞廳工程喊停，最高法院兩天內要決定"
-    },
-    {
-      "date": "2026-08-19",
-      "rank": 3,
-      "topic_id": "ideas",
-      "topic": "aviation climate impact",
-      "angle": "A brand-new science thread for the paper and a rare case of AI being used on the mitigation side of the climate ledger rather than the emissions side: an entire ocean's airspace becomes a live experiment in steering planes around machine-predicted contrails.",
-      "headline": "英國與Google啟動AI試驗，幫飛機避開凝結尾"
-    },
-    {
-      "date": "2026-08-19",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Illinois disaster and flood policy",
-      "angle": "Where August 15 showed Illinois improvising its own repair money after Washington said no, today the state uses a formal disaster proclamation over 15 named counties to reopen a different federal door — block-grant disaster funding — turning a workaround into a legal instrument.",
-      "headline": "普利茲克簽災難聲明，十五個郡可申請聯邦補助"
-    },
-    {
-      "date": "2026-08-19",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The Cubs' attrition moves from the bullpen (August 15) to the middle of the diamond: an everyday shortstop lost for four to six weeks forces Hoerner across the bag and reshapes the whole infield in a playoff race — a roster-reconfiguration angle, not another game result or milestone.",
-      "headline": "小熊游擊手史旺森側腹拉傷，預計休四到六週"
-    },
-    {
-      "date": "2026-08-19",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The league campaign itself begins: Friday's opener against a promoted Coventry side is where the £167m summer stops being a Shield-day audit and becomes a 38-game defence, with the record signing Tzolis in line for his first Premier League start — a specific opening-fixture and selection lens rather than August 18's nine-month season-arc essay.",
-      "headline": "兵工廠線：新球季首戰主場對考文垂"
-    },
-    {
       "date": "2026-08-20",
       "rank": 1,
       "topic_id": "ai",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The Arsenal beat's first academy-pathway story of the season, and it turns on an inconsistency: having exported Nwaneri on loan a fortnight ago, Arsenal are now refusing every loan bid for a 16-year-old who has just scored twice in a cup tie.",
       "headline": "兵工廠拒絕外借 十六歲多曼留隊"
+    },
+    {
+      "date": "2026-09-19",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI industry consolidation",
+      "angle": "The paper reported on 28 August that Nvidia would buy the open-model commons and on 11 September that the DOJ was probing whether its Groq licence was a merger in disguise; today the two converge on a structural point — this is the one deal Nvidia cannot engineer around.",
+      "headline": "輝達收購案 面臨更嚴格審查"
+    },
+    {
+      "date": "2026-09-19",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "Bank of Japan monetary policy",
+      "angle": "A central bank the ledger has never covered — and the reverse of the usual textbook result: Japan reaches a 31-year-high policy rate and the yen falls anyway, because Ueda refused to promise a next step.",
+      "headline": "日本升息到三十一年新高 日圓反而走弱"
+    },
+    {
+      "date": "2026-09-19",
+      "rank": 3,
+      "topic_id": "business",
+      "topic": "Berkshire Hathaway succession",
+      "angle": "A brand-new corporate thread for the paper and the ledger's second big-company succession after Apple on 1 September, but with the opposite design: the job is deliberately split so the son inherits the chair as a guardian of culture while an outsider runs the company.",
+      "headline": "巴菲特卸下董事長 交棒給兒子"
+    },
+    {
+      "date": "2026-09-19",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago rail and land-use politics",
+      "angle": "A brand-new Chicago thread after a fortnight of immigration-standoff, housing-ordinance and downtown-redevelopment entries: federal rail infrastructure and a billionaire's stadium redevelopment turn out to be the same project.",
+      "headline": "芝加哥南區居民 反對火車維修場"
+    },
+    {
+      "date": "2026-09-19",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The beat returns after a week away — and after four of the last six sports slots went to the Bears — with the schedule's softest game framed as a diagnostic rather than a contest.",
+      "headline": "密西根大學週六主場迎戰UTEP"
+    },
+    {
+      "date": "2026-09-19",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A strength-versus-strength tactical lens rather than another preview of a reunion or an injury list: the league's best attack meets Europe's meanest defence.",
+      "headline": "兵工廠作客布萊頓 矛與盾對決"
     }
   ]
 }
