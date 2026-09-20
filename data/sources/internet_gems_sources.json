@@ -505,6 +505,11 @@
       "url": "https://shortwavearchive.com/",
       "type": "exemplar",
       "notes": "Solo-run, since-2012 archive of raw off-air shortwave radio recordings (numbers stations, pirate radio, religious broadcasters), updated regularly with a companion podcast feed."
+    },
+    {
+      "url": "https://garfieldcentral.org/open-houses/",
+      "type": "club site",
+      "notes": "Garfield-Clarendon Model Railroad Club's own site with visiting hours, open house dates, layout history, and photos — a recurring free weekly event (Fridays 7-9pm) plus occasional special open houses, good recurring source for under-the-radar Chicago hobbyist culture."
     }
   ]
 }
