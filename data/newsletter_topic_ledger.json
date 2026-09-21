@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-21",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI chip supply chain",
-      "angle": "A hyperscaler is now paid in its own supplier's equity to switch chip vendors — Google takes a $12.2bn warrant in Marvell that vests only as it buys, a customer-supplier ownership structure that is a market-structure and custom-silicon lens distinct from the ledger's run of AI capex, credit risk, M&A and capital-markets stories.",
-      "headline": "谷歌買晶片，還拿到馬維爾股票"
-    },
-    {
-      "date": "2026-08-21",
-      "rank": 2,
-      "topic_id": "ideas",
-      "topic": "software supply-chain security",
-      "angle": "A brand-new security thread for the paper: the attack lands not on a running program but on the act of compiling one, exposing how a single hijacked maintainer account inside a package registry sits upstream of a third of the world's code — a build-time-trust lens distinct from the ledger's month of model-escape and lab-safety stories.",
-      "headline": "程式套件被下毒，編譯就中招"
-    },
-    {
-      "date": "2026-08-21",
-      "rank": 3,
-      "topic_id": "economics",
-      "topic": "Federal Reserve monetary policy",
-      "angle": "The minutes reveal the July hold was far closer to a hike than the vote implied — 'many' participants, not just the three dissenters, saw tightening as likely — and that the chair is quietly proposing to cut the Fed's own meeting calendar from eight to six, an institutional-reform detail distinct from 30 July's market-reaction coverage of the same decision.",
-      "headline": "聯準會七月紀錄：九比三，三人要升息"
-    },
-    {
-      "date": "2026-08-21",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago national political standing",
-      "angle": "A doorstep story about the city's standing in national politics rather than its budget or its weather: two years after hosting, Chicago is cut in the very first round of the 2028 convention race with no explanation given — distinct from the recent run of Chicago entries on flood policy, CPS finances and heat adaptation.",
-      "headline": "芝加哥出局，無緣二零二八民主黨大會"
-    },
-    {
-      "date": "2026-08-21",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "Camp is ending with its two biggest questions still open rather than closing: Burden is shut down for the whole preseason and the left-tackle job has reverted to an unresolved two-man split waiting on an injured third man — a nothing-settled-in-time angle distinct from 18 August's roster-cuts story and 2 August's 'Amegadjie takes the reps' report.",
-      "headline": "熊隊訓練營收尾，兩大問題沒答案"
-    },
-    {
-      "date": "2026-08-21",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The window's closing ten days seen as unfinished business rather than a completed signing: with the defence patched, the money swings back to the winger Arteta failed to buy all summer, a second defender is still wanted, and the manager publicly slams the door on interest in Lewis-Skelly — a retention-and-remaining-priorities lens distinct from 20 August's Konsa deal and 19 August's Coventry preview.",
-      "headline": "兵工廠線：阿特塔還想再簽一名邊鋒"
-    },
-    {
       "date": "2026-08-22",
       "rank": 1,
       "topic_id": "ai",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The strength-versus-strength preview ends with the attack scoring nothing at all, making the summer's unreplaced forward sales a scoreline instead of a worry — the first defeat of the title defence.",
       "headline": "兵工廠本季首敗，零比三輸給布萊頓"
+    },
+    {
+      "date": "2026-09-21",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI slowdown pact",
+      "angle": "The restraint pact the paper covered as an ethical proposal (13 Sept) and then as a market shock (14 Sept) now becomes a legal liability: a class action argues that four firms agreeing to slow down is collusion, so the open question is no longer whether the labs will honour the pact but whether US antitrust law permits them to make one at all.",
+      "headline": "四大AI公司被控聯手放慢進度"
+    },
+    {
+      "date": "2026-09-21",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Russia–Ukraine war",
+      "angle": "The war arrives inside the capital's fuel supply on election day: Kyiv's largest barrage of 2026 sets alight the refinery that provides 40% of Moscow's petrol, turning a conflict Muscovites have experienced as television into a domestic shortage risk — distinct from 8 September's 'talks collapse, strikes resume' and from 20 September's Duma-election piece.",
+      "headline": "烏克蘭無人機打中莫斯科煉油廠"
+    },
+    {
+      "date": "2026-09-21",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US press freedom",
+      "angle": "A brand-new US policy thread for the paper: executive power exercised not through courts, money or personnel but through the physical logistics of news-gathering — the White House seizing control of the pool rotation the networks have run themselves for decades.",
+      "headline": "白宮拿掉CNN的電視輪值"
+    },
+    {
+      "date": "2026-09-21",
+      "rank": 4,
+      "topic_id": "economics",
+      "topic": "US–China trade",
+      "angle": "The tariff war reverses direction three days before the summit: after a month in which the paper tracked pressure engineered up to the truce ceiling, both sides are now negotiating cuts on $30bn of trade, with rare earths, Boeing orders and AI risk bundled into a single deliverable package.",
+      "headline": "美中商談降關稅，習近平本週訪白宮"
+    },
+    {
+      "date": "2026-09-21",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The beat's first quarterback-health story of the season: an availability-of-the-franchise-asset lens on Williams' hamstring strain awaiting a Monday MRI.",
+      "headline": "熊隊四分衛威廉斯大腿拉傷"
+    },
+    {
+      "date": "2026-09-21",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The defeat printed yesterday gets its transfer-market consequence rather than a rerun: the blank at Brighton pushes Arsenal back into the striker market they left empty in August, with Dortmund's Beier the January target.",
+      "headline": "兵工廠線：阿森納看上多特蒙德前鋒拜爾"
     }
   ]
 }
