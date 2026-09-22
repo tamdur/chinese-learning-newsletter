@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-22",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI industry finance",
-      "angle": "Two days after OpenAI penciled in a 2027 listing, Anthropic moves to front-run it — filing within weeks for an October debut at ~$2tn that would be the largest IPO in history, with $65bn of annualized revenue as the justification.",
-      "headline": "Anthropic 準備上市　規模可能寫下史上最大紀錄"
-    },
-    {
-      "date": "2026-08-22",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US separation of powers",
-      "angle": "The 21 August deadline this paper flagged produces its answer — Roberts lets the concrete keep pouring while the constitutional question is unresolved, making the half-built building itself the strongest argument against stopping it.",
-      "headline": "大法官放行　白宮宴會廳繼續施工"
-    },
-    {
-      "date": "2026-08-22",
-      "rank": 3,
-      "topic_id": "economics",
-      "topic": "Eurozone economy",
-      "angle": "After a fortnight in which the paper reported the world's second and third largest economies missing — China's across-the-board weakness, Japan's halved Q2 growth — Europe delivers the opposite, and the engine is the AI buildout showing up as German factory orders and the first job growth of 2026.",
-      "headline": "歐元區工廠回溫　景氣升到九個月新高"
-    },
-    {
-      "date": "2026-08-22",
-      "rank": 4,
-      "topic_id": "business",
-      "topic": "European banking consolidation",
-      "angle": "A new industry and a new defensive logic for the paper's merger coverage after pharma, warehouses, homebuilders and AI routing: a 554-year-old rescued bank tries to avoid being eaten by buying two rivals at once on the same day.",
-      "headline": "世界最老銀行出手　同時要買兩家對手"
-    },
-    {
-      "date": "2026-08-22",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears stadium",
-      "angle": "The stadium fight leaves the Illinois-versus-Indiana taxpayer contest the paper covered on 31 July and hits a veto point neither state controls — the other 31 NFL owners, who must approve any move out of the Chicago market.",
-      "headline": "熊隊想搬去印第安納　還得過老闆們這關"
-    },
-    {
-      "date": "2026-08-22",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The opener previewed on 19 August delivers, but the telling detail is who scored: the title defense's first three goals came from last season's spine, not from the summer's new arrivals, and Arteta used the win to demand more from the forwards rather than to declare the squad complete.",
-      "headline": "兵工廠三比零勝考文垂　衛冕之路開好頭"
-    },
-    {
       "date": "2026-08-23",
       "rank": 1,
       "topic_id": "policy",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The defeat printed yesterday gets its transfer-market consequence rather than a rerun: the blank at Brighton pushes Arsenal back into the striker market they left empty in August, with Dortmund's Beier the January target.",
       "headline": "兵工廠線：阿森納看上多特蒙德前鋒拜爾"
+    },
+    {
+      "date": "2026-09-22",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "The first frontier model release since the industry's self-restraint pact — and it comes from the one lab that never signed up, with its edge claimed not in compute but in proprietary Starlink hardware telemetry that no rival can purchase.",
+      "headline": "馬斯克新模型出爐 用衛星資料訓練"
+    },
+    {
+      "date": "2026-09-22",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "After seven weeks in which this paper covered the war only as escalation — tankers sunk, refineries hit, chokepoints closed — the market is for the first time pricing its end, with oil down 9% in four sessions on diplomacy rather than on any change in the blockade.",
+      "headline": "和談有望 油價跌破一百美元"
+    },
+    {
+      "date": "2026-09-22",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US redistricting",
+      "angle": "The Missouri map this paper reported struck down on 11 September is revived by a federal court over the state supreme court's objection — turning a gerrymandering case into a straight conflict over whether state or federal judges control a state's own districts, weeks before ballots print.",
+      "headline": "聯邦法院翻案 密蘇里州改用共和黨地圖"
+    },
+    {
+      "date": "2026-09-22",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago mayoral politics",
+      "angle": "The mayoral race gets its first hard measure of who is real — a 30-to-1 cash advantage for a challenger who has not even declared, against an incumbent who must choose between layoffs and a tax rise.",
+      "headline": "芝加哥市長選戰 挑戰者錢多三十倍"
+    },
+    {
+      "date": "2026-09-22",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The coach's own diagnosis replaces the scoreboard reading: the problem this season is not points but six fumbles in three games, and the Big Ten opener against a top-20 Iowa is the worst possible place to keep dropping the ball.",
+      "headline": "密西根教練：掉球才是最大毛病"
+    },
+    {
+      "date": "2026-09-22",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The tactical post-mortem the beat skipped: Arteta traces the first defeat not to the missing strikers the paper has written about all summer but to a Rice–Guimarães midfield that does not yet function as a pair.",
+      "headline": "兵工廠線：阿爾特塔說慘敗是一堂大課"
     }
   ]
 }
