@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-23",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US trade policy",
-      "angle": "The Canada deferral the paper reported on 20 August expires and the trade war becomes two-way for the first time: the levies actually hit, and a major US ally answers with matched retaliation on a dated schedule (8 September) rather than with a lawsuit or a legal theory.",
-      "headline": "美加談判破裂，美國課加拿大五成關稅"
-    },
-    {
-      "date": "2026-08-23",
-      "rank": 2,
-      "topic_id": "business",
-      "topic": "China property crisis",
-      "angle": "The property bust the paper has covered only as a macro drag finally acquires a defendant: Beijing closes the Evergrande era through the criminal courts — life imprisonment, $2.35bn in fines, 50-plus convictions — rather than through a rescue.",
-      "headline": "恆大創辦人許家印被判無期徒刑"
-    },
-    {
-      "date": "2026-08-23",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US immigration policy",
-      "angle": "Immigration policy struck down at the visa window rather than at the border: the courts void a wealth-based 'public charge' freeze covering 75 countries on antidiscrimination grounds — a consular-processing lens distinct from 7 August's birthright executive orders and 9 August's nationwide class certification.",
-      "headline": "聯邦法官推翻七十五國簽證禁令"
-    },
-    {
-      "date": "2026-08-23",
-      "rank": 4,
-      "topic_id": "world",
-      "topic": "Israel–Turkey rivalry in Syria",
-      "angle": "A brand-new fault line and a brand-new pair of antagonists in the Middle East: Israel bombs a Syrian air base to stop a NATO member's troops from moving in, and Washington publicly rebukes Israel — wholly distinct from the paper's month of Iran, Hormuz, Lebanon and Gaza coverage.",
-      "headline": "以色列空襲敘利亞基地，阻擋土耳其進駐"
-    },
-    {
-      "date": "2026-08-23",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The head coach's own alarm replaces the beat writers' projections: after a 27-9 loss Johnson publicly says he has a 'bad feeling' with the 53-man cutdown days away — an accountability-and-evaluation lens distinct from 18 August's win-then-cuts story and 21 August's 'camp ends with nothing settled' entry.",
-      "headline": "熊隊季前賽大敗，教練說「感覺很差」"
-    },
-    {
-      "date": "2026-08-23",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The reaction-and-post-mortem installment, not the result: the paper already ran the 3-0 scoreline on 22 August, so today's Arsenal beat covers what the win revealed — Arteta's own verdict from the press conference, the player ratings, and the rebuilt White–Saka right flank standing in for an injury-hit defence. Explicitly NOT a reprint of the scoreline or of the 20 August Konsa signing.",
-      "headline": "兵工廠線：阿爾特塔誇薩卡「非常出色」"
-    },
-    {
       "date": "2026-08-24",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The tactical post-mortem the beat skipped: Arteta traces the first defeat not to the missing strikers the paper has written about all summer but to a Rice–Guimarães midfield that does not yet function as a pair.",
       "headline": "兵工廠線：阿爾特塔說慘敗是一堂大課"
+    },
+    {
+      "date": "2026-09-23",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI model releases",
+      "angle": "The frontier race is measured in price rather than capability: a new flagship family launches at half its predecessor's cost and is pushed to free users, so frontier AI is becoming a price war, not only a benchmark contest. This is distinct from 22 Sept's xAI Starlink-data model and 12 Sept's routing-layer lab.",
+      "headline": "OpenAI推出GPT-6新模型，價格砍一半"
+    },
+    {
+      "date": "2026-09-23",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "Yesterday's paper had the oil market betting the war would end; today Tehran puts concrete, dated terms on the table — Hormuz reopened within seven days in exchange for lifting the blockade — delivered as the UN General Assembly opens.",
+      "headline": "伊朗：美國解除封鎖，七天內重開荷莫茲海峽"
+    },
+    {
+      "date": "2026-09-23",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "US energy policy",
+      "angle": "The Gulf war's fuel shock turns into a US trade-policy question: Washington weighs blocking diesel exports, a supply-intervention lens with farm-belt stakes. The ledger covered the war's energy effects only as crude prices and Saudi supply.",
+      "headline": "柴油價格創新高，美國考慮禁止出口"
+    },
+    {
+      "date": "2026-09-23",
+      "rank": 4,
+      "topic_id": "ai",
+      "topic": "AI safety",
+      "angle": "Oversight moves earlier in development: outside evaluators will watch models while they are being trained, not only at the pre-release gate. It is a lab's structural answer to the containment failures the paper covered on 20 Sept, and distinct from 14 Sept's private rival-run auditing body.",
+      "headline": "OpenAI請外部專家提早檢查AI安全"
+    },
+    {
+      "date": "2026-09-23",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The problem grows from one star's hamstring (21 Sept, awaiting an MRI) to the whole quarterback room: with the backup also in the concussion protocol, the question is who can start at all on Monday night against the Eagles.",
+      "headline": "熊隊兩名四分衛受傷，老將可能上場"
+    },
+    {
+      "date": "2026-09-23",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The contract saga the beat followed as 'day by day' (12 Sept) and 'renewal imminent' (15 Sept) is now signed, and the ownership chose to commit long-term right after the first defeat of the title defence. This is distinct from 20 to 22 Sept's Brighton result, striker-target and tactical post-mortem entries.",
+      "headline": "阿特塔簽下長約，留在兵工廠"
     }
   ]
 }
