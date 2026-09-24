@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-24",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "The war's economic-pressure phase reaches its peak just as Iran itself shows its first public leadership fissure — Washington's 'toughest sanctions in history' meets Pezeshkian conceding 'we cannot continue with war forever,' a domestic-cracks-inside-Tehran lens distinct from Aug 20's UAE trade cut, Aug 18's expired 60-day ultimatum, Aug 16's Lebanon strikes and Aug 15's carrier-crew story.",
-      "headline": "美國對伊朗祭出「史上最重」制裁"
-    },
-    {
-      "date": "2026-08-24",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI infrastructure",
-      "angle": "The AI buildout hits its first real supply-cost ceiling — not GPU allocation or grid power, but HBM/DRAM memory — forcing Nvidia to pass a 15%+ price hike through to customers on 2027 systems; a physical cost-inflation lens distinct from Aug 21's Google-Marvell warrant, Aug 15's Broadcom-credit-risk story and Aug 11's Riot bitcoin-power lease.",
-      "headline": "記憶體大缺貨　輝達AI伺服器要漲價"
-    },
-    {
-      "date": "2026-08-24",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "Russia–Ukraine war",
-      "angle": "The war's diplomatic axis pivots to the Global South — Kyiv turning to non-aligned capitals like Pretoria to isolate Moscow while Paris speeds up missile deliveries — a diplomatic-flanking lens distinct from Aug 14's 800-mile deep-strike-campaign story.",
-      "headline": "澤倫斯基向南方國家求助　盼壓俄停戰"
-    },
-    {
-      "date": "2026-08-24",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago Public Schools",
-      "angle": "The doorstep first-day-of-school moment for the district whose finances the paper covered as a payroll crisis on Aug 4 and a city-versus-state rupture on Aug 6 — kids actually walk in on schedule, with free CTA rides bundling schools and transit into a single municipal opening rather than a fiscal-fight story.",
-      "headline": "芝加哥公立學校開學　搭車免費"
-    },
-    {
-      "date": "2026-08-24",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The playoff-standings picture rather than another injury or milestone: with about a month left, Chicago holds the top NL Wild Card spot by two games over Philadelphia and four over San Diego despite the summer's bullpen and infield losses — a playoff-race-positioning angle distinct from Aug 19's Swanson-injury infield reshuffle, Aug 16's opponent record and Aug 10's rotation-verdict blowout.",
-      "headline": "小熊6比5勝響尾蛇　外卡領先兩場"
-    },
-    {
-      "date": "2026-08-24",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A marquee outbound sale rather than the summer's inbound business: Martinelli — omitted from the Shield and opening-week squads — is in Al-Hilal talks while Atletico publicly close the Alvarez door, meaning the winger Arteta chased is unavailable and the one he had is being sold; a departure-and-blocked-pursuit lens distinct from Aug 22's Coventry post-match, Aug 21's 'still wants a winger' and Aug 20's Konsa signing.",
-      "headline": "兵工廠談賣馬丁內利　艾瓦雷茲買不成"
-    },
-    {
       "date": "2026-08-25",
       "rank": 1,
       "topic_id": "policy",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The contract saga the beat followed as 'day by day' (12 Sept) and 'renewal imminent' (15 Sept) is now signed, and the ownership chose to commit long-term right after the first defeat of the title defence. This is distinct from 20 to 22 Sept's Brighton result, striker-target and tactical post-mortem entries.",
       "headline": "阿特塔簽下長約，留在兵工廠"
+    },
+    {
+      "date": "2026-09-24",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI governance",
+      "angle": "AI risk goes to the world's top security body for the first time. American and Chinese frontier labs sit at the same table, so AI is treated as a matter of international peace and security, not product regulation or bilateral talks. This is distinct from 5 Sept's US–China safety talks, 7 Sept's EU rules, 14 Sept's private auditing body and 20 Sept's Gemini escape.",
+      "headline": "美中AI公司首次同上聯合國安理會"
+    },
+    {
+      "date": "2026-09-24",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Russia–Ukraine war",
+      "angle": "Kyiv turns the General Assembly into a vote-counting exercise: 50 governments back an unconditional ceasefire, and Russia's answer that night is a missile on a maternity hospital. This multilateral-coalition angle is distinct from 6 Sept's US envoy–Putin pause, 8 Sept's collapse of talks, 21 Sept's strike on the Moscow refinery and 24 Aug's outreach to the Global South.",
+      "headline": "51國挺烏克蘭停火　基輔當晚又遭飛彈攻擊"
+    },
+    {
+      "date": "2026-09-24",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago data centre policy",
+      "angle": "The AI buildout the paper has covered as capital, chips and a single zoning order now hits a coordinated city-and-state brake. Chicago proposes an outright one-year stop, and Springfield removes the tax subsidy. This moves the story from regulating data centres to pausing them. It goes beyond 27 Aug's mayoral order to tighten rules.",
+      "headline": "芝加哥市長提議一年不蓋新資料中心"
+    },
+    {
+      "date": "2026-09-24",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "US press freedom",
+      "angle": "The first judicial check on the White House's press campaign. A court rules that revoking credentials is a due-process question, not presidential discretion. This is distinct from 21 Sept's story about the White House seizing control of the pool rotation.",
+      "headline": "法官下令白宮讓三家媒體回來採訪"
+    },
+    {
+      "date": "2026-09-24",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The clinch-watch the paper counted down from magic number seven (16 Sept) turns into a cliff edge. A first chance to clinch is lost in extra innings, and the Cubs are half a game outside a Wild Card spot with four days left, so the tiebreakers now matter. This is distinct from 18 Sept's Swanson return and 11 Sept's division-race verdict.",
+      "headline": "小熊延長賽輸球　錯過晉級機會"
+    },
+    {
+      "date": "2026-09-24",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A workload-and-body lens the beat hasn't used: the midfielder Arteta's post-mortem centred on has a chronic nerve-and-hamstring problem after a 69-game season, so the question is whether Rice can be managed through a title defence. This is distinct from 22 Sept's tactical post-mortem, 23 Sept's Arteta contract and 5 Sept's international-break injury list.",
+      "headline": "萊斯因傷退出英格蘭國家隊"
     }
   ]
 }
