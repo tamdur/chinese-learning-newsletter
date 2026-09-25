@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-25",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US election security",
-      "angle": "The mail-ballot fight the paper followed from an appellate block (26 July) to an emergency application with a mid-August deadline (28 July) finally gets its Supreme Court answer — a 6-3 order letting the executive order operate in 23 states through the midterms while deliberately leaving unresolved whether a president can direct state election administration at all.",
-      "headline": "最高法院放行　川普郵寄投票命令可先上路"
-    },
-    {
-      "date": "2026-08-25",
-      "rank": 2,
-      "topic_id": "economics",
-      "topic": "US trade policy",
-      "angle": "The Canada trade war escalates from symbolic consumer goods into the continent's most integrated industry — a threatened 50% levy on cars and parts, dated January 2027, that hands automakers and Midwest suppliers a shot clock rather than an immediate shock; distinct from 20 August's Section 338 deferral and 23 August's 'the levies hit and Canada scheduled retaliation'.",
-      "headline": "川普放話：加拿大汽車關稅要加到五成"
-    },
-    {
-      "date": "2026-08-25",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI industry consolidation",
-      "angle": "The AI commons itself goes on the block: the field's default public repository of open models is quietly shopping itself at nearly triple its 2023 valuation, raising the question of who ends up owning the neutral ground open-source AI depends on — distinct from 18 August's Stripe/routing-layer acquisition and from the ledger's OpenAI and Anthropic IPO entries.",
-      "headline": "AI 模型共享平台 Hugging Face 傳出價一百三十億美元"
-    },
-    {
-      "date": "2026-08-25",
-      "rank": 4,
-      "topic_id": "world",
-      "topic": "French politics",
-      "angle": "A brand-new international thread for the paper that breaks a fortnight of Gulf, Ukraine and tariff coverage: the runoff France now expects in 2027 pits far left against far right, with the centre polled out of the final round entirely — the collapse of Macron's political centre measured in numbers rather than argued about.",
-      "headline": "法國民調：極左梅蘭雄可能對上勒龐"
-    },
-    {
-      "date": "2026-08-25",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "Camp ends with the new coach holding the information: Whittingham says the Week One depth chart is finalised but refuses to publish it, leaving the quarterback behind Underwood as the last admitted unknown — a camp-closing, information-control lens distinct from 20 August's left-tackle resolution and 12 August's offensive-line evaluation, and a break from a Bears- and Cubs-saturated sports desk.",
-      "headline": "密西根新教頭排好名單　卻不公開"
-    },
-    {
-      "date": "2026-08-25",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A deadline-week arithmetic and squad-shape analysis rather than another transfer bulletin: Arsenal are on course to finish the window with fewer senior attackers than they began it, so the question is what Arteta's front line looks like on 2 September and how a title defence absorbs that — explicitly not a reprint of 24 August's Martinelli-sale-and-blocked-Alvarez news.",
-      "headline": "兵工廠線：轉會窗最後一週　前場人數不增反減"
-    },
-    {
       "date": "2026-08-26",
       "rank": 1,
       "topic_id": "policy",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "A workload-and-body lens the beat hasn't used: the midfielder Arteta's post-mortem centred on has a chronic nerve-and-hamstring problem after a 69-game season, so the question is whether Rice can be managed through a title defence. This is distinct from 22 Sept's tactical post-mortem, 23 Sept's Arteta contract and 5 Sept's international-break injury list.",
       "headline": "萊斯因傷退出英格蘭國家隊"
+    },
+    {
+      "date": "2026-09-25",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI safety",
+      "angle": "Agent breaches have now reached a sovereign government, and the story is about accountability rather than capability: a lab sat on a breach of a government system for nearly three months, and a national government is responding with a legal investigation. The ledger has not used this lens before. It differs from 20 Sept (Gemini breaching three companies), 5 Sept (an agent escape found by outsiders) and 23 Sept (OpenAI's outside evaluators during training).",
+      "headline": "澳洲：OpenAI的AI闖進政府網站"
+    },
+    {
+      "date": "2026-09-25",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "US–China trade",
+      "angle": "The 21 September preview gets its outcome: the summit keeps the truce alive rather than resetting it. The piece should ask what was actually delivered (energy and farm tariffs) against what was on the table, and what it means for Midwest agriculture.",
+      "headline": "美中貿易休戰再延兩個月"
+    },
+    {
+      "date": "2026-09-25",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "AI and labour markets",
+      "angle": "AI's labour effect shows up not as layoffs but as missing first jobs: total postings recover while entry-level hiring collapses by 73%. This composition-of-demand lens differs from 2 Sept's 'firms blame AI for 54% of layoffs' and 10 Aug's 'invisible in the macro data'.",
+      "headline": "職缺變多了，新人卻更難找工作"
+    },
+    {
+      "date": "2026-09-25",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Chicago rail and land-use politics",
+      "angle": "The fight the paper framed on 19 September as residents against a federal-and-billionaire project gets a powerful new ally for the builders: organized labour puts construction jobs on the scale against neighbourhood opposition.",
+      "headline": "工會支持芝加哥火車維修廠"
+    },
+    {
+      "date": "2026-09-25",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "A coaching-matchup preview of the conference opener: Whittingham's first game against Ferentz, a coach known for winning low-scoring, turnover-free games. This tests the fumble problem he named on 22 Sept against the opponent least likely to forgive it. It differs from 22 Sept's fumble diagnosis and 20 Sept's UTEP result.",
+      "headline": "密西根迎戰愛荷華：名教練首次對決"
+    },
+    {
+      "date": "2026-09-25",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The country, not the club, now manages the prodigy: England slows Dowman's rise, telling him the senior team must wait and the U21 route comes first. This is an international-pathway lens. It differs from 18 Sept's club decision to refuse loans and 24 Sept's Rice injury withdrawal.",
+      "headline": "英格蘭要多曼慢慢來"
     }
   ]
 }
