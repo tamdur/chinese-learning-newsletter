@@ -515,6 +515,11 @@
       "url": "https://nationalanthems.info/",
       "type": "solo archive",
       "notes": "David Kendall's one-person encyclopedia of national/regional anthems since 1999 — sheet music, MP3s, lyrics, translations, and historical background for 400+ current and defunct anthems; deep, quirky, well-sourced."
+    },
+    {
+      "url": "https://www.davidhindley.org/",
+      "type": "single-source gem",
+      "notes": "Family-maintained posthumous archive of composer/ornitho-musicologist David Hindley (1933-2018), who spent decades transcribing birdsong into musical notation via his invented 'Janiform' score system. Contains papers, lectures, and catalogued scores -- rich vein for future music/nature-obsession finds."
     }
   ]
 }
