@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-26",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "Illinois immigration policy",
-      "angle": "Sanctuary law failing from the inside rather than being attacked from Washington: an investigation shows a third of Illinois counties' own police and prosecutors have been feeding people to ICE in violation of the TRUST Act, and that the statute has no enforcement machinery.",
-      "headline": "調查：伊利諾州警察暗中幫忙遣送移民"
-    },
-    {
-      "date": "2026-08-26",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI industry structure",
-      "angle": "The AI story seen from the incumbents rather than the labs: a 175-year-old legal-information publisher builds its own model on an open-weight base plus proprietary Westlaw data, arguing the durable moat is the corpus and the professional judgment, not the model.",
-      "headline": "湯森路透推出自家法律AI模型"
-    },
-    {
-      "date": "2026-08-26",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "Russia-Ukraine war",
-      "angle": "The war's western edge rather than its Russian depths: three strikes in two weeks on Moldova-adjacent border crossings show Moscow deliberately squeezing Ukraine's westward exits and accepting spillover risk into an undefended EU-candidate state.",
-      "headline": "俄軍無人機兩星期內三度炸邊界關口"
-    },
-    {
-      "date": "2026-08-26",
-      "rank": 4,
-      "topic_id": "ideas",
-      "topic": "Greenland ice sheet",
-      "angle": "An Arctic calving event that raises sea level by nothing today but removes the brake on a basin holding 30cm of it, making the story about ocean heat under the ice rather than air temperature above it.",
-      "headline": "格陵蘭冰川斷出曼哈頓大小的冰島"
-    },
-    {
-      "date": "2026-08-26",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "Accountability moves from the coaching staff to the locker room: it is Jaylon Johnson calling a players-only meeting at the last fan practice, and the offensive line problem spreads from left tackle to the injured starting right tackle, with cuts days away.",
-      "headline": "熊隊最後一練：萊特受傷，強森召集開會"
-    },
-    {
-      "date": "2026-08-26",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The deal Arsenal were racing to register in time for the opener is completed instead at a higher fee and too late to play - so the defender's first act in an Arsenal shirt will be facing the club that sold him at Villa Park on 31 August. Build the piece around that consequence, not around 'Arsenal have signed a defender'.",
-      "headline": "兵工廠線：康薩加盟，首秀可能在維拉公園"
-    },
-    {
       "date": "2026-08-27",
       "rank": 1,
       "topic_id": "ai",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The country, not the club, now manages the prodigy: England slows Dowman's rise, telling him the senior team must wait and the U21 route comes first. This is an international-pathway lens. It differs from 18 Sept's club decision to refuse loans and 24 Sept's Rice injury withdrawal.",
       "headline": "英格蘭要多曼慢慢來"
+    },
+    {
+      "date": "2026-09-26",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI regulation",
+      "angle": "The secret auditing-body talks the paper reported on 14 September become a named public institution, and they do so in the vacuum left by the White House shelving its own AI order, so the labs rather than the state are now the default rule-setter for frontier AI.",
+      "headline": "三大AI公司要自己訂安全規則"
+    },
+    {
+      "date": "2026-09-26",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US election administration",
+      "angle": "After blocking the DHS-list mail-ballot rule on 15 September, the Court now lets the same kind of federal citizenship database into state voter-roll checks, so the gatekeeping the justices refused at the mailbox arrives through the registration list instead. The Missouri map ruling the same day is context.",
+      "headline": "最高法院准各州用聯邦資料查選民"
+    },
+    {
+      "date": "2026-09-26",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago parking meter deal",
+      "angle": "A brand-new Chicago thread: the city's most infamous privatisation changes hands for more than twice what Chicago got for it in 2008, and the council is being asked to approve the sale in exchange for a $75m pension payment. Legacy asset sales become budget arithmetic, distinct from the ledger's recent Chicago entries on rail yards, data centres and mayoral fundraising.",
+      "headline": "芝加哥停車表要轉手，投票延到下週"
+    },
+    {
+      "date": "2026-09-26",
+      "rank": 4,
+      "topic_id": "ai",
+      "topic": "AI capability milestones",
+      "angle": "AI capability moves from pure mathematics to physics: a frontier model carries out a months-long theoretical-physics calculation that can be checked against known results, distinct from 7 September's Fermat verification and 9 September's unverified Millennium Prize claim. The agent-negotiation experiment is a secondary note.",
+      "headline": "Claude算出九圈物理難題"
+    },
+    {
+      "date": "2026-09-26",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The cliff-edge the paper left on 24 September resolved: the drought is over and the Cubs are in. The story is now the October bracket, meaning seeding, tiebreakers, the 29 September best-of-three and a lineup that has gone cold at the wrong time, not the doubleheader score.",
+      "headline": "小熊隊進季後賽，排名還在爭"
+    },
+    {
+      "date": "2026-09-26",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The captain comes back into exactly the part of the team Arteta blamed for the Brighton defeat. This is a midfield-reshape lens that follows up the 22 September tactical post-mortem and 24 September's Rice fitness worry, not another injury list or reunion preview.",
+      "headline": "隊長回來了，兵工廠中場要變"
     }
   ]
 }
