@@ -520,6 +520,11 @@
       "url": "https://www.davidhindley.org/",
       "type": "single-source gem",
       "notes": "Family-maintained posthumous archive of composer/ornitho-musicologist David Hindley (1933-2018), who spent decades transcribing birdsong into musical notation via his invented 'Janiform' score system. Contains papers, lectures, and catalogued scores -- rich vein for future music/nature-obsession finds."
+    },
+    {
+      "url": "https://epigraphs.net/",
+      "type": "single-source gem",
+      "notes": "Solo-curated archive of English church/cathedral grave epitaphs (2,700+), organized by a virtue taxonomy (professional, intellectual, social, activity virtues) with alphabetical/chronological/geographical search and a monthly featured tomb."
     }
   ]
 }
