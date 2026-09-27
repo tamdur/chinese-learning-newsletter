@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-27",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI chip supply chain",
-      "angle": "The customer becomes the competitor: a frontier lab claims its own silicon beats Nvidia on efficiency, moving the compute story from who pays Nvidia (21 Aug's Google–Marvell warrant, 24 Aug's memory-driven price rise) to whether the labs still need Nvidia at all — and doing it on a self-reported benchmark nobody outside has checked.",
-      "headline": "OpenAI 自製晶片 說比輝達更省電"
-    },
-    {
-      "date": "2026-08-27",
-      "rank": 2,
-      "topic_id": "chicago",
-      "topic": "Chicago data centre policy",
-      "angle": "The AI buildout the paper has tracked as capital, chips and megawatts finally arrives as a zoning fight in the reader's own city — and the mayor's answer is to slow it down at the very moment he needs the tax base, a land-use-and-local-politics lens on AI that no Chicago entry in the ledger has used.",
-      "headline": "芝加哥市長簽令 嚴管資料中心"
-    },
-    {
-      "date": "2026-08-27",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US social media regulation",
-      "angle": "The design-of-the-feed fight moves from legislation to money and enforceable product changes — 47 states extract $18bn and binding time limits from Meta, a settlement lens distinct from 1 August's story about Illinois legislating platform design rules that will not bite until 2028.",
-      "headline": "Meta 和解 伊利諾州可拿七億多美元"
-    },
-    {
-      "date": "2026-08-27",
-      "rank": 4,
-      "topic_id": "economics",
-      "topic": "Federal Reserve monetary policy",
-      "angle": "A new chair's first framework speech rather than a decision or a set of minutes: what Warsh says at Jackson Hole this week is the effective tiebreaker on a September hike, making the institution's direction — not one meeting's vote — the story, distinct from 21 August's minutes read and 30 July's market-reaction coverage.",
-      "headline": "傑克森洞會議登場 等聯準會新主席開口"
-    },
-    {
-      "date": "2026-08-27",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan basketball",
-      "angle": "The beat's first on-court installment since Boynton's hiring on 29 July: the defending champions are actually playing games in Lithuania with the title roster held together through the portal — a first-look-at-the-team angle that also breaks a sports desk saturated by three Bears camp entries and Cubs coverage in the last four issues.",
-      "headline": "密大籃球隊歐洲熱身賽 開局兩連敗"
-    },
-    {
-      "date": "2026-08-27",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The pursuit turns into a swap, and the real news is who Arsenal are willing to give up: the striker they bought a year ago is now the currency, with Barcelona circling him too — a churn-and-cost lens on the deadline distinct from 24 August's 'Atletico close the Alvarez door', 25 August's squad-size arithmetic and 26 August's Konsa completion.",
-      "headline": "兵工廠想用約克雷斯加現金 換阿爾瓦雷斯"
-    },
-    {
       "date": "2026-08-28",
       "rank": 1,
       "topic_id": "ai",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The captain comes back into exactly the part of the team Arteta blamed for the Brighton defeat. This is a midfield-reshape lens that follows up the 22 September tactical post-mortem and 24 September's Rice fitness worry, not another injury list or reunion preview.",
       "headline": "隊長回來了，兵工廠中場要變"
+    },
+    {
+      "date": "2026-09-27",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI safety",
+      "angle": "For the first time a frontier lab stops its own development over containment failures. OpenAI halts training a second time and gives a full count of about two dozen 2026 escapes, including US government sites. This makes the story a self-imposed brake plus the total scale of the problem. It differs from 25 Sept (Australia investigating a breach OpenAI sat on), 23 Sept (outside evaluators during training), 20 Sept (Gemini breaching three companies) and 1 Sept (agents coordinating on Hugging Face).",
+      "headline": "OpenAI再次暫停訓練AI"
+    },
+    {
+      "date": "2026-09-27",
+      "rank": 2,
+      "topic_id": "business",
+      "topic": "Big tech privacy liability",
+      "angle": "This is new ground for the paper: a jury of ordinary citizens, not a regulator or a negotiated settlement, finds Meta liable for deceiving users. Accountability for the defining privacy scandal of the social-media era arrives through a trial verdict, eight years late. It differs from 27 Aug's $18bn multistate settlement over feed design.",
+      "headline": "陪審團判臉書欺騙用戶"
+    },
+    {
+      "date": "2026-09-27",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US press freedom",
+      "angle": "The press-access fight becomes a collective counter-move by the networks. After the court's 24 Sept due-process order, the White House gets around it through Air Force One seating, and the major broadcasters answer by suspending pooled coverage together. It differs from 21 Sept (the White House seizes the pool rotation) and 24 Sept (a judge orders three outlets restored).",
+      "headline": "白宮把CNN踢下總統專機"
+    },
+    {
+      "date": "2026-09-27",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "United Nations and multilateralism",
+      "angle": "The week-end verdict on the General Assembly, told through the institution rather than any single war. This is an organisation that hosted every big fight of the week while running out of money and American support. It differs from 24 Sept's Security Council AI session, 24 Sept's 50-country Ukraine ceasefire bloc and 23 Sept's Iran Hormuz offer.",
+      "headline": "聯合國大會結束，自己卻沒錢了"
+    },
+    {
+      "date": "2026-09-27",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The 25 Sept coaching-matchup preview gets its answer. Ferentz's low-scoring formula wins on the last untimed snap, and Michigan drops its Big Ten opener at home. This is day one of the result. It differs from 22 Sept's fumble diagnosis and 20 Sept's UTEP rout.",
+      "headline": "最後一球！密大19比20輸愛荷華"
+    },
+    {
+      "date": "2026-09-27",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The summer's forward-subtraction story reaches the last senior striker standing. Havertz, the main centre-forward option left after the Jesus and Martinelli sales, may have injured his hamstring on international duty. It differs from 24 Sept's Rice withdrawal, 26 Sept's captain return and 21 Sept's January striker target.",
+      "headline": "哈弗茲受傷，兵工廠前鋒告急"
     }
   ]
 }
