@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-28",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI industry consolidation",
-      "angle": "The 25 August question — who ends up owning open-source AI's neutral ground — gets its answer, and it is the chipmaker every lab is currently trying to design its way around, making this a vertical-integration and conflict-of-interest story rather than another valuation rumour.",
-      "headline": "輝達傳出要用一百二十九億美元買下 Hugging Face"
-    },
-    {
-      "date": "2026-08-28",
-      "rank": 2,
-      "topic_id": "economics",
-      "topic": "US–China trade",
-      "angle": "The trade war swings back from Canada to China, and the mechanism is deliberately self-limiting — a rise engineered to land exactly on the agreed 20% cap so that maximum pressure can be applied without breaking the truce weeks before Xi arrives in Washington.",
-      "headline": "美國準備對中國再加百分之七點五關稅"
-    },
-    {
-      "date": "2026-08-28",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI and robotics",
-      "angle": "A brand-new AI thread for the paper: the frontier labs are no longer competing only over models but over the interface standard by which software agents will physically operate machines — the first embodiment story in the ledger.",
-      "headline": "Anthropic 推出新標準，讓 Claude 直接操作機器人"
-    },
-    {
-      "date": "2026-08-28",
-      "rank": 4,
-      "topic_id": "world",
-      "topic": "Sudan civil war",
-      "angle": "A brand-new international thread that breaks a month of Gulf, Ukraine and tariff coverage: the RSF's push is now about geography rather than cities — a captured Ethiopian border strip giving the paramilitaries an external supply frontier while El-Obeid's siege threatens the road back to Khartoum.",
-      "headline": "蘇丹快速支援部隊攻下邊界城鎮，戰火往兩邊擴大"
-    },
-    {
-      "date": "2026-08-28",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "Camp stops being an evaluation story and becomes a dated deadline with a named casualty list — 38 players cut by Sunday, Bryant lost to knee surgery for four to six months and both starting corners down, making the secondary rather than the offensive line the group Chicago cannot fix in time.",
-      "headline": "熊隊三十一日要裁掉三十八人，後防最讓人擔心"
-    },
-    {
-      "date": "2026-08-28",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The beat finally leaves the transfer window for the competition itself: the season's European map is set — Real Madrid at the Emirates, Bayern and Napoli away — and the question becomes whether a squad that finished the window with fewer senior attackers than it started can carry that fixture load; the ledger has no Champions League entry all summer.",
-      "headline": "歐冠抽籤出爐，兵工廠八個對手全定了"
-    },
-    {
       "date": "2026-08-29",
       "rank": 1,
       "topic_id": "economics",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "The summer's forward-subtraction story reaches the last senior striker standing. Havertz, the main centre-forward option left after the Jesus and Martinelli sales, may have injured his hamstring on international duty. It differs from 24 Sept's Rice withdrawal, 26 Sept's captain return and 21 Sept's January striker target.",
       "headline": "哈弗茲受傷，兵工廠前鋒告急"
+    },
+    {
+      "date": "2026-09-28",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "The peace offer is turned down, and the timing is openly tied to US domestic politics: the war is paused until after the midterms, not ended.",
+      "headline": "川普拒絕伊朗停火，油價大漲"
+    },
+    {
+      "date": "2026-09-28",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "US–China AI diplomacy",
+      "angle": "US–China AI diplomacy moves from talks about talks to permanent machinery: a named superintelligence dialogue and a crisis hotline for AI incidents.",
+      "headline": "美中成立「超級智慧」對話"
+    },
+    {
+      "date": "2026-09-28",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "Global monetary tightening",
+      "angle": "The energy-shock tightening wave reaches a commodity-exporting economy far from the Gulf: Australia is set to take rates to a 15-year high.",
+      "headline": "澳洲可能升息，利率創15年新高"
+    },
+    {
+      "date": "2026-09-28",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "US government funding",
+      "angle": "The White House uses the calendar itself as the weapon, letting appropriated money expire by waiting out the fiscal year. A bipartisan pair of senators, including Illinois' Durbin, call it illegal.",
+      "headline": "白宮用「拖時間」砍掉國會的錢"
+    },
+    {
+      "date": "2026-09-28",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The Wild Card opponent is set — the red-hot Padres on the road — and the 40-40 chase is complete, with PCA the first Cub ever to do it. Frame as a series preview, not a standings update.",
+      "headline": "小熊隊季後賽再戰教士隊"
+    },
+    {
+      "date": "2026-09-28",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A player-voice angle: the forward shortage is seen from inside the dressing room, where a striker says he is not being played.",
+      "headline": "約克雷斯：「我想多上場」"
     }
   ]
 }
