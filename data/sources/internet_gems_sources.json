@@ -525,6 +525,11 @@
       "url": "https://epigraphs.net/",
       "type": "single-source gem",
       "notes": "Solo-curated archive of English church/cathedral grave epitaphs (2,700+), organized by a virtue taxonomy (professional, intellectual, social, activity virtues) with alphabetical/chronological/geographical search and a monthly featured tomb."
+    },
+    {
+      "url": "https://madewithlovable.com/",
+      "type": "aggregator",
+      "notes": "Showcase directory of apps/sites built with the no-code tool Lovable — mixed quality (some marketing/demo projects) but occasionally surfaces small, single-purpose passion projects like the AI-predictions archive; worth spot-checking, not a primary hunting ground."
     }
   ]
 }
