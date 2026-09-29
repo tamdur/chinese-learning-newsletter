@@ -530,6 +530,11 @@
       "url": "https://madewithlovable.com/",
       "type": "aggregator",
       "notes": "Showcase directory of apps/sites built with the no-code tool Lovable — mixed quality (some marketing/demo projects) but occasionally surfaces small, single-purpose passion projects like the AI-predictions archive; worth spot-checking, not a primary hunting ground."
+    },
+    {
+      "url": "https://wiki.talossa.com/",
+      "type": "single-source gem",
+      "notes": "TalossaWiki — the exhaustive self-documented constitutional/linguistic/historical archive of the Kingdom of Talossa micronation, maintained by its citizen community since the 1990s."
     }
   ]
 }
