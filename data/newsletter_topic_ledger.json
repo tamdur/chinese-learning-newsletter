@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-29",
-      "rank": 1,
-      "topic_id": "economics",
-      "topic": "Federal Reserve monetary policy",
-      "angle": "The 27 August preview gets its answer, and it is a new chair binding himself publicly to a target rather than a committee vote — Warsh declares 3.7% inflation unacceptable and the market immediately reprices a September hike from a minority to a majority bet, with the 10-year at 4.72%.",
-      "headline": "聯準會主席警告物價 升息機率大增"
-    },
-    {
-      "date": "2026-08-29",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "US-Venezuela oil deal",
-      "angle": "A brand-new geopolitical thread for the paper: rather than another Hormuz or sanctions story, Washington answers the Gulf oil shock by acquiring century-long development rights over the world's largest declared reserves in its own hemisphere — energy security as territorial dealmaking with an interim government.",
-      "headline": "美國與委內瑞拉簽下百年石油協議"
-    },
-    {
-      "date": "2026-08-29",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI investment boom",
-      "angle": "The circular financing that props up the AI cloud market meets its first legal limit from the inside — Nvidia's own lawyers, not a regulator, halt a $36bn credit-for-revenue-share programme, distinct from the ledger's securitisation and credit-risk entries and from yesterday's Hugging Face acquisition story.",
-      "headline": "輝達喊停 AI 雲端分紅計畫"
-    },
-    {
-      "date": "2026-08-29",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago police surveillance technology",
-      "angle": "The paper's first surveillance-infrastructure story: a private camera network no one voted for has become a municipality-by-municipality referendum in Chicago's suburbs, with one officer's 717 searches of his estranged wife showing that the safeguard that failed was not the technology but the audit trail.",
-      "headline": "車牌鏡頭引爆芝加哥郊區爭議"
-    },
-    {
-      "date": "2026-08-29",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "The first close evaluation of the quarterback himself rather than of the coach's information control — an outside expert's read on what specifically improved in Underwood's mechanics and decision-making, a week before the opener makes it testable.",
-      "headline": "密大秋訓結束 四分衛進步明顯"
-    },
-    {
-      "date": "2026-08-29",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The manager confirms a player has been removed from first-team training three days before deadline — an exclusion rather than a rumour, and the clearest signal yet that Arsenal will end the window with fewer forwards, while the record signing becomes available for Villa Park.",
-      "headline": "兵工廠線：耶穌未隨一隊練球"
-    },
-    {
       "date": "2026-08-30",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,54 @@
       "topic": "Arsenal FC",
       "angle": "A player-voice angle: the forward shortage is seen from inside the dressing room, where a striker says he is not being played.",
       "headline": "約克雷斯：「我想多上場」"
+    },
+    {
+      "date": "2026-09-29",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI industry consolidation",
+      "angle": "A chipmaker buys a model lab outright, and the lab builds world models rather than language models. The hardware-to-model vertical integration lens is new: the ledger's Nvidia entries (Hugging Face 28 Aug, Groq licence 11 Sept, tighter review 19 Sept) were about licences and open-model hubs, and the ledger has never covered 'world models' as a frontier category.",
+      "headline": "AMD花82億美元買下李飛飛的AI公司"
+    },
+    {
+      "date": "2026-09-29",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI regulation",
+      "angle": "The first attempt by a US state to use a courtroom to stop frontier model development itself, not just a product feature. The mechanism is a judge's emergency order, with child safety as the legal hook. That lens is distinct from the ledger's congressional push (11 Sept), EU product rules (7 Sept), lab-run auditing body (14 and 26 Sept) and the slowdown-pact antitrust suit (21 Sept).",
+      "headline": "佛州要法院叫OpenAI先停下來"
+    },
+    {
+      "date": "2026-09-29",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US government funding",
+      "angle": "Two days from the deadline, the pocket rescission the paper explained on 28 Sept becomes the obstacle to a deal: why would Democrats sign a funding bill the White House can later cancel? A shutdown-brink bargaining lens, distinct from 31 Aug's 90-6 stopgap and 28 Sept's explainer of the rescission mechanism.",
+      "headline": "政府關門倒數，川普會談沒結果"
+    },
+    {
+      "date": "2026-09-29",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "Ethiopia–Tigray conflict",
+      "angle": "A brand-new international thread for the paper, away from its Gulf, Ukraine and European coverage: Ethiopia's civil war reignites and crosses into Afar, the corridor that carries landlocked Ethiopia's trade to Djibouti. Addis Ababa's accusation against its neighbours turns an internal conflict into a possible regional war on the Red Sea's African shore.",
+      "headline": "衣索比亞戰火擴大，提格雷軍攻入阿法爾"
+    },
+    {
+      "date": "2026-09-29",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bulls",
+      "angle": "The Bulls' first appearance in the ledger this season: a new coach and a rebuilt roster open camp, giving the sports desk a new-era preview after weeks of Cubs, Bears and Michigan. It avoids reprinting the Cubs' Wild Card preview, which ran on 28 Sept.",
+      "headline": "公牛隊換新教練，年輕球隊重新出發"
+    },
+    {
+      "date": "2026-09-29",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The international-break damage is now confirmed by the club and has a date: Havertz's strain is diagnosed and both he and Rice are aiming for Leeds on 10 October. The new detail is Odegaard's knock, which threatens the midfield reshape the paper described on 26 Sept. This is a prognosis-and-return-date lens, distinct from 27 Sept's suspected Havertz injury, 24 Sept's Rice withdrawal and 28 Sept's Gyokeres playing-time complaint.",
+      "headline": "兵工廠傷兵名單公布，目標10月10日回歸"
     }
   ]
 }
