@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-30",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Himalayan glacier flood",
-      "angle": "A brand-new international thread for the paper, and the first climate-disaster story in the ledger framed as a monitoring-and-warning failure rather than as weather: a glacier collapse that has now killed 750 with 3,000 missing, in a hazard class scientists have mapped for years and could in principle have warned about.",
-      "headline": "冰川崩落引發洪水，尼泊爾已七百五十人死亡"
-    },
-    {
-      "date": "2026-08-30",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US immigration policy",
-      "angle": "Immigration policy aimed for the first time at the legal, high-skilled tier and at the spouse rather than the visa-holder — about 100,000 mostly Indian women losing the right to work — a household-economics lens distinct from the ledger's birthright orders (7 Aug), class certification (9 Aug) and consular 'public charge' freeze (23 Aug).",
-      "headline": "美國打算取消 H-1B 配偶工作許可"
-    },
-    {
-      "date": "2026-08-30",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI and economic growth",
-      "angle": "The AI debate reduced to a single falsifiable wager with a deadline — 15% US GDP-per-capita growth in one year by 2033 — a macro-takeoff lens the ledger's month of capex, chips, IPOs, consolidation and safety stories has never used.",
-      "headline": "學者公開打賭：AI 能讓經濟一年長百分之十五嗎"
-    },
-    {
-      "date": "2026-08-30",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Illinois economic development",
-      "angle": "A new Illinois thread for the paper and a rare look at the limits of state economic power: a governor with no authority to stop a plant closing can only try to broker a sale for 2,500 workers, distinct from the ledger's recent Chicago entries on data-centre zoning (27 Aug) and licence-plate surveillance (29 Aug).",
-      "headline": "泰森工廠突然關門，州長承諾拚命找買家"
-    },
-    {
-      "date": "2026-08-30",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The race moves from positioning to a clinch-watch — magic number two, a six-year playoff drought about to end — and the question flips to whether the deadline rotation the paper praised on 10 August is falling apart at exactly the wrong moment, distinct from 24 August's wild-card standings entry.",
-      "headline": "小熊隊逼近季後賽，投手表現令人擔心"
-    },
-    {
-      "date": "2026-08-30",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The beat finally leaves a fortnight of transfer churn for the team sheet: Arteta's Villa Park availability list gives Saliba a months-long prognosis, puts the record signing Guimaraes in doubt, and delivers the Konsa-against-his-old-club debut the paper flagged on 26 August — a selection-and-fitness lens, not another deadline rumour.",
-      "headline": "兵工廠線：七人確定缺陣，週一作客維拉"
-    },
-    {
       "date": "2026-08-31",
       "rank": 1,
       "topic_id": "world",
@@ -1487,6 +1439,22 @@
       "topic": "Arsenal FC",
       "angle": "The international-break damage is now confirmed by the club and has a date: Havertz's strain is diagnosed and both he and Rice are aiming for Leeds on 10 October. The new detail is Odegaard's knock, which threatens the midfield reshape the paper described on 26 Sept. This is a prognosis-and-return-date lens, distinct from 27 Sept's suspected Havertz injury, 24 Sept's Rice withdrawal and 28 Sept's Gyokeres playing-time complaint.",
       "headline": "兵工廠傷兵名單公布，目標10月10日回歸"
+    },
+    {
+      "date": "2026-09-30",
+      "rank": 1,
+      "topic_id": "business",
+      "topic": "AI chip supply chain",
+      "angle": "The AI compute story seen through memory instead of processors: HBM booked through 2027 makes memory, not GPUs, the binding constraint. Distinct from earlier Nvidia/AMD deal coverage in the ledger.",
+      "headline": "美光今天公布財報，AI記憶體賣到缺貨"
+    },
+    {
+      "date": "2026-09-30",
+      "rank": 2,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "What comes after the Iowa loss: a rivalry-and-history lens on the 100th Little Brown Jug game against a well-regarded quarterback. Distinct from the ledger's recent Iowa-result and coaching-preview entries.",
+      "headline": "密西根週六搶「小棕壺」，兩隊第100次對決"
     }
   ]
 }
