@@ -535,6 +535,11 @@
       "url": "https://wiki.talossa.com/",
       "type": "single-source gem",
       "notes": "TalossaWiki — the exhaustive self-documented constitutional/linguistic/historical archive of the Kingdom of Talossa micronation, maintained by its citizen community since the 1990s."
+    },
+    {
+      "url": "https://pdimagearchive.org",
+      "type": "aggregator",
+      "notes": "The Public Domain Image Archive — a companion project to The Public Domain Review, a small-team curatorial site that scans and releases high-resolution public-domain images (old scientific illustrations, maps, ephemera) with sourcing notes."
     }
   ]
 }
