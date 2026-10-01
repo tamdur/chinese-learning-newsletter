@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-08-31",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "After a month in which the paper covered this war only through sanctions, diplomacy and economics, the shooting resumes — and the specific trigger is sea mines being readied for Hormuz, meaning Washington struck to protect the shipping lane rather than to punish Tehran.",
-      "headline": "美軍空襲伊朗火箭發射車"
-    },
-    {
-      "date": "2026-08-31",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US government funding",
-      "angle": "The paper's first appropriations story: a shutdown is averted by a 90-6 Senate vote, but the live dispute inside the bill is a legislative attempt to fence off the White House budget office from money Congress has already appropriated — a spending-power question, not a shutdown countdown.",
-      "headline": "參議院通過短期預算案"
-    },
-    {
-      "date": "2026-08-31",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI industry rivalry",
-      "angle": "Model access becomes a weapon rather than a product: a frontier lab terminates a top customer purely because of who bought it, with a dated cut-off — a supplier-power lens distinct from the ledger's Stripe routing-layer, Hugging Face and IPO consolidation stories.",
-      "headline": "OpenAI 斷掉 Cursor 的模型供應"
-    },
-    {
-      "date": "2026-08-31",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago–federal immigration standoff",
-      "angle": "Chicago fights federal immigration enforcement with its chequebook rather than its sanctuary statute — disclosure of ICE ties made a condition of winning city contracts — distinct from 26 August's story about Illinois police quietly violating the TRUST Act.",
-      "headline": "芝加哥用市府合約向廠商施壓"
-    },
-    {
-      "date": "2026-08-31",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The 28 August preview gets its outcome, and the news is in the mechanism: the Bears absorbed their injury crisis by shelving starters on PUP and IR and cutting preseason standouts, rather than by adding players — the shape of the actual opening-day roster, not another injury bulletin.",
-      "headline": "熊隊裁到五十三人，傷兵先擺著"
-    },
-    {
-      "date": "2026-08-31",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The academy-pipeline lens the beat has never used this summer: a Hale End graduate of 18 years is released for free on deadline eve by the same club that failed all window to buy the winger it says it needs, showing the squad is being thinned at the exact position Arteta could not reinforce.",
-      "headline": "十八年畫下句點：尼爾森告別兵工廠"
-    },
-    {
       "date": "2026-09-01",
       "rank": 1,
       "topic_id": "business",
@@ -1455,6 +1407,38 @@
       "topic": "Michigan football",
       "angle": "What comes after the Iowa loss: a rivalry-and-history lens on the 100th Little Brown Jug game against a well-regarded quarterback. Distinct from the ledger's recent Iowa-result and coaching-preview entries.",
       "headline": "密西根週六搶「小棕壺」，兩隊第100次對決"
+    },
+    {
+      "date": "2026-10-01",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US government funding",
+      "angle": "Corrects a story the editor's scout sourced from a mis-dated article describing the Oct 2025 shutdown; the real outcome is the opposite -- funding held and the fight is deferred to after the midterms.",
+      "headline": "新預算年度開始，美國政府沒有關門"
+    },
+    {
+      "date": "2026-10-01",
+      "rank": 2,
+      "topic_id": "business",
+      "topic": "AI chip supply chain",
+      "angle": "Memory makers, not just GPU makers, now gate the AI buildout -- they decide who gets supply and at what price, with actual Q4 figures well above even the editor's already-bullish pre-earnings estimate.",
+      "headline": "美光財報大爆發，AI記憶體自己喊價"
+    },
+    {
+      "date": "2026-10-01",
+      "rank": 3,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The playoff preview the paper ran Sept 28 gets its outcome: a clean sweep, with the story being the Cubs' lineup going completely cold against a hot Padres offense.",
+      "headline": "小熊被教士橫掃，季後賽兩場就結束"
+    },
+    {
+      "date": "2026-10-01",
+      "rank": 4,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A fixture-congestion preview rather than a recap of already-covered injury/result news (ledger already has the Brighton loss, the Arteta contract, and the injuries) -- framed forward as Arteta's biggest test of the season.",
+      "headline": "兵工廠線：十月賽程超忙，三週踢六場"
     }
   ]
 }
