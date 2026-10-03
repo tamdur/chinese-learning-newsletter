@@ -4899,6 +4899,34 @@
       "headline": "一座網路上的棒球墓園",
       "headline_en": "TheDeadBallEra.com: One Man's Grave-by-Grave Archive of Dead Ballplayers",
       "topic": "solo baseball grave archive"
+    },
+    {
+      "date": "2026-10-03",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "抓狂歌：一張用台語大聲說話的唱片",
+      "headline_en": "Songs of Madness: Blacklist Studio's 1989 rap-rock album against martial law",
+      "topic": "1989 Taiwanese rap-rock protest album"
+    },
+    {
+      "date": "2026-10-03",
+      "obsession_id": "finland-honeymoon",
+      "headline": "赫爾辛基地下十五公尺的游泳池",
+      "headline_en": "Helsinki's underground bomb-shelter swimming hall",
+      "topic": "Helsinki underground civil defense pool"
+    },
+    {
+      "date": "2026-10-03",
+      "obsession_id": "do-312",
+      "headline": "走出畫框的人：三年一次的免費講座",
+      "headline_en": "Free triennial art history lecture at the Art Institute",
+      "topic": "Art Institute Bross lecture series"
+    },
+    {
+      "date": "2026-10-03",
+      "obsession_id": "best-of-internet",
+      "headline": "往後數七個字：把文章變成怪詩的小網頁",
+      "headline_en": "A tiny web tool automating the Oulipo N+7 word game",
+      "topic": "N+7 Oulipo word-game tool"
     }
   ]
 }
