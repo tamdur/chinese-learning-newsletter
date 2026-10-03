@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-02",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI in government and defence",
-      "angle": "AI stops being an industry story and becomes state infrastructure: three frontier models are issued to 3 million Defence Department staff on a classified-adjacent network, and the news is which lab is missing — Anthropic — making willingness to accept military use, not capability, the thing that now sorts the labs.",
-      "headline": "美國國防部把 ChatGPT 和 Grok 發給三百萬人"
-    },
-    {
-      "date": "2026-09-02",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US separation of powers",
-      "angle": "The ballroom fight ends without anyone deciding whether it was legal — the Court disposes of it on standing while four justices including the Chief Justice say the project is probably unlawful, showing that the barrier to checking executive action is now who is allowed to sue rather than what the constitution says.",
-      "headline": "最高法院放行　白宮宴會廳繼續施工"
-    },
-    {
-      "date": "2026-09-02",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "Russia–China–Iran alignment",
-      "angle": "Iran's answer to being cut off by its Gulf neighbours is a rival payments bloc rather than a battlefield move — Putin's first meeting with Pezeshkian since the war began is about routing commodity trade around the dollar, a financial-architecture lens on the conflict distinct from the ledger's strikes, ultimatums, oil prices and sanctions entries.",
-      "headline": "上合組織峰會　普丁會見伊朗總統談繞開美元"
-    },
-    {
-      "date": "2026-09-02",
-      "rank": 4,
-      "topic_id": "ai",
-      "topic": "AI and labour markets",
-      "angle": "The 10 August finding that AI displacement was invisible in the macro data gets its counter-evidence from the employer side — the share of layoffs firms themselves blame on AI has gone from 8% to 54% in a year — making the question why what companies say and what the aggregate data show have come apart.",
-      "headline": "今年一半以上的裁員　公司說是因為 AI"
-    },
-    {
-      "date": "2026-09-02",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "The depth chart Whittingham refused to publish on 25 August is forced open by injury four days before his debut — the left tackle resolved on 20 August is hurt and Jordan Marshall is named at running back — turning camp secrecy into a concrete Week One personnel problem.",
-      "headline": "密西根新教頭首戰在即　主力左截鋒受傷"
-    },
-    {
-      "date": "2026-09-02",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The window shuts and the resolution is subtraction: three attackers out on deadline day and none in, with the telling choice being that Arsenal sent Nwaneri — the academy's best forward and the obvious internal answer to the winger they could not sign — abroad on loan instead of using him.",
-      "headline": "兵工廠關窗前再送走一人　努瓦內里外借多特蒙德"
-    },
-    {
       "date": "2026-09-03",
       "rank": 1,
       "topic_id": "ai",
@@ -1431,6 +1383,30 @@
       "topic": "Chicago Bears",
       "angle": "An injury-status preview ahead of the Jets game, centered on the starting quarterback's hamstring and the uncertainty around his availability — distinct from the ledger's record-opener result, Detroit reunion preview, and Swift-contract entries.",
       "headline": "熊隊迎戰噴射機，威廉斯還在養傷"
+    },
+    {
+      "date": "2026-10-03",
+      "rank": 1,
+      "topic_id": "ideas",
+      "topic": "AI in biology",
+      "angle": "AI as a lab tool that makes new things: bacteriophages designed by AI to kill drug-resistant bacteria lead a global science shortlist. This differs from 10 Sept's DeepMind mutation-map entry, which was AI predicting data rather than building something.",
+      "headline": "用AI造病毒，專打抗藥細菌"
+    },
+    {
+      "date": "2026-10-03",
+      "rank": 2,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football — Little Brown Jug rivalry",
+      "angle": "Game-day angle on the 100th meeting of the oldest trophy rivalry in college football, distinct from any earlier-week schedule preview.",
+      "headline": "密西根爭奪第100次小棕壺"
+    },
+    {
+      "date": "2026-10-03",
+      "rank": 3,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The January striker hunt widens beyond Beier (21 Sept) to Real Madrid's Endrick, a young forward who is not getting regular games at a giant club. A second January name, and a different kind of deal from a straight purchase, rather than another injury list or fixture preview.",
+      "headline": "兵工廠盯上皇馬小將恩德里克"
     }
   ]
 }
