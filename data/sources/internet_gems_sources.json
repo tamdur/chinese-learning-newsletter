@@ -540,6 +540,11 @@
       "url": "https://pdimagearchive.org",
       "type": "aggregator",
       "notes": "The Public Domain Image Archive — a companion project to The Public Domain Review, a small-team curatorial site that scans and releases high-resolution public-domain images (old scientific illustrations, maps, ephemera) with sourcing notes."
+    },
+    {
+      "url": "https://www.deadmalls.com/",
+      "type": "single-source gem",
+      "notes": "Two-person hobby site (started 2000 by former retail-industry employees Peter Blackbird & Brian Florence) chronicling nearly 450 dead/dying American shopping malls with historical narratives and crowdsourced updates. Active through 2026. Great recurring well for 'autopsy of a dead institution' style stories -- malls, retail history, built-environment decline."
     }
   ]
 }
