@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-03",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI model releases",
-      "angle": "After a month in which the paper covered AI only as finance, chips, safety incidents and government procurement, the frontier race returns to actual products — Anthropic ships a two-model split rather than a single successor, weeks before the IPO that will force those product claims into audited disclosure.",
-      "headline": "Anthropic 同時推出兩款新模型"
-    },
-    {
-      "date": "2026-09-03",
-      "rank": 2,
-      "topic_id": "business",
-      "topic": "US big-tech antitrust",
-      "angle": "The government wins the finding and loses the fix — a court that already ruled Google an illegal monopolist refuses to order a divestiture, decoupling liability from remedy and quietly retiring the break-up as the default answer in American tech antitrust.",
-      "headline": "法官判 Google 不必賣掉廣告平台"
-    },
-    {
-      "date": "2026-09-03",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Illinois grid and utility costs",
-      "angle": "Climate adaptation reaches the reader's own electricity bill: ComEd wants $15bn more to storm-proof the grid after Illinois led the nation in tornadoes, and the question is whether the billions customers already paid actually bought reliability — a rate-case-and-who-pays lens distinct from August's state disaster-proclamation and flood-money entries.",
-      "headline": "ComEd 要花百億美元強化電網，錢誰出？"
-    },
-    {
-      "date": "2026-09-03",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "US social safety net",
-      "angle": "The first hard count of who the One Big Beautiful Bill Act actually removed — 82,000 Hoosiers, a 14.5% drop, lost mostly to paperwork and verification rather than to rising incomes — a brand-new safety-net thread the ledger has never run.",
-      "headline": "印第安納州八萬多人失去食物補助"
-    },
-    {
-      "date": "2026-09-03",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The Bears beat leaves roster churn for the balance sheet: the club is now surveying its own fans about crossing the state line to Hammond, Indiana — a relocation-leverage story distinct from the past fortnight's cuts, injury bulletins and 53-man roster entries.",
-      "headline": "熊隊發問卷，問球迷搬到印第安納好不好"
-    },
-    {
-      "date": "2026-09-03",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The window shut but the pursuit did not — Atletico now force Alvarez to choose, meaning the forward Arteta failed to sign in August becomes a January problem carried into a title defence already short of attackers; a what-happens-next lens distinct from the ledger's deal mechanics (24, 27 Aug) and its deadline-day subtraction story (2 Sept).",
-      "headline": "兵工廠線：馬競逼阿瓦雷斯表態"
-    },
-    {
       "date": "2026-09-04",
       "rank": 1,
       "topic_id": "economics",
@@ -1407,6 +1359,22 @@
       "topic": "Arsenal FC",
       "angle": "The January striker hunt widens beyond Beier (21 Sept) to Real Madrid's Endrick, a young forward who is not getting regular games at a giant club. A second January name, and a different kind of deal from a straight purchase, rather than another injury list or fixture preview.",
       "headline": "兵工廠盯上皇馬小將恩德里克"
+    },
+    {
+      "date": "2026-10-04",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Latvian politics",
+      "angle": "A new international thread for the paper: a NATO frontline state on Russia's border puts its pro-Ukraine government to a vote, and the result shows whether the Eurosceptic surge the paper covered in Germany (7 Sept) has reached the Baltic.",
+      "headline": "拉脫維亞大選，總理的黨大勝"
+    },
+    {
+      "date": "2026-10-04",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "A second straight loss under new coach Kyle Whittingham, one week after a 20-19 final-play home loss to Iowa — the turnover/fumble problem the coach flagged in September is still unresolved, not a bounce-back.",
+      "headline": "密西根四次失誤，輸掉小棕壺"
     }
   ]
 }
