@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-04",
-      "rank": 1,
-      "topic_id": "economics",
-      "topic": "US labour market",
-      "angle": "The Fed's September question flips 180 degrees in one data release — after a fortnight in which the paper reported markets pricing a hike on Warsh's inflation warning, a near-zero payroll print and 4.3% unemployment turn it into an 88% bet on a cut, making the labour market rather than prices the thing that now decides policy.",
-      "headline": "美國八月只增兩萬多份工作，聯準會降息機率大增"
-    },
-    {
-      "date": "2026-09-04",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI model releases",
-      "angle": "The line OpenAI refused to cross in August is crossed by its flagship: the first broadly deployed 'Critical'-tier cyber model ships anyway, with capability rationed by feature and customer rather than withheld — the voluntary safety threshold turning from a stop sign into a product-configuration question.",
-      "headline": "OpenAI 推出新模型，首次列為最高風險等級"
-    },
-    {
-      "date": "2026-09-04",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US higher education policy",
-      "angle": "A brand-new policy thread for the paper: the campus fight moves from grant conditions and investigations into the tax code itself, with charitable status — and with it endowment income, donor deductions and bond access — made contingent on how a college describes its student aid.",
-      "headline": "美財政部擬取消部分私校免稅資格"
-    },
-    {
-      "date": "2026-09-04",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Shedd Aquarium beluga deaths",
-      "angle": "A rescue that Chicago celebrated three weeks ago becomes an accountability story: three belugas dead since the Marineland transfer, including both a newly arrived rescue and a resident of the existing pod, putting the decision to move the animals — not their care after arrival — under scrutiny.",
-      "headline": "謝德水族館又有兩隻白鯨死亡"
-    },
-    {
-      "date": "2026-09-04",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "The beat crosses from camp into competition: after a month of practice reports, depth-chart secrecy and an injured left tackle, Whittingham's first actual game arrives against a MAC champion whose strength — the run — points straight at the group Michigan spent August worrying about.",
-      "headline": "密大今晚開季，新教練首度帶隊上陣"
-    },
-    {
-      "date": "2026-09-04",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The window's cost gets a price tag rather than another name: Arsenal's largest-ever outgoing fee is completed after the European deadline through the still-open Saudi window, thinning the attack at a moment when it cannot be replaced — but banking the money for the January move the paper reported yesterday.",
-      "headline": "兵工廠線：馬丁尼利轉會，創球會賣人新高"
-    },
-    {
       "date": "2026-09-05",
       "rank": 1,
       "topic_id": "ai",
@@ -1375,6 +1327,22 @@
       "topic": "Michigan football",
       "angle": "A second straight loss under new coach Kyle Whittingham, one week after a 20-19 final-play home loss to Iowa — the turnover/fumble problem the coach flagged in September is still unresolved, not a bounce-back.",
       "headline": "密西根四次失誤，輸掉小棕壺"
+    },
+    {
+      "date": "2026-10-05",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US Supreme Court",
+      "angle": "The new term's first argument puts climate science on trial. The justices decide whether local governments can make oil companies pay for climate damage under state law, a climate-liability lens that is separate from 2 October's term preview built on Cook County's assault-weapons ban.",
+      "headline": "最高法院新年度第一案：城市能告石油公司嗎？"
+    },
+    {
+      "date": "2026-10-05",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The 2 October injury-status preview gets its answer: the result of the Jets game and whether Williams' hamstring held up, a day-one result after a fortnight of Bears quarterback-health entries.",
+      "headline": "少了威廉斯，熊隊照樣贏噴射機"
     }
   ]
 }
