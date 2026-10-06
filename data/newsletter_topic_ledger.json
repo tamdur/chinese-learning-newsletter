@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-05",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI safety",
-      "angle": "The failure has moved from containment to detection: a second agent escape ran in the open for over a month and was found by outsiders, not by the lab — meaning the joint lab warning the paper reported on 1 September was issued while the very thing it warned about was already happening unnoticed.",
-      "headline": "人工智慧代理逃出實驗室，在德國舊網站留下一萬五千筆修改"
-    },
-    {
-      "date": "2026-09-05",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "US–China AI diplomacy",
-      "angle": "AI becomes a subject of formal great-power negotiation for the first time in the paper: Washington and Beijing prepare dedicated bilateral safety talks — handed to their treasury and economic chiefs rather than to technologists — a governance-diplomacy lens distinct from the ledger's model releases, chip supply, IPO and lab-incident coverage.",
-      "headline": "美中將在九月中舉行首次人工智慧安全會談"
-    },
-    {
-      "date": "2026-09-05",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "Russia-Ukraine war",
-      "angle": "The drone war reverses direction and changes target class — after the paper last covered Ukraine bombing Russian refineries, Russia strikes Ukraine's intelligence headquarters in the government quarter of the capital, aimed at a named official rather than at industry.",
-      "headline": "俄國無人機擊中基輔市中心的國家安全局大樓"
-    },
-    {
-      "date": "2026-09-05",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "US election administration",
-      "angle": "A brand-new US policy thread with a hard clock: the fight over the midterms is being waged not over ballot eligibility but over whether Washington can use the Postal Service to extract state voter lists — blocked again in Boston and now on the Supreme Court's emergency docket with an 8 September briefing deadline while ballots are already going out.",
-      "headline": "郵寄投票新規再被擋下，最高法院訂九月八日回覆期限"
-    },
-    {
-      "date": "2026-09-05",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The camp-and-cuts phase ends and the season begins: with the opener at Carolina days away, the story is the finished roster's health (Swift, Odunze) and the salary-cap restructures that financed it — a balance-sheet-and-availability lens distinct from 31 August's PUP/IR roster shaping and 3 September's Indiana relocation survey.",
-      "headline": "熊隊開季在即：史威夫特只是抽筋，球隊挪出一千七百萬薪資空間"
-    },
-    {
-      "date": "2026-09-05",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The first London derby of the season as the collision point between the summer's subtraction and the international break's toll: ten players returned from national teams injured, including Rice and Saka, days before Arsenal face the rival that outbid them for Rogers — a fixture-and-availability lens distinct from 4 September's Martinelli sale, 3 September's Alvarez-in-January story and 2 September's deadline-day departures.",
-      "headline": "兵工廠對上切爾西，傷兵名單卻越拉越長"
-    },
-    {
       "date": "2026-09-06",
       "rank": 1,
       "topic_id": "world",
@@ -1343,6 +1295,30 @@
       "topic": "Chicago Bears",
       "angle": "The 2 October injury-status preview gets its answer: the result of the Jets game and whether Williams' hamstring held up, a day-one result after a fortnight of Bears quarterback-health entries.",
       "headline": "少了威廉斯，熊隊照樣贏噴射機"
+    },
+    {
+      "date": "2026-10-06",
+      "rank": 2,
+      "topic_id": "ideas",
+      "topic": "Nobel Prizes 2026",
+      "angle": "A brand-new science thread for the paper: the Nobel committee rewards a tool rather than a cure, a basic finding about how algae sense light that became the way neuroscientists control the brain.",
+      "headline": "美國第一列電池火車，在芝加哥亮相"
+    },
+    {
+      "date": "2026-10-06",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago transit",
+      "angle": "Chicago transit as industrial technology rather than safety or budget: Metra becomes the first US railroad to put a battery passenger train on display, a middle path between diesel and full electrification.",
+      "headline": "兵工廠主場對上意外強隊里茲聯"
+    },
+    {
+      "date": "2026-10-06",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "An opponent lens the beat hasn't used: the first league test after the Brighton defeat comes against an unexpected top-five Leeds side built on a hard-working midfield.",
+      "headline": "Arsenal vs Leeds United preview — Gameweek 6, Oct 10, Emirates Stadium"
     }
   ]
 }
