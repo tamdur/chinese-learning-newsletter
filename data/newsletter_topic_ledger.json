@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-07",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "German politics",
-      "angle": "A brand-new international thread for the paper — after a fortnight in which every world entry ran through Ukraine, the Himalayas or the Gulf, Germany's postwar taboo meets an arithmetic problem: the AfD wins 43.8% in Saxony-Anhalt and the question stops being whether the far right can win and becomes whether the mainstream firewall can survive contact with a majority.",
-      "headline": "德國極右派政黨大勝，「防火牆」受考驗"
-    },
-    {
-      "date": "2026-09-07",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI capability milestones",
-      "angle": "The AI story returns to raw capability in a domain the ledger has never touched — formal mathematics — and the point is verifiability: an 11-day autonomous run producing 13 million lines of machine-checked Lean is the first frontier-model output that needs no human trust at all, a sharp contrast to the month of finance, chips, procurement and containment-failure entries.",
-      "headline": "人工智慧完成費馬定理的電腦驗證"
-    },
-    {
-      "date": "2026-09-07",
-      "rank": 3,
-      "topic_id": "ai",
-      "topic": "AI regulation",
-      "angle": "Governance of AI moves from talks about talks to enforceable engineering: where the paper covered Washington and Beijing merely scheduling their first safety negotiation on 5 September, Brussels this week starts actually binding labs — chatbot disclosure and machine-readable labelling of synthetic media — making Europe the first jurisdiction where AI rules are a product requirement rather than a position.",
-      "headline": "歐盟開始執行人工智慧透明規定"
-    },
-    {
-      "date": "2026-09-07",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago mayoral politics",
-      "angle": "Yesterday's $882m budget hole acquires a candidate: the mayor who must choose between layoffs and a tax rise is about to ask for four more years at 23% approval against nine-plus challengers, turning a fiscal-arithmetic story into the opening of a mayoral race whose runoff maths may favour an unpopular incumbent.",
-      "headline": "芝加哥市長預告「特別宣布」"
-    },
-    {
-      "date": "2026-09-07",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "The 6 September result story becomes a verdict story: the national polls, not the box score, now judge the debut, and the interesting thing is how little a 13-12 escape moved a ranking built entirely on preseason reputation — the poll-inertia lens, not another recap of the Hail Mary.",
-      "headline": "密西根險勝，全國排名引發爭論"
-    },
-    {
-      "date": "2026-09-07",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The summer's subtraction gets its first competitive rebuttal: the man Chelsea bought instead of Arsenal scores first, and Arsenal's remaining, unreinforced attack comes from behind to win the derby anyway.",
-      "headline": "兵工廠線：阿森納逆轉切爾西"
-    },
-    {
       "date": "2026-09-08",
       "rank": 1,
       "topic_id": "world",
@@ -1295,6 +1247,54 @@
       "topic": "Chicago Bulls preseason",
       "angle": "The Bulls beat's first story of the 2026-27 season: the opening preseason tip-off against a star-studded Suns squad, not a result recap (game is tonight, write as a preview).",
       "headline": "公牛今晚開打季前賽，新秀第一次上場"
+    },
+    {
+      "date": "2026-10-08",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US midterm elections",
+      "angle": "In September the paper covered the Republican convention's promise of tariff-funded cash. Now cash actually goes out before an election, and the story is who is left out: fewer than a third of Medicare recipients qualify, which turns a $90 cheque into a lesson on how eligibility rules get written.",
+      "headline": "川普發90美元健保退款，多數老人拿不到"
+    },
+    {
+      "date": "2026-10-08",
+      "rank": 2,
+      "topic_id": "chicago",
+      "topic": "Chicago housing policy",
+      "angle": "Chicago housing seen as supply and construction, not tenant rights: the city sells empty lots for $1 to bring back the two-flat. This differs from the 17 Sept renter-protection ordinance entry.",
+      "headline": "芝加哥一美元賣空地，西區第一批新房完工"
+    },
+    {
+      "date": "2026-10-08",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago labor",
+      "angle": "A new Chicago thread: a South Side flagship institution, and a Democratic former president's own foundation, faces the union drive his party champions. The issues are labor costs and pay at a newly opened civic landmark.",
+      "headline": "歐巴馬基金會員工宣布組工會"
+    },
+    {
+      "date": "2026-10-08",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "Presidential conflicts of interest",
+      "angle": "A new US-policy thread: the line between the presidency and the president's private businesses, shown through a proposal to make his own golf club an official retreat on county-leased land. It differs from the ledger's press-freedom, Kennedy Center and funding-rescission entries.",
+      "headline": "川普想把自家高爾夫球場變成總統度假地"
+    },
+    {
+      "date": "2026-10-08",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "Two things are new. Williams's injury now has a grade and a 'week-to-week' timeline, so his absence is extended rather than a game-by-game question. And Bagent's second start comes at Lambeau, a rivalry road test. This differs from the 5 Oct Jets result and the 2 Oct and 21 Sept injury-status entries.",
+      "headline": "威廉斯腿傷再缺陣，貝根特先發戰包裝工"
+    },
+    {
+      "date": "2026-10-08",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Arteta speaks on two things. On title pressure, after dropped points, he deliberately lowers the stakes. On fitness, he says Timber and Saliba are healthy after a fortnight of injury bulletins and Dowman is the only absence. This differs from the 6 Oct Leeds opponent preview and the 29 Sept prognosis entry.",
+      "headline": "阿特塔：不要被冠軍壓力綁住"
     }
   ]
 }
