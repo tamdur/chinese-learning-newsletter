@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-08",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "The war stops being a bilateral exchange and starts destroying a third country's oil plant: Saudi Aramco facilities are reportedly hit and Hormuz is physically shut to shipping, so the price move reflects damaged production capacity rather than the risk premium the paper has priced all summer.",
-      "headline": "油價漲到六週新高，沙烏地煉油廠傳出被打中"
-    },
-    {
-      "date": "2026-09-08",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Russia–Ukraine war",
-      "angle": "The diplomatic opening the paper reported on 6 September closes: Zelensky publicly abandons the expectation of a breakthrough and the strikes resume, meaning the Kremlin meeting bought a pause on capitals rather than a path to a settlement.",
-      "headline": "俄軍一夜放出九十二架無人機，和談停住"
-    },
-    {
-      "date": "2026-09-08",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US election administration",
-      "angle": "The mechanism, not the docket: the rule would make a DHS-compiled citizenship list the gatekeeper for whether the Postal Service accepts a ballot, and the Boston injunction's state-by-state carve-out means the midterms could be run under two different federal ballot rules at once.",
-      "headline": "郵寄投票新規定，送上美國最高法院"
-    },
-    {
-      "date": "2026-09-08",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Illinois state politics",
-      "angle": "The third-term bid announced on 1 September gets its opponent and its terrain — Bailey, the minimum wage and organised labour — with a Labor Day picnic serving as the state party's first live test of its midterm argument.",
-      "headline": "普里茲克在勞工野餐會上開打連任戰"
-    },
-    {
-      "date": "2026-09-08",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "A milestone chase with a countdown rather than a standings or injury update: PCA's 40th home run leaves him seven steals and 18 games from becoming the eighth 40-40 player in MLB history — distinct from 11 August's defence-based MVP case.",
-      "headline": "小熊隊克羅阿姆斯壯挑戰四十轟四十盜"
-    },
-    {
-      "date": "2026-09-08",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The competition changes: after a fortnight of transfer subtraction and domestic fixtures, Arsenal begin an eight-game Champions League phase away at Napoli — the first test of whether a squad that sold two forwards and bought none can carry two campaigns at once.",
-      "headline": "兵工廠線：歐冠首戰作客拿坡里"
-    },
-    {
       "date": "2026-09-09",
       "rank": 1,
       "topic_id": "ai",
@@ -1295,6 +1247,46 @@
       "topic": "Arsenal FC",
       "angle": "Arteta speaks on two things. On title pressure, after dropped points, he deliberately lowers the stakes. On fitness, he says Timber and Saliba are healthy after a fortnight of injury bulletins and Dowman is the only absence. This differs from the 6 Oct Leeds opponent preview and the 29 Sept prognosis entry.",
       "headline": "阿特塔：不要被冠軍壓力綁住"
+    },
+    {
+      "date": "2026-10-09",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Nobel Prizes 2026",
+      "angle": "Nobel week moves from the laboratory to politics: the Peace Prize, the one prize decided by a political committee. The front-runners stand for climate activism, grassroots wartime aid and a US president who has openly lobbied for it. This is distinct from the 6 Oct medicine and 7 Oct physics entries.",
+      "headline": "諾貝爾和平獎今天公布得主"
+    },
+    {
+      "date": "2026-10-09",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US election administration",
+      "angle": "Federal use of voter data moves from what courts allowed to what agencies are actually doing: immigration enforcement holds tens of millions of voter records and is investigating the civic groups that register voters. This is distinct from 26 Sept's Supreme Court voter-roll ruling and 15 Sept's mail-ballot block.",
+      "headline": "移民局翻查幾千萬筆選民資料"
+    },
+    {
+      "date": "2026-10-09",
+      "rank": 3,
+      "topic_id": "ideas",
+      "topic": "Nobel Prizes 2026",
+      "angle": "The third science Nobel of the week rewards a chemistry tool for making the right mirror-image form of a molecule, which matters for drug safety and possibly for life's origins. It completes the science-prize run after 6 Oct (medicine) and 7 Oct (physics).",
+      "headline": "化學獎頒給「左右手分子」研究"
+    },
+    {
+      "date": "2026-10-09",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bulls preseason",
+      "angle": "A player-versus-player lens on the Bulls' rebuild: their No. 3 pick against a draft rival, which says whether Chicago chose the right rookie. This is distinct from 7 Oct's preseason-opener preview and 29 Sept's new-coach camp story.",
+      "headline": "兵工廠迎戰傷兵多的里茲"
+    },
+    {
+      "date": "2026-10-09",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Final team news the day before kickoff, seen from the opponent's side: Leeds's six-man injury crisis compared with Arsenal's nearly full squad. This is distinct from 6 Oct's Leeds opponent profile, 8 Oct's Arteta title-pressure and fitness press conference, and 29 Sept's Havertz/Rice return-date entry.",
+      "headline": "Leeds United v Arsenal injury news"
     }
   ]
 }
