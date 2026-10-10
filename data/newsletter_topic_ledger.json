@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-09",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI capability milestones",
-      "angle": "Two days after the paper covered AI machine-checking an existing proof (Fermat, 7 September), the claim jumps from verification to discovery — an unreleased model asserting a solution to an open Millennium Prize problem — and the news is that nobody yet has a trusted way to confirm it, an attribution-and-verification crisis rather than another capability boast.",
-      "headline": "人工智慧宣稱解開百年數學難題"
-    },
-    {
-      "date": "2026-09-09",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Israel and the West Bank",
-      "angle": "A brand-new Middle East thread for the paper, and a lens the ledger's Gaza, Lebanon and Iran coverage never used: Western allies acting on Israel not through diplomacy or aid but through customs classification, twelve countries at once.",
-      "headline": "十二國禁止進口以色列屯墾區商品"
-    },
-    {
-      "date": "2026-09-09",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "The target class changes: after a month of strikes on launchers, refineries and sanctions lists, the US Navy destroys five of Iran's own oil tankers in retaliation for an attack on a warship — the war moving onto Iran's export revenue itself, explicitly not another oil-price story.",
-      "headline": "美軍擊沉五艘伊朗油輪"
-    },
-    {
-      "date": "2026-09-09",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "US midterm elections",
-      "angle": "A brand-new campaign thread for the paper: the Republicans stage a rare midterm convention — an institution normally reserved for presidential years — to nationalise races that are usually fought locally, opening today in Dallas.",
-      "headline": "共和黨在達拉斯開期中選舉大會"
-    },
-    {
-      "date": "2026-09-09",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears stadium",
-      "angle": "After a fortnight in which the Bears used Indiana as leverage, the Illinois plan becomes concrete for the first time — actual designs for a transit-oriented district on the Arlington Park site, presented to residents rather than to legislators.",
-      "headline": "熊隊公開阿靈頓高地球場設計圖"
-    },
-    {
-      "date": "2026-09-09",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The 8 September preview gets its answer on the pitch: the shortest attack of Arteta's tenure needs one goal to win in Naples, so the depth worry that dominated the beat all summer survives round one — for now.",
-      "headline": "兵工廠今晚作客拿坡里　鋒線太薄是隱憂"
-    },
-    {
       "date": "2026-09-10",
       "rank": 1,
       "topic_id": "ai",
@@ -1287,6 +1239,30 @@
       "topic": "Arsenal FC",
       "angle": "Final team news the day before kickoff, seen from the opponent's side: Leeds's six-man injury crisis compared with Arsenal's nearly full squad. This is distinct from 6 Oct's Leeds opponent profile, 8 Oct's Arteta title-pressure and fitness press conference, and 29 Sept's Havertz/Rice return-date entry.",
       "headline": "Leeds United v Arsenal injury news"
+    },
+    {
+      "date": "2026-10-10",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Nobel Prizes 2026",
+      "angle": "The Peace Prize preview printed on 9 Oct gets its answer: the committee skips speculated front-runners for an international-law figure whose most recent work is a genocide finding against a US ally.",
+      "headline": "南非法官皮萊獲得諾貝爾和平獎"
+    },
+    {
+      "date": "2026-10-10",
+      "rank": 2,
+      "topic_id": "ideas",
+      "topic": "Atlantic hurricane season 2026",
+      "angle": "A storm that weakens over land can still do most of its damage through inland rain and flooding — a 'weakening is not the same as safe' lens rather than a wind-speed headline.",
+      "headline": "颶風伊薩亞斯登陸後變弱，大雨淹水仍危險"
+    },
+    {
+      "date": "2026-10-10",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bulls 2026-27 preseason",
+      "angle": "A preseason result — modest news, but the only Chicago/Michigan sports item that is both genuinely same-day and independently verifiable today; worth a short, honest preseason-note treatment rather than overselling it.",
+      "headline": "Chicago Bulls lose preseason game 104-100 to Memphis Grizzlies"
     }
   ]
 }
