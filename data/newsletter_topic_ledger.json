@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-10",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI in government and defence",
-      "angle": "Leaked contracts show all four frontier labs — including the one the paper reported as the holdout on 2 September — are each taking up to $200m to prototype military decision-making tools, moving the story from chatbots issued to staff to AI inside the command chain, and revealed by leak rather than announcement.",
-      "headline": "合約外洩：四大AI公司都在幫美軍做事"
-    },
-    {
-      "date": "2026-09-10",
-      "rank": 2,
-      "topic_id": "economics",
-      "topic": "European Central Bank monetary policy",
-      "angle": "The Gulf oil shock finally moves a central bank's hands rather than a forecast — the ECB tightens into 14.3% energy inflation on the very week markets expect the Fed to cut, splitting the two big central banks in opposite directions for the first time this cycle.",
-      "headline": "歐洲央行升息，美國卻可能降息"
-    },
-    {
-      "date": "2026-09-10",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US midterm elections",
-      "angle": "The convention the paper reported opening yesterday produces its actual argument, and it is fiscal: a tariff-financed $1trn cash transfer offered as an election promise, which makes customs revenue a household entitlement and puts the debt story and the tariff story into the same sentence.",
-      "headline": "川普喊話：共和黨贏，每人發五千美元"
-    },
-    {
-      "date": "2026-09-10",
-      "rank": 4,
-      "topic_id": "ideas",
-      "topic": "AI in biology",
-      "angle": "A brand-new science thread for the paper and the first time the ledger sees AI producing scientific data rather than finance, chips or safety incidents: a machine-generated map of every mutation that could exist, most of which no one has ever seen, and the question of how much a prediction nobody has tested should count in a clinic.",
-      "headline": "DeepMind畫出九十億種DNA變化的地圖"
-    },
-    {
-      "date": "2026-09-10",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "Where the polls refused to move after the Hail Mary escape (7 September), the money did — Oklahoma is now a near-touchdown road favourite in Ann Arbor, a market-versus-voters lens rather than another recap or ranking argument.",
-      "headline": "賭盤翻臉：密西根在主場反而不被看好"
-    },
-    {
-      "date": "2026-09-10",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The two previews get their tactical answer, and it is not about the forwards at all: the goal came from the captain in midfield and the win from a third clean sheet, so a squad that sold two strikers and bought none is winning by not conceding — a shape-of-the-team lens rather than a result recap.",
-      "headline": "賣掉兩名前鋒的兵工廠，靠零失球贏歐冠首戰"
-    },
-    {
       "date": "2026-09-11",
       "rank": 1,
       "topic_id": "ai",
@@ -1263,6 +1215,54 @@
       "topic": "Chicago Bulls 2026-27 preseason",
       "angle": "A preseason result — modest news, but the only Chicago/Michigan sports item that is both genuinely same-day and independently verifiable today; worth a short, honest preseason-note treatment rather than overselling it.",
       "headline": "Chicago Bulls lose preseason game 104-100 to Memphis Grizzlies"
+    },
+    {
+      "date": "2026-10-11",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "A month after the paper reported OpenAI shelving its IPO, its main rival heads the other way and invites investors to talk about a listing, so the two frontier labs are now funding themselves by opposite routes (public market versus private mega-round), with the 14 October meeting as the next date to watch.",
+      "headline": "Anthropic傳準備上市，估值可能近2兆美元"
+    },
+    {
+      "date": "2026-10-11",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Global health governance",
+      "angle": "A brand-new thread for the paper: global health treated as institutional resilience, as the world's main health-policy forum opens with a Lancet Commission verdict on what the next century's threats are.",
+      "headline": "世界衛生高峰會今天在柏林登場"
+    },
+    {
+      "date": "2026-10-11",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago civic life",
+      "angle": "A new Chicago thread, away from the paper's recent budget, housing, labour and transit entries: the city's biggest single-day event, seen as a 26.2-mile tour through its neighbourhoods and a measure of its economic draw.",
+      "headline": "芝加哥馬拉松今天開跑，跑過29個社區"
+    },
+    {
+      "date": "2026-10-11",
+      "rank": 4,
+      "topic_id": "policy",
+      "topic": "Federal disaster aid",
+      "angle": "A new policy thread: the federal-Illinois standoff moves to disaster relief, where a third straight FEMA denial shifts storm-recovery costs from Washington onto counties and households, and turns a technical damage threshold into a political lever.",
+      "headline": "聯邦政府第三次拒絕伊州救災申請"
+    },
+    {
+      "date": "2026-10-11",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "A game-day stakes lens rather than another quarterback-injury bulletin: a 3-1 Bears team walks into the 214th meeting with first place in the NFC North in play, and the oldest rivalry in the league tests whether the hot start is real.",
+      "headline": "熊隊今天到蘭博球場，挑戰老對手包裝工"
+    },
+    {
+      "date": "2026-10-11",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Day-one result after a week of Leeds previews (6 Oct opponent profile, 8 Oct Arteta press conference, 9 Oct injury news): what happened when a nearly full-strength Arsenal met an unbeaten Leeds, and where that leaves the title defence after the Brighton defeat.",
+      "headline": "兵工廠逆轉里茲聯，積分追平曼城"
     }
   ]
 }
