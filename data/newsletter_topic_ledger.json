@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-11",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI regulation",
-      "angle": "Where the paper's 7 September entry showed Brussels binding labs through product requirements and its 5 September entry showed Washington and Beijing merely scheduling talks, today the push for US rules originates inside a frontier lab itself — a researcher's resignation, backed publicly by a colleague, becomes the thing that moves both parties in Congress, with even OpenAI now asking to be regulated.",
-      "headline": "Anthropic 研究員辭職，美國兩黨要求立法管 AI"
-    },
-    {
-      "date": "2026-09-11",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US redistricting",
-      "angle": "A brand-new election thread for the paper: after a fortnight covering the midterms through mail-ballot rules, Postal Service voter lists and a Dallas convention, the fight moves to the map itself — the Supreme Court strikes down a Republican gerrymander and hands Missouri back its old six-seat lines with the House majority in the balance.",
-      "headline": "最高法院擋下密蘇里州新選區地圖"
-    },
-    {
-      "date": "2026-09-11",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "Red Sea shipping and the Houthis",
-      "angle": "The war acquires a second chokepoint and a different geography: rather than another Hormuz oil-price move, an Iranian ally takes physical ground at Bab el-Mandeb, putting the southern entrance to Suez and 12% of world shipping under the control of a militia rather than a navy.",
-      "headline": "胡塞武裝攻下紅海摩卡港"
-    },
-    {
-      "date": "2026-09-11",
-      "rank": 4,
-      "topic_id": "business",
-      "topic": "AI industry consolidation",
-      "angle": "Antitrust catches up with the form of AI dealmaking rather than its price: the DOJ asks whether a $20bn licence is a merger in disguise, the first time a regulator has challenged the legal structure the ledger's Hugging Face, Stripe and Marvell entries all took for granted.",
-      "headline": "司法部調查輝達二百億美元授權案"
-    },
-    {
-      "date": "2026-09-11",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The season's ceiling drops: a three-game sweep by Milwaukee ends the division race and reduces a summer of wild-card leads and MVP campaigns to a scramble for a play-in berth — a season-arc verdict distinct from 8 September's PCA 40-40 milestone chase and 24 August's wild-card-standings entry.",
-      "headline": "釀酒人橫掃小熊，分區冠軍沒指望了"
-    },
-    {
-      "date": "2026-09-11",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The depth problem crosses from the attack to the back four: one day after the paper credited Arsenal's unbeaten start to three clean sheets rather than to goals, Arteta confirms Saliba is out three to four weeks, so the foundation the whole season was resting on loses its best defender just as Timber returns.",
-      "headline": "兵工廠線：主力後衛受傷，要休三到四週"
-    },
-    {
       "date": "2026-09-12",
       "rank": 1,
       "topic_id": "economics",
@@ -1263,6 +1215,38 @@
       "topic": "Arsenal FC",
       "angle": "Day-one result after a week of Leeds previews (6 Oct opponent profile, 8 Oct Arteta press conference, 9 Oct injury news): what happened when a nearly full-strength Arsenal met an unbeaten Leeds, and where that leaves the title defence after the Brighton defeat.",
       "headline": "兵工廠逆轉里茲聯，積分追平曼城"
+    },
+    {
+      "date": "2026-10-12",
+      "rank": 1,
+      "topic_id": "economics",
+      "topic": "AI investment boom",
+      "angle": "The AI-bubble question moves from investors and the labs' own fundraising to the world's financial firefighters: the IMF and World Bank open their annual meetings with AI-driven debt and market concentration formally on the financial-stability agenda.",
+      "headline": "世界財經大會在曼谷開幕，AI泡沫成焦點"
+    },
+    {
+      "date": "2026-10-12",
+      "rank": 2,
+      "topic_id": "ideas",
+      "topic": "Nobel Prizes 2026",
+      "angle": "Nobel week ends with the one prize closest to this paper's identity: what the economics committee chose to reward, and what that says about which economic ideas matter now.",
+      "headline": "諾貝爾經濟學獎今天公布，誰會得獎？"
+    },
+    {
+      "date": "2026-10-12",
+      "rank": 3,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The 11 Oct game-day stakes preview gets its answer: whether a Bagent-led Bears team won at Lambeau as favourites and what that says about whether the 3-1 start is real without Williams.",
+      "headline": "熊隊在綠灣大敗，7比31輸給包裝工"
+    },
+    {
+      "date": "2026-10-12",
+      "rank": 4,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The beat turns from the Premier League to Europe for the first time since the Napoli result: the first Champions League home night of the season, and how Arteta rotates a squad that has only just got healthy.",
+      "headline": "兵工廠明天迎戰里爾，歐冠首場主場戰"
     }
   ]
 }
