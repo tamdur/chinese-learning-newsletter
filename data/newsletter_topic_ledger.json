@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-12",
-      "rank": 1,
-      "topic_id": "economics",
-      "topic": "Federal Reserve monetary policy",
-      "angle": "The September Fed question flips a second time in eight days and in the opposite direction: where the paper reported on 4 September that a dead payroll print had turned the meeting into an 88% bet on a cut, one inflation print turns it into an 85% bet on a hike — so the committee is now being pulled both ways at once, and the paper's 10 September framing of a Fed about to ease while the ECB tightened is now obsolete.",
-      "headline": "美國八月物價再漲，聯準會下週可能升息"
-    },
-    {
-      "date": "2026-09-12",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI model releases",
-      "angle": "The frontier product race stops being about building a bigger model and becomes about building a conductor: a non-American lab ships a flagship that is a routing layer over other companies' models, arguing that orchestration plus cost discipline beats scale — distinct from 3 September's Anthropic two-model split and 4 September's safety-tier release, and the first time the ledger sees a lab compete without owning the underlying model.",
-      "headline": "日本AI公司推新系統，靠指揮別家模型取勝"
-    },
-    {
-      "date": "2026-09-12",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "BRICS and de-dollarisation",
-      "angle": "De-dollarisation stops being a slogan or a two-country workaround and becomes an infrastructure project with a host and a date: eleven governments meeting in New Delhi have abandoned the common-currency idea entirely and are instead building payment rails on India's UPI — a plumbing-not-money lens distinct from 2 September's bilateral Russia-Iran trade-routing story.",
-      "headline": "金磚國家新德里開會，目標是少用美元"
-    },
-    {
-      "date": "2026-09-12",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Illinois food access policy",
-      "angle": "A brand-new Chicago thread for the paper: after a fortnight of Chicago entries on budget holes, mayoral polling, utility rate cases and surveillance cameras, the state tries to fix food deserts by reopening dead stores rather than building new ones — an economic-development lens on a grocery aisle, and state money arriving exactly where city money has run out.",
-      "headline": "伊利諾州出錢，讓關掉的超市重新開門"
-    },
-    {
-      "date": "2026-09-12",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "The market-versus-voters question the paper posed on 10 September gets settled on the field, and the market wins: Oklahoma covers as a road favourite in Ann Arbor, 13 points is confirmed as Michigan's actual offensive ceiling rather than a one-week fluke, and a ranking built entirely on preseason reputation collapses in the first real test.",
-      "headline": "奧克拉荷馬爆冷，二十四比十三擊敗密西根"
-    },
-    {
-      "date": "2026-09-12",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The beat leaves the match cycle entirely for the first time in over a week: after previews, a Napoli result, a clean-sheet tactical read and a Saliba injury bulletin, the question becomes who manages this club beyond this season — Arteta publicly describing his own contract as a day-by-day matter while the team he built sits top of the league.",
-      "headline": "兵工廠線：阿特塔談合約，一天一天來"
-    },
-    {
       "date": "2026-09-13",
       "rank": 1,
       "topic_id": "ai",
@@ -1247,6 +1199,38 @@
       "topic": "Arsenal FC",
       "angle": "The beat turns from the Premier League to Europe for the first time since the Napoli result: the first Champions League home night of the season, and how Arteta rotates a squad that has only just got healthy.",
       "headline": "兵工廠明天迎戰里爾，歐冠首場主場戰"
+    },
+    {
+      "date": "2026-10-13",
+      "rank": 1,
+      "topic_id": "ideas",
+      "topic": "Nobel Prizes 2026",
+      "angle": "The 12 October preview gets its answer: the committee rewards the theory inside every central bank's playbook (expectations, forward guidance, sticky prices) in the same year the paper has watched the Fed, BOJ and RBA use that playbook against a war-driven inflation shock.",
+      "headline": "美國兩位學者拿下諾貝爾經濟學獎"
+    },
+    {
+      "date": "2026-10-13",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "Executive power and the midterms",
+      "angle": "A new mechanism in the paper's run of executive-power stories: public money spent on pre-election ads, and a court order the government appears to have ignored the morning after it was issued. This differs from the 28 September pocket-rescission and 8 October Medicare-cheque entries, which were about withholding or handing out money, not government advertising.",
+      "headline": "法官叫停政府用稅金打的電視廣告"
+    },
+    {
+      "date": "2026-10-13",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "Global economic outlook",
+      "angle": "Yesterday's piece covered the opening of the meetings and AI as a financial-stability risk. Today the IMF puts numbers on what the war-driven energy shock and tightening wave are doing to growth country by country, which is the first scoreboard of 2026's damage.",
+      "headline": "IMF：今年全球經濟成長3.1%"
+    },
+    {
+      "date": "2026-10-13",
+      "rank": 4,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Arteta called Saliba fit on 8 October, and now a specialist has found a back injury. The story is a diagnosis and a choice between two return dates (Everton in the league, or a lower-risk cup tie at Fleetwood), not a result, a preview or a transfer target.",
+      "headline": "薩利巴背傷不用開刀，最快月底回來"
     }
   ]
 }
