@@ -555,6 +555,11 @@
       "url": "https://www.hairwork.com",
       "type": "single-source gem",
       "notes": "One-person site active since the 1990s dedicated to Victorian hairwork (jewelry/art woven from human hair) — sells supplies and antique tools, teaches techniques, and hosts a 'Collector's Stories' section profiling hobbyist collectors. A real niche passion project in the same vein as carrotmuseum.co.uk or amber-fossils.com."
+    },
+    {
+      "url": "https://pinwiki.com",
+      "type": "single-source gem",
+      "notes": "Community-maintained pinball repair and history wiki, founded and largely funded by one hobbyist (Casey Gardner) since 2011; deep mechanical/history detail on tilt mechanisms, bagatelle origins, machine lineages."
     }
   ]
 }
