@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-14",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI investment boom",
-      "angle": "Yesterday the paper reported the labs asking each other to slow down; today the market puts a number on it — Asian AI and chip stocks fall and OpenAI pulls its listing off the table for the year, so the restraint debate has moved from essays and endorsements into share prices and the capital-markets calendar.",
-      "headline": "AI公司說要放慢，亞洲股市跟著跌"
-    },
-    {
-      "date": "2026-09-14",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI regulation",
-      "angle": "The enforcement gap the paper flagged yesterday gets an institutional answer that was already under construction in secret — rivals have been negotiating a private auditing body since July — and the fight inside it is not whether to have rules but how much of the state to let in, distinct from 11 September's congressional push and 7 September's Brussels product rules.",
-      "headline": "三大對手密談，想合開AI檢查機構"
-    },
-    {
-      "date": "2026-09-14",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "Swedish politics",
-      "angle": "A brand-new international thread for the paper and a counterpoint to its 7 September German entry: Europe's most-watched experiment in governing with hard-right parliamentary support appears to have been voted out, with the result resting on seat arithmetic still being counted.",
-      "headline": "瑞典大選，左派聯盟小幅領先"
-    },
-    {
-      "date": "2026-09-14",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago transit safety",
-      "angle": "A new Chicago thread after a fortnight of budget holes, mayoral polling and grocery subsidies: the Labor Day Red Line killing acquires a defendant, and she is fifteen — putting juvenile charging decisions and CTA platform safety into the same case.",
-      "headline": "男子被推下列車，十五歲少女被控殺人"
-    },
-    {
-      "date": "2026-09-14",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The 13 September preview gets its answer and it is a record: 96 combined points, the highest-scoring season opener in NFL history, with Williams accounting for four touchdowns — the beat's first 2026 regular-season result, and the first time all summer the story is what the Bears can do rather than what they are missing.",
-      "headline": "熊隊開幕戰大勝，創下NFL最高分紀錄"
-    },
-    {
-      "date": "2026-09-14",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The beat turns from Sunday's win to the fixture it sets up: Guimaraes faces Newcastle, the club that sold him for a club-record fee weeks ago, while Arteta must field a back line missing Saliba with Mosquera and Timber doubtful — a reunion-and-reshuffle lens rather than another recap of a match already printed.",
-      "headline": "兵工廠線：布魯諾對上老東家紐卡索"
-    },
-    {
       "date": "2026-09-15",
       "rank": 1,
       "topic_id": "ai",
@@ -1191,6 +1143,30 @@
       "topic": "AI investment boom",
       "angle": "On 12 October AI-bubble risk was only an agenda item at the IMF meetings. Now the IMF's own financial-stability report puts hard numbers on it (S&P 500 valuations above 96% of readings since 1990, tech concentration above dotcom levels) and names what would set off a correction: AI failing to pay off in earnings or productivity.",
       "headline": "IMF警告：AI股價太高，可能突然大跌"
+    },
+    {
+      "date": "2026-10-15",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "The investor meeting the paper flagged on 11 October as 'the next date to watch' has now happened, and the listing has a calendar (roadshow around 9 November, trading before Thanksgiving) and named lead banks. The day after the IMF warned AI stocks are overvalued, the first frontier-lab IPO is the real test of that warning.",
+      "headline": "Anthropic辦投資人日，準備上市"
+    },
+    {
+      "date": "2026-10-15",
+      "rank": 2,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "Two rebuilding programs meet: Penn State is in its first season after firing a long-serving coach, and Whittingham's year-one Michigan is trying to fix its turnovers at home. This is about the shape of two rebuilds, not a single coaching duel like the 25 September Ferentz preview, and differs from the 4 October Little Brown Jug loss and 22 September fumble entries.",
+      "headline": "兩位新教練對決，密西根返校日迎戰賓州州立"
+    },
+    {
+      "date": "2026-10-15",
+      "rank": 3,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The answer to the 12 October Lille preview: the European record that is building quietly beside an uneven league defence. Fourteen straight Champions League wins, with the goals coming from Timber, Eze and Saka rather than a centre-forward, which matters for the striker-shortage story the beat has followed since September.",
+      "headline": "七分鐘進三球，兵工廠歐冠十四連勝"
     }
   ]
 }
