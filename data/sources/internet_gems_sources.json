@@ -560,6 +560,11 @@
       "url": "https://pinwiki.com",
       "type": "single-source gem",
       "notes": "Community-maintained pinball repair and history wiki, founded and largely funded by one hobbyist (Casey Gardner) since 2011; deep mechanical/history detail on tilt mechanisms, bagatelle origins, machine lineages."
+    },
+    {
+      "url": "https://snowcrystals.com/",
+      "type": "single-source gem",
+      "notes": "Caltech physicist Kenneth Libbrecht's solo-run site on snow crystal photography, lab-grown crystal science, and snowflake physics, active since 1999."
     }
   ]
 }
