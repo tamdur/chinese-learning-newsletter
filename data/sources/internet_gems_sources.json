@@ -565,6 +565,16 @@
       "url": "https://snowcrystals.com/",
       "type": "single-source gem",
       "notes": "Caltech physicist Kenneth Libbrecht's solo-run site on snow crystal photography, lab-grown crystal science, and snowflake physics, active since 1999."
+    },
+    {
+      "url": "https://depts.washington.edu/moving1/",
+      "type": "archive",
+      "notes": "America's Great Migrations Project — one historian's (James Gregory, UW) long-running solo digital-humanities hub of interactive Tableau Public maps covering 20th-century internal U.S. migrations (Dust Bowl, Great Migration, Southern Diaspora, Asian American migration). Good well of migration-visualizer stories; not yet otherwise covered."
+    },
+    {
+      "url": "https://nationalhellenicmuseum.org/a-year-with-the-odyssey/",
+      "type": "aggregator",
+      "notes": "National Hellenic Museum's year-long thematic programming hub (exhibitions, performances, lectures, the annual Homerathon) — a good recurring well for Chicago culture-desk events tied to Greek heritage and classics."
     }
   ]
 }
