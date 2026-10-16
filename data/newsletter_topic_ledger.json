@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-15",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "US–China AI rivalry",
-      "angle": "The paper has covered Washington and Beijing scheduling AI safety talks (5 Sept) and the labs asking each other to slow down (13 Sept); today the Chinese state answers a frontier-lab CEO by name, and its security ministry — not its trade or foreign policy arm — reclassifies American AI models as a threat to China's ideological and institutional order.",
-      "headline": "中國回應美國AI老闆的警告"
-    },
-    {
-      "date": "2026-09-15",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US election administration",
-      "angle": "The emergency docket fight the paper followed to a briefing deadline gets its answer, and the reasoning is about the calendar rather than the constitution — the court blocks the rule because it came too late to administer, deliberately leaving the underlying question of federal power over state elections unresolved for after the midterms.",
-      "headline": "最高法院擋下郵寄投票新規定"
-    },
-    {
-      "date": "2026-09-15",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US immigration policy",
-      "angle": "A brand-new immigration thread for the paper that touches the reader's own campuses: after covering birthright orders, consular 'public charge' freezes and H-1B spouses, immigration restriction now arrives as a paperwork clock on 1.2m students, and it takes effect today rather than being announced for later.",
-      "headline": "留學生簽證新制上路前一天被擋"
-    },
-    {
-      "date": "2026-09-15",
-      "rank": 4,
-      "topic_id": "economics",
-      "topic": "China economy",
-      "angle": "A month after the paper's 'everything is weak at once / Japanification' read of July's data, August splits the economy in two — a 25% export boom sitting on top of a deepening consumption and investment slump — turning the story from general stagnation into a supply-demand imbalance that is now also a trade-negotiation argument.",
-      "headline": "中國八月出口大增，內需更冷"
-    },
-    {
-      "date": "2026-09-15",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The record opener printed on 14 September is turned around and viewed from the opponent's locker room: Detroit prepares for the coach who used to design its own offence, making Week 2 a test of whether Johnson's scheme works against people who helped build it — a next-fixture-and-reunion lens rather than another result recap.",
-      "headline": "熊隊對上獅隊，強森回老東家"
-    },
-    {
-      "date": "2026-09-15",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The 12 September 'one day at a time' deflection becomes a concrete institutional plan: Arsenal are not just renewing a manager to 2033 but signing up the spine — Rice, Odegaard, Timber — in parallel, a continuity-and-retention lens rather than another fixture preview, injury bulletin or match recap.",
-      "headline": "阿特塔續約在即，兵工廠留住主力"
-    },
-    {
       "date": "2026-09-16",
       "rank": 1,
       "topic_id": "economics",
@@ -1167,6 +1119,22 @@
       "topic": "Arsenal FC",
       "angle": "The answer to the 12 October Lille preview: the European record that is building quietly beside an uneven league defence. Fourteen straight Champions League wins, with the goals coming from Timber, Eze and Saka rather than a centre-forward, which matters for the striker-shortage story the beat has followed since September.",
       "headline": "七分鐘進三球，兵工廠歐冠十四連勝"
+    },
+    {
+      "date": "2026-10-16",
+      "rank": 1,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The quarterback-health story finally turns to a return: after a month of strain, MRI, 'week-to-week' and two Bagent starts ending in the Lambeau rout, Williams is expected back at Atlanta. The question shifts from whether the team can survive without him to whether his return can repair the damage from Green Bay.",
+      "headline": "熊隊四分衛威廉斯可望復出"
+    },
+    {
+      "date": "2026-10-16",
+      "rank": 2,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The beat swings back from Europe to the league. It asks whether Arsenal's flawless European form can carry into an away league match, where their title defence has been uneven, sitting between the Forest trip and Bayern four days later.",
+      "headline": "兵工廠作客諾丁漢森林"
     }
   ]
 }
