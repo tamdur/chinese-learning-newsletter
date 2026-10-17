@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-16",
-      "rank": 1,
-      "topic_id": "economics",
-      "topic": "Federal Reserve monetary policy",
-      "angle": "The paper has covered this meeting twice as a probability — a payroll miss making it an 88% bet on a cut (4 Sept), a CPI print flipping it to an 85% bet on a hike (12 Sept); today it stops being odds and becomes a decision, and the story is what it means for a central bank to raise rates into a war-driven supply shock while its own labour market is stalling, with the 10-year above 5% showing the market got there first.",
-      "headline": "美國聯準會可能升息 二〇二三年以來第一次"
-    },
-    {
-      "date": "2026-09-16",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI model competition",
-      "angle": "The frontier race measured not by benchmarks, capex or safety pledges — the ledger's staple lenses this fortnight — but by which model a rival lab's own employees are allowed to use at work, with Google conceding internally that its competitor writes better code.",
-      "headline": "谷歌開放工程師用對手的模型"
-    },
-    {
-      "date": "2026-09-16",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Chicago–federal immigration standoff",
-      "angle": "Immigration enforcement measured in receipts rather than in rights or jurisdiction — a year-long federal operation audited as $1.26bn of missing restaurant and retail spending and $107m of forgone sales tax in a city already $882m short, distinct from the ledger's TRUST Act non-compliance (26 Aug) and city-contract leverage (31 Aug) entries.",
-      "headline": "芝加哥移民大抓捕滿一年 研究算出損失"
-    },
-    {
-      "date": "2026-09-16",
-      "rank": 4,
-      "topic_id": "world",
-      "topic": "DR Congo term limits",
-      "angle": "A brand-new international thread that breaks a fortnight of Gulf, Red Sea, Ukraine and European-election coverage: the erosion of term limits treated as a constitutional-engineering story in the country that supplies most of the world's cobalt.",
-      "headline": "剛果警察驅散反對修憲的遊行"
-    },
-    {
-      "date": "2026-09-16",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The season flips from the 11 September verdict that the ceiling had dropped to a clinch-watch with a countable number — seven — turning a summer of wild-card positioning into the imminent end of a six-year drought, and breaking four consecutive issues of Bears coverage on the sports desk.",
-      "headline": "小熊勝勇士 魔術數字剩下七"
-    },
-    {
-      "date": "2026-09-16",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The beat's first officiating lens of the season: rather than a result, an injury bulletin, a contract or a fixture preview, the story is the Key Match Incident Panel formally confirming a missed VAR call in Arsenal's favour, and what a retrospective review body with no power to change anything is actually for.",
-      "headline": "英超認錯：兵工廠該有一個罰球"
-    },
-    {
       "date": "2026-09-17",
       "rank": 1,
       "topic_id": "policy",
@@ -1135,6 +1087,38 @@
       "topic": "Arsenal FC",
       "angle": "The beat swings back from Europe to the league. It asks whether Arsenal's flawless European form can carry into an away league match, where their title defence has been uneven, sitting between the Forest trip and Bayern four days later.",
       "headline": "兵工廠作客諾丁漢森林"
+    },
+    {
+      "date": "2026-10-17",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "The IPO gets its first hard numbers: the 15 Oct entry gave a calendar and a valuation rumour, and now the disclosed revenue, profits and slowing quarter-on-quarter growth let the reader test the IMF's overvaluation warning against an actual income statement, a $1.5tn-versus-$2tn argument about growth rates rather than hype.",
+      "headline": "Anthropic第三季收入大增，上市估值引發爭論"
+    },
+    {
+      "date": "2026-10-17",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Ethiopia–Tigray conflict",
+      "angle": "The 29 Sept story was a civil war spilling into Afar with vague accusations against neighbours; now it has become a state-against-state confrontation, with broken diplomatic ties, Eritrean troops reported inside Tigray and Ethiopian drone strikes, all driven by landlocked Ethiopia's demand for a Red Sea port.",
+      "headline": "衣索比亞與厄利垂亞走到戰爭邊緣"
+    },
+    {
+      "date": "2026-10-17",
+      "rank": 3,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The injury story moves from the quarterback to the defence: just as Williams is cleared to return, the unit that gave up 31 points at Lambeau loses a starting linebacker, its top edge signing and possibly both starting corners, so the question is no longer whether the QB plays but whether a depleted defence can support him.",
+      "headline": "熊隊威廉斯可能回歸，防守球員卻接連受傷"
+    },
+    {
+      "date": "2026-10-17",
+      "rank": 4,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The beat's first individual-player profile of the season: Saka's change from creator to scorer, set against the striker shortage the beat has followed since September, is a player-feature lens that differs from 16 Oct's Forest fixture preview and 15 Oct's Lille result.",
+      "headline": "薩卡越來越會進球"
     }
   ]
 }
