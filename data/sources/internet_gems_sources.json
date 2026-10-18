@@ -580,6 +580,11 @@
       "url": "https://www.wordspy.com/",
       "type": "single-source gem",
       "notes": "Paul McFedries' solo-run neologism-tracking site since 1998 — catalogs new English words/phrases with definitions, earliest citations, and a formal 3-citations/20-years admission rule. Browsable by date/category/alphabet; good recurring well for future 'Best of the Internet' picks about language/lexicography."
+    },
+    {
+      "url": "https://www.choosechicago.com/events",
+      "type": "aggregator",
+      "notes": "Chicago's official tourism event calendar. Lists recurring tours, walks, and one-off events with individual dated URLs per occurrence (e.g. /event/<slug>/2026-10-23/), which makes it easy to verify exact upcoming dates for niche recurring experiences (ghost tours, history walks, etc.) rather than relying on stale aggregator snippets."
     }
   ]
 }
