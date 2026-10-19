@@ -1,102 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-17",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US Russia sanctions policy",
-      "angle": "Congress, not the White House, moves on Russia — and it does so by a mechanism the paper's Russia coverage has never used: secondary tariffs aimed at China and India as oil buyers rather than at Moscow itself, distinct from the ledger's drone-strike (8 Sept) and Global-South-diplomacy (24 Aug) entries on the war.",
-      "headline": "美國國會通過制裁俄羅斯法案"
-    },
-    {
-      "date": "2026-09-17",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "Kennedy Center and presidential power",
-      "angle": "A court ruling against the president is answered within minutes not by appeal but by the board closing the building itself — executive power routed through control of an institution's own trustees and its renovation money, a different mechanism from the ballroom litigation the paper closed out on 2 September.",
-      "headline": "法官擋下改名，甘迺迪中心決定關門兩年"
-    },
-    {
-      "date": "2026-09-17",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Chicago housing policy",
-      "angle": "A brand-new Chicago thread — renter protections — and a bargaining-power lens on the mayoral race: Johnson only wins committee 12-9 by deleting the heart of his own ordinance, showing what an unpopular incumbent can actually still pass, distinct from the ledger's Chicago entries on budget holes, grocery subsidies, transit safety and ICE economics.",
-      "headline": "芝加哥租客保護條例以十二比九過關"
-    },
-    {
-      "date": "2026-09-17",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago downtown redevelopment",
-      "angle": "The AI boom the paper has tracked as capex, chips and a data-centre zoning fight arrives in the Loop as architecture instead — a big tech firm anchoring a salvaged landmark and, with it, the case for downtown office space, a lens no Chicago entry in the ledger has used.",
-      "headline": "谷歌公布湯普森中心新設計"
-    },
-    {
-      "date": "2026-09-17",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The Bears beat moves from results and roster attrition to a single contract decision and its immediate payoff: a running back paid $33.75m over three years who two days later posts the franchise's best rushing game in a decade — a money-and-position-value lens, not another game recap or injury bulletin.",
-      "headline": "熊隊史威夫特剛續約就跑出好成績"
-    },
-    {
-      "date": "2026-09-17",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The defensive-injury story flips from subtraction to return: Timber back in full training, Mosquera's withdrawal downgraded to precaution and Saliba registered for Europe — a recovery-and-availability lens distinct from 11 September's 'Saliba out three to four weeks', 14 September's doubt-ridden Newcastle preview and 16 September's VAR-panel story.",
-      "headline": "兵工廠線：後衛一個一個歸隊"
-    },
-    {
-      "date": "2026-09-18",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI chip supply chain",
-      "angle": "The compute story stops being about who buys from Nvidia or designs around it and becomes about whether a second, sealed-off national supply chain can exist at all — Huawei answers export controls with a dated two-year roadmap and a 4,096-processor cluster design, betting that scale-out beats per-chip parity.",
-      "headline": "華為公布新AI晶片 挑戰輝達地位"
-    },
-    {
-      "date": "2026-09-18",
-      "rank": 2,
-      "topic_id": "business",
-      "topic": "US media consolidation and antitrust",
-      "angle": "Antitrust enforcement passes from Washington to the state attorneys general, and the merging company's counter-move is territorial rather than legal — Paramount threatens to take its headquarters out of the state that is suing it, making corporate residency itself a bargaining chip in a $111bn deal.",
-      "headline": "派拉蒙併購案被告 傳考慮搬離加州"
-    },
-    {
-      "date": "2026-09-18",
-      "rank": 3,
-      "topic_id": "ideas",
-      "topic": "Himalayan glacier flood",
-      "angle": "The disaster the paper reported as a failure of warning gets its causal verdict three weeks later: attribution scientists tie the rock collapse itself to industrial-era warming, extending a method built for heatwaves and rainfall to the physical integrity of a mountain.",
-      "headline": "研究指暖化助長尼泊爾山崩洪災"
-    },
-    {
-      "date": "2026-09-18",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago–federal immigration standoff",
-      "angle": "The standoff moves from institutions to individuals and from politics to liability: residents use the Federal Tort Claims Act to seek money damages from DHS itself, a route that neither the governor nor the mayor controls.",
-      "headline": "十五名伊利諾居民 向國土安全部求償"
-    },
-    {
-      "date": "2026-09-18",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The August injury that forced the whole infield to move is reversed just in time, so the story is October roster construction — who is actually available for a short series — rather than another magic-number or home-run-milestone bulletin.",
-      "headline": "史旺森傷癒歸隊 小熊內野歸位"
-    },
-    {
-      "date": "2026-09-18",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The Arsenal beat's first academy-pathway story of the season, and it turns on an inconsistency: having exported Nwaneri on loan a fortnight ago, Arsenal are now refusing every loan bid for a 16-year-old who has just scored twice in a cup tie.",
-      "headline": "兵工廠拒絕外借 十六歲多曼留隊"
-    },
-    {
       "date": "2026-09-19",
       "rank": 1,
       "topic_id": "ai",
@@ -1119,6 +1023,54 @@
       "topic": "Arsenal FC",
       "angle": "The beat's first individual-player profile of the season: Saka's change from creator to scorer, set against the striker shortage the beat has followed since September, is a player-feature lens that differs from 16 Oct's Forest fixture preview and 15 Oct's Lille result.",
       "headline": "薩卡越來越會進球"
+    },
+    {
+      "date": "2026-10-19",
+      "rank": 1,
+      "topic_id": "economics",
+      "topic": "China economy",
+      "angle": "The consumption gap the paper described on 15 Sept and tested through Golden Week spending on 2 Oct now gets its quarterly verdict: growth beats forecasts and stays on target, but almost entirely through exports and factories while households and investment keep shrinking, so China is hitting its number the old way.",
+      "headline": "中國第三季經濟成長4.5%，比預期好"
+    },
+    {
+      "date": "2026-10-19",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "After three IPO entries about valuation, calendar and income statement (11, 15 and 17 Oct), the story turns to governance: the first frontier lab to go public writes a share pledge into its structure that grows as the company's value rises and is barred from lobbying, raising the question of who a public AI company answers to besides its shareholders.",
+      "headline": "Anthropic拿出5%股份做公益"
+    },
+    {
+      "date": "2026-10-19",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Brazil and Bosnia elections",
+      "angle": "The 2 Oct weekend preview gets its follow-up at a new stage: the first-round result put the challenger ahead of a sitting president, and the first head-to-head debate shows a Bolsonaro comeback, through the son, as the favourite a week before the runoff.",
+      "headline": "巴西選總統，兩人電視辯論互罵"
+    },
+    {
+      "date": "2026-10-19",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "European cost-of-living protests",
+      "angle": "A new thread for the paper: the energy-and-rates shock the paper has tracked through oil prices, diesel and the IMF's growth figures now shows up as street unrest in several European countries, with Milan as the flashpoint.",
+      "headline": "米蘭物價抗議連續兩天變暴力"
+    },
+    {
+      "date": "2026-10-19",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The month-long quarterback-health story ends with an answer: Williams is back and sharp, completing 30 of 36, and the depleted defence the paper worried about on 17 Oct nearly gives the lead away before making the play that saves the game.",
+      "headline": "威廉斯傷好回歸，熊隊31比23勝獵鷹"
+    },
+    {
+      "date": "2026-10-19",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The 16 Oct preview asked whether Arsenal's European form would carry into an uneven away league record; the answer is a narrow, low-quality win, with one shot on target and a substitute's deflected goal, which points again to the forward shortage the beat has followed since September.",
+      "headline": "兵工廠1比0小勝森林"
     }
   ]
 }
