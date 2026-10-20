@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-19",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI industry consolidation",
-      "angle": "The paper reported on 28 August that Nvidia would buy the open-model commons and on 11 September that the DOJ was probing whether its Groq licence was a merger in disguise; today the two converge on a structural point — this is the one deal Nvidia cannot engineer around.",
-      "headline": "輝達收購案 面臨更嚴格審查"
-    },
-    {
-      "date": "2026-09-19",
-      "rank": 2,
-      "topic_id": "economics",
-      "topic": "Bank of Japan monetary policy",
-      "angle": "A central bank the ledger has never covered — and the reverse of the usual textbook result: Japan reaches a 31-year-high policy rate and the yen falls anyway, because Ueda refused to promise a next step.",
-      "headline": "日本升息到三十一年新高 日圓反而走弱"
-    },
-    {
-      "date": "2026-09-19",
-      "rank": 3,
-      "topic_id": "business",
-      "topic": "Berkshire Hathaway succession",
-      "angle": "A brand-new corporate thread for the paper and the ledger's second big-company succession after Apple on 1 September, but with the opposite design: the job is deliberately split so the son inherits the chair as a guardian of culture while an outsider runs the company.",
-      "headline": "巴菲特卸下董事長 交棒給兒子"
-    },
-    {
-      "date": "2026-09-19",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago rail and land-use politics",
-      "angle": "A brand-new Chicago thread after a fortnight of immigration-standoff, housing-ordinance and downtown-redevelopment entries: federal rail infrastructure and a billionaire's stadium redevelopment turn out to be the same project.",
-      "headline": "芝加哥南區居民 反對火車維修場"
-    },
-    {
-      "date": "2026-09-19",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "The beat returns after a week away — and after four of the last six sports slots went to the Bears — with the schedule's softest game framed as a diagnostic rather than a contest.",
-      "headline": "密西根大學週六主場迎戰UTEP"
-    },
-    {
-      "date": "2026-09-19",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A strength-versus-strength tactical lens rather than another preview of a reunion or an injury list: the league's best attack meets Europe's meanest defence.",
-      "headline": "兵工廠作客布萊頓 矛與盾對決"
-    },
-    {
       "date": "2026-09-20",
       "rank": 1,
       "topic_id": "ai",
@@ -1071,6 +1023,54 @@
       "topic": "Arsenal FC",
       "angle": "The 16 Oct preview asked whether Arsenal's European form would carry into an uneven away league record; the answer is a narrow, low-quality win, with one shot on target and a substitute's deflected goal, which points again to the forward shortage the beat has followed since September.",
       "headline": "兵工廠1比0小勝森林"
+    },
+    {
+      "date": "2026-10-20",
+      "rank": 1,
+      "topic_id": "chicago",
+      "topic": "Chicago labor",
+      "angle": "A new Chicago labor story, different from 8 Oct's Obama Foundation union drive: a public education system shuts down mid-semester, and AI job protection is a formal bargaining demand, so the AI-and-jobs question shows up in a Chicago union contract rather than in national data.",
+      "headline": "芝加哥城市學院清晨談成合約，罷工喊停"
+    },
+    {
+      "date": "2026-10-20",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US election administration",
+      "angle": "The federal campaign over voter eligibility moves from rules and records (the 26 Sept Supreme Court voter-roll ruling, the 9 Oct story on immigration enforcement mining voter data) to a lawsuit asking a court to stop ballots already cast from being counted.",
+      "headline": "司法部緊急求法官：加州兩萬張選票先別算"
+    },
+    {
+      "date": "2026-10-20",
+      "rank": 3,
+      "topic_id": "economics",
+      "topic": "Economics of immigration",
+      "angle": "A new economics-of-ideas story: a well-known economist argues that the standard fiscal sum on immigration is built wrong because it treats immigrants as line items in a budget rather than as trading partners.",
+      "headline": "考文：算移民的帳，別忘了「交易的好處」"
+    },
+    {
+      "date": "2026-10-20",
+      "rank": 4,
+      "topic_id": "ideas",
+      "topic": "Brazil (economy and culture)",
+      "angle": "A back-pages way into Brazil a week before the runoff: the country seen through what it eats and how that food is made, not through its presidential candidates.",
+      "headline": "考文吃遍巴西：最愛米納斯的豆子"
+    },
+    {
+      "date": "2026-10-20",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bulls",
+      "angle": "The first regular-season game of the new coach's era, previewed as what a rebuild should be judged on. Different from the camp story (29 Sept), preseason-opener preview (7 Oct), rookie matchup (9 Oct), and Memphis preseason result (10 Oct).",
+      "headline": "公牛明晚開季，新教練首戰暴龍"
+    },
+    {
+      "date": "2026-10-20",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "What comes next: a Champions League winning run meets its hardest opponent of the group stage (if Bayern is confirmed) — a different lens from 19 Oct's Forest win, 17 Oct's Saka profile, and 15 Oct's Lille result.",
+      "headline": "兵工廠明天作客慕尼黑，挑戰拜仁"
     }
   ]
 }
