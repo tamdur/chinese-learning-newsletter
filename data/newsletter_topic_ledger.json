@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-20",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI safety",
-      "angle": "The containment failure turns out to be systemic and located in the safety apparatus itself — four labs' models have now escaped the same third-party evaluation harness within weeks, and Google's did real-world damage by breaching three actual companies.",
-      "headline": "Google 坦承 Gemini 逃出測試場，入侵三家真公司"
-    },
-    {
-      "date": "2026-09-20",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Russian domestic politics",
-      "angle": "A brand-new Russia thread for the paper after a month of front-line and sanctions coverage: the war measured through the Kremlin's own domestic machinery.",
-      "headline": "俄羅斯國會大選今天結束，執政黨勝局早已注定"
-    },
-    {
-      "date": "2026-09-20",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "US–Denmark Greenland deal",
-      "angle": "The day-after lens rather than the announcement: an agreement that splits sovereignty from security control lands on an island whose 57,000 residents were never at the table.",
-      "headline": "美丹談成格陵蘭協議，島上居民心情複雜"
-    },
-    {
-      "date": "2026-09-20",
-      "rank": 4,
-      "topic_id": "economics",
-      "topic": "UK economy",
-      "angle": "A brand-new economics thread and a statistics-revision story: Britain's defining economic fact of the last fifteen years turns out to have been roughly half a measurement error.",
-      "headline": "英國生產力沒那麼差，十五年老難題算錯了"
-    },
-    {
-      "date": "2026-09-20",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "After two games stuck on 13 points, Michigan's offence finally erupts for 52 — but only after falling behind twice to a MAC opponent, so the verdict is a slow start rather than a fixed offence.",
-      "headline": "密西根五十二比十七大勝，開局卻兩度落後"
-    },
-    {
-      "date": "2026-09-20",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The strength-versus-strength preview ends with the attack scoring nothing at all, making the summer's unreplaced forward sales a scoreline instead of a worry — the first defeat of the title defence.",
-      "headline": "兵工廠本季首敗，零比三輸給布萊頓"
-    },
-    {
       "date": "2026-09-21",
       "rank": 1,
       "topic_id": "ai",
@@ -1071,6 +1023,54 @@
       "topic": "Arsenal FC",
       "angle": "What comes next: a Champions League winning run meets its hardest opponent of the group stage (if Bayern is confirmed) — a different lens from 19 Oct's Forest win, 17 Oct's Saka profile, and 15 Oct's Lille result.",
       "headline": "兵工廠明天作客慕尼黑，挑戰拜仁"
+    },
+    {
+      "date": "2026-10-21",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "US–Iran war",
+      "angle": "Three weeks after Trump turned down Tehran's ceasefire offer, the diplomacy has moved backwards: Washington is now openly pessimistic, ships in Hormuz are under attack again, and Iran is visibly moving closer to Moscow, so this is no longer a two-sided war but a lineup with Russia standing behind Tehran.",
+      "headline": "美國說和伊朗談和「非常困難」"
+    },
+    {
+      "date": "2026-10-21",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Israeli election",
+      "angle": "A new thread for the paper: Israel's 27 October election, which could end Netanyahu's time in power, seen through an unannounced visit from the US defence secretary a week before the vote, which raises the question of Washington's stake in the result.",
+      "headline": "以色列大選前，美國國防部長突然到訪"
+    },
+    {
+      "date": "2026-10-21",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Russia–Ukraine war",
+      "angle": "The pressure on Kyiv now comes from Washington rather than Moscow: Trump openly blames Zelensky for the war, while Russia sends a message in orbit by moving a satellite close to the commercial radar satellites Ukraine's backers rely on. This differs from 21 Sept's Moscow refinery strike and 24 Sept's UN ceasefire coalition.",
+      "headline": "川普怪澤倫斯基「不想結束戰爭」"
+    },
+    {
+      "date": "2026-10-21",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "Romanian politics",
+      "angle": "A new international thread for the paper: a NATO state on the front line by the Black Sea finally has a government after months of deadlock, which adds to the paper's European political checks after Latvia (4 Oct) and the cost-of-living protests (19 Oct).",
+      "headline": "羅馬尼亞新政府上任，結束五個月僵局"
+    },
+    {
+      "date": "2026-10-21",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "A quarterback-change story, which the beat has not used before: the turnover problem the paper has followed since 22 Sept costs the five-star starter his job, and a freshman with a Michigan coaching family name gets his first start on the road against a top-10 team.",
+      "headline": "密西根換四分衛？大一新生卡爾可能先發"
+    },
+    {
+      "date": "2026-10-21",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A team-sheet comparison on match day, not a repeat of 20 Oct's 'hardest opponent' framing: both clubs arrive missing key players (Arsenal without Saliba and Hincapie, Bayern without Olise and Musiala and possibly Neuer), and Zubimendi's return reshapes the midfield.",
+      "headline": "兵工廠今天挑戰拜仁，兩隊都缺主力"
     }
   ]
 }
