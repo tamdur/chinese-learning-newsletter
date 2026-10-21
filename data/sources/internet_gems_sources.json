@@ -2,6 +2,11 @@
   "description": "Aggregator sources for the Best of the Internet obsession. The scout reads this file to find hunting grounds for hidden gems, and may append new sources it discovers. Each source is a URL or search pattern that tends to surface passionate, depth-first websites.",
   "sources": [
     {
+      "url": "https://www.endangeredalphabets.com/",
+      "type": "project_site",
+      "notes": "Nonprofit solo-founder (Tim Brookes) project; interactive Atlas of Endangered Alphabets map with ~90 endangered writing systems, each with its own profile page, photos, and history. Good recurring well for 'saving/preserving obscure knowledge' angles distinct from toponymy/lexicography/falconry entries already used."
+    },
+    {
       "url": "https://github.com/sindresorhus/awesome",
       "type": "aggregator",
       "notes": "Meta-list of 'awesome' lists on GitHub — covers every niche imaginable"
