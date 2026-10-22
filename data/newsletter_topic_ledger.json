@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-21",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI slowdown pact",
-      "angle": "The restraint pact the paper covered as an ethical proposal (13 Sept) and then as a market shock (14 Sept) now becomes a legal liability: a class action argues that four firms agreeing to slow down is collusion, so the open question is no longer whether the labs will honour the pact but whether US antitrust law permits them to make one at all.",
-      "headline": "四大AI公司被控聯手放慢進度"
-    },
-    {
-      "date": "2026-09-21",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Russia–Ukraine war",
-      "angle": "The war arrives inside the capital's fuel supply on election day: Kyiv's largest barrage of 2026 sets alight the refinery that provides 40% of Moscow's petrol, turning a conflict Muscovites have experienced as television into a domestic shortage risk — distinct from 8 September's 'talks collapse, strikes resume' and from 20 September's Duma-election piece.",
-      "headline": "烏克蘭無人機打中莫斯科煉油廠"
-    },
-    {
-      "date": "2026-09-21",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US press freedom",
-      "angle": "A brand-new US policy thread for the paper: executive power exercised not through courts, money or personnel but through the physical logistics of news-gathering — the White House seizing control of the pool rotation the networks have run themselves for decades.",
-      "headline": "白宮拿掉CNN的電視輪值"
-    },
-    {
-      "date": "2026-09-21",
-      "rank": 4,
-      "topic_id": "economics",
-      "topic": "US–China trade",
-      "angle": "The tariff war reverses direction three days before the summit: after a month in which the paper tracked pressure engineered up to the truce ceiling, both sides are now negotiating cuts on $30bn of trade, with rare earths, Boeing orders and AI risk bundled into a single deliverable package.",
-      "headline": "美中商談降關稅，習近平本週訪白宮"
-    },
-    {
-      "date": "2026-09-21",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The beat's first quarterback-health story of the season: an availability-of-the-franchise-asset lens on Williams' hamstring strain awaiting a Monday MRI.",
-      "headline": "熊隊四分衛威廉斯大腿拉傷"
-    },
-    {
-      "date": "2026-09-21",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The defeat printed yesterday gets its transfer-market consequence rather than a rerun: the blank at Brighton pushes Arsenal back into the striker market they left empty in August, with Dortmund's Beier the January target.",
-      "headline": "兵工廠線：阿森納看上多特蒙德前鋒拜爾"
-    },
-    {
       "date": "2026-09-22",
       "rank": 1,
       "topic_id": "ai",
@@ -1071,6 +1023,38 @@
       "topic": "Arsenal FC",
       "angle": "A team-sheet comparison on match day, not a repeat of 20 Oct's 'hardest opponent' framing: both clubs arrive missing key players (Arsenal without Saliba and Hincapie, Bayern without Olise and Musiala and possibly Neuer), and Zubimendi's return reshapes the midfield.",
       "headline": "兵工廠今天挑戰拜仁，兩隊都缺主力"
+    },
+    {
+      "date": "2026-10-22",
+      "rank": 1,
+      "topic_id": "business",
+      "topic": "Tesla and the AI pivot",
+      "angle": "A new business thread for the paper: a carmaker whose car sales are shrinking asks investors to value it as an AI and robotics company, and Q3 margins show how much the old business can still pay for the new bet.",
+      "headline": "特斯拉第三季賺得變少"
+    },
+    {
+      "date": "2026-10-22",
+      "rank": 2,
+      "topic_id": "ideas",
+      "topic": "Economics of trauma and education",
+      "angle": "A new back-pages ideas thread: an economist measures what campus shootings do to survivors' lives years later and finds students still graduate on time but fewer go on to further study.",
+      "headline": "校園槍擊對學生的長期影響"
+    },
+    {
+      "date": "2026-10-22",
+      "rank": 3,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "A forward-looking schedule lens rather than another quarterback-health story: a short-week home game against the Patriots is the last chance to bank a win before the NFC North run decides the season.",
+      "headline": "熊隊今晚主場迎戰愛國者"
+    },
+    {
+      "date": "2026-10-22",
+      "rank": 4,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "After two days of previews (20 Oct hardest-opponent framing, 21 Oct team-sheet comparison), the day-one result: whether Arsenal's 14-match European winning run survived the hardest away trip of the league phase.",
+      "headline": "兵工廠客場2比2逼和拜仁"
     }
   ]
 }
