@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-22",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI model releases",
-      "angle": "The first frontier model release since the industry's self-restraint pact — and it comes from the one lab that never signed up, with its edge claimed not in compute but in proprietary Starlink hardware telemetry that no rival can purchase.",
-      "headline": "馬斯克新模型出爐 用衛星資料訓練"
-    },
-    {
-      "date": "2026-09-22",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "After seven weeks in which this paper covered the war only as escalation — tankers sunk, refineries hit, chokepoints closed — the market is for the first time pricing its end, with oil down 9% in four sessions on diplomacy rather than on any change in the blockade.",
-      "headline": "和談有望 油價跌破一百美元"
-    },
-    {
-      "date": "2026-09-22",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US redistricting",
-      "angle": "The Missouri map this paper reported struck down on 11 September is revived by a federal court over the state supreme court's objection — turning a gerrymandering case into a straight conflict over whether state or federal judges control a state's own districts, weeks before ballots print.",
-      "headline": "聯邦法院翻案 密蘇里州改用共和黨地圖"
-    },
-    {
-      "date": "2026-09-22",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago mayoral politics",
-      "angle": "The mayoral race gets its first hard measure of who is real — a 30-to-1 cash advantage for a challenger who has not even declared, against an incumbent who must choose between layoffs and a tax rise.",
-      "headline": "芝加哥市長選戰 挑戰者錢多三十倍"
-    },
-    {
-      "date": "2026-09-22",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "The coach's own diagnosis replaces the scoreboard reading: the problem this season is not points but six fumbles in three games, and the Big Ten opener against a top-20 Iowa is the worst possible place to keep dropping the ball.",
-      "headline": "密西根教練：掉球才是最大毛病"
-    },
-    {
-      "date": "2026-09-22",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The tactical post-mortem the beat skipped: Arteta traces the first defeat not to the missing strikers the paper has written about all summer but to a Rice–Guimarães midfield that does not yet function as a pair.",
-      "headline": "兵工廠線：阿爾特塔說慘敗是一堂大課"
-    },
-    {
       "date": "2026-09-23",
       "rank": 1,
       "topic_id": "ai",
@@ -1055,6 +1007,22 @@
       "topic": "Arsenal FC",
       "angle": "After two days of previews (20 Oct hardest-opponent framing, 21 Oct team-sheet comparison), the day-one result: whether Arsenal's 14-match European winning run survived the hardest away trip of the league phase.",
       "headline": "兵工廠客場2比2逼和拜仁"
+    },
+    {
+      "date": "2026-10-23",
+      "rank": 1,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "A market-verdict preview: the betting line says Michigan is a clear underdog against a one-loss Indiana that nearly beat Ohio State, showing how far the old Big Ten order has flipped. Distinct from prior QB-change and Penn State preview stories.",
+      "headline": "密西根主場迎戰印第安納"
+    },
+    {
+      "date": "2026-10-23",
+      "rank": 2,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The Saliba return decision is now 48 hours away, framed as a preview of Saturday's Everton match: after playing without him at Bayern, does Arteta risk him in the league or ease him in at the Fleetwood cup tie? Distinct from the Bayern result story and the earlier injury-diagnosis story.",
+      "headline": "薩利巴快回來了"
     }
   ]
 }
