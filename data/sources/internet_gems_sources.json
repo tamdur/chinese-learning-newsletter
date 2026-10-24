@@ -595,6 +595,11 @@
       "url": "https://www.bangor.ac.uk/amr",
       "type": "single-source gem",
       "notes": "Archif Melville Richards: Bangor University's digitized database of ~300,000 handwritten research slips on historical Welsh place-name forms, compiled solo by scholar Melville Richards over decades and posthumously computerized (2001-2004). Searchable by place-name, parish, and historical spelling variant — a deep well for toponymy/onomastics angles."
+    },
+    {
+      "url": "https://officemuseum.com/",
+      "type": "solo_archive",
+      "notes": "Single-curator digital museum of pre-1920 office equipment (typewriters, adding machines, pencil sharpeners, paper clips) with deep historical essays and period photos. Good candidate for future 'solo archive' obsession picks — plenty of unexplored sub-galleries (e.g. electric pencil sharpeners, Oliver/Hammond typewriters) not yet covered."
     }
   ]
 }
