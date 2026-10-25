@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-24",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI governance",
-      "angle": "AI risk goes to the world's top security body for the first time. American and Chinese frontier labs sit at the same table, so AI is treated as a matter of international peace and security, not product regulation or bilateral talks. This is distinct from 5 Sept's US–China safety talks, 7 Sept's EU rules, 14 Sept's private auditing body and 20 Sept's Gemini escape.",
-      "headline": "美中AI公司首次同上聯合國安理會"
-    },
-    {
-      "date": "2026-09-24",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Russia–Ukraine war",
-      "angle": "Kyiv turns the General Assembly into a vote-counting exercise: 50 governments back an unconditional ceasefire, and Russia's answer that night is a missile on a maternity hospital. This multilateral-coalition angle is distinct from 6 Sept's US envoy–Putin pause, 8 Sept's collapse of talks, 21 Sept's strike on the Moscow refinery and 24 Aug's outreach to the Global South.",
-      "headline": "51國挺烏克蘭停火　基輔當晚又遭飛彈攻擊"
-    },
-    {
-      "date": "2026-09-24",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Chicago data centre policy",
-      "angle": "The AI buildout the paper has covered as capital, chips and a single zoning order now hits a coordinated city-and-state brake. Chicago proposes an outright one-year stop, and Springfield removes the tax subsidy. This moves the story from regulating data centres to pausing them. It goes beyond 27 Aug's mayoral order to tighten rules.",
-      "headline": "芝加哥市長提議一年不蓋新資料中心"
-    },
-    {
-      "date": "2026-09-24",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "US press freedom",
-      "angle": "The first judicial check on the White House's press campaign. A court rules that revoking credentials is a due-process question, not presidential discretion. This is distinct from 21 Sept's story about the White House seizing control of the pool rotation.",
-      "headline": "法官下令白宮讓三家媒體回來採訪"
-    },
-    {
-      "date": "2026-09-24",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The clinch-watch the paper counted down from magic number seven (16 Sept) turns into a cliff edge. A first chance to clinch is lost in extra innings, and the Cubs are half a game outside a Wild Card spot with four days left, so the tiebreakers now matter. This is distinct from 18 Sept's Swanson return and 11 Sept's division-race verdict.",
-      "headline": "小熊延長賽輸球　錯過晉級機會"
-    },
-    {
-      "date": "2026-09-24",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A workload-and-body lens the beat hasn't used: the midfielder Arteta's post-mortem centred on has a chronic nerve-and-hamstring problem after a 69-game season, so the question is whether Rice can be managed through a title defence. This is distinct from 22 Sept's tactical post-mortem, 23 Sept's Arteta contract and 5 Sept's international-break injury list.",
-      "headline": "萊斯因傷退出英格蘭國家隊"
-    },
-    {
       "date": "2026-09-25",
       "rank": 1,
       "topic_id": "ai",
@@ -991,6 +943,14 @@
       "topic": "Chicago Bears",
       "angle": "Day one of the result after the 22 Oct schedule preview: whether the Bears banked the win before the NFC North run, and whether Williams' return held up in his second game back with a short-handed defence.",
       "headline": "熊隊30比24打敗愛國者隊"
+    },
+    {
+      "date": "2026-10-25",
+      "rank": 1,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Day-one result of the Everton match the 23 Oct entry previewed: a clean, comfortable home win after the scrappy 1-0 at Forest and the 2-2 at Bayern, with attention now on cup rotation at Fleetwood and the 1 Nov trip to Liverpool, the hardest league test of the autumn.",
+      "headline": "Arsenal 2-0 Everton"
     }
   ]
 }
