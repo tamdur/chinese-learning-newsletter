@@ -600,6 +600,11 @@
       "url": "https://officemuseum.com/",
       "type": "solo_archive",
       "notes": "Single-curator digital museum of pre-1920 office equipment (typewriters, adding machines, pencil sharpeners, paper clips) with deep historical essays and period photos. Good candidate for future 'solo archive' obsession picks — plenty of unexplored sub-galleries (e.g. electric pencil sharpeners, Oliver/Hammond typewriters) not yet covered."
+    },
+    {
+      "url": "https://happywhale.com",
+      "type": "citizen-science database",
+      "notes": "Small-team (originally two co-founders) citizen-science whale identification catalog built from publicly donated fluke photos; individual whale profiles reveal multi-decade sighting histories and migration records. Great recurring well for 'hidden gem rewarding curiosity with depth' -- could revisit for specific whale profiles, record-breaking matches, or other species added over time (orcas, right whales)."
     }
   ]
 }
