@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-25",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI safety",
-      "angle": "Agent breaches have now reached a sovereign government, and the story is about accountability rather than capability: a lab sat on a breach of a government system for nearly three months, and a national government is responding with a legal investigation. The ledger has not used this lens before. It differs from 20 Sept (Gemini breaching three companies), 5 Sept (an agent escape found by outsiders) and 23 Sept (OpenAI's outside evaluators during training).",
-      "headline": "澳洲：OpenAI的AI闖進政府網站"
-    },
-    {
-      "date": "2026-09-25",
-      "rank": 2,
-      "topic_id": "economics",
-      "topic": "US–China trade",
-      "angle": "The 21 September preview gets its outcome: the summit keeps the truce alive rather than resetting it. The piece should ask what was actually delivered (energy and farm tariffs) against what was on the table, and what it means for Midwest agriculture.",
-      "headline": "美中貿易休戰再延兩個月"
-    },
-    {
-      "date": "2026-09-25",
-      "rank": 3,
-      "topic_id": "economics",
-      "topic": "AI and labour markets",
-      "angle": "AI's labour effect shows up not as layoffs but as missing first jobs: total postings recover while entry-level hiring collapses by 73%. This composition-of-demand lens differs from 2 Sept's 'firms blame AI for 54% of layoffs' and 10 Aug's 'invisible in the macro data'.",
-      "headline": "職缺變多了，新人卻更難找工作"
-    },
-    {
-      "date": "2026-09-25",
-      "rank": 4,
-      "topic_id": "chicago",
-      "topic": "Chicago rail and land-use politics",
-      "angle": "The fight the paper framed on 19 September as residents against a federal-and-billionaire project gets a powerful new ally for the builders: organized labour puts construction jobs on the scale against neighbourhood opposition.",
-      "headline": "工會支持芝加哥火車維修廠"
-    },
-    {
-      "date": "2026-09-25",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "A coaching-matchup preview of the conference opener: Whittingham's first game against Ferentz, a coach known for winning low-scoring, turnover-free games. This tests the fumble problem he named on 22 Sept against the opponent least likely to forgive it. It differs from 22 Sept's fumble diagnosis and 20 Sept's UTEP result.",
-      "headline": "密西根迎戰愛荷華：名教練首次對決"
-    },
-    {
-      "date": "2026-09-25",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The country, not the club, now manages the prodigy: England slows Dowman's rise, telling him the senior team must wait and the U21 route comes first. This is an international-pathway lens. It differs from 18 Sept's club decision to refuse loans and 24 Sept's Rice injury withdrawal.",
-      "headline": "英格蘭要多曼慢慢來"
-    },
-    {
       "date": "2026-09-26",
       "rank": 1,
       "topic_id": "ai",
@@ -951,6 +903,46 @@
       "topic": "Arsenal FC",
       "angle": "Day-one result of the Everton match the 23 Oct entry previewed: a clean, comfortable home win after the scrappy 1-0 at Forest and the 2-2 at Bayern, with attention now on cup rotation at Fleetwood and the 1 Nov trip to Liverpool, the hardest league test of the autumn.",
       "headline": "Arsenal 2-0 Everton"
+    },
+    {
+      "date": "2026-10-26",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Brazil and Bosnia elections",
+      "angle": "The 24 Oct eve-of-vote toss-up gets its answer: Lula wins a narrow fourth term, and the story is now whether Brazil's institutions hold as the losing side refuses to concede and goes after the Supreme Court's voting-hours extension.",
+      "headline": "盧拉小勝當選巴西總統，對手不認輸"
+    },
+    {
+      "date": "2026-10-26",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "The AI-bubble story moves from the sellers (the Anthropic IPO's valuation, revenue and governance on 11, 15, 17 and 19 Oct) to the buyers: ordinary large companies are not yet showing any financial return, which is the trigger the IMF warned about on 14 Oct.",
+      "headline": "經濟學家：多數大公司還沒從 AI 賺到錢"
+    },
+    {
+      "date": "2026-10-26",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "Israeli election",
+      "angle": "The eve of the vote, through the numbers: final polls show neither bloc reaching 61 seats, so the piece explains why Israel's result will come from post-election coalition maths rather than the vote itself. This differs from 21 Oct's US-visit angle.",
+      "headline": "以色列明天投票，兩邊都難過半"
+    },
+    {
+      "date": "2026-10-26",
+      "rank": 4,
+      "topic_id": "ideas",
+      "topic": "Emergent Ventures / talent philanthropy",
+      "angle": "A new ideas thread for the paper: small, fast grants to unusual young people in India, from manuscript preservation to grassroots AI tools. This is a talent-spotting lens, different from the paper's earlier Cowen entries on immigration (20 Oct) and Brazilian food (20 Oct).",
+      "headline": "小獎金找印度奇才：祭司工程師救古書"
+    },
+    {
+      "date": "2026-10-26",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "The basketball season arrives on the sports desk for the first time, after weeks of Bears, Bulls and Michigan football: the defending champions' first test against an elite opponent in a preseason exhibition.",
+      "headline": "密西根男籃熱身賽66比83輸休士頓"
     }
   ]
 }
