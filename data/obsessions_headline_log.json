@@ -5543,6 +5543,34 @@
       "headline": "認得每一條鯨魚的網站",
       "headline_en": "Happywhale, the citizen-science whale fluke ID database",
       "topic": "citizen-science whale ID database"
+    },
+    {
+      "date": "2026-10-26",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "被遺忘的第一聲：閃靈《祖靈之流》",
+      "headline_en": "Chthonic's forgotten 1999 black metal debut, Where the Ancestors' Souls Gathered",
+      "topic": "early Taiwanese black metal debut"
+    },
+    {
+      "date": "2026-10-26",
+      "obsession_id": "finland-honeymoon",
+      "headline": "用魚骨做的琴：芬蘭的康特勒琴",
+      "headline_en": "Finland's kantele, the national instrument born from a myth",
+      "topic": "kantele instrument and folklore"
+    },
+    {
+      "date": "2026-10-26",
+      "obsession_id": "do-312",
+      "headline": "一隻雞，一個晚上：林肯廣場的切雞課",
+      "headline_en": "Hands-on chicken butchery and cooking class at The Chopping Block",
+      "topic": "hands-on cooking class"
+    },
+    {
+      "date": "2026-10-26",
+      "obsession_id": "best-of-internet",
+      "headline": "兩萬年前的骨頭，有了自己的編號",
+      "headline_en": "OEIS, the integer-sequence database that numbered the Ishango bone",
+      "topic": "solo-founder number sequence database"
     }
   ]
 }
