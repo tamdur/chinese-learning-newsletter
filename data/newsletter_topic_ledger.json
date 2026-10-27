@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-26",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI regulation",
-      "angle": "The secret auditing-body talks the paper reported on 14 September become a named public institution, and they do so in the vacuum left by the White House shelving its own AI order, so the labs rather than the state are now the default rule-setter for frontier AI.",
-      "headline": "三大AI公司要自己訂安全規則"
-    },
-    {
-      "date": "2026-09-26",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "US election administration",
-      "angle": "After blocking the DHS-list mail-ballot rule on 15 September, the Court now lets the same kind of federal citizenship database into state voter-roll checks, so the gatekeeping the justices refused at the mailbox arrives through the registration list instead. The Missouri map ruling the same day is context.",
-      "headline": "最高法院准各州用聯邦資料查選民"
-    },
-    {
-      "date": "2026-09-26",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Chicago parking meter deal",
-      "angle": "A brand-new Chicago thread: the city's most infamous privatisation changes hands for more than twice what Chicago got for it in 2008, and the council is being asked to approve the sale in exchange for a $75m pension payment. Legacy asset sales become budget arithmetic, distinct from the ledger's recent Chicago entries on rail yards, data centres and mayoral fundraising.",
-      "headline": "芝加哥停車表要轉手，投票延到下週"
-    },
-    {
-      "date": "2026-09-26",
-      "rank": 4,
-      "topic_id": "ai",
-      "topic": "AI capability milestones",
-      "angle": "AI capability moves from pure mathematics to physics: a frontier model carries out a months-long theoretical-physics calculation that can be checked against known results, distinct from 7 September's Fermat verification and 9 September's unverified Millennium Prize claim. The agent-negotiation experiment is a secondary note.",
-      "headline": "Claude算出九圈物理難題"
-    },
-    {
-      "date": "2026-09-26",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The cliff-edge the paper left on 24 September resolved: the drought is over and the Cubs are in. The story is now the October bracket, meaning seeding, tiebreakers, the 29 September best-of-three and a lineup that has gone cold at the wrong time, not the doubleheader score.",
-      "headline": "小熊隊進季後賽，排名還在爭"
-    },
-    {
-      "date": "2026-09-26",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The captain comes back into exactly the part of the team Arteta blamed for the Brighton defeat. This is a midfield-reshape lens that follows up the 22 September tactical post-mortem and 24 September's Rice fitness worry, not another injury list or reunion preview.",
-      "headline": "隊長回來了，兵工廠中場要變"
-    },
-    {
       "date": "2026-09-27",
       "rank": 1,
       "topic_id": "ai",
@@ -943,6 +895,14 @@
       "topic": "Michigan basketball",
       "angle": "The basketball season arrives on the sports desk for the first time, after weeks of Bears, Bulls and Michigan football: the defending champions' first test against an elite opponent in a preseason exhibition.",
       "headline": "密西根男籃熱身賽66比83輸休士頓"
+    },
+    {
+      "date": "2026-10-27",
+      "rank": 1,
+      "topic_id": "economics",
+      "topic": "Global monetary tightening",
+      "angle": "The tightening wave the paper last saw from Australia (28 Sept) reaches the big three at once: the Fed, ECB and BOJ all decide within 48 hours, and the piece compares them side by side. It asks whether a war-driven inflation shock is still pushing rates up in Washington, Frankfurt and Tokyo, and why each bank faces a different trade-off.",
+      "headline": "三大央行同一週決定利率"
     }
   ]
 }
