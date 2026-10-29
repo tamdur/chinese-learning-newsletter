@@ -605,6 +605,11 @@
       "url": "https://happywhale.com",
       "type": "citizen-science database",
       "notes": "Small-team (originally two co-founders) citizen-science whale identification catalog built from publicly donated fluke photos; individual whale profiles reveal multi-decade sighting histories and migration records. Great recurring well for 'hidden gem rewarding curiosity with depth' -- could revisit for specific whale profiles, record-breaking matches, or other species added over time (orcas, right whales)."
+    },
+    {
+      "url": "https://liftescalatorlibrary.org",
+      "type": "project_site",
+      "notes": "Charitable-trust-run digital library of academic papers on lift and escalator history/technology from the Symposium on Lift & Escalator Technologies proceedings (indexed on Google Scholar). Deep niche, small-group passion project, lots of individual paper abstracts with quirky vertical-transport history worth mining for future obsession stories (safety devices, paternosters, early lift marketing, etc.)."
     }
   ]
 }
