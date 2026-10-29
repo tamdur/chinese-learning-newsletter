@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-28",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "The peace offer is turned down, and the timing is openly tied to US domestic politics: the war is paused until after the midterms, not ended.",
-      "headline": "川普拒絕伊朗停火，油價大漲"
-    },
-    {
-      "date": "2026-09-28",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "US–China AI diplomacy",
-      "angle": "US–China AI diplomacy moves from talks about talks to permanent machinery: a named superintelligence dialogue and a crisis hotline for AI incidents.",
-      "headline": "美中成立「超級智慧」對話"
-    },
-    {
-      "date": "2026-09-28",
-      "rank": 3,
-      "topic_id": "economics",
-      "topic": "Global monetary tightening",
-      "angle": "The energy-shock tightening wave reaches a commodity-exporting economy far from the Gulf: Australia is set to take rates to a 15-year high.",
-      "headline": "澳洲可能升息，利率創15年新高"
-    },
-    {
-      "date": "2026-09-28",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "US government funding",
-      "angle": "The White House uses the calendar itself as the weapon, letting appropriated money expire by waiting out the fiscal year. A bipartisan pair of senators, including Illinois' Durbin, call it illegal.",
-      "headline": "白宮用「拖時間」砍掉國會的錢"
-    },
-    {
-      "date": "2026-09-28",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The Wild Card opponent is set — the red-hot Padres on the road — and the 40-40 chase is complete, with PCA the first Cub ever to do it. Frame as a series preview, not a standings update.",
-      "headline": "小熊隊季後賽再戰教士隊"
-    },
-    {
-      "date": "2026-09-28",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A player-voice angle: the forward shortage is seen from inside the dressing room, where a striker says he is not being played.",
-      "headline": "約克雷斯：「我想多上場」"
-    },
-    {
       "date": "2026-09-29",
       "rank": 1,
       "topic_id": "ai",
@@ -879,6 +831,46 @@
       "topic": "Arsenal FC",
       "angle": "Day-one result of the cup tie: how a rotated Arsenal side handled the lowest-ranked team left in the competition, and whether Saliba's planned return and the academy players came through it before the Liverpool trip. This differs from 25 Oct's Everton result and the 13 and 23 Oct Saliba-return entries.",
       "headline": "兵工廠輸給第四級球隊，聯賽盃出局"
+    },
+    {
+      "date": "2026-10-29",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "The AI-bubble story turns to the companies selling compute. After the IMF's overvaluation warning (14 Oct), the Anthropic IPO entries (11-19 Oct) and the finding that ordinary companies see no return yet (26 Oct), Google Cloud's fastest growth in years is the first hard sign that the $800B capex wave is bringing in revenue for the hyperscalers that sell AI compute, even if their customers aren't profiting yet.",
+      "headline": "谷歌雲端收入翻倍，AI投資開始回本"
+    },
+    {
+      "date": "2026-10-29",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "Global monetary tightening",
+      "angle": "The 27 Oct three-central-banks preview gets its first answer. The Fed decides whether September's surprise hike was a one-off or the start of a tightening run, and the Chair's language shows how Washington weighs war-driven inflation against a slowing economy a week before the midterms.",
+      "headline": "聯準會決定不升息，兩人投反對票"
+    },
+    {
+      "date": "2026-10-29",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago transit",
+      "angle": "Chicago transit seen through ageing infrastructure and service disruption: a single river bridge took out two 'L' lines for over a week and ran late. This differs from 6 Oct's Metra battery-train technology entry.",
+      "headline": "湖街橋完工，綠線和粉紅線恢復行駛"
+    },
+    {
+      "date": "2026-10-29",
+      "rank": 4,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "A contender-test lens rather than another quarterback-health or result story: for the first time this season the Bears face the defending champion, so the question is whether a 5-2 start built partly on soft opponents is real. This differs from 22 Oct's short-week schedule preview and 24 Oct's Patriots result.",
+      "headline": "熊隊碰上冠軍海鷹隊，是真強還是運氣好？"
+    },
+    {
+      "date": "2026-10-29",
+      "rank": 5,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The hardest league trip of the autumn, now without Saka. The player the beat profiled on 17 Oct as Arsenal's answer to the striker shortage is injured, so the question is where the goals come from at Anfield days after the League Cup embarrassment. This differs from 28 Oct's cup-exit result and 25 Oct's Everton win.",
+      "headline": "少了薩卡，兵工廠要去利物浦搶分"
     }
   ]
 }
