@@ -610,6 +610,21 @@
       "url": "https://liftescalatorlibrary.org",
       "type": "project_site",
       "notes": "Charitable-trust-run digital library of academic papers on lift and escalator history/technology from the Symposium on Lift & Escalator Technologies proceedings (indexed on Google Scholar). Deep niche, small-group passion project, lots of individual paper abstracts with quirky vertical-transport history worth mining for future obsession stories (safety devices, paternosters, early lift marketing, etc.)."
+    },
+    {
+      "url": "https://teleport-city.com/taiwan-disco/",
+      "type": "aggregator",
+      "notes": "Teleport City's Taiwan Disco page/tag — track-by-track writeups on 1970s-80s Taiwanese disco/funk singers (mostly female-fronted), good for future specific-artist angles beyond what's on the Aberrant Records compilation liner notes."
+    },
+    {
+      "url": "https://fieldmag.com/articles/lucia-smart-cabin-glass-house-finland",
+      "type": "aggregator",
+      "notes": "Field Mag covers independent design/architecture stories with good factual specifics (dimensions, materials, siting) on small Nordic cabins and structures — useful for the design/architecture facet of the Finland obsession, complementing historytools.org and discoveringfinland.com."
+    },
+    {
+      "url": "https://drawingmachines.org",
+      "type": "solo-archive-exemplar",
+      "notes": "Archive by architecture professor Pablo Garcia (with developer Brannon Dorsey) cataloging hundreds of historical drawing machines/devices (pantographs, harmonographs, plotters, automata) by category and era, each with patent-level detail. Many under-mined sub-categories (pantograph, lathe/engine-turning, automata, contemporary/robotic) beyond the pendulum one used today — worth revisiting."
     }
   ]
 }
