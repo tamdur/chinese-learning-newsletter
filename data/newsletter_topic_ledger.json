@@ -1,22 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-09-30",
-      "rank": 1,
-      "topic_id": "business",
-      "topic": "AI chip supply chain",
-      "angle": "The AI compute story seen through memory instead of processors: HBM booked through 2027 makes memory, not GPUs, the binding constraint. Distinct from earlier Nvidia/AMD deal coverage in the ledger.",
-      "headline": "美光今天公布財報，AI記憶體賣到缺貨"
-    },
-    {
-      "date": "2026-09-30",
-      "rank": 2,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "What comes after the Iowa loss: a rivalry-and-history lens on the 100th Little Brown Jug game against a well-regarded quarterback. Distinct from the ledger's recent Iowa-result and coaching-preview entries.",
-      "headline": "密西根週六搶「小棕壺」，兩隊第100次對決"
-    },
-    {
       "date": "2026-10-01",
       "rank": 1,
       "topic_id": "policy",
@@ -831,6 +815,22 @@
       "topic": "Michigan football",
       "angle": "A bounce-back preview after the Indiana overtime loss (a result the paper never printed): can Whittingham's first-year rebuild steady itself against a struggling Rutgers side it is favoured to beat? This differs from 23 Oct's betting-line underdog preview, 21 Oct's quarterback change and 15 Oct's two-rebuilds Penn State preview.",
       "headline": "密西根萬聖節出戰羅格斯，想找回信心"
+    },
+    {
+      "date": "2026-10-31",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "G20 / US diplomacy",
+      "angle": "A new diplomacy thread for the paper: Washington hosts the world's foreign ministers ahead of the Miami summit, and Lavrov's presence (or absence) on American soil tests the Trump administration's pressure on Kyiv that the paper covered on 21 Oct.",
+      "headline": "拉夫羅夫來到亞特蘭大，G20取消大合照"
+    },
+    {
+      "date": "2026-10-31",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Israeli election",
+      "angle": "The 26 Oct preview said the result would come from coalition maths, and now the maths is visible: Eisenkot rules out serving under Netanyahu and Arab parties emerge as possible kingmakers, raising the chance of another election.",
+      "headline": "以色列大選沒人過半，阿拉伯政黨成關鍵"
     }
   ]
 }
