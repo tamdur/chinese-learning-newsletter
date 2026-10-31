@@ -625,6 +625,11 @@
       "url": "https://drawingmachines.org",
       "type": "solo-archive-exemplar",
       "notes": "Archive by architecture professor Pablo Garcia (with developer Brannon Dorsey) cataloging hundreds of historical drawing machines/devices (pantographs, harmonographs, plotters, automata) by category and era, each with patent-level detail. Many under-mined sub-categories (pantograph, lathe/engine-turning, automata, contemporary/robotic) beyond the pendulum one used today — worth revisiting."
+    },
+    {
+      "url": "https://www.spacetimetravel.org/",
+      "type": "project_site",
+      "notes": "Solo/small-team (two physicists, Hildesheim University) relativity visualization project — black hole and wormhole ray-traced simulators, 'Mr Tompkins' relativistic-speed demos. Good recurring well for physics/science-visualization angles distinct from the biology/cartography/archive gems already used this month."
     }
   ]
 }
