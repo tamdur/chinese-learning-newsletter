@@ -1,38 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-01",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US government funding",
-      "angle": "Corrects a story the editor's scout sourced from a mis-dated article describing the Oct 2025 shutdown; the real outcome is the opposite -- funding held and the fight is deferred to after the midterms.",
-      "headline": "新預算年度開始，美國政府沒有關門"
-    },
-    {
-      "date": "2026-10-01",
-      "rank": 2,
-      "topic_id": "business",
-      "topic": "AI chip supply chain",
-      "angle": "Memory makers, not just GPU makers, now gate the AI buildout -- they decide who gets supply and at what price, with actual Q4 figures well above even the editor's already-bullish pre-earnings estimate.",
-      "headline": "美光財報大爆發，AI記憶體自己喊價"
-    },
-    {
-      "date": "2026-10-01",
-      "rank": 3,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Cubs",
-      "angle": "The playoff preview the paper ran Sept 28 gets its outcome: a clean sweep, with the story being the Cubs' lineup going completely cold against a hot Padres offense.",
-      "headline": "小熊被教士橫掃，季後賽兩場就結束"
-    },
-    {
-      "date": "2026-10-01",
-      "rank": 4,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A fixture-congestion preview rather than a recap of already-covered injury/result news (ledger already has the Brighton loss, the Arteta contract, and the injuries) -- framed forward as Arteta's biggest test of the season.",
-      "headline": "兵工廠線：十月賽程超忙，三週踢六場"
-    },
-    {
       "date": "2026-10-02",
       "rank": 1,
       "topic_id": "world",
@@ -831,6 +799,30 @@
       "topic": "Israeli election",
       "angle": "The 26 Oct preview said the result would come from coalition maths, and now the maths is visible: Eisenkot rules out serving under Netanyahu and Arab parties emerge as possible kingmakers, raising the chance of another election.",
       "headline": "以色列大選沒人過半，阿拉伯政黨成關鍵"
+    },
+    {
+      "date": "2026-11-01",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI reasoning and epistemics",
+      "angle": "A new AI thread, away from the paper's month of AI-money stories (the Anthropic IPO, the IMF bubble warning, Google Cloud revenue): whether AI models actually reason well, shown by a specific case where a model treats a counterargument as support for the claim it was meant to challenge.",
+      "headline": "AI聽到反對理由，反而更相信原本的答案"
+    },
+    {
+      "date": "2026-11-01",
+      "rank": 2,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The answer to the 30 Oct bounce-back preview: the freshman quarterback the paper first named on 21 Oct wins a tight game with his own legs late on, so the story is about Carr himself, not the turnover problems or the betting line.",
+      "headline": "新人四分衛跑出致勝分，密西根28比21贏羅格斯"
+    },
+    {
+      "date": "2026-11-01",
+      "rank": 3,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Match-day stakes and history rather than squad news: this is framed as a possible early title decider against a rival who must win, with Arsenal's 14-year wait for a league win at Anfield as the hurdle. This differs from 29 Oct's 'where do the goals come from without Saka' preview and 28 Oct's cup-exit result.",
+      "headline": "兵工廠今天客場挑戰利物浦，冠軍之戰提早開打"
     }
   ]
 }
