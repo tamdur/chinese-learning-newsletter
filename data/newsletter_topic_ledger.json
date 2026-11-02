@@ -1,46 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-02",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Brazil and Bosnia elections",
-      "angle": "A brand-new international thread for the paper, away from its Gulf, Ukraine, European and African coverage: a weekend preview of Latin America's biggest democracy choosing a president, paired with Bosnia's vote under the Dayton power-sharing system.",
-      "headline": "巴西週日選總統，波士尼亞同天投票"
-    },
-    {
-      "date": "2026-10-02",
-      "rank": 2,
-      "topic_id": "economics",
-      "topic": "China economy",
-      "angle": "The consumption gap the paper described on September 15 (an export boom sitting on top of a domestic slump) gets its first live test: Golden Week spending shows whether Beijing's consumer subsidies can move households, a holiday-spending lens rather than another monthly-data read.",
-      "headline": "中國黃金週開跑，考驗大家肯不肯花錢"
-    },
-    {
-      "date": "2026-10-02",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "EU–China trade",
-      "angle": "A new trade thread for the paper: after weeks of US-China truce coverage, Europe sets its own deadline and threatens Beijing over the deficit and rare-earth supply, so China now faces two Western trade fronts on different terms.",
-      "headline": "歐盟給中國的期限到了"
-    },
-    {
-      "date": "2026-10-02",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "US Supreme Court",
-      "angle": "A term-opening preview through a Chicago lens: the reader's own county's assault-weapons ban is on the national docket. This differs from the ledger's emergency-docket entries on elections, maps and the ballroom.",
-      "headline": "最高法院開新會期，芝加哥槍枝禁令上場"
-    },
-    {
-      "date": "2026-10-02",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "An injury-status preview ahead of the Jets game, centered on the starting quarterback's hamstring and the uncertainty around his availability — distinct from the ledger's record-opener result, Detroit reunion preview, and Swift-contract entries.",
-      "headline": "熊隊迎戰噴射機，威廉斯還在養傷"
-    },
-    {
       "date": "2026-10-03",
       "rank": 1,
       "topic_id": "ideas",
@@ -823,6 +783,38 @@
       "topic": "Arsenal FC",
       "angle": "Match-day stakes and history rather than squad news: this is framed as a possible early title decider against a rival who must win, with Arsenal's 14-year wait for a league win at Anfield as the hurdle. This differs from 29 Oct's 'where do the goals come from without Saka' preview and 28 Oct's cup-exit result.",
       "headline": "兵工廠今天客場挑戰利物浦，冠軍之戰提早開打"
+    },
+    {
+      "date": "2026-11-02",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US midterm elections",
+      "angle": "Election eve at national scale: what is mathematically needed to flip each chamber and what divided government would mean for the second half of the term. The 28 Oct entry looked at the reader's own Illinois ballot and the mail-ballot deadline; the 8 Oct entry covered the Medicare-cheque eligibility rules.",
+      "headline": "美國期中選舉明天登場，國會控制權成焦點"
+    },
+    {
+      "date": "2026-11-02",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "The AI-money story turns to the private-funding side: OpenAI's private round is shrinking just as Anthropic goes public. First sign of investor pushback at a frontier lab.",
+      "headline": "OpenAI找錢目標縮小，投資人變冷淡"
+    },
+    {
+      "date": "2026-11-02",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Illinois politics",
+      "angle": "A new thread for the paper: the governor's race, seen as a historic third term and a launch pad for national ambitions.",
+      "headline": "伊州明天投票，普立茲克拚第三任"
+    },
+    {
+      "date": "2026-11-02",
+      "rank": 4,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Day-one result of the title-decider preview. Also answers where the goals come from without Saka: Havertz ends the 14-year Anfield wait and opens a 9-point gap a week after the Fleetwood embarrassment.",
+      "headline": "兵工廠1比0贏利物浦，14年來第一次"
     }
   ]
 }
