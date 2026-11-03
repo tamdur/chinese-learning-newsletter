@@ -1,30 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-03",
-      "rank": 1,
-      "topic_id": "ideas",
-      "topic": "AI in biology",
-      "angle": "AI as a lab tool that makes new things: bacteriophages designed by AI to kill drug-resistant bacteria lead a global science shortlist. This differs from 10 Sept's DeepMind mutation-map entry, which was AI predicting data rather than building something.",
-      "headline": "用AI造病毒，專打抗藥細菌"
-    },
-    {
-      "date": "2026-10-03",
-      "rank": 2,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football — Little Brown Jug rivalry",
-      "angle": "Game-day angle on the 100th meeting of the oldest trophy rivalry in college football, distinct from any earlier-week schedule preview.",
-      "headline": "密西根爭奪第100次小棕壺"
-    },
-    {
-      "date": "2026-10-03",
-      "rank": 3,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The January striker hunt widens beyond Beier (21 Sept) to Real Madrid's Endrick, a young forward who is not getting regular games at a giant club. A second January name, and a different kind of deal from a straight purchase, rather than another injury list or fixture preview.",
-      "headline": "兵工廠盯上皇馬小將恩德里克"
-    },
-    {
       "date": "2026-10-04",
       "rank": 1,
       "topic_id": "world",
@@ -815,6 +791,54 @@
       "topic": "Arsenal FC",
       "angle": "Day-one result of the title-decider preview. Also answers where the goals come from without Saka: Havertz ends the 14-year Anfield wait and opens a 9-point gap a week after the Fleetwood embarrassment.",
       "headline": "兵工廠1比0贏利物浦，14年來第一次"
+    },
+    {
+      "date": "2026-11-03",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US midterm elections",
+      "angle": "Election Day through one marquee race: whether a Democrat can win statewide in Texas for the first time in three decades, and what a Paxton loss would mean for Senate control. This differs from 2 Nov's national seat-maths overview, 28 Oct's Illinois-ballot entry and 8 Oct's Medicare-cheque entry.",
+      "headline": "德州參議員大戰，民主黨拚三十年來首勝"
+    },
+    {
+      "date": "2026-11-03",
+      "rank": 2,
+      "topic_id": "chicago",
+      "topic": "Chicago schools governance",
+      "angle": "A full piece on Chicago's ballot that is about governance rather than horse-race politics: after 30 years of mayoral control, voters take over the country's fourth-largest school district, and the board they elect inherits a budget hole. The 28 Oct entry only listed the board race as one item on the Illinois ballot, and 2 Nov covered the governor's race.",
+      "headline": "芝加哥第一次全民選出教育委員會"
+    },
+    {
+      "date": "2026-11-03",
+      "rank": 3,
+      "topic_id": "policy",
+      "topic": "US election administration",
+      "angle": "The federal campaign over elections reaches the polling place itself: federal observers on the ground on Election Day, after the paper covered voter-roll rules (26 Sept), voter-data mining (9 Oct) and a suit to stop counting cast ballots (20 Oct).",
+      "headline": "司法部派千名觀察員到投票所"
+    },
+    {
+      "date": "2026-11-03",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Federal–Chicago standoff",
+      "angle": "The federal-Illinois standoff moves to the ballot box: Chicago asks its own voters to endorse demanding money back from Washington, after the 11 Oct FEMA disaster-aid denial entry.",
+      "headline": "芝加哥公投：要不要向聯邦討錢？"
+    },
+    {
+      "date": "2026-11-03",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "Day-one result of the 29 Oct contender-test preview: whether the Bears' 5-2 start held up against the defending champion on the road in prime time. This differs from 24 Oct's Patriots result and the earlier quarterback-health entries.",
+      "headline": "熊隊34比17大勝上季冠軍海鷹"
+    },
+    {
+      "date": "2026-11-03",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "What comes next after the Anfield win: the first test of the 9-point lead is a midweek European match, with Arteta's latest word on Saka's return and squad rotation. This differs from 2 Nov's Liverpool result, 1 Nov's title-decider preview and 29 Oct's 'goals without Saka' framing.",
+      "headline": "沒有薩卡，兵工廠週三出戰歐冠"
     }
   ]
 }
