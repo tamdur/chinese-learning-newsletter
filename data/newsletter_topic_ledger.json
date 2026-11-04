@@ -1,22 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-04",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Latvian politics",
-      "angle": "A new international thread for the paper: a NATO frontline state on Russia's border puts its pro-Ukraine government to a vote, and the result shows whether the Eurosceptic surge the paper covered in Germany (7 Sept) has reached the Baltic.",
-      "headline": "拉脫維亞大選，總理的黨大勝"
-    },
-    {
-      "date": "2026-10-04",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "A second straight loss under new coach Kyle Whittingham, one week after a 20-19 final-play home loss to Iowa — the turnover/fumble problem the coach flagged in September is still unresolved, not a bounce-back.",
-      "headline": "密西根四次失誤，輸掉小棕壺"
-    },
-    {
       "date": "2026-10-05",
       "rank": 1,
       "topic_id": "policy",
@@ -839,6 +823,46 @@
       "topic": "Arsenal FC",
       "angle": "What comes next after the Anfield win: the first test of the 9-point lead is a midweek European match, with Arteta's latest word on Saka's return and squad rotation. This differs from 2 Nov's Liverpool result, 1 Nov's title-decider preview and 29 Oct's 'goals without Saka' framing.",
       "headline": "沒有薩卡，兵工廠週三出戰歐冠"
+    },
+    {
+      "date": "2026-11-04",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US midterm elections",
+      "angle": "The 2 Nov seat-maths preview gets its answer for the House: Democrats flip about 29 seats and take the majority, and the story is what divided government means in practice (oversight, spending fights, a stalled agenda) for the rest of Trump's term.",
+      "headline": "民主黨拿下美國眾議院"
+    },
+    {
+      "date": "2026-11-04",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US midterm elections",
+      "angle": "The Senate seen through one upset: the defeat of Susan Collins, a long-serving Republican moderate, shows how far the wave reached and decides who controls the chamber that confirms judges and cabinet officials. This is separate from the House result and the 3 Nov Texas-race preview.",
+      "headline": "緬因州爆冷門，柯林斯落選"
+    },
+    {
+      "date": "2026-11-04",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Chicago schools governance",
+      "angle": "The 3 Nov governance piece gets its answer: the first elected board president is a labor- and Preckwinkle-backed incumbent, which says who now controls the country's fourth-largest school district and how it is likely to handle the budget hole.",
+      "headline": "芝加哥首次選出教育委員會主席"
+    },
+    {
+      "date": "2026-11-04",
+      "rank": 4,
+      "topic_id": "chicago",
+      "topic": "Illinois politics",
+      "angle": "The reader's own ballot, decided: the 28 Oct Illinois-ballot entry gets its results (Stratton to the Senate, Miller in IL-2), with Chicago's ballot shortages and strong turnout as a short local note on how the vote actually went.",
+      "headline": "史特拉頓可望當選伊州參議員"
+    },
+    {
+      "date": "2026-11-04",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "The title defence begins: after the 26 Oct exhibition loss to Houston, a first look at the new rotation (Gayle, McKenny and freshman Costello) that must face No. 2 UConn on Friday in a rematch of the championship game.",
+      "headline": "密西根開季獲勝，星期五再戰康大"
     }
   ]
 }
