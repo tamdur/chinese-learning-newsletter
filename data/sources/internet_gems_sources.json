@@ -640,6 +640,11 @@
       "url": "https://acotoronto.ca/tobuilt_new_detailed.php",
       "type": "single-source gem",
       "notes": "TOBuilt: originally a solo cyclist's photo database of Toronto buildings (started 2006 by Bob Krawczyk), now run by Architectural Conservancy of Ontario as a public, searchable architecture/heritage archive. Great example of a passionate-amateur project that outgrew its founder. Background: https://en.wikipedia.org/wiki/TOBuilt and https://www.theglobeandmail.com/news/national/his-interest-is-building/article18173695"
+    },
+    {
+      "url": "https://homerton250.org/",
+      "type": "archive_blog",
+      "notes": "Homerton College (Cambridge) 250th-anniversary archive blog — short, specific posts digging into eccentric corners of the college's history (e.g. a music don who transcribed birdsong into piano scores). Good hunting ground for one-off quirky-individual stories, though it's a finite anniversary project rather than an ongoing aggregator."
     }
   ]
 }
