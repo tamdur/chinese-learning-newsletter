@@ -1,22 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-05",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US Supreme Court",
-      "angle": "The new term's first argument puts climate science on trial. The justices decide whether local governments can make oil companies pay for climate damage under state law, a climate-liability lens that is separate from 2 October's term preview built on Cook County's assault-weapons ban.",
-      "headline": "最高法院新年度第一案：城市能告石油公司嗎？"
-    },
-    {
-      "date": "2026-10-05",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The 2 October injury-status preview gets its answer: the result of the Jets game and whether Williams' hamstring held up, a day-one result after a fortnight of Bears quarterback-health entries.",
-      "headline": "少了威廉斯，熊隊照樣贏噴射機"
-    },
-    {
       "date": "2026-10-06",
       "rank": 2,
       "topic_id": "ideas",
@@ -863,6 +847,46 @@
       "topic": "Michigan basketball",
       "angle": "The title defence begins: after the 26 Oct exhibition loss to Houston, a first look at the new rotation (Gayle, McKenny and freshman Costello) that must face No. 2 UConn on Friday in a rematch of the championship game.",
       "headline": "密西根開季獲勝，星期五再戰康大"
+    },
+    {
+      "date": "2026-11-05",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "The $1.5tn-versus-$2tn debate the paper set out on 17 Oct is now being settled by the buyers themselves: in the run-up to the roadshow, investors are using the Q3 slowdown to force the price down, the schedule has slipped a week, and this is the first real-money test of the IMF's 14 Oct overvaluation warning.",
+      "headline": "Anthropic上市估值可能降到1.5兆美元"
+    },
+    {
+      "date": "2026-11-05",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "Global monetary tightening",
+      "angle": "The tightening wave reaches a fourth major central bank. London has a divided committee and a fragile fiscal position, so its choice between holding and hiking shows how hard the war-driven inflation trade-off is for a mid-sized open economy.",
+      "headline": "英國央行今天決定利率，市場預料升息"
+    },
+    {
+      "date": "2026-11-05",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "European cost-of-living protests",
+      "angle": "The European unrest the paper first saw as street protests in Milan (19 Oct) now takes an organised, institutional form in France: a coordinated union strike against a government budget.",
+      "headline": "法國五大工會今天全國大罷工"
+    },
+    {
+      "date": "2026-11-05",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "A 'rematch in name only' lens: with a new head coach and only 3 of 10 starters left from April's final, the piece is about how quickly a college champion is taken apart and rebuilt in the transfer-portal era.",
+      "headline": "兵工廠客場2比1險勝布拉格斯拉維亞"
+    },
+    {
+      "date": "2026-11-05",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The 3 Nov 'what comes next without Saka' preview gets its answer: the Premier League lead survives its first midweek Champions League test, and once again a midfielder (Merino) provides the goals.",
+      "headline": "Arsenal thrash Slavia Prague 3-0 in Champions League, Merino scores twice"
     }
   ]
 }
