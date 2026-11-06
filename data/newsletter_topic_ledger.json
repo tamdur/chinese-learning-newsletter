@@ -1,30 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-06",
-      "rank": 2,
-      "topic_id": "ideas",
-      "topic": "Nobel Prizes 2026",
-      "angle": "A brand-new science thread for the paper: the Nobel committee rewards a tool rather than a cure, a basic finding about how algae sense light that became the way neuroscientists control the brain.",
-      "headline": "美國第一列電池火車，在芝加哥亮相"
-    },
-    {
-      "date": "2026-10-06",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Chicago transit",
-      "angle": "Chicago transit as industrial technology rather than safety or budget: Metra becomes the first US railroad to put a battery passenger train on display, a middle path between diesel and full electrification.",
-      "headline": "兵工廠主場對上意外強隊里茲聯"
-    },
-    {
-      "date": "2026-10-06",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "An opponent lens the beat hasn't used: the first league test after the Brighton defeat comes against an unexpected top-five Leeds side built on a hard-working midfield.",
-      "headline": "Arsenal vs Leeds United preview — Gameweek 6, Oct 10, Emirates Stadium"
-    },
-    {
       "date": "2026-10-07",
       "rank": 1,
       "topic_id": "ideas",
@@ -887,6 +863,30 @@
       "topic": "Arsenal FC",
       "angle": "The 3 Nov 'what comes next without Saka' preview gets its answer: the Premier League lead survives its first midweek Champions League test, and once again a midfielder (Merino) provides the goals.",
       "headline": "Arsenal thrash Slavia Prague 3-0 in Champions League, Merino scores twice"
+    },
+    {
+      "date": "2026-11-06",
+      "rank": 1,
+      "topic_id": "economics",
+      "topic": "Global monetary tightening",
+      "angle": "Yesterday's preview (5 Nov) said markets expected London to hike; today's answer is that the tightening wave pauses at its fourth major central bank, with a divided committee choosing to wait for the Chancellor's Budget, which makes this a story about monetary policy deferring to fiscal policy.",
+      "headline": "英國央行升息到4%"
+    },
+    {
+      "date": "2026-11-06",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "A rivalry lens the beat hasn't used: the in-state game for the Paul Bunyan Trophy, where Michigan is a heavy favourite for once after weeks of underdog and bounce-back framing, so the question is whether a year-one rebuild can win the game that matters most to its own fans.",
+      "headline": "Game of the week: 5 things to know about Michigan-Michigan State"
+    },
+    {
+      "date": "2026-11-06",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "An opponent-and-trap lens after the big wins: the first league match since the Anfield win, at home to a Hull side that should be beaten, framed as the kind of fixture where title leads get dropped, with Rice against a leaky defence as the tactical key.",
+      "headline": "Arsenal vs Hull City Preview: Team news, injury updates and prediction"
     }
   ]
 }
