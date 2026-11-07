@@ -1,30 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-07",
-      "rank": 1,
-      "topic_id": "ideas",
-      "topic": "Nobel Prizes 2026",
-      "angle": "Nobel week moves from biology to physics.",
-      "headline": "南極冰下抓「鬼粒子」，美國教授得諾貝爾物理獎"
-    },
-    {
-      "date": "2026-10-07",
-      "rank": 3,
-      "topic_id": "policy",
-      "topic": "US Supreme Court",
-      "angle": "The term's first money-in-your-pocket case.",
-      "headline": "退休金投錯了？最高法院審英特爾案"
-    },
-    {
-      "date": "2026-10-07",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bulls preseason",
-      "angle": "The Bulls beat's first story of the 2026-27 season: the opening preseason tip-off against a star-studded Suns squad, not a result recap (game is tonight, write as a preview).",
-      "headline": "公牛今晚開打季前賽，新秀第一次上場"
-    },
-    {
       "date": "2026-10-08",
       "rank": 1,
       "topic_id": "policy",
@@ -887,6 +863,22 @@
       "topic": "Arsenal FC",
       "angle": "An opponent-and-trap lens after the big wins: the first league match since the Anfield win, at home to a Hull side that should be beaten, framed as the kind of fixture where title leads get dropped, with Rice against a leaky defence as the tactical key.",
       "headline": "Arsenal vs Hull City Preview: Team news, injury updates and prediction"
+    },
+    {
+      "date": "2026-11-07",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US midterm elections",
+      "angle": "Why the result happened, seen through one mechanism: a strategy to secure the House by redrawing maps backfired in the courts, at the ballot box and through California's counter-move. This differs from the 4 Nov House-result and Collins entries, 3 Nov's Texas preview, 2 Nov's seat-maths preview, 28 Oct's Illinois-ballot entry and 8 Oct's Medicare-cheque entry.",
+      "headline": "共和黨重畫選區，結果沒有幫上忙"
+    },
+    {
+      "date": "2026-11-07",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Saliba's comeback moves from forecasts (the 13 Oct diagnosis with two possible return dates, then the 23 Oct 'return is 48 hours away' preview, which did not happen) to concrete milestones: full training, a first matchday-squad place and a scheduled MRI. Today's Hull match is the first chance for him to actually play. This differs from 6 Nov's Hull opponent-and-trap preview and 5 Nov's Slavia result.",
+      "headline": "Saliba back in Arsenal first-team training and matchday squad after back injury; Arteta hopeful of return within weeks"
     }
   ]
 }
