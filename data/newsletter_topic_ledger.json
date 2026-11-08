@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-08",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US midterm elections",
-      "angle": "In September the paper covered the Republican convention's promise of tariff-funded cash. Now cash actually goes out before an election, and the story is who is left out: fewer than a third of Medicare recipients qualify, which turns a $90 cheque into a lesson on how eligibility rules get written.",
-      "headline": "川普發90美元健保退款，多數老人拿不到"
-    },
-    {
-      "date": "2026-10-08",
-      "rank": 2,
-      "topic_id": "chicago",
-      "topic": "Chicago housing policy",
-      "angle": "Chicago housing seen as supply and construction, not tenant rights: the city sells empty lots for $1 to bring back the two-flat. This differs from the 17 Sept renter-protection ordinance entry.",
-      "headline": "芝加哥一美元賣空地，西區第一批新房完工"
-    },
-    {
-      "date": "2026-10-08",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Chicago labor",
-      "angle": "A new Chicago thread: a South Side flagship institution, and a Democratic former president's own foundation, faces the union drive his party champions. The issues are labor costs and pay at a newly opened civic landmark.",
-      "headline": "歐巴馬基金會員工宣布組工會"
-    },
-    {
-      "date": "2026-10-08",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "Presidential conflicts of interest",
-      "angle": "A new US-policy thread: the line between the presidency and the president's private businesses, shown through a proposal to make his own golf club an official retreat on county-leased land. It differs from the ledger's press-freedom, Kennedy Center and funding-rescission entries.",
-      "headline": "川普想把自家高爾夫球場變成總統度假地"
-    },
-    {
-      "date": "2026-10-08",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "Two things are new. Williams's injury now has a grade and a 'week-to-week' timeline, so his absence is extended rather than a game-by-game question. And Bagent's second start comes at Lambeau, a rivalry road test. This differs from the 5 Oct Jets result and the 2 Oct and 21 Sept injury-status entries.",
-      "headline": "威廉斯腿傷再缺陣，貝根特先發戰包裝工"
-    },
-    {
-      "date": "2026-10-08",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Arteta speaks on two things. On title pressure, after dropped points, he deliberately lowers the stakes. On fitness, he says Timber and Saliba are healthy after a fortnight of injury bulletins and Dowman is the only absence. This differs from the 6 Oct Leeds opponent preview and the 29 Sept prognosis entry.",
-      "headline": "阿特塔：不要被冠軍壓力綁住"
-    },
-    {
       "date": "2026-10-09",
       "rank": 1,
       "topic_id": "world",
@@ -879,6 +831,46 @@
       "topic": "Arsenal FC",
       "angle": "Saliba's comeback moves from forecasts (the 13 Oct diagnosis with two possible return dates, then the 23 Oct 'return is 48 hours away' preview, which did not happen) to concrete milestones: full training, a first matchday-squad place and a scheduled MRI. Today's Hull match is the first chance for him to actually play. This differs from 6 Nov's Hull opponent-and-trap preview and 5 Nov's Slavia result.",
       "headline": "Saliba back in Arsenal first-team training and matchday squad after back injury; Arteta hopeful of return within weeks"
+    },
+    {
+      "date": "2026-11-08",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "The overvaluation the IMF warned about on 14 Oct shows up in actual prices: after a month of entries on single companies (the Anthropic IPO, Google Cloud revenue, OpenAI's shrinking round), the whole AI trade is repriced at once, with about $1tn wiped off in a week.",
+      "headline": "AI股大跌，市值一週少了2.5兆美元"
+    },
+    {
+      "date": "2026-11-08",
+      "rank": 2,
+      "topic_id": "economics",
+      "topic": "US–China tech trade",
+      "angle": "A new thread for the paper: the US-China chip truce reaches its one-year expiry, which shows how much of the AI hardware supply chain rests on a temporary political deal.",
+      "headline": "美國延長對中國晶片管制的暫停期"
+    },
+    {
+      "date": "2026-11-08",
+      "rank": 3,
+      "topic_id": "world",
+      "topic": "South African politics",
+      "angle": "A new world thread for the paper: South Africa's governing party keeps falling at the local level, so the country's largest cities now face coalition rule instead of one-party rule.",
+      "headline": "南非地方選舉，執政黨票數再大跌"
+    },
+    {
+      "date": "2026-11-08",
+      "rank": 4,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "A home-and-national-spotlight lens: after proving themselves against the champion on the road, the first-place Bears must win the kind of home prime-time game good teams are expected to win, against a losing team whose defence just pitched a shutout.",
+      "headline": "熊隊今晚主場迎戰海盜隊"
+    },
+    {
+      "date": "2026-11-08",
+      "rank": 5,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Day-one answer to the 6 Nov trap-game preview and the 7 Nov Saliba-return entry: whether the leaders avoided the dropped points that end title runs, and whether Saliba actually made his comeback.",
+      "headline": "兵工廠1比0小勝赫爾城"
     }
   ]
 }
