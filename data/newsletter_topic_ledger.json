@@ -1,30 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-10",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Nobel Prizes 2026",
-      "angle": "The Peace Prize preview printed on 9 Oct gets its answer: the committee skips speculated front-runners for an international-law figure whose most recent work is a genocide finding against a US ally.",
-      "headline": "南非法官皮萊獲得諾貝爾和平獎"
-    },
-    {
-      "date": "2026-10-10",
-      "rank": 2,
-      "topic_id": "ideas",
-      "topic": "Atlantic hurricane season 2026",
-      "angle": "A storm that weakens over land can still do most of its damage through inland rain and flooding — a 'weakening is not the same as safe' lens rather than a wind-speed headline.",
-      "headline": "颶風伊薩亞斯登陸後變弱，大雨淹水仍危險"
-    },
-    {
-      "date": "2026-10-10",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bulls 2026-27 preseason",
-      "angle": "A preseason result — modest news, but the only Chicago/Michigan sports item that is both genuinely same-day and independently verifiable today; worth a short, honest preseason-note treatment rather than overselling it.",
-      "headline": "Chicago Bulls lose preseason game 104-100 to Memphis Grizzlies"
-    },
-    {
       "date": "2026-10-11",
       "rank": 1,
       "topic_id": "ai",
@@ -863,6 +839,30 @@
       "topic": "Chicago Bears",
       "angle": "The answer to the Nov 8 preview: the first-place Bears survive a 4-turnover game to beat a team they were expected to beat, extending their win streak to four and improving to 7-2.",
       "headline": "熊隊最後一秒險勝海盜"
+    },
+    {
+      "date": "2026-11-10",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "UN climate negotiations (COP31)",
+      "angle": "A new thread for the paper: the world's climate summit opens with its organisers saying openly that it is about paying for and carrying out old promises, not making new ones, under an unusual split arrangement where one country hosts and another chairs.",
+      "headline": "聯合國氣候大會在土耳其開幕"
+    },
+    {
+      "date": "2026-11-10",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The quarterback experiment the paper has followed since 21 October (Carr's promotion, then his game-winning run at Rutgers on 1 November) may be reversed: after a 15-6 rivalry loss in which the offence managed no touchdown, Whittingham weighs going back to Underwood ahead of a trip to Oregon as underdogs.",
+      "headline": "密西根輸掉州內大戰，四分衛可能換人"
+    },
+    {
+      "date": "2026-11-10",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Saliba's comeback, until now told through forecasts and training reports (13 Oct, 23 Oct, 7 Nov), reaches its first real match minutes in an U21 game, and the international break turns the 21 November Newcastle game into the realistic date for the defence to be whole again.",
+      "headline": "薩利巴傷後第一次上場比賽"
     }
   ]
 }
