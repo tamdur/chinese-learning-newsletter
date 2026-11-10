@@ -655,6 +655,11 @@
       "url": "https://www.marblecollecting.com",
       "type": "hobbyist reference site",
       "notes": "Nonprofit marble-collecting society's site: ID guide (~400 images), grading/sizing reference, maker histories (Akro Agate, Christensen Agate, M.F. Christensen & Son, Peltier), free crowd-sourced identification service, quarterly newsletter 'Marble Mania'. Good hunting ground for future niche-collector-history angles (Lutz marbles, handmade vs. machine-made eras, factory histories)."
+    },
+    {
+      "url": "https://obsoletemedia.org/",
+      "type": "single-source gem",
+      "notes": "Museum of Obsolete Media, run solo by UK librarian Jason Curtis since c.2006-2013. Four collections (audio/video/data/film formats), 850+ entries, each with photos and a short born-to-death history. Deep well for future obscure-format stories (Elcaset, Highway Hi-Fi, Minidisc, etc.) without repeating the same entry twice."
     }
   ]
 }
