@@ -660,6 +660,11 @@
       "url": "https://obsoletemedia.org/",
       "type": "single-source gem",
       "notes": "Museum of Obsolete Media, run solo by UK librarian Jason Curtis since c.2006-2013. Four collections (audio/video/data/film formats), 850+ entries, each with photos and a short born-to-death history. Deep well for future obscure-format stories (Elcaset, Highway Hi-Fi, Minidisc, etc.) without repeating the same entry twice."
+    },
+    {
+      "url": "https://dove.cccbr.org.uk/",
+      "type": "project_site",
+      "notes": "Dove's Guide — volunteer-maintained global database of church bell towers and bells, descended from Ronald Dove's 1950 printed guidebook. A model solo-passion-turned-community-archive site; could seed future searches into campanology, bell founders, or English change-ringing societies."
     }
   ]
 }
