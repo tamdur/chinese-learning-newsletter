@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-11",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI investment boom",
-      "angle": "A month after the paper reported OpenAI shelving its IPO, its main rival heads the other way and invites investors to talk about a listing, so the two frontier labs are now funding themselves by opposite routes (public market versus private mega-round), with the 14 October meeting as the next date to watch.",
-      "headline": "Anthropic傳準備上市，估值可能近2兆美元"
-    },
-    {
-      "date": "2026-10-11",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Global health governance",
-      "angle": "A brand-new thread for the paper: global health treated as institutional resilience, as the world's main health-policy forum opens with a Lancet Commission verdict on what the next century's threats are.",
-      "headline": "世界衛生高峰會今天在柏林登場"
-    },
-    {
-      "date": "2026-10-11",
-      "rank": 3,
-      "topic_id": "chicago",
-      "topic": "Chicago civic life",
-      "angle": "A new Chicago thread, away from the paper's recent budget, housing, labour and transit entries: the city's biggest single-day event, seen as a 26.2-mile tour through its neighbourhoods and a measure of its economic draw.",
-      "headline": "芝加哥馬拉松今天開跑，跑過29個社區"
-    },
-    {
-      "date": "2026-10-11",
-      "rank": 4,
-      "topic_id": "policy",
-      "topic": "Federal disaster aid",
-      "angle": "A new policy thread: the federal-Illinois standoff moves to disaster relief, where a third straight FEMA denial shifts storm-recovery costs from Washington onto counties and households, and turns a technical damage threshold into a political lever.",
-      "headline": "聯邦政府第三次拒絕伊州救災申請"
-    },
-    {
-      "date": "2026-10-11",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "A game-day stakes lens rather than another quarterback-injury bulletin: a 3-1 Bears team walks into the 214th meeting with first place in the NFC North in play, and the oldest rivalry in the league tests whether the hot start is real.",
-      "headline": "熊隊今天到蘭博球場，挑戰老對手包裝工"
-    },
-    {
-      "date": "2026-10-11",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Day-one result after a week of Leeds previews (6 Oct opponent profile, 8 Oct Arteta press conference, 9 Oct injury news): what happened when a nearly full-strength Arsenal met an unbeaten Leeds, and where that leaves the title defence after the Brighton defeat.",
-      "headline": "兵工廠逆轉里茲聯，積分追平曼城"
-    },
-    {
       "date": "2026-10-12",
       "rank": 1,
       "topic_id": "economics",
@@ -863,6 +815,38 @@
       "topic": "Arsenal FC",
       "angle": "Saliba's comeback, until now told through forecasts and training reports (13 Oct, 23 Oct, 7 Nov), reaches its first real match minutes in an U21 game, and the international break turns the 21 November Newcastle game into the realistic date for the defence to be whole again.",
       "headline": "薩利巴傷後第一次上場比賽"
+    },
+    {
+      "date": "2026-11-11",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "UN climate negotiations (COP31)",
+      "angle": "Yesterday's opening piece said the summit was about delivering old promises; today the leaders arrive and the host puts a concrete, measurable new target on the table (electrify more than a third of the global economy by 2035, up from about a fifth), while money and fossil-fuel wording stay the sticking points.",
+      "headline": "聯合國氣候大會：土耳其喊出「用電」新目標"
+    },
+    {
+      "date": "2026-11-11",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US midterm elections",
+      "angle": "The midterm story moves from results and causes to what comes next: a defeated majority still holds power for eight weeks and faces an 11 December shutdown deadline.",
+      "headline": "選後舊國會開工，年底前要過三關"
+    },
+    {
+      "date": "2026-11-11",
+      "rank": 3,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bulls",
+      "angle": "The new coach's rebuild, last seen as a bounce-back test after two losses, has turned into the league's worst record. The question is now whether this is a deliberate tank or a failure, and which young players (Giddey, Buzelis) are worth building around.",
+      "headline": "公牛隊七連敗，戰績聯盟最差"
+    },
+    {
+      "date": "2026-11-11",
+      "rank": 4,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "International-break lens: Arsenal teammates as opponents (Rice/Eze for England v Raya/Zubimendi/Merino for Spain on 15 Nov; Havertz v Timber on 16 Nov), with 19 players away. Differs from the 8 Nov Hull result and the 10 Nov Saliba U21-return/Newcastle entry.",
+      "headline": "英西大戰，兵工廠隊友變對手"
     }
   ]
 }
