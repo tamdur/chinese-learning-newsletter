@@ -1,38 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-12",
-      "rank": 1,
-      "topic_id": "economics",
-      "topic": "AI investment boom",
-      "angle": "The AI-bubble question moves from investors and the labs' own fundraising to the world's financial firefighters: the IMF and World Bank open their annual meetings with AI-driven debt and market concentration formally on the financial-stability agenda.",
-      "headline": "世界財經大會在曼谷開幕，AI泡沫成焦點"
-    },
-    {
-      "date": "2026-10-12",
-      "rank": 2,
-      "topic_id": "ideas",
-      "topic": "Nobel Prizes 2026",
-      "angle": "Nobel week ends with the one prize closest to this paper's identity: what the economics committee chose to reward, and what that says about which economic ideas matter now.",
-      "headline": "諾貝爾經濟學獎今天公布，誰會得獎？"
-    },
-    {
-      "date": "2026-10-12",
-      "rank": 3,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The 11 Oct game-day stakes preview gets its answer: whether a Bagent-led Bears team won at Lambeau as favourites and what that says about whether the 3-1 start is real without Williams.",
-      "headline": "熊隊在綠灣大敗，7比31輸給包裝工"
-    },
-    {
-      "date": "2026-10-12",
-      "rank": 4,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The beat turns from the Premier League to Europe for the first time since the Napoli result: the first Champions League home night of the season, and how Arteta rotates a squad that has only just got healthy.",
-      "headline": "兵工廠明天迎戰里爾，歐冠首場主場戰"
-    },
-    {
       "date": "2026-10-13",
       "rank": 1,
       "topic_id": "ideas",
@@ -847,6 +815,14 @@
       "topic": "Arsenal FC",
       "angle": "International-break lens: Arsenal teammates as opponents (Rice/Eze for England v Raya/Zubimendi/Merino for Spain on 15 Nov; Havertz v Timber on 16 Nov), with 19 players away. Differs from the 8 Nov Hull result and the 10 Nov Saliba U21-return/Newcastle entry.",
       "headline": "英西大戰，兵工廠隊友變對手"
+    },
+    {
+      "date": "2026-11-12",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The full game preview the 10 Nov quarterback-decision entry only pointed to: a reeling year-one rebuild visits one of the Big Ten's toughest road venues as an underdog, and the stakes are whether Michigan's season stays alive in the standings. This differs from the 10 Nov QB-reversal angle, 6 Nov's Paul Bunyan rivalry preview, 30 Oct's Rutgers bounce-back preview and 23 Oct's betting-line underdog preview.",
+      "headline": "密西根作客奧勒岡，先發四分衛還沒決定"
     }
   ]
 }
