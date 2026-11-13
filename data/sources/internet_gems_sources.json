@@ -670,6 +670,11 @@
       "url": "https://chicagoforchicagoans.eventbrite.com",
       "type": "aggregator",
       "notes": "Eventbrite organizer page for Chicago for Chicagoans, a 501(c)(3) that runs free/pay-what-you-can neighborhood walking tours and recurring 'Tour Guide 101' training sessions rotating through Chicago Public Library branches (Rogers Park, Chinatown, Edgewater, Lincoln Belmont, etc). Good recurring well of under-the-radar, open-to-anyone local history events."
+    },
+    {
+      "url": "https://www.trailchick.com/category/fire-lookouts/",
+      "type": "aggregator",
+      "notes": "Personal hiking blog with a deep, ongoing 'Fire Lookout Guide' vertical covering Washington State's historic fire lookout towers — staffing status, overnight rentals, restoration news, trip reports, and visitor etiquette. Good recurring well for future Best of the Internet picks (fire lookout restoration culture, PNW hiking obsessives)."
     }
   ]
 }
