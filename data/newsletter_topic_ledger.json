@@ -1,38 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-13",
-      "rank": 1,
-      "topic_id": "ideas",
-      "topic": "Nobel Prizes 2026",
-      "angle": "The 12 October preview gets its answer: the committee rewards the theory inside every central bank's playbook (expectations, forward guidance, sticky prices) in the same year the paper has watched the Fed, BOJ and RBA use that playbook against a war-driven inflation shock.",
-      "headline": "美國兩位學者拿下諾貝爾經濟學獎"
-    },
-    {
-      "date": "2026-10-13",
-      "rank": 2,
-      "topic_id": "policy",
-      "topic": "Executive power and the midterms",
-      "angle": "A new mechanism in the paper's run of executive-power stories: public money spent on pre-election ads, and a court order the government appears to have ignored the morning after it was issued. This differs from the 28 September pocket-rescission and 8 October Medicare-cheque entries, which were about withholding or handing out money, not government advertising.",
-      "headline": "法官叫停政府用稅金打的電視廣告"
-    },
-    {
-      "date": "2026-10-13",
-      "rank": 3,
-      "topic_id": "economics",
-      "topic": "Global economic outlook",
-      "angle": "Yesterday's piece covered the opening of the meetings and AI as a financial-stability risk. Today the IMF puts numbers on what the war-driven energy shock and tightening wave are doing to growth country by country, which is the first scoreboard of 2026's damage.",
-      "headline": "IMF：今年全球經濟成長3.1%"
-    },
-    {
-      "date": "2026-10-13",
-      "rank": 4,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Arteta called Saliba fit on 8 October, and now a specialist has found a back injury. The story is a diagnosis and a choice between two return dates (Everton in the league, or a lower-risk cup tie at Fleetwood), not a result, a preview or a transfer target.",
-      "headline": "薩利巴背傷不用開刀，最快月底回來"
-    },
-    {
       "date": "2026-10-14",
       "rank": 1,
       "topic_id": "ai",
@@ -823,6 +791,38 @@
       "topic": "Michigan football",
       "angle": "The full game preview the 10 Nov quarterback-decision entry only pointed to: a reeling year-one rebuild visits one of the Big Ten's toughest road venues as an underdog, and the stakes are whether Michigan's season stays alive in the standings. This differs from the 10 Nov QB-reversal angle, 6 Nov's Paul Bunyan rivalry preview, 30 Oct's Rutgers bounce-back preview and 23 Oct's betting-line underdog preview.",
       "headline": "密西根作客奧勒岡，先發四分衛還沒決定"
+    },
+    {
+      "date": "2026-11-13",
+      "rank": 1,
+      "topic_id": "chicago",
+      "topic": "Illinois hemp and cannabis regulation",
+      "angle": "A new Chicago/Illinois thread for the paper: the day a whole retail category (intoxicating hemp sold outside dispensaries) becomes illegal across the state, a regulation story about closing a loophole and moving sales into the licensed, taxed cannabis market.",
+      "headline": "伊利諾州開始管THC軟糖和飲料"
+    },
+    {
+      "date": "2026-11-13",
+      "rank": 2,
+      "topic_id": "world",
+      "topic": "Russia–Ukraine war",
+      "angle": "The diplomacy track restarts: the first direct Moscow–Kyiv talks in nine months, with Washington as mediator, produce a humanitarian swap but no political movement. This differs from the 21 Oct entry (Trump blaming Zelensky, the Russian satellite manoeuvre) and the September refinery-strike and UN-coalition entries.",
+      "headline": "俄烏九個月來首次見面，只談成換俘"
+    },
+    {
+      "date": "2026-11-13",
+      "rank": 3,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Cubs",
+      "angle": "The Cubs return to the sports desk for the first time in the ledger window, through an individual honour: a homegrown center fielder named the league's best player, set against the first offseason loss (Suzuki likely leaving).",
+      "headline": "小熊隊克勞阿姆斯壯拿下國聯MVP"
+    },
+    {
+      "date": "2026-11-13",
+      "rank": 4,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A season-arc and timeline lens: the first concrete return target for Saka (Brentford, 2 Dec) mapped against the run of fixtures after the break (Newcastle 21 Nov, Dortmund 24 Nov), showing how long the leaders must protect their lead without their top scorer.",
+      "headline": "兵工廠盼薩卡12月初回歸"
     }
   ]
 }
