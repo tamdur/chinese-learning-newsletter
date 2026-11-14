@@ -1,14 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-14",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI investment boom",
-      "angle": "On 12 October AI-bubble risk was only an agenda item at the IMF meetings. Now the IMF's own financial-stability report puts hard numbers on it (S&P 500 valuations above 96% of readings since 1990, tech concentration above dotcom levels) and names what would set off a correction: AI failing to pay off in earnings or productivity.",
-      "headline": "IMF警告：AI股價太高，可能突然大跌"
-    },
-    {
       "date": "2026-10-15",
       "rank": 1,
       "topic_id": "ai",
@@ -823,6 +815,38 @@
       "topic": "Arsenal FC",
       "angle": "A season-arc and timeline lens: the first concrete return target for Saka (Brentford, 2 Dec) mapped against the run of fixtures after the break (Newcastle 21 Nov, Dortmund 24 Nov), showing how long the leaders must protect their lead without their top scorer.",
       "headline": "兵工廠盼薩卡12月初回歸"
+    },
+    {
+      "date": "2026-11-14",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "The valuation fight the paper has followed since 17 Oct ($2tn vs $1.5tn) now has a formal price range, and it comes in below even the 5 Nov $1.5tn figure: the market has marked down the first frontier-lab IPO before trading begins, a week after the 8 Nov AI-stock selloff.",
+      "headline": "Anthropic公布上市價格，估值最高1.4兆美元"
+    },
+    {
+      "date": "2026-11-14",
+      "rank": 2,
+      "topic_id": "policy",
+      "topic": "US midterm elections",
+      "angle": "What divided government looks like in practice: before Democrats even take the gavel, the White House is threatening criminal exposure over oversight probes, a separation-of-powers clash that differs from the result, cause and lame-duck-deadline entries (4, 7 and 11 Nov).",
+      "headline": "白宮警告民主黨：調查太過頭可能犯法"
+    },
+    {
+      "date": "2026-11-14",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "A game-day lens on the close-loss pattern: four defeats by a combined 23 points mean a year-one rebuild that is close but can't finish games, tested against an Oregon team riding an upset of Ohio State. This differs from 12 Nov's 'underdog at a tough venue, QB undecided' preview and 10 Nov's QB-reversal entry.",
+      "headline": "密西根今天客場挑戰奧勒岡"
+    },
+    {
+      "date": "2026-11-14",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A look back at the season to date, built on numbers: the defensive record, the Anfield breakthrough and squad depth explain how the leaders stayed top without Saliba and Saka. Explicitly not the 11 Nov 'teammates as opponents' international-break angle or the 13 Nov Saka-return timeline.",
+      "headline": "少了薩利巴和薩卡，兵工廠照樣站上榜首"
     }
   ]
 }
