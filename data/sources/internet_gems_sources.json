@@ -675,6 +675,21 @@
       "url": "https://www.trailchick.com/category/fire-lookouts/",
       "type": "aggregator",
       "notes": "Personal hiking blog with a deep, ongoing 'Fire Lookout Guide' vertical covering Washington State's historic fire lookout towers — staffing status, overnight rentals, restoration news, trip reports, and visitor etiquette. Good recurring well for future Best of the Internet picks (fire lookout restoration culture, PNW hiking obsessives)."
+    },
+    {
+      "url": "https://soundtraces.tw/",
+      "type": "aggregator",
+      "notes": "Sound Traces (聲音的歷史) — bilingual public-history timeline project documenting Taiwan's music history by decade (radio programs, record labels, contests, policy). Useful for sourcing dated, specific historical facts about Taiwanese music industry history (label launches, contest timelines, broadcast policy) rather than artist bios."
+    },
+    {
+      "url": "https://saaristonrengastie.fi/en",
+      "type": "official tourism site",
+      "notes": "Official site for the Archipelago Trail (Saariston Rengastie) near Turku — route details, ferry/bridge counts, seasonal schedules. Good for regional-character and road-trip-logistics angles distinct from Helsinki/Lapland coverage."
+    },
+    {
+      "url": "https://collectorsweekly.com/hall-of-fame",
+      "type": "aggregator",
+      "notes": "Collectors Weekly's 'Hall of Fame' curates standout hobbyist/collector websites (the kind of single-obsession reference sites — stamps, bottles, marbles, ephemera — that fit this desk). Worth mining for future picks, though cross-check each entry is still live since some Hall of Fame sites are old."
     }
   ]
 }
