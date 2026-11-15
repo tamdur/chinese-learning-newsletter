@@ -1,30 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-15",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI investment boom",
-      "angle": "The investor meeting the paper flagged on 11 October as 'the next date to watch' has now happened, and the listing has a calendar (roadshow around 9 November, trading before Thanksgiving) and named lead banks. The day after the IMF warned AI stocks are overvalued, the first frontier-lab IPO is the real test of that warning.",
-      "headline": "Anthropic辦投資人日，準備上市"
-    },
-    {
-      "date": "2026-10-15",
-      "rank": 2,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "Two rebuilding programs meet: Penn State is in its first season after firing a long-serving coach, and Whittingham's year-one Michigan is trying to fix its turnovers at home. This is about the shape of two rebuilds, not a single coaching duel like the 25 September Ferentz preview, and differs from the 4 October Little Brown Jug loss and 22 September fumble entries.",
-      "headline": "兩位新教練對決，密西根返校日迎戰賓州州立"
-    },
-    {
-      "date": "2026-10-15",
-      "rank": 3,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The answer to the 12 October Lille preview: the European record that is building quietly beside an uneven league defence. Fourteen straight Champions League wins, with the goals coming from Timber, Eze and Saka rather than a centre-forward, which matters for the striker-shortage story the beat has followed since September.",
-      "headline": "七分鐘進三球，兵工廠歐冠十四連勝"
-    },
-    {
       "date": "2026-10-16",
       "rank": 1,
       "topic_id": "sports-chicago",
@@ -847,6 +823,46 @@
       "topic": "Arsenal FC",
       "angle": "A look back at the season to date, built on numbers: the defensive record, the Anfield breakthrough and squad depth explain how the leaders stayed top without Saliba and Saka. Explicitly not the 11 Nov 'teammates as opponents' international-break angle or the 13 Nov Saka-return timeline.",
       "headline": "少了薩利巴和薩卡，兵工廠照樣站上榜首"
+    },
+    {
+      "date": "2026-11-15",
+      "rank": 1,
+      "topic_id": "chicago",
+      "topic": "Chicago city budget",
+      "angle": "A new Chicago thread for the paper: with hearings over, a council majority has publicly killed the mayor's large-employer tax, so the $882M 2027 gap must now be closed by other means against a year-end deadline and with elections approaching.",
+      "headline": "芝加哥預算卡關，市長新稅被擋"
+    },
+    {
+      "date": "2026-11-15",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "AI and scholarship",
+      "angle": "A new AI thread away from the month of AI-money stories: a frontier model is put to work on one of the twentieth century's most difficult intellectual archives.",
+      "headline": "六十萬顆輝達晶片卡在香港"
+    },
+    {
+      "date": "2026-11-15",
+      "rank": 3,
+      "topic_id": "business",
+      "topic": "US–China tech trade",
+      "angle": "Beijing is now the one refusing, and 600,000 approved chips are stuck at the border — a reversal of the usual Washington-is-the-blocker framing.",
+      "headline": "經濟學家選出年度好電影"
+    },
+    {
+      "date": "2026-11-15",
+      "rank": 4,
+      "topic_id": "ideas",
+      "topic": "Culture / year-end lists",
+      "angle": "A back-pages culture break from a heavy news cycle: an economist-critic's verdict on the year in film, with Sirat at the top.",
+      "headline": "密西根籃球回主場，想走出輸球"
+    },
+    {
+      "date": "2026-11-15",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "Bounce-back lens: the first home game after losing the championship rematch, and what the UConn loss revealed about the rebuilt rotation.",
+      "headline": "William & Mary at Michigan Wolverines basketball"
     }
   ]
 }
