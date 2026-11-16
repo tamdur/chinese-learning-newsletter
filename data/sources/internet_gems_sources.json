@@ -690,6 +690,11 @@
       "url": "https://collectorsweekly.com/hall-of-fame",
       "type": "aggregator",
       "notes": "Collectors Weekly's 'Hall of Fame' curates standout hobbyist/collector websites (the kind of single-obsession reference sites — stamps, bottles, marbles, ephemera — that fit this desk). Worth mining for future picks, though cross-check each entry is still live since some Hall of Fame sites are old."
+    },
+    {
+      "url": "https://www.thetimechamber.co.uk/",
+      "type": "site",
+      "notes": "UK Cold War bunker / ROTOR radar station / Regional Government HQ documentation project run by a small passionate team; deep site-by-site surveys plus urban exploration blog. Good hunting ground for future Cold War infrastructure or bunker-restoration angles."
     }
   ]
 }
