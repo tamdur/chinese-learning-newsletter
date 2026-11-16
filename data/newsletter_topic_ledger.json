@@ -1,22 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-16",
-      "rank": 1,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The quarterback-health story finally turns to a return: after a month of strain, MRI, 'week-to-week' and two Bagent starts ending in the Lambeau rout, Williams is expected back at Atlanta. The question shifts from whether the team can survive without him to whether his return can repair the damage from Green Bay.",
-      "headline": "熊隊四分衛威廉斯可望復出"
-    },
-    {
-      "date": "2026-10-16",
-      "rank": 2,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The beat swings back from Europe to the league. It asks whether Arsenal's flawless European form can carry into an away league match, where their title defence has been uneven, sitting between the Forest trip and Bayern four days later.",
-      "headline": "兵工廠作客諾丁漢森林"
-    },
-    {
       "date": "2026-10-17",
       "rank": 1,
       "topic_id": "ai",
@@ -863,6 +847,22 @@
       "topic": "Michigan basketball",
       "angle": "Bounce-back lens: the first home game after losing the championship rematch, and what the UConn loss revealed about the rebuilt rotation.",
       "headline": "William & Mary at Michigan Wolverines basketball"
+    },
+    {
+      "date": "2026-11-16",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "The demand side answers back: after a month of markdown stories (the 5 Nov valuation cut, the 8 Nov AI selloff, the 14 Nov below-$1.5tn range), the order book is several times oversubscribed and bankers are weighing pricing above the range, so the final pre-pricing question is whether investors who pushed the price down will now push it up.",
+      "headline": "Anthropic上市大熱門，股價可能再往上"
+    },
+    {
+      "date": "2026-11-16",
+      "rank": 2,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The defence the beat expected to be whole again at Newcastle (10 Nov) has instead lost both starting center-backs, Saliba just weeks after his comeback, so the leaders must protect their lead without their first-choice central defensive pair as well as their top scorer.",
+      "headline": "兵工廠兩名主力後衛同時受傷"
     }
   ]
 }
