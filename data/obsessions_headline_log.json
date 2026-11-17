@@ -6159,6 +6159,34 @@
       "headline": "農田底下的冷戰祕密",
       "headline_en": "The Time Chamber: restoring a Cold War nuclear monitoring post",
       "topic": "Cold War bunker restoration archive"
+    },
+    {
+      "date": "2026-11-17",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "不准跳舞的年代，青蛙王子唱迪斯可",
+      "headline_en": "In the era when dancing was banned, the Frog Prince sang disco",
+      "topic": "Taiwanese disco censorship era"
+    },
+    {
+      "date": "2026-11-17",
+      "obsession_id": "finland-honeymoon",
+      "headline": "走五公里，才看得到的森林教堂",
+      "headline_en": "A forest church you can only reach by walking five kilometers",
+      "topic": "Lapland wilderness church"
+    },
+    {
+      "date": "2026-11-17",
+      "obsession_id": "do-312",
+      "headline": "親手做一本集印章的小書",
+      "headline_en": "Hand-make your own seal-collecting booklet",
+      "topic": "Japanese bookbinding workshop"
+    },
+    {
+      "date": "2026-11-17",
+      "obsession_id": "best-of-internet",
+      "headline": "只會切換開關的程式語言",
+      "headline_en": "A programming language that can only flip a switch",
+      "topic": "single-bit esolang archive"
     }
   ]
 }

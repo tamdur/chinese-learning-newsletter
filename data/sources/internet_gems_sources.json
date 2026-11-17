@@ -695,6 +695,16 @@
       "url": "https://www.thetimechamber.co.uk/",
       "type": "site",
       "notes": "UK Cold War bunker / ROTOR radar station / Regional Government HQ documentation project run by a small passionate team; deep site-by-site surveys plus urban exploration blog. Good hunting ground for future Cold War infrastructure or bunker-restoration angles."
+    },
+    {
+      "url": "https://www.luontoon.fi/en",
+      "type": "aggregator",
+      "notes": "Official English-language site of Metsähallitus (Finland's nature heritage/parks service) — detailed visitor guides, trail info, and cultural-historical background for wilderness sites, national parks, and remote heritage buildings across Finland, including Lapland. Good hunting ground for hidden-gem nature/heritage stories beyond the obvious tourist spots."
+    },
+    {
+      "url": "https://japaneseculturecenter.com/",
+      "type": "aggregator",
+      "notes": "Japanese Culture Center Chicago (Lincoln Ave) events calendar — runs recurring hands-on workshops (bookbinding, papermaking, tea ceremony, calligraphy) taught by working artists; good under-the-radar source distinct from the big museum calendars."
     }
   ]
 }
