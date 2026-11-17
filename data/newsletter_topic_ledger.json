@@ -1,38 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-17",
-      "rank": 1,
-      "topic_id": "ai",
-      "topic": "AI investment boom",
-      "angle": "The IPO gets its first hard numbers: the 15 Oct entry gave a calendar and a valuation rumour, and now the disclosed revenue, profits and slowing quarter-on-quarter growth let the reader test the IMF's overvaluation warning against an actual income statement, a $1.5tn-versus-$2tn argument about growth rates rather than hype.",
-      "headline": "Anthropic第三季收入大增，上市估值引發爭論"
-    },
-    {
-      "date": "2026-10-17",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Ethiopia–Tigray conflict",
-      "angle": "The 29 Sept story was a civil war spilling into Afar with vague accusations against neighbours; now it has become a state-against-state confrontation, with broken diplomatic ties, Eritrean troops reported inside Tigray and Ethiopian drone strikes, all driven by landlocked Ethiopia's demand for a Red Sea port.",
-      "headline": "衣索比亞與厄利垂亞走到戰爭邊緣"
-    },
-    {
-      "date": "2026-10-17",
-      "rank": 3,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The injury story moves from the quarterback to the defence: just as Williams is cleared to return, the unit that gave up 31 points at Lambeau loses a starting linebacker, its top edge signing and possibly both starting corners, so the question is no longer whether the QB plays but whether a depleted defence can support him.",
-      "headline": "熊隊威廉斯可能回歸，防守球員卻接連受傷"
-    },
-    {
-      "date": "2026-10-17",
-      "rank": 4,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The beat's first individual-player profile of the season: Saka's change from creator to scorer, set against the striker shortage the beat has followed since September, is a player-feature lens that differs from 16 Oct's Forest fixture preview and 15 Oct's Lille result.",
-      "headline": "薩卡越來越會進球"
-    },
-    {
       "date": "2026-10-19",
       "rank": 1,
       "topic_id": "economics",
@@ -863,6 +831,14 @@
       "topic": "Arsenal FC",
       "angle": "The defence the beat expected to be whole again at Newcastle (10 Nov) has instead lost both starting center-backs, Saliba just weeks after his comeback, so the leaders must protect their lead without their first-choice central defensive pair as well as their top scorer.",
       "headline": "兵工廠兩名主力後衛同時受傷"
+    },
+    {
+      "date": "2026-11-17",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "The AI-money story moves from the frontier labs and the stock market as a whole to the company that sells the chips: Nvidia's quarter is the first hard test since the early-November selloff of whether data-centre spending is still growing, and the piece explains what number would calm the bubble fears and what would deepen them.",
+      "headline": "輝達今天交成績單，AI泡沫再受考驗"
     }
   ]
 }
