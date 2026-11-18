@@ -705,6 +705,11 @@
       "url": "https://japaneseculturecenter.com/",
       "type": "aggregator",
       "notes": "Japanese Culture Center Chicago (Lincoln Ave) events calendar — runs recurring hands-on workshops (bookbinding, papermaking, tea ceremony, calligraphy) taught by working artists; good under-the-radar source distinct from the big museum calendars."
+    },
+    {
+      "url": "https://theodoregray.com/PeriodicTable/",
+      "type": "single-site deep archive",
+      "notes": "Theodore Gray's periodic table table project site — a personal, decades-running catalog of physical element samples (acquisition date, source, price, purity), origin story (2002 Ig Nobel Prize in Chemistry), and photo essays per element. Good hunting ground for future 'solo obsessive cataloger' angles distinct from the stamp/accent-map/shipwreck style archives already used."
     }
   ]
 }
