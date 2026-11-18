@@ -839,6 +839,46 @@
       "topic": "AI investment boom",
       "angle": "The AI-money story moves from the frontier labs and the stock market as a whole to the company that sells the chips: Nvidia's quarter is the first hard test since the early-November selloff of whether data-centre spending is still growing, and the piece explains what number would calm the bubble fears and what would deepen them.",
       "headline": "輝達今天交成績單，AI泡沫再受考驗"
+    },
+    {
+      "date": "2026-11-18",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "APEC / US-China diplomacy",
+      "angle": "The US-China trade and chip-control fight the paper has tracked through truce extensions and stuck shipments now goes to a meeting between the leaders themselves, in a Chinese tech city, with Putin also there. The question is whether Shenzhen produces anything concrete or simply sets up the Florida G20.",
+      "headline": "亞太峰會在深圳開場"
+    },
+    {
+      "date": "2026-11-18",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "Nvidia leadership succession",
+      "angle": "A key-person-risk lens on the AI boom, separate from the paper's run of AI-money entries (the Anthropic IPO on 14 and 16 Nov, the 8 Nov selloff, the 17 Nov Nvidia earnings preview): the company the whole AI buildout depends on has lost its founder-CEO with no successor in place, and the US president is weighing in on who should run it.",
+      "headline": "黃仁勳辭職後，輝達找新老闆"
+    },
+    {
+      "date": "2026-11-18",
+      "rank": 3,
+      "topic_id": "chicago",
+      "topic": "Illinois veto session",
+      "angle": "A new Chicago thread for the paper: Springfield's short veto session, where lawmakers decide what public help to offer to keep the Bears from moving to Indiana and how to regulate the AI data centres coming to Illinois.",
+      "headline": "留住熊隊，州議員回來開會"
+    },
+    {
+      "date": "2026-11-18",
+      "rank": 4,
+      "topic_id": "world",
+      "topic": "US-Iran war",
+      "angle": "The war seen from inside Iran rather than from the battlefield or the negotiating table: one of the world's most gas-rich countries cannot keep its own homes warm, and the regime fears its own public more than another round of failed talks. The Russian gas talks put a concrete form on the Tehran-Moscow alignment the paper noted on 21 Oct.",
+      "headline": "伊朗冬天缺天然氣，領導人怕民心不穩"
+    },
+    {
+      "date": "2026-11-18",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan basketball",
+      "angle": "A depth story rather than a scoreline: eight double-figure scorers and a record second half suggest the rebuilt roster's strength is its depth, not one star, with freshman Costello breaking out.",
+      "headline": "密西根男籃狂得123分"
     }
   ]
 }
