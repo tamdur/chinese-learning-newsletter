@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-19",
-      "rank": 1,
-      "topic_id": "economics",
-      "topic": "China economy",
-      "angle": "The consumption gap the paper described on 15 Sept and tested through Golden Week spending on 2 Oct now gets its quarterly verdict: growth beats forecasts and stays on target, but almost entirely through exports and factories while households and investment keep shrinking, so China is hitting its number the old way.",
-      "headline": "中國第三季經濟成長4.5%，比預期好"
-    },
-    {
-      "date": "2026-10-19",
-      "rank": 2,
-      "topic_id": "ai",
-      "topic": "AI investment boom",
-      "angle": "After three IPO entries about valuation, calendar and income statement (11, 15 and 17 Oct), the story turns to governance: the first frontier lab to go public writes a share pledge into its structure that grows as the company's value rises and is barred from lobbying, raising the question of who a public AI company answers to besides its shareholders.",
-      "headline": "Anthropic拿出5%股份做公益"
-    },
-    {
-      "date": "2026-10-19",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "Brazil and Bosnia elections",
-      "angle": "The 2 Oct weekend preview gets its follow-up at a new stage: the first-round result put the challenger ahead of a sitting president, and the first head-to-head debate shows a Bolsonaro comeback, through the son, as the favourite a week before the runoff.",
-      "headline": "巴西選總統，兩人電視辯論互罵"
-    },
-    {
-      "date": "2026-10-19",
-      "rank": 4,
-      "topic_id": "world",
-      "topic": "European cost-of-living protests",
-      "angle": "A new thread for the paper: the energy-and-rates shock the paper has tracked through oil prices, diesel and the IMF's growth figures now shows up as street unrest in several European countries, with Milan as the flashpoint.",
-      "headline": "米蘭物價抗議連續兩天變暴力"
-    },
-    {
-      "date": "2026-10-19",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "The month-long quarterback-health story ends with an answer: Williams is back and sharp, completing 30 of 36, and the depleted defence the paper worried about on 17 Oct nearly gives the lead away before making the play that saves the game.",
-      "headline": "威廉斯傷好回歸，熊隊31比23勝獵鷹"
-    },
-    {
-      "date": "2026-10-19",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The 16 Oct preview asked whether Arsenal's European form would carry into an uneven away league record; the answer is a narrow, low-quality win, with one shot on target and a substitute's deflected goal, which points again to the forward shortage the beat has followed since September.",
-      "headline": "兵工廠1比0小勝森林"
-    },
-    {
       "date": "2026-10-20",
       "rank": 1,
       "topic_id": "chicago",
@@ -879,6 +831,14 @@
       "topic": "Michigan basketball",
       "angle": "A depth story rather than a scoreline: eight double-figure scorers and a record second half suggest the rebuilt roster's strength is its depth, not one star, with freshman Costello breaking out.",
       "headline": "密西根男籃狂得123分"
+    },
+    {
+      "date": "2026-11-19",
+      "rank": 1,
+      "topic_id": "ai",
+      "topic": "AI investment boom",
+      "angle": "The two-month valuation fight ends with an actual price. Investors who forced the range down in early November paid more than it once the order book filled, and from today the public market, not the bankers, decides what a frontier AI lab is worth.",
+      "headline": "AI公司Anthropic今天上市"
     }
   ]
 }
