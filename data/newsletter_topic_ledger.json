@@ -1,54 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-21",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "US–Iran war",
-      "angle": "Three weeks after Trump turned down Tehran's ceasefire offer, the diplomacy has moved backwards: Washington is now openly pessimistic, ships in Hormuz are under attack again, and Iran is visibly moving closer to Moscow, so this is no longer a two-sided war but a lineup with Russia standing behind Tehran.",
-      "headline": "美國說和伊朗談和「非常困難」"
-    },
-    {
-      "date": "2026-10-21",
-      "rank": 2,
-      "topic_id": "world",
-      "topic": "Israeli election",
-      "angle": "A new thread for the paper: Israel's 27 October election, which could end Netanyahu's time in power, seen through an unannounced visit from the US defence secretary a week before the vote, which raises the question of Washington's stake in the result.",
-      "headline": "以色列大選前，美國國防部長突然到訪"
-    },
-    {
-      "date": "2026-10-21",
-      "rank": 3,
-      "topic_id": "world",
-      "topic": "Russia–Ukraine war",
-      "angle": "The pressure on Kyiv now comes from Washington rather than Moscow: Trump openly blames Zelensky for the war, while Russia sends a message in orbit by moving a satellite close to the commercial radar satellites Ukraine's backers rely on. This differs from 21 Sept's Moscow refinery strike and 24 Sept's UN ceasefire coalition.",
-      "headline": "川普怪澤倫斯基「不想結束戰爭」"
-    },
-    {
-      "date": "2026-10-21",
-      "rank": 4,
-      "topic_id": "world",
-      "topic": "Romanian politics",
-      "angle": "A new international thread for the paper: a NATO state on the front line by the Black Sea finally has a government after months of deadlock, which adds to the paper's European political checks after Latvia (4 Oct) and the cost-of-living protests (19 Oct).",
-      "headline": "羅馬尼亞新政府上任，結束五個月僵局"
-    },
-    {
-      "date": "2026-10-21",
-      "rank": 5,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "A quarterback-change story, which the beat has not used before: the turnover problem the paper has followed since 22 Sept costs the five-star starter his job, and a freshman with a Michigan coaching family name gets his first start on the road against a top-10 team.",
-      "headline": "密西根換四分衛？大一新生卡爾可能先發"
-    },
-    {
-      "date": "2026-10-21",
-      "rank": 6,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "A team-sheet comparison on match day, not a repeat of 20 Oct's 'hardest opponent' framing: both clubs arrive missing key players (Arsenal without Saliba and Hincapie, Bayern without Olise and Musiala and possibly Neuer), and Zubimendi's return reshapes the midfield.",
-      "headline": "兵工廠今天挑戰拜仁，兩隊都缺主力"
-    },
-    {
       "date": "2026-10-22",
       "rank": 1,
       "topic_id": "business",
@@ -831,6 +783,38 @@
       "topic": "Arsenal FC",
       "angle": "The first team news after the international break, in Arteta's own words two days before kick-off: which of Saka, Odegaard and Madueke can play at St James' Park while the defence is still missing both starting centre-backs.",
       "headline": "兵工廠作客紐卡索前 阿特塔說明傷兵"
+    },
+    {
+      "date": "2026-11-21",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "International justice / genocide law",
+      "angle": "A new world thread for the paper: for the first time the world's top court holds a state responsible for genocide, and the piece explains why that legal threshold matters for every genocide case that follows.",
+      "headline": "國際法院判定緬甸犯下種族滅絕罪"
+    },
+    {
+      "date": "2026-11-21",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "Nvidia leadership succession",
+      "angle": "The board shuts the door on Huang's return despite public pressure from the president and Musk, while a record quarter shows the AI chip business booming even without its founder.",
+      "headline": "輝達董事會：不讓黃仁勳回來當執行長"
+    },
+    {
+      "date": "2026-11-21",
+      "rank": 3,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "Michigan becomes a spoiler with its bowl hopes at stake: a 5-5 team needing one more win hosts an unbeaten top-five opponent.",
+      "headline": "密西根今天主場迎戰全勝的UCLA"
+    },
+    {
+      "date": "2026-11-21",
+      "rank": 4,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A match-day venue and opponent lens: whether a makeshift back line can hold the lead at one of the league's most hostile grounds, with Dortmund three days later.",
+      "headline": "兵工廠今天作客紐卡索"
     }
   ]
 }
