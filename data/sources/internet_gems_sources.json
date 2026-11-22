@@ -715,6 +715,11 @@
       "url": "https://smallislandbigsong1.bandcamp.com",
       "type": "aggregator",
       "notes": "Bandcamp page for Small Island Big Song, a pan-Austronesian music project pairing Taiwanese Indigenous musicians (Amis, Paiwan) with artists from Madagascar, Tahiti, Mauritius, Rapa Nui etc. Good recurring well for Taiwan Indigenous/world-music crossovers distinct from the Mandopop/indie-rock/sound-art angles already covered."
+    },
+    {
+      "url": "https://www.beachcombingmagazine.com/blogs/news",
+      "type": "aggregator",
+      "notes": "A beachcombing-focused online magazine (sea glass, flotsam, driftwood, mudlarking tags) that profiles hobbyist beachcombers worldwide. Leans more commercial/shop-adjacent than pure passion-project, so vet carefully before using as a primary source, but its tagged archives (e.g. /tagged/beachfinds) could surface niche finder stories."
     }
   ]
 }
