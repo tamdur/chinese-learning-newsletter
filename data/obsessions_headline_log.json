@@ -6299,6 +6299,34 @@
       "headline": "怪奇博覽會來到羅斯蒙特",
       "headline_en": "World Oddities Expo returns to Rosemont, Dec 5-6",
       "topic": "curiosities and sideshow arts market"
+    },
+    {
+      "date": "2026-11-22",
+      "obsession_id": "taiwanese-crate-digging",
+      "headline": "大支的第一張專輯：說出來的代價",
+      "headline_en": "Dwagie's 2002 debut 舌燦蓮花, the first solo hip-hop album in the Chinese-speaking world, and the backlash it triggered",
+      "topic": "inaugural Mandopop hip-hop album"
+    },
+    {
+      "date": "2026-11-22",
+      "obsession_id": "finland-honeymoon",
+      "headline": "湖邊修道院的威士忌",
+      "headline_en": "New Valamo Monastery, Finland's only Orthodox monastery, and its monk-run whisky distillery in the Lake District",
+      "topic": "monastery distillery"
+    },
+    {
+      "date": "2026-11-22",
+      "obsession_id": "do-312",
+      "headline": "穿上醜毛衣，跑過街頭壁畫",
+      "headline_en": "Runstreet's ugly-sweater mural art run returning to Chicago's Fulton Market this December",
+      "topic": "ugly sweater mural art run"
+    },
+    {
+      "date": "2026-11-22",
+      "obsession_id": "best-of-internet",
+      "headline": "海上漂來的樂高",
+      "headline_en": "Tracey Williams' 25-year citizen-science project cataloguing Lego lost overboard from the Tokio Express in 1997",
+      "topic": "beachcombing citizen-science archive"
     }
   ]
 }
