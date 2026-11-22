@@ -1,38 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-22",
-      "rank": 1,
-      "topic_id": "business",
-      "topic": "Tesla and the AI pivot",
-      "angle": "A new business thread for the paper: a carmaker whose car sales are shrinking asks investors to value it as an AI and robotics company, and Q3 margins show how much the old business can still pay for the new bet.",
-      "headline": "特斯拉第三季賺得變少"
-    },
-    {
-      "date": "2026-10-22",
-      "rank": 2,
-      "topic_id": "ideas",
-      "topic": "Economics of trauma and education",
-      "angle": "A new back-pages ideas thread: an economist measures what campus shootings do to survivors' lives years later and finds students still graduate on time but fewer go on to further study.",
-      "headline": "校園槍擊對學生的長期影響"
-    },
-    {
-      "date": "2026-10-22",
-      "rank": 3,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "A forward-looking schedule lens rather than another quarterback-health story: a short-week home game against the Patriots is the last chance to bank a win before the NFC North run decides the season.",
-      "headline": "熊隊今晚主場迎戰愛國者"
-    },
-    {
-      "date": "2026-10-22",
-      "rank": 4,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "After two days of previews (20 Oct hardest-opponent framing, 21 Oct team-sheet comparison), the day-one result: whether Arsenal's 14-match European winning run survived the hardest away trip of the league phase.",
-      "headline": "兵工廠客場2比2逼和拜仁"
-    },
-    {
       "date": "2026-10-23",
       "rank": 1,
       "topic_id": "sports-chicago",
@@ -815,6 +783,38 @@
       "topic": "Arsenal FC",
       "angle": "A match-day venue and opponent lens: whether a makeshift back line can hold the lead at one of the league's most hostile grounds, with Dortmund three days later.",
       "headline": "兵工廠今天作客紐卡索"
+    },
+    {
+      "date": "2026-11-22",
+      "rank": 1,
+      "topic_id": "policy",
+      "topic": "US midterm elections",
+      "angle": "Divided government's first formal legal weapon: the administration moves from the 14 Nov verbal threats against oversight probes to a signed order that controls what contractors and civil servants may tell the incoming Democratic Congress.",
+      "headline": "川普下令：給國會資料前先問白宮"
+    },
+    {
+      "date": "2026-11-22",
+      "rank": 2,
+      "topic_id": "ai",
+      "topic": "US–China tech trade",
+      "angle": "How chips actually leak and how Washington is now trying to plug the hole: export controls move from China's borders to Southeast Asian data centres, with a $2bn diversion case as the example. This differs from the Nvidia-succession entries (18, 21 Nov), the 8 Nov truce-expiry entry and the 15 Nov Beijing-blocks-shipments entry.",
+      "headline": "美國堵住晶片漏洞，輝達停賣中國H200"
+    },
+    {
+      "date": "2026-11-22",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "The game-day offence lens: can Williams clean up his four-interception game, and will Johnson lean on the run against one of the league's worst run defences? This differs from the 20 Nov defence-off-the-bye preview of the same game and the 8-9 Nov Buccaneers turnover-survival entries.",
+      "headline": "熊隊今天戰聖徒，威廉斯要少犯錯"
+    },
+    {
+      "date": "2026-11-22",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Day-one answer to the 20 Nov team-news entry and the 21 Nov match-day preview: did a back line missing both starting centre-backs hold at St James' Park, and where does that leave the lead going into Dortmund?",
+      "headline": "少了兩名主力後衛，兵工廠2比2和紐卡索打平"
     }
   ]
 }
