@@ -1,22 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-23",
-      "rank": 1,
-      "topic_id": "sports-chicago",
-      "topic": "Michigan football",
-      "angle": "A market-verdict preview: the betting line says Michigan is a clear underdog against a one-loss Indiana that nearly beat Ohio State, showing how far the old Big Ten order has flipped. Distinct from prior QB-change and Penn State preview stories.",
-      "headline": "密西根主場迎戰印第安納"
-    },
-    {
-      "date": "2026-10-23",
-      "rank": 2,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "The Saliba return decision is now 48 hours away, framed as a preview of Saturday's Everton match: after playing without him at Bayern, does Arteta risk him in the league or ease him in at the Fleetwood cup tie? Distinct from the Bayern result story and the earlier injury-diagnosis story.",
-      "headline": "薩利巴快回來了"
-    },
-    {
       "date": "2026-10-24",
       "rank": 1,
       "topic_id": "world",
@@ -815,6 +799,22 @@
       "topic": "Arsenal FC",
       "angle": "Day-one answer to the 20 Nov team-news entry and the 21 Nov match-day preview: did a back line missing both starting centre-backs hold at St James' Park, and where does that leave the lead going into Dortmund?",
       "headline": "少了兩名主力後衛，兵工廠2比2和紐卡索打平"
+    },
+    {
+      "date": "2026-11-23",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "Day-one answer to the 20 Nov defence preview and the 22 Nov 'Williams must cut the mistakes' preview: did the Bears beat a team they were expected to beat coming off the bye, and did Williams' turnover problem show up again? This decides whether 8-2 (or 7-3) makes them a real NFC contender.",
+      "headline": "熊隊21比13打敗聖徒隊，拿下五連勝"
+    },
+    {
+      "date": "2026-11-23",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "A two-games-in-five-days lens: after dropping points at Newcastle, how does a team without its first-choice centre-back pair handle Dortmund midweek and still have enough left for a title-race meeting with Manchester City? Distinct from 22 Nov's Newcastle result, 16 Nov's double-CB-injury news and 13 Nov's Saka-return timeline.",
+      "headline": "門將受傷，兵工廠週二迎戰多特蒙德"
     }
   ]
 }
