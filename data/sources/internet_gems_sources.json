@@ -720,6 +720,11 @@
       "url": "https://www.beachcombingmagazine.com/blogs/news",
       "type": "aggregator",
       "notes": "A beachcombing-focused online magazine (sea glass, flotsam, driftwood, mudlarking tags) that profiles hobbyist beachcombers worldwide. Leans more commercial/shop-adjacent than pure passion-project, so vet carefully before using as a primary source, but its tagged archives (e.g. /tagged/beachfinds) could surface niche finder stories."
+    },
+    {
+      "url": "https://www.plant-lore.com/",
+      "type": "archive",
+      "notes": "Solo folklorist Roy Vickery's decades-running plant folklore database, organized by UK/Ireland region and species, with contributor testimonies dating back to 1973. Rich vein for future 'best of internet' and nature-obsession picks (e.g. snowdrop lore, Mayday flower customs, regional taboo plants)."
     }
   ]
 }
