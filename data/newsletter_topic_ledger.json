@@ -1,22 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-24",
-      "rank": 1,
-      "topic_id": "world",
-      "topic": "Brazil and Bosnia elections",
-      "angle": "On the eve of the vote, the race the paper called a Bolsonaro comeback on 19 Oct has tightened into a toss-up, so the piece is about what each result would mean for Brazil (a convicted ex-president's family back in power, or a Lula fourth term) rather than another debate or poll recap.",
-      "headline": "巴西明天選總統，兩人幾乎打平"
-    },
-    {
-      "date": "2026-10-24",
-      "rank": 2,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bears",
-      "angle": "Day one of the result after the 22 Oct schedule preview: whether the Bears banked the win before the NFC North run, and whether Williams' return held up in his second game back with a short-handed defence.",
-      "headline": "熊隊30比24打敗愛國者隊"
-    },
-    {
       "date": "2026-10-25",
       "rank": 1,
       "topic_id": "sports-arsenal",
@@ -815,6 +799,22 @@
       "topic": "Arsenal FC",
       "angle": "A two-games-in-five-days lens: after dropping points at Newcastle, how does a team without its first-choice centre-back pair handle Dortmund midweek and still have enough left for a title-race meeting with Manchester City? Distinct from 22 Nov's Newcastle result, 16 Nov's double-CB-injury news and 13 Nov's Saka-return timeline.",
       "headline": "門將受傷，兵工廠週二迎戰多特蒙德"
+    },
+    {
+      "date": "2026-11-24",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bulls",
+      "angle": "The rebuild seen through narrow losses and a thinning roster rather than the 11 Nov 'worst record: tank or failure?' framing: the Bulls are now competitive (one missed shot from beating Washington, overtime against a contender) but still losing, and Powell's injury and the Robinson release cut their depth further.",
+      "headline": "公牛延長賽輸金塊，戰績4勝11敗"
+    },
+    {
+      "date": "2026-11-24",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "The Champions League table lens: tonight is a direct meeting between two sides one point apart in the league phase, with a top-eight place (and skipping the play-off round) at stake. It differs from 23 Nov's 'two games in five days / squad fatigue' preview, 22 Nov's Newcastle result and 16 Nov's double centre-back injury news.",
+      "headline": "兵工廠今晚主場迎戰多特蒙德"
     }
   ]
 }
