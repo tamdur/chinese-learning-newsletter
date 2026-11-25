@@ -1,14 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-25",
-      "rank": 1,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Day-one result of the Everton match the 23 Oct entry previewed: a clean, comfortable home win after the scrappy 1-0 at Forest and the 2-2 at Bayern, with attention now on cup rotation at Fleetwood and the 1 Nov trip to Liverpool, the hardest league test of the autumn.",
-      "headline": "Arsenal 2-0 Everton"
-    },
-    {
       "date": "2026-10-26",
       "rank": 1,
       "topic_id": "world",
@@ -815,6 +807,38 @@
       "topic": "Arsenal FC",
       "angle": "The Champions League table lens: tonight is a direct meeting between two sides one point apart in the league phase, with a top-eight place (and skipping the play-off round) at stake. It differs from 23 Nov's 'two games in five days / squad fatigue' preview, 22 Nov's Newcastle result and 16 Nov's double centre-back injury news.",
       "headline": "兵工廠今晚主場迎戰多特蒙德"
+    },
+    {
+      "date": "2026-11-25",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "UN climate negotiations (COP31)",
+      "angle": "The closing verdict on the summit the paper opened on 10 and 11 Nov: its organisers said it was about paying for old promises, and it ended with a process on finance but no deal on adaptation money or a just transition. The piece asks what was actually delivered against that test.",
+      "headline": "氣候大會落幕 窮國要的錢還在等"
+    },
+    {
+      "date": "2026-11-25",
+      "rank": 2,
+      "topic_id": "chicago",
+      "topic": "Chicago city government / City Hall ethics",
+      "angle": "The council's distrust of the mayor (the 20 Nov self-audit vote) gets a concrete example: a no-bid airport transit contract went to campaign donors. This is a contracting-ethics angle, different from the 15 and 20 Nov budget-gap and audit entries.",
+      "headline": "機場列車合約沒招標 得標公司主管捐錢給市長"
+    },
+    {
+      "date": "2026-11-25",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "A division-rivalry lens: the first real NFC North test of the winning streak, a Thanksgiving road game at Detroit on a short week, framed around the division race and playoff seeding. This differs from the defence (20 Nov), Williams-mistakes (22 Nov) and Saints-result (23 Nov) entries.",
+      "headline": "Chicago Bears head into pivotal NFC North showdown at Detroit Lions on Thanksgiving (Nov 26)"
+    },
+    {
+      "date": "2026-11-25",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Day-one answer to the 23 and 24 Nov Dortmund previews: did a team without its first-choice centre-backs secure a Champions League top-eight position, and what does it carry into the Manchester City title-race meeting?",
+      "headline": "Arsenal vs Borussia Dortmund, Champions League league phase (played 24 Nov) — result to be verified"
     }
   ]
 }
