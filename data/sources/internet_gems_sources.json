@@ -725,6 +725,11 @@
       "url": "https://www.plant-lore.com/",
       "type": "archive",
       "notes": "Solo folklorist Roy Vickery's decades-running plant folklore database, organized by UK/Ireland region and species, with contributor testimonies dating back to 1973. Rich vein for future 'best of internet' and nature-obsession picks (e.g. snowdrop lore, Mayday flower customs, regional taboo plants)."
+    },
+    {
+      "url": "https://microbialfoods.org/",
+      "type": "research-group blog",
+      "notes": "Small-group (Wolfe Lab, Tufts) blog that writes fermented-food microbiology for a general audience via a 'Microbe Guide' trading-card-style species series, plus deep-dive posts on cheese rind ecology, kimchi, sourdough, and other ferments. Good recurring well for food-science/microbiology gems with specific named species and citable primary research."
     }
   ]
 }
