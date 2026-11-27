@@ -1,14 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-27",
-      "rank": 1,
-      "topic_id": "economics",
-      "topic": "Global monetary tightening",
-      "angle": "The tightening wave the paper last saw from Australia (28 Sept) reaches the big three at once: the Fed, ECB and BOJ all decide within 48 hours, and the piece compares them side by side. It asks whether a war-driven inflation shock is still pushing rates up in Washington, Frankfurt and Tokyo, and why each bank faces a different trade-off.",
-      "headline": "三大央行同一週決定利率"
-    },
-    {
       "date": "2026-10-28",
       "rank": 1,
       "topic_id": "policy",
@@ -815,6 +807,22 @@
       "topic": "Chicago Bears",
       "angle": "A Thanksgiving-tradition and history lens on game day: the Lions' seven-game holiday losing streak against the Bears' 4-of-5 Thanksgiving record (and the 23-20 loss in 2024), explaining why this rivalry is a fixture of the American holiday. This differs from 25 Nov's division-race/playoff-seeding preview of the same game, 22 Nov's Williams-mistakes preview, 20 Nov's defence preview and 23 Nov's Saints result.",
       "headline": "NFC-leading Lions host Bears on Thanksgiving, trying to stop 7-game losing streak on the holiday"
+    },
+    {
+      "date": "2026-11-27",
+      "rank": 1,
+      "topic_id": "world",
+      "topic": "Spanish general election",
+      "angle": "A new world thread for the paper: on the last day of campaigning, Spain looks set to swap Sánchez's Socialist government for a PP-Vox right-wing majority, with 163,000 disputed overseas ballots still awaiting a Supreme Court ruling.",
+      "headline": "西班牙週日大選，右派可能拿下過半"
+    },
+    {
+      "date": "2026-11-27",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Chicago Bears",
+      "angle": "Result of the recent division-race and Thanksgiving-tradition previews: the Bears came back late to win at Detroit and took over first place in the NFC North, against the old club of their own coach.",
+      "headline": "Bears vs. Lions final score, takeaways: Chicago's defense dominates, comeback win on Thanksgiving"
     }
   ]
 }
