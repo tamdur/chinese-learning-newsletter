@@ -735,6 +735,11 @@
       "url": "https://www.polgeonow.com/",
       "type": "personal blog / solo cartographer archive",
       "notes": "Solo-run (Evan Centanni) political geography site tracking de facto borders, breakaway states, and disputed territories with original hand-drawn control maps. AAG-award-winning, active as of Nov 2026. Rich vein for 'contested/liminal status' angles — good recurring source for this obsession."
+    },
+    {
+      "url": "https://esolangs.org",
+      "type": "wiki",
+      "notes": "Community-maintained wiki cataloging esoteric/joke/minimalist programming languages in exhaustive, lore-rich detail — creator histories, design philosophy, IRC community, companion 'Esoteric Files Archive' of implementations. Deep hobbyist rabbit hole, good recurring hunting ground for future obsession scouting."
     }
   ]
 }
