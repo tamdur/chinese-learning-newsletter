@@ -1,30 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-10-28",
-      "rank": 1,
-      "topic_id": "policy",
-      "topic": "US midterm elections",
-      "angle": "Final-week stakes seen from the reader's own ballot: national polls point to a Democratic wave, and in Illinois that means an open Senate seat, House races, the first fully elected Chicago School Board, and a mail-ballot deadline tomorrow. This differs from 8 Oct's Medicare-cheque eligibility story.",
-      "headline": "期中選舉剩六天，伊州郵寄選票明天截止申請"
-    },
-    {
-      "date": "2026-10-28",
-      "rank": 2,
-      "topic_id": "sports-chicago",
-      "topic": "Chicago Bulls",
-      "angle": "The new coach's era opens with two straight losses, so tonight's home game against the Knicks is framed as a bounce-back test for the rebuild. This differs from the camp story (29 Sept), the preseason entries (7, 9 and 10 Oct) and the opener preview (20 Oct).",
-      "headline": "公牛連輸兩場，今晚主場迎戰尼克"
-    },
-    {
-      "date": "2026-10-28",
-      "rank": 3,
-      "topic_id": "sports-arsenal",
-      "topic": "Arsenal FC",
-      "angle": "Day-one result of the cup tie: how a rotated Arsenal side handled the lowest-ranked team left in the competition, and whether Saliba's planned return and the academy players came through it before the Liverpool trip. This differs from 25 Oct's Everton result and the 13 and 23 Oct Saliba-return entries.",
-      "headline": "兵工廠輸給第四級球隊，聯賽盃出局"
-    },
-    {
       "date": "2026-10-29",
       "rank": 1,
       "topic_id": "ai",
@@ -823,6 +799,22 @@
       "topic": "Chicago Bears",
       "angle": "Result of the recent division-race and Thanksgiving-tradition previews: the Bears came back late to win at Detroit and took over first place in the NFC North, against the old club of their own coach.",
       "headline": "Bears vs. Lions final score, takeaways: Chicago's defense dominates, comeback win on Thanksgiving"
+    },
+    {
+      "date": "2026-11-28",
+      "rank": 5,
+      "topic_id": "sports-chicago",
+      "topic": "Michigan football",
+      "angle": "The Game as the season-arc verdict on Whittingham's first year: a team that went from close losses to upsetting unbeaten UCLA now travels to a ranked but beatable Ohio State, so the question is whether the rebuild can win the one rivalry that defines a Michigan coach.",
+      "headline": "Michigan Wolverines vs. Ohio State Buckeyes — The Game, Nov. 28, 2026"
+    },
+    {
+      "date": "2026-11-28",
+      "rank": 6,
+      "topic_id": "sports-arsenal",
+      "topic": "Arsenal FC",
+      "angle": "Pre-City team news as a 'who is actually available for the title clash' lens: Raya's fitness after the keeper scare, Saliba's second comeback, and Saka's return target slipping later into December.",
+      "headline": "David Raya misses Arsenal training as Mikel Arteta issues update ahead of Man City game"
     }
   ]
 }
